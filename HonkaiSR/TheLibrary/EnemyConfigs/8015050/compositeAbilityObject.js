@@ -518,7 +518,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -2681,7 +2681,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -3646,7 +3646,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "W5_AsatPramad_00"
+            "variableName": "W5_AsatPramad_00"
           },
           "passed": [
             {
@@ -3764,7 +3764,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "W5_AsatPramad_00"
+            "variableName": "W5_AsatPramad_00"
           },
           "passed": [
             {
@@ -4072,7 +4072,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "W5_AsatPramad_MainStory440P3",
+                        "variableName": "W5_AsatPramad_MainStory440P3",
                         "invertCondition": true
                       }
                     },
@@ -6147,7 +6147,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory"
+                    "variableName": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
@@ -6182,7 +6182,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory"
+                    "variableName": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
@@ -7294,7 +7294,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "Define Custom Variable",
                               "variableName": "DebuffID_Result",
@@ -7332,7 +7332,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "IF",
                               "conditions": {
@@ -7394,7 +7394,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "Define Custom Variable",
                               "variableName": "DebuffID_Result",
@@ -7712,7 +7712,7 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7722,7 +7722,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7732,7 +7732,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7742,7 +7742,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7752,7 +7752,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7762,7 +7762,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7772,7 +7772,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7803,7 +7803,7 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7818,7 +7818,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -7853,7 +7853,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7863,7 +7863,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7873,7 +7873,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7883,7 +7883,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7898,7 +7898,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7913,7 +7913,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7923,7 +7923,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7933,7 +7933,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -7943,7 +7943,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -10320,7 +10320,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10361,7 +10361,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10402,7 +10402,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10443,7 +10443,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10484,7 +10484,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10525,7 +10525,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10566,7 +10566,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10607,7 +10607,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10648,7 +10648,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10689,7 +10689,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10730,7 +10730,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10771,7 +10771,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10812,7 +10812,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10853,7 +10853,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10894,7 +10894,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10935,7 +10935,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -10976,7 +10976,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11017,7 +11017,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11086,7 +11086,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11127,7 +11127,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11168,7 +11168,7 @@ const compositeAbilityObject = {
                   "optionName": "起爆",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11209,7 +11209,7 @@ const compositeAbilityObject = {
                   "optionName": "抽卡",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11250,7 +11250,7 @@ const compositeAbilityObject = {
                   "optionName": "单体",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11291,7 +11291,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11332,7 +11332,7 @@ const compositeAbilityObject = {
                   "optionName": "抽卡",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11373,7 +11373,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11442,7 +11442,7 @@ const compositeAbilityObject = {
                   "optionName": "连携1",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11483,7 +11483,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11524,7 +11524,7 @@ const compositeAbilityObject = {
                   "optionName": "连携2",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11565,7 +11565,7 @@ const compositeAbilityObject = {
                   "optionName": "AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11606,7 +11606,7 @@ const compositeAbilityObject = {
                   "optionName": "空过",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

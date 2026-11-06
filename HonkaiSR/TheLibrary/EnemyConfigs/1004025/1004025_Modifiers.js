@@ -946,7 +946,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Soldier"
+                "variableName": "W1_Soldier"
               },
               "passed": [
                 {
@@ -976,7 +976,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Soldier"
+                "variableName": "W1_Soldier"
               },
               "passed": [
                 {
@@ -2163,7 +2163,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Param Flag",
                       "flagName": "IsFakeAvatarAttack"
                     }

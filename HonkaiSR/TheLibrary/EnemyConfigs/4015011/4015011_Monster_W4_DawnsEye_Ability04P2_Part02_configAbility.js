@@ -167,7 +167,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPartP3"
+                "variableName": "MonsterType_W4_BossPartP3"
               }
             }
           ]

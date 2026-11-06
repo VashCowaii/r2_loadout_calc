@@ -110,11 +110,11 @@ const configAbility = {
             },
             {
               "name": "Override Enemy Rank",
+              "revert": true,
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "revert": true
+              }
             }
           ]
         }

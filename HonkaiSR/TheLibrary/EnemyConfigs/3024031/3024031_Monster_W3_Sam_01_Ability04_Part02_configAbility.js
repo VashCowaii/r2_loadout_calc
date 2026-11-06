@@ -168,7 +168,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "RLBoss"
+                "variableName": "RLBoss"
               }
             ]
           }

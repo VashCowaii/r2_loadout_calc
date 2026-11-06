@@ -185,7 +185,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "RLBoss"
+                "variableName": "RLBoss"
               }
             ]
           },
@@ -354,7 +354,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "RLBoss"
+                "variableName": "RLBoss"
               }
             ]
           },

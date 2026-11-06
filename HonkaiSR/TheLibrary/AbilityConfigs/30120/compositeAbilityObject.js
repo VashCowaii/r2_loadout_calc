@@ -641,13 +641,13 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Check Boolean Value",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "W1_SvarogPart"
+                          "variableName": "W1_SvarogPart"
                         }
                       }
                     ]
@@ -2954,7 +2954,7 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -2980,7 +2980,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3006,7 +3006,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3032,7 +3032,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3058,7 +3058,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3084,7 +3084,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3110,7 +3110,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sequence Event",
-                              "passed": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {

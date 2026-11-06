@@ -104,7 +104,7 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Character ID",
                       "ID": 800205000,
                       "target": {

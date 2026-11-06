@@ -268,7 +268,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_11"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_11"
                       }
                     ]
                   },
@@ -470,7 +470,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_11"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_11"
                   },
                   "passed": [
                     {
@@ -1380,7 +1380,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED_11",
+            "variableName": "ENEMIES_OBJECT_UNUSED_11",
             "invertCondition": true
           },
           "ifTargetFound": [
@@ -1584,7 +1584,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

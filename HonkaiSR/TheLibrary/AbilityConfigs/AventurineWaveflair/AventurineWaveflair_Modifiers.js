@@ -1166,11 +1166,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   }
                 ]
               },

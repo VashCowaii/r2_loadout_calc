@@ -70,7 +70,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "SW_Minion01_03"
+                "variableName": "SW_Minion01_03"
               },
               {
                 "name": "Check Boolean Value",
@@ -78,7 +78,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "RLElite"
+                "variableName": "RLElite"
               }
             ]
           }

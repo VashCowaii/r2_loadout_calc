@@ -103,7 +103,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -114,7 +114,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -125,7 +125,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",
@@ -221,7 +221,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -232,7 +232,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -243,7 +243,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",
@@ -323,7 +323,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -334,7 +334,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -345,7 +345,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",
@@ -428,7 +428,7 @@ const configAbility = {
         ],
         "conditions": {
           "name": "NOT",
-          "condition": {
+          "conditions": {
             "name": "Has Modifier",
             "target": {
               "name": "Target Name",
@@ -455,7 +455,7 @@ const configAbility = {
         },
         "conditions": {
           "name": "NOT",
-          "condition": {
+          "conditions": {
             "name": "Has Modifier",
             "target": {
               "name": "Target Name",

@@ -47,7 +47,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Summon01Flag"
+                "variableName": "Summon01Flag"
               },
               "passed": [
                 {
@@ -76,7 +76,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Summon02Flag"
+                "variableName": "Summon02Flag"
               },
               "passed": [
                 {

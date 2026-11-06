@@ -420,7 +420,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "SW_Minion01_03"
+                      "variableName": "SW_Minion01_03"
                     }
                   },
                   "passed": [
@@ -432,7 +432,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       }
                     }
                   ],
@@ -469,7 +469,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       },
                       "noTargetFound": [
                         "Modifier Deletes Itself"

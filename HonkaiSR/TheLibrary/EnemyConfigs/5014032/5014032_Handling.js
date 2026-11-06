@@ -27,7 +27,7 @@ const configAbility = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -67,7 +67,7 @@ const configAbility = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -118,7 +118,7 @@ const configAbility = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill05"
@@ -158,7 +158,7 @@ const configAbility = {
               "optionName": "UseSkill01_2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -233,7 +233,7 @@ const configAbility = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill03"
@@ -273,7 +273,7 @@ const configAbility = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -324,7 +324,7 @@ const configAbility = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill05"
@@ -364,7 +364,7 @@ const configAbility = {
               "optionName": "UseSkill01_2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -439,7 +439,7 @@ const configAbility = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill05"
@@ -491,7 +491,7 @@ const configAbility = {
               "optionName": "UseSkill01_2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable with Added Value",
                     "target": {
@@ -556,7 +556,7 @@ const configAbility = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -596,7 +596,7 @@ const configAbility = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -647,7 +647,7 @@ const configAbility = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -697,7 +697,7 @@ const configAbility = {
               "optionName": "UseSkill05_Main",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

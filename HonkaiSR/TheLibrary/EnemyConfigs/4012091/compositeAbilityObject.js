@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartRight"
+                    "variableName": "MonsterType_W4_BossPartRight"
                   },
                   "passed": [
                     {
@@ -130,7 +130,6 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Sequence",
                               "TargetList": [
@@ -151,7 +150,8 @@ const compositeAbilityObject = {
                                   }
                                 }
                               ]
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Compare: Variable",
@@ -185,7 +185,6 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Sequence",
                               "TargetList": [
@@ -206,7 +205,8 @@ const compositeAbilityObject = {
                                   }
                                 }
                               ]
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Compare: Variable",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   },
                   "passed": [
                     {
@@ -283,7 +283,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartRight"
+                            "variableName": "MonsterType_W4_BossPartRight"
                           }
                         ]
                       }
@@ -323,7 +323,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         ]
                       }
@@ -362,7 +362,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       },
                       "passed": [
                         {
@@ -398,7 +398,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartRight"
+                                "variableName": "MonsterType_W4_BossPartRight"
                               }
                             ]
                           }
@@ -438,7 +438,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartLeft"
+                                "variableName": "MonsterType_W4_BossPartLeft"
                               }
                             ]
                           }
@@ -455,7 +455,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       },
                       "passed": [
                         {
@@ -491,7 +491,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartRight"
+                                "variableName": "MonsterType_W4_BossPartRight"
                               }
                             ]
                           }
@@ -531,7 +531,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartLeft"
+                                "variableName": "MonsterType_W4_BossPartLeft"
                               }
                             ]
                           }
@@ -560,7 +560,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       },
                       "passed": [
                         {
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartRight"
+                                "variableName": "MonsterType_W4_BossPartRight"
                               }
                             ]
                           }
@@ -636,7 +636,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartLeft"
+                                "variableName": "MonsterType_W4_BossPartLeft"
                               }
                             ]
                           }
@@ -665,7 +665,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       },
                       "passed": [
                         {
@@ -701,7 +701,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartRight"
+                                "variableName": "MonsterType_W4_BossPartRight"
                               }
                             ]
                           }
@@ -741,7 +741,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartLeft"
+                                "variableName": "MonsterType_W4_BossPartLeft"
                               }
                             ]
                           }
@@ -1067,7 +1067,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

@@ -24,7 +24,7 @@ const configAbility = {
           "target": "{{Modifier Holder}}"
         },
         "team": "Enemy Team",
-        "location": "Max"
+        "stateType": "Max"
       }
     },
     {

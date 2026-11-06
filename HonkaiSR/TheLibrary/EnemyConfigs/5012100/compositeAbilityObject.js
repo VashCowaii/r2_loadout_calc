@@ -1099,7 +1099,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

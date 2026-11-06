@@ -313,11 +313,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 ]
               },
@@ -352,11 +352,11 @@ const configAbility = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "ifTargetFound": [
                             {
@@ -381,11 +381,11 @@ const configAbility = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "ifTargetFound": [
                             {
@@ -618,11 +618,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -719,11 +719,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -820,11 +820,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",

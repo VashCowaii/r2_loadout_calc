@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "Decision01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {

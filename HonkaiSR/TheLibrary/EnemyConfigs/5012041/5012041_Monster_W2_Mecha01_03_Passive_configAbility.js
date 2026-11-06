@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "IceResistance"
+        "variableName": "IceResistance"
       },
       "passed": [
         {

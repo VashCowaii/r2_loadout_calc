@@ -32,7 +32,7 @@ const configAbility = {
     },
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "Has Queued Ult"
       }
     },

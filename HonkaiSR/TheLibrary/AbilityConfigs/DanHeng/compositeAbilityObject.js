@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1322,7 +1322,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1333,7 +1333,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Part Of",
                           "target1": {
                             "name": "Target Name",
@@ -1429,7 +1429,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1440,7 +1440,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1451,7 +1451,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Part Of",
                           "target1": {
                             "name": "Target Name",
@@ -1531,7 +1531,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1542,7 +1542,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1553,7 +1553,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Part Of",
                           "target1": {
                             "name": "Target Name",
@@ -1636,7 +1636,7 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "NOT",
-              "condition": {
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",
@@ -1663,7 +1663,7 @@ const compositeAbilityObject = {
             },
             "conditions": {
               "name": "NOT",
-              "condition": {
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",

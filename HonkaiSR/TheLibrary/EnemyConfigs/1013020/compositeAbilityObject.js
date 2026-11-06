@@ -2134,7 +2134,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill11",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill11",
@@ -2184,7 +2184,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -2245,7 +2245,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",
@@ -2299,7 +2299,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill09",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2371,7 +2371,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill11",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill11",
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -2482,7 +2482,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",
@@ -2536,7 +2536,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill09",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2608,7 +2608,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill11",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill11",
@@ -2658,7 +2658,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -2719,7 +2719,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",
@@ -2773,7 +2773,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill09",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

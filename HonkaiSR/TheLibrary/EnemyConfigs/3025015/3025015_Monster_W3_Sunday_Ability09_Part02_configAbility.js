@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       }
     },
     {
@@ -292,7 +292,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       },
       "passed": [
         {
@@ -607,7 +607,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       },
       "passed": [
         {

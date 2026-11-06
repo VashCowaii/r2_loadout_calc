@@ -106,7 +106,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Player Team",
-        "location": "Pos2"
+        "stateType": "Pos2"
       },
       "ifTargetFound": [
         {
@@ -162,7 +162,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Player Team",
-        "location": "Pos3"
+        "stateType": "Pos3"
       },
       "ifTargetFound": [
         {
@@ -218,7 +218,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Player Team",
-        "location": "Max"
+        "stateType": "Max"
       },
       "ifTargetFound": [
         {
@@ -375,7 +375,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           },
           "ifTargetFound": [
             {
@@ -453,7 +453,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos3"
+            "stateType": "Pos3"
           },
           "ifTargetFound": [
             {
@@ -556,7 +556,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {

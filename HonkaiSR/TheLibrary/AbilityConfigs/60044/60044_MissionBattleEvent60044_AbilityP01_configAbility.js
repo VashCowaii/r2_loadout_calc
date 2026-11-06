@@ -92,7 +92,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_Shell"
+                "variableName": "W5_Shell"
               },
               "ifTargetFound": [
                 {
@@ -191,7 +191,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_Shell"
+                    "variableName": "W5_Shell"
                   }
                 ]
               },

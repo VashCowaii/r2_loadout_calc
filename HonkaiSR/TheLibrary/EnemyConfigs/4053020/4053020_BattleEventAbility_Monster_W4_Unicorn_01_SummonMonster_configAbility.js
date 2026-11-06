@@ -383,7 +383,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "SW_Minion01_03"
+            "variableName": "SW_Minion01_03"
           },
           "ifTargetFound": [
             {
@@ -471,7 +471,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "SW_Minion01_03"
+            "variableName": "SW_Minion01_03"
           },
           "ifTargetFound": [
             {

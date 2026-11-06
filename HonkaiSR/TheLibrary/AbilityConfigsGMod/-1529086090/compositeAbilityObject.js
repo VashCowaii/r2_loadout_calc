@@ -141,7 +141,7 @@ const compositeAbilityObject = {
                   "maxTargets": 5,
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Character Weakness Activated",
                       "target": {
                         "name": "Target Name",
@@ -205,7 +205,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Teammate",
                           "target": {
                             "name": "Target Name",
@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Teammate",
                           "target": {
                             "name": "Target Name",

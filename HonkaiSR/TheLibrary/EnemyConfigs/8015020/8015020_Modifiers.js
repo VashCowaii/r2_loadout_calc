@@ -80,7 +80,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Huanlong_Flower"
+                "variableName": "Huanlong_Flower"
               },
               "passed": [
                 {
@@ -110,7 +110,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Huanlong_Flower"
+                "variableName": "Huanlong_Flower"
               },
               "passed": [
                 {

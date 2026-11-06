@@ -469,7 +469,7 @@ const configAbility = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Part Of Team",
                           "target": {
                             "name": "Target Name",
@@ -969,11 +969,11 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_LimboOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_LimboOnly"
                       },
                       {
                         "name": "Has Flag",
@@ -1160,11 +1160,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_LimboOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_LimboOnly"
                           },
                           {
                             "name": "Has Flag",
@@ -1217,11 +1217,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_LimboOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_LimboOnly"
                           },
                           {
                             "name": "Has Flag",

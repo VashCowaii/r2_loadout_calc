@@ -667,7 +667,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "passed": [
                 {

@@ -55,7 +55,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__114"
                       },
                       {
                         "name": "Has Flag",
@@ -226,7 +226,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "Theater_Rogue"
+                        "variableName": "Theater_Rogue"
                       }
                     }
                   ]
@@ -278,7 +278,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "failed": [
                     {
@@ -289,7 +289,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "failed": [
                         {
@@ -300,7 +300,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W1_Mecha01_02"
+                            "variableName": "MonsterType_W1_Mecha01_02"
                           },
                           "failed": [
                             {
@@ -311,7 +311,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "MonsterType_W3_Dinosaur_00"
+                                "variableName": "MonsterType_W3_Dinosaur_00"
                               }
                             }
                           ]
@@ -328,7 +328,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   },
                   "passed": [
                     {
@@ -389,7 +389,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "Theater_Rogue"
+                        "variableName": "Theater_Rogue"
                       }
                     }
                   ]
@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   },
                   "passed": [
                     {
@@ -521,7 +521,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00",
+                    "variableName": "MonsterType_W3_Dinosaur_00",
                     "invertCondition": true
                   },
                   "passed": [
@@ -552,7 +552,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00",
+                    "variableName": "MonsterType_W3_Dinosaur_00",
                     "invertCondition": true
                   },
                   "passed": [
@@ -574,7 +574,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "failed": [
                     {
@@ -585,7 +585,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "failed": [
                         {
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W1_Mecha01_02"
+                            "variableName": "MonsterType_W1_Mecha01_02"
                           },
                           "failed": [
                             {
@@ -607,7 +607,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "MonsterType_W3_Dinosaur_00"
+                                "variableName": "MonsterType_W3_Dinosaur_00"
                               }
                             }
                           ]
@@ -633,7 +633,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   },
                   "passed": [
                     {
@@ -1109,7 +1109,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       }
                     }
                   ]
@@ -1148,7 +1148,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       }
                     }
                   ]
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__114"
                       },
                       {
                         "name": "OR",
@@ -1433,7 +1433,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "MonsterType_W3_Dinosaur_00"
+                              "variableName": "MonsterType_W3_Dinosaur_00"
                             }
                           }
                         ]
@@ -1457,7 +1457,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "MonsterType_W3_Dinosaur_00"
+                              "variableName": "MonsterType_W3_Dinosaur_00"
                             }
                           }
                         ]
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W1_Mecha01_02"
+                        "variableName": "MonsterType_W1_Mecha01_02"
                       }
                     },
                     {
@@ -1566,7 +1566,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   "passed": [
                     {
@@ -1577,7 +1577,7 @@ const compositeAbilityObject = {
                           "name": "Add Target by Unique Identifier",
                           "identifier": "TheaterCore"
                         },
-                        "value": "MonsterType_W3_Theater"
+                        "variableName": "MonsterType_W3_Theater"
                       },
                       "passed": [
                         {
@@ -1624,7 +1624,7 @@ const compositeAbilityObject = {
                           "name": "Add Target by Unique Identifier",
                           "identifier": "TheaterCore"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       },
                       {
@@ -1956,7 +1956,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1964,7 +1964,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1972,7 +1972,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -1985,7 +1985,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -1996,7 +1996,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -2007,7 +2007,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -2343,7 +2343,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -2379,7 +2379,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Theater"
+                            "variableName": "MonsterType_W3_Theater"
                           },
                           {
                             "name": "Has Flag",
@@ -2435,7 +2435,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       }
                     ]
@@ -2449,7 +2449,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_Dinosaur_00"
+                        "variableName": "MonsterType_W3_Dinosaur_00"
                       },
                       "passed": [
                         {
@@ -2480,7 +2480,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       "passed": [
                         {
@@ -2511,7 +2511,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W1_Mecha01_02"
+                        "variableName": "MonsterType_W1_Mecha01_02"
                       },
                       "passed": [
                         {
@@ -2542,7 +2542,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "passed": [
                         {
@@ -2638,7 +2638,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater"
+                        "variableName": "MonsterType_W3_Theater"
                       },
                       {
                         "name": "Modifier Was",
@@ -2655,7 +2655,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_Dinosaur_00"
+                        "variableName": "MonsterType_W3_Dinosaur_00"
                       },
                       "passed": [
                         {
@@ -2686,7 +2686,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       "passed": [
                         {
@@ -2717,7 +2717,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W1_Mecha01_02"
+                        "variableName": "MonsterType_W1_Mecha01_02"
                       },
                       "passed": [
                         {
@@ -2748,7 +2748,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "passed": [
                         {
@@ -2974,7 +2974,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Theater",
+                            "variableName": "MonsterType_W3_Theater",
                             "invertCondition": true
                           },
                           "passed": [
@@ -3237,7 +3237,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Theater",
+                            "variableName": "MonsterType_W3_Theater",
                             "invertCondition": true
                           },
                           "passed": [
@@ -3506,7 +3506,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Theater",
+                            "variableName": "MonsterType_W3_Theater",
                             "invertCondition": true
                           },
                           "passed": [
@@ -3772,7 +3772,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Theater",
+                            "variableName": "MonsterType_W3_Theater",
                             "invertCondition": true
                           },
                           "passed": [
@@ -3913,7 +3913,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       }
                     }
                   ]
@@ -3952,7 +3952,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       }
                     }
                   ]
@@ -3986,7 +3986,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "failed": [
                     {
@@ -3997,7 +3997,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "failed": [
                         {
@@ -4008,7 +4008,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W1_Mecha01_02"
+                            "variableName": "MonsterType_W1_Mecha01_02"
                           },
                           "failed": [
                             {
@@ -4019,7 +4019,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "MonsterType_W3_Dinosaur_00"
+                                "variableName": "MonsterType_W3_Dinosaur_00"
                               }
                             }
                           ]
@@ -4222,7 +4222,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -4617,7 +4617,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater"
+                        "variableName": "MonsterType_W3_Theater"
                       },
                       "passed": [
                         {
@@ -4761,7 +4761,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -4806,7 +4806,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00",
+                    "variableName": "MonsterType_W3_Dinosaur_00",
                     "invertCondition": true
                   },
                   "passed": [
@@ -4847,7 +4847,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -4861,7 +4861,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Dinosaur_00",
+                            "variableName": "MonsterType_W3_Dinosaur_00",
                             "invertCondition": true
                           }
                         ]
@@ -4885,7 +4885,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       "failed": [
                         {
@@ -4896,7 +4896,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Clock_00"
+                            "variableName": "MonsterType_W3_Clock_00"
                           },
                           "failed": [
                             {
@@ -4907,7 +4907,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "MonsterType_W1_Mecha01_02"
+                                "variableName": "MonsterType_W1_Mecha01_02"
                               },
                               "failed": [
                                 {
@@ -4918,7 +4918,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "value": "MonsterType_W3_Dinosaur_00"
+                                    "variableName": "MonsterType_W3_Dinosaur_00"
                                   }
                                 }
                               ]
@@ -4940,7 +4940,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Dinosaur_00",
+                            "variableName": "MonsterType_W3_Dinosaur_00",
                             "invertCondition": true
                           },
                           {
@@ -4949,7 +4949,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_TV_00",
+                            "variableName": "MonsterType_W3_TV_00",
                             "invertCondition": true
                           }
                         ]
@@ -5320,7 +5320,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "ifTargetFound": [
                 {
@@ -5361,7 +5361,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "ifTargetFound": [
                 {
@@ -5402,7 +5402,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "ifTargetFound": [
                 {
@@ -5434,7 +5434,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "variableName": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
@@ -5586,7 +5586,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "variableName": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
@@ -5724,7 +5724,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               }
             },
             {
@@ -5918,7 +5918,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               }
             },
             {
@@ -5949,7 +5949,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               }
             },
             {
@@ -6019,7 +6019,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "variableName": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
@@ -6054,7 +6054,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "variableName": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
@@ -6079,7 +6079,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               }
             }
           ]
@@ -6209,7 +6209,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "passed": [
                 {
@@ -6242,7 +6242,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -6250,7 +6250,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 ]
               },
@@ -6285,7 +6285,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Right"
+                    "stateType": "Right"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -6293,7 +6293,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 ]
               },
@@ -6324,7 +6324,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W1_Mecha01_02"
+                "variableName": "MonsterType_W1_Mecha01_02"
               },
               "passed": [
                 {
@@ -6353,7 +6353,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Clock_00"
+                "variableName": "MonsterType_W3_Clock_00"
               },
               "passed": [
                 {
@@ -6414,7 +6414,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           }
         },
         {
@@ -6430,7 +6430,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__114"
+            "variableName": "ENEMIES_OBJECT_UNUSED__114"
           },
           "ifTargetFound": [
             {
@@ -6441,7 +6441,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               }
             },
             {
@@ -6807,7 +6807,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__114"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__114"
                           },
                           "ifTargetFound": [
                             {
@@ -7194,7 +7194,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   "ifTargetFound": [
                     {
@@ -7236,7 +7236,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__114"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -7244,7 +7244,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       }
                     ]
                   },
@@ -7276,7 +7276,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__114"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -7284,7 +7284,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       {
                         "name": "Has Modifier",
@@ -7393,7 +7393,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   }
                 ]
               }
@@ -7439,7 +7439,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "passed": [
                     {
@@ -7521,7 +7521,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00"
+                    "variableName": "MonsterType_W3_Dinosaur_00"
                   }
                 },
                 {
@@ -7570,7 +7570,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "MonsterType_W3_Dinosaur_00"
+                      "variableName": "MonsterType_W3_Dinosaur_00"
                     }
                   }
                 ]
@@ -7594,7 +7594,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "MonsterType_W3_Dinosaur_00"
+                      "variableName": "MonsterType_W3_Dinosaur_00"
                     }
                   }
                 ]
@@ -7624,7 +7624,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W1_Mecha01_02"
+                "variableName": "MonsterType_W1_Mecha01_02"
               }
             },
             {
@@ -7724,7 +7724,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7773,7 +7773,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7822,7 +7822,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7871,7 +7871,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7920,7 +7920,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7969,7 +7969,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill08",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

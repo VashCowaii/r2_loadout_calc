@@ -478,7 +478,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__232_BOOLEAN"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__232_BOOLEAN"
                       },
                       {
                         "name": "Modifier Was",
@@ -564,7 +564,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           }
         },
         {
@@ -581,7 +581,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos3"
+            "stateType": "Pos3"
           }
         },
         {
@@ -598,7 +598,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -951,7 +951,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           }
         },
         {
@@ -968,7 +968,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos3"
+            "stateType": "Pos3"
           }
         },
         {
@@ -985,7 +985,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -1098,7 +1098,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           }
         },
         {
@@ -1115,7 +1115,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos3"
+            "stateType": "Pos3"
           }
         },
         {
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -1460,7 +1460,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           }
         },
         {
@@ -1477,7 +1477,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Pos3"
+            "stateType": "Pos3"
           }
         },
         {
@@ -1494,7 +1494,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Player Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {

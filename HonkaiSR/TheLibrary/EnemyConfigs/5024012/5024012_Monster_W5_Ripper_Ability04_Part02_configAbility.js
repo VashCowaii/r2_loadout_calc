@@ -108,7 +108,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ripper: Self}}"
             },
-            "value": "InSkill05",
+            "variableName": "InSkill05",
             "invertCondition": true
           }
         ]
@@ -218,7 +218,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "RLBoss"
+                    "variableName": "RLBoss"
                   }
                 ]
               }
@@ -668,7 +668,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ripper: Self}}"
             },
-            "value": "InSkill05"
+            "variableName": "InSkill05"
           },
           "passed": [
             {
@@ -799,7 +799,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "RLBoss"
+                    "variableName": "RLBoss"
                   },
                   "passed": [
                     {

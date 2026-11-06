@@ -811,7 +811,7 @@ const compositeAbilityObject = {
                   "optionName": "指挥",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -858,7 +858,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                                  "variableName": "UNKNOWN_OBJECT_STRING_-1541420090",
                                   "invertCondition": true
                                 },
                                 {
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                                                  "variableName": "UNKNOWN_OBJECT_STRING_-1541420090",
                                                   "invertCondition": true
                                                 }
                                               ]
@@ -1055,7 +1055,7 @@ const compositeAbilityObject = {
                   "optionName": "指挥",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -1102,7 +1102,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                                  "variableName": "UNKNOWN_OBJECT_STRING_-1541420090",
                                   "invertCondition": true
                                 },
                                 {
@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                                                  "variableName": "UNKNOWN_OBJECT_STRING_-1541420090",
                                                   "invertCondition": true
                                                 }
                                               ]

@@ -487,7 +487,7 @@ const compositeAbilityObject = {
           "searchRandom": true,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Compare: Monster Rank",
               "target": {
                 "name": "Target Name",
@@ -927,7 +927,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -1195,7 +1195,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -1326,7 +1326,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -2611,7 +2611,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -2745,7 +2745,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -2873,7 +2873,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -3309,7 +3309,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -3569,7 +3569,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -3863,7 +3863,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -3919,7 +3919,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -4993,7 +4993,7 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Character ID",
                           "ID": 800205000,
                           "target": {
@@ -5359,7 +5359,7 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Character ID",
                           "ID": 800205000,
                           "target": {
@@ -5706,7 +5706,7 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Character ID",
                           "ID": 800205000,
                           "target": {
@@ -6216,7 +6216,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Param Flag",
                           "flagName": "IsHPChangeByDamage"
                         }
@@ -11021,7 +11021,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Joint-Attack",
                       "target": {
                         "name": "Target Name",
@@ -11189,7 +11189,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -11199,7 +11199,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"

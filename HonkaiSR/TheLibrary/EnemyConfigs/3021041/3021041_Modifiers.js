@@ -23,7 +23,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "PowerFlag"
+                "variableName": "PowerFlag"
               },
               "passed": [
                 {

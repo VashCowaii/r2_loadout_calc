@@ -150,7 +150,7 @@ const configAbility = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Flag",
                           "target": {
                             "name": "Target Name",

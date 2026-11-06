@@ -1283,11 +1283,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "MDF_HealValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HealValue"
+                  }
                 },
                 {
                   "name": "IF",
@@ -6564,11 +6564,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "MDF_HealValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HealValue"
+                  }
                 },
                 {
                   "name": "IF",
@@ -10318,7 +10318,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -10452,7 +10452,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"
@@ -10501,7 +10501,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"
@@ -10530,7 +10530,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"
@@ -10559,7 +10559,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"
@@ -10588,7 +10588,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"

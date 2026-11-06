@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "PowerFlag"
+                              "variableName": "PowerFlag"
                             }
                           }
                         ]
@@ -307,7 +307,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "PowerFlag"
+                "variableName": "PowerFlag"
               },
               "ifTargetFound": [
                 {
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

@@ -42,7 +42,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "IceResistance"
+            "variableName": "IceResistance"
           },
           "passed": [
             {
@@ -290,7 +290,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

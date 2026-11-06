@@ -2389,11 +2389,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 "EventTypeSPARXIECON (Not always an error)[1 false]",
@@ -3988,7 +3988,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "value": "RLBoss",
+                                "variableName": "RLBoss",
                                 "invertCondition": true
                               }
                             ]
@@ -4002,7 +4002,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "value": "RLBoss"
+                                "variableName": "RLBoss"
                               },
                               {
                                 "name": "Compare: Variable",
@@ -4823,7 +4823,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

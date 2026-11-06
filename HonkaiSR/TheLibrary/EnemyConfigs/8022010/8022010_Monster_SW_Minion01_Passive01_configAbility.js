@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "SW_Minion01_Sam01",
+        "variableName": "SW_Minion01_Sam01",
         "invertCondition": true
       },
       "passed": [

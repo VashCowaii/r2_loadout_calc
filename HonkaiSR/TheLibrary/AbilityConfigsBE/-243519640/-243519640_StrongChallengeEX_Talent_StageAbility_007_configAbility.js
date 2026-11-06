@@ -92,7 +92,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_8"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_8"
                   }
                 ]
               },
@@ -166,7 +166,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_8"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_8"
                   }
                 ]
               },

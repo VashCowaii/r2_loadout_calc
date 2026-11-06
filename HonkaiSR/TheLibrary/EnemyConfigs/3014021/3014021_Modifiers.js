@@ -120,7 +120,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Monster_DeathPart",
+                "variableName": "Monster_DeathPart",
                 "invertCondition": true
               },
               "passed": [
@@ -364,7 +364,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Flag",
                       "target": {
                         "name": "Target Name",
@@ -1447,7 +1447,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Flag",
                       "target": {
                         "name": "Target Name",
@@ -1672,7 +1672,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Flag",
                       "target": {
                         "name": "Target Name",
@@ -1683,7 +1683,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Flag",
                       "target": {
                         "name": "Target Name",
@@ -1694,7 +1694,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Flag",
                       "target": {
                         "name": "Target Name",
@@ -1705,7 +1705,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Skill Type",
                       "skillType": "Elation"
                     }

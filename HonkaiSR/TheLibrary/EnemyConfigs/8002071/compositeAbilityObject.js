@@ -360,7 +360,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Param Flag",
                           "flagName": "IsFakeAvatarAttack"
                         }
@@ -501,7 +501,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Is Part Of Team",
                           "target": {
                             "name": "Target Name",
@@ -1868,7 +1868,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -1891,7 +1891,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill02"
@@ -1919,7 +1919,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill03"

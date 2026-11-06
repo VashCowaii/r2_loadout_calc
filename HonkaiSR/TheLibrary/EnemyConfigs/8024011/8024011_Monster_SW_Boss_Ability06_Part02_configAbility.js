@@ -31,7 +31,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__63"
+                "variableName": "ENEMIES_OBJECT_UNUSED__63"
               },
               {
                 "name": "Check Boolean Value",
@@ -39,7 +39,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__64"
+                "variableName": "ENEMIES_OBJECT_UNUSED__64"
               }
             ]
           }
@@ -82,7 +82,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__63"
+                "variableName": "ENEMIES_OBJECT_UNUSED__63"
               },
               {
                 "name": "Check Boolean Value",
@@ -90,7 +90,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__64"
+                "variableName": "ENEMIES_OBJECT_UNUSED__64"
               }
             ]
           }
@@ -139,7 +139,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__64"
+            "variableName": "ENEMIES_OBJECT_UNUSED__64"
           },
           {
             "name": "Has Modifier",
@@ -180,7 +180,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__63"
+                "variableName": "ENEMIES_OBJECT_UNUSED__63"
               },
               {
                 "name": "Has Modifier",
@@ -223,7 +223,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__63"
+            "variableName": "ENEMIES_OBJECT_UNUSED__63"
           },
           {
             "name": "Has Modifier",
@@ -264,7 +264,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__63"
+            "variableName": "ENEMIES_OBJECT_UNUSED__63"
           },
           {
             "name": "Has Modifier",
@@ -305,7 +305,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__63"
+            "variableName": "ENEMIES_OBJECT_UNUSED__63"
           },
           {
             "name": "Has Modifier",
@@ -349,7 +349,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "value": "ENEMIES_OBJECT_UNUSED__63"
+              "variableName": "ENEMIES_OBJECT_UNUSED__63"
             },
             {
               "name": "Check Boolean Value",
@@ -357,7 +357,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "value": "ENEMIES_OBJECT_UNUSED__64"
+              "variableName": "ENEMIES_OBJECT_UNUSED__64"
             }
           ]
         }
@@ -575,7 +575,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "ENEMIES_OBJECT_UNUSED__63"
+                  "variableName": "ENEMIES_OBJECT_UNUSED__63"
                 },
                 {
                   "name": "Check Boolean Value",
@@ -583,7 +583,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "ENEMIES_OBJECT_UNUSED__64"
+                  "variableName": "ENEMIES_OBJECT_UNUSED__64"
                 }
               ]
             }
@@ -801,7 +801,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "ENEMIES_OBJECT_UNUSED__63"
+                      "variableName": "ENEMIES_OBJECT_UNUSED__63"
                     },
                     {
                       "name": "Check Boolean Value",
@@ -809,7 +809,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "ENEMIES_OBJECT_UNUSED__64"
+                      "variableName": "ENEMIES_OBJECT_UNUSED__64"
                     }
                   ]
                 }
@@ -1027,7 +1027,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "ENEMIES_OBJECT_UNUSED__63"
+                          "variableName": "ENEMIES_OBJECT_UNUSED__63"
                         },
                         {
                           "name": "Check Boolean Value",
@@ -1035,7 +1035,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "ENEMIES_OBJECT_UNUSED__64"
+                          "variableName": "ENEMIES_OBJECT_UNUSED__64"
                         }
                       ]
                     }

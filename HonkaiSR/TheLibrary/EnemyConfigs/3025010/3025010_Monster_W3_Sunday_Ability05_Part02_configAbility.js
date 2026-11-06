@@ -83,7 +83,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           {
             "name": "Is Part Of Team Location",
@@ -92,7 +92,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Medium"
+            "stateType": "Medium"
           },
           {
             "name": "Is Part Of Team Location",
@@ -101,7 +101,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Right",
+            "stateType": "Right",
             "invertCondition": true
           }
         ]
@@ -160,7 +160,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Left",
+            "stateType": "Left",
             "invertCondition": true
           },
           {
@@ -170,7 +170,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Medium"
+            "stateType": "Medium"
           },
           {
             "name": "Is Part Of Team Location",
@@ -179,7 +179,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Right"
+            "stateType": "Right"
           }
         ]
       },
@@ -234,7 +234,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Enemy Team",
-        "location": "Max"
+        "stateType": "Max"
       },
       "ifTargetFound": [
         {

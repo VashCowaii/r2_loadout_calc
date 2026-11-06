@@ -45,7 +45,7 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",
@@ -118,7 +118,7 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",
@@ -191,7 +191,7 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",
@@ -264,7 +264,7 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",

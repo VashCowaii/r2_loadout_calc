@@ -301,7 +301,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -310,7 +310,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -429,7 +429,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -519,7 +519,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

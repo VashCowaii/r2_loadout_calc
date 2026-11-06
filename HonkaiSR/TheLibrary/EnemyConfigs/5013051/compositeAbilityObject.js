@@ -435,11 +435,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Override Enemy Rank",
+                  "revert": true,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "revert": true
+                  }
                 }
               ]
             },
@@ -2662,7 +2662,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -2703,7 +2703,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -2744,7 +2744,7 @@ const compositeAbilityObject = {
                   "optionName": "开盾",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -2785,7 +2785,7 @@ const compositeAbilityObject = {
                   "optionName": "属性斩",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

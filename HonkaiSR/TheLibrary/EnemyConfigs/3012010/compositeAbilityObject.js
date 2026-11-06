@@ -233,7 +233,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Select Random Enemy from Pool",
                       "poolID": {
@@ -253,7 +253,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Select Random Enemy from Pool",
                       "poolID": {
@@ -541,7 +541,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -578,7 +578,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill02"

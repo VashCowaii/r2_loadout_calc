@@ -415,11 +415,11 @@ const configAbility = {
                       "name": "Inject Ability Use",
                       "conditionActive": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       "abilityName": "Monster_W4_Serpent_01_IF_SummonDeathrattle",
                       "abilitySource": {
@@ -2710,11 +2710,11 @@ const configAbility = {
                       "name": "Inject Ability Use",
                       "conditionActive": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       "abilityName": "Monster_W4_Serpent_01_SummonDeathrattle",
                       "abilitySource": {

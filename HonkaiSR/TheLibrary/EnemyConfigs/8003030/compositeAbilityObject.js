@@ -696,7 +696,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Param Flag",
                           "flagName": "IsFakeAvatarAttack"
                         }
@@ -1831,7 +1831,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Player Team",
             "type": "Team Characters"
@@ -2481,7 +2481,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2519,7 +2519,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -2902,7 +2902,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -3156,7 +3156,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -3235,7 +3235,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -3314,7 +3314,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3364,7 +3364,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3414,7 +3414,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

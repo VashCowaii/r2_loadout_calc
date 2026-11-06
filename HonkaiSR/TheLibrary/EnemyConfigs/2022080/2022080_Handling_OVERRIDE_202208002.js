@@ -23,7 +23,7 @@ const configAbility = {
           "optionName": "Decision01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -60,7 +60,7 @@ const configAbility = {
           "optionName": "Decision02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill01"
@@ -100,7 +100,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_Xuanlu"
+                        "variableName": "MonsterType_Xuanlu"
                       }
                     }
                   ]
@@ -116,7 +116,7 @@ const configAbility = {
           "optionName": "Decision03",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill03"
@@ -156,7 +156,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_Xuanlu"
+                        "variableName": "MonsterType_Xuanlu"
                       }
                     }
                   ]

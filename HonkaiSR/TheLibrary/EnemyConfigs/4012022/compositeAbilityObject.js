@@ -196,7 +196,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_AML_Minion03_01"
+                    "variableName": "MonsterType_AML_Minion03_01"
                   },
                   "ifTargetFound": [
                     {
@@ -221,7 +221,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Strongman_00"
+                        "variableName": "MonsterType_W4_Strongman_00"
                       },
                       "ifTargetFound": [
                         {
@@ -246,7 +246,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_Shooter_00"
+                            "variableName": "MonsterType_W4_Shooter_00"
                           },
                           "ifTargetFound": [
                             {
@@ -980,7 +980,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1036,7 +1036,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill02"

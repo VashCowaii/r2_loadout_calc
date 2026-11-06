@@ -105,7 +105,7 @@ const compositeAbilityObject = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -147,7 +147,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -197,7 +197,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -347,7 +347,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",
@@ -447,7 +447,7 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Target Name",

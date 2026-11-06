@@ -107,11 +107,11 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Living State",
-            "state": "Mask_AliveOrRevivable",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
-            }
+            },
+            "livingState": "Mask_AliveOrRevivable"
           },
           {
             "name": "Target is Unselectable",
@@ -138,11 +138,11 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Living State",
-        "state": "Mask_AliveOnly",
         "target": {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
+        "livingState": "Mask_AliveOnly",
         "invertCondition": true
       },
       "passed": [

@@ -230,7 +230,7 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",

@@ -458,11 +458,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -500,11 +500,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -787,7 +787,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

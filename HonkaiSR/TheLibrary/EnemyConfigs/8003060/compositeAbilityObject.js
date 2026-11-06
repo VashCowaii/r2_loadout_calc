@@ -119,11 +119,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Override Enemy Rank",
+                  "revert": true,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "revert": true
+                  }
                 }
               ]
             }
@@ -161,7 +161,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

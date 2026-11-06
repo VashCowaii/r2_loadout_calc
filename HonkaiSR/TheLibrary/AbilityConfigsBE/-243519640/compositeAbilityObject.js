@@ -15580,7 +15580,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED_8"
+                "variableName": "ENEMIES_OBJECT_UNUSED_8"
               }
             ]
           },
@@ -15721,7 +15721,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       }
                     ]
                   },
@@ -15795,7 +15795,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       }
                     ]
                   },

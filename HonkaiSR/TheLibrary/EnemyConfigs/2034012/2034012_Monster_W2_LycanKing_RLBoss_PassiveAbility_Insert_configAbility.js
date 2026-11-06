@@ -121,7 +121,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__167"
+        "variableName": "ENEMIES_OBJECT_UNUSED__167"
       },
       "ifTargetFound": [
         {

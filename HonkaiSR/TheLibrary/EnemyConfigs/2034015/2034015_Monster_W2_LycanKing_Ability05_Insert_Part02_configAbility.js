@@ -130,7 +130,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__168"
+        "variableName": "ENEMIES_OBJECT_UNUSED__168"
       },
       "passed": [
         {

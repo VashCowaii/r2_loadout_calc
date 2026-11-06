@@ -1952,11 +1952,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Has Modifier",
@@ -1969,11 +1969,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -2134,11 +2134,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Has Modifier",
@@ -2151,11 +2151,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -2296,11 +2296,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Has Modifier",
@@ -2313,11 +2313,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -2472,11 +2472,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Has Modifier",
@@ -2489,11 +2489,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -2632,11 +2632,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrLimbo",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Summoner of Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrLimbo"
                   },
                   "passed": [
                     {
@@ -3618,7 +3618,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3626,7 +3626,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3634,7 +3634,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -3647,7 +3647,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -3658,7 +3658,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -3669,7 +3669,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -4175,11 +4175,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -4363,7 +4363,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

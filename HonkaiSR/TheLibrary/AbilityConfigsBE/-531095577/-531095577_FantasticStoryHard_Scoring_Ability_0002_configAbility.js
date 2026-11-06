@@ -85,7 +85,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_8"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_8"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -93,7 +93,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_11"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_11"
                   }
                 ]
               },
@@ -106,7 +106,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_8"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_8"
                   },
                   "passed": [
                     {
@@ -153,7 +153,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_11"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_11"
                   },
                   "passed": [
                     {
@@ -262,7 +262,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "W1_SvarogPart"
+                            "variableName": "W1_SvarogPart"
                           },
                           "passed": [
                             {

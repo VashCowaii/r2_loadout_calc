@@ -1313,11 +1313,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -1404,11 +1404,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -3988,7 +3988,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_Shooter_00"
+                    "variableName": "MonsterType_W4_Shooter_00"
                   },
                   "ifTargetFound": [
                     {
@@ -4024,7 +4024,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_AML_Minion03_01"
+                    "variableName": "MonsterType_AML_Minion03_01"
                   },
                   "ifTargetFound": [
                     {
@@ -4060,7 +4060,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_Scholar_00"
+                    "variableName": "MonsterType_W4_Scholar_00"
                   },
                   "ifTargetFound": [
                     {
@@ -4096,7 +4096,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_Strongman_00"
+                    "variableName": "MonsterType_W4_Strongman_00"
                   },
                   "ifTargetFound": [
                     {
@@ -4148,7 +4148,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Shooter_00"
+                        "variableName": "MonsterType_W4_Shooter_00"
                       },
                       "ifTargetFound": [
                         {
@@ -4184,7 +4184,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_AML_Minion03_01"
+                        "variableName": "MonsterType_AML_Minion03_01"
                       },
                       "ifTargetFound": [
                         {
@@ -4220,7 +4220,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Scholar_00"
+                        "variableName": "MonsterType_W4_Scholar_00"
                       },
                       "ifTargetFound": [
                         {
@@ -4256,7 +4256,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Strongman_00"
+                        "variableName": "MonsterType_W4_Strongman_00"
                       },
                       "ifTargetFound": [
                         {
@@ -5686,11 +5686,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     }
                   ]
@@ -5730,11 +5730,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Has Turn-State",
@@ -6559,11 +6559,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -6594,11 +6594,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -6743,11 +6743,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -6778,11 +6778,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -6944,7 +6944,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -7012,7 +7012,7 @@ const compositeAbilityObject = {
               "optionName": "Decision04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -7047,7 +7047,7 @@ const compositeAbilityObject = {
               "optionName": "Decision05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

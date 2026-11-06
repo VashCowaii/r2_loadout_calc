@@ -678,7 +678,7 @@ const configAbility = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       }
                     ]
                   },

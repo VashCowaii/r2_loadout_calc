@@ -28,7 +28,7 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "Compare: Variable",
         "value1": "Skill11_Bonus_Check",
         "compareType": "NOT=",
@@ -64,11 +64,11 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOrLimbo",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
+            "livingState": "Mask_AliveOrLimbo",
             "invertCondition": true
           }
         }

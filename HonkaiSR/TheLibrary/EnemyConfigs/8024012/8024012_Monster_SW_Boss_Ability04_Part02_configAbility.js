@@ -113,7 +113,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -214,7 +214,7 @@ const configAbility = {
           "target": "{{Caster}}"
         },
         "team": "Enemy Team",
-        "location": "Left"
+        "stateType": "Left"
       },
       "passed": [
         {
@@ -252,7 +252,7 @@ const configAbility = {
           "target": "{{Caster}}"
         },
         "team": "Enemy Team",
-        "location": "Left"
+        "stateType": "Left"
       },
       "passed": [
         {
@@ -555,7 +555,7 @@ const configAbility = {
           "searchRandom": true,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",

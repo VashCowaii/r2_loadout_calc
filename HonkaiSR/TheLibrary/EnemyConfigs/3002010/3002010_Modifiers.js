@@ -315,7 +315,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               },
               "passed": [
                 {
@@ -383,7 +383,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               },
               "passed": [
                 {

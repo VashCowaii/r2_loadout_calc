@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "WMonster_W1_Mecha_02_PhaseFlag"
+                        "variableName": "WMonster_W1_Mecha_02_PhaseFlag"
                       }
                     ]
                   },
@@ -2924,7 +2924,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -2976,7 +2976,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -3035,7 +3035,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -3089,7 +3089,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -3168,7 +3168,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "WMonster_W1_Mecha_02_PhaseFlag"
+                "variableName": "WMonster_W1_Mecha_02_PhaseFlag"
               },
               {
                 "name": "Has Modifier",
@@ -4027,7 +4027,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4065,7 +4065,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4132,7 +4132,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4199,7 +4199,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

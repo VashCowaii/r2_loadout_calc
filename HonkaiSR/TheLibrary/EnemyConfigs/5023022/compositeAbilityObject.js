@@ -1693,7 +1693,7 @@ const compositeAbilityObject = {
                   "optionName": "Skill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -1734,7 +1734,7 @@ const compositeAbilityObject = {
                   "optionName": "Skill02/Skill04",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {

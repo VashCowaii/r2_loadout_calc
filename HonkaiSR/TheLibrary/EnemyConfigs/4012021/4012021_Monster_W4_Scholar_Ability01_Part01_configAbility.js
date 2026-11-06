@@ -36,7 +36,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W4_Scholar_00",
+            "variableName": "MonsterType_W4_Scholar_00",
             "invertCondition": true
           }
         ]

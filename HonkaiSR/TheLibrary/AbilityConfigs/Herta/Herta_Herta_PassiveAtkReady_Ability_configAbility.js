@@ -168,7 +168,7 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Enemies Still Alive",
               "target": {
                 "name": "Target Name",

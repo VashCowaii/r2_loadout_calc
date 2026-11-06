@@ -1122,7 +1122,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Ice"
+                "variableName": "W1_Ice"
               },
               "passed": [
                 {
@@ -1182,7 +1182,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Bronya"
+                "variableName": "W1_Bronya"
               },
               "ifTargetFound": [
                 {

@@ -640,11 +640,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Add Target by Unique Identifier",
                           "identifier": "W3_Aventurine_00"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -5345,7 +5345,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

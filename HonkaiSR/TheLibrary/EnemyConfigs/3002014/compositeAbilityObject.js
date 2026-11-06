@@ -331,7 +331,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   },
                   "passed": [
                     {
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   },
                   "passed": [
                     {
@@ -619,7 +619,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Theater_Rogue"
+            "variableName": "Theater_Rogue"
           },
           "passed": [
             {
@@ -937,7 +937,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Theater_Rogue"
+            "variableName": "Theater_Rogue"
           }
         },
         {
@@ -1212,7 +1212,7 @@ const compositeAbilityObject = {
               "optionName": "Skill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -1257,7 +1257,7 @@ const compositeAbilityObject = {
               "optionName": "Skill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -1290,7 +1290,7 @@ const compositeAbilityObject = {
               "optionName": "Skill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",

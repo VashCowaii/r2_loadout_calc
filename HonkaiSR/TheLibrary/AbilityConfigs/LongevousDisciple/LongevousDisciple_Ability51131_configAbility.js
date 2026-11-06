@@ -81,7 +81,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Param Flag",
                       "flagName": "IsHPChangeByDamage"
                     }

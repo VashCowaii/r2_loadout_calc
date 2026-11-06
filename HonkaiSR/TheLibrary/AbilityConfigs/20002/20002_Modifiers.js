@@ -899,7 +899,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Current Action Holder Is",
                       "target": {
                         "name": "Target Name",

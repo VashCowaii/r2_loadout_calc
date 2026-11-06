@@ -197,11 +197,11 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "ifTargetFound": [
                     {

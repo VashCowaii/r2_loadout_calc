@@ -263,7 +263,7 @@ const configAbility = {
           "searchRandom": true,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Has Modifier",
               "target": {
                 "name": "Target Name",

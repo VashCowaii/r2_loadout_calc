@@ -32,7 +32,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           {
             "name": "Is Part Of Team Location",
@@ -41,7 +41,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Right"
+            "stateType": "Right"
           }
         ]
       },

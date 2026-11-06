@@ -3053,11 +3053,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3181,11 +3181,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3309,11 +3309,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3437,11 +3437,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3565,11 +3565,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3693,11 +3693,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -3821,11 +3821,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         }
                       ]
@@ -7977,7 +7977,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8037,7 +8037,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8097,7 +8097,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8157,7 +8157,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8217,7 +8217,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8277,7 +8277,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8337,7 +8337,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8417,7 +8417,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8477,7 +8477,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8537,7 +8537,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8597,7 +8597,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8657,7 +8657,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8717,7 +8717,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8777,7 +8777,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8857,7 +8857,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8917,7 +8917,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -8977,7 +8977,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9037,7 +9037,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9097,7 +9097,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9157,7 +9157,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9217,7 +9217,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9297,7 +9297,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9357,7 +9357,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9417,7 +9417,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9477,7 +9477,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9537,7 +9537,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9597,7 +9597,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9657,7 +9657,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9737,7 +9737,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9797,7 +9797,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9857,7 +9857,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9917,7 +9917,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -9977,7 +9977,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10037,7 +10037,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10097,7 +10097,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10177,7 +10177,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10237,7 +10237,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10297,7 +10297,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10357,7 +10357,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10417,7 +10417,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10477,7 +10477,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10537,7 +10537,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__181"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__181"
                               },
                               "passed": [
                                 {
@@ -10622,7 +10622,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10682,7 +10682,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10742,7 +10742,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10802,7 +10802,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10862,7 +10862,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10922,7 +10922,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -10982,7 +10982,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__181"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__181"
                       },
                       "passed": [
                         {
@@ -12450,7 +12450,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

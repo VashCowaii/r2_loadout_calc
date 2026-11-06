@@ -343,11 +343,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Healing",
-                      "target": {
+                      "variableName": "_BeingHealValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "_BeingHealValue"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -2041,7 +2041,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"

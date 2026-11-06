@@ -193,11 +193,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Rin: Archer}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   {
                     "name": "Has Modifier",
@@ -210,11 +210,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   }
                 ]
               },
@@ -333,11 +333,11 @@ const configAbility = {
                           },
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Rin: Archer}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Has Modifier",
@@ -350,11 +350,11 @@ const configAbility = {
                           },
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         ]
                       },
@@ -834,11 +834,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOrRevivable",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOrRevivable"
               },
               "passed": [
                 {

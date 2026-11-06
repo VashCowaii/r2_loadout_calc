@@ -598,7 +598,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_AML_Minion03_01"
+                    "variableName": "MonsterType_AML_Minion03_01"
                   },
                   "ifTargetFound": [
                     {
@@ -623,7 +623,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Strongman_00"
+                        "variableName": "MonsterType_W4_Strongman_00"
                       },
                       "ifTargetFound": [
                         {
@@ -648,7 +648,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_Shooter_00"
+                            "variableName": "MonsterType_W4_Shooter_00"
                           },
                           "ifTargetFound": [
                             {
@@ -952,11 +952,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     }
                   ]
@@ -996,11 +996,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Has Turn-State",
@@ -1175,7 +1175,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill02",

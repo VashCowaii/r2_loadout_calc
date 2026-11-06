@@ -93,7 +93,7 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -119,7 +119,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -145,7 +145,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -171,7 +171,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -197,7 +197,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -223,7 +223,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -249,7 +249,7 @@ const configAbility = {
                         },
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {

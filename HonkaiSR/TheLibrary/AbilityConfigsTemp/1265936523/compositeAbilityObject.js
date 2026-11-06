@@ -44,7 +44,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -87,7 +87,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "team": "Player Team",
-                        "location": "Max"
+                        "stateType": "Max"
                       }
                     }
                   ]
@@ -119,7 +119,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -143,7 +143,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -220,7 +220,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -273,7 +273,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -285,7 +285,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -342,7 +342,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -386,7 +386,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -427,7 +427,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -439,7 +439,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -451,7 +451,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -496,7 +496,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "team": "Player Team",
-                        "location": "Max"
+                        "stateType": "Max"
                       }
                     }
                   ]
@@ -571,7 +571,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -583,7 +583,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -595,7 +595,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -640,7 +640,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -672,7 +672,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -684,7 +684,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -725,7 +725,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -749,7 +749,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -794,7 +794,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -837,7 +837,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "team": "Player Team",
-                        "location": "Max"
+                        "stateType": "Max"
                       }
                     }
                   ]
@@ -869,7 +869,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -881,7 +881,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -893,7 +893,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -957,7 +957,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -969,7 +969,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {
@@ -1010,7 +1010,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 },
                 {
@@ -1022,7 +1022,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos3"
+                    "stateType": "Pos3"
                   }
                 },
                 {
@@ -1034,7 +1034,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Player Team",
-                    "location": "Pos2"
+                    "stateType": "Pos2"
                   }
                 },
                 {

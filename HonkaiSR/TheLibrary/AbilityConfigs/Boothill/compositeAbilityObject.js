@@ -497,7 +497,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",
@@ -997,11 +997,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_LimboOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_LimboOnly"
                           },
                           {
                             "name": "Has Flag",
@@ -1188,11 +1188,11 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Living State",
-                                "state": "Mask_LimboOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                }
+                                },
+                                "livingState": "Mask_LimboOnly"
                               },
                               {
                                 "name": "Has Flag",
@@ -1245,11 +1245,11 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Living State",
-                                "state": "Mask_LimboOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                }
+                                },
+                                "livingState": "Mask_LimboOnly"
                               },
                               {
                                 "name": "Has Flag",
@@ -2363,7 +2363,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",
@@ -3866,7 +3866,7 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Compare: Variable",
             "value1": "Skill11_Bonus_Check",
             "compareType": "NOT=",
@@ -3902,11 +3902,11 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOrLimbo",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
+                "livingState": "Mask_AliveOrLimbo",
                 "invertCondition": true
               }
             }

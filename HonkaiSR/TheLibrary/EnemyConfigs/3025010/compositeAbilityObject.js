@@ -1418,11 +1418,11 @@ const compositeAbilityObject = {
                     "value2": 1,
                     "conditions": {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     }
                   },
                   "passed": [
@@ -1793,7 +1793,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Has Modifier",
@@ -2015,7 +2015,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Has Modifier",
@@ -3264,7 +3264,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   },
                   "ifTargetFound": [
                     {
@@ -3295,7 +3295,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3304,7 +3304,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Medium"
+                        "stateType": "Medium"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3313,7 +3313,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right",
+                        "stateType": "Right",
                         "invertCondition": true
                       }
                     ]
@@ -3347,7 +3347,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left",
+                        "stateType": "Left",
                         "invertCondition": true
                       },
                       {
@@ -3357,7 +3357,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Medium"
+                        "stateType": "Medium"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3366,7 +3366,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right"
+                        "stateType": "Right"
                       }
                     ]
                   },
@@ -3515,7 +3515,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   },
                   "ifTargetFound": [
                     {
@@ -3546,7 +3546,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3555,7 +3555,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Medium"
+                        "stateType": "Medium"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3564,7 +3564,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right",
+                        "stateType": "Right",
                         "invertCondition": true
                       }
                     ]
@@ -3598,7 +3598,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left",
+                        "stateType": "Left",
                         "invertCondition": true
                       },
                       {
@@ -3608,7 +3608,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Medium"
+                        "stateType": "Medium"
                       },
                       {
                         "name": "Is Part Of Team Location",
@@ -3617,7 +3617,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right"
+                        "stateType": "Right"
                       }
                     ]
                   },
@@ -4298,7 +4298,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           }
         },
         {
@@ -4533,7 +4533,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sunday_MainStory380",
+            "variableName": "Monster_Sunday_MainStory380",
             "invertCondition": true
           }
         },
@@ -6075,7 +6075,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           }
         },
         {
@@ -6354,7 +6354,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           },
           "passed": [
             {
@@ -6669,7 +6669,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           },
           "passed": [
             {
@@ -7388,7 +7388,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -7397,7 +7397,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -7406,7 +7406,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -7484,7 +7484,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -7494,7 +7494,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -7503,7 +7503,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -7577,7 +7577,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -8102,7 +8102,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -8123,7 +8123,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8132,7 +8132,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8141,7 +8141,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -8165,7 +8165,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -8175,7 +8175,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8184,7 +8184,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           }
@@ -8430,7 +8430,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8439,7 +8439,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8448,7 +8448,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -8507,7 +8507,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -8517,7 +8517,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8526,7 +8526,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -8581,7 +8581,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -8919,7 +8919,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -8940,7 +8940,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8949,7 +8949,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -8958,7 +8958,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -8982,7 +8982,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -8992,7 +8992,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -9001,7 +9001,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           }
@@ -9267,7 +9267,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -9276,7 +9276,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -9285,7 +9285,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -9344,7 +9344,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -9354,7 +9354,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -9363,7 +9363,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -9418,7 +9418,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -10038,7 +10038,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10047,7 +10047,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10056,7 +10056,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -10142,7 +10142,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -10152,7 +10152,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10161,7 +10161,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -10243,7 +10243,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -10537,7 +10537,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10546,7 +10546,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10555,7 +10555,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -10641,7 +10641,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -10651,7 +10651,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -10660,7 +10660,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -10742,7 +10742,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -11322,7 +11322,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Define Custom Variable with Added Value",
                         "target": {
@@ -11372,7 +11372,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11414,7 +11414,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill03",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11456,7 +11456,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill04",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11498,7 +11498,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill05",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11615,7 +11615,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Define Custom Variable with Added Value",
                         "target": {
@@ -11665,7 +11665,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Define Custom Variable with Added Value",
                         "target": {
@@ -11715,7 +11715,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill03",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11757,7 +11757,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill042",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11828,7 +11828,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill06",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11870,7 +11870,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill07",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11962,7 +11962,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill09",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill09"
@@ -12003,7 +12003,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill10",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

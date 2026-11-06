@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "1-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -80,7 +80,7 @@ const configAbility = {
           "optionName": "1-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -124,7 +124,7 @@ const configAbility = {
           "optionName": "1-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -168,7 +168,7 @@ const configAbility = {
           "optionName": "2-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -220,7 +220,7 @@ const configAbility = {
           "optionName": "2-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -264,7 +264,7 @@ const configAbility = {
           "optionName": "2-3",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -308,7 +308,7 @@ const configAbility = {
           "optionName": "4-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -346,7 +346,7 @@ const configAbility = {
           "optionName": "4-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -384,7 +384,7 @@ const configAbility = {
           "optionName": "4-3",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",

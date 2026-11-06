@@ -239,11 +239,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -2940,7 +2940,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",

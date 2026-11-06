@@ -185,7 +185,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           }
         }
       ]

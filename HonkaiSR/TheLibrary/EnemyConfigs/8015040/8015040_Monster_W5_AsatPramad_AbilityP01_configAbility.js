@@ -39,7 +39,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "W5_AsatPramad_00"
+        "variableName": "W5_AsatPramad_00"
       },
       "passed": [
         {
@@ -157,7 +157,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "W5_AsatPramad_00"
+        "variableName": "W5_AsatPramad_00"
       },
       "passed": [
         {
@@ -465,7 +465,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "W5_AsatPramad_MainStory440P3",
+                    "variableName": "W5_AsatPramad_MainStory440P3",
                     "invertCondition": true
                   }
                 },

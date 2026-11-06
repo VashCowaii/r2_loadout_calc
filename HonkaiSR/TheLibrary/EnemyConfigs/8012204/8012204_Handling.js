@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "Decision5",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill02"
@@ -56,7 +56,7 @@ const configAbility = {
           "optionName": "Decision02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill01"
@@ -83,7 +83,7 @@ const configAbility = {
           "optionName": "Decision02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {

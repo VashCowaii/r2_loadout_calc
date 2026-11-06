@@ -425,7 +425,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "SW_Minion01_Sam01",
+            "variableName": "SW_Minion01_Sam01",
             "invertCondition": true
           },
           "passed": [
@@ -767,7 +767,7 @@ const compositeAbilityObject = {
               "searchRandom": true,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -1098,7 +1098,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

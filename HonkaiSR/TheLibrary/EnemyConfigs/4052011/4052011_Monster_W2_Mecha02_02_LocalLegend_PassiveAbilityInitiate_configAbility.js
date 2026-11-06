@@ -29,11 +29,11 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Manta: Event Target 01}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           {
             "name": "Enemy ID",

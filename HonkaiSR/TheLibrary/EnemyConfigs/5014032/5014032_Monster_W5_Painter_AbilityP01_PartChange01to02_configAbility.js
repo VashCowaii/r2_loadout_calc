@@ -44,7 +44,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "GridFightBoss"
+        "variableName": "GridFightBoss"
       }
     },
     {

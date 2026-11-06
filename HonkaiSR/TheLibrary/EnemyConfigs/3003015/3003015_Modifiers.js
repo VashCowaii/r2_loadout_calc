@@ -2630,7 +2630,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   {
                     "name": "OR",
@@ -2703,7 +2703,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W3_Dinosaur_00"
+                          "variableName": "MonsterType_W3_Dinosaur_00"
                         }
                       }
                     ]
@@ -2727,7 +2727,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W3_Dinosaur_00"
+                          "variableName": "MonsterType_W3_Dinosaur_00"
                         }
                       }
                     ]
@@ -2765,7 +2765,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W1_Mecha01_02"
+                    "variableName": "MonsterType_W1_Mecha01_02"
                   }
                 },
                 {
@@ -2836,7 +2836,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__114"
+                "variableName": "ENEMIES_OBJECT_UNUSED__114"
               },
               "passed": [
                 {
@@ -2847,7 +2847,7 @@ const configAbility = {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "TheaterCore"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -2894,7 +2894,7 @@ const configAbility = {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "TheaterCore"
                     },
-                    "value": "MonsterType_W3_Theater",
+                    "variableName": "MonsterType_W3_Theater",
                     "invertCondition": true
                   },
                   {
@@ -3226,7 +3226,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -3234,7 +3234,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -3242,7 +3242,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 ]
               },
@@ -3255,7 +3255,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   }
                 },
                 {
@@ -3266,7 +3266,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   }
                 },
                 {
@@ -3277,7 +3277,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 }
               ],
@@ -3613,7 +3613,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_Theater"
+                "variableName": "MonsterType_W3_Theater"
               },
               "passed": [
                 {
@@ -3649,7 +3649,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater"
+                        "variableName": "MonsterType_W3_Theater"
                       },
                       {
                         "name": "Has Flag",
@@ -3705,7 +3705,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater",
+                    "variableName": "MonsterType_W3_Theater",
                     "invertCondition": true
                   }
                 ]
@@ -3719,7 +3719,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00"
+                    "variableName": "MonsterType_W3_Dinosaur_00"
                   },
                   "passed": [
                     {
@@ -3750,7 +3750,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "passed": [
                     {
@@ -3781,7 +3781,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W1_Mecha01_02"
+                    "variableName": "MonsterType_W1_Mecha01_02"
                   },
                   "passed": [
                     {
@@ -3812,7 +3812,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Clock_00"
+                    "variableName": "MonsterType_W3_Clock_00"
                   },
                   "passed": [
                     {
@@ -3908,7 +3908,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   {
                     "name": "Modifier Was",
@@ -3925,7 +3925,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Dinosaur_00"
+                    "variableName": "MonsterType_W3_Dinosaur_00"
                   },
                   "passed": [
                     {
@@ -3956,7 +3956,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "passed": [
                     {
@@ -3987,7 +3987,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W1_Mecha01_02"
+                    "variableName": "MonsterType_W1_Mecha01_02"
                   },
                   "passed": [
                     {
@@ -4018,7 +4018,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Clock_00"
+                    "variableName": "MonsterType_W3_Clock_00"
                   },
                   "passed": [
                     {
@@ -4244,7 +4244,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       },
                       "passed": [
@@ -4507,7 +4507,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       },
                       "passed": [
@@ -4776,7 +4776,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       },
                       "passed": [
@@ -5042,7 +5042,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Theater",
+                        "variableName": "MonsterType_W3_Theater",
                         "invertCondition": true
                       },
                       "passed": [
@@ -5183,7 +5183,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 }
               ]
@@ -5222,7 +5222,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 }
               ]
@@ -5256,7 +5256,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               },
               "failed": [
                 {
@@ -5267,7 +5267,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Clock_00"
+                    "variableName": "MonsterType_W3_Clock_00"
                   },
                   "failed": [
                     {
@@ -5278,7 +5278,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W1_Mecha01_02"
+                        "variableName": "MonsterType_W1_Mecha01_02"
                       },
                       "failed": [
                         {
@@ -5289,7 +5289,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W3_Dinosaur_00"
+                            "variableName": "MonsterType_W3_Dinosaur_00"
                           }
                         }
                       ]
@@ -5492,7 +5492,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_Theater"
+                "variableName": "MonsterType_W3_Theater"
               },
               "passed": [
                 {
@@ -5887,7 +5887,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_Theater"
+                    "variableName": "MonsterType_W3_Theater"
                   },
                   "passed": [
                     {
@@ -6031,7 +6031,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_Theater"
+                "variableName": "MonsterType_W3_Theater"
               },
               "passed": [
                 {
@@ -6076,7 +6076,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00",
+                "variableName": "MonsterType_W3_Dinosaur_00",
                 "invertCondition": true
               },
               "passed": [
@@ -6117,7 +6117,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W3_Theater"
+                "variableName": "MonsterType_W3_Theater"
               },
               "passed": [
                 {
@@ -6131,7 +6131,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Dinosaur_00",
+                        "variableName": "MonsterType_W3_Dinosaur_00",
                         "invertCondition": true
                       }
                     ]
@@ -6155,7 +6155,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "failed": [
                     {
@@ -6166,7 +6166,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Clock_00"
+                        "variableName": "MonsterType_W3_Clock_00"
                       },
                       "failed": [
                         {
@@ -6177,7 +6177,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W1_Mecha01_02"
+                            "variableName": "MonsterType_W1_Mecha01_02"
                           },
                           "failed": [
                             {
@@ -6188,7 +6188,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "MonsterType_W3_Dinosaur_00"
+                                "variableName": "MonsterType_W3_Dinosaur_00"
                               }
                             }
                           ]
@@ -6210,7 +6210,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_Dinosaur_00",
+                        "variableName": "MonsterType_W3_Dinosaur_00",
                         "invertCondition": true
                       },
                       {
@@ -6219,7 +6219,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W3_TV_00",
+                        "variableName": "MonsterType_W3_TV_00",
                         "invertCondition": true
                       }
                     ]

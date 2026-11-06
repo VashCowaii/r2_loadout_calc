@@ -43,7 +43,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_W4_Claymore_04_Main",
+        "variableName": "Monster_W4_Claymore_04_Main",
         "invertCondition": true
       },
       "passed": [

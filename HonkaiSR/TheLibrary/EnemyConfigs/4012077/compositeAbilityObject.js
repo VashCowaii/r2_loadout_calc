@@ -1797,7 +1797,7 @@ const compositeAbilityObject = {
                       "target": "{{Modifier Holder}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 }
               ]
@@ -1905,7 +1905,7 @@ const compositeAbilityObject = {
                       "target": "{{Modifier Holder}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Max"
+                    "stateType": "Max"
                   }
                 }
               ]
@@ -2179,7 +2179,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2187,7 +2187,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2195,7 +2195,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -2208,7 +2208,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -2219,7 +2219,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -2230,7 +2230,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -4265,7 +4265,7 @@ const compositeAbilityObject = {
               "target": "{{Modifier Holder}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         },
         {
@@ -5145,7 +5145,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -5174,7 +5174,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill02"

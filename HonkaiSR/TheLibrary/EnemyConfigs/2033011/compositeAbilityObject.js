@@ -373,7 +373,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "MonsterType_W2_Lycan"
+                    "variableName": "MonsterType_W2_Lycan"
                   },
                   "passed": [
                     {
@@ -1776,7 +1776,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           }
         },
         {
@@ -1865,7 +1865,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               "ifTargetFound": [
                 {
@@ -1963,7 +1963,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__167"
                   },
                   {
                     "name": "Compare: Monster Rank",
@@ -2036,7 +2036,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__167"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__167"
                       },
                       {
                         "name": "Compare: Monster Rank",
@@ -2115,7 +2115,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__167"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__167"
                           },
                           {
                             "name": "Compare: Monster Rank",
@@ -2185,7 +2185,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__167"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__167"
                           },
                           "passed": [
                             {
@@ -2230,7 +2230,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                                    "variableName": "ENEMIES_OBJECT_UNUSED__167"
                                   },
                                   {
                                     "name": "Compare: Monster Rank",
@@ -2303,7 +2303,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               "ifTargetFound": [
                 {
@@ -2419,7 +2419,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W2_Lycan"
+                "variableName": "MonsterType_W2_Lycan"
               },
               {
                 "name": "Has Flag",
@@ -2556,7 +2556,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               {
                 "name": "Has Modifier",
@@ -2615,7 +2615,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               }
             ]
           },
@@ -2664,7 +2664,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               }
             ]
           },
@@ -2720,7 +2720,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               {
                 "name": "Compare: Monster Rank",
@@ -3125,7 +3125,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3174,7 +3174,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3223,7 +3223,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3272,7 +3272,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3321,7 +3321,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3370,7 +3370,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

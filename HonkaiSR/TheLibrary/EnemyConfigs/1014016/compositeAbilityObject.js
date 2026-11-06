@@ -2009,7 +2009,7 @@ const compositeAbilityObject = {
               "includeDyingTargets": true,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Enemy ID",
                   "ID": 1012021,
                   "target": {
@@ -2634,7 +2634,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -2682,7 +2682,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -2754,7 +2754,7 @@ const compositeAbilityObject = {
                   "searchRandom": true,
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -3011,7 +3011,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -4069,7 +4069,7 @@ const compositeAbilityObject = {
               "optionName": "Decision1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4139,7 +4139,7 @@ const compositeAbilityObject = {
               "optionName": "Decision1-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4213,7 +4213,7 @@ const compositeAbilityObject = {
               "optionName": "Decision1-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4262,7 +4262,7 @@ const compositeAbilityObject = {
               "optionName": "Decision1-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4311,7 +4311,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2-1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4376,7 +4376,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2-1-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4432,7 +4432,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4506,7 +4506,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4555,7 +4555,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4604,7 +4604,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4681,7 +4681,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4762,7 +4762,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4818,7 +4818,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4874,7 +4874,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-5",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4930,7 +4930,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3-6",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -5007,7 +5007,7 @@ const compositeAbilityObject = {
               "optionName": "Decision4-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -5084,7 +5084,7 @@ const compositeAbilityObject = {
               "optionName": "Decision4-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -5161,7 +5161,7 @@ const compositeAbilityObject = {
               "optionName": "Decision4-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -5238,7 +5238,7 @@ const compositeAbilityObject = {
               "optionName": "Decision4-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

@@ -608,11 +608,11 @@ const configAbility = {
                   "name": "Inject Ability Use",
                   "conditionActive": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "abilityName": "Monster_W4_FireProwler_HPBack",
                   "abilitySource": {

@@ -1660,11 +1660,11 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               {
                 "name": "Compare: Variable",
@@ -1696,11 +1696,11 @@ const compositeAbilityObject = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "ifTargetFound": [
                     {
@@ -2079,11 +2079,11 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               {
                 "name": "Compare: Variable",
@@ -3147,11 +3147,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -3183,11 +3183,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "ifTargetFound": [
                             {
@@ -3343,11 +3343,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -3379,11 +3379,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "ifTargetFound": [
                             {
@@ -3460,11 +3460,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -3496,11 +3496,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "ifTargetFound": [
                             {
@@ -3735,11 +3735,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           "passed": [
             {
@@ -3779,11 +3779,11 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "ifTargetFound": [
                 {
@@ -4098,11 +4098,11 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Living State",
-                "state": "Mask_AliveOrRevivable",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
-                }
+                },
+                "livingState": "Mask_AliveOrRevivable"
               },
               {
                 "name": "Target is Unselectable",
@@ -4129,11 +4129,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
+            "livingState": "Mask_AliveOnly",
             "invertCondition": true
           },
           "passed": [

@@ -303,7 +303,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "Summon02Flag"
+                    "variableName": "Summon02Flag"
                   },
                   "passed": [
                     {
@@ -742,7 +742,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -750,7 +750,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -758,7 +758,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -771,7 +771,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -782,7 +782,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -1087,7 +1087,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1095,7 +1095,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1103,7 +1103,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -1116,7 +1116,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -1138,7 +1138,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -3577,7 +3577,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               }
             },
             {
@@ -3592,7 +3592,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -3600,7 +3600,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 ]
               },
@@ -3628,7 +3628,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Right"
+                    "stateType": "Right"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -3636,7 +3636,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 ]
               },
@@ -3660,7 +3660,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W1_Mecha01_02"
+                "variableName": "MonsterType_W1_Mecha01_02"
               },
               "passed": [
                 {
@@ -3682,7 +3682,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Clock_00"
+                "variableName": "MonsterType_W3_Clock_00"
               },
               "passed": [
                 {

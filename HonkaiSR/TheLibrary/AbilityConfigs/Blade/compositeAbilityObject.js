@@ -1105,11 +1105,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "CasterLostHP2",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "CasterLostHP2"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2917,7 +2917,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Flag",
                           "target": {
                             "name": "Target Name",
@@ -2928,7 +2928,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Flag",
                           "target": {
                             "name": "Target Name",

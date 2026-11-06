@@ -644,13 +644,13 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Check Boolean Value",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "W1_SvarogPart"
+                          "variableName": "W1_SvarogPart"
                         }
                       }
                     ]
@@ -2943,7 +2943,7 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "OR",
                           "conditionList": [
                             {

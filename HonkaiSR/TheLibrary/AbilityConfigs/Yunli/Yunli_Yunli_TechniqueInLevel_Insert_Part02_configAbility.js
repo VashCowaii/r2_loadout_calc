@@ -88,11 +88,11 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           {
             "name": "Target is Unselectable",

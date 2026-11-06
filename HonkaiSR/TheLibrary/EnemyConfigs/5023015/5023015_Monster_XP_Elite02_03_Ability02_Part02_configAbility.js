@@ -30,7 +30,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "XP_Elite02_03_Mark"
+            "variableName": "XP_Elite02_03_Mark"
           },
           {
             "name": "Has Flag",
@@ -97,7 +97,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "XP_Elite02_03_Mark"
+            "variableName": "XP_Elite02_03_Mark"
           },
           "ifTargetFound": [
             {
@@ -428,7 +428,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "XP_Elite02_03_Mark"
+            "variableName": "XP_Elite02_03_Mark"
           },
           "ifTargetFound": [
             {

@@ -21,7 +21,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W4_BossPartP3"
+            "variableName": "MonsterType_W4_BossPartP3"
           },
           {
             "name": "Is Part Of Team Location",
@@ -30,7 +30,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           }
         ]
       },
@@ -133,7 +133,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W4_BossPartP3"
+            "variableName": "MonsterType_W4_BossPartP3"
           },
           {
             "name": "Is Part Of Team Location",
@@ -142,7 +142,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Right"
+            "stateType": "Right"
           }
         ]
       },

@@ -217,11 +217,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "livingState": "Mask_AliveOrRevivable",
                     "invertCondition": true
                   },
                   "passed": [

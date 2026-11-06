@@ -1542,7 +1542,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPart"
+                        "variableName": "MonsterType_W4_BossPart"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1550,7 +1550,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartP3"
+                        "variableName": "MonsterType_W4_BossPartP3"
                       }
                     ]
                   },
@@ -1606,7 +1606,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPart"
+                    "variableName": "MonsterType_W4_BossPart"
                   }
                 ]
               },
@@ -1762,7 +1762,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPart"
+                "variableName": "MonsterType_W4_BossPart"
               },
               "ifTargetFound": [
                 {
@@ -1827,7 +1827,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartRight"
+                        "variableName": "MonsterType_W4_BossPartRight"
                       },
                       "failed": [
                         {
@@ -1838,7 +1838,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         }
                       ]

@@ -115,7 +115,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "Death Animation Completed",
         "team": "Player Team",
         "type": "Team Characters"

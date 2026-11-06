@@ -395,7 +395,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Param Flag",
                           "flagName": "IsFakeAvatarAttack"
                         }
@@ -446,7 +446,7 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "value": "MonsterType_Xuanlu"
+                                  "variableName": "MonsterType_Xuanlu"
                                 }
                               }
                             ]
@@ -636,7 +636,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_Xuanlu"
+                "variableName": "MonsterType_Xuanlu"
               }
             }
           ]
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -706,7 +706,7 @@ const compositeAbilityObject = {
               "optionName": "Decision02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -746,7 +746,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_Xuanlu"
+                            "variableName": "MonsterType_Xuanlu"
                           }
                         }
                       ]
@@ -762,7 +762,7 @@ const compositeAbilityObject = {
               "optionName": "Decision03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill03"
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_Xuanlu"
+                            "variableName": "MonsterType_Xuanlu"
                           }
                         }
                       ]

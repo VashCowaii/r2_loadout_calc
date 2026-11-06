@@ -88,7 +88,7 @@ const configAbility = {
     },
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "Death Animation Completed",
         "team": "Enemy Team",
         "type": "Team Characters"
@@ -152,7 +152,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Enemy Team",
-        "location": "Max"
+        "stateType": "Max"
       },
       "ifTargetFound": [
         {
@@ -222,7 +222,7 @@ const configAbility = {
           "target": "{{Parameter Target}}"
         },
         "team": "Enemy Team",
-        "location": "Max"
+        "stateType": "Max"
       },
       "ifTargetFound": [
         {

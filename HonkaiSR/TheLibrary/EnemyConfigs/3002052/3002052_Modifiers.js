@@ -252,7 +252,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED_11"
+                    "variableName": "ENEMIES_OBJECT_UNUSED_11"
                   }
                 ]
               },
@@ -454,7 +454,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED_11"
+                "variableName": "ENEMIES_OBJECT_UNUSED_11"
               },
               "passed": [
                 {

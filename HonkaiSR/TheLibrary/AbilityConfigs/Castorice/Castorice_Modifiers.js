@@ -335,11 +335,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": {
+              "variableName": "Castorice_BeingHealValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "variableName": "Castorice_BeingHealValue"
+              }
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -452,11 +452,11 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Caster's Memosprite}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "passed": [
                             {

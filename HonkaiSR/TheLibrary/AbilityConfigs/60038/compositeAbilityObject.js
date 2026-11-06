@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Skill Type",
                           "skillType": "Ultimate"
                         }
@@ -283,7 +283,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           }
         },
         {
@@ -482,7 +482,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           },
           "ifTargetFound": [
             {
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "Monster_Sunday_MainStory380"
+            "variableName": "Monster_Sunday_MainStory380"
           }
         },
         "Trigger: Ability End"

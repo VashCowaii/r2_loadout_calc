@@ -117,7 +117,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_27"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_27"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -125,7 +125,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -133,7 +133,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -141,7 +141,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 ]
               },
@@ -154,7 +154,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_27"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_27"
                   }
                 },
                 {
@@ -165,7 +165,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   }
                 },
                 {
@@ -176,7 +176,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   }
                 },
                 {
@@ -187,7 +187,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 }
               ],
@@ -2050,11 +2050,11 @@ const configAbility = {
                       "name": "Inject Ability Use",
                       "conditionActive": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Summoner of Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       "abilityName": "Monster_W4_FireProwler_IF_HPBack",
                       "abilitySource": {
@@ -3643,11 +3643,11 @@ const configAbility = {
                   "name": "Inject Ability Use",
                   "conditionActive": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "abilityName": "Monster_W4_FireProwler_HPBack",
                   "abilitySource": {

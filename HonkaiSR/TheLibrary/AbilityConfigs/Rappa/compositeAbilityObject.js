@@ -1367,7 +1367,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "OR",
             "conditionList": [
               {

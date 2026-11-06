@@ -87,7 +87,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "PeakBattle"
+            "variableName": "PeakBattle"
           },
           "passed": [
             {

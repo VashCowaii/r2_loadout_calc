@@ -48,7 +48,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}}"
                 },
-                "value": "W5_AsatPramad_MainStory"
+                "variableName": "W5_AsatPramad_MainStory"
               },
               "passed": [
                 {
@@ -83,7 +83,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}}"
                 },
-                "value": "W5_AsatPramad_MainStory"
+                "variableName": "W5_AsatPramad_MainStory"
               },
               "passed": [
                 {
@@ -1195,7 +1195,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -1233,7 +1233,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -1295,7 +1295,7 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -1613,7 +1613,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1623,7 +1623,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1633,7 +1633,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1643,7 +1643,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1653,7 +1653,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1663,7 +1663,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1673,7 +1673,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1704,7 +1704,7 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1719,7 +1719,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1754,7 +1754,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1764,7 +1764,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1774,7 +1774,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1784,7 +1784,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1799,7 +1799,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1814,7 +1814,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1824,7 +1824,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1834,7 +1834,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",
@@ -1844,7 +1844,7 @@ const configAbility = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DebuffID_Result",

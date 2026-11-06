@@ -388,12 +388,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "OverflowHeal_Temp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "OverflowHeal_Temp",
-                  "healProperty": "Result_OverflowHealAmount"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">OverflowHealing</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -426,12 +426,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "OverflowHeal_Temp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "OverflowHeal_Temp",
-                  "healProperty": "Result_OverflowHealAmount"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">OverflowHealing</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -493,12 +493,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "OverflowHeal_Temp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "OverflowHeal_Temp",
-                  "healProperty": "Result_OverflowHealAmount"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">OverflowHealing</span>&nbsp;"
                 },
                 {
                   "name": "IF",

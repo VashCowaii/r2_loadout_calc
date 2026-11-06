@@ -23,7 +23,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -41,7 +41,6 @@ const configAbility = {
                   "conditionList": [
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -55,11 +54,11 @@ const configAbility = {
                             "indexType": "IndexStrict"
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -74,11 +73,11 @@ const configAbility = {
                             "indexValue": 1
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -93,7 +92,8 @@ const configAbility = {
                             "indexValue": 2
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     }
                   ]
                 },
@@ -132,7 +132,7 @@ const configAbility = {
           "optionName": "UseSkill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -149,7 +149,6 @@ const configAbility = {
                   "conditionList": [
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -166,11 +165,11 @@ const configAbility = {
                             "indexType": "IndexStrict"
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -188,11 +187,11 @@ const configAbility = {
                             "indexValue": 1
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Sequence",
                         "TargetList": [
@@ -210,7 +209,8 @@ const configAbility = {
                             "indexValue": 2
                           }
                         ]
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     }
                   ]
                 },
@@ -248,7 +248,7 @@ const configAbility = {
           "optionName": "UseSkill03",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -291,7 +291,7 @@ const configAbility = {
           "optionName": "UseSkill04",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {

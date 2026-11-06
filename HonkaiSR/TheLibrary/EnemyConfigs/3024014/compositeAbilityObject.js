@@ -662,7 +662,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -730,7 +730,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -798,7 +798,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -1011,7 +1011,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -1106,7 +1106,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -1176,7 +1176,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -1244,7 +1244,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -1484,7 +1484,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__113"
+            "variableName": "ENEMIES_OBJECT_UNUSED__113"
           }
         },
         {
@@ -1678,7 +1678,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Sword_FirstFlag"
+                "variableName": "Sword_FirstFlag"
               }
             ]
           },
@@ -1782,7 +1782,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "Sword_FirstFlag"
+                    "variableName": "Sword_FirstFlag"
                   }
                 ]
               },
@@ -1934,7 +1934,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               "passed": [
                 {
@@ -2027,7 +2027,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -2097,7 +2097,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -2192,7 +2192,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -2262,7 +2262,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -2668,7 +2668,7 @@ const compositeAbilityObject = {
               "optionName": "1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2720,7 +2720,7 @@ const compositeAbilityObject = {
               "optionName": "1-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2764,7 +2764,7 @@ const compositeAbilityObject = {
               "optionName": "1-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2808,7 +2808,7 @@ const compositeAbilityObject = {
               "optionName": "2-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2860,7 +2860,7 @@ const compositeAbilityObject = {
               "optionName": "2-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2904,7 +2904,7 @@ const compositeAbilityObject = {
               "optionName": "2-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2948,7 +2948,7 @@ const compositeAbilityObject = {
               "optionName": "4-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -2986,7 +2986,7 @@ const compositeAbilityObject = {
               "optionName": "4-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -3024,7 +3024,7 @@ const compositeAbilityObject = {
               "optionName": "4-3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",

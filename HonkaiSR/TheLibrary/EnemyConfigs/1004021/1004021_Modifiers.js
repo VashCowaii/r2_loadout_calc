@@ -152,7 +152,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Soldier"
+                "variableName": "W1_Soldier"
               },
               "passed": [
                 {
@@ -182,7 +182,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W1_Soldier"
+                "variableName": "W1_Soldier"
               },
               "passed": [
                 {

@@ -44,11 +44,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster's Summoner}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

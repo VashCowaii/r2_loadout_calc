@@ -394,7 +394,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "DieInsert_Flag[?]",
+            "variableName": "DieInsert_Flag[?]",
             "invertCondition": true
           },
           "passed": [

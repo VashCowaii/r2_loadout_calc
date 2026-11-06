@@ -86,7 +86,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "UsedEnterBattleFlag"
+        "variableName": "UsedEnterBattleFlag"
       },
       "passed": [
         {

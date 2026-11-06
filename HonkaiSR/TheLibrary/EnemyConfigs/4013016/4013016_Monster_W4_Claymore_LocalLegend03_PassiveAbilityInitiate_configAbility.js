@@ -636,11 +636,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 }
               ]
@@ -680,11 +680,11 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Has Turn-State",

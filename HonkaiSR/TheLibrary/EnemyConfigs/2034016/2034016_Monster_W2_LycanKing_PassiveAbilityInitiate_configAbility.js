@@ -176,7 +176,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__170"
+        "variableName": "ENEMIES_OBJECT_UNUSED__170"
       },
       "failed": [
         {
@@ -193,7 +193,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__168"
+            "variableName": "ENEMIES_OBJECT_UNUSED__168"
           },
           "passed": [
             {
@@ -929,7 +929,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__168"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__168"
                       }
                     ]
                   },
@@ -1358,7 +1358,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__168"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__168"
                   },
                   {
                     "name": "Has Modifier",
@@ -1506,7 +1506,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__167"
                   },
                   {
                     "name": "Compare: Target",
@@ -1587,7 +1587,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "ENEMIES_OBJECT_UNUSED__167"
+                      "variableName": "ENEMIES_OBJECT_UNUSED__167"
                     }
                   }
                 ]
@@ -1638,7 +1638,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__167"
                   },
                   {
                     "name": "Compare: Target",
@@ -1732,7 +1732,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__170",
+                        "variableName": "ENEMIES_OBJECT_UNUSED__170",
                         "invertCondition": true
                       }
                     ]
@@ -1829,7 +1829,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__170"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__170"
                           }
                         ]
                       },

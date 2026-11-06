@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W1_Soldier"
+                    "variableName": "W1_Soldier"
                   },
                   "passed": [
                     {
@@ -1159,7 +1159,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -1192,7 +1192,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1231,7 +1231,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1267,7 +1267,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1294,7 +1294,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1330,7 +1330,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1357,7 +1357,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1413,7 +1413,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -1446,7 +1446,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1485,7 +1485,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1548,7 +1548,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1584,7 +1584,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1611,7 +1611,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1667,7 +1667,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -1700,7 +1700,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1739,7 +1739,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1775,7 +1775,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1802,7 +1802,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1838,7 +1838,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1865,7 +1865,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -1921,7 +1921,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -1954,7 +1954,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1993,7 +1993,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2056,7 +2056,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",
@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2119,7 +2119,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Modifier",
                           "target": {
                             "name": "Target Name",

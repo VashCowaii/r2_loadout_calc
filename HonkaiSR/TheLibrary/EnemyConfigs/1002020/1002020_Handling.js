@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill01"
@@ -52,7 +52,7 @@ const configAbility = {
           "optionName": "UseSkill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Choose Ability Target",
                 "skillName": "Skill02",
@@ -108,7 +108,7 @@ const configAbility = {
                   "conditionList": [
                     {
                       "name": "NOT",
-                      "condition": {
+                      "conditions": {
                         "name": "Enemy ID",
                         "ID": 1002020,
                         "target": {
@@ -120,7 +120,7 @@ const configAbility = {
                     },
                     {
                       "name": "NOT",
-                      "condition": {
+                      "conditions": {
                         "name": "Has Modifier",
                         "target": {
                           "name": "Target Name",

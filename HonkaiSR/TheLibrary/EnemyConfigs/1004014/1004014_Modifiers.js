@@ -286,7 +286,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Is Joint-Attack",
                   "target": {
                     "name": "Target Name",
@@ -5012,7 +5012,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Summon01Flag"
+                "variableName": "Summon01Flag"
               },
               "passed": [
                 {
@@ -5049,7 +5049,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Summon02Flag"
+                "variableName": "Summon02Flag"
               },
               "passed": [
                 {

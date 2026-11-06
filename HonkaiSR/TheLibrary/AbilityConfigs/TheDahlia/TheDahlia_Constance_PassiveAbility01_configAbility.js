@@ -1022,11 +1022,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrLimbo",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrLimbo"
                   },
                   {
                     "name": "Compare: Variable",

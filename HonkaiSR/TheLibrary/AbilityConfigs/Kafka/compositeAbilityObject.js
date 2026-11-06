@@ -290,7 +290,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",
@@ -1909,11 +1909,11 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Living State",
-                              "state": "Mask_AliveOnly",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              }
+                              },
+                              "livingState": "Mask_AliveOnly"
                             }
                           ]
                         },
@@ -2015,11 +2015,11 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         ]
                       },

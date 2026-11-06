@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "Decision1-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -103,7 +103,7 @@ const configAbility = {
           "optionName": "Decision1-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -152,7 +152,7 @@ const configAbility = {
           "optionName": "Decision1-3",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -229,7 +229,7 @@ const configAbility = {
           "optionName": "Decision1-4",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -278,7 +278,7 @@ const configAbility = {
           "optionName": "Decision2-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -389,7 +389,7 @@ const configAbility = {
           "optionName": "Decision2-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -438,7 +438,7 @@ const configAbility = {
           "optionName": "Decision2-3",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -525,7 +525,7 @@ const configAbility = {
           "optionName": "Decision2-4",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -603,7 +603,7 @@ const configAbility = {
           "optionName": "Decision2-5",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -652,7 +652,7 @@ const configAbility = {
           "optionName": "Decision2-6",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -701,7 +701,7 @@ const configAbility = {
           "optionName": "Decision3-1",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -834,7 +834,7 @@ const configAbility = {
           "optionName": "Decision3-2",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -883,7 +883,7 @@ const configAbility = {
           "optionName": "Decision3-3",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -1054,7 +1054,7 @@ const configAbility = {
           "optionName": "Decision3-4",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -1141,7 +1141,7 @@ const configAbility = {
           "optionName": "Decision3-5",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -1199,7 +1199,7 @@ const configAbility = {
           "optionName": "Decision3-6",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {

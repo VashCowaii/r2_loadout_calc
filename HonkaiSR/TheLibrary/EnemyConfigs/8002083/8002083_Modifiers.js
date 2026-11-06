@@ -644,7 +644,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Param Flag",
                       "flagName": "IsFakeAvatarAttack"
                     }
@@ -785,7 +785,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of Team",
                       "target": {
                         "name": "Target Name",

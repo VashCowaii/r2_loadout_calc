@@ -279,11 +279,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Rin: Archer}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       },
                       {
                         "name": "Has Modifier",
@@ -296,11 +296,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -419,11 +419,11 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Living State",
-                                "state": "Mask_AliveOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Rin: Archer}}"
-                                }
+                                },
+                                "livingState": "Mask_AliveOnly"
                               },
                               {
                                 "name": "Has Modifier",
@@ -436,11 +436,11 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Living State",
-                                "state": "Mask_AliveOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
-                                }
+                                },
+                                "livingState": "Mask_AliveOnly"
                               }
                             ]
                           },
@@ -920,11 +920,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   "passed": [
                     {
@@ -1894,11 +1894,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Rin: Archer}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       },
                       {
                         "name": "Has Modifier",
@@ -2088,11 +2088,11 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Living State",
-                                "state": "Mask_AliveOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Rin: Archer}}"
-                                }
+                                },
+                                "livingState": "Mask_AliveOnly"
                               },
                               {
                                 "name": "Has Modifier",
@@ -2105,11 +2105,11 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Living State",
-                                "state": "Mask_AliveOnly",
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
-                                }
+                                },
+                                "livingState": "Mask_AliveOnly"
                               }
                             ]
                           },

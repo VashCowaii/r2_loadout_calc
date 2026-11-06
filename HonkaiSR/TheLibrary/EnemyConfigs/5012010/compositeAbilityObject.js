@@ -191,7 +191,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sequence Event",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Sequence Event",
-              "passed": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -282,7 +282,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Sequence Event",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -579,10 +579,10 @@ const compositeAbilityObject = {
                   "optionName": "变身准备",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Sequence Event",
-                        "passed": [
+                        "execute": [
                           {
                             "name": "Declare Custom Variable",
                             "target": {
@@ -625,7 +625,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill01"

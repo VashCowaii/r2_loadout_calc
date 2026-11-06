@@ -751,7 +751,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -759,7 +759,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_11"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_11"
                       }
                     ]
                   },
@@ -772,7 +772,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       },
                       "passed": [
                         {
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_11"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_11"
                       },
                       "passed": [
                         {
@@ -928,7 +928,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "W1_SvarogPart"
+                                "variableName": "W1_SvarogPart"
                               },
                               "passed": [
                                 {
@@ -1420,7 +1420,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1428,7 +1428,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_11"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_11"
                       }
                     ]
                   },
@@ -1441,7 +1441,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_8"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_8"
                       },
                       "passed": [
                         {
@@ -1488,7 +1488,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED_11"
+                        "variableName": "ENEMIES_OBJECT_UNUSED_11"
                       },
                       "passed": [
                         {
@@ -1597,7 +1597,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "W1_SvarogPart"
+                                "variableName": "W1_SvarogPart"
                               },
                               "passed": [
                                 {

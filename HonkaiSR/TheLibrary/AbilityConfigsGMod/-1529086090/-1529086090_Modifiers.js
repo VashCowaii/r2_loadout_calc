@@ -133,7 +133,7 @@ const configAbility = {
               "maxTargets": 5,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Is Character Weakness Activated",
                   "target": {
                     "name": "Target Name",
@@ -197,7 +197,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Teammate",
                       "target": {
                         "name": "Target Name",
@@ -263,7 +263,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Teammate",
                       "target": {
                         "name": "Target Name",

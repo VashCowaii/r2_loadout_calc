@@ -271,19 +271,19 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Gilgamesh: Saber}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   {
                     "name": "Compare: Variable",
@@ -415,11 +415,11 @@ const configAbility = {
                           },
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Gilgamesh: Saber}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           }
                         ]
                       },

@@ -199,11 +199,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   }
                 ]
               },
@@ -637,11 +637,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Target is Pathstrider",
@@ -1177,11 +1177,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Target is Pathstrider",

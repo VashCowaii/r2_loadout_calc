@@ -27,7 +27,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -80,7 +80,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {

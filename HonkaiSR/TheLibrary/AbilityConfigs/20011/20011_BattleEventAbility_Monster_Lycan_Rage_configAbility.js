@@ -38,7 +38,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__168",
+            "variableName": "ENEMIES_OBJECT_UNUSED__168",
             "invertCondition": true
           },
           "passed": [
@@ -154,7 +154,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               "noTargetFound": [
                 {
@@ -187,7 +187,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               "passed": [
                 {
@@ -234,7 +234,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan_01"
+                    "variableName": "MonsterType_W2_Lycan_01"
                   },
                   "passed": [
                     {
@@ -255,7 +255,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan_00"
+                    "variableName": "MonsterType_W2_Lycan_00"
                   },
                   "passed": [
                     {
@@ -276,7 +276,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan"
+                    "variableName": "MonsterType_W2_Lycan"
                   },
                   "passed": [
                     {

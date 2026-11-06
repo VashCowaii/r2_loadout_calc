@@ -28,7 +28,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           },
           {
             "name": "Has Modifier",
@@ -67,7 +67,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           },
           {
             "name": "Compare: Target",
@@ -136,7 +136,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           }
         ]
       },
@@ -204,7 +204,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               "passed": [
                 {
@@ -225,7 +225,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan_01"
+                    "variableName": "MonsterType_W2_Lycan_01"
                   }
                 },
                 {
@@ -236,7 +236,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan_00"
+                    "variableName": "MonsterType_W2_Lycan_00"
                   }
                 },
                 {
@@ -247,7 +247,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W2_Lycan"
+                    "variableName": "MonsterType_W2_Lycan"
                   }
                 }
               ]

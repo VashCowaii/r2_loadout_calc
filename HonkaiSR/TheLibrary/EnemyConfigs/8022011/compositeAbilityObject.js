@@ -2713,7 +2713,7 @@ const compositeAbilityObject = {
               "searchRandom": true,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -3044,7 +3044,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

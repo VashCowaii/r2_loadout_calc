@@ -1652,11 +1652,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           "failed": [
                             {
@@ -3051,11 +3051,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     }
                   ]
@@ -3095,11 +3095,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Living State",
-                            "state": "Mask_AliveOnly",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
-                            }
+                            },
+                            "livingState": "Mask_AliveOnly"
                           },
                           {
                             "name": "Has Turn-State",
@@ -4124,7 +4124,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4142,7 +4142,6 @@ const compositeAbilityObject = {
                       "conditionList": [
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4156,11 +4155,11 @@ const compositeAbilityObject = {
                                 "indexType": "IndexStrict"
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         },
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4175,11 +4174,11 @@ const compositeAbilityObject = {
                                 "indexValue": 1
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         },
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4194,7 +4193,8 @@ const compositeAbilityObject = {
                                 "indexValue": 2
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         }
                       ]
                     },
@@ -4233,7 +4233,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4268,7 +4268,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4285,7 +4285,6 @@ const compositeAbilityObject = {
                       "conditionList": [
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4302,11 +4301,11 @@ const compositeAbilityObject = {
                                 "indexType": "IndexStrict"
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         },
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4324,11 +4323,11 @@ const compositeAbilityObject = {
                                 "indexValue": 1
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         },
                         {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Sequence",
                             "TargetList": [
@@ -4346,7 +4345,8 @@ const compositeAbilityObject = {
                                 "indexValue": 2
                               }
                             ]
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         }
                       ]
                     },
@@ -4384,7 +4384,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4417,7 +4417,6 @@ const compositeAbilityObject = {
                           "conditionList": [
                             {
                               "name": "Living State",
-                              "state": "Mask_AliveOnly",
                               "target": {
                                 "name": "Target Sequence",
                                 "TargetList": [
@@ -4431,11 +4430,11 @@ const compositeAbilityObject = {
                                     "indexType": "IndexStrict"
                                   }
                                 ]
-                              }
+                              },
+                              "livingState": "Mask_AliveOnly"
                             },
                             {
                               "name": "Living State",
-                              "state": "Mask_AliveOnly",
                               "target": {
                                 "name": "Target Sequence",
                                 "TargetList": [
@@ -4450,11 +4449,11 @@ const compositeAbilityObject = {
                                     "indexValue": 1
                                   }
                                 ]
-                              }
+                              },
+                              "livingState": "Mask_AliveOnly"
                             },
                             {
                               "name": "Living State",
-                              "state": "Mask_AliveOnly",
                               "target": {
                                 "name": "Target Sequence",
                                 "TargetList": [
@@ -4469,7 +4468,8 @@ const compositeAbilityObject = {
                                     "indexValue": 2
                                   }
                                 ]
-                              }
+                              },
+                              "livingState": "Mask_AliveOnly"
                             }
                           ]
                         },
@@ -4540,7 +4540,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

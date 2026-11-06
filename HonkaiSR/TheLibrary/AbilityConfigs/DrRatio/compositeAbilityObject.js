@@ -774,7 +774,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Current Action Holder Is",
                           "target": {
                             "name": "Target Name",
@@ -1940,11 +1940,11 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               {
                 "name": "Compare: Variable",
@@ -3804,11 +3804,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Anyone",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Summoner of Parameter Target}}"
                         },
+                        "livingState": "Anyone",
                         "invertCondition": true
                       }
                     ]

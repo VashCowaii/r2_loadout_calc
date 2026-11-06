@@ -79,7 +79,7 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "OR",
                       "conditionList": [
                         {

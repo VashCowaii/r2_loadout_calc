@@ -500,7 +500,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_00"
+                            "variableName": "W3_Figure_00"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -508,7 +508,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_01"
+                            "variableName": "W3_Figure_01"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -516,7 +516,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_02"
+                            "variableName": "W3_Figure_02"
                           }
                         ]
                       },
@@ -669,7 +669,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_00"
+                                    "variableName": "W3_Figure_00"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -677,7 +677,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_01"
+                                    "variableName": "W3_Figure_01"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -685,7 +685,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_02"
+                                    "variableName": "W3_Figure_02"
                                   }
                                 ]
                               },
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_00"
+                                    "variableName": "W3_Figure_00"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -818,7 +818,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_01"
+                                    "variableName": "W3_Figure_01"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_02"
+                                    "variableName": "W3_Figure_02"
                                   }
                                 ]
                               },
@@ -1236,7 +1236,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_00"
+                            "variableName": "W3_Figure_00"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -1244,7 +1244,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_01"
+                            "variableName": "W3_Figure_01"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -1252,7 +1252,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_02"
+                            "variableName": "W3_Figure_02"
                           }
                         ]
                       },
@@ -1341,7 +1341,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_00"
+                                "variableName": "W3_Figure_00"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -1349,7 +1349,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_01"
+                                "variableName": "W3_Figure_01"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -1357,7 +1357,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_02"
+                                "variableName": "W3_Figure_02"
                               }
                             ]
                           },
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_00"
+                                "variableName": "W3_Figure_00"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -1475,7 +1475,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_01"
+                                "variableName": "W3_Figure_01"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -1483,7 +1483,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_02"
+                                "variableName": "W3_Figure_02"
                               }
                             ]
                           },
@@ -1603,7 +1603,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1611,7 +1611,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   }
@@ -1733,7 +1733,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1741,7 +1741,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1749,7 +1749,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   },
@@ -1834,7 +1834,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_00"
+                            "variableName": "W3_Figure_00"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_01"
+                            "variableName": "W3_Figure_01"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -1850,7 +1850,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_02"
+                            "variableName": "W3_Figure_02"
                           }
                         ]
                       },
@@ -1969,7 +1969,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1977,7 +1977,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1985,7 +1985,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   },
@@ -2027,7 +2027,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "team": "Enemy Team",
-                          "location": "Pos2"
+                          "stateType": "Pos2"
                         }
                       }
                     ]
@@ -2202,7 +2202,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       "passed": [
                         {
@@ -2220,7 +2220,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       "passed": [
                         {
@@ -2238,7 +2238,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       },
                       "passed": [
                         {
@@ -2633,7 +2633,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_00"
+                                    "variableName": "W3_Figure_00"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -2641,7 +2641,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_01"
+                                    "variableName": "W3_Figure_01"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -2649,7 +2649,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_02"
+                                    "variableName": "W3_Figure_02"
                                   }
                                 ]
                               },
@@ -2774,7 +2774,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_00"
+                                    "variableName": "W3_Figure_00"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -2782,7 +2782,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_01"
+                                    "variableName": "W3_Figure_01"
                                   },
                                   {
                                     "name": "Check Boolean Value",
@@ -2790,7 +2790,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "value": "W3_Figure_02"
+                                    "variableName": "W3_Figure_02"
                                   }
                                 ]
                               },
@@ -3230,7 +3230,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_00"
+                            "variableName": "W3_Figure_00"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -3238,7 +3238,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_01"
+                            "variableName": "W3_Figure_01"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -3246,7 +3246,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_02"
+                            "variableName": "W3_Figure_02"
                           }
                         ]
                       },
@@ -3351,7 +3351,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_00"
+                                "variableName": "W3_Figure_00"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -3359,7 +3359,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_01"
+                                "variableName": "W3_Figure_01"
                               },
                               {
                                 "name": "Check Boolean Value",
@@ -3367,7 +3367,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "W3_Figure_02"
+                                "variableName": "W3_Figure_02"
                               }
                             ]
                           },
@@ -3495,7 +3495,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3503,7 +3503,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3511,7 +3511,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   }
@@ -3625,7 +3625,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3633,7 +3633,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3641,7 +3641,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   },
@@ -3726,7 +3726,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_00"
+                            "variableName": "W3_Figure_00"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -3734,7 +3734,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_01"
+                            "variableName": "W3_Figure_01"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -3742,7 +3742,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "W3_Figure_02"
+                            "variableName": "W3_Figure_02"
                           }
                         ]
                       },
@@ -3873,7 +3873,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3881,7 +3881,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -3889,7 +3889,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   },
@@ -3930,7 +3930,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "team": "Enemy Team",
-                          "location": "Pos2"
+                          "stateType": "Pos2"
                         }
                       }
                     ]
@@ -4118,7 +4118,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -4126,7 +4126,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -4134,7 +4134,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           },
@@ -4242,7 +4242,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_02"
+                  "variableName": "W3_Figure_02"
                 }
               }
             ]
@@ -4268,7 +4268,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_00"
+                  "variableName": "W3_Figure_00"
                 }
               }
             ]
@@ -4294,7 +4294,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_01"
+                  "variableName": "W3_Figure_01"
                 }
               }
             ]
@@ -4321,7 +4321,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_02"
+                  "variableName": "W3_Figure_02"
                 }
               }
             ]
@@ -4346,7 +4346,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_00"
+                  "variableName": "W3_Figure_00"
                 }
               }
             ]
@@ -4371,7 +4371,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_01"
+                  "variableName": "W3_Figure_01"
                 }
               }
             ]
@@ -4401,7 +4401,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -4409,7 +4409,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -4417,7 +4417,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           }
@@ -4546,7 +4546,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -4554,7 +4554,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -4562,7 +4562,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           },
@@ -4689,7 +4689,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_02"
+                  "variableName": "W3_Figure_02"
                 }
               }
             ]
@@ -4715,7 +4715,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_00"
+                  "variableName": "W3_Figure_00"
                 }
               }
             ]
@@ -4741,7 +4741,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_01"
+                  "variableName": "W3_Figure_01"
                 }
               }
             ]
@@ -4768,7 +4768,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_02"
+                  "variableName": "W3_Figure_02"
                 }
               }
             ]
@@ -4793,7 +4793,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_00"
+                  "variableName": "W3_Figure_00"
                 }
               }
             ]
@@ -4818,7 +4818,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "W3_Figure_01"
+                  "variableName": "W3_Figure_01"
                 }
               }
             ]
@@ -4848,7 +4848,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -4856,7 +4856,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -4864,7 +4864,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           }
@@ -5444,7 +5444,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_00"
+                    "variableName": "W3_Figure_00"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5452,7 +5452,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_01"
+                    "variableName": "W3_Figure_01"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5460,7 +5460,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_02"
+                    "variableName": "W3_Figure_02"
                   }
                 ]
               }
@@ -5555,7 +5555,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_00"
+                    "variableName": "W3_Figure_00"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5563,7 +5563,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_01"
+                    "variableName": "W3_Figure_01"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5571,7 +5571,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_02"
+                    "variableName": "W3_Figure_02"
                   }
                 ]
               },
@@ -5700,7 +5700,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_00"
+                    "variableName": "W3_Figure_00"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5708,7 +5708,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_01"
+                    "variableName": "W3_Figure_01"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -5716,7 +5716,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_02"
+                    "variableName": "W3_Figure_02"
                   }
                 ]
               },
@@ -5899,7 +5899,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -5907,7 +5907,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -5915,7 +5915,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           },
@@ -5994,7 +5994,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_00"
+                      "variableName": "W3_Figure_00"
                     },
                     {
                       "name": "Check Boolean Value",
@@ -6002,7 +6002,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_01"
+                      "variableName": "W3_Figure_01"
                     },
                     {
                       "name": "Check Boolean Value",
@@ -6010,7 +6010,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_02"
+                      "variableName": "W3_Figure_02"
                     }
                   ]
                 }
@@ -6040,7 +6040,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_00"
+                      "variableName": "W3_Figure_00"
                     },
                     {
                       "name": "Check Boolean Value",
@@ -6048,7 +6048,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_01"
+                      "variableName": "W3_Figure_01"
                     },
                     {
                       "name": "Check Boolean Value",
@@ -6056,7 +6056,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_02"
+                      "variableName": "W3_Figure_02"
                     }
                   ]
                 }
@@ -6141,7 +6141,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_00"
+                    "variableName": "W3_Figure_00"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -6149,7 +6149,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_01"
+                    "variableName": "W3_Figure_01"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -6157,7 +6157,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W3_Figure_02"
+                    "variableName": "W3_Figure_02"
                   }
                 ]
               },
@@ -6244,7 +6244,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_00"
+                        "variableName": "W3_Figure_00"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -6252,7 +6252,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_01"
+                        "variableName": "W3_Figure_01"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -6260,7 +6260,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "W3_Figure_02"
+                        "variableName": "W3_Figure_02"
                       }
                     ]
                   },
@@ -6352,7 +6352,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_02"
+                      "variableName": "W3_Figure_02"
                     }
                   }
                 ]
@@ -6377,7 +6377,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_00"
+                      "variableName": "W3_Figure_00"
                     }
                   }
                 ]
@@ -6402,7 +6402,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_01"
+                      "variableName": "W3_Figure_01"
                     }
                   }
                 ]
@@ -6434,7 +6434,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "W3_Figure_02"
+                      "variableName": "W3_Figure_02"
                     }
                   }
                 ]
@@ -6605,7 +6605,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -6654,7 +6654,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -6703,7 +6703,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -6752,7 +6752,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill07",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -6801,7 +6801,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill06",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -6850,7 +6850,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill08",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

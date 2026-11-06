@@ -26,7 +26,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           },
           "ifTargetFound": [
             {
@@ -67,7 +67,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           },
           "ifTargetFound": [
             {
@@ -108,7 +108,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           },
           "ifTargetFound": [
             {
@@ -140,7 +140,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__114"
+        "variableName": "ENEMIES_OBJECT_UNUSED__114"
       },
       "ifTargetFound": [
         {
@@ -292,7 +292,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__114"
+        "variableName": "ENEMIES_OBJECT_UNUSED__114"
       },
       "ifTargetFound": [
         {

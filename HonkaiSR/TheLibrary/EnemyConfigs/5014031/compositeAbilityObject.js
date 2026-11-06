@@ -871,11 +871,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrLimbo",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Summoner of Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrLimbo"
                   },
                   "passed": [
                     {
@@ -1232,7 +1232,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "GridFightBoss"
+                            "variableName": "GridFightBoss"
                           },
                           "passed": [
                             {
@@ -1344,7 +1344,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "GridFightBoss"
+                            "variableName": "GridFightBoss"
                           },
                           "passed": [
                             {
@@ -2211,7 +2211,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "GridFightBoss"
+            "variableName": "GridFightBoss"
           }
         },
         {
@@ -2706,7 +2706,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "GridFightBoss"
+            "variableName": "GridFightBoss"
           },
           "passed": [
             {
@@ -2892,7 +2892,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "GridFightBoss"
+                    "variableName": "GridFightBoss"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2978,7 +2978,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "Peakbattle"
+                    "variableName": "Peakbattle"
                   },
                   "passed": [
                     {
@@ -3097,7 +3097,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Right"
+                            "stateType": "Right"
                           },
                           "passed": [
                             {
@@ -3136,7 +3136,7 @@ const compositeAbilityObject = {
                                   "target": "{{Caster}}"
                                 },
                                 "team": "Enemy Team",
-                                "location": "Left"
+                                "stateType": "Left"
                               },
                               "passed": [
                                 {
@@ -3177,7 +3177,7 @@ const compositeAbilityObject = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -3216,7 +3216,7 @@ const compositeAbilityObject = {
                                   "target": "{{Caster}}"
                                 },
                                 "team": "Enemy Team",
-                                "location": "Right"
+                                "stateType": "Right"
                               },
                               "passed": [
                                 {
@@ -3739,7 +3739,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "GridFightBoss"
+            "variableName": "GridFightBoss"
           },
           "passed": [
             {
@@ -4143,7 +4143,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill01"
@@ -4183,7 +4183,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4234,7 +4234,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill05",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill05"
@@ -4274,7 +4274,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01_2",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4349,7 +4349,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill05",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill05"
@@ -4401,7 +4401,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01_2",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Define Custom Variable with Added Value",
                         "target": {
@@ -4466,7 +4466,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Use Ability Option",
                         "skillName": "Skill01"
@@ -4506,7 +4506,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill03",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4557,7 +4557,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill06",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4607,7 +4607,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill05_Main",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

@@ -72,7 +72,7 @@ const configAbility = {
                   "name": "Add Target by Unique Identifier",
                   "identifier": "W4_Serpent_01"
                 },
-                "value": "RLBoss"
+                "variableName": "RLBoss"
               },
               "passed": [
                 {

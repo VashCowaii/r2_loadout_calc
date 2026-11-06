@@ -46,7 +46,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "value": "TEMP_OBJECT_UNUSED_1",
+                    "variableName": "TEMP_OBJECT_UNUSED_1",
                     "invertCondition": true
                   }
                 ]
@@ -132,19 +132,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Check String Value",
-                    "value": "_SpecialBattleStartCamera"
+                    "variableName": "_SpecialBattleStartCamera"
                   },
                   {
                     "name": "Check String Value",
-                    "value": "_CloseBattleStartDialog"
-                  },
-                  {
-                    "name": "Check String Value",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Level Entity}}"
-                    },
-                    "value": "TEMP_OBJECT_UNUSED_3"
+                    "variableName": "_CloseBattleStartDialog"
                   },
                   {
                     "name": "Check String Value",
@@ -152,7 +144,15 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "value": "TEMP_OBJECT_UNUSED_1"
+                    "variableName": "TEMP_OBJECT_UNUSED_3"
+                  },
+                  {
+                    "name": "Check String Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "variableName": "TEMP_OBJECT_UNUSED_1"
                   },
                   "Battle Perform Queued"
                 ]
@@ -162,7 +162,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Check String Value",
-                    "value": "_CloseBattleStartDialog",
+                    "variableName": "_CloseBattleStartDialog",
                     "invertCondition": true
                   },
                   "passed": [
@@ -203,7 +203,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "value": "TEMP_OBJECT_UNUSED_4"
+                    "variableName": "TEMP_OBJECT_UNUSED_4"
                   },
                   {
                     "name": "Compare: Variable",
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "value": "TEMP_OBJECT_UNUSED_1",
+                    "variableName": "TEMP_OBJECT_UNUSED_1",
                     "invertCondition": true
                   }
                 ]
@@ -246,7 +246,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "value": "TEMP_OBJECT_UNUSED_1"
+                    "variableName": "TEMP_OBJECT_UNUSED_1"
                   },
                   {
                     "name": "Compare: Variable",
@@ -264,7 +264,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Battle Perform Queued",
                     "invertCondition": true
                   }

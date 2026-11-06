@@ -31,7 +31,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",
@@ -42,7 +42,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Enemy ID",
                       "ID": 1002030,
                       "target": {
@@ -75,7 +75,7 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",

@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -108,7 +108,7 @@ const configAbility = {
           "optionName": "UseSkill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -172,7 +172,7 @@ const configAbility = {
           "optionName": "UseSkill06",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Choose Ability Target",
                 "skillName": "Skill06",
@@ -247,7 +247,7 @@ const configAbility = {
           "optionName": "UseSkill10",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -335,7 +335,7 @@ const configAbility = {
           "optionName": "UseSkill07",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Choose Ability Target",
                 "skillName": "Skill07",
@@ -397,7 +397,7 @@ const configAbility = {
           "optionName": "UseSkill08",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -449,7 +449,7 @@ const configAbility = {
           "optionName": "UseSkill09",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {

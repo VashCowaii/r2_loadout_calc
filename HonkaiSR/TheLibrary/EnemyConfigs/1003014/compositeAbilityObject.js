@@ -60,7 +60,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W1_Soldier"
+                    "variableName": "W1_Soldier"
                   },
                   "passed": [
                     {
@@ -365,7 +365,7 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "NOT",
-                                "condition": {
+                                "conditions": {
                                   "name": "Has Param Flag",
                                   "flagName": "IsFakeAvatarAttack"
                                 }
@@ -422,7 +422,7 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "NOT",
-                                "condition": {
+                                "conditions": {
                                   "name": "Has Param Flag",
                                   "flagName": "IsFakeAvatarAttack"
                                 }
@@ -1284,7 +1284,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1321,7 +1321,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

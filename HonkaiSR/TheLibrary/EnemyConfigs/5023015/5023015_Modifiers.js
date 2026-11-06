@@ -52,7 +52,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "XP_Elite02_03_Small_Mark"
+                    "variableName": "XP_Elite02_03_Small_Mark"
                   }
                 ]
               },

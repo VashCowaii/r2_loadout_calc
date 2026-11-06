@@ -25,7 +25,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       }
     },
     {
@@ -244,7 +244,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       },
       "ifTargetFound": [
         {
@@ -304,7 +304,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "Monster_Sunday_MainStory380"
+        "variableName": "Monster_Sunday_MainStory380"
       }
     },
     "Trigger: Ability End"

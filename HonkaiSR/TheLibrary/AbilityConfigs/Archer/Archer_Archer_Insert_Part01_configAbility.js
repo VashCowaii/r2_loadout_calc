@@ -149,11 +149,11 @@ const configAbility = {
           },
           {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           {
             "name": "Compare: Variable",

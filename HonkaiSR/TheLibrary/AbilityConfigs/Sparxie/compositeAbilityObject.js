@@ -472,11 +472,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   "passed": [
                     {

@@ -32,7 +32,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Theater_Rogue"
+        "variableName": "Theater_Rogue"
       }
     },
     {

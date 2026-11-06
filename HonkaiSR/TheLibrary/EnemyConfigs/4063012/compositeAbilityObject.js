@@ -683,7 +683,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__181"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__181"
                   },
                   "passed": [
                     {
@@ -1294,7 +1294,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

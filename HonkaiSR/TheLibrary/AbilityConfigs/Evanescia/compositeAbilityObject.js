@@ -146,11 +146,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -373,11 +373,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -2194,7 +2194,7 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"

@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
               "optionName": "Decision1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "OR",
                           "conditionList": [
                             {
@@ -1240,7 +1240,7 @@ const compositeAbilityObject = {
               "optionName": "Decision2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -1287,7 +1287,7 @@ const compositeAbilityObject = {
               "optionName": "Decision3",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -1357,7 +1357,7 @@ const compositeAbilityObject = {
               "optionName": "Decision4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {

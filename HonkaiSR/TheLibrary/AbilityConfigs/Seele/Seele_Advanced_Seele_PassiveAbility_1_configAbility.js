@@ -795,7 +795,7 @@ const configAbility = {
           "conditionList": [
             {
               "name": "NOT",
-              "condition": {
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",
@@ -809,7 +809,7 @@ const configAbility = {
               "conditionList": [
                 {
                   "name": "NOT",
-                  "condition": {
+                  "conditions": {
                     "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",

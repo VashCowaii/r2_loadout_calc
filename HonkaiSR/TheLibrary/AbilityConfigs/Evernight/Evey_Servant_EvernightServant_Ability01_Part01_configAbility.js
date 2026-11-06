@@ -96,7 +96,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -145,7 +145,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -174,7 +174,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -203,7 +203,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -232,7 +232,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"

@@ -340,7 +340,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "HaveBullet_Flag",
+                        "variableName": "HaveBullet_Flag",
                         "invertCondition": true
                       },
                       {
@@ -352,7 +352,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "HaveBullet_Flag"
+                            "variableName": "HaveBullet_Flag"
                           },
                           {
                             "name": "Is Part Of",

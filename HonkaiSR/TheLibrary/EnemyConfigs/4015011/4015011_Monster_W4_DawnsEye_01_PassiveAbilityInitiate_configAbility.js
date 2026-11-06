@@ -366,7 +366,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "MonsterType_W4_BossPart"
+        "variableName": "MonsterType_W4_BossPart"
       },
       "ifTargetFound": [
         {
@@ -653,7 +653,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPart"
+                "variableName": "MonsterType_W4_BossPart"
               },
               "ifTargetFound": [
                 {

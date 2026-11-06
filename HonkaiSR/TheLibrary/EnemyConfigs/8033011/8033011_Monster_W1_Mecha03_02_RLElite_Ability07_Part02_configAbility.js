@@ -247,7 +247,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "WMonster_W1_Mecha_02_PhaseFlag"
+                "variableName": "WMonster_W1_Mecha_02_PhaseFlag"
               },
               {
                 "name": "Has Modifier",

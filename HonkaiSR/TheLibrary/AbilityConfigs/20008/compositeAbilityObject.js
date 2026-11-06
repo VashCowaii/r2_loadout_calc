@@ -66,7 +66,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__167"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__167"
                       },
                       {
                         "name": "Compare: Target",
@@ -123,7 +123,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__168"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__168"
                           },
                           {
                             "name": "Compare: Variable",
@@ -142,7 +142,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__168",
+                            "variableName": "ENEMIES_OBJECT_UNUSED__168",
                             "invertCondition": true
                           },
                           {
@@ -188,7 +188,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__168"
+                            "variableName": "ENEMIES_OBJECT_UNUSED__168"
                           },
                           {
                             "name": "Compare: Variable",
@@ -207,7 +207,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "value": "ENEMIES_OBJECT_UNUSED__168",
+                            "variableName": "ENEMIES_OBJECT_UNUSED__168",
                             "invertCondition": true
                           },
                           {
@@ -516,7 +516,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__168"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__168"
                   },
                   "passed": [
                     {
@@ -668,7 +668,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__168"
+            "variableName": "ENEMIES_OBJECT_UNUSED__168"
           },
           "ifTargetFound": [
             {
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -810,7 +810,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "team": "Enemy Team",
-                    "location": "Left"
+                    "stateType": "Left"
                   },
                   "passed": [
                     {
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -992,7 +992,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -1163,7 +1163,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -1253,7 +1253,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -1319,7 +1319,7 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {

@@ -26,7 +26,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "value": "Summon01Flag"
+        "variableName": "Summon01Flag"
       }
     },
     {
@@ -37,7 +37,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "value": "Summon01Flag"
+        "variableName": "Summon01Flag"
       }
     },
     {
@@ -48,7 +48,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "value": "Summon01Flag"
+        "variableName": "Summon01Flag"
       }
     },
     {
@@ -59,7 +59,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "value": "Summon01Flag"
+        "variableName": "Summon01Flag"
       }
     }
   ],

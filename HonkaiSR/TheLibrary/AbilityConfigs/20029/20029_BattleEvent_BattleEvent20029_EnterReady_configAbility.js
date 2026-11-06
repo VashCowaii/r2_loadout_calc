@@ -17,7 +17,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "MonsterType_W3_Sam_01"
+        "variableName": "MonsterType_W3_Sam_01"
       }
     }
   ],

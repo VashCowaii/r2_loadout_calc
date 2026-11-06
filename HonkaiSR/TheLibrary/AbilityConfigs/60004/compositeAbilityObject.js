@@ -325,7 +325,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Skill Type",
                               "skillType": "Ultimate"
                             }
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Target has Extra-Turn Queued",
             "target": {
               "name": "Target Name",

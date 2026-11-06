@@ -2105,7 +2105,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "SW_Minion01_03"
+                    "variableName": "SW_Minion01_03"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -2113,7 +2113,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "RLElite"
+                    "variableName": "RLElite"
                   }
                 ]
               }
@@ -2137,7 +2137,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "SW_Minion01_03"
+                    "variableName": "SW_Minion01_03"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -2145,7 +2145,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "RLElite"
+                    "variableName": "RLElite"
                   }
                 ]
               }
@@ -2562,7 +2562,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "RLElite"
+                            "variableName": "RLElite"
                           }
                         }
                       ],
@@ -2575,7 +2575,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "SW_Minion01_03"
+                            "variableName": "SW_Minion01_03"
                           }
                         }
                       ]

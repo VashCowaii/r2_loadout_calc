@@ -220,7 +220,7 @@ const configAbility = {
       "searchRandom": true,
       "conditions": {
         "name": "NOT",
-        "condition": {
+        "conditions": {
           "name": "Enemy ID",
           "ID": 1004031,
           "target": {

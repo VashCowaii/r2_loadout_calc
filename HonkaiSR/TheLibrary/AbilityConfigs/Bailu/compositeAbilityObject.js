@@ -335,12 +335,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "Overflowheal",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Overflowheal",
-                  "healProperty": "Result_OverflowHealAmount"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">OverflowHealing</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -395,12 +395,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "Overflowheal",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Overflowheal",
-                  "healProperty": "Result_OverflowHealAmount"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">OverflowHealing</span>&nbsp;"
                 },
                 {
                   "name": "IF",

@@ -77,11 +77,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Anyone",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Summoner of Parameter Target}}"
                     },
+                    "livingState": "Anyone",
                     "invertCondition": true
                   }
                 ]

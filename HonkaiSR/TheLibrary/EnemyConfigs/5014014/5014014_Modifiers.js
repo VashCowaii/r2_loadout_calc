@@ -377,7 +377,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -385,7 +385,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -393,7 +393,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 ]
               },
@@ -406,7 +406,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   }
                 },
                 {
@@ -417,7 +417,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   }
                 },
                 {
@@ -428,7 +428,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 }
               ],
@@ -5143,11 +5143,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             "EventTypeSPARXIECON (Not always an error)[1 false]",

@@ -1636,11 +1636,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster's Memosprite}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "passed": [
                     {
@@ -1661,12 +1661,12 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "_HealValue",
+                  "scope": "ContextCaster",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "_HealValue",
-                  "context": "ContextCaster"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3081,23 +3081,23 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": {
+                  "variableName": "_ServantHealValue",
+                  "scope": "ContextCaster",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "_ServantHealValue",
-                  "context": "ContextCaster"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_ServantHealValueTotal",
                   "value": {
-                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_ServantHealValue) || ADD || RETURN",
-                    "displayLines": "(_ServantHealValueTotal + _ServantHealValue)",
+                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (FREEVAR) || ADD || RETURN",
+                    "displayLines": "(_ServantHealValueTotal + FREEVAR)",
                     "constants": [],
                     "variables": [
                       "_ServantHealValueTotal",
-                      "_ServantHealValue"
+                      "FREEVAR"
                     ]
                   }
                 },

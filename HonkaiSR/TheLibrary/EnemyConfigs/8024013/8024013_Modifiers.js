@@ -205,7 +205,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "SW_Minion01"
+                    "variableName": "SW_Minion01"
                   },
                   "noTargetFound": [
                     {
@@ -267,7 +267,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "SW_Minion01"
+                    "variableName": "SW_Minion01"
                   },
                   {
                     "name": "Compare: Variable",

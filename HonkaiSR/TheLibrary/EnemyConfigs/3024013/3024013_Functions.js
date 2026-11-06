@@ -22,7 +22,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -90,7 +90,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -158,7 +158,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -226,7 +226,7 @@ const configAbility = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -357,7 +357,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -384,7 +384,7 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Pos2"
+            "stateType": "Pos2"
           },
           "ifTargetFound": [
             {
@@ -414,7 +414,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               },
               {
                 "name": "Has Modifier",
@@ -790,7 +790,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Sword_FirstFlag"
+                "variableName": "Sword_FirstFlag"
               }
             ]
           }
@@ -843,7 +843,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Sword_FirstFlag"
+                "variableName": "Sword_FirstFlag"
               }
             ]
           },

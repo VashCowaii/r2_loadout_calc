@@ -350,7 +350,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "MonsterType_W2_Lycan"
+                "variableName": "MonsterType_W2_Lycan"
               },
               "passed": [
                 {

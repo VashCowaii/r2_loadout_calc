@@ -1002,7 +1002,7 @@ const configAbility = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "livingState": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
@@ -1097,7 +1097,7 @@ const configAbility = {
                                       "name": "IF",
                                       "conditions": {
                                         "name": "Living/Death State",
-                                        "state": "Mask_AliveOrLimbo"
+                                        "livingState": "Mask_AliveOrLimbo"
                                       },
                                       "passed": [
                                         {
@@ -1178,7 +1178,7 @@ const configAbility = {
                                       "name": "IF",
                                       "conditions": {
                                         "name": "Living/Death State",
-                                        "state": "Mask_AliveOrLimbo"
+                                        "livingState": "Mask_AliveOrLimbo"
                                       },
                                       "passed": [
                                         {
@@ -1432,7 +1432,7 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Living/Death State",
-                                "state": "Mask_AliveOrLimbo"
+                                "livingState": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
@@ -1548,7 +1548,7 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Living/Death State",
-                                "state": "Mask_AliveOrLimbo"
+                                "livingState": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
@@ -1653,7 +1653,7 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Living/Death State",
-                                "state": "Mask_AliveOrLimbo"
+                                "livingState": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
@@ -2063,7 +2063,7 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Living/Death State",
-                            "state": "Mask_AliveOrLimbo"
+                            "livingState": "Mask_AliveOrLimbo"
                           },
                           "passed": [
                             {
@@ -2183,7 +2183,7 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Living/Death State",
-                                "state": "Mask_AliveOrLimbo"
+                                "livingState": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
@@ -2297,7 +2297,7 @@ const configAbility = {
                                       "name": "IF",
                                       "conditions": {
                                         "name": "Living/Death State",
-                                        "state": "Mask_AliveOrLimbo"
+                                        "livingState": "Mask_AliveOrLimbo"
                                       },
                                       "passed": [
                                         {
@@ -2404,7 +2404,7 @@ const configAbility = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -2497,7 +2497,7 @@ const configAbility = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -2621,7 +2621,7 @@ const configAbility = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -2719,7 +2719,7 @@ const configAbility = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -5793,7 +5793,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Target Name",
@@ -6653,7 +6653,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Attack Type",
                   "attackTypes": [
                     "DOT"

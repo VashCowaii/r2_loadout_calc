@@ -11,7 +11,7 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "Death Animation Completed",
         "team": "Enemy Team",
         "type": "Team Characters"
@@ -85,7 +85,7 @@ const configAbility = {
           "target": "{{Caster}}"
         },
         "team": "Enemy Team",
-        "location": "Left"
+        "stateType": "Left"
       },
       "passed": [
         {

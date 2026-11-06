@@ -19,7 +19,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W2_Lycan"
+            "variableName": "MonsterType_W2_Lycan"
           },
           {
             "name": "Has Flag",

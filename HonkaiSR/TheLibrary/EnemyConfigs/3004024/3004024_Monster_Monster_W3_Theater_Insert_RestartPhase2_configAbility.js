@@ -22,7 +22,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__114"
+                "variableName": "ENEMIES_OBJECT_UNUSED__114"
               }
             ]
           }
@@ -69,7 +69,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               },
               "passed": [
                 {
@@ -151,7 +151,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               }
             },
             {
@@ -172,7 +172,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               }
             },
             {
@@ -199,7 +199,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               }
             }
           ]
@@ -221,7 +221,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "MonsterType_W3_Dinosaur_00"
+                  "variableName": "MonsterType_W3_Dinosaur_00"
                 }
               }
             ]
@@ -251,7 +251,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W1_Mecha01_02"
+            "variableName": "MonsterType_W1_Mecha01_02"
           }
         },
         {

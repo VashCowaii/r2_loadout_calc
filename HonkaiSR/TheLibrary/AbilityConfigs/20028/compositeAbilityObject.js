@@ -1431,7 +1431,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "InSkill05",
+                        "variableName": "InSkill05",
                         "invertCondition": true
                       }
                     ]
@@ -1628,7 +1628,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "InSkill05"
+                    "variableName": "InSkill05"
                   },
                   "passed": [
                     {

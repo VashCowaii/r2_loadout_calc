@@ -1746,7 +1746,7 @@ const configAbility = {
                     "name": "Target Filter",
                     "conditions": {
                       "name": "NOT",
-                      "condition": {
+                      "conditions": {
                         "name": "Is Part Of",
                         "target1": {
                           "name": "Get Prior Entity Defined by Index",
@@ -1797,7 +1797,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -1846,7 +1846,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -1914,7 +1914,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -1949,7 +1949,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2019,7 +2019,7 @@ const configAbility = {
                           "name": "Target Filter",
                           "conditions": {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of",
                               "target1": {
                                 "name": "Get Prior Entity Defined by Index",
@@ -2051,7 +2051,7 @@ const configAbility = {
                             "name": "Target Filter",
                             "conditions": {
                               "name": "NOT",
-                              "condition": {
+                              "conditions": {
                                 "name": "Is Part Of",
                                 "target1": {
                                   "name": "Get Prior Entity Defined by Index",
@@ -2089,7 +2089,7 @@ const configAbility = {
                             "name": "Target Filter",
                             "conditions": {
                               "name": "NOT",
-                              "condition": {
+                              "conditions": {
                                 "name": "Is Part Of",
                                 "target1": {
                                   "name": "Get Prior Entity Defined by Index",
@@ -2126,7 +2126,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2195,7 +2195,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2230,7 +2230,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2299,7 +2299,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2335,7 +2335,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2404,7 +2404,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2452,7 +2452,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2521,7 +2521,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",
@@ -2556,7 +2556,7 @@ const configAbility = {
                         "name": "Target Filter",
                         "conditions": {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Is Part Of",
                             "target1": {
                               "name": "Get Prior Entity Defined by Index",

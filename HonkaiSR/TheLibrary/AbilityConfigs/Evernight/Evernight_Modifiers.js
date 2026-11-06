@@ -1241,11 +1241,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": {
+              "variableName": "MDF_HealValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_HealValue"
+              }
             },
             {
               "name": "IF",

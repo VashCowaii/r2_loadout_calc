@@ -71,7 +71,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Param Flag",
                       "flagName": "IsFakeAvatarAttack"
                     }
@@ -122,7 +122,7 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "MonsterType_Xuanlu"
+                              "variableName": "MonsterType_Xuanlu"
                             }
                           }
                         ]

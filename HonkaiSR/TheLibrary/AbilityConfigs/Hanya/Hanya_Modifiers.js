@@ -317,7 +317,7 @@ const configAbility = {
         ],
         "conditions": {
           "name": "NOT",
-          "condition": {
+          "conditions": {
             "name": "Has Modifier",
             "target": {
               "name": "Target Name",

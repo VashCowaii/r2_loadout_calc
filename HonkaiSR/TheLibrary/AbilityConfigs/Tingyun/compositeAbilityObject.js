@@ -1366,7 +1366,7 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "NOT",
-              "condition": {
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Living/Death State",
-                        "state": "Mask_AliveOnly"
+                        "livingState": "Mask_AliveOnly"
                       },
                       "passed": [
                         {
@@ -1917,7 +1917,7 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "NOT",
-              "condition": {
+              "conditions": {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Name",

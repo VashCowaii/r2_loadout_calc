@@ -331,7 +331,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "Dawnseye_AllPhase",
+                        "variableName": "Dawnseye_AllPhase",
                         "invertCondition": true
                       }
                     ]
@@ -430,7 +430,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       }
                     }
                   ]
@@ -468,7 +468,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       }
                     }
                   ]
@@ -515,7 +515,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartP3"
+                        "variableName": "MonsterType_W4_BossPartP3"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -523,7 +523,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPart"
+                        "variableName": "MonsterType_W4_BossPart"
                       }
                     ]
                   },
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "MonsterType_W4_BossSummon"
+                    "variableName": "MonsterType_W4_BossSummon"
                   },
                   "passed": [
                     {
@@ -1038,7 +1038,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W4_BossPartP3"
+                            "variableName": "MonsterType_W4_BossPartP3"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "value": "MonsterType_W4_BossPart"
+                            "variableName": "MonsterType_W4_BossPart"
                           }
                         ]
                       },
@@ -1464,7 +1464,7 @@ const compositeAbilityObject = {
                               "target": "{{Modifier Holder}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           }
                         ]
                       }
@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
                               "target": "{{Modifier Holder}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Right"
+                            "stateType": "Right"
                           }
                         ]
                       }
@@ -3696,7 +3696,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPart"
+                            "variableName": "MonsterType_W4_BossPart"
                           },
                           {
                             "name": "Check Boolean Value",
@@ -3704,7 +3704,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartP3"
+                            "variableName": "MonsterType_W4_BossPartP3"
                           }
                         ]
                       },
@@ -3812,7 +3812,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       }
                     ]
                   },
@@ -3852,7 +3852,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartP3"
+                                "variableName": "MonsterType_W4_BossPartP3"
                               },
                               {
                                 "name": "Is Part Of Team Location",
@@ -3892,7 +3892,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartRight"
+                        "variableName": "MonsterType_W4_BossPartRight"
                       }
                     ]
                   },
@@ -3932,7 +3932,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "MonsterType_W4_BossPartP3"
+                                "variableName": "MonsterType_W4_BossPartP3"
                               },
                               {
                                 "name": "Is Part Of Team Location",
@@ -3941,7 +3941,7 @@ const compositeAbilityObject = {
                                   "target": "{{Parameter Target}}"
                                 },
                                 "team": "Enemy Team",
-                                "location": "Max"
+                                "stateType": "Max"
                               }
                             ]
                           }
@@ -3994,7 +3994,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPart"
+                    "variableName": "MonsterType_W4_BossPart"
                   },
                   "ifTargetFound": [
                     {
@@ -4613,7 +4613,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPartP3"
+                "variableName": "MonsterType_W4_BossPartP3"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -4622,7 +4622,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               }
             ]
           },
@@ -4725,7 +4725,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPartP3"
+                "variableName": "MonsterType_W4_BossPartP3"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -4734,7 +4734,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -5596,7 +5596,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W4_BossPart"
+            "variableName": "MonsterType_W4_BossPart"
           },
           "ifTargetFound": [
             {
@@ -7455,7 +7455,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPartP3"
+                    "variableName": "MonsterType_W4_BossPartP3"
                   }
                 }
               ]
@@ -7846,7 +7846,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPartP3"
+                    "variableName": "MonsterType_W4_BossPartP3"
                   }
                 }
               ]
@@ -11026,7 +11026,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11067,7 +11067,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11108,7 +11108,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11149,7 +11149,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11190,7 +11190,7 @@ const compositeAbilityObject = {
                   "optionName": "小AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11261,7 +11261,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11302,7 +11302,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11401,7 +11401,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11442,7 +11442,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11483,7 +11483,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11524,7 +11524,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11565,7 +11565,7 @@ const compositeAbilityObject = {
                   "optionName": "小AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11636,7 +11636,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11677,7 +11677,7 @@ const compositeAbilityObject = {
                   "optionName": "小AOE",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11776,7 +11776,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11817,7 +11817,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11858,7 +11858,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -11899,7 +11899,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -11981,7 +11981,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

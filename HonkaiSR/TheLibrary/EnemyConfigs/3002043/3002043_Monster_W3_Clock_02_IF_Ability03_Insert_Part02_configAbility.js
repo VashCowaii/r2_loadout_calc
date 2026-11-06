@@ -45,7 +45,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "MonsterType_W3_Theater"
+        "variableName": "MonsterType_W3_Theater"
       }
     },
     {

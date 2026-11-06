@@ -148,7 +148,7 @@ const configAbility = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Skill Type",
                           "skillType": "Ultimate"
                         }

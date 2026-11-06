@@ -22,7 +22,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__167"
+        "variableName": "ENEMIES_OBJECT_UNUSED__167"
       }
     },
     {
@@ -111,7 +111,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           },
           "ifTargetFound": [
             {
@@ -209,7 +209,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__167"
+                "variableName": "ENEMIES_OBJECT_UNUSED__167"
               },
               {
                 "name": "Compare: Monster Rank",
@@ -282,7 +282,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__167"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__167"
                   },
                   {
                     "name": "Compare: Monster Rank",
@@ -361,7 +361,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__167"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__167"
                       },
                       {
                         "name": "Compare: Monster Rank",
@@ -431,7 +431,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__167"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__167"
                       },
                       "passed": [
                         {
@@ -476,7 +476,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "value": "ENEMIES_OBJECT_UNUSED__167"
+                                "variableName": "ENEMIES_OBJECT_UNUSED__167"
                               },
                               {
                                 "name": "Compare: Monster Rank",
@@ -549,7 +549,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__167"
+            "variableName": "ENEMIES_OBJECT_UNUSED__167"
           },
           "ifTargetFound": [
             {

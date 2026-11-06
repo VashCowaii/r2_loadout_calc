@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "Skill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -98,7 +98,7 @@ const configAbility = {
           "optionName": "Skill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -168,7 +168,7 @@ const configAbility = {
           "optionName": "Skill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",
@@ -213,7 +213,7 @@ const configAbility = {
           "optionName": "Skill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "scope": "TargetEntity",

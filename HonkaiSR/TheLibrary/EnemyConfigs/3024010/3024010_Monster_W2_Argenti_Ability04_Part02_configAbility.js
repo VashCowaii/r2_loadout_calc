@@ -44,7 +44,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "Sword_FirstFlag"
+            "variableName": "Sword_FirstFlag"
           }
         ]
       },
@@ -148,7 +148,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "Sword_FirstFlag"
+                "variableName": "Sword_FirstFlag"
               }
             ]
           },

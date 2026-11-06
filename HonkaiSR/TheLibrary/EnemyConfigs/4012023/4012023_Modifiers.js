@@ -585,7 +585,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_AML_Minion03_01"
+                "variableName": "MonsterType_AML_Minion03_01"
               },
               "ifTargetFound": [
                 {
@@ -610,7 +610,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_Strongman_00"
+                    "variableName": "MonsterType_W4_Strongman_00"
                   },
                   "ifTargetFound": [
                     {
@@ -635,7 +635,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_Shooter_00"
+                        "variableName": "MonsterType_W4_Shooter_00"
                       },
                       "ifTargetFound": [
                         {

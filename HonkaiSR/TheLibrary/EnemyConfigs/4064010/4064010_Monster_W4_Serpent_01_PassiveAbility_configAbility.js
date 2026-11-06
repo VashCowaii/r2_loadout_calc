@@ -45,7 +45,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "RLBoss"
+        "variableName": "RLBoss"
       },
       "passed": [
         {

@@ -38,7 +38,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Level Entity}}"
                 },
-                "value": "TEMP_OBJECT_UNUSED_1",
+                "variableName": "TEMP_OBJECT_UNUSED_1",
                 "invertCondition": true
               }
             ]
@@ -124,19 +124,11 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Check String Value",
-                "value": "_SpecialBattleStartCamera"
+                "variableName": "_SpecialBattleStartCamera"
               },
               {
                 "name": "Check String Value",
-                "value": "_CloseBattleStartDialog"
-              },
-              {
-                "name": "Check String Value",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Level Entity}}"
-                },
-                "value": "TEMP_OBJECT_UNUSED_3"
+                "variableName": "_CloseBattleStartDialog"
               },
               {
                 "name": "Check String Value",
@@ -144,7 +136,15 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Level Entity}}"
                 },
-                "value": "TEMP_OBJECT_UNUSED_1"
+                "variableName": "TEMP_OBJECT_UNUSED_3"
+              },
+              {
+                "name": "Check String Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "variableName": "TEMP_OBJECT_UNUSED_1"
               },
               "Battle Perform Queued"
             ]
@@ -154,7 +154,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Check String Value",
-                "value": "_CloseBattleStartDialog",
+                "variableName": "_CloseBattleStartDialog",
                 "invertCondition": true
               },
               "passed": [
@@ -195,7 +195,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Level Entity}}"
                 },
-                "value": "TEMP_OBJECT_UNUSED_4"
+                "variableName": "TEMP_OBJECT_UNUSED_4"
               },
               {
                 "name": "Compare: Variable",
@@ -209,7 +209,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Level Entity}}"
                 },
-                "value": "TEMP_OBJECT_UNUSED_1",
+                "variableName": "TEMP_OBJECT_UNUSED_1",
                 "invertCondition": true
               }
             ]
@@ -238,7 +238,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Level Entity}}"
                 },
-                "value": "TEMP_OBJECT_UNUSED_1"
+                "variableName": "TEMP_OBJECT_UNUSED_1"
               },
               {
                 "name": "Compare: Variable",
@@ -256,7 +256,7 @@ const configAbility = {
           "passed": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Battle Perform Queued",
                 "invertCondition": true
               }

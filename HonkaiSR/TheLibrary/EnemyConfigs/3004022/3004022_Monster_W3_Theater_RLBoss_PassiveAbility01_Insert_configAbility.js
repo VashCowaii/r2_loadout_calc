@@ -33,7 +33,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__114"
+        "variableName": "ENEMIES_OBJECT_UNUSED__114"
       },
       "ifTargetFound": [
         {
@@ -68,7 +68,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__114"
+        "variableName": "ENEMIES_OBJECT_UNUSED__114"
       },
       "ifTargetFound": [
         {
@@ -93,7 +93,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_TV_00"
+            "variableName": "MonsterType_W3_TV_00"
           }
         }
       ]
@@ -223,7 +223,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           },
           "passed": [
             {
@@ -256,7 +256,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Check Boolean Value",
@@ -264,7 +264,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               }
             ]
           },
@@ -299,7 +299,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               },
               {
                 "name": "Check Boolean Value",
@@ -307,7 +307,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               }
             ]
           },
@@ -338,7 +338,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W1_Mecha01_02"
+            "variableName": "MonsterType_W1_Mecha01_02"
           },
           "passed": [
             {
@@ -367,7 +367,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Clock_00"
+            "variableName": "MonsterType_W3_Clock_00"
           },
           "passed": [
             {
@@ -428,7 +428,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "MonsterType_W3_Dinosaur_00"
+        "variableName": "MonsterType_W3_Dinosaur_00"
       }
     },
     {
@@ -444,7 +444,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__114"
+        "variableName": "ENEMIES_OBJECT_UNUSED__114"
       },
       "ifTargetFound": [
         {
@@ -455,7 +455,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           }
         },
         {

@@ -104,7 +104,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W4_BossPartRight"
+                "variableName": "MonsterType_W4_BossPartRight"
               },
               "passed": [
                 {
@@ -119,7 +119,6 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Sequence",
                           "TargetList": [
@@ -140,7 +139,8 @@ const configAbility = {
                               }
                             }
                           ]
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -174,7 +174,6 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Sequence",
                           "TargetList": [
@@ -195,7 +194,8 @@ const configAbility = {
                               }
                             }
                           ]
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       },
                       {
                         "name": "Compare: Variable",
@@ -236,7 +236,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "MonsterType_W4_BossPartLeft"
+                "variableName": "MonsterType_W4_BossPartLeft"
               },
               "passed": [
                 {
@@ -272,7 +272,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartRight"
+                        "variableName": "MonsterType_W4_BossPartRight"
                       }
                     ]
                   }
@@ -312,7 +312,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartLeft"
+                        "variableName": "MonsterType_W4_BossPartLeft"
                       }
                     ]
                   }
@@ -351,7 +351,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   },
                   "passed": [
                     {
@@ -387,7 +387,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartRight"
+                            "variableName": "MonsterType_W4_BossPartRight"
                           }
                         ]
                       }
@@ -427,7 +427,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         ]
                       }
@@ -444,7 +444,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   },
                   "passed": [
                     {
@@ -480,7 +480,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartRight"
+                            "variableName": "MonsterType_W4_BossPartRight"
                           }
                         ]
                       }
@@ -520,7 +520,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         ]
                       }
@@ -549,7 +549,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   },
                   "passed": [
                     {
@@ -585,7 +585,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartRight"
+                            "variableName": "MonsterType_W4_BossPartRight"
                           }
                         ]
                       }
@@ -625,7 +625,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         ]
                       }
@@ -654,7 +654,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   },
                   "passed": [
                     {
@@ -690,7 +690,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartRight"
+                            "variableName": "MonsterType_W4_BossPartRight"
                           }
                         ]
                       }
@@ -730,7 +730,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         ]
                       }

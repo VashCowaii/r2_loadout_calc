@@ -1721,7 +1721,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Joint-Attack",
                       "target": {
                         "name": "Target Name",

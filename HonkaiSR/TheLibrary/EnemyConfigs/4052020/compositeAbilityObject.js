@@ -221,7 +221,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       },
                       {
                         "name": "Compare: Target",
@@ -649,7 +649,7 @@ const compositeAbilityObject = {
                   "optionName": "指挥",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -699,7 +699,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "value": "SW_Minion01_03"
+                                      "variableName": "SW_Minion01_03"
                                     }
                                   }
                                 ]

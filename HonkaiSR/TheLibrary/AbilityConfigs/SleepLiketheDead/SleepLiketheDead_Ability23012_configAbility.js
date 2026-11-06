@@ -64,11 +64,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": "Is a Crit"
+                    "conditions": "Is a Crit"
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Modifier",
                       "target": {
                         "name": "Target Name",

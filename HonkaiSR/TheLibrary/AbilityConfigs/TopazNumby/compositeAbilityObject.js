@@ -3741,7 +3741,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Compare: Variable",
             "value1": "_damageStart",
             "compareType": ">=",

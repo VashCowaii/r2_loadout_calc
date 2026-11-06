@@ -474,7 +474,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -604,7 +604,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "noTargetFound": [
             {
@@ -893,7 +893,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_Shell"
+                    "variableName": "W5_Shell"
                   },
                   "noTargetFound": [
                     {
@@ -1233,7 +1233,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -1312,7 +1312,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_Shell"
+                "variableName": "W5_Shell"
               },
               {
                 "name": "Has Flag",
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -1880,7 +1880,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "W5_Shell"
+                              "variableName": "W5_Shell"
                             },
                             {
                               "name": "Has Flag",
@@ -1945,7 +1945,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "W5_Shell"
+                              "variableName": "W5_Shell"
                             },
                             {
                               "name": "Has Flag",
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "W5_Shell"
+                              "variableName": "W5_Shell"
                             },
                             {
                               "name": "Has Flag",
@@ -2077,7 +2077,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "W5_Shell"
+                              "variableName": "W5_Shell"
                             },
                             {
                               "name": "Has Flag",
@@ -2212,7 +2212,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -2334,7 +2334,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           },
           "ifTargetFound": [
             {
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "W5_Shell"
+            "variableName": "W5_Shell"
           }
         }
       ],
@@ -2502,7 +2502,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

@@ -1542,7 +1542,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPart"
+                        "variableName": "MonsterType_W4_BossPart"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -1550,7 +1550,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartP3"
+                        "variableName": "MonsterType_W4_BossPartP3"
                       }
                     ]
                   },
@@ -1606,7 +1606,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPart"
+                    "variableName": "MonsterType_W4_BossPart"
                   }
                 ]
               },
@@ -1762,7 +1762,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPart"
+                "variableName": "MonsterType_W4_BossPart"
               },
               "ifTargetFound": [
                 {
@@ -1827,7 +1827,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartRight"
+                        "variableName": "MonsterType_W4_BossPartRight"
                       },
                       "failed": [
                         {
@@ -1838,7 +1838,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartLeft"
+                            "variableName": "MonsterType_W4_BossPartLeft"
                           }
                         }
                       ]
@@ -2171,7 +2171,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "Dawnseye_AllPhase",
+                    "variableName": "Dawnseye_AllPhase",
                     "invertCondition": true
                   }
                 ]
@@ -2270,7 +2270,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   }
                 }
               ]
@@ -2308,7 +2308,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   }
                 }
               ]
@@ -2355,7 +2355,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPartP3"
+                    "variableName": "MonsterType_W4_BossPartP3"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -2363,7 +2363,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "MonsterType_W4_BossPart"
+                    "variableName": "MonsterType_W4_BossPart"
                   }
                 ]
               },
@@ -2818,7 +2818,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "MonsterType_W4_BossSummon"
+                "variableName": "MonsterType_W4_BossSummon"
               },
               "passed": [
                 {
@@ -2878,7 +2878,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPartP3"
+                        "variableName": "MonsterType_W4_BossPartP3"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2886,7 +2886,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "MonsterType_W4_BossPart"
+                        "variableName": "MonsterType_W4_BossPart"
                       }
                     ]
                   },
@@ -3304,7 +3304,7 @@ const configAbility = {
                           "target": "{{Modifier Holder}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       }
                     ]
                   }
@@ -3321,7 +3321,7 @@ const configAbility = {
                           "target": "{{Modifier Holder}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right"
+                        "stateType": "Right"
                       }
                     ]
                   }
@@ -5536,7 +5536,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPart"
+                        "variableName": "MonsterType_W4_BossPart"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -5544,7 +5544,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W4_BossPartP3"
+                        "variableName": "MonsterType_W4_BossPartP3"
                       }
                     ]
                   },
@@ -5652,7 +5652,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPartLeft"
+                    "variableName": "MonsterType_W4_BossPartLeft"
                   }
                 ]
               },
@@ -5692,7 +5692,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartP3"
+                            "variableName": "MonsterType_W4_BossPartP3"
                           },
                           {
                             "name": "Is Part Of Team Location",
@@ -5732,7 +5732,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W4_BossPartRight"
+                    "variableName": "MonsterType_W4_BossPartRight"
                   }
                 ]
               },
@@ -5772,7 +5772,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W4_BossPartP3"
+                            "variableName": "MonsterType_W4_BossPartP3"
                           },
                           {
                             "name": "Is Part Of Team Location",
@@ -5781,7 +5781,7 @@ const configAbility = {
                               "target": "{{Parameter Target}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Max"
+                            "stateType": "Max"
                           }
                         ]
                       }
@@ -5834,7 +5834,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPart"
+                "variableName": "MonsterType_W4_BossPart"
               },
               "ifTargetFound": [
                 {

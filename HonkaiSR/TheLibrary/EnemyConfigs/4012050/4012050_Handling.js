@@ -32,7 +32,7 @@ const configAbility = {
               "optionName": "UseSkillCondition01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -99,7 +99,7 @@ const configAbility = {
               "optionName": "UseSkillCondition02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -166,7 +166,7 @@ const configAbility = {
               "optionName": "UseSkillCondition03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -252,7 +252,7 @@ const configAbility = {
               "optionName": "UseSkillCondition01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -436,7 +436,7 @@ const configAbility = {
               "optionName": "UseSkillCondition02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -620,7 +620,7 @@ const configAbility = {
               "optionName": "UseSkillCondition03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

@@ -32,7 +32,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_Xuanlu"
+                "variableName": "MonsterType_Xuanlu"
               }
             }
           ]

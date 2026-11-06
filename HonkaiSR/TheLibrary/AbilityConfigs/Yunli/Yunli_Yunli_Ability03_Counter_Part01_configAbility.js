@@ -11,11 +11,11 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           {
             "name": "Target is Unselectable",
@@ -180,11 +180,11 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               {
                 "name": "Target is Unselectable",
@@ -365,11 +365,11 @@ const configAbility = {
           },
           {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           {
             "name": "Compare: Variable",

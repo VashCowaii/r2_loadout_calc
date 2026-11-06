@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Sam_01"
+                    "variableName": "MonsterType_W3_Sam_01"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -1221,11 +1221,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -1289,7 +1289,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "RLBoss"
+                        "variableName": "RLBoss"
                       },
                       "passed": [
                         {
@@ -1944,7 +1944,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Sam_01"
+            "variableName": "MonsterType_W3_Sam_01"
           }
         },
         {
@@ -2042,7 +2042,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Sam_01"
+            "variableName": "MonsterType_W3_Sam_01"
           },
           "ifTargetFound": [
             {
@@ -2094,7 +2094,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Sam_01"
+            "variableName": "MonsterType_W3_Sam_01"
           }
         }
       ],

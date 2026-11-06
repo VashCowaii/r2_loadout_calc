@@ -146,11 +146,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster's Memosprite}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "passed": [
                 {
@@ -171,12 +171,12 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Healing",
-              "target": {
+              "variableName": "_HealValue",
+              "scope": "ContextCaster",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              },
-              "variableName": "_HealValue",
-              "context": "ContextCaster"
+              }
             },
             {
               "name": "Define Custom Variable",

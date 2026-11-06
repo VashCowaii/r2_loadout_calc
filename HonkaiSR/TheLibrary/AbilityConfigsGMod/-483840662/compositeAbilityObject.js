@@ -1010,7 +1010,7 @@ const compositeAbilityObject = {
                                       "name": "IF",
                                       "conditions": {
                                         "name": "Living/Death State",
-                                        "state": "Mask_AliveOrLimbo"
+                                        "livingState": "Mask_AliveOrLimbo"
                                       },
                                       "passed": [
                                         {
@@ -1105,7 +1105,7 @@ const compositeAbilityObject = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -1186,7 +1186,7 @@ const compositeAbilityObject = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -1440,7 +1440,7 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "livingState": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "livingState": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
@@ -1661,7 +1661,7 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "livingState": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
@@ -2071,7 +2071,7 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Living/Death State",
-                                "state": "Mask_AliveOrLimbo"
+                                "livingState": "Mask_AliveOrLimbo"
                               },
                               "passed": [
                                 {
@@ -2191,7 +2191,7 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Living/Death State",
-                                    "state": "Mask_AliveOrLimbo"
+                                    "livingState": "Mask_AliveOrLimbo"
                                   },
                                   "passed": [
                                     {
@@ -2305,7 +2305,7 @@ const compositeAbilityObject = {
                                           "name": "IF",
                                           "conditions": {
                                             "name": "Living/Death State",
-                                            "state": "Mask_AliveOrLimbo"
+                                            "livingState": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
@@ -2412,7 +2412,7 @@ const compositeAbilityObject = {
                                               "name": "IF",
                                               "conditions": {
                                                 "name": "Living/Death State",
-                                                "state": "Mask_AliveOrLimbo"
+                                                "livingState": "Mask_AliveOrLimbo"
                                               },
                                               "passed": [
                                                 {
@@ -2505,7 +2505,7 @@ const compositeAbilityObject = {
                                               "name": "IF",
                                               "conditions": {
                                                 "name": "Living/Death State",
-                                                "state": "Mask_AliveOrLimbo"
+                                                "livingState": "Mask_AliveOrLimbo"
                                               },
                                               "passed": [
                                                 {
@@ -2629,7 +2629,7 @@ const compositeAbilityObject = {
                                               "name": "IF",
                                               "conditions": {
                                                 "name": "Living/Death State",
-                                                "state": "Mask_AliveOrLimbo"
+                                                "livingState": "Mask_AliveOrLimbo"
                                               },
                                               "passed": [
                                                 {
@@ -2727,7 +2727,7 @@ const compositeAbilityObject = {
                                               "name": "IF",
                                               "conditions": {
                                                 "name": "Living/Death State",
-                                                "state": "Mask_AliveOrLimbo"
+                                                "livingState": "Mask_AliveOrLimbo"
                                               },
                                               "passed": [
                                                 {
@@ -5801,7 +5801,7 @@ const compositeAbilityObject = {
                             "name": "Target Filter",
                             "conditions": {
                               "name": "NOT",
-                              "condition": {
+                              "conditions": {
                                 "name": "Is Part Of",
                                 "target1": {
                                   "name": "Target Name",
@@ -6661,7 +6661,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Attack Type",
                       "attackTypes": [
                         "DOT"

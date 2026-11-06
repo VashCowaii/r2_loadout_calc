@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -101,7 +101,7 @@ const configAbility = {
           "optionName": "UseSkill03",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -160,7 +160,7 @@ const configAbility = {
           "optionName": "UseSkill04",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -219,7 +219,7 @@ const configAbility = {
           "optionName": "UseSkill05",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -278,7 +278,7 @@ const configAbility = {
           "optionName": "UseSkill06",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -347,7 +347,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable",
                 "variableName": "W2_Yanqing_00_AICounter",

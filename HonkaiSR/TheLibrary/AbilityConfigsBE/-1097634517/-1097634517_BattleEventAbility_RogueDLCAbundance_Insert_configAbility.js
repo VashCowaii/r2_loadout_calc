@@ -52,7 +52,7 @@ const configAbility = {
       "searchRandom": true,
       "conditions": {
         "name": "NOT",
-        "condition": {
+        "conditions": {
           "name": "Compare: Monster Rank",
           "target": {
             "name": "Target Name",

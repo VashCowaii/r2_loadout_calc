@@ -105,7 +105,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Theater_Rogue"
+        "variableName": "Theater_Rogue"
       },
       "passed": [
         {
@@ -222,7 +222,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           }
         }
       ]
@@ -302,7 +302,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__114"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__114"
                       },
                       "ifTargetFound": [
                         {
@@ -384,7 +384,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   {
                     "name": "OR",
@@ -532,7 +532,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               },
               "passed": [
                 {
@@ -626,7 +626,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__114"
+                "variableName": "ENEMIES_OBJECT_UNUSED__114"
               },
               "ifTargetFound": [
                 {
@@ -670,7 +670,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "ifTargetFound": [
                 {
@@ -681,7 +681,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   }
                 }
               ]
@@ -703,7 +703,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -711,7 +711,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   }
                 ]
               },
@@ -743,7 +743,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__114"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__114"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -751,7 +751,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   {
                     "name": "Has Modifier",
@@ -792,7 +792,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_Dinosaur_00"
+                "variableName": "MonsterType_W3_Dinosaur_00"
               },
               "ifTargetFound": [
                 {
@@ -803,7 +803,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   }
                 }
               ]
@@ -883,7 +883,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "Theater_Rogue"
+                "variableName": "Theater_Rogue"
               },
               "passed": [
                 {

@@ -1002,7 +1002,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Flag",
                   "target": {
                     "name": "Target Name",
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Flag",
                   "target": {
                     "name": "Target Name",

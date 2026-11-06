@@ -4951,7 +4951,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "BattleScore_Yanqing"
+            "variableName": "BattleScore_Yanqing"
           },
           "passed": [
             {
@@ -6600,7 +6600,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -6664,7 +6664,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -6734,7 +6734,7 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           },
           "ifTargetFound": [
             {
@@ -7673,7 +7673,7 @@ const compositeAbilityObject = {
               "optionName": "1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7717,7 +7717,7 @@ const compositeAbilityObject = {
               "optionName": "1-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7761,7 +7761,7 @@ const compositeAbilityObject = {
               "optionName": "2-1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7805,7 +7805,7 @@ const compositeAbilityObject = {
               "optionName": "2-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7849,7 +7849,7 @@ const compositeAbilityObject = {
               "optionName": "2-3-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7903,7 +7903,7 @@ const compositeAbilityObject = {
               "optionName": "2-3-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -7957,7 +7957,7 @@ const compositeAbilityObject = {
               "optionName": "2-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8001,7 +8001,7 @@ const compositeAbilityObject = {
               "optionName": "2-5",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8045,7 +8045,7 @@ const compositeAbilityObject = {
               "optionName": "2-6",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8089,7 +8089,7 @@ const compositeAbilityObject = {
               "optionName": "9-1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8133,7 +8133,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8177,7 +8177,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-3-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8231,7 +8231,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-3-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8285,7 +8285,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8329,7 +8329,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-5",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8373,7 +8373,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-6",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8417,7 +8417,7 @@ const compositeAbilityObject = {
               "optionName": "9-2-7",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8461,7 +8461,7 @@ const compositeAbilityObject = {
               "optionName": "3-1-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8505,7 +8505,7 @@ const compositeAbilityObject = {
               "optionName": "3-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8549,7 +8549,7 @@ const compositeAbilityObject = {
               "optionName": "3-3-1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8603,7 +8603,7 @@ const compositeAbilityObject = {
               "optionName": "3-3-2",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8657,7 +8657,7 @@ const compositeAbilityObject = {
               "optionName": "3-4",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8701,7 +8701,7 @@ const compositeAbilityObject = {
               "optionName": "3-5",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8745,7 +8745,7 @@ const compositeAbilityObject = {
               "optionName": "3-6",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8789,7 +8789,7 @@ const compositeAbilityObject = {
               "optionName": "4-7",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8827,7 +8827,7 @@ const compositeAbilityObject = {
               "optionName": "4-8",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -8865,7 +8865,7 @@ const compositeAbilityObject = {
               "optionName": "4-9",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",

@@ -208,7 +208,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "BattleScore_Yanqing"
+        "variableName": "BattleScore_Yanqing"
       },
       "passed": [
         {

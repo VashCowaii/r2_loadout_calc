@@ -19,7 +19,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W3_Dinosaur_00"
+            "variableName": "MonsterType_W3_Dinosaur_00"
           }
         },
         {

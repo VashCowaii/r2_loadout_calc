@@ -24,7 +24,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_00"
+                "variableName": "W3_Figure_00"
               },
               {
                 "name": "Check Boolean Value",
@@ -32,7 +32,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_01"
+                "variableName": "W3_Figure_01"
               },
               {
                 "name": "Check Boolean Value",
@@ -40,7 +40,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W3_Figure_02"
+                "variableName": "W3_Figure_02"
               }
             ]
           },

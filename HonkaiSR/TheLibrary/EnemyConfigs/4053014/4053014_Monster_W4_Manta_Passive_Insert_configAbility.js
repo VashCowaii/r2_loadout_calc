@@ -58,7 +58,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "BattleScore_Manta"
+                    "variableName": "BattleScore_Manta"
                   },
                   {
                     "name": "Has Modifier",
@@ -109,7 +109,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "RLElite"
+                    "variableName": "RLElite"
                   }
                 },
                 {
@@ -159,7 +159,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "SW_Minion01_03"
+                    "variableName": "SW_Minion01_03"
                   }
                 },
                 {
@@ -170,7 +170,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "SW_Minion01_03"
+                    "variableName": "SW_Minion01_03"
                   }
                 },
                 {

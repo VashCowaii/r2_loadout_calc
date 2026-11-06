@@ -45,7 +45,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Sequence Event",
-              "passed": [
+              "execute": [
                 {
                   "name": "Select Random Enemy from Pool",
                   "poolID": {
@@ -65,7 +65,7 @@ const configAbility = {
             },
             {
               "name": "Sequence Event",
-              "passed": [
+              "execute": [
                 {
                   "name": "Select Random Enemy from Pool",
                   "poolID": {

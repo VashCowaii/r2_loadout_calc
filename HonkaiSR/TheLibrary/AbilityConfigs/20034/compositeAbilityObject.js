@@ -1303,11 +1303,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -1394,11 +1394,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -2491,11 +2491,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2526,11 +2526,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2675,11 +2675,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -2710,11 +2710,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",

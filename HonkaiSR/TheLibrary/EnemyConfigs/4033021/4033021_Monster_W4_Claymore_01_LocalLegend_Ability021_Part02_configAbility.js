@@ -141,11 +141,11 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Living State",
-        "state": "Mask_AliveOnly",
         "target": {
           "name": "Target Name",
           "target": "{{EVENT[RoT] Light Praetor: 3}}"
-        }
+        },
+        "livingState": "Mask_AliveOnly"
       },
       "passed": [
         {
@@ -161,11 +161,11 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Living State",
-        "state": "Mask_AliveOnly",
         "target": {
           "name": "Target Name",
           "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-        }
+        },
+        "livingState": "Mask_AliveOnly"
       },
       "passed": [
         {

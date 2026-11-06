@@ -235,7 +235,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "failed": [
             {
@@ -406,7 +406,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "failed": [
             {
@@ -495,7 +495,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "ENEMIES_OBJECT_UNUSED__181"
+        "variableName": "ENEMIES_OBJECT_UNUSED__181"
       },
       "passed": [
         {

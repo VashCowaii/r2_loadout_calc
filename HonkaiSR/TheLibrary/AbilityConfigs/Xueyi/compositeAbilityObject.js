@@ -2183,7 +2183,7 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Enemies Still Alive",
               "target": {
                 "name": "Target Name",
@@ -2866,7 +2866,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Flag",
                           "target": {
                             "name": "Target Name",
@@ -2877,7 +2877,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Has Flag",
                           "target": {
                             "name": "Target Name",

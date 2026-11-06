@@ -49,7 +49,7 @@ const configAbility = {
           "includeDyingTargets": true,
           "conditions": {
             "name": "NOT",
-            "condition": {
+            "conditions": {
               "name": "Enemy ID",
               "ID": 1012021,
               "target": {

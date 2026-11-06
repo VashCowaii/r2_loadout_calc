@@ -27,11 +27,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": {
+              "variableName": "_HealAmount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "_HealAmount"
+              }
             },
             {
               "name": "Define Custom Variable",

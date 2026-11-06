@@ -4728,7 +4728,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill11",
@@ -4784,7 +4784,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4850,7 +4850,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill13"
@@ -4882,7 +4882,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4959,7 +4959,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -5026,7 +5026,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",
@@ -5086,7 +5086,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -5163,7 +5163,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -5276,7 +5276,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",
@@ -5347,7 +5347,7 @@ const compositeAbilityObject = {
               "optionName": "Decision",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill06",

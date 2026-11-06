@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2135,7 +2135,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "RLElite"
+                        "variableName": "RLElite"
                       }
                     ]
                   }
@@ -2159,7 +2159,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2167,7 +2167,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "RLElite"
+                        "variableName": "RLElite"
                       }
                     ]
                   }
@@ -2584,7 +2584,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "RLElite"
+                                "variableName": "RLElite"
                               }
                             }
                           ],
@@ -2597,7 +2597,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "value": "SW_Minion01_03"
+                                "variableName": "SW_Minion01_03"
                               }
                             }
                           ]
@@ -3388,7 +3388,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "SW_Minion01_03"
+                    "variableName": "SW_Minion01_03"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -3396,7 +3396,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "RLElite"
+                    "variableName": "RLElite"
                   }
                 ]
               }
@@ -3993,7 +3993,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "BattleScore_Manta"
+                        "variableName": "BattleScore_Manta"
                       },
                       {
                         "name": "Has Modifier",
@@ -4044,7 +4044,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "RLElite"
+                        "variableName": "RLElite"
                       }
                     },
                     {
@@ -4094,7 +4094,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       }
                     },
                     {
@@ -4105,7 +4105,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       }
                     },
                     {
@@ -4241,7 +4241,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4276,7 +4276,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4311,7 +4311,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -4367,7 +4367,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4438,7 +4438,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {

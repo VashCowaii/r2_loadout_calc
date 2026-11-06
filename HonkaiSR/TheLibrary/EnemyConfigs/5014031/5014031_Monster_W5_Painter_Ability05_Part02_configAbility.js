@@ -97,7 +97,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "GridFightBoss"
+                "variableName": "GridFightBoss"
               },
               {
                 "name": "Compare: Variable",
@@ -183,7 +183,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "Peakbattle"
+                "variableName": "Peakbattle"
               },
               "passed": [
                 {
@@ -302,7 +302,7 @@ const configAbility = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Right"
+                        "stateType": "Right"
                       },
                       "passed": [
                         {
@@ -341,7 +341,7 @@ const configAbility = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Left"
+                            "stateType": "Left"
                           },
                           "passed": [
                             {
@@ -382,7 +382,7 @@ const configAbility = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -421,7 +421,7 @@ const configAbility = {
                               "target": "{{Caster}}"
                             },
                             "team": "Enemy Team",
-                            "location": "Right"
+                            "stateType": "Right"
                           },
                           "passed": [
                             {

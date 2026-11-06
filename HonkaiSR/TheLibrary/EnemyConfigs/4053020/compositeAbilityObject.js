@@ -435,7 +435,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "SW_Minion01_03"
+                      "variableName": "SW_Minion01_03"
                     }
                   },
                   "passed": [
@@ -447,7 +447,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       }
                     }
                   ],
@@ -484,7 +484,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "SW_Minion01_03"
+                        "variableName": "SW_Minion01_03"
                       },
                       "noTargetFound": [
                         "Modifier Deletes Itself"
@@ -884,7 +884,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "SW_Minion01_03"
+                "variableName": "SW_Minion01_03"
               },
               "ifTargetFound": [
                 {
@@ -972,7 +972,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "SW_Minion01_03"
+                "variableName": "SW_Minion01_03"
               },
               "ifTargetFound": [
                 {
@@ -3044,7 +3044,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -3086,7 +3086,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -3128,7 +3128,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -3170,7 +3170,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -3241,7 +3241,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -3283,7 +3283,7 @@ const compositeAbilityObject = {
                   "optionName": "Decision01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

@@ -161,7 +161,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",

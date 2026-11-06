@@ -1212,7 +1212,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ripper: Self}}"
                 },
-                "value": "InSkill05"
+                "variableName": "InSkill05"
               },
               "passed": [
                 {
@@ -1477,7 +1477,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ripper: Self}}"
                     },
-                    "value": "InSkill05"
+                    "variableName": "InSkill05"
                   },
                   "passed": [
                     {
@@ -1613,7 +1613,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ripper: Self}}"
                     },
-                    "value": "InSkill05"
+                    "variableName": "InSkill05"
                   },
                   "passed": [
                     {
@@ -3530,11 +3530,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Bit_Limbo",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Bit_Limbo"
               },
               "passed": [
                 {
@@ -4408,7 +4408,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__246"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__246"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -4416,7 +4416,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "InSkill05"
+                    "variableName": "InSkill05"
                   }
                 ]
               },

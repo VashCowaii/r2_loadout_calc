@@ -40,7 +40,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Theater_Rogue"
+        "variableName": "Theater_Rogue"
       }
     },
     {
@@ -123,7 +123,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W3_TV_00"
+                "variableName": "MonsterType_W3_TV_00"
               },
               "passed": [
                 {
@@ -143,7 +143,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W3_TV_00"
+                          "variableName": "MonsterType_W3_TV_00"
                         }
                       }
                     ]
@@ -191,7 +191,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "Theater_Rogue"
+                    "variableName": "Theater_Rogue"
                   }
                 },
                 {
@@ -345,7 +345,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       "passed": [
                         {
@@ -365,7 +365,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "value": "MonsterType_W3_TV_00"
+                                  "variableName": "MonsterType_W3_TV_00"
                                 }
                               }
                             ]
@@ -484,7 +484,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "MonsterType_W3_TV_00"
+                        "variableName": "MonsterType_W3_TV_00"
                       },
                       "passed": [
                         {
@@ -504,7 +504,7 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "value": "MonsterType_W3_TV_00"
+                                  "variableName": "MonsterType_W3_TV_00"
                                 }
                               }
                             ]

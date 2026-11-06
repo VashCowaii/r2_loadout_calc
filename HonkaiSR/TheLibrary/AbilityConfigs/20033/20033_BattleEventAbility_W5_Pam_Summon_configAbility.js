@@ -44,7 +44,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster's Summoner}}"
         },
-        "value": "GridFightBoss"
+        "variableName": "GridFightBoss"
       },
       "passed": [
         {
@@ -152,7 +152,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "Pam_MainBoss"
+                    "variableName": "Pam_MainBoss"
                   }
                 ]
               },

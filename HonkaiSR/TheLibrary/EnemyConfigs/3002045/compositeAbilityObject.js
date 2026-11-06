@@ -409,7 +409,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "value": "ENEMIES_OBJECT_UNUSED__114"
+                  "variableName": "ENEMIES_OBJECT_UNUSED__114"
                 }
               }
             ]
@@ -475,7 +475,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "MonsterType_W3_Theater"
+            "variableName": "MonsterType_W3_Theater"
           },
           "passed": [
             {
@@ -625,7 +625,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -634,7 +634,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -689,7 +689,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Theater_Rogue"
+            "variableName": "Theater_Rogue"
           }
         },
         {
@@ -716,7 +716,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Theater_Rogue"
+            "variableName": "Theater_Rogue"
           }
         },
         "Trigger: Ability End"
@@ -787,7 +787,7 @@ const compositeAbilityObject = {
               "optionName": "Skill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -832,7 +832,7 @@ const compositeAbilityObject = {
               "optionName": "Skill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill02"
@@ -859,7 +859,7 @@ const compositeAbilityObject = {
               "optionName": "Skill03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",

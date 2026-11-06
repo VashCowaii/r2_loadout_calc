@@ -80,7 +80,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "XP_Elite02_03_Small_Mark"
+                        "variableName": "XP_Elite02_03_Small_Mark"
                       }
                     ]
                   },
@@ -543,7 +543,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -568,7 +568,7 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -642,7 +642,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -882,7 +882,7 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -956,7 +956,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Left"
+            "stateType": "Left"
           },
           "passed": [
             {
@@ -1272,7 +1272,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "value": "XP_Elite02_03_Middle_Mark"
+                "variableName": "XP_Elite02_03_Middle_Mark"
               }
             ]
           },
@@ -3663,7 +3663,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "XP_Elite02_03_Mark"
+                "variableName": "XP_Elite02_03_Mark"
               },
               {
                 "name": "Has Flag",
@@ -3730,7 +3730,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "XP_Elite02_03_Mark"
+                "variableName": "XP_Elite02_03_Mark"
               },
               "ifTargetFound": [
                 {
@@ -4061,7 +4061,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "XP_Elite02_03_Mark"
+                "variableName": "XP_Elite02_03_Mark"
               },
               "ifTargetFound": [
                 {
@@ -4527,7 +4527,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -4597,7 +4597,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4638,7 +4638,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill03",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -4708,7 +4708,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4749,7 +4749,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill04",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4790,7 +4790,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill01",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -4860,7 +4860,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill02",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4901,7 +4901,7 @@ const compositeAbilityObject = {
                   "optionName": "UseSkill03",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {

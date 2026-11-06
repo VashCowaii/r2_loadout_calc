@@ -117,7 +117,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -126,7 +126,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -135,7 +135,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right",
+                "stateType": "Right",
                 "invertCondition": true
               }
             ]
@@ -153,7 +153,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left",
+                "stateType": "Left",
                 "invertCondition": true
               },
               {
@@ -163,7 +163,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Medium"
+                "stateType": "Medium"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
                   "target": "{{Caster}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           }
@@ -186,7 +186,7 @@ const compositeAbilityObject = {
               "target": "{{Caster}}"
             },
             "team": "Enemy Team",
-            "location": "Max"
+            "stateType": "Max"
           }
         }
       ],
@@ -450,7 +450,7 @@ const compositeAbilityObject = {
               "optionName": "UseSequenceSkill",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Sequence Ability Option"
                   }

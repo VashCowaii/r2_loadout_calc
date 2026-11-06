@@ -1169,7 +1169,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "failed": [
                 {
@@ -1340,7 +1340,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "failed": [
                 {
@@ -1429,7 +1429,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -2260,7 +2260,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "passed": [
                 {
@@ -2559,7 +2559,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "passed": [
                 {
@@ -2858,7 +2858,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "passed": [
                 {
@@ -3157,7 +3157,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "ENEMIES_OBJECT_UNUSED__181"
+                "variableName": "ENEMIES_OBJECT_UNUSED__181"
               },
               "passed": [
                 {
@@ -3395,7 +3395,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -3503,7 +3503,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3545,7 +3545,7 @@ const compositeAbilityObject = {
               "optionName": "Decision02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3587,7 +3587,7 @@ const compositeAbilityObject = {
               "optionName": "Decision03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3629,7 +3629,7 @@ const compositeAbilityObject = {
               "optionName": "Decision04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -3671,7 +3671,7 @@ const compositeAbilityObject = {
               "optionName": "Decision05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill04",

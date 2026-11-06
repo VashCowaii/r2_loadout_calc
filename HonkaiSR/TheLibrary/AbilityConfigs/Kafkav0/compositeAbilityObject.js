@@ -242,7 +242,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "NOT",
-                            "condition": {
+                            "conditions": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",
@@ -1545,7 +1545,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "NOT",
-                        "condition": {
+                        "conditions": {
                           "name": "Current Action Holder Is",
                           "target": {
                             "name": "Target Name",

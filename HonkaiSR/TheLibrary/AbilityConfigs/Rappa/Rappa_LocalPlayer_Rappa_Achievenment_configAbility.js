@@ -24,7 +24,7 @@ const configAbility = {
     },
     {
       "name": "WAIT FOR",
-      "condition": {
+      "conditions": {
         "name": "OR",
         "conditionList": [
           {

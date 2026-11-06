@@ -848,11 +848,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOrLimbo",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Summoner of Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOrLimbo"
               },
               "passed": [
                 {
@@ -1209,7 +1209,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "GridFightBoss"
+                        "variableName": "GridFightBoss"
                       },
                       "passed": [
                         {
@@ -1321,7 +1321,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "GridFightBoss"
+                        "variableName": "GridFightBoss"
                       },
                       "passed": [
                         {

@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Mascot_Ability02_Insert_Part01",
@@ -2108,7 +2108,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sequence Event",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Monster_W4_Mascot_Ability03_Insert_Part01",
@@ -2749,7 +2749,7 @@ const compositeAbilityObject = {
               "optionName": "Decision02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill04"

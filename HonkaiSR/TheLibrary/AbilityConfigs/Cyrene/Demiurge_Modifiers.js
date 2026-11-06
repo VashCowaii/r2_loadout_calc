@@ -2385,11 +2385,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOrRevivable",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOrRevivable"
               },
               "passed": [
                 {
@@ -3022,11 +3022,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   }
                 ]
               },

@@ -560,7 +560,7 @@ const configAbility = {
                   },
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",

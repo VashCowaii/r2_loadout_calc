@@ -1005,11 +1005,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Bit_OnStage",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Bit_OnStage"
                       }
                     ]
                   }
@@ -1069,11 +1069,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Bit_OnStage",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Bit_OnStage"
                       }
                     ]
                   }
@@ -1348,11 +1348,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Bit_OnStage",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Bit_OnStage"
                       }
                     ]
                   }
@@ -2060,7 +2060,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__63"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__63"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2068,7 +2068,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "ENEMIES_OBJECT_UNUSED__64"
+                        "variableName": "ENEMIES_OBJECT_UNUSED__64"
                       }
                     ]
                   }
@@ -2119,11 +2119,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Bit_OnStage",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Bit_OnStage"
                       },
                       {
                         "name": "Enemy ID",
@@ -2411,7 +2411,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_AsatPramad_02"
+                    "variableName": "W5_AsatPramad_02"
                   }
                 }
               ]
@@ -2438,7 +2438,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_AsatPramad_01"
+                    "variableName": "W5_AsatPramad_01"
                   }
                 }
               ]
@@ -2465,7 +2465,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_AsatPramad_00"
+                    "variableName": "W5_AsatPramad_00"
                   }
                 }
               ]
@@ -2779,7 +2779,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "W5_Shell"
+                    "variableName": "W5_Shell"
                   }
                 }
               ]
@@ -4061,11 +4061,11 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 "Sort by Physical Positioning",
@@ -4093,11 +4093,11 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 "Sort by Physical Positioning",
@@ -4125,11 +4125,11 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 "Sort by Physical Positioning",
@@ -4157,11 +4157,11 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 "Sort by Physical Positioning",
@@ -4254,11 +4254,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Bit_OnStage",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Bit_OnStage"
                       }
                     ]
                   }
@@ -7595,7 +7595,7 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Get Prior Entity Defined by Index",
@@ -7804,11 +7804,11 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   }
                 },
                 {
@@ -10059,7 +10059,7 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",
@@ -10171,7 +10171,7 @@ const compositeAbilityObject = {
                   "name": "Target Filter",
                   "conditions": {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Is Part Of",
                       "target1": {
                         "name": "Target Name",

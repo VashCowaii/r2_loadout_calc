@@ -483,7 +483,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Left"
+                        "stateType": "Left"
                       },
                       "passed": [
                         {
@@ -1970,7 +1970,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory"
+                    "variableName": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
@@ -2005,7 +2005,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory"
+                    "variableName": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
@@ -3117,7 +3117,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "Define Custom Variable",
                               "variableName": "DebuffID_Result",
@@ -3155,7 +3155,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "IF",
                               "conditions": {
@@ -3217,7 +3217,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Sequence Event",
-                          "passed": [
+                          "execute": [
                             {
                               "name": "Define Custom Variable",
                               "variableName": "DebuffID_Result",
@@ -3535,7 +3535,7 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3545,7 +3545,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3555,7 +3555,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3565,7 +3565,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3575,7 +3575,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3585,7 +3585,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3595,7 +3595,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3626,7 +3626,7 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3641,7 +3641,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -3676,7 +3676,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3686,7 +3686,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3696,7 +3696,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3706,7 +3706,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3721,7 +3721,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3736,7 +3736,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3746,7 +3746,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3756,7 +3756,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",
@@ -3766,7 +3766,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Sequence Event",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "DebuffID_Result",

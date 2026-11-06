@@ -618,11 +618,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "W3_Aventurine_00"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",

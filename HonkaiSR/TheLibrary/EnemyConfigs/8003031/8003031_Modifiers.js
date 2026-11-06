@@ -670,7 +670,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "Has Param Flag",
                       "flagName": "IsFakeAvatarAttack"
                     }

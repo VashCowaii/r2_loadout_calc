@@ -997,11 +997,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Bit_OnStage",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Bit_OnStage"
                   }
                 ]
               }
@@ -1061,11 +1061,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Bit_OnStage",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Bit_OnStage"
                   }
                 ]
               }
@@ -1340,11 +1340,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Bit_OnStage",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Bit_OnStage"
                   }
                 ]
               }
@@ -2052,7 +2052,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__63"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__63"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -2060,7 +2060,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__64"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__64"
                   }
                 ]
               }
@@ -2111,11 +2111,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Bit_OnStage",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Bit_OnStage"
                   },
                   {
                     "name": "Enemy ID",
@@ -2403,7 +2403,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_AsatPramad_02"
+                "variableName": "W5_AsatPramad_02"
               }
             }
           ]
@@ -2430,7 +2430,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_AsatPramad_01"
+                "variableName": "W5_AsatPramad_01"
               }
             }
           ]
@@ -2457,7 +2457,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_AsatPramad_00"
+                "variableName": "W5_AsatPramad_00"
               }
             }
           ]
@@ -2771,7 +2771,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W5_Shell"
+                "variableName": "W5_Shell"
               }
             }
           ]
@@ -4053,11 +4053,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             "Sort by Physical Positioning",
@@ -4085,11 +4085,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             "Sort by Physical Positioning",
@@ -4117,11 +4117,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             "Sort by Physical Positioning",
@@ -4149,11 +4149,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             "Sort by Physical Positioning",
@@ -4246,11 +4246,11 @@ const configAbility = {
                   },
                   {
                     "name": "Living State",
-                    "state": "Bit_OnStage",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "livingState": "Bit_OnStage"
                   }
                 ]
               }
@@ -7587,7 +7587,7 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Is Part Of",
                   "target1": {
                     "name": "Get Prior Entity Defined by Index",
@@ -7796,11 +7796,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               }
             },
             {
@@ -10051,7 +10051,7 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Is Part Of",
                   "target1": {
                     "name": "Target Name",
@@ -10163,7 +10163,7 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Is Part Of",
                   "target1": {
                     "name": "Target Name",

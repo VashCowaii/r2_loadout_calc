@@ -2007,7 +2007,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkillCondition01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2067,7 +2067,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkillCondition02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -2109,7 +2109,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkillCondition03",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

@@ -2977,7 +2977,7 @@ const compositeAbilityObject = {
               "maxTargets": 2,
               "conditions": {
                 "name": "NOT",
-                "condition": {
+                "conditions": {
                   "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
@@ -6457,11 +6457,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOrRevivable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOrRevivable"
                   },
                   "passed": [
                     {
@@ -7094,11 +7094,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -12423,11 +12423,11 @@ const compositeAbilityObject = {
               "maxTargets": 3,
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "ifTargetFound": [
                 {

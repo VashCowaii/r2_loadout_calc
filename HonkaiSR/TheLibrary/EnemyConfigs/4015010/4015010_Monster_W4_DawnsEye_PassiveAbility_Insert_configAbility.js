@@ -427,7 +427,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPartP3"
+                "variableName": "MonsterType_W4_BossPartP3"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -436,7 +436,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Left"
+                "stateType": "Left"
               }
             ]
           },
@@ -538,7 +538,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "MonsterType_W4_BossPartP3"
+                "variableName": "MonsterType_W4_BossPartP3"
               },
               {
                 "name": "Is Part Of Team Location",
@@ -547,7 +547,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "team": "Enemy Team",
-                "location": "Right"
+                "stateType": "Right"
               }
             ]
           },
@@ -954,7 +954,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "value": "MonsterType_W4_BossPart"
+            "variableName": "MonsterType_W4_BossPart"
           },
           "ifTargetFound": [
             {
@@ -1021,7 +1021,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "MonsterType_W4_BossSummon",
+            "variableName": "MonsterType_W4_BossSummon",
             "invertCondition": true
           },
           "passed": [
@@ -1199,7 +1199,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Dawnseye_AllPhase",
+        "variableName": "Dawnseye_AllPhase",
         "invertCondition": true
       },
       "passed": [

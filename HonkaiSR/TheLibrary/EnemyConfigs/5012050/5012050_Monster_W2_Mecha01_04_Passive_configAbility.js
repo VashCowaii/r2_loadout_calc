@@ -13,7 +13,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "WindResistance"
+        "variableName": "WindResistance"
       },
       "passed": [
         {

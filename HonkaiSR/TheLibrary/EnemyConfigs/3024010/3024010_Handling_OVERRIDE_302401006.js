@@ -28,7 +28,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -66,7 +66,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -133,7 +133,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -182,7 +182,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -236,7 +236,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -287,7 +287,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -336,7 +336,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -385,7 +385,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -434,7 +434,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -472,7 +472,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -539,7 +539,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -588,7 +588,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -642,7 +642,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -693,7 +693,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -742,7 +742,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -791,7 +791,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {
@@ -840,7 +840,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -920,7 +920,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -974,7 +974,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -1025,7 +1025,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -1074,7 +1074,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Define Custom Variable with Added Value",
                 "target": {
@@ -1123,7 +1123,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "IF",
                 "conditions": {
@@ -1177,7 +1177,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "Sword_FirstFlag"
+                      "variableName": "Sword_FirstFlag"
                     },
                     "ifTargetFound": [
                       {
@@ -1228,7 +1228,7 @@ const configAbility = {
           "optionName": "Charge",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Declare Custom Variable",
                 "target": {

@@ -73,11 +73,11 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Living State",
-        "state": "Mask_AliveOnly",
         "target": {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
-        }
+        },
+        "livingState": "Mask_AliveOnly"
       },
       "passed": [
         {
@@ -117,11 +117,11 @@ const configAbility = {
           "maxTargets": 1,
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           "ifTargetFound": [
             {

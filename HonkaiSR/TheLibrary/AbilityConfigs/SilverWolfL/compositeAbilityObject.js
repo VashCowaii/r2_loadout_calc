@@ -75,11 +75,11 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOrLimbo",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
-                }
+                },
+                "livingState": "Mask_AliveOrLimbo"
               }
             }
           ]
@@ -601,11 +601,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -906,11 +906,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOrRevivable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOrRevivable"
                       }
                     ]
                   },
@@ -5323,11 +5323,11 @@ const compositeAbilityObject = {
                     },
                     "conditions": {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     "invertCondition": true
                   },
@@ -5667,7 +5667,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -6093,7 +6093,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "WAIT FOR",
-          "condition": {
+          "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
             "type": "Team Characters"
@@ -8099,11 +8099,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Living State",
-                          "state": "Mask_AliveOnly",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "livingState": "Mask_AliveOnly"
                         },
                         "invertCondition": true
                       },
@@ -8202,7 +8202,7 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
                 "type": "Team Characters"
@@ -8222,7 +8222,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable with Skill Point Max",
               "variableName": "TDF_MaxBP",
-              "context": "ContextTaskTemplate"
+              "scope": "ContextTaskTemplate"
             },
             {
               "name": "SWITCH",
@@ -9358,7 +9358,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "WAIT FOR",
-                  "condition": {
+                  "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
                     "type": "Team Characters"

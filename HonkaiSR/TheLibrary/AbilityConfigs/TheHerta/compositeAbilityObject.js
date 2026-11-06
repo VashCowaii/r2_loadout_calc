@@ -5598,7 +5598,7 @@ const compositeAbilityObject = {
                             "name": "Target Filter",
                             "conditions": {
                               "name": "NOT",
-                              "condition": {
+                              "conditions": {
                                 "name": "Is Part Of",
                                 "target1": {
                                   "name": "Target Name",

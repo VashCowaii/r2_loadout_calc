@@ -27,7 +27,7 @@ const configAbility = {
               "optionName": "弹射",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -68,7 +68,7 @@ const configAbility = {
               "optionName": "蓄力1",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -138,7 +138,7 @@ const configAbility = {
               "optionName": "大招",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -179,7 +179,7 @@ const configAbility = {
               "optionName": "单攻",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -220,7 +220,7 @@ const configAbility = {
               "optionName": "蓄力",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -290,7 +290,7 @@ const configAbility = {
               "optionName": "大招",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

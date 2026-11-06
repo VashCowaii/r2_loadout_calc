@@ -43,7 +43,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_W5_Pam_00_MainStory"
+        "variableName": "Monster_W5_Pam_00_MainStory"
       }
     }
   ],
@@ -56,7 +56,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "Monster_W5_Pam_00_MainStory"
+        "variableName": "Monster_W5_Pam_00_MainStory"
       },
       "passed": [
         {

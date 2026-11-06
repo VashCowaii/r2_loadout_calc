@@ -4433,7 +4433,7 @@ const configAbility = {
                   "target": "{{Modifier Holder}}"
                 },
                 "team": "Enemy Team",
-                "location": "Max"
+                "stateType": "Max"
               }
             }
           ]
@@ -4541,7 +4541,7 @@ const configAbility = {
                   "target": "{{Modifier Holder}}"
                 },
                 "team": "Enemy Team",
-                "location": "Max"
+                "stateType": "Max"
               }
             }
           ]
@@ -4815,7 +4815,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -4823,7 +4823,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   },
                   {
                     "name": "Check Boolean Value",
@@ -4831,7 +4831,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 ]
               },
@@ -4844,7 +4844,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                   }
                 },
                 {
@@ -4855,7 +4855,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                   }
                 },
                 {
@@ -4866,7 +4866,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                    "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                   }
                 }
               ],

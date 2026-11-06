@@ -731,7 +731,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "value": "InSkill05",
+        "variableName": "InSkill05",
         "invertCondition": true
       },
       "passed": [

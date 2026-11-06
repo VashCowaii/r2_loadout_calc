@@ -153,7 +153,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "WAIT FOR",
-              "condition": {
+              "conditions": {
                 "name": "Group has Dying Target",
                 "entityType": "Team Characters",
                 "team": "Enemy Team",
@@ -1344,22 +1344,22 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "ifTargetFound": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   "passed": [
                     {
@@ -1457,11 +1457,11 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "ifTargetFound": [
                 {
@@ -1635,11 +1635,11 @@ const compositeAbilityObject = {
                     },
                     "conditions": {
                       "name": "Living State",
-                      "state": "Mask_AliveOnly",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "livingState": "Mask_AliveOnly"
                     },
                     "invertCondition": true
                   },
@@ -2303,11 +2303,11 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "passed": [
                 {
@@ -2534,11 +2534,11 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Living State",
-                "state": "Mask_AliveOnly",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
-                }
+                },
+                "livingState": "Mask_AliveOnly"
               },
               "passed": [
                 {

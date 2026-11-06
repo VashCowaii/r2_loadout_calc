@@ -291,7 +291,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_Sam_01"
+                    "variableName": "MonsterType_W3_Sam_01"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -1241,11 +1241,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "RLBoss"
+                        "variableName": "RLBoss"
                       },
                       "passed": [
                         {
@@ -3073,7 +3073,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "RLBoss"
+                    "variableName": "RLBoss"
                   }
                 ]
               }
@@ -4258,7 +4258,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4299,7 +4299,7 @@ const compositeAbilityObject = {
                   "optionName": "变身",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4340,7 +4340,7 @@ const compositeAbilityObject = {
                   "optionName": "超单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4381,7 +4381,7 @@ const compositeAbilityObject = {
                   "optionName": "提速",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4422,7 +4422,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4463,7 +4463,7 @@ const compositeAbilityObject = {
                   "optionName": "扩散",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -4504,7 +4504,7 @@ const compositeAbilityObject = {
                   "optionName": "群攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

@@ -322,7 +322,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -346,7 +346,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill02",
@@ -402,7 +402,7 @@ const compositeAbilityObject = {
                       "conditionList": [
                         {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Enemy ID",
                             "ID": 1002020,
                             "target": {
@@ -414,7 +414,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -471,7 +471,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Use Ability Option",
                     "skillName": "Skill01"
@@ -495,7 +495,7 @@ const compositeAbilityObject = {
               "optionName": "UseSkill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Choose Ability Target",
                     "skillName": "Skill02",
@@ -551,7 +551,7 @@ const compositeAbilityObject = {
                       "conditionList": [
                         {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Enemy ID",
                             "ID": 1002020,
                             "target": {
@@ -563,7 +563,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "NOT",
-                          "condition": {
+                          "conditions": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",

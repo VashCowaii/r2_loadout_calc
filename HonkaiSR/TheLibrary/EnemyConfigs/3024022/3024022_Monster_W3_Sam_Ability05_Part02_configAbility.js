@@ -61,7 +61,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sam_RLBoss"
+            "variableName": "Monster_Sam_RLBoss"
           },
           "passed": [
             {
@@ -204,7 +204,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Monster_Sam_RLBoss"
+            "variableName": "Monster_Sam_RLBoss"
           },
           {
             "name": "Compare: Variable",

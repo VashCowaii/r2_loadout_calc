@@ -263,7 +263,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
+                    "conditions": {
                       "name": "OR",
                       "conditionList": [
                         {

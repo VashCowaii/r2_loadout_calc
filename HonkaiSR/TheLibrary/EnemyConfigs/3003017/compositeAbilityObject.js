@@ -3733,7 +3733,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "ENEMIES_OBJECT_UNUSED__114"
+                          "variableName": "ENEMIES_OBJECT_UNUSED__114"
                         },
                         {
                           "name": "Check Boolean Value",
@@ -3741,7 +3741,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W3_TV_00"
+                          "variableName": "MonsterType_W3_TV_00"
                         }
                       ]
                     }
@@ -3774,7 +3774,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "ENEMIES_OBJECT_UNUSED__114"
+                          "variableName": "ENEMIES_OBJECT_UNUSED__114"
                         },
                         {
                           "name": "Check Boolean Value",
@@ -3782,7 +3782,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W3_Clock_00"
+                          "variableName": "MonsterType_W3_Clock_00"
                         }
                       ]
                     }
@@ -3815,7 +3815,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "ENEMIES_OBJECT_UNUSED__114"
+                          "variableName": "ENEMIES_OBJECT_UNUSED__114"
                         },
                         {
                           "name": "Check Boolean Value",
@@ -3823,7 +3823,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "value": "MonsterType_W1_Mecha01_02"
+                          "variableName": "MonsterType_W1_Mecha01_02"
                         }
                       ]
                     }
@@ -3889,7 +3889,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "Theater_Rogue"
+            "variableName": "Theater_Rogue"
           }
         },
         {
@@ -3972,7 +3972,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "MonsterType_W3_TV_00"
+                    "variableName": "MonsterType_W3_TV_00"
                   },
                   "passed": [
                     {
@@ -3992,7 +3992,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "value": "MonsterType_W3_TV_00"
+                              "variableName": "MonsterType_W3_TV_00"
                             }
                           }
                         ]
@@ -4040,7 +4040,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "Theater_Rogue"
+                        "variableName": "Theater_Rogue"
                       }
                     },
                     {
@@ -4194,7 +4194,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W3_TV_00"
+                            "variableName": "MonsterType_W3_TV_00"
                           },
                           "passed": [
                             {
@@ -4214,7 +4214,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "value": "MonsterType_W3_TV_00"
+                                      "variableName": "MonsterType_W3_TV_00"
                                     }
                                   }
                                 ]
@@ -4333,7 +4333,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "value": "MonsterType_W3_TV_00"
+                            "variableName": "MonsterType_W3_TV_00"
                           },
                           "passed": [
                             {
@@ -4353,7 +4353,7 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "value": "MonsterType_W3_TV_00"
+                                      "variableName": "MonsterType_W3_TV_00"
                                     }
                                   }
                                 ]
@@ -4590,7 +4590,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "MonsterType_W3_Theater"
+            "variableName": "MonsterType_W3_Theater"
           },
           "passed": [
             {
@@ -4925,7 +4925,7 @@ const compositeAbilityObject = {
               "optionName": "Skill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -4995,7 +4995,7 @@ const compositeAbilityObject = {
               "optionName": "Skill01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -5065,7 +5065,7 @@ const compositeAbilityObject = {
               "optionName": "Skill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",
@@ -5110,7 +5110,7 @@ const compositeAbilityObject = {
               "optionName": "Skill02",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Define Custom Variable",
                     "scope": "TargetEntity",

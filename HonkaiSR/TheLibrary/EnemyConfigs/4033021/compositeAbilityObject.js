@@ -1320,11 +1320,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -1411,11 +1411,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Living State",
-                        "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        }
+                        },
+                        "livingState": "Mask_AliveOnly"
                       }
                     ]
                   },
@@ -4009,11 +4009,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{EVENT[RoT] Light Praetor: 3}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           "passed": [
             {
@@ -4029,11 +4029,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Living State",
-            "state": "Mask_AliveOnly",
             "target": {
               "name": "Target Name",
               "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-            }
+            },
+            "livingState": "Mask_AliveOnly"
           },
           "passed": [
             {
@@ -5156,11 +5156,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -5191,11 +5191,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -5340,11 +5340,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -5375,11 +5375,11 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Living State",
-                    "state": "Mask_AliveOnly",
                     "target": {
                       "name": "Target Name",
                       "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                    }
+                    },
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "Compare: Variable",
@@ -5569,7 +5569,7 @@ const compositeAbilityObject = {
               "optionName": "Decision01",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "IF",
                     "conditions": {
@@ -5653,7 +5653,7 @@ const compositeAbilityObject = {
               "optionName": "Decision04",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {
@@ -5688,7 +5688,7 @@ const compositeAbilityObject = {
               "optionName": "Decision05",
               "optionGoal": {
                 "name": "Sequence Event",
-                "passed": [
+                "execute": [
                   {
                     "name": "Declare Custom Variable",
                     "target": {

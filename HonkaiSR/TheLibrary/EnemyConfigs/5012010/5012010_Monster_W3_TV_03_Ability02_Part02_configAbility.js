@@ -48,7 +48,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Sequence Event",
-          "passed": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -71,7 +71,7 @@ const configAbility = {
         },
         {
           "name": "Sequence Event",
-          "passed": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -139,7 +139,7 @@ const configAbility = {
         },
         {
           "name": "Sequence Event",
-          "passed": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

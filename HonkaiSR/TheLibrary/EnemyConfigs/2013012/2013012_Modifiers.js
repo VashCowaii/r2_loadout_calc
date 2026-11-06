@@ -37,7 +37,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "value": "W2_Mecha02"
+                "variableName": "W2_Mecha02"
               },
               "passed": [
                 {

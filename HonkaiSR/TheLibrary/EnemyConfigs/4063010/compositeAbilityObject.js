@@ -569,7 +569,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "value": "ENEMIES_OBJECT_UNUSED__181"
+                    "variableName": "ENEMIES_OBJECT_UNUSED__181"
                   },
                   "passed": [
                     {
@@ -685,7 +685,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -860,7 +860,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -1208,7 +1208,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -1314,7 +1314,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "value": "ENEMIES_OBJECT_UNUSED__181"
+            "variableName": "ENEMIES_OBJECT_UNUSED__181"
           },
           "passed": [
             {
@@ -1629,7 +1629,7 @@ const compositeAbilityObject = {
                   "optionName": "弹射",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -1670,7 +1670,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力1",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -1740,7 +1740,7 @@ const compositeAbilityObject = {
                   "optionName": "大招",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -1781,7 +1781,7 @@ const compositeAbilityObject = {
                   "optionName": "单攻",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {
@@ -1822,7 +1822,7 @@ const compositeAbilityObject = {
                   "optionName": "蓄力",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "IF",
                         "conditions": {
@@ -1892,7 +1892,7 @@ const compositeAbilityObject = {
                   "optionName": "大招",
                   "optionGoal": {
                     "name": "Sequence Event",
-                    "passed": [
+                    "execute": [
                       {
                         "name": "Declare Custom Variable",
                         "target": {

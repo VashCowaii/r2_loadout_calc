@@ -44,7 +44,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "value": "Pam_MainBoss"
+                    "variableName": "Pam_MainBoss"
                   },
                   "passed": [
                     {
@@ -1415,7 +1415,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "Monster_W5_Pam_00_MainStory"
+                        "variableName": "Monster_W5_Pam_00_MainStory"
                       }
                     },
                     {
@@ -2290,7 +2290,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_27"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_27"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2298,7 +2298,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2306,7 +2306,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       },
                       {
                         "name": "Check Boolean Value",
@@ -2314,7 +2314,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     ]
                   },
@@ -2327,7 +2327,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_27"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_27"
                       }
                     },
                     {
@@ -2338,7 +2338,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_26"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_26"
                       }
                     },
                     {
@@ -2349,7 +2349,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_25"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_25"
                       }
                     },
                     {
@@ -2360,7 +2360,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "value": "APOC_BOOL_OBJECT_UNUSED_24"
+                        "variableName": "APOC_BOOL_OBJECT_UNUSED_24"
                       }
                     }
                   ],
@@ -2681,7 +2681,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster's Summoner}}"
             },
-            "value": "GridFightBoss"
+            "variableName": "GridFightBoss"
           },
           "passed": [
             {
@@ -2789,7 +2789,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "value": "Pam_MainBoss"
+                        "variableName": "Pam_MainBoss"
                       }
                     ]
                   },
@@ -2964,7 +2964,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "value": "GridFightBoss"
+                "variableName": "GridFightBoss"
               },
               "passed": [
                 {

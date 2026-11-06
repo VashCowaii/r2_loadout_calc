@@ -23,7 +23,7 @@ const configAbility = {
           "optionName": "UseSkill02",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Use Ability Option",
                 "skillName": "Skill02"
@@ -47,7 +47,7 @@ const configAbility = {
           "optionName": "UseSkill01",
           "optionGoal": {
             "name": "Sequence Event",
-            "passed": [
+            "execute": [
               {
                 "name": "Choose Ability Target",
                 "skillName": "Skill01",
@@ -103,7 +103,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "value": "MonsterType_W4_Scholar_00",
+                      "variableName": "MonsterType_W4_Scholar_00",
                       "invertCondition": true
                     }
                   ]

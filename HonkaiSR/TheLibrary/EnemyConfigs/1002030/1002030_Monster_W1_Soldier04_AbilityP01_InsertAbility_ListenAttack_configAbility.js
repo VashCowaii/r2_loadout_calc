@@ -13,7 +13,7 @@ const configAbility = {
           "target": "{{Ability Target(ST)}}"
         },
         "team": "Player Team",
-        "location": "Max"
+        "stateType": "Max"
       },
       "failed": [
         {

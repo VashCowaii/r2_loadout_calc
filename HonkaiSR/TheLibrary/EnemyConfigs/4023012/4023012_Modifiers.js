@@ -261,7 +261,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Living/Death State",
-                    "state": "Mask_AliveOnly"
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "OR",
@@ -360,7 +360,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Living/Death State",
-                    "state": "Mask_AliveOnly"
+                    "livingState": "Mask_AliveOnly"
                   },
                   {
                     "name": "OR",
