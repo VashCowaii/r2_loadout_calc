@@ -675,10 +675,7 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": []
-                  },
+                  "conditions": "AND",
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
