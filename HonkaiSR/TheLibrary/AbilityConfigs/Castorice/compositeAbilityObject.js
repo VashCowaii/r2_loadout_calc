@@ -2771,11 +2771,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with WorldLevel",
-                  "target": {
+                  "variableName": "Castorice_WorldLevel",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "Castorice_WorldLevel"
+                  }
                 },
                 {
                   "name": "IF",

@@ -1459,11 +1459,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1517,11 +1517,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1802,11 +1802,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_RallyHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_RallyHPRatio"
+                      }
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -1849,11 +1849,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "IF",

@@ -271,11 +271,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Adjust Target Healing Stats",

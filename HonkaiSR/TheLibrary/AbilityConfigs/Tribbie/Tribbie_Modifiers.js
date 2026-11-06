@@ -155,11 +155,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": {
+                  "variableName": "MDF_Count",
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_Count"
+                  }
                 },
                 {
                   "name": "IF",

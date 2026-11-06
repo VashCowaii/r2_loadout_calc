@@ -309,11 +309,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_HPRatioBeforeAttacked",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HPRatioBeforeAttacked"
+                  }
                 }
               ]
             }
@@ -348,11 +348,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_HPRatioAfterAttacked",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HPRatioAfterAttacked"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",

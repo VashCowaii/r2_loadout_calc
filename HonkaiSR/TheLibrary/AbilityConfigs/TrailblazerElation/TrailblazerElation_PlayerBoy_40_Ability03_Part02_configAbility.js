@@ -165,7 +165,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "tag": "ElationTime"
+        "tags": "ElationTime"
       },
       "passed": [
         {

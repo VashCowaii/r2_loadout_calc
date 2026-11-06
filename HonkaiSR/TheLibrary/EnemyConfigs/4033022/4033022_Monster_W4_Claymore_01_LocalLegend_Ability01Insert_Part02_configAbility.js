@@ -29,11 +29,11 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable with HP%",
-          "target": {
+          "variableName": "_CurrentHPRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "variableName": "_CurrentHPRatio"
+          }
         },
         {
           "name": "IF",

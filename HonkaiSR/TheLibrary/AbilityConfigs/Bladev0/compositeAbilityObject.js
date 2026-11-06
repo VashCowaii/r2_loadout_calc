@@ -2663,11 +2663,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "DamageExtra_HPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "DamageExtra_HPRatio"
+              }
             }
           ],
           "failed": [

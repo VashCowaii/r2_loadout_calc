@@ -40,11 +40,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "LoseHPPercentage",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "LoseHPPercentage"
+              }
             },
             {
               "name": "Define Custom Variable",

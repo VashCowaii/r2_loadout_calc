@@ -1774,10 +1774,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "skillName": "Skill41",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill41"
                 },
                 {
                   "name": "Add Ability Tag",
@@ -1785,10 +1785,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "skillName": "Skill04",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill04"
                 }
               ]
             },
@@ -1809,10 +1809,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "skillName": "Skill04",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill04"
                 },
                 {
                   "name": "Add Ability Tag",
@@ -1820,10 +1820,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "skillName": "Skill41",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill41"
                 },
                 {
                   "name": "Disable Abilities",
@@ -4037,10 +4037,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Add Ability Tag",
-          "skillName": "Skill04",
-          "tag": [
+          "tags": [
             "AssistCaster"
-          ]
+          ],
+          "skillName": "Skill04"
         },
         {
           "name": "Update Displayed Energy Bar",

@@ -23,19 +23,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "_CasterRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "_CasterRatio"
+              }
             },
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "_TargetRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target TAKING DMG}}"
-              },
-              "variableName": "_TargetRatio"
+              }
             },
             {
               "name": "IF",

@@ -1670,19 +1670,19 @@ const configAbility = {
             },
             {
               "name": "Add Ability Tag",
-              "skillName": "Skill04",
-              "tag": [
+              "tags": [
                 "AssistCaster",
                 "Elation"
-              ]
+              ],
+              "skillName": "Skill04"
             },
             {
               "name": "Add Ability Tag",
-              "skillName": "Skill41",
-              "tag": [
+              "tags": [
                 "AssistCaster",
                 "Elation"
-              ]
+              ],
+              "skillName": "Skill41"
             }
           ]
         }
@@ -1875,17 +1875,17 @@ const configAbility = {
                 },
                 {
                   "name": "Add Ability Tag",
-                  "skillName": "Skill41",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill41"
                 },
                 {
                   "name": "Add Ability Tag",
-                  "skillName": "Skill04",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill04"
                 }
               ]
             }
@@ -1934,17 +1934,17 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Ability Tag",
-                  "skillName": "Skill04",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill04"
                 },
                 {
                   "name": "Add Ability Tag",
-                  "skillName": "Skill41",
-                  "tag": [
+                  "tags": [
                     "AssistCaster"
-                  ]
+                  ],
+                  "skillName": "Skill41"
                 }
               ]
             }

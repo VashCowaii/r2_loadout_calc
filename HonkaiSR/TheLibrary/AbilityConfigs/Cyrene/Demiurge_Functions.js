@@ -111,11 +111,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with HP%",
-          "target": {
+          "variableName": "CasterSummonerHPRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
-          },
-          "variableName": "CasterSummonerHPRatio"
+          }
         },
         {
           "name": "Define Custom Variable with Stat",

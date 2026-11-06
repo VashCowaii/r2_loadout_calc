@@ -103,11 +103,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Attack Targets",
-              "target": {
+              "variableName": "AttackNum_24004",
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "AttackNum_24004"
+              }
             },
             {
               "name": "Add Events/Bonuses",

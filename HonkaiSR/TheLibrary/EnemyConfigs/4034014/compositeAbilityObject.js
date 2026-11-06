@@ -707,11 +707,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -737,11 +737,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1798,11 +1798,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "CurrentHPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              },
-              "variableName": "CurrentHPRatio"
+              }
             },
             {
               "name": "Find New Target",
@@ -6308,11 +6308,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with HP%",
-          "target": {
+          "variableName": "CurrentHPRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "variableName": "CurrentHPRatio"
+          }
         },
         {
           "name": "IF",
@@ -7200,11 +7200,11 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable with HP%",
-          "target": {
+          "variableName": "CurrentHPRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "variableName": "CurrentHPRatio"
+          }
         },
         {
           "name": "IF",
@@ -7561,11 +7561,11 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable with HP%",
-          "target": {
+          "variableName": "CurrentHPRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "variableName": "CurrentHPRatio"
+          }
         },
         {
           "name": "IF",

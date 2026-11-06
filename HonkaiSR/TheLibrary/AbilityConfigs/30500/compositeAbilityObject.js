@@ -84,11 +84,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "DV_TargetCount",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "DV_TargetCount"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
@@ -294,11 +294,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "DV_TargetCount",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "DV_TargetCount"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
@@ -458,11 +458,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "DV_TargetCount",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "DV_TargetCount"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1274,11 +1274,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "DV_TargetCount",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "DV_TargetCount"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1486,11 +1486,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "DV_TargetCount",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "DV_TargetCount"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",

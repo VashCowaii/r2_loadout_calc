@@ -441,11 +441,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -528,11 +528,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Heal",
@@ -592,11 +592,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -663,11 +663,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -734,11 +734,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -882,11 +882,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -976,11 +976,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_DefenderCurrentHPRatio_Before",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_DefenderCurrentHPRatio_Before"
+                  }
                 }
               ]
             },
@@ -989,11 +989,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_DefenderCurrentHPRatio_After",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_DefenderCurrentHPRatio_After"
+                  }
                 },
                 {
                   "name": "IF",
@@ -1182,11 +1182,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1344,11 +1344,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "IF",

@@ -212,11 +212,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "CurrentHPPercentage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "CurrentHPPercentage"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",

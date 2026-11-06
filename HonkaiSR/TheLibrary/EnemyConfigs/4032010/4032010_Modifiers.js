@@ -429,11 +429,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -516,11 +516,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_CurrentHPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentHPRatio"
+              }
             },
             {
               "name": "Heal",
@@ -580,11 +580,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -651,11 +651,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -722,11 +722,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -870,11 +870,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_CurrentHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentHPRatio"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -964,11 +964,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_DefenderCurrentHPRatio_Before",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_DefenderCurrentHPRatio_Before"
+              }
             }
           ]
         },
@@ -977,11 +977,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_DefenderCurrentHPRatio_After",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_DefenderCurrentHPRatio_After"
+              }
             },
             {
               "name": "IF",
@@ -1170,11 +1170,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_CurrentHPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentHPRatio"
+              }
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1332,11 +1332,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_CurrentHPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentHPRatio"
+              }
             },
             {
               "name": "IF",

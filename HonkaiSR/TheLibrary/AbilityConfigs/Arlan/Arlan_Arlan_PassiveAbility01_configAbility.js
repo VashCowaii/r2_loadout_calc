@@ -278,11 +278,11 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "_HPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_HPRatio"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -337,11 +337,11 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "_HPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "_HPRatio"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",

@@ -7004,7 +7004,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "tag": "ElationTime"
+                "tags": "ElationTime"
               }
             }
           ]
@@ -7073,7 +7073,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "tag": "ElationTime"
+                    "tags": "ElationTime"
                   }
                 ]
               }
@@ -7172,7 +7172,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "tag": "ElationTime"
+                    "tags": "ElationTime"
                   },
                   {
                     "name": "OR",

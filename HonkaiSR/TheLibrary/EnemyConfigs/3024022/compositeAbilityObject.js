@@ -1770,11 +1770,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_InitHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_InitHPRatio"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",

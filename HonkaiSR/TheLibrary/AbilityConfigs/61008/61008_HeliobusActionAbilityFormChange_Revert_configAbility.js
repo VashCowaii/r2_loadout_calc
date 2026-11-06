@@ -59,11 +59,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with HP%",
-      "target": {
+      "variableName": "_HPRatio",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
-      },
-      "variableName": "_HPRatio"
+      }
     },
     {
       "name": "Set HP Value",

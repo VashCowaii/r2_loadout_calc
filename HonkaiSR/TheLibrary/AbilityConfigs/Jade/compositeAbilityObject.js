@@ -3475,11 +3475,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": {
+                  "variableName": "MDF_Rank01_HitNumb",
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_Rank01_HitNumb"
+                  }
                 },
                 {
                   "name": "Find New Target",
@@ -3765,11 +3765,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": {
+                  "variableName": "MDF_Rank01_HitNumb",
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_Rank01_HitNumb"
+                  }
                 },
                 {
                   "name": "Find New Target",

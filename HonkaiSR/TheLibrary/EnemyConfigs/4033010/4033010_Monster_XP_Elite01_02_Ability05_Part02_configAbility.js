@@ -74,11 +74,11 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "_CurrentHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "variableName": "_CurrentHP"
+              }
             },
             {
               "name": "Add Events/Bonuses",

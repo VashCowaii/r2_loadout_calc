@@ -108,11 +108,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "CasterHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "CasterHP"
+                  }
                 }
               ]
             },

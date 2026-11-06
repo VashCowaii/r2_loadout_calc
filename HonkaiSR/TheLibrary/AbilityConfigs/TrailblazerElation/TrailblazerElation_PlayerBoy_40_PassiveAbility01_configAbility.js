@@ -225,8 +225,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player's Aim Target List}}.[[index0]]"
           },
-          "invertCondition": true,
-          "tag": "ElationTime"
+          "tags": "ElationTime",
+          "invertCondition": true
         },
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",

@@ -1331,11 +1331,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                      },
-                      "variableName": "_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "IF",
@@ -1422,11 +1422,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "_CurrentHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                      },
-                      "variableName": "_CurrentHPRatio"
+                      }
                     },
                     {
                       "name": "IF",
@@ -4444,11 +4444,11 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "_CurrentHPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{EVENT[RoT] Light Praetor: 3}}"
-              },
-              "variableName": "_CurrentHPRatio"
+              }
             },
             {
               "name": "IF",

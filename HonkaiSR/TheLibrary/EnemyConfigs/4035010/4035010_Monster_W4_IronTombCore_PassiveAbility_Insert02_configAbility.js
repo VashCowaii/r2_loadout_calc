@@ -463,11 +463,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with WorldLevel",
-      "target": {
+      "variableName": "_WorldLevel",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      },
-      "variableName": "_WorldLevel"
+      }
     },
     {
       "name": "IF",

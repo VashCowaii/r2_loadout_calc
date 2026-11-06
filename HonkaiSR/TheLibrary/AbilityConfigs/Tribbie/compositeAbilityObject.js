@@ -176,11 +176,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": {
+                      "variableName": "MDF_Count",
+                      "targetAttacker": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_Count"
+                      }
                     },
                     {
                       "name": "IF",
@@ -2677,11 +2677,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": {
+                  "variableName": "MDF_AttackCount",
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_AttackCount"
+                  }
                 },
                 {
                   "name": "Update Energy",

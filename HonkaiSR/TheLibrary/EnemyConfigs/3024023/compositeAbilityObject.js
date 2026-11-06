@@ -508,11 +508,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_InitHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_InitHPRatio"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2132,7 +2132,6 @@ const compositeAbilityObject = {
           ],
           "latentQueue": [
             "HintCheck",
-            "MDF_InitHPRatio",
             "InsertCheck",
             "InsertSpecial",
             "CurrentBP"
@@ -2653,7 +2652,6 @@ const compositeAbilityObject = {
           ],
           "latentQueue": [
             "HintCheck",
-            "MDF_InitHPRatio",
             "InsertCheck",
             "InsertSpecial",
             "CurrentBP"
@@ -2744,8 +2742,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-642289168\">Monster_W3_Sam_EnhanceEffectPart</a>",
           "latentQueue": [
-            "HintCheck",
-            "MDF_InitHPRatio"
+            "HintCheck"
           ],
           "execute": [
             {
@@ -2775,11 +2772,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "MDF_InitHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_InitHPRatio"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",

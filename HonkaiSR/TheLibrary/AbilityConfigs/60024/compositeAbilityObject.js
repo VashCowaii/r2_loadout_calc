@@ -377,11 +377,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": {
+                  "variableName": "W4_DawnsEye_01_HPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "W4_DawnsEye_01_HPRatio"
+                  }
                 }
               ]
             },
@@ -410,11 +410,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": {
+                      "variableName": "MDF_HPRatioCurrent",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_HPRatioCurrent"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",

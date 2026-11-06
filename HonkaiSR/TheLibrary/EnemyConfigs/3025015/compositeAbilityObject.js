@@ -4619,11 +4619,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with WorldLevel",
-                  "target": {
+                  "variableName": "MDF_WorldLevel",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_WorldLevel"
+                  }
                 }
               ]
             }

@@ -45,10 +45,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Add Ability Tag",
-      "skillName": "Skill04",
-      "tag": [
+      "tags": [
         "AssistCaster"
-      ]
+      ],
+      "skillName": "Skill04"
     },
     {
       "name": "Update Displayed Energy Bar",

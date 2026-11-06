@@ -914,11 +914,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": {
+              "variableName": "MDF_HPRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_HPRatio"
+              }
             },
             {
               "name": "Find New Target",
