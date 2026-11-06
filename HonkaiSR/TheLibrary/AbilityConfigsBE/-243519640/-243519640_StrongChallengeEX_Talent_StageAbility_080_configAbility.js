@@ -197,12 +197,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_TeamLightServant_Num",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
               },
-              "variableName": "_TeamLightServant_Num",
-              "livingTargets": true,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -223,7 +222,8 @@ const configAbility = {
                     "type": "Memosprite"
                   }
                 ]
-              }
+              },
+              "living": true
             },
             {
               "name": "IF",

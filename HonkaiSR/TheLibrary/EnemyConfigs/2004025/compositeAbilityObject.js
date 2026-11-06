@@ -5047,21 +5047,21 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ExtraDamageTimes",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{All Team Members}}"
           },
-          "variableName": "ExtraDamageTimes",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",

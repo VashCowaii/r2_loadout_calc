@@ -23,11 +23,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "SummonCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target List}}"
-          },
-          "variableName": "SummonCount"
+          }
         },
         {
           "name": "Remove Events/Bonuses",

@@ -37,11 +37,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "MDF_Count",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "variableName": "MDF_Count",
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -491,11 +491,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "MDF_Count",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "variableName": "MDF_Count",
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {

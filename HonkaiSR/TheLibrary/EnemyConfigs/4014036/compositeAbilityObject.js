@@ -9749,12 +9749,12 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_PlayerNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "_PlayerNum",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",

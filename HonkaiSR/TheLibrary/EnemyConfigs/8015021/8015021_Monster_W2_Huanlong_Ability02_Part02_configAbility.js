@@ -23,12 +23,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "Skill02Count",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "variableName": "Skill02Count",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "Find New Target",

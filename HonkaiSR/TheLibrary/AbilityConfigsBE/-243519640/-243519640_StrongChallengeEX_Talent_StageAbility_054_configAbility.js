@@ -96,12 +96,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_CharacterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "variableName": "_CharacterCount",
-              "livingTargets": true,
               "conditions": {
                 "name": "Has Element",
                 "target": {
@@ -112,7 +111,8 @@ const configAbility = {
                   "name": "Damage Type Source",
                   "sourceType": "Quantum"
                 }
-              }
+              },
+              "living": true
             },
             {
               "name": "Add Events/Bonuses",

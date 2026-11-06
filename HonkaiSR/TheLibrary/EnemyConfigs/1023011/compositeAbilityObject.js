@@ -465,12 +465,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "LightTeam_Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "variableName": "LightTeam_Count",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Looped Event",

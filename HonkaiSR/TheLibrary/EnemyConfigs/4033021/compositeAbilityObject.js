@@ -4580,21 +4580,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_CheckAvatarNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
           },
-          "variableName": "_CheckAvatarNum",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_CheckPickNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]].[[removeBattleEvents]]"
           },
-          "variableName": "_CheckPickNum",
-          "livingTargets": true,
           "conditions": {
             "name": "Has Modifier",
             "target": {
@@ -4602,7 +4601,8 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "modifier": "<a class=\"gModGreen\" id=\"-1375461160\">BattleEvent_W4_Claymore_01_SelectTarget</a>"
-          }
+          },
+          "living": true
         },
         {
           "name": "Find New Target",

@@ -45,13 +45,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill03_Hit_Count",
+          "scope": "ContextCaster",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "Skill03_Hit_Count",
-          "livingTargets": true,
-          "context": "ContextCaster"
+          "living": true
         },
         {
           "name": "Define Custom Variable",

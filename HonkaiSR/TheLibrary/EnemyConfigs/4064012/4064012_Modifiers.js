@@ -190,12 +190,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_CharacterNumber",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}.[[removeUnselectable]]"
               },
-              "variableName": "_CharacterNumber",
-              "livingTargets": true,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -204,7 +203,8 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-2017874645\">Enemy_W4_Serpent_01_IF_Summon_SpecialLimbo</a>[<span class=\"descriptionNumberColor\">Feigned Death</span>]",
                 "invertCondition": true
-              }
+              },
+              "living": true
             },
             {
               "name": "Remove Events/Bonuses",

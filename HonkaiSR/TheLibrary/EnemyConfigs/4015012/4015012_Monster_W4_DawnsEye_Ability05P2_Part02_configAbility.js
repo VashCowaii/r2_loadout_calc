@@ -149,12 +149,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "CurrentLightTeamCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "variableName": "CurrentLightTeamCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

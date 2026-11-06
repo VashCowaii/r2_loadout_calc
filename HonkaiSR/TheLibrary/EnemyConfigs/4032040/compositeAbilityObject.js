@@ -657,12 +657,11 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "DarkTeamCount",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "variableName": "DarkTeamCount",
-                    "livingTargets": true,
                     "conditions": {
                       "name": "Enemy ID",
                       "ID": 8001031,
@@ -673,16 +672,16 @@ const compositeAbilityObject = {
                       "characterName": "Borrowed Force",
                       "isBaseCompare": true,
                       "invertCondition": true
-                    }
+                    },
+                    "living": true
                   },
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "DarkTeamStealthCount",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "variableName": "DarkTeamStealthCount",
-                    "livingTargets": true,
                     "conditions": {
                       "name": "AND",
                       "conditionList": [
@@ -705,7 +704,8 @@ const compositeAbilityObject = {
                           "invertCondition": true
                         }
                       ]
-                    }
+                    },
+                    "living": true
                   },
                   {
                     "name": "Define Custom Variable",

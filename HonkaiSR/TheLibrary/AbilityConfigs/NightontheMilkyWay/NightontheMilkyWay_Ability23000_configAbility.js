@@ -84,12 +84,12 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "EnemyCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "variableName": "EnemyCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "IF",
@@ -151,12 +151,12 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "EnemyCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "variableName": "EnemyCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "IF",
@@ -226,12 +226,12 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "EnemyCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "variableName": "EnemyCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "IF",

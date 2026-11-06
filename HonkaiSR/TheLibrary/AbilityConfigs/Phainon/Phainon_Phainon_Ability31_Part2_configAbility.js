@@ -79,22 +79,22 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "ADF_TargetCount",
+      "scope": "ContextAbility",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}.[[living]]"
       },
-      "variableName": "ADF_TargetCount",
-      "livingTargets": true,
-      "context": "ContextAbility"
+      "living": true
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "ADF_BECount",
+      "scope": "ContextAbility",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Khaslana(Battle Event Cluster)}}"
-      },
-      "variableName": "ADF_BECount",
-      "context": "ContextAbility"
+      }
     },
     {
       "name": "ATK Scaling DMG",

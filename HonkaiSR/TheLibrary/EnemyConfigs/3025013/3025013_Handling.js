@@ -260,11 +260,11 @@ const configAbility = {
                   },
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "Skill05AssistNumber",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "variableName": "Skill05AssistNumber",
                     "conditions": {
                       "name": "OR",
                       "conditionList": [
@@ -400,11 +400,11 @@ const configAbility = {
                   },
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "Skill05AssistNumber",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "variableName": "Skill05AssistNumber",
                     "conditions": {
                       "name": "OR",
                       "conditionList": [

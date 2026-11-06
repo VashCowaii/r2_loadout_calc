@@ -93,12 +93,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "EnemyCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "variableName": "EnemyCount",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -160,12 +160,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "EnemyCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "variableName": "EnemyCount",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -235,12 +235,12 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "EnemyCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "variableName": "EnemyCount",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",

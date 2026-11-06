@@ -264,12 +264,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_KillerNum",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "variableName": "_KillerNum",
-              "livingTargets": true,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -282,7 +281,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 }
-              }
+              },
+              "living": true
             },
             {
               "name": "IF",

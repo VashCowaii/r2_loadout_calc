@@ -4479,11 +4479,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "_CorePartBreakCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "_CorePartBreakCount",
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -8776,21 +8776,21 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_CharacterCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Irontomb: Skill06 Aim Target}}"
           },
-          "variableName": "_CharacterCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_AvatarCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team(Exclude Memosprites)}}"
           },
-          "variableName": "_AvatarCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",
@@ -10760,12 +10760,12 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_LightTeamIgnoreServantCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team(Exclude Memosprites)}}"
                   },
-                  "variableName": "_LightTeamIgnoreServantCount",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",

@@ -3263,13 +3263,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "MDF_TargetCount",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "variableName": "MDF_TargetCount",
-                  "livingTargets": true,
-                  "context": "ContextModifier"
+                  "living": true
                 }
               ]
             },

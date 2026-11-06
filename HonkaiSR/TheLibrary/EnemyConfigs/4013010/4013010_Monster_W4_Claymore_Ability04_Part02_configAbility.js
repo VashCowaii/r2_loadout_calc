@@ -93,11 +93,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "SummonCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target List}}"
-          },
-          "variableName": "SummonCount"
+          }
         },
         {
           "name": "IF",
@@ -168,12 +168,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "TargetCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "variableName": "TargetCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "ATK Scaling DMG",

@@ -14,12 +14,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "SummonCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "variableName": "SummonCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "Remove Events/Bonuses",
@@ -31,12 +31,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "TargetCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
       },
-      "variableName": "TargetCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "ATK Scaling DMG",

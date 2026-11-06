@@ -127,11 +127,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_NotBreakCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{All Team Members(Exclude Self)}}"
       },
-      "variableName": "_NotBreakCount",
       "conditions": {
         "name": "Has Flag",
         "target": {

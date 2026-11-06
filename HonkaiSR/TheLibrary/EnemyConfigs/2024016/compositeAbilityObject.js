@@ -1517,12 +1517,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterNumber",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}.[[removeUnselectable]]"
                   },
-                  "variableName": "_CharacterNumber",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1543,7 +1542,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-897255081\">Enemy_W4_Xuanlu_IF_ServantLV3_02</a>[<span class=\"descriptionNumberColor\">Right-Hand Man</span>]"
                       }
                     ]
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6109,12 +6109,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill08_BonusCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "variableName": "Skill08_BonusCount",
-          "livingTargets": true,
           "conditions": {
             "name": "Compare: Monster Rank",
             "target": {
@@ -6123,7 +6122,8 @@ const compositeAbilityObject = {
             },
             "compareType": "=",
             "value2": 2
-          }
+          },
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",

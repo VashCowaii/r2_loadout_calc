@@ -5646,11 +5646,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill05AssistNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "variableName": "Skill05AssistNumber",
           "conditions": {
             "name": "OR",
             "conditionList": [
@@ -6420,11 +6420,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill05AssistNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "variableName": "Skill05AssistNumber",
           "conditions": {
             "name": "OR",
             "conditionList": [
@@ -7194,11 +7194,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill05AssistNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "variableName": "Skill05AssistNumber",
           "conditions": {
             "name": "OR",
             "conditionList": [
@@ -8653,12 +8653,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill02TargetNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "variableName": "Skill02TargetNumber",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Looped Event",
@@ -9154,11 +9154,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Define Custom Variable with Team Count",
-                        "target": {
+                        "variableName": "Skill05AssistNumber",
+                        "readTarget": {
                           "name": "Target Name",
                           "target": "{{All Team Members(Exclude Self)}}"
                         },
-                        "variableName": "Skill05AssistNumber",
                         "conditions": {
                           "name": "OR",
                           "conditionList": [

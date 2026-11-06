@@ -1551,12 +1551,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_MascotCounts",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Mascot}}"
           },
-          "variableName": "_MascotCounts",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Looped Event",
@@ -4185,12 +4185,12 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_MascotCounts",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{EVENT[RoT] Mascot}}"
               },
-              "variableName": "_MascotCounts",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "IF",

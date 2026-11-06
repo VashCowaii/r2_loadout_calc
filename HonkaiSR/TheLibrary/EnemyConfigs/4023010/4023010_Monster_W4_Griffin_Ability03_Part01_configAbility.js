@@ -39,12 +39,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_TargetCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Noontide Gryphon: Skill03 Target}}"
       },
-      "variableName": "_TargetCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

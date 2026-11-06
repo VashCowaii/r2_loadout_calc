@@ -140,11 +140,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "MDF_EnemyCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
-          },
-          "variableName": "MDF_EnemyCount"
+          }
         },
         {
           "name": "Define Custom Variable",
@@ -3129,12 +3129,11 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "ServantNumCurrent",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}"
                       },
-                      "variableName": "ServantNumCurrent",
-                      "livingTargets": true,
                       "conditions": {
                         "name": "Is Entity Type",
                         "target": {
@@ -3142,7 +3141,8 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "type": "Memosprite"
-                      }
+                      },
+                      "living": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -8998,13 +8998,13 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_TeamLight_Num",
+                  "scope": "ContextOwner",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "variableName": "_TeamLight_Num",
-                  "livingTargets": true,
-                  "context": "ContextOwner"
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -11074,12 +11074,12 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "LightTeamNumCurrent",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "variableName": "LightTeamNumCurrent",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -11435,12 +11435,12 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "LightTeamNumCurrent",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "variableName": "LightTeamNumCurrent",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "Remove Events/Bonuses",

@@ -1023,12 +1023,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "_CharacterCount",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -1036,7 +1035,8 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "Add Events/Bonuses",

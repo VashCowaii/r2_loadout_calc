@@ -724,12 +724,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "MDF_CharacterCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "variableName": "MDF_CharacterCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "Add Events/Bonuses",

@@ -2925,12 +2925,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "EnemyCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "EnemyCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",
@@ -12483,13 +12483,13 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "#CL_LightTeamNumber",
+              "scope": "ContextCaster",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Demiurge's Player Team Mirror}}"
               },
-              "variableName": "#CL_LightTeamNumber",
-              "livingTargets": true,
-              "context": "ContextCaster"
+              "living": true
             },
             {
               "name": "SWITCH",

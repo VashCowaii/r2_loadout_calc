@@ -3402,12 +3402,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "MDF_MonsterNum",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "MDF_MonsterNum",
-                  "livingTargets": true
+                  "living": true
                 }
               ]
             },
@@ -3427,12 +3427,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_MonsterNum",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "MDF_MonsterNum",
-                      "livingTargets": true
+                      "living": true
                     }
                   ]
                 }
@@ -3454,12 +3454,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_MonsterNum",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "MDF_MonsterNum",
-                      "livingTargets": true
+                      "living": true
                     }
                   ]
                 }

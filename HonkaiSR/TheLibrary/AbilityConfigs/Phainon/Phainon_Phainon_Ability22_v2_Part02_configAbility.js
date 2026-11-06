@@ -206,13 +206,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ADF_TargetCount",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}.[[living]]"
           },
-          "variableName": "ADF_TargetCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",
@@ -257,12 +257,12 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ADF_TargetCount",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "ADF_TargetCount",
-          "context": "ContextAbility"
+          }
         },
         {
           "name": "ATK Scaling DMG",

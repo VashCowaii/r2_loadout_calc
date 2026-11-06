@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "PowerOutTargetNumber",
+      "scope": "ContextAbility",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Aggressive Reading: PowerOut Target}}"
       },
-      "variableName": "PowerOutTargetNumber",
-      "livingTargets": true,
-      "context": "ContextAbility"
+      "living": true
     },
     {
       "name": "Find New Target",

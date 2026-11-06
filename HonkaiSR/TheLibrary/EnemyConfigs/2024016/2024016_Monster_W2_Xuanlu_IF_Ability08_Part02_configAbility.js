@@ -23,12 +23,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "Skill08_BonusCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "variableName": "Skill08_BonusCount",
-      "livingTargets": true,
       "conditions": {
         "name": "Compare: Monster Rank",
         "target": {
@@ -37,7 +36,8 @@ const configAbility = {
         },
         "compareType": "=",
         "value2": 2
-      }
+      },
+      "living": true
     },
     {
       "name": "ATK Scaling DMG",

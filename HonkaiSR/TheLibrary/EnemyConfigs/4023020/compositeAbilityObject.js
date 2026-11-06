@@ -1038,12 +1038,12 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Moonlit Pegasus: Skill04 Target}}"
           },
-          "variableName": "_TargetCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",
@@ -1104,12 +1104,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Moonlit Pegasus: Skill04 Target}}"
           },
-          "variableName": "_TargetCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",
@@ -1925,12 +1925,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Moonlit Pegasus: Skill03 Target}}"
           },
-          "variableName": "_TargetCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",

@@ -120,12 +120,12 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Team Count",
-                          "target": {
+                          "variableName": "MDF_CountBefore",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"
                           },
-                          "variableName": "MDF_CountBefore",
-                          "livingTargets": true
+                          "living": true
                         }
                       ]
                     }
@@ -240,12 +240,12 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Team Count",
-                          "target": {
+                          "variableName": "MDF_CountAfter",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"
                           },
-                          "variableName": "MDF_CountAfter",
-                          "livingTargets": true
+                          "living": true
                         }
                       ]
                     },
@@ -369,12 +369,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
                       },
-                      "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -400,7 +400,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter",
+                      "readTarget": {
                         "name": "Target Sequence",
                         "TargetList": [
                           {
@@ -420,8 +421,7 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3514,11 +3514,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target List}}"
-              },
-              "variableName": "SummonCount"
+              }
             },
             {
               "name": "IF",
@@ -3589,12 +3589,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "TargetCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "TargetCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",
@@ -3779,12 +3779,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "TargetCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "TargetCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Change Entity Turn-State",

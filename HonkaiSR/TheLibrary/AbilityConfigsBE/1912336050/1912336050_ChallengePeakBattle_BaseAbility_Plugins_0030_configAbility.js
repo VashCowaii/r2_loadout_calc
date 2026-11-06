@@ -183,12 +183,11 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "ServantNumCurrent",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "variableName": "ServantNumCurrent",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "Is Entity Type",
                     "target": {
@@ -196,7 +195,8 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     },
                     "type": "Memosprite"
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

@@ -795,12 +795,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "AliveNum",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "variableName": "AliveNum",
-              "livingTargets": true,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -810,7 +809,8 @@ const configAbility = {
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
-              }
+              },
+              "living": true
             },
             {
               "name": "IF",
@@ -1743,12 +1743,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "AliveNum",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "variableName": "AliveNum",
-              "livingTargets": true,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -1758,7 +1757,8 @@ const configAbility = {
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
-              }
+              },
+              "living": true
             },
             {
               "name": "IF",

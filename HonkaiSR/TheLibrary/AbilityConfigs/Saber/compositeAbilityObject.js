@@ -4984,12 +4984,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "S11_Alive_Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "variableName": "S11_Alive_Count",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",

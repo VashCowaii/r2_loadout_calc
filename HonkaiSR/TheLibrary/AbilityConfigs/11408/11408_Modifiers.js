@@ -1282,13 +1282,13 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "#CL_MDF_BECount",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Khaslana(Battle Event Cluster)}}"
                   },
-                  "variableName": "#CL_MDF_BECount",
-                  "livingTargets": true,
-                  "context": "ContextModifier"
+                  "living": true
                 },
                 {
                   "name": "Set Phainon Action Count",
@@ -1342,13 +1342,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "#CL_MDF_BECount",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Khaslana(Battle Event Cluster)}}"
               },
-              "variableName": "#CL_MDF_BECount",
-              "livingTargets": true,
-              "context": "ContextModifier"
+              "living": true
             },
             {
               "name": "Set Phainon Action Count",
@@ -1538,12 +1538,12 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_enemyCount",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "variableName": "_enemyCount",
-                  "context": "ContextModifier"
+                  }
                 },
                 {
                   "name": "IF",
@@ -1584,13 +1584,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "#CL_MDF_BECount",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Khaslana(Battle Event Cluster)}}"
                   },
-                  "variableName": "#CL_MDF_BECount",
-                  "livingTargets": true,
-                  "context": "ContextModifier"
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -1679,13 +1679,13 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "#CL_MDF_BECount",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Khaslana(Battle Event Cluster)}}"
                   },
-                  "variableName": "#CL_MDF_BECount",
-                  "livingTargets": true,
-                  "context": "ContextModifier"
+                  "living": true
                 },
                 {
                   "name": "Set Phainon Action Count",

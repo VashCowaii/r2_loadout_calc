@@ -149,12 +149,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "Elation_Character_Num",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Elation: All Entities}}"
       },
-      "variableName": "Elation_Character_Num",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

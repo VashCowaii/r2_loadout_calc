@@ -1672,12 +1672,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "QuantumEnhancedNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "QuantumEnhancedNumber",
-          "livingTargets": true,
           "conditions": {
             "name": "Has Modifier",
             "target": {
@@ -1685,16 +1684,16 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "modifier": "<a class=\"gModGreen\" id=\"-291765317\">Enemy_AML_Boss_IF_Enhance_Quantum</a>[<span class=\"descriptionNumberColor\">Quantum Infusion</span>]"
-          }
+          },
+          "living": true
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ImaginaryEnhancedNumber",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "ImaginaryEnhancedNumber",
-          "livingTargets": true,
           "conditions": {
             "name": "Has Modifier",
             "target": {
@@ -1702,7 +1701,8 @@ const compositeAbilityObject = {
               "target": "{{Parameter Target}}"
             },
             "modifier": "<a class=\"gModGreen\" id=\"-1433767937\">Enemy_AML_Boss_IF_Enhance_Imaginary</a>[<span class=\"descriptionNumberColor\">Imaginary Infusion</span>]"
-          }
+          },
+          "living": true
         },
         {
           "name": "Looped Event",

@@ -22,13 +22,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "EnemyCount",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "EnemyCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
+          "living": true
         },
         {
           "name": "IF",

@@ -4988,12 +4988,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "TDF_EnemyCountForPerformance",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "TDF_EnemyCountForPerformance",
-          "context": "ContextAbility"
+          }
         },
         {
           "name": "IF",
@@ -5007,24 +5007,24 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "TDF_EnemyCountForDamage",
+              "scope": "ContextAbility",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "variableName": "TDF_EnemyCountForDamage",
-              "livingTargets": true,
-              "context": "ContextAbility"
+              "living": true
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "TDF_EnemyCountForDamage",
+              "scope": "ContextAbility",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
-              },
-              "variableName": "TDF_EnemyCountForDamage",
-              "context": "ContextAbility"
+              }
             }
           ]
         },
@@ -6667,13 +6667,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ADF_TargetCount",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}.[[living]]"
           },
-          "variableName": "ADF_TargetCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
+          "living": true
         },
         {
           "name": "IF",
@@ -7764,12 +7764,12 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "TDF_EnemyCountForPerformance",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
-              },
-              "variableName": "TDF_EnemyCountForPerformance",
-              "context": "ContextTaskTemplate"
+              }
             },
             {
               "name": "IF",
@@ -7783,24 +7783,24 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "TDF_EnemyCountForDamage",
+                  "scope": "ContextTaskTemplate",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "variableName": "TDF_EnemyCountForDamage",
-                  "livingTargets": true,
-                  "context": "ContextTaskTemplate"
+                  "living": true
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "TDF_EnemyCountForDamage",
+                  "scope": "ContextTaskTemplate",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
-                  },
-                  "variableName": "TDF_EnemyCountForDamage",
-                  "context": "ContextTaskTemplate"
+                  }
                 }
               ]
             },

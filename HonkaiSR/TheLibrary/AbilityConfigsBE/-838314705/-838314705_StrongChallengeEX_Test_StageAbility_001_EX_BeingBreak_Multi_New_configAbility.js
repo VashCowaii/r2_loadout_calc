@@ -363,12 +363,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_CharacterCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "variableName": "_CharacterCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "Find New Target",

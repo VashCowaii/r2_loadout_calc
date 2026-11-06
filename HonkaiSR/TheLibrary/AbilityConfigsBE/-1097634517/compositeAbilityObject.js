@@ -11032,11 +11032,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "DarkTeamCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "DarkTeamCount",
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {

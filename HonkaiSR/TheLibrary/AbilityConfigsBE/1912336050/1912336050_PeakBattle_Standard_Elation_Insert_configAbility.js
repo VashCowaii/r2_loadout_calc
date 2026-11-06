@@ -22,11 +22,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "MDF_EnemyCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
-      },
-      "variableName": "MDF_EnemyCount"
+      }
     },
     {
       "name": "Define Custom Variable",

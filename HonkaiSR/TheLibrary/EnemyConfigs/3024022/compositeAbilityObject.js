@@ -2054,8 +2054,8 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable with SkillPoint Changes",
                   "variableName": "MDF_CurrentBPChange",
-                  "type": "RawDelta",
-                  "context": "ContextModifier"
+                  "scope": "ContextModifier",
+                  "valueType": "RawDelta"
                 },
                 {
                   "name": "IF",

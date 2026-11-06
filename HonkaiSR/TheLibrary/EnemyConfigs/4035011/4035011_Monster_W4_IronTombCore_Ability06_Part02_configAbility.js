@@ -42,21 +42,21 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_CharacterCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Irontomb: Skill06 Aim Target}}"
       },
-      "variableName": "_CharacterCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_AvatarCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team(Exclude Memosprites)}}"
       },
-      "variableName": "_AvatarCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

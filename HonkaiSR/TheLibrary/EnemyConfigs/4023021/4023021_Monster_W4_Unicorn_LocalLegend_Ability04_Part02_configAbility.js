@@ -7,12 +7,12 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_TargetCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Moonlit Pegasus: Skill04 Target}}"
       },
-      "variableName": "_TargetCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",
@@ -73,12 +73,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_TargetCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Moonlit Pegasus: Skill04 Target}}"
       },
-      "variableName": "_TargetCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

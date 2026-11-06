@@ -70,7 +70,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "EnemyCount",
+          "readTarget": {
             "name": "Target Sequence",
             "TargetList": [
               {
@@ -95,8 +96,7 @@ const configAbility = {
                 }
               }
             ]
-          },
-          "variableName": "EnemyCount"
+          }
         },
         {
           "name": "Define Custom Variable",

@@ -181,12 +181,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterNumber",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
                   },
-                  "variableName": "_CharacterNumber",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -194,7 +193,8 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"819113352\">Enemy_W5_Vtuber_IF_HintFlag_PartBonus</a>"
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

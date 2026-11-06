@@ -4437,11 +4437,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CorePartBreakCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "_CorePartBreakCount",
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {

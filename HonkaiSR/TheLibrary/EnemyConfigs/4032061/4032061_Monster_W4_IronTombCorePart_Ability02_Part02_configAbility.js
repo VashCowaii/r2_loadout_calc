@@ -23,12 +23,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "MDF_CharacterCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team(Exclude Memosprites)}}"
       },
-      "variableName": "MDF_CharacterCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

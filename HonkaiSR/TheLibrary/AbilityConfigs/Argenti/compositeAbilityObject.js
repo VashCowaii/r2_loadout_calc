@@ -122,12 +122,12 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "TargetNumber",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "TargetNumber",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "IF",

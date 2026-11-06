@@ -77,12 +77,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_S02_Char_Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
           },
-          "variableName": "_S02_Char_Count",
-          "livingTargets": true,
           "conditions": {
             "name": "AND",
             "conditionList": [
@@ -105,7 +104,8 @@ const configAbility = {
                 "invertCondition": true
               }
             ]
-          }
+          },
+          "living": true
         },
         {
           "name": "IF",

@@ -168,13 +168,13 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_TeamLight_Num",
+              "scope": "ContextOwner",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "variableName": "_TeamLight_Num",
-              "livingTargets": true,
-              "context": "ContextOwner"
+              "living": true
             },
             {
               "name": "IF",

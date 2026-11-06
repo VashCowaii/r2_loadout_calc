@@ -80,12 +80,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "LightTeamCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "variableName": "LightTeamCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "ATK Scaling DMG",

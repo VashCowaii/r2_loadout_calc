@@ -585,13 +585,13 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "#CL_LightTeamNumber",
+          "scope": "ContextCaster",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Demiurge's Player Team Mirror}}"
           },
-          "variableName": "#CL_LightTeamNumber",
-          "livingTargets": true,
-          "context": "ContextCaster"
+          "living": true
         },
         {
           "name": "SWITCH",

@@ -1155,7 +1155,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable with SkillPoint Changes",
                   "variableName": "_BPChange",
-                  "type": "RawDelta"
+                  "valueType": "RawDelta"
                 },
                 {
                   "name": "IF",

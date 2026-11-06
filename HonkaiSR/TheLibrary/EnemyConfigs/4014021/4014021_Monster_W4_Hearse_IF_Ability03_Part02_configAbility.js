@@ -139,12 +139,11 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "Skill03ExtraCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "variableName": "Skill03ExtraCount",
-      "livingTargets": true,
       "conditions": {
         "name": "AND",
         "conditionList": [
@@ -177,7 +176,8 @@ const configAbility = {
             "valueType": "Layer"
           }
         ]
-      }
+      },
+      "living": true
     },
     {
       "name": "Define Custom Variable",

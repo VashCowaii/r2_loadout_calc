@@ -279,12 +279,12 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "LightTeamNumCurrent",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "variableName": "LightTeamNumCurrent",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

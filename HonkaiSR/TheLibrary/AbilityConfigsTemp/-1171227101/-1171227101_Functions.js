@@ -1816,11 +1816,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "variableName": "_TargetNum",
           "conditions": {
             "name": "Is Part Of Team",
             "target": {
@@ -1847,11 +1847,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Targets Adjacent to Projectile's Target}}"
           },
-          "variableName": "_TargetNum",
           "conditions": {
             "name": "Is Part Of Team",
             "target": {
@@ -1889,11 +1889,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Targets Adjacent to Parameter Target}}"
           },
-          "variableName": "_TargetNum",
           "conditions": {
             "name": "Is Part Of Team",
             "target": {
@@ -1931,11 +1931,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
           },
-          "variableName": "_TargetNum",
           "conditions": {
             "name": "Is Part Of Team",
             "target": {

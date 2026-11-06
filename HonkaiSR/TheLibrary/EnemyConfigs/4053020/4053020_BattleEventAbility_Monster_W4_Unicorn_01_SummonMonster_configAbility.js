@@ -29,12 +29,12 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "DarkTeamCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "variableName": "DarkTeamCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Define Custom Variable",

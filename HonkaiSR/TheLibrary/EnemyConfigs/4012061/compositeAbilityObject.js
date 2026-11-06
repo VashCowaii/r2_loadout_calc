@@ -1142,12 +1142,12 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterNumber",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}.[[removeUnselectable]]"
                   },
-                  "variableName": "_CharacterNumber",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2338,12 +2338,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_SuperShieldPartCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "_SuperShieldPartCount",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2376,7 +2375,8 @@ const compositeAbilityObject = {
                         "valueType": "Layer"
                       }
                     ]
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "IF",

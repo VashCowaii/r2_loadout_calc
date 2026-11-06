@@ -1494,12 +1494,12 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "MDF_Elation_Character_Num",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Elation: All Entities}}"
                   },
-                  "variableName": "MDF_Elation_Character_Num",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -1675,12 +1675,12 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "Elation_Character_Num",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Elation: Elation Entities}}"
                   },
-                  "variableName": "Elation_Character_Num",
-                  "livingTargets": true
+                  "living": true
                 }
               ]
             },
@@ -2046,12 +2046,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_Elation_Character_Num",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Elation: All Entities}}"
                       },
-                      "variableName": "MDF_Elation_Character_Num",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -2411,12 +2411,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Elation_Character_Num",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Elation: All Entities}}"
           },
-          "variableName": "Elation_Character_Num",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",

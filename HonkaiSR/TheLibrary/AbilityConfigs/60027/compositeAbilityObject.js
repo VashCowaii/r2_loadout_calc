@@ -255,13 +255,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "ADF_TargetCount",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}.[[living]]"
           },
-          "variableName": "ADF_TargetCount",
-          "livingTargets": true,
-          "context": "ContextAbility"
+          "living": true
         },
         {
           "name": "Find New Target",

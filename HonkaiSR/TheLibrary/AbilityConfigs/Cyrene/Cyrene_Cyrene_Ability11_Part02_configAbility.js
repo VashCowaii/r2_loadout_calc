@@ -20,12 +20,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "EnemyCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "variableName": "EnemyCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "ATK Scaling DMG",

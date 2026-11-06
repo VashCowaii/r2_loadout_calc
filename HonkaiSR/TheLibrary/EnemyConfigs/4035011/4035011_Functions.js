@@ -88,12 +88,12 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_LightTeamIgnoreServantCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "variableName": "_LightTeamIgnoreServantCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "IF",

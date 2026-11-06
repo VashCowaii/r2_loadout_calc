@@ -84,11 +84,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_TargetNum",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team All}}"
-      },
-      "variableName": "_TargetNum"
+      }
     },
     {
       "name": "Looped Event",

@@ -719,11 +719,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_CharacterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}} + {{Player Team All}}"
               },
-              "variableName": "_CharacterCount",
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -803,12 +803,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "MDF_CharacterCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "MDF_CharacterCount",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -936,11 +936,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} + {{Player Team All}}"
                   },
-                  "variableName": "_CharacterCount",
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1007,11 +1007,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} + {{Player Team All}}"
                   },
-                  "variableName": "_CharacterCount",
                   "conditions": {
                     "name": "OR",
                     "conditionList": [

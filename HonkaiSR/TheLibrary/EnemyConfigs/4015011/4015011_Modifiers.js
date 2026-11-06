@@ -3499,11 +3499,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "MDF_Count",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "MDF_Count",
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {

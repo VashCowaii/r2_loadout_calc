@@ -2469,11 +2469,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "LightTeamCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{All Unselectable Targets}}"
                   },
-                  "variableName": "LightTeamCount",
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -3057,11 +3057,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "LightTeamCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{All Unselectable Targets}}"
               },
-              "variableName": "LightTeamCount",
               "conditions": {
                 "name": "Has Modifier",
                 "target": {

@@ -357,12 +357,12 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_TeamNumber",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "variableName": "_TeamNumber",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Remove Events/Bonuses",

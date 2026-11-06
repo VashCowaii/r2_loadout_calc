@@ -656,12 +656,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_CharacterCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Manta: Target 02}}"
                       },
-                      "variableName": "MDF_CharacterCount",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "IF",
@@ -716,12 +716,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_CharacterCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Manta: Target 02}}"
                       },
-                      "variableName": "MDF_CharacterCount",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "IF",
@@ -1029,12 +1029,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_CharacterCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Manta: Target 02}}"
                       },
-                      "variableName": "MDF_CharacterCount",
-                      "livingTargets": true
+                      "living": true
                     },
                     {
                       "name": "IF",

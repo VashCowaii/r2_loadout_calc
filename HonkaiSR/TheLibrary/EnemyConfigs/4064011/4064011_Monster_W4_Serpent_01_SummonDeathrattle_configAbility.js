@@ -33,11 +33,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Summon_Deathrattle",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target List}}"
-          },
-          "variableName": "Summon_Deathrattle"
+          }
         },
         {
           "name": "Deal Toughness DMG",

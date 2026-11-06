@@ -306,12 +306,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_AliveFlower_Count",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "variableName": "_AliveFlower_Count",
-      "livingTargets": true,
       "conditions": {
         "name": "AND",
         "conditionList": [
@@ -351,7 +350,8 @@ const configAbility = {
             "invertCondition": true
           }
         ]
-      }
+      },
+      "living": true
     },
     {
       "name": "Add Events/Bonuses",
@@ -805,8 +805,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1034588590\">Monster_W2_Huanlong_IF_Ability14_SetDamage</a>",
       "latentQueue": [
-        "BreakFlag",
-        "_AliveFlower_Count"
+        "BreakFlag"
       ],
       "execute": [
         {

@@ -180,12 +180,12 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TeamCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "variableName": "_TeamCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Define Custom Variable",

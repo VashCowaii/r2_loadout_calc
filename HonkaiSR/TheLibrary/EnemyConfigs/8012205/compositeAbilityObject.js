@@ -2741,12 +2741,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_AliveFlower_Count",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "_AliveFlower_Count",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -2754,7 +2753,8 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-69472783\">Monster_W2_HuanlongPart_IF_Active</a>"
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "IF",

@@ -2253,12 +2253,12 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "MDF_CharCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "variableName": "MDF_CharCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -2629,12 +2629,12 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "_TeamNumber",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
               },
-              "variableName": "_TeamNumber",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Remove Events/Bonuses",

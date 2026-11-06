@@ -1661,11 +1661,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": {
+                      "variableName": "MDF_Count",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "variableName": "MDF_Count",
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -7407,12 +7407,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "CurrentLightTeamCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
           },
-          "variableName": "CurrentLightTeamCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",
@@ -7812,12 +7812,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "CurrentLightTeamCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "variableName": "CurrentLightTeamCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "ATK Scaling DMG",

@@ -33,12 +33,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "_CharacterCount",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Player Team(Exclude Memosprites)}}.[[removeCharChange]]"
       },
-      "variableName": "_CharacterCount",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

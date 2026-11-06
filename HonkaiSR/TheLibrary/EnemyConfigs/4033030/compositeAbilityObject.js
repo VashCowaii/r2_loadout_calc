@@ -911,12 +911,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "PosCount",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
           },
-          "variableName": "PosCount",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",

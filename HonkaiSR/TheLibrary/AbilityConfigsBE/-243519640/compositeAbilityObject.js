@@ -3029,12 +3029,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_TeamLightServant_Num",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
                   },
-                  "variableName": "_TeamLightServant_Num",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -3055,7 +3054,8 @@ const compositeAbilityObject = {
                         "type": "Memosprite"
                       }
                     ]
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "IF",
@@ -7324,12 +7324,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_CharacterCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]]"
                   },
-                  "variableName": "_CharacterCount",
-                  "livingTargets": true,
                   "conditions": {
                     "name": "Has Element",
                     "target": {
@@ -7340,7 +7339,8 @@ const compositeAbilityObject = {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
                     }
-                  }
+                  },
+                  "living": true
                 },
                 {
                   "name": "Add Events/Bonuses",

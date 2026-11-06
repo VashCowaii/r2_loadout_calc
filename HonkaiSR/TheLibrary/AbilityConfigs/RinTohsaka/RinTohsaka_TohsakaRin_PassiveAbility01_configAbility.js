@@ -484,7 +484,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable with SkillPoint Changes",
               "variableName": "_BPAddValue",
-              "type": "UnclampedDelta"
+              "valueType": "UnclampedDelta"
             },
             {
               "name": "IF",

@@ -870,21 +870,20 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "DarkTeamCount",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "variableName": "DarkTeamCount",
-                    "livingTargets": true
+                    "living": true
                   },
                   {
                     "name": "Define Custom Variable with Team Count",
-                    "target": {
+                    "variableName": "DarkTeamStealthCount",
+                    "readTarget": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "variableName": "DarkTeamStealthCount",
-                    "livingTargets": true,
                     "conditions": {
                       "name": "Has Flag",
                       "target": {
@@ -892,7 +891,8 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "flagName": "Stealth"
-                    }
+                    },
+                    "living": true
                   },
                   {
                     "name": "Define Custom Variable",

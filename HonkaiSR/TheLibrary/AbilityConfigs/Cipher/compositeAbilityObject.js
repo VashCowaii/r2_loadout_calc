@@ -4736,12 +4736,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "S03_Alive_Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{ST and Blast}}"
           },
-          "variableName": "S03_Alive_Count",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "IF",
@@ -4800,11 +4800,11 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "S03_Alive_Count",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{ST and Blast}}"
-              },
-              "variableName": "S03_Alive_Count"
+              }
             },
             {
               "name": "ATK Scaling DMG",

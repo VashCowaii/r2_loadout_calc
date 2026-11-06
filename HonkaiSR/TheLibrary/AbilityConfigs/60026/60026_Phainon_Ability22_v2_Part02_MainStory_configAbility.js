@@ -93,12 +93,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "ADF_TargetCount",
+      "scope": "ContextAbility",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
-      },
-      "variableName": "ADF_TargetCount",
-      "context": "ContextAbility"
+      }
     },
     {
       "name": "Find New Target",

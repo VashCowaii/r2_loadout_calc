@@ -190,7 +190,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable with SkillPoint Changes",
               "variableName": "MDF_BPValue",
-              "type": "UnclampedDelta"
+              "valueType": "UnclampedDelta"
             },
             {
               "name": "IF",

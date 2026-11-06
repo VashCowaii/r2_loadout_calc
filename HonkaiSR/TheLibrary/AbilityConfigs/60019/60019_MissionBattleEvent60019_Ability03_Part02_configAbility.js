@@ -26,11 +26,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "Train_TargetNumber",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
-      },
-      "variableName": "Train_TargetNumber"
+      }
     },
     {
       "name": "ATK Scaling DMG",

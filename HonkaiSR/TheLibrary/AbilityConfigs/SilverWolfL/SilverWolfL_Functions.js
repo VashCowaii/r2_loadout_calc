@@ -232,12 +232,12 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "TDF_EnemyCountForPerformance",
+          "scope": "ContextTaskTemplate",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Hostile Entities(AOE)}}"
-          },
-          "variableName": "TDF_EnemyCountForPerformance",
-          "context": "ContextTaskTemplate"
+          }
         },
         {
           "name": "IF",
@@ -251,24 +251,24 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "TDF_EnemyCountForDamage",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
               },
-              "variableName": "TDF_EnemyCountForDamage",
-              "livingTargets": true,
-              "context": "ContextTaskTemplate"
+              "living": true
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "TDF_EnemyCountForDamage",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
-              },
-              "variableName": "TDF_EnemyCountForDamage",
-              "context": "ContextTaskTemplate"
+              }
             }
           ]
         },

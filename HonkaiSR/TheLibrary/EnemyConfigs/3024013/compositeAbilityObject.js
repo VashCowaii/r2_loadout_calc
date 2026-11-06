@@ -426,12 +426,12 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": {
+                  "variableName": "_TeamNumber",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "variableName": "_TeamNumber",
-                  "livingTargets": true
+                  "living": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -5523,11 +5523,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_TargetNum",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
-          },
-          "variableName": "_TargetNum"
+          }
         },
         {
           "name": "Looped Event",

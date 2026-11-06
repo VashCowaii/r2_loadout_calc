@@ -105,12 +105,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "W2_Yanqing_00_Skill02_SummonNumber",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "variableName": "W2_Yanqing_00_Skill02_SummonNumber",
-      "livingTargets": true
+      "living": true
     },
     {
       "name": "IF",

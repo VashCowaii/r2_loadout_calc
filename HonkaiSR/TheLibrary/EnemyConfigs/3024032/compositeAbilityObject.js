@@ -2682,12 +2682,12 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonMonsterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "variableName": "SummonMonsterCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Looped Event",
@@ -3346,12 +3346,12 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonMonsterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "variableName": "SummonMonsterCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Looped Event",
@@ -3659,12 +3659,12 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonMonsterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "variableName": "SummonMonsterCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Looped Event",
@@ -3841,12 +3841,12 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonMonsterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "variableName": "SummonMonsterCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Looped Event",
@@ -3996,12 +3996,12 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": {
+              "variableName": "SummonMonsterCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "variableName": "SummonMonsterCount",
-              "livingTargets": true
+              "living": true
             },
             {
               "name": "Looped Event",

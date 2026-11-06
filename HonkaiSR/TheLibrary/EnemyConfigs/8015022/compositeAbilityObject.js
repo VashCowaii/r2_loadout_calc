@@ -5581,12 +5581,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "_AliveFlower_Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "variableName": "_AliveFlower_Count",
-          "livingTargets": true,
           "conditions": {
             "name": "AND",
             "conditionList": [
@@ -5626,7 +5625,8 @@ const compositeAbilityObject = {
                 "invertCondition": true
               }
             ]
-          }
+          },
+          "living": true
         },
         {
           "name": "Add Events/Bonuses",
@@ -6080,8 +6080,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1034588590\">Monster_W2_Huanlong_IF_Ability14_SetDamage</a>",
           "latentQueue": [
-            "BreakFlag",
-            "_AliveFlower_Count"
+            "BreakFlag"
           ],
           "execute": [
             {
@@ -10763,12 +10762,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": {
+          "variableName": "Skill02Count",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "variableName": "Skill02Count",
-          "livingTargets": true
+          "living": true
         },
         {
           "name": "Find New Target",

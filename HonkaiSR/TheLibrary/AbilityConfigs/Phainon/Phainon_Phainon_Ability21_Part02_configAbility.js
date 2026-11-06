@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Team Count",
-      "target": {
+      "variableName": "ADF_EnemyCount",
+      "scope": "ContextAbility",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "variableName": "ADF_EnemyCount",
-      "livingTargets": true,
-      "context": "ContextAbility"
+      "living": true
     },
     {
       "name": "Adjust Variable Value",
