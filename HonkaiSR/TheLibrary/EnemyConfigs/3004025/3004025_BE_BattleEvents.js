@@ -10,10 +10,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "beID": 20010,
+      "beID": 20025,
       "team": "Enemy Team",
       "eventType": "Assist",
-      "icon": "Monster_3004020.png",
+      "icon": "Monster_3004023.png",
       "abilityList": [
         "Monster_W3_Theater_BattleEvent"
       ],
@@ -27,10 +27,10 @@ const configAbility = {
     },
     {
       "name": "Battle Event Construction",
-      "beID": 20025,
+      "beID": 20010,
       "team": "Enemy Team",
       "eventType": "Assist",
-      "icon": "Monster_3004023.png",
+      "icon": "Monster_3004020.png",
       "abilityList": [
         "Monster_W3_Theater_BattleEvent"
       ],

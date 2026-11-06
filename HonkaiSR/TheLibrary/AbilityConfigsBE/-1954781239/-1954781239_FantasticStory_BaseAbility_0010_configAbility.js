@@ -935,11 +935,11 @@ const configAbility = {
                           {
                             "name": "Random Chance",
                             "chance": {
-                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0018) || RETURN",
-                              "displayLines": "DV_FantasticStory_PlusAbility_0018",
+                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0014) || RETURN",
+                              "displayLines": "DV_FantasticStory_PlusAbility_0014",
                               "constants": [],
                               "variables": [
-                                "DV_FantasticStory_PlusAbility_0018"
+                                "DV_FantasticStory_PlusAbility_0014"
                               ]
                             }
                           }
@@ -1024,11 +1024,11 @@ const configAbility = {
                               "conditions": {
                                 "name": "Random Chance",
                                 "chance": {
-                                  "operator": "Variables[0] (DV_BeingHitCount) || RETURN",
-                                  "displayLines": "DV_BeingHitCount",
+                                  "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0018) || RETURN",
+                                  "displayLines": "DV_FantasticStory_PlusAbility_0018",
                                   "constants": [],
                                   "variables": [
-                                    "DV_BeingHitCount"
+                                    "DV_FantasticStory_PlusAbility_0018"
                                   ]
                                 }
                               },

@@ -603,8 +603,7 @@ const configAbility = {
         "_PhaseCheck",
         "_Trigger1",
         "_Trigger2",
-        "AIFlag",
-        "_WorldLevel"
+        "AIFlag"
       ],
       "execute": [
         {

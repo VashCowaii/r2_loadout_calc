@@ -632,9 +632,6 @@ const compositeAbilityObject = {
             "DisableAction",
             "MuteSpeed"
           ],
-          "latentQueue": [
-            "Gepard_LimboFlag"
-          ],
           "description": "Enters Downed state, waiting for recovery.",
           "type": "Other",
           "effectName": "Downed",

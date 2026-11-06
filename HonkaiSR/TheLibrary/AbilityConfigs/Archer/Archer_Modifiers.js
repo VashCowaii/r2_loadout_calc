@@ -1215,8 +1215,7 @@ const configAbility = {
       "latentQueue": [
         "MDF_InBonus",
         "MDF_Flag_HaveOtherAction",
-        "MDF_AlreadyInBonusAction",
-        "MDF_IsWindfurySkill"
+        "MDF_AlreadyInBonusAction"
       ],
       "execute": [
         {

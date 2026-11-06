@@ -245,9 +245,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-393984788\">Enemy_W3_Death_FightFest_LockHP</a>",
-      "latentQueue": [
-        "Bullet_Flag"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

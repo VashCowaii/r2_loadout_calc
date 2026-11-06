@@ -6000,7 +6000,7 @@ const compositeAbilityObject = {
                     "value2": 1,
                     "contextScope": "TargetEntity"
                   },
-                  "runIfPass": [
+                  "passed": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "W3_Sunday_00_Skill09_Round",
@@ -10960,7 +10960,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Battle Event Construction",
-          "beID": 60040,
+          "beID": 60039,
           "team": "Player Team",
           "eventType": "Assist",
           "icon": "BattleEvent_60012.png",
@@ -10983,7 +10983,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Battle Event Construction",
-          "beID": 60039,
+          "beID": 60040,
           "team": "Player Team",
           "eventType": "Assist",
           "icon": "BattleEvent_60012.png",

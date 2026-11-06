@@ -33,7 +33,7 @@ const configAbility = {
     },
     {
       "name": "Battle Event Construction",
-      "beID": 60040,
+      "beID": 60039,
       "team": "Player Team",
       "eventType": "Assist",
       "icon": "BattleEvent_60012.png",
@@ -56,7 +56,7 @@ const configAbility = {
     },
     {
       "name": "Battle Event Construction",
-      "beID": 60039,
+      "beID": 60040,
       "team": "Player Team",
       "eventType": "Assist",
       "icon": "BattleEvent_60012.png",

@@ -289,8 +289,7 @@ const configAbility = {
         "DeathPart_AppearSkill_Flag",
         "Effect_Flag",
         "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
+        "Bullet_Flag"
       ],
       "execute": [
         {
@@ -333,8 +332,7 @@ const configAbility = {
         "DeathPart_AppearSkill_Flag",
         "Effect_Flag",
         "UsedSkill08_Flag",
-        "Bullet_Flag",
-        "AIFlag"
+        "Bullet_Flag"
       ],
       "execute": [
         {

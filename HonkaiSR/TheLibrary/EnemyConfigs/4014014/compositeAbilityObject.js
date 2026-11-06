@@ -2548,9 +2548,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-762548766\">Monster_W4_Nikadory_ShieldReduce</a>",
-          "latentQueue": [
-            "MDF_ReduceLayer"
-          ],
           "execute": [
             {
               "eventTrigger": "Ability Use [Anyone]: End",

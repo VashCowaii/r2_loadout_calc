@@ -2031,7 +2031,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2073,7 +2073,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2115,7 +2115,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2157,7 +2157,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2199,7 +2199,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2241,7 +2241,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [
@@ -2283,7 +2283,7 @@ const configAbility = {
                           }
                         ]
                       },
-                      "runIfPass": [
+                      "passed": [
                         {
                           "name": "Adjust Target Stats",
                           "modifiedValuesArray": [

@@ -2228,8 +2228,7 @@ const compositeAbilityObject = {
             "DeathPart_AppearSkill_Flag",
             "Effect_Flag",
             "UsedSkill08_Flag",
-            "Bullet_Flag",
-            "AIFlag"
+            "Bullet_Flag"
           ],
           "execute": [
             {
@@ -2272,8 +2271,7 @@ const compositeAbilityObject = {
             "DeathPart_AppearSkill_Flag",
             "Effect_Flag",
             "UsedSkill08_Flag",
-            "Bullet_Flag",
-            "AIFlag"
+            "Bullet_Flag"
           ],
           "execute": [
             {
@@ -4058,9 +4056,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-393984788\">Enemy_W3_Death_FightFest_LockHP</a>",
-          "latentQueue": [
-            "Bullet_Flag"
-          ],
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",

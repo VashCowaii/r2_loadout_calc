@@ -4247,7 +4247,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "beID": 20030,
+          "beID": 20038,
           "team": "Neutral Team",
           "eventType": "Entity Selection",
           "icon": "BattleEvent_W4_Serpent_MainTarget.png",
@@ -4261,7 +4261,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Battle Event Construction",
-          "beID": 20038,
+          "beID": 20030,
           "team": "Neutral Team",
           "eventType": "Entity Selection",
           "icon": "BattleEvent_W4_Serpent_MainTarget.png",

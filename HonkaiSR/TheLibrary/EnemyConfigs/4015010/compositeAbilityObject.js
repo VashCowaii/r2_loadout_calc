@@ -12097,36 +12097,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Battle Event Construction",
-          "beID": 60037,
-          "team": "Player Team",
-          "eventType": "Assist",
-          "icon": "BattleEvent_60024.png",
-          "abilityList": [
-            "BattleEventAbility_620101_Camera"
-          ],
-          "statOverrides": [
-            {
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
-              "value": 90
-            }
-          ],
-          "spd": 120,
-          "hardLevel": true,
-          "eliteGroup": true,
-          "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets, adds \"Flame-Chase\" to all ally targets and restores HP.",
-          "params": [
-            1.95,
-            0,
-            2,
-            0,
-            0,
-            1.95,
-            0,
-            0.03
-          ]
-        },
-        {
-          "name": "Battle Event Construction",
           "beID": 60029,
           "team": "Player Team",
           "eventType": "Assist",
@@ -12154,6 +12124,36 @@ const compositeAbilityObject = {
             0.5,
             0.4,
             10
+          ]
+        },
+        {
+          "name": "Battle Event Construction",
+          "beID": 60037,
+          "team": "Player Team",
+          "eventType": "Assist",
+          "icon": "BattleEvent_60024.png",
+          "abilityList": [
+            "BattleEventAbility_620101_Camera"
+          ],
+          "statOverrides": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 90
+            }
+          ],
+          "spd": 120,
+          "hardLevel": true,
+          "eliteGroup": true,
+          "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets, adds \"Flame-Chase\" to all ally targets and restores HP.",
+          "params": [
+            1.95,
+            0,
+            2,
+            0,
+            0,
+            1.95,
+            0,
+            0.03
           ]
         }
       ],

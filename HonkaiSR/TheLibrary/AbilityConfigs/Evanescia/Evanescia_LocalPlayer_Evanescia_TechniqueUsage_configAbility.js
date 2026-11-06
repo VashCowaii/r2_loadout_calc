@@ -102,13 +102,13 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "#CL_DeltaTime",
           "value": {
-            "operator": "Variables[0] (#CL_Distance) || Variables[1] (MAX) || Variables[2] (EnemyCount) || Constants[0] (3) || PARAM_2 || FUNCTION || DIV || RETURN",
-            "displayLines": "(#CL_Distance / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(EnemyCount, 3))",
+            "operator": "Variables[0] (#CL_DeltaTime) || Variables[1] (MAX) || Variables[2] (EnemyCount) || Constants[0] (3) || PARAM_2 || FUNCTION || DIV || RETURN",
+            "displayLines": "(#CL_DeltaTime / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(EnemyCount, 3))",
             "constants": [
               3
             ],
             "variables": [
-              "#CL_Distance",
+              "#CL_DeltaTime",
               "MAX",
               "EnemyCount"
             ]
