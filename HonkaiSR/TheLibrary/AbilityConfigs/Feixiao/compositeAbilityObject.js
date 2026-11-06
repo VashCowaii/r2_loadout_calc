@@ -2854,27 +2854,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Caster}}.[[getTeamMembers]].[[addAttachedSummon]] - {{Caster}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target List}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -3103,15 +3101,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -3196,15 +3193,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of Team",

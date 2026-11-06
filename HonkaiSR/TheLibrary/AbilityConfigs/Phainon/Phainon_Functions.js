@@ -24,15 +24,14 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": {
+            "target1": {
               "name": "Target Name",
               "target": "{{Function's Target List}}"
             },
-            "target": {
+            "target2": {
               "name": "Target Name",
               "target": "{{Caster}}.[[getTeamMembers]] - {{Caster}}"
-            },
-            "mustBeAlive2": true
+            }
           },
           "passed": [
             {

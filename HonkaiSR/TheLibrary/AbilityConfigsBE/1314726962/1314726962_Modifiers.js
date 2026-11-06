@@ -721,15 +721,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -753,15 +752,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -876,15 +874,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {

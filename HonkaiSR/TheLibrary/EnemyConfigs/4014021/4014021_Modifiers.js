@@ -639,15 +639,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Nikador: Self}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -905,15 +904,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Nikador: Self}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -945,15 +943,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Nikador: Self}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -1499,15 +1496,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "OR",
@@ -1618,15 +1614,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Nikador - The Giver: Self}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Has Flag",
@@ -3030,15 +3025,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -3120,30 +3114,28 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Player Team(Exclude Memosprites)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -3171,15 +3163,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{All Memosprites}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -5642,15 +5633,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {

@@ -72,15 +72,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Skill Type",

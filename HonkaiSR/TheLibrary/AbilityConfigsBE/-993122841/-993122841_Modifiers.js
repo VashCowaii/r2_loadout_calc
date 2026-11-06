@@ -418,15 +418,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Skill Type",
@@ -733,15 +732,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -765,15 +763,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -891,27 +888,25 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target 2}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -988,15 +983,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -1020,15 +1014,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1146,27 +1139,25 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target 2}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
@@ -1235,15 +1226,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Skill Type",
@@ -1393,15 +1383,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Attack Type",
@@ -1445,15 +1434,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1888,15 +1876,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Skill Type",

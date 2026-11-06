@@ -73,15 +73,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members}}.[[addBattleEvents]]"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}.[[getSourceCreator]]"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -2027,27 +2026,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target List}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -2104,27 +2101,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target List}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },

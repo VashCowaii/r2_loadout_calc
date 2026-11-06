@@ -737,15 +737,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Minions of Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Parameter String",
@@ -1025,15 +1024,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Player Team All(with Unselectable)V2}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1185,15 +1183,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -1259,15 +1256,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target 2}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Player Team All(with Unselectable)V2}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",

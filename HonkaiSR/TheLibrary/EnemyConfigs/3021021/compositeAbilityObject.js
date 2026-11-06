@@ -226,15 +226,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target's Source Owner}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Currency Wars Full OffFieldList}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {

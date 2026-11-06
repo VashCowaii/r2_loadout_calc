@@ -51,15 +51,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -113,15 +112,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -184,15 +182,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -459,15 +456,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "OR",
@@ -5799,15 +5795,14 @@ const configAbility = {
                           "name": "NOT",
                           "condition": {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         }
                       }

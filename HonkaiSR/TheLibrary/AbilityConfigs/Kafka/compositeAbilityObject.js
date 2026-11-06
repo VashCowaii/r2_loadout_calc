@@ -84,15 +84,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target's Source Owner}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -210,27 +209,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Caster}}.[[getTeamMembers]].[[addAttachedSummon]] - {{Caster}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target List}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Hostile Entities(AOE, with Unselectables)}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -1868,15 +1865,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeBattleEvents]]"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "OR",
@@ -2068,15 +2064,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of Team",
@@ -2251,15 +2246,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       "passed": [
                         {
@@ -2371,15 +2365,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
                         },
-                        "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {
@@ -3153,15 +3146,14 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {

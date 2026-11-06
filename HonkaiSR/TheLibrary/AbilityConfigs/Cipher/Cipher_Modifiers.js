@@ -1506,11 +1506,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Sequence",
                       "TargetList": [
                         {
@@ -1529,8 +1529,7 @@ const configAbility = {
                           }
                         }
                       ]
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Trace Activated",
@@ -1557,11 +1556,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Sequence",
                       "TargetList": [
                         {
@@ -1580,8 +1579,7 @@ const configAbility = {
                           }
                         }
                       ]
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Trace Activated",

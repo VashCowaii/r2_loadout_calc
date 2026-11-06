@@ -4081,15 +4081,14 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": {
+            "target1": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "target": {
+            "target2": {
               "name": "Target Name",
               "target": "{{Far Left Player Entity}}"
-            },
-            "mustBeAlive2": true
+            }
           }
         },
         "Ability Start",
@@ -5283,15 +5282,14 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": {
+            "target1": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "target": {
+            "target2": {
               "name": "Target Name",
               "target": "{{Far Left Player Entity}}"
-            },
-            "mustBeAlive2": true
+            }
           }
         },
         "Ability Start",

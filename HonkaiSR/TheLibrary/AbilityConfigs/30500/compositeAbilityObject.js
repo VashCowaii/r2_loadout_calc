@@ -431,15 +431,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Skill Type",
@@ -750,15 +749,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -782,15 +780,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -910,27 +907,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target 2}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -1007,15 +1002,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -1039,15 +1033,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -1167,27 +1160,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target 2}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -1256,15 +1247,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Skill Type",
@@ -1416,15 +1406,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Attack Type",
@@ -1468,15 +1457,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -1913,15 +1901,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Skill Type",

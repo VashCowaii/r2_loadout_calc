@@ -225,15 +225,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Caster}} + {{Caster's Memosprite}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -291,15 +290,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Caster}} + {{Caster's Memosprite}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {

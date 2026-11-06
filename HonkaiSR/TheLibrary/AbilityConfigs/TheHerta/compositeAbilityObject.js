@@ -976,15 +976,14 @@ const compositeAbilityObject = {
                                   },
                                   {
                                     "name": "Is Part Of",
-                                    "of": {
+                                    "target1": {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "target": {
+                                    "target2": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "mustBeAlive2": true,
                                     "invertCondition": true
                                   }
                                 ]
@@ -1036,15 +1035,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -1124,15 +1122,14 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Is Part Of",
-                                          "of": {
+                                          "target1": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "target": {
+                                          "target2": {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "mustBeAlive2": true,
                                           "invertCondition": true
                                         }
                                       ]
@@ -1216,15 +1213,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -1375,15 +1371,14 @@ const compositeAbilityObject = {
                                   },
                                   {
                                     "name": "Is Part Of",
-                                    "of": {
+                                    "target1": {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "target": {
+                                    "target2": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "mustBeAlive2": true,
                                     "invertCondition": true
                                   }
                                 ]
@@ -1435,15 +1430,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -1523,15 +1517,14 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Is Part Of",
-                                          "of": {
+                                          "target1": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "target": {
+                                          "target2": {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "mustBeAlive2": true,
                                           "invertCondition": true
                                         }
                                       ]
@@ -1615,15 +1608,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -2212,15 +2204,14 @@ const compositeAbilityObject = {
                                   },
                                   {
                                     "name": "Is Part Of",
-                                    "of": {
+                                    "target1": {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "target": {
+                                    "target2": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "mustBeAlive2": true,
                                     "invertCondition": true
                                   }
                                 ]
@@ -2272,15 +2263,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -2360,15 +2350,14 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Is Part Of",
-                                          "of": {
+                                          "target1": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "target": {
+                                          "target2": {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "mustBeAlive2": true,
                                           "invertCondition": true
                                         }
                                       ]
@@ -2452,15 +2441,14 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "mustBeAlive2": true,
                                       "invertCondition": true
                                     }
                                   ]
@@ -4284,15 +4272,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       "passed": [
                         {
@@ -5530,15 +5517,14 @@ const compositeAbilityObject = {
                               "conditionList": [
                                 {
                                   "name": "Is Part Of",
-                                  "of": {
+                                  "target1": {
                                     "name": "Target Name",
                                     "target": "{{Player's Aim Primary-Target}}"
                                   },
-                                  "target": {
+                                  "target2": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "mustBeAlive2": true,
                                   "invertCondition": true
                                 },
                                 {
@@ -5546,7 +5532,7 @@ const compositeAbilityObject = {
                                   "conditionList": [
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Sequence",
                                         "TargetList": [
                                           {
@@ -5556,15 +5542,14 @@ const compositeAbilityObject = {
                                           "Adjust Target by Adjacent Targets"
                                         ]
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "mustBeAlive2": true
+                                      }
                                     },
                                     {
                                       "name": "Is Part Of",
-                                      "of": {
+                                      "target1": {
                                         "name": "Target Sequence",
                                         "TargetList": [
                                           {
@@ -5574,7 +5559,7 @@ const compositeAbilityObject = {
                                           "Adjust Target by Adjacent Targets"
                                         ]
                                       },
-                                      "target": {
+                                      "target2": {
                                         "name": "Target Sequence",
                                         "TargetList": [
                                           {
@@ -5583,8 +5568,7 @@ const compositeAbilityObject = {
                                           },
                                           "Adjust Target by Adjacent Targets"
                                         ]
-                                      },
-                                      "mustBeAlive2": true
+                                      }
                                     }
                                   ]
                                 }
@@ -5616,15 +5600,14 @@ const compositeAbilityObject = {
                               "name": "NOT",
                               "condition": {
                                 "name": "Is Part Of",
-                                "of": {
+                                "target1": {
                                   "name": "Target Name",
                                   "target": "{{Player's Aim Primary-Target}}"
                                 },
-                                "target": {
+                                "target2": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                },
-                                "mustBeAlive2": true
+                                }
                               }
                             }
                           }
@@ -5664,28 +5647,26 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Player's Aim Primary-Target}}"
                   },
-                  "mustBeAlive2": true,
                   "invertCondition": true
                 },
                 {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Targets Adjacent to Parameter Target}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Player's Aim Primary-Target}}"
                   },
-                  "mustBeAlive2": true,
                   "invertCondition": true
                 }
               ]
@@ -7661,15 +7642,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {

@@ -1968,15 +1968,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -2216,27 +2215,25 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{SAM: Self}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           },
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{SAM: Self}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Sub-Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         ]
                       }

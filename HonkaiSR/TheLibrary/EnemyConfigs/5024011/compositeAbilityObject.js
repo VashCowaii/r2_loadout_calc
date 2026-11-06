@@ -2585,15 +2585,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target 2}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -3242,15 +3241,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target 2}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },

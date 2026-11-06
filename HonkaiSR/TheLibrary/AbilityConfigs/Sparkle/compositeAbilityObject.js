@@ -135,15 +135,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -1467,15 +1466,14 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": {
+            "target1": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "target": {
+            "target2": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "mustBeAlive2": true,
             "invertCondition": true
           },
           "passed": [
@@ -2036,15 +2034,14 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "Is Part Of",
-              "of": {
+              "target1": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "target": {
+              "target2": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "mustBeAlive2": true,
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -2601,15 +2598,14 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Is Part Of",
-                          "of": {
+                          "target1": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "target": {
+                          "target2": {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
-                          },
-                          "mustBeAlive2": true
+                          }
                         }
                       ]
                     }

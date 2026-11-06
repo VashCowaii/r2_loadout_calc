@@ -1484,15 +1484,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Currency Wars Full OffFieldList}}"
                     },
-                    "mustBeAlive2": true,
                     "invertCondition": true
                   }
                 ]

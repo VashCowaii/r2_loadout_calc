@@ -1045,15 +1045,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Caster's Minions}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -2943,15 +2942,14 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Current Turn Owner}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Caster's Minions}}"
                             },
-                            "mustBeAlive2": true,
                             "invertCondition": true
                           }
                         ]

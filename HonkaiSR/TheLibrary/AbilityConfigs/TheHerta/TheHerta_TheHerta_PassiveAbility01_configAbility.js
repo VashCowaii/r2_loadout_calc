@@ -788,15 +788,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -2034,15 +2033,14 @@ const configAbility = {
                           "conditionList": [
                             {
                               "name": "Is Part Of",
-                              "of": {
+                              "target1": {
                                 "name": "Target Name",
                                 "target": "{{Player's Aim Primary-Target}}"
                               },
-                              "target": {
+                              "target2": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "mustBeAlive2": true,
                               "invertCondition": true
                             },
                             {
@@ -2050,7 +2048,7 @@ const configAbility = {
                               "conditionList": [
                                 {
                                   "name": "Is Part Of",
-                                  "of": {
+                                  "target1": {
                                     "name": "Target Sequence",
                                     "TargetList": [
                                       {
@@ -2060,15 +2058,14 @@ const configAbility = {
                                       "Adjust Target by Adjacent Targets"
                                     ]
                                   },
-                                  "target": {
+                                  "target2": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
-                                  },
-                                  "mustBeAlive2": true
+                                  }
                                 },
                                 {
                                   "name": "Is Part Of",
-                                  "of": {
+                                  "target1": {
                                     "name": "Target Sequence",
                                     "TargetList": [
                                       {
@@ -2078,7 +2075,7 @@ const configAbility = {
                                       "Adjust Target by Adjacent Targets"
                                     ]
                                   },
-                                  "target": {
+                                  "target2": {
                                     "name": "Target Sequence",
                                     "TargetList": [
                                       {
@@ -2087,8 +2084,7 @@ const configAbility = {
                                       },
                                       "Adjust Target by Adjacent Targets"
                                     ]
-                                  },
-                                  "mustBeAlive2": true
+                                  }
                                 }
                               ]
                             }
@@ -2120,15 +2116,14 @@ const configAbility = {
                           "name": "NOT",
                           "condition": {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Player's Aim Primary-Target}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         }
                       }
@@ -2168,28 +2163,26 @@ const configAbility = {
             },
             {
               "name": "Is Part Of",
-              "of": {
+              "target1": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "target": {
+              "target2": {
                 "name": "Target Name",
                 "target": "{{Player's Aim Primary-Target}}"
               },
-              "mustBeAlive2": true,
               "invertCondition": true
             },
             {
               "name": "Is Part Of",
-              "of": {
+              "target1": {
                 "name": "Target Name",
                 "target": "{{Targets Adjacent to Parameter Target}}"
               },
-              "target": {
+              "target2": {
                 "name": "Target Name",
                 "target": "{{Player's Aim Primary-Target}}"
               },
-              "mustBeAlive2": true,
               "invertCondition": true
             }
           ]

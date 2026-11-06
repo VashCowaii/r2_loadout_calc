@@ -894,15 +894,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Creator}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Battle Event List}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of Team",

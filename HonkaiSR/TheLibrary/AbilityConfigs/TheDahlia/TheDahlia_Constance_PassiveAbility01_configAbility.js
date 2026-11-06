@@ -916,15 +916,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -956,15 +955,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Has Modifier",
@@ -1141,15 +1139,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE, with Unselectables)}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
-                },
-                "mustBeAlive2": true
+                }
               },
               "passed": [
                 {
@@ -1400,15 +1397,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}.[[addBattleEvents]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target's Source Owner}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Has Modifier",
@@ -1494,15 +1490,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}.[[addBattleEvents]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target's Source Owner}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   {
                     "name": "Compare: Target",

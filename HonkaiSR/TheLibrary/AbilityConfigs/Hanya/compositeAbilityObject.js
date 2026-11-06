@@ -818,15 +818,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -924,27 +923,25 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           },
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Sub-Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         ]
                       },
@@ -1057,27 +1054,25 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           },
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Sub-Targets}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         ]
                       },
