@@ -147,7 +147,7 @@ const compositeAbilityObject = {
           "onStack": [
             {
               "name": "Add Global Weakness",
-              "type": "Fire"
+              "weakness": "Fire"
             }
           ]
         },

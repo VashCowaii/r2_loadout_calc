@@ -43,11 +43,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1394805142\">Modifier_Monster_W4_Claymore_04_Defeated</a>[<span class=\"descriptionNumberColor\">Ruined</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1394805142\">Modifier_Monster_W4_Claymore_04_Defeated</a>[<span class=\"descriptionNumberColor\">Ruined</span>]"
+                        }
                       }
                     ]
                   },

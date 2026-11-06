@@ -472,11 +472,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
+                        }
                       }
                     ]
                   },
@@ -543,11 +543,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>"
+                        }
                       }
                     ]
                   },
