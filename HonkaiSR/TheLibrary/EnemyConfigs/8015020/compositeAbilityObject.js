@@ -3075,9 +3075,7 @@ const compositeAbilityObject = {
             }
           ]
         },
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Update Enemy Display",
           "on": {
@@ -3393,9 +3391,7 @@ const compositeAbilityObject = {
             "target": "{{All Team Members(Exclude Self)}}"
           }
         },
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Update Enemy Display",
           "on": {

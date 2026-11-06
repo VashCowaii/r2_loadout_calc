@@ -1725,8 +1725,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable (VFX)",
-              "variableName": "_TriggerNormal_Cutin",
-              "value": 0
+              "value": 0,
+              "variableName": "_TriggerNormal_Cutin"
             },
             {
               "name": "Force Auto-Battle on Target",
@@ -1769,8 +1769,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable (VFX)",
-              "variableName": "_TriggerNormal_Cutin",
-              "value": 1
+              "value": 1,
+              "variableName": "_TriggerNormal_Cutin"
             },
             {
               "name": "IF",
@@ -1814,8 +1814,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_TriggerNormal_Cutin"
                 },
                 {
                   "name": "Force Auto-Battle on Target",
@@ -1964,8 +1964,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_TriggerNormal_Cutin"
                 },
                 {
                   "name": "Force Auto-Battle on Target",

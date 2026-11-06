@@ -83,7 +83,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "_ChangeValue"
+                      "variableName": "_ChangeValue",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
@@ -144,7 +145,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "_ChangeValue"
+                      "variableName": "_ChangeValue",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",

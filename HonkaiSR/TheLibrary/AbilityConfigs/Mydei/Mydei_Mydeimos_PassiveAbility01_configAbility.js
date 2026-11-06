@@ -221,7 +221,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "DV_HPRatioPreshow",
                   "value": {
                     "operator": "Variables[0] (_EnergyBar_CurrentValue) || Variables[1] (0.5) || Constants[0] (100) || Variables[2] (DV_CurrnetHP) || MUL || Variables[3] (DV_MaxHP) || DIV || MUL || ADD || RETURN",
                     "displayLines": "(_EnergyBar_CurrentValue + (0.5 * ((100 * DV_CurrnetHP) / DV_MaxHP)))",
@@ -234,7 +233,8 @@ const configAbility = {
                       "DV_CurrnetHP",
                       "DV_MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "DV_HPRatioPreshow"
                 }
               ]
             }

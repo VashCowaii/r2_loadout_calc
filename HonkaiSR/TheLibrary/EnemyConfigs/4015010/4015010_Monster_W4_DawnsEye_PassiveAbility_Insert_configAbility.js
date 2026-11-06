@@ -26,9 +26,7 @@ const configAbility = {
         "value2": 2
       },
       "passed": [
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Change Battle Arena",
           "arenaID": 2043102
@@ -67,9 +65,7 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]"
         },
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Change Battle Arena",
           "status": "Inactive",

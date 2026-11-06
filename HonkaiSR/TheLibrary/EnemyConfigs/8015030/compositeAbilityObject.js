@@ -2704,9 +2704,7 @@ const compositeAbilityObject = {
           "characterName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Formation\"",
           "icon": "Monster_8015030.png"
         },
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Remove Events/Bonuses",
           "to": {
@@ -3194,9 +3192,7 @@ const compositeAbilityObject = {
               "characterName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\"",
               "icon": "Monster_8015040.png"
             },
-            {
-              "name": "Change Character Model"
-            },
+            "Change Character Model",
             {
               "name": "Remove Events/Bonuses",
               "to": {

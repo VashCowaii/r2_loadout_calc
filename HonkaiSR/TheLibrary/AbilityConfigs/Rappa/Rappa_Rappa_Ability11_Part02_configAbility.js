@@ -37,12 +37,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Distance to Team Center",
+      "variableName": "DV_PositionOffsetRatio",
       "target": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
-      },
-      "variableName": "DV_PositionOffsetRatio",
-      "living": false
+      }
     },
     {
       "name": "IF",

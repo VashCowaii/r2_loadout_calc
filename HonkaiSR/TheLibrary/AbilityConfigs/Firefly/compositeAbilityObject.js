@@ -2403,9 +2403,7 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         "Deleted bullshit",
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Add Events/Bonuses",
           "to": {
@@ -2566,7 +2564,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Change Character Model",
-          "passed": [
+          "successList": [
             "Deleted bullshit"
           ]
         }
@@ -3263,8 +3261,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "_PointB1_BreakableCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_PointB1_BreakableCount"
                 },
                 {
                   "name": "Find New Target",
@@ -3289,7 +3287,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable (VFX)",
-                          "variableName": "_PointB1_BreakableCount",
                           "value": {
                             "operator": "Variables[0] (_PointB1_BreakableCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_PointB1_BreakableCount + 1)",
@@ -3299,7 +3296,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_PointB1_BreakableCount"
                             ]
-                          }
+                          },
+                          "variableName": "_PointB1_BreakableCount"
                         }
                       ]
                     }

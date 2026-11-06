@@ -1540,12 +1540,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Lineup Position",
-                      "target": {
+                      "variableName": "_enemyIndex",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "scope": "ContextModifier",
-                      "variableName": "_enemyIndex"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Team Count",
@@ -3058,7 +3058,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Change Character Model",
-                  "passed": [
+                  "successList": [
                     {
                       "name": "Set Render/Load State",
                       "target": {
@@ -3074,7 +3074,7 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Change Character Model",
-                  "passed": [
+                  "successList": [
                     {
                       "name": "Set Render/Load State",
                       "target": {

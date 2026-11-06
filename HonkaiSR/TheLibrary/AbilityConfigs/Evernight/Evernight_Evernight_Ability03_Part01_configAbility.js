@@ -19,8 +19,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable (VFX)",
-      "variableName": "_CL_Is_S03_Ready",
-      "value": 0
+      "value": 0,
+      "variableName": "_CL_Is_S03_Ready"
     },
     {
       "name": "IF",

@@ -2839,7 +2839,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "PartLoseHpValue"
+                      "variableName": "PartLoseHpValue",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Consume",
@@ -2891,7 +2892,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Changes to Stats",
-                          "variableName": "PartHPOverflow"
+                          "variableName": "PartHPOverflow",
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Consume",
@@ -10563,9 +10565,7 @@ const compositeAbilityObject = {
             "value2": 2
           },
           "passed": [
-            {
-              "name": "Change Character Model"
-            },
+            "Change Character Model",
             {
               "name": "Change Battle Arena",
               "arenaID": 2043102
@@ -10604,9 +10604,7 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]"
             },
-            {
-              "name": "Change Character Model"
-            },
+            "Change Character Model",
             {
               "name": "Change Battle Arena",
               "status": "Inactive",

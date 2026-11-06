@@ -5,9 +5,7 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     "Deleted bullshit",
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Add Events/Bonuses",
       "to": {
@@ -168,7 +166,7 @@ const configAbility = {
     },
     {
       "name": "Change Character Model",
-      "passed": [
+      "successList": [
         "Deleted bullshit"
       ]
     }

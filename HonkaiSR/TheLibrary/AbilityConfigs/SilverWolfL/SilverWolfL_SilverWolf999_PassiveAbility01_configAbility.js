@@ -430,7 +430,8 @@ const configAbility = {
           "onChange": [
             {
               "name": "Define Custom Variable with Changes to Stats",
-              "variableName": "_epChange"
+              "variableName": "_epChange",
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",

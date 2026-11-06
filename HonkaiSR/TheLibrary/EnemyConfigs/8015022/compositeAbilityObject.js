@@ -4477,9 +4477,7 @@ const compositeAbilityObject = {
             }
           ]
         },
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Update Enemy Display",
           "on": {
@@ -9724,9 +9722,7 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Update Enemy Display",
           "on": {
@@ -9961,9 +9957,7 @@ const compositeAbilityObject = {
       "energy": null,
       "toughnessList": null,
       "parse": [
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Update Enemy Display",
           "on": {

@@ -118,7 +118,6 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__918497004\">Modifier_BattleEventAbility_Challenge_Month_30</a>",
       "stackType": "ReplaceByCaster",
       "latentQueue": [
-        "_DmgUp_Ratio",
         "_Trigger_Effect_Flag"
       ],
       "execute": [

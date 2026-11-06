@@ -36,9 +36,7 @@ const configAbility = {
       "tag": "BattleArea01",
       "priorityTag": "Character"
     },
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Set Phainon Charge Points",
       "value": {

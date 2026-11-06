@@ -2303,9 +2303,7 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         "Deleted bullshit",
-        {
-          "name": "Change Character Model"
-        },
+        "Change Character Model",
         {
           "name": "Add Events/Bonuses",
           "to": {
@@ -2466,7 +2464,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Change Character Model",
-          "passed": [
+          "successList": [
             "Deleted bullshit"
           ]
         }

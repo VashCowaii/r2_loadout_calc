@@ -369,8 +369,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable (VFX)",
-              "variableName": "_PointB1_BreakableCount",
-              "value": 0
+              "value": 0,
+              "variableName": "_PointB1_BreakableCount"
             },
             {
               "name": "Find New Target",
@@ -395,7 +395,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable (VFX)",
-                      "variableName": "_PointB1_BreakableCount",
                       "value": {
                         "operator": "Variables[0] (_PointB1_BreakableCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_PointB1_BreakableCount + 1)",
@@ -405,7 +404,8 @@ const configAbility = {
                         "variables": [
                           "_PointB1_BreakableCount"
                         ]
-                      }
+                      },
+                      "variableName": "_PointB1_BreakableCount"
                     }
                   ]
                 }

@@ -194,9 +194,7 @@ const configAbility = {
       "characterName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Formation\"",
       "icon": "Monster_8015030.png"
     },
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Remove Events/Bonuses",
       "to": {

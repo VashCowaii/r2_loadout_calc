@@ -21,19 +21,19 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Lineup Position",
-          "target": {
+          "variableName": "Index_Caster",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "variableName": "Index_Caster"
+          }
         },
         {
           "name": "Define Custom Variable with Lineup Position",
-          "target": {
+          "variableName": "Index_Target",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          },
-          "variableName": "Index_Target"
+          }
         },
         {
           "name": "IF",

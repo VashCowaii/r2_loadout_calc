@@ -2987,7 +2987,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__901866480\">Modifier_BattleEventAbility_Challenge_Month_27</a>",
           "stackType": "ReplaceByCaster",
           "latentQueue": [
-            "_DmgUp_Ratio",
             "_Trigger_Effect_Flag"
           ],
           "execute": [

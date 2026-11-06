@@ -1443,7 +1443,7 @@ const configAbility = {
                         {
                           "name": "Define Custom Variable with Changes to Stats",
                           "variableName": "Acheron_PointB1_ClampedAdd",
-                          "type": "ClampedAdd"
+                          "valueType": "ClampedAdd"
                         },
                         {
                           "name": "IF",

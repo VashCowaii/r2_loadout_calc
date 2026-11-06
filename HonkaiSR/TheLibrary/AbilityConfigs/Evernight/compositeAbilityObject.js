@@ -3808,8 +3808,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable (VFX)",
-          "variableName": "_CL_Is_S03_Ready",
-          "value": 0
+          "value": 0,
+          "variableName": "_CL_Is_S03_Ready"
         },
         {
           "name": "IF",
@@ -3855,8 +3855,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable (VFX)",
-          "variableName": "_CL_Is_S03_Ready",
-          "value": 1
+          "value": 1,
+          "variableName": "_CL_Is_S03_Ready"
         },
         {
           "name": "Use Custom Character Function",
@@ -7054,8 +7054,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_TriggerNormal_Cutin"
                 },
                 {
                   "name": "Force Auto-Battle on Target",
@@ -7098,8 +7098,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "_TriggerNormal_Cutin",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_TriggerNormal_Cutin"
                 },
                 {
                   "name": "IF",
@@ -7143,8 +7143,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable (VFX)",
-                      "variableName": "_TriggerNormal_Cutin",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_TriggerNormal_Cutin"
                     },
                     {
                       "name": "Force Auto-Battle on Target",
@@ -7293,8 +7293,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable (VFX)",
-                      "variableName": "_TriggerNormal_Cutin",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_TriggerNormal_Cutin"
                     },
                     {
                       "name": "Force Auto-Battle on Target",
@@ -8633,8 +8633,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "Is_S11_Ready",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_S11_Ready"
                 }
               ]
             },
@@ -8960,8 +8960,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable (VFX)",
-          "variableName": "Is_S11_Ready",
-          "value": 1
+          "value": 1,
+          "variableName": "Is_S11_Ready"
         },
         {
           "name": "Use Custom Character Function",
@@ -8997,8 +8997,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable (VFX)",
-              "variableName": "_TriggerNormal_Cutin",
-              "value": 0
+              "value": 0,
+              "variableName": "_TriggerNormal_Cutin"
             }
           ]
         }
@@ -9685,8 +9685,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable (VFX)",
-          "variableName": "Is_S11_Ready",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_S11_Ready"
         },
         {
           "name": "Use Custom Character Function",

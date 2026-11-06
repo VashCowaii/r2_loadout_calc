@@ -931,7 +931,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable with Changes to Stats",
                       "variableName": "_KingChangeValue",
-                      "type": "RawDelta"
+                      "valueType": "RawDelta"
                     },
                     {
                       "name": "IF",

@@ -1529,12 +1529,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Lineup Position",
-                  "target": {
+                  "variableName": "_enemyIndex",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "scope": "ContextModifier",
-                  "variableName": "_enemyIndex"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Team Count",

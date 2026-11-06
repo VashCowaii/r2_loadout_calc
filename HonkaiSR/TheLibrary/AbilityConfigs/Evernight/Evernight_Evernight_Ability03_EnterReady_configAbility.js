@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable (VFX)",
-      "variableName": "_CL_Is_S03_Ready",
-      "value": 1
+      "value": 1,
+      "variableName": "_CL_Is_S03_Ready"
     },
     {
       "name": "Use Custom Character Function",

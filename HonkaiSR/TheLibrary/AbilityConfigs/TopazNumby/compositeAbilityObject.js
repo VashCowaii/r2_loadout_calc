@@ -1481,8 +1481,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable (VFX)",
-                          "variableName": "_isShowSpecialMark",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_isShowSpecialMark"
                         },
                         {
                           "name": "Toggle Skill Mark",
@@ -1494,8 +1494,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable (VFX)",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_isShowSpecialMark"
                     },
                     {
                       "name": "Toggle Skill Mark"

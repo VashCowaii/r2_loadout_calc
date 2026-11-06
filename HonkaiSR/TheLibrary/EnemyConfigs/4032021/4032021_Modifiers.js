@@ -2759,11 +2759,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Toughness Count",
-              "target": {
+              "variableName": "_StanceCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "_StanceCount"
+              }
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -3086,11 +3086,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Toughness Count",
-              "target": {
+              "variableName": "_StanceCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "_StanceCount"
+              }
             },
             {
               "name": "Define Custom Variable with Stat",

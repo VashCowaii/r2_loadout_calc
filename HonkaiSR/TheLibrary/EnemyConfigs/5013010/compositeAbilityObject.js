@@ -85,19 +85,19 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Lineup Position",
-                      "target": {
+                      "variableName": "MDF_Index1",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_Index1"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Lineup Position",
-                      "target": {
+                      "variableName": "MDF_Index2",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
-                      },
-                      "variableName": "MDF_Index2"
+                      }
                     },
                     {
                       "name": "IF",
@@ -839,19 +839,19 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Lineup Position",
-              "target": {
+              "variableName": "Index_Caster",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              },
-              "variableName": "Index_Caster"
+              }
             },
             {
               "name": "Define Custom Variable with Lineup Position",
-              "target": {
+              "variableName": "Index_Target",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "variableName": "Index_Target"
+              }
             },
             {
               "name": "IF",

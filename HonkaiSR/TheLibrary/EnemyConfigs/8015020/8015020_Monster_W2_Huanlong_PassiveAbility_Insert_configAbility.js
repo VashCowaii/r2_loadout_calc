@@ -51,9 +51,7 @@ const configAbility = {
         "target": "{{All Team Members(Exclude Self)}}"
       }
     },
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Update Enemy Display",
       "on": {

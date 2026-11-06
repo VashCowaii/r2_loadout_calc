@@ -144,7 +144,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Change Character Model",
-              "passed": [
+              "successList": [
                 {
                   "name": "Set Render/Load State",
                   "target": {
@@ -160,7 +160,7 @@ const configAbility = {
           "failed": [
             {
               "name": "Change Character Model",
-              "passed": [
+              "successList": [
                 {
                   "name": "Set Render/Load State",
                   "target": {

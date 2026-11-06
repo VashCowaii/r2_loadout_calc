@@ -770,7 +770,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
-                  "variableName": "MDF_HPChange"
+                  "variableName": "MDF_HPChange",
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -805,7 +806,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
-                  "variableName": "MDF_HPOverflow"
+                  "variableName": "MDF_HPOverflow",
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",

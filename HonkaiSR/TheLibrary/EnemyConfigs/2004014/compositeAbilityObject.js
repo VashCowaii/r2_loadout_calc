@@ -2921,7 +2921,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "PartLoseHpValue"
+                      "variableName": "PartLoseHpValue",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Consume",

@@ -4,9 +4,7 @@ const configAbility = {
   "energy": null,
   "toughnessList": null,
   "parse": [
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Update Enemy Display",
       "on": {

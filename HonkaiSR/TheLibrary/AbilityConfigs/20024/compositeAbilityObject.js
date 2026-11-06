@@ -1231,7 +1231,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable (VFX)",
-                      "variableName": "MDF_PreShowHP",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_CostHPRatio) || MUL || Variables[2] (MDF_Shield) || SUB || RETURN",
                         "displayLines": "((MDF_MaxHP * MDF_CostHPRatio) - MDF_Shield)",
@@ -1241,7 +1240,8 @@ const compositeAbilityObject = {
                           "MDF_CostHPRatio",
                           "MDF_Shield"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PreShowHP"
                     },
                     {
                       "name": "IF",

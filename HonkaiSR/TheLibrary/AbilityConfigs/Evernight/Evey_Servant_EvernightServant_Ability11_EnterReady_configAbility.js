@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable (VFX)",
-      "variableName": "Is_S11_Ready",
-      "value": 1
+      "value": 1,
+      "variableName": "Is_S11_Ready"
     },
     {
       "name": "Use Custom Character Function",
@@ -43,8 +43,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable (VFX)",
-          "variableName": "_TriggerNormal_Cutin",
-          "value": 0
+          "value": 0,
+          "variableName": "_TriggerNormal_Cutin"
         }
       ]
     }

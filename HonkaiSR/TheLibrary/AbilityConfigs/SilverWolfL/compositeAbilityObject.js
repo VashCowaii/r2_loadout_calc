@@ -471,7 +471,8 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "_tmp_changeValue"
+                      "variableName": "_tmp_changeValue",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -4422,7 +4423,8 @@ const compositeAbilityObject = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
-                  "variableName": "_epChange"
+                  "variableName": "_epChange",
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",

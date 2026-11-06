@@ -160,7 +160,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "_SPChangeValueRaw",
-                  "type": "RawDelta"
+                  "valueType": "RawDelta"
                 },
                 {
                   "name": "IF",
@@ -1828,8 +1828,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable (VFX)",
-                  "variableName": "MDF_Count_Show",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Count_Show"
                 },
                 {
                   "name": "Find New Target",
@@ -1874,8 +1874,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable (VFX)",
-                          "variableName": "MDF_Count_Show",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Count_Show"
                         }
                       ]
                     }

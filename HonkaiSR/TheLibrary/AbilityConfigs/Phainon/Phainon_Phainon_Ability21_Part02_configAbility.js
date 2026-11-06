@@ -448,6 +448,10 @@ const configAbility = {
                   },
                   {
                     "name": "Filter Target List",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
                       "target": {
@@ -456,10 +460,6 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                       "invertCondition": true
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Hostile Entities(AOE)}}"
                     }
                   }
                 ]
@@ -620,6 +620,10 @@ const configAbility = {
                   },
                   {
                     "name": "Filter Target List",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
                       "target": {
@@ -628,10 +632,6 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-89935936\">M_Phainon_Ability21_Mark</a>",
                       "invertCondition": true
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Hostile Entities(AOE)}}"
                     }
                   }
                 ]

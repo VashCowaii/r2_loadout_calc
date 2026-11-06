@@ -110,9 +110,7 @@ const configAbility = {
         }
       ]
     },
-    {
-      "name": "Change Character Model"
-    },
+    "Change Character Model",
     {
       "name": "Update Enemy Display",
       "on": {

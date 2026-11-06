@@ -19,8 +19,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable (VFX)",
-      "variableName": "Is_S11_Ready",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_S11_Ready"
     },
     {
       "name": "Use Custom Character Function",
