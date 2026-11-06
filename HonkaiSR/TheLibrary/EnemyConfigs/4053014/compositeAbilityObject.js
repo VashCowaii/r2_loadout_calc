@@ -1709,42 +1709,42 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
                       "variableName": "MDF_ConstFinalDamage",
-                      "value": "AttackData_ConstFinalDamage",
-                      "context": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackData_ConstFinalDamage</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Damage Data",
                       "variableName": "MDF_FinalDamageMax",
-                      "value": "AttackData_FinalDamageMax",
-                      "context": "ContextModifier"
-                    },
-                    {
-                      "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackData_FinalDamageMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Damage Data",
                       "variableName": "MDF_FinalDamage",
-                      "context": "ContextModifier"
+                      "scope": "ContextModifier",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_ShieldDamage",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "MDF_ShieldDamage",
-                      "value": "Result_ShieldDamage",
-                      "context": "ContextModifier"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_ShieldDamage</span>&nbsp;"
                     },
                     {
                       "name": "IF",

@@ -973,23 +973,23 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": {
+                  "variableName": "_TMP_Damage",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_TMP_Damage",
-                  "value": "Result_FinalDamageBase",
-                  "context": "ContextModifier"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": {
+                  "variableName": "_TMP_OverflowDamage",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_TMP_OverflowDamage",
-                  "value": "Result_OverflowHPDamage",
-                  "context": "ContextModifier"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_OverflowHPDamage</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",

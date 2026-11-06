@@ -108,12 +108,12 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": {
+                  "variableName": "_Damage",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "variableName": "_Damage",
-                  "context": "ContextModifier"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",

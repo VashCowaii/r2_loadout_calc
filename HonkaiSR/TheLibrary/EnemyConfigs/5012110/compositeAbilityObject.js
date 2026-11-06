@@ -1224,11 +1224,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": {
+                  "variableName": "MDF_HitDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "MDF_HitDamage"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",

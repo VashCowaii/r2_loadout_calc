@@ -2698,12 +2698,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_TempDamage",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "MDF_TempDamage",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",

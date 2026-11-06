@@ -1560,23 +1560,23 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Damage Data",
-              "target": {
+              "variableName": "MDF_OriginalDamagePercentage",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_OriginalDamagePercentage",
-              "value": "AttackData_RawDamagePercentage",
-              "context": "ContextModifier"
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackData_RawDamagePercentage</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Damage Data",
-              "target": {
+              "variableName": "MDF_OriginalDamageValue",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_OriginalDamageValue",
-              "value": "AttackData_RawDamageValue",
-              "context": "ContextModifier"
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackData_RawDamageValue</span>&nbsp;"
             },
             {
               "name": "Adjust Target Stats",

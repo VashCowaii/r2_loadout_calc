@@ -863,13 +863,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "_originalDamage",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_originalDamage",
-                      "value": "Result_FinalDamageBase",
-                      "context": "ContextModifier"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "IF",
@@ -1054,13 +1054,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "_originalDamage",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_originalDamage",
-                      "value": "Result_FinalDamageBase",
-                      "context": "ContextModifier"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "IF",

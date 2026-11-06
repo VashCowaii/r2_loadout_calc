@@ -611,11 +611,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "_Damage",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "variableName": "_Damage"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",

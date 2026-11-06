@@ -212,11 +212,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageData",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_DamageData"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -1472,12 +1472,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageAddValue1",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DamageAddValue1",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1507,12 +1507,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageAddValue2",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DamageAddValue2",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1542,12 +1542,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageAddValue3",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DamageAddValue3",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1577,12 +1577,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageAddValue4",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DamageAddValue4",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1612,12 +1612,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_DamageAddValue5",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DamageAddValue5",
-                      "value": "Result_FinalDamageBase"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",

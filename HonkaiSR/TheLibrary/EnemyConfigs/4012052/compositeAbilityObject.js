@@ -165,11 +165,11 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Damage Data",
-                          "target": {
+                          "variableName": "MDF_DamagaData",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "MDF_DamagaData"
+                          }
                         },
                         {
                           "name": "Adjust Target Stats",

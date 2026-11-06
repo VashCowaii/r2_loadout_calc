@@ -1518,13 +1518,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": {
+                  "variableName": "MDF_DamageOnce",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_DamageOnce",
-                  "value": "Result_FinalDamageBase",
-                  "context": "ContextModifier"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageBase</span>&nbsp;"
                 },
                 {
                   "name": "IF",

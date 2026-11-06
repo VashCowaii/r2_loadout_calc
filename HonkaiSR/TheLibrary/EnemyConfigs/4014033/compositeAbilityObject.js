@@ -1353,22 +1353,22 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_AttackDamageData",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_AttackDamageData",
-                      "context": "ContextModifier"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_AttackDamageDataMulRatio",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_AttackDamageDataMulRatio",
-                      "value": "Result_FinalDamageMulRatio",
-                      "context": "ContextModifier"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Result_FinalDamageMulRatio</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1863,12 +1863,12 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": {
+                      "variableName": "MDF_AttackDamageData",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_AttackDamageData",
-                      "context": "ContextModifier"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
