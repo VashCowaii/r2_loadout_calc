@@ -74,6 +74,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Sort by Stat",
+          "warningType": "MaxToughness",
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         }
       ]
