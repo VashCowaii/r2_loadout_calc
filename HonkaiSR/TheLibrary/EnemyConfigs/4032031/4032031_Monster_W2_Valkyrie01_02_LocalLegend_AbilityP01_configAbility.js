@@ -55,11 +55,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_NegativeHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_NegativeHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
             },
             {

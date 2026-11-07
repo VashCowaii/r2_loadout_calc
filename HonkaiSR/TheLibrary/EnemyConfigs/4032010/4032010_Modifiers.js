@@ -437,11 +437,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_RallyHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_RallyHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                 },
                 {
@@ -588,11 +588,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_RallyHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_RallyHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                 },
                 {
@@ -659,11 +659,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_RallyHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_RallyHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                 },
                 {
@@ -730,11 +730,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_RallyHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_RallyHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                 },
                 {
@@ -878,11 +878,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_RallyHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_RallyHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                 },
                 {
@@ -1016,13 +1016,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_DefenderRallyHP",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_DefenderRallyHP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
-                      "context": "ContextModifier"
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1178,20 +1178,20 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_DirtyRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_DirtyRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_DirtyValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_DirtyValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;"
             },
             {
@@ -1503,13 +1503,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_DefenderCurrentHP_Before",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_DefenderCurrentHP_Before",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-              "context": "ContextModifier"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             }
           ]
         },
@@ -1518,13 +1518,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_DefenderCurrentHP_After",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_DefenderCurrentHP_After",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-              "context": "ContextModifier"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
               "name": "IF",

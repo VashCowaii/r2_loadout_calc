@@ -559,11 +559,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentAttackReal",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentAttackReal",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {

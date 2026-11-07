@@ -461,11 +461,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ElationDamageAddedRatioBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ElationDamageAddedRatioBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;"
                 },
                 {
@@ -582,11 +582,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ElationDamageAddedRatioBase",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ElationDamageAddedRatioBase",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;"
                     },
                     {
@@ -675,20 +675,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ElationDamageAddedRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ElationDamageAddedRatio",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ElationDamageAddedRatio_YG",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_ElationDamageAddedRatio_YG",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
                     },
                     {
@@ -725,11 +725,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ElationEchoPoint_YG",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_ElationEchoPoint_YG",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;"
                     },
                     {
@@ -1171,11 +1171,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -1212,11 +1212,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     },
                     {

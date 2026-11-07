@@ -179,11 +179,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {
@@ -485,11 +485,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W2_Valkyrie02_00_Skill04_CurrentActionDelay",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {

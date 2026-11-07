@@ -119,11 +119,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_MSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {

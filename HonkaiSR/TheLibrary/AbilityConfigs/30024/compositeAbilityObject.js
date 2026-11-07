@@ -170,11 +170,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "EntityMaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "EntityMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {

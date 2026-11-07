@@ -74,8 +74,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "BattleEvent_BaseHP",
-      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Define Custom Variable",

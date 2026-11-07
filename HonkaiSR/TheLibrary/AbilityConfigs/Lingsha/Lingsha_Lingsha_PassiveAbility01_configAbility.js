@@ -267,11 +267,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Lingsha_BaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Lingsha_BaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
             },
             {
@@ -308,11 +308,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Lingsha_BreakDamageAdded",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Lingsha_BreakDamageAdded",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
             {
@@ -372,11 +372,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Lingsha_BreakDamageAdded",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Lingsha_BreakDamageAdded",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                 },
                 {

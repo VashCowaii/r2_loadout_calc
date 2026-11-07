@@ -656,11 +656,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -697,11 +697,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     },
                     {

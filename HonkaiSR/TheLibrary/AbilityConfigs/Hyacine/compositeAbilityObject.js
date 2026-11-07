@@ -857,11 +857,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -886,11 +886,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     },
                     {
@@ -1504,11 +1504,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrenMaxtHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrenMaxtHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -2090,20 +2090,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrenMaxtHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrenMaxtHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentHPConvert",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrentHPConvert",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
         },
         {
@@ -2697,11 +2697,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_ModifierOwnerCurrentHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_ModifierOwnerCurrentHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 }
               ]
@@ -2831,11 +2831,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantMaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_ServantMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -2908,11 +2908,11 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Summoner_MaxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "Summoner_MaxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -2945,11 +2945,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "Summoner_MaxHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "variableName": "Summoner_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
@@ -2989,11 +2989,11 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Summoner_MaxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "Summoner_MaxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -3349,11 +3349,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_ServantMaxHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "variableName": "_ServantMaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
@@ -3426,11 +3426,11 @@ const compositeAbilityObject = {
                               "ifTargetFound": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "Summoner_MaxHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Caster's Summoner}}"
                                   },
-                                  "variableName": "Summoner_MaxHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                 },
                                 {
@@ -3463,11 +3463,11 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Summoner_MaxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "Summoner_MaxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -3507,11 +3507,11 @@ const compositeAbilityObject = {
                               "ifTargetFound": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "Summoner_MaxHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Caster's Summoner}}"
                                   },
-                                  "variableName": "Summoner_MaxHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                 },
                                 {
@@ -3891,11 +3891,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_ServantMaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_ServantMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {

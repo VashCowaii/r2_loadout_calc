@@ -589,11 +589,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CasterHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CasterHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 }
               ]

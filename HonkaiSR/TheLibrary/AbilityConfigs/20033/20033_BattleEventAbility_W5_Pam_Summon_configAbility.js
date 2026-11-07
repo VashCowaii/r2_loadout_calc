@@ -58,11 +58,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "CurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {

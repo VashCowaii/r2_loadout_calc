@@ -296,20 +296,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Avatar_Gepard_DefenceValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Avatar_Gepard_DefenceValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Avatar_Gepard_DefenceConvert",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Avatar_Gepard_DefenceConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
                 },
                 {
@@ -339,20 +339,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Avatar_Gepard_DefenceValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Avatar_Gepard_DefenceValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Avatar_Gepard_DefenceConvert",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Avatar_Gepard_DefenceConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
                 },
                 {
@@ -753,11 +753,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Avatar_Gepard_BaseDefenceValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "Avatar_Gepard_BaseDefenceValue",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
                     {
@@ -815,11 +815,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "Gepard_MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "Gepard_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -890,11 +890,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_MaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {
@@ -1251,11 +1251,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "Avatar_Gepard_DefenceValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "Avatar_Gepard_DefenceValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {

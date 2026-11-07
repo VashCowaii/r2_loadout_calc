@@ -27,20 +27,20 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "CurSpecialSP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "CurSpecialSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "Phainon_BaseSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "Phainon_BaseSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
     },
     {
@@ -409,11 +409,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CurSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
                 },
                 {
@@ -478,11 +478,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Phainon_BaseSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Phainon_BaseSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                 },
                 {

@@ -459,11 +459,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CasterMaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CasterMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -550,11 +550,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CasterMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -1470,20 +1470,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_HPConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_HPConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
             },
             {
@@ -1573,20 +1573,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_HPConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_HPConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
             },
             {

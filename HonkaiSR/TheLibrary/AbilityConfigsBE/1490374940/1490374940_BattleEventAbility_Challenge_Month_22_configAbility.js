@@ -46,11 +46,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "BattleEvent_BaseHP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "BattleEvent_BaseHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
     },
     {

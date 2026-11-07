@@ -34,11 +34,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -95,11 +95,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -156,11 +156,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -217,11 +217,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -278,11 +278,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -339,11 +339,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -400,11 +400,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
@@ -459,11 +459,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {

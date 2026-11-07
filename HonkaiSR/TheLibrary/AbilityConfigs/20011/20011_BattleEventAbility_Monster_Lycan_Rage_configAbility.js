@@ -52,11 +52,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "P1_ActionDelay",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "P1_ActionDelay",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                 },
                 {

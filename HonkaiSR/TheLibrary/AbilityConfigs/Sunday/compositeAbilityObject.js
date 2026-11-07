@@ -48,11 +48,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CritialChance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CritialChance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
                 },
                 {
@@ -136,11 +136,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CritialChance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CritialChance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
                 },
                 {
@@ -169,11 +169,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CritialChance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CritialChance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
                 },
                 {
@@ -941,11 +941,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ownerCritDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_ownerCritDamage",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
                 },
                 {
@@ -1896,11 +1896,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MAXSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "_MAXSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
@@ -2451,11 +2451,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_ownerCritDamage",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "variableName": "_ownerCritDamage",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
                         },
                         {

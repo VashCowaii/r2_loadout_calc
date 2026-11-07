@@ -1246,13 +1246,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TargetStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TargetStance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1393,11 +1393,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                     },
                     {
@@ -1540,20 +1540,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "EntityCurrentSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityCurrentSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "EntityMaxSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityMaxSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
                     {
@@ -3028,11 +3028,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_Temp_Hp",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "_Temp_Hp",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                         },
                         {
@@ -3367,11 +3367,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_Temp_Hp",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "_Temp_Hp",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                         },
                         {
@@ -3813,11 +3813,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_Temp_Hp",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_Temp_Hp",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
             },
             {

@@ -1644,11 +1644,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterStatusProbability",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CasterStatusProbability",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
                 },
                 {
@@ -1685,11 +1685,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CasterStatusProbability",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CasterStatusProbability",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
                     },
                     {

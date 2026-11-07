@@ -375,13 +375,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurMaxStance2",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CurMaxStance2",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",

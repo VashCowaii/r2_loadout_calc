@@ -109,11 +109,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "P1_BaseSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "P1_BaseSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
     },
     {

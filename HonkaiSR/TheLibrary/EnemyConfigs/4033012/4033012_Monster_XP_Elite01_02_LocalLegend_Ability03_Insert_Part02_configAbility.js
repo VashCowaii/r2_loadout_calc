@@ -62,13 +62,13 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetNegativeHp",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetNegativeHp",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;",
-          "context": "ContextAbility"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -123,13 +123,13 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetNegativeHp",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_TargetNegativeHp",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;",
-          "context": "ContextAbility"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
         },
         {
           "name": "Remove Events/Bonuses",

@@ -74,13 +74,13 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_maxStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "_maxStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable",

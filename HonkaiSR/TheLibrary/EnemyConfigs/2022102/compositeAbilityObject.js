@@ -126,11 +126,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentDirtyHPRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CurrentDirtyHPRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -181,11 +181,11 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MDF_CurrentDirtyHPRatio",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_CurrentDirtyHPRatio",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                         },
                         {
@@ -368,11 +368,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_CurrentDirtyHPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_CurrentDirtyHPRatio",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                     },
                     {
@@ -3360,11 +3360,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_BossBreakCurrentDelay",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BossBreakCurrentDelay",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {

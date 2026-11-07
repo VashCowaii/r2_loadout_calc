@@ -353,11 +353,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_ShieldValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team Entity}}"
                   },
-                  "variableName": "MDF_ShieldValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
                 },
                 {
@@ -388,11 +388,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentShield",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team Entity}}"
                   },
-                  "variableName": "MDF_CurrentShield",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
                 },
                 {
@@ -772,11 +772,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_ShieldValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team Entity}}"
                   },
-                  "variableName": "MDF_ShieldValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
                 },
                 {
@@ -807,11 +807,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentShield",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Enemy Team Entity}}"
                   },
-                  "variableName": "MDF_CurrentShield",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
                 },
                 {

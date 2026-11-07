@@ -34,20 +34,20 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_Target_CurrentAttack",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "variableName": "MDF_Target_CurrentAttack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_Tingyun_Attack",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "MDF_Tingyun_Attack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
     },
     {

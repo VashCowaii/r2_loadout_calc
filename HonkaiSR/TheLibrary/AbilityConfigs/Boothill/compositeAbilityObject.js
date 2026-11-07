@@ -1444,11 +1444,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterBreakDamageAdded",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CasterBreakDamageAdded",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                 },
                 {
@@ -1508,11 +1508,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CasterBreakDamageAdded",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CasterBreakDamageAdded",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                     },
                     {
@@ -3286,13 +3286,13 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_maxStance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "variableName": "_maxStance",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-              "warningType": "MaxToughness"
+              "warningType": "MaxToughness",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable",

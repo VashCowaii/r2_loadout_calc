@@ -819,11 +819,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "ComboAttackCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "ComboAttackCount",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
                 }
               ]

@@ -15,20 +15,20 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "BaseAttack",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "BaseAttack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "BaseSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "BaseSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
     },
     {
@@ -54,11 +54,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MaxHP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "MaxHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {

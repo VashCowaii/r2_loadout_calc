@@ -126,11 +126,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "ADF_MaxHPValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "ADF_MaxHPValue",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -150,11 +150,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "ADF_CurrentHPValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "ADF_CurrentHPValue",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
@@ -678,11 +678,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Defence",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_Defence",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {
@@ -754,11 +754,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                 },
                 {
@@ -1791,11 +1791,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_Speed",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Nikador: Self}}"
                       },
-                      "variableName": "MDF_Speed",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                     },
                     {
@@ -2258,11 +2258,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ADF_MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "ADF_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -2293,11 +2293,11 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ADF_CurrentHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "ADF_CurrentHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
@@ -2625,11 +2625,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Nikadory_Speed",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Nikador: Self}}"
               },
-              "variableName": "Nikadory_Speed",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
             },
             {
@@ -3016,11 +3016,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ChangePhase_MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "ChangePhase_MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -4363,11 +4363,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -4406,11 +4406,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -4449,11 +4449,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -4492,11 +4492,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -4673,11 +4673,11 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -4690,11 +4690,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentEnhanceBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentEnhanceBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -4707,11 +4707,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentRemainBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentRemainBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -5126,11 +5126,11 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -5143,11 +5143,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentEnhanceBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentEnhanceBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {
@@ -5160,11 +5160,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CurrentRemainBlackBloodValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "CurrentRemainBlackBloodValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
                 },
                 {

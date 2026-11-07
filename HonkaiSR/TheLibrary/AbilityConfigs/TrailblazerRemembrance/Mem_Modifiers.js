@@ -512,11 +512,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_propertyBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_propertyBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
             },
             {

@@ -118,11 +118,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -145,11 +145,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -209,11 +209,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -346,11 +346,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_MaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -3495,11 +3495,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "BaseSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "BaseSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
         },
         {
@@ -3618,20 +3618,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "BaseAttack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "BaseAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "BaseSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "BaseSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
         },
         {
@@ -3657,11 +3657,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {

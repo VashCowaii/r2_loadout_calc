@@ -523,20 +523,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -594,20 +594,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -686,20 +686,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -1162,20 +1162,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -1233,20 +1233,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -1341,20 +1341,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -3286,20 +3286,20 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
                 },
                 {

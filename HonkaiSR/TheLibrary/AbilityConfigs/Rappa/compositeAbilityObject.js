@@ -592,11 +592,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentAttackReal",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CurrentAttackReal",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
@@ -2177,13 +2177,13 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "DV_Ultra_Damage_MaxStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "DV_Ultra_Damage_MaxStance",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                          "warningType": "MaxToughness"
+                          "warningType": "MaxToughness",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -2237,13 +2237,13 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "DV_Ultra_Damage_MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "DV_Ultra_Damage_MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -3234,13 +3234,13 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "DV_Ultra_Damage_MaxStance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "DV_Ultra_Damage_MaxStance",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-              "warningType": "MaxToughness"
+              "warningType": "MaxToughness",
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable",

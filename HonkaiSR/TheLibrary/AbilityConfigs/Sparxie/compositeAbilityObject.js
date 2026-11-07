@@ -967,20 +967,20 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentAttackConvert",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentAttackConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                 },
                 {
@@ -2566,11 +2566,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentElationDamage",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrentElationDamage",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
         },
         {

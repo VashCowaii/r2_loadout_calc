@@ -1308,8 +1308,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "BattleEvent_BaseHP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
+              "variableName": "BattleEvent_BaseHP"
             },
             {
               "name": "Define Custom Variable",
@@ -1612,11 +1612,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "DV_CurrentDelay",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DV_CurrentDelay",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
             },
             {

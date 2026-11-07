@@ -4598,11 +4598,11 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MDF_CurrentStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_CurrentStance",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                         },
                         {
@@ -6055,11 +6055,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "P1_BaseSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "P1_BaseSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
         },
         {

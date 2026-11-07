@@ -203,13 +203,13 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_TargetMaxStanceValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_TargetMaxStanceValue",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1336,13 +1336,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_PropertyValueCaster",
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_PropertyValueCaster",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-              "context": "ContextModifier"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable",

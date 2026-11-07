@@ -91,11 +91,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CasteCriticalDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CasteCriticalDamage",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
                 },
                 {

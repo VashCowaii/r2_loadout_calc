@@ -1138,11 +1138,11 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "PointB1_Speed",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "variableName": "PointB1_Speed",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                             },
                             {
@@ -3075,11 +3075,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MDF_CasterAttack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Snapshot Stat Source}}"
           },
-          "variableName": "MDF_CasterAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {
@@ -3704,11 +3704,11 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "PointB1_Speed",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "variableName": "PointB1_Speed",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                             },
                             {
@@ -4115,11 +4115,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CUR_SPEED",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CUR_SPEED",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -4221,11 +4221,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CUR_SPEED",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_CUR_SPEED",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                     },
                     {
@@ -4524,11 +4524,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MDF_CasterAttack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Snapshot Stat Source}}"
           },
-          "variableName": "MDF_CasterAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {

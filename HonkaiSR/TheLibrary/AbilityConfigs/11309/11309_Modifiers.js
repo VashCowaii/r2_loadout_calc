@@ -944,20 +944,20 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Skill03_BaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Skill03_BaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Skill03_BaseAttack_Convert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Skill03_BaseAttack_Convert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
             },
             {
@@ -1337,20 +1337,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Skill03_BaseAttack",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "Skill03_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Skill03_BaseAttack_Convert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "Skill03_BaseAttack_Convert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                     },
                     {
@@ -1517,20 +1517,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Skill03_BaseAttack",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "Skill03_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Skill03_BaseAttack_Convert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "Skill03_BaseAttack_Convert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                     },
                     {

@@ -229,11 +229,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -272,11 +272,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -315,11 +315,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -358,11 +358,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -539,11 +539,11 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CurrentBlackBloodValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "CurrentBlackBloodValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
             },
             {
@@ -556,11 +556,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CurrentEnhanceBlackBloodValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "CurrentEnhanceBlackBloodValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
             },
             {
@@ -573,11 +573,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CurrentRemainBlackBloodValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "CurrentRemainBlackBloodValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
             },
             {

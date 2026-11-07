@@ -112,11 +112,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Summoner of Ability Target(ST)}}"
           },
-          "variableName": "_MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -184,11 +184,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Summoner of Ability Target(ST)}}"
           },
-          "variableName": "_CurrentStance",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
         {
@@ -591,11 +591,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CriticalDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_CriticalDamage",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
                 },
                 {

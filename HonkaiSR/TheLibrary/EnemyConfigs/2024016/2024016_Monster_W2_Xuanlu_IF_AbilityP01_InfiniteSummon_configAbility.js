@@ -61,11 +61,11 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ADF_BossBreakCurrentDelay",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "ADF_BossBreakCurrentDelay",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
             },
             {

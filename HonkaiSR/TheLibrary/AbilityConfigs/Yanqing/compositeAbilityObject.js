@@ -166,11 +166,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Avatar_Yanqing_AggroBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Avatar_Yanqing_AggroBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;"
                 },
                 {

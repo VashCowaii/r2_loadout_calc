@@ -6,11 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "Avatar_Gepard_DefenceValue",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "Avatar_Gepard_DefenceValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {

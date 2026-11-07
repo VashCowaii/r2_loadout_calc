@@ -18,29 +18,29 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "S02_SP_R",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "S02_SP_R",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRateSUM</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "S02_MSP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "S02_MSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "S02_CSP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "S02_CSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
     },
     {

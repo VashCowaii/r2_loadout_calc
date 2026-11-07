@@ -114,11 +114,11 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_Temp_Hp_TeamDark",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "_Temp_Hp_TeamDark",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                         },
                         {

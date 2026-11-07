@@ -512,11 +512,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Speed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Nikador: Self}}"
                   },
-                  "variableName": "MDF_Speed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -10401,11 +10401,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ChangePhase_MaxHPValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "ChangePhase_MaxHPValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {

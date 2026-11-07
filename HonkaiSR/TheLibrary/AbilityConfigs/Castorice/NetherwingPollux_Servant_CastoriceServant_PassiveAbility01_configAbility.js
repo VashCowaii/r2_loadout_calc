@@ -514,11 +514,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CastoriceServant_CurrentCount",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CastoriceServant_CurrentCount",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
@@ -536,11 +536,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CastoriceServant_CurrentCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CastoriceServant_CurrentCount",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
@@ -619,11 +619,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CastoriceServant_SkillMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CastoriceServant_SkillMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 }
               ]

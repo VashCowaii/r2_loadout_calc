@@ -268,11 +268,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_BreakAttackToDelay",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_BreakAttackToDelay",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
                 {
@@ -983,11 +983,11 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                     },
                     {
@@ -1143,11 +1143,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                     },
                     {
@@ -1877,13 +1877,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "DV_Passive_Damage_MaxStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DV_Passive_Damage_MaxStance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1966,11 +1966,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_BreakDamageAddedRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_BreakDamageAddedRatio",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                     },
                     {
@@ -2461,13 +2461,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "DV_Ultra_Damage_MaxStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "DV_Ultra_Damage_MaxStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable",
@@ -3362,13 +3362,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MaxStance",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MaxStance",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                      "warningType": "MaxToughness"
+                      "warningType": "MaxToughness",
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -3388,11 +3388,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "BreakDamageAddedRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "BreakDamageAddedRatio",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                     },
                     {

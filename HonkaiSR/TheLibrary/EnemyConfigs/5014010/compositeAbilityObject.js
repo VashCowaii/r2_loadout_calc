@@ -2081,11 +2081,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_MaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -3763,11 +3763,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ChangePhase_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "ChangePhase_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {

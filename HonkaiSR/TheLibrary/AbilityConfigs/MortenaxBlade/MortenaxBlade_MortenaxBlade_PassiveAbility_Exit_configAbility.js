@@ -121,13 +121,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxSP",
+          "scope": "ContextAbility",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_MaxSP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
-          "context": "ContextAbility"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
           "name": "Update Energy Value",

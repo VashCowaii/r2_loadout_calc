@@ -113,20 +113,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_Skill03_Speed",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_Skill03_Speed",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_Skill03_Speed_Convert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_Skill03_Speed_Convert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
             },
             {

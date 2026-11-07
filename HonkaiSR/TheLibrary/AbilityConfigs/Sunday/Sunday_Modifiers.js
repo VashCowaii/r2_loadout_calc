@@ -28,11 +28,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CritialChance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CritialChance",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
             },
             {
@@ -116,11 +116,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CritialChance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CritialChance",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
             },
             {
@@ -149,11 +149,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CritialChance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CritialChance",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
             },
             {
@@ -921,11 +921,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_ownerCritDamage",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_ownerCritDamage",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
             },
             {

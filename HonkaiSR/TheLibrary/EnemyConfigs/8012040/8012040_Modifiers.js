@@ -111,11 +111,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterBaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterBaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
             },
             {
@@ -215,11 +215,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterBaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterBaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
             },
             {

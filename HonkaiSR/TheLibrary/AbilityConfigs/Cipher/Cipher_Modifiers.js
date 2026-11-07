@@ -1113,11 +1113,11 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "PointB1_Speed",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "variableName": "PointB1_Speed",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                         },
                         {

@@ -343,11 +343,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Castorice_MaxSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Castorice_MaxSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -430,11 +430,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CastoriceServant_CurrentHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "CastoriceServant_CurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
@@ -989,11 +989,11 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_PreShowCurrentHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_PreShowCurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {

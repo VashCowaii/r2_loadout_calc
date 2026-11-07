@@ -235,29 +235,29 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CastoriceServant_SummonMaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "CastoriceServant_SummonMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CastoriceServant_CurrentHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CastoriceServant_CurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CastoriceServant_MaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CastoriceServant_MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         }
       ]

@@ -32,11 +32,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TargetHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "TargetHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {

@@ -172,11 +172,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "Nikadory_Speed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Nikador: Self}}"
           },
-          "variableName": "Nikadory_Speed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {

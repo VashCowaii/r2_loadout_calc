@@ -100,11 +100,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "ADF_MaxHPValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "ADF_MaxHPValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -124,11 +124,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "ADF_CurrentHPValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "ADF_CurrentHPValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
@@ -652,11 +652,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_Defence",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_Defence",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
@@ -728,11 +728,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentSpeed",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentSpeed",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
             },
             {
@@ -1765,11 +1765,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Speed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Nikador: Self}}"
                   },
-                  "variableName": "MDF_Speed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {

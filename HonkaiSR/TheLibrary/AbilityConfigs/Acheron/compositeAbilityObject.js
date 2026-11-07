@@ -2888,20 +2888,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CurrentSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CurrentSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MaxSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "MaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
         },
         {
@@ -3043,10 +3043,6 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-2053212342\">Acheron_Eidolon4_Listen</a>",
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
-          ],
           "execute": [
             {
               "eventTrigger": "Enter Battle",
@@ -3087,10 +3083,6 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1580542257\">Acheron_Eidolon1_Listen</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead"
-          ],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ],
           "execute": [
             {
@@ -3135,10 +3127,6 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "RemoveWhenCasterDead"
-          ],
-          "latentQueue": [
-            "CurrentSP",
-            "MaxSP"
           ],
           "execute": [
             {

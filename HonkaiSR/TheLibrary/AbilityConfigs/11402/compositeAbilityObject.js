@@ -1532,20 +1532,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeedConvert",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentSpeedConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                 },
                 {
@@ -1561,20 +1561,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantCurrentSpeed",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "_ServantCurrentSpeed",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantCurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "_ServantCurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     }
                   ]

@@ -512,20 +512,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "variableName": "_CurrentSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "variableName": "_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -551,20 +551,20 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "variableName": "_CurrentSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "variableName": "_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {

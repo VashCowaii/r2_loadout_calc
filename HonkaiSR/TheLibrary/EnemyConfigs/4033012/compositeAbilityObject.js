@@ -216,11 +216,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_NegativeHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_NegativeHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
                 },
                 {
@@ -1153,13 +1153,13 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_TargetNegativeHp",
+              "scope": "ContextAbility",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_TargetNegativeHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;",
-              "context": "ContextAbility"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1214,13 +1214,13 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_TargetNegativeHp",
+              "scope": "ContextAbility",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_TargetNegativeHp",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;",
-              "context": "ContextAbility"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2138,11 +2138,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_NegativeHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_NegativeHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
                 },
                 {
@@ -3739,20 +3739,20 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_TargetMaxHp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_TargetMaxHp",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_TargetCurrentHp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_TargetCurrentHp",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
@@ -3832,20 +3832,20 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetMaxHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "_TargetMaxHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetCurrentHp",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "_TargetCurrentHp",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {

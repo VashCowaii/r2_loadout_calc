@@ -15,23 +15,23 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TDF_MaxSP",
+          "scope": "ContextTaskTemplate",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "TDF_MaxSP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
-          "context": "ContextTaskTemplate"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TDF_CurSP",
+          "scope": "ContextTaskTemplate",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "TDF_CurSP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-          "context": "ContextTaskTemplate"
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable",
@@ -48,11 +48,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TDF_OverflowSPForCost",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "TDF_OverflowSPForCost",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
         },
         {

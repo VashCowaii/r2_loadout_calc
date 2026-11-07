@@ -17,11 +17,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentBPSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{BattleEvent60048}}"
           },
-          "variableName": "_CurrentBPSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
         },
         {
@@ -86,11 +86,11 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentBPSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{BattleEvent60030}}"
           },
-          "variableName": "_CurrentBPSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
         },
         {

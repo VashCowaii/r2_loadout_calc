@@ -245,11 +245,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_BreakAttackToDelay",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_BreakAttackToDelay",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
             },
             {
@@ -960,11 +960,11 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
                 {
@@ -1120,11 +1120,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
                 {

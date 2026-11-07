@@ -4451,11 +4451,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ChangePhase_MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Nikador - The Giver: Self}}"
           },
-          "variableName": "ChangePhase_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {

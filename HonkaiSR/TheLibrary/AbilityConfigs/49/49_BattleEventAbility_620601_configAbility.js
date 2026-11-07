@@ -572,8 +572,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_Hardlevel_StatusResistance",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;"
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;",
+              "variableName": "_Hardlevel_StatusResistance"
             },
             {
               "name": "Stack Target Stat Value",

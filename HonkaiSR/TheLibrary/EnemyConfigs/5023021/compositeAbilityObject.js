@@ -764,11 +764,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_BaseAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_BaseAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 },
                 {
@@ -829,11 +829,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Attack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_Attack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 },
                 {
@@ -1509,11 +1509,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Attack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_Attack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 },
                 {

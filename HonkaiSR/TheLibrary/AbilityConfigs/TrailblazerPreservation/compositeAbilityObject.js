@@ -847,11 +847,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CasterDefence",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CasterDefence",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
                     {
@@ -1559,11 +1559,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -1690,11 +1690,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -2042,11 +2042,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -2115,20 +2115,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Target_AggroAddedRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Target_AggroAddedRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Target_AggroDelta",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Target_AggroDelta",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AggroFlat</span>&nbsp;"
                 },
                 {
@@ -2268,11 +2268,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -2453,11 +2453,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -2767,11 +2767,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
@@ -2983,11 +2983,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {

@@ -205,11 +205,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "CurrentSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "CurrentSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
     },
     {
@@ -222,11 +222,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CurrentDelay",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "CurrentDelay",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
         },
         {

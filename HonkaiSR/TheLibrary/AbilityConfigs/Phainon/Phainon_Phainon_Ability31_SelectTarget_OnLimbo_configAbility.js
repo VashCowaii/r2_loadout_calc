@@ -6,11 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "ADF_MaxHPValue",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "ADF_MaxHPValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {

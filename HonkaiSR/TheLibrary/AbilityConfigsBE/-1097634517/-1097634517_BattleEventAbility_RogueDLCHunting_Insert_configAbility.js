@@ -32,20 +32,20 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxAttack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_MaxAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxDamageAddRatio",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_MaxDamageAddRatio",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
         }
       ]
@@ -156,11 +156,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_DamageAddRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_DamageAddRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
             },
             {

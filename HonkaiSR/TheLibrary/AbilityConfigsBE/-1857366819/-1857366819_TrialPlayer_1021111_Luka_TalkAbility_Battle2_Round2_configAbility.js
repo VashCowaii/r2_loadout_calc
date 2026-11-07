@@ -6,11 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_LukaMaxHP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "MDF_LukaMaxHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
@@ -183,11 +183,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_TargetMaxHP2",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_TargetMaxHP2",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {

@@ -6,20 +6,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_Lynx_MaxHpValue",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "MDF_Lynx_MaxHpValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_Lynx_MaxHpConvert",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "MDF_Lynx_MaxHpConvert",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
     },
     {

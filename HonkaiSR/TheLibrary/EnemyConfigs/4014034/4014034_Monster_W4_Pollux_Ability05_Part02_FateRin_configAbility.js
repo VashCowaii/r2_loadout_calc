@@ -6,11 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_TargetCurrentHp",
+      "readTarget": {
         "name": "Add Target by Unique Identifier",
         "identifier": "Activity_FateRin_BigTurn_LightTeamAgent"
       },
-      "variableName": "_TargetCurrentHp",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
     },
     "Ability Start",

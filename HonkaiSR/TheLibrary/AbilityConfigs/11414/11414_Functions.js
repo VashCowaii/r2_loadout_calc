@@ -15,11 +15,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "DanHengPT_Attack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "DanHengPT_Attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {
@@ -67,11 +67,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "DanHengPT_Attack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "DanHengPT_Attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {
@@ -119,11 +119,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "DanHengPT_Attack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "DanHengPT_Attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
         {

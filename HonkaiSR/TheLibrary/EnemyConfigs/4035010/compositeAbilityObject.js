@@ -1234,31 +1234,31 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
                   "variableName": "_ActionDelayBase",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                  "context": "ContextModifier"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
                   "variableName": "_ActionDelayBefore",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                  "context": "ContextModifier"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
                   "variableName": "_SPMax",
+                  "readTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
@@ -1413,13 +1413,13 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ActionDelayAfter",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ActionDelayAfter",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                      "context": "ContextModifier"
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {
                       "name": "IF",
@@ -1483,13 +1483,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ActionDelayBefore",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ActionDelayBefore",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                      "context": "ContextModifier"
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     }
                   ]
                 },
@@ -3497,11 +3497,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentBPSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{BattleEvent60048}}"
               },
-              "variableName": "_CurrentBPSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
@@ -3566,11 +3566,11 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentBPSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{BattleEvent60030}}"
               },
-              "variableName": "_CurrentBPSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
@@ -5210,11 +5210,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrentStance",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
         {
@@ -5695,11 +5695,11 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_TargetMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -5877,11 +5877,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_TargetMaxSP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "_TargetMaxSP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                         },
                         {
@@ -6172,11 +6172,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -7561,11 +7561,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_TargetMaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_TargetMaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {
@@ -7864,11 +7864,11 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_TargetMaxSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "_TargetMaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {

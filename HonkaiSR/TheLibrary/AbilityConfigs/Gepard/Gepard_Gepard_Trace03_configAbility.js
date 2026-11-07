@@ -36,20 +36,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Avatar_Gepard_DefenceValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Avatar_Gepard_DefenceValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Avatar_Gepard_DefenceConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Avatar_Gepard_DefenceConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
             },
             {
@@ -79,20 +79,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Avatar_Gepard_DefenceValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Avatar_Gepard_DefenceValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Avatar_Gepard_DefenceConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Avatar_Gepard_DefenceConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
             },
             {

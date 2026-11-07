@@ -137,11 +137,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_MaxHp",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "variableName": "_MaxHp",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {

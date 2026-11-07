@@ -28,11 +28,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CasterSpeed",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CasterSpeed",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
             },
             {

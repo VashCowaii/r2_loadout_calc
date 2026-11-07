@@ -6,11 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "CasterBaseHP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "CasterBaseHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
     },
     {

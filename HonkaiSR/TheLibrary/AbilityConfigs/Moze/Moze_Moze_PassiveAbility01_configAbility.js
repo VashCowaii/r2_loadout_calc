@@ -1056,20 +1056,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_BaseSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_BaseSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_SpeedDelta",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_SpeedDelta",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;"
                 },
                 {

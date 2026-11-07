@@ -2670,11 +2670,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "DV_CurrentDelay",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DV_CurrentDelay",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                 },
                 {
@@ -3565,22 +3565,22 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_CurrentStance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TargetStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "TargetStance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -4840,8 +4840,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "BattleEvent_BaseHP",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
+          "variableName": "BattleEvent_BaseHP"
         },
         {
           "name": "Define Custom Variable",
@@ -5374,7 +5374,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "DV_Delay",
+                                  "readTarget": {
                                     "name": "Target Sequence",
                                     "TargetList": [
                                       {
@@ -5394,7 +5395,6 @@ const compositeAbilityObject = {
                                       }
                                     ]
                                   },
-                                  "variableName": "DV_Delay",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                                 },
                                 {
@@ -5595,11 +5595,11 @@ const compositeAbilityObject = {
                               "ifTargetFound": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "DV_maxHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "DV_maxHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                 },
                                 {
@@ -5648,11 +5648,11 @@ const compositeAbilityObject = {
                                   "ifTargetFound": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "DV_maxHP",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "DV_maxHP",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                     },
                                     {

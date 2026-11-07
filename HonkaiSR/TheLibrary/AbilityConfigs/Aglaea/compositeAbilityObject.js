@@ -1584,20 +1584,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeedConvert",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_CurrentSpeedConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                 },
                 {
@@ -1613,20 +1613,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantCurrentSpeed",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "_ServantCurrentSpeed",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantCurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "_ServantCurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     }
                   ]
@@ -2544,20 +2544,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_SPvalue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_SPvalue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MaxSp",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_MaxSp",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
@@ -2629,20 +2629,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_ServantCurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "_ServantCurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {
@@ -3120,11 +3120,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterBaseHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterBaseHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
         },
         {
@@ -3322,20 +3322,20 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ServantMaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "variableName": "ServantMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "ServantCurrentHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "variableName": "ServantCurrentHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
@@ -4829,20 +4829,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_CurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_ServantCurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_ServantCurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {

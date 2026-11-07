@@ -476,11 +476,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_Speed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Nikador: Self}}"
                   },
-                  "variableName": "MDF_Speed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {

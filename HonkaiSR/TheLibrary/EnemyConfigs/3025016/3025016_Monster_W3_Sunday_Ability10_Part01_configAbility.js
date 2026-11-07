@@ -33,11 +33,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "Skill10Attack",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "Skill10Attack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
     },
     {

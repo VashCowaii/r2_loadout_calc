@@ -378,11 +378,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "EnemyBoss_MaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 2}}"
           },
-          "variableName": "EnemyBoss_MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {

@@ -678,7 +678,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "DV_Delay",
+                              "readTarget": {
                                 "name": "Target Sequence",
                                 "TargetList": [
                                   {
@@ -698,7 +699,6 @@ const configAbility = {
                                   }
                                 ]
                               },
-                              "variableName": "DV_Delay",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                             },
                             {
@@ -899,11 +899,11 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "DV_maxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "DV_maxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -953,11 +953,11 @@ const configAbility = {
                               "ifTargetFound": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "DV_maxHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "DV_maxHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                 },
                                 {

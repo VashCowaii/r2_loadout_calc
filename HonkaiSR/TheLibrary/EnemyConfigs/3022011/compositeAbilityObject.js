@@ -579,11 +579,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_BattleEvent60019_SP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_BattleEvent60019_SP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
@@ -860,20 +860,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ActionDelaySummoner",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "variableName": "_ActionDelaySummoner",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ActionDelay",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ActionDelay",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                     },
                     {
@@ -927,11 +927,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CurrentHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "CurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
                   ]

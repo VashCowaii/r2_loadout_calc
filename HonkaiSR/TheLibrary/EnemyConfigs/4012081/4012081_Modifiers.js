@@ -199,11 +199,11 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MDF_BreakStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "MDF_BreakStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {

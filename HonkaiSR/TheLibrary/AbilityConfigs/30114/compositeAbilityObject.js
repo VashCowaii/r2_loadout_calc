@@ -359,11 +359,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TempHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TempHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                 }
               ]

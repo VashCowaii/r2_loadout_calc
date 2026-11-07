@@ -308,11 +308,11 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "MDF_BreakStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
                                       },
-                                      "variableName": "MDF_BreakStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -753,11 +753,11 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "MDF_BreakStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "variableName": "MDF_BreakStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -1828,11 +1828,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_MaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -3973,11 +3973,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "BaseAttack",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "BaseAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
         },
         {

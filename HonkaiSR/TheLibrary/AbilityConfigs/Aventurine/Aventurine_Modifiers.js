@@ -74,11 +74,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentDefence2",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_CurrentDefence2",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             }
           ]
@@ -226,11 +226,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentDefence2",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_CurrentDefence2",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
@@ -1435,20 +1435,20 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentDefence",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentDefence",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentDefenceConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentDefenceConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;"
             },
             {
@@ -1582,11 +1582,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_BaseDefence",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_BaseDefence",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFBase</span>&nbsp;"
             },
             {
@@ -2947,11 +2947,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentDefence2",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_CurrentDefence2",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {

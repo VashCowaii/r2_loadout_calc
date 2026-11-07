@@ -468,11 +468,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_BaseAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_BaseAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 },
                 {
@@ -518,11 +518,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_BaseAttack",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "MDF_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                     },
                     {
@@ -583,11 +583,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
                 },
                 {

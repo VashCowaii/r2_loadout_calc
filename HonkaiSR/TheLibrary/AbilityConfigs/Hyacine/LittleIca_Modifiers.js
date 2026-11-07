@@ -124,11 +124,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_ModifierOwnerCurrentHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_ModifierOwnerCurrentHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             }
           ]
@@ -258,11 +258,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ServantMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_ServantMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -335,11 +335,11 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "Summoner_MaxHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "variableName": "Summoner_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
@@ -372,11 +372,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Summoner_MaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "Summoner_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -416,11 +416,11 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "Summoner_MaxHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "variableName": "Summoner_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
@@ -776,11 +776,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ServantMaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_ServantMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -853,11 +853,11 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Summoner_MaxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "Summoner_MaxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -890,11 +890,11 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "Summoner_MaxHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster's Summoner}}"
                           },
-                          "variableName": "Summoner_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
@@ -934,11 +934,11 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Summoner_MaxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Summoner}}"
                               },
-                              "variableName": "Summoner_MaxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {

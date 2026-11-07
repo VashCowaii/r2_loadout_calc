@@ -15,11 +15,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurrentSpeed",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "_CurrentSpeed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {
@@ -58,11 +58,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentSpeedConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CurrentSpeedConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
             },
             {
@@ -242,20 +242,20 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurSpecialSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurSpecialSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxSpecialSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_MaxSpecialSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
         },
         {
@@ -330,11 +330,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurExtraSpecialSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_CurExtraSpecialSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
         },
         {

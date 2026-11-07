@@ -36,20 +36,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_TargetMaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CasterAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Snapshot Stat Source}}"
               },
-              "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
@@ -107,20 +107,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_TargetMaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CasterAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Snapshot Stat Source}}"
               },
-              "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
@@ -199,20 +199,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_TargetMaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CasterAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Snapshot Stat Source}}"
               },
-              "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {

@@ -450,20 +450,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TempHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TempHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "TempAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TempAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 },
                 {
@@ -489,8 +489,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Hardlevel_StatusResistance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;"
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;",
+                  "variableName": "Hardlevel_StatusResistance"
                 },
                 {
                   "name": "Stack Target Stat Value",

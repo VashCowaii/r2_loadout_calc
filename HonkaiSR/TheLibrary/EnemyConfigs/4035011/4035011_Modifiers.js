@@ -1047,20 +1047,20 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_MaxSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_MaxSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurrentSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MDF_CurrentSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                 },
                 {
@@ -1276,11 +1276,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxHp",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_MaxHp",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -1326,11 +1326,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentHp",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CurrentHp",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
@@ -3491,31 +3491,31 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
               "variableName": "_ActionDelayBase",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-              "context": "ContextModifier"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable with Stat",
               "variableName": "_ActionDelayBefore",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-              "context": "ContextModifier"
-            },
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
+              "scope": "ContextModifier",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
+            },
+            {
+              "name": "Define Custom Variable with Stat",
               "variableName": "_SPMax",
+              "readTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {
@@ -3670,13 +3670,13 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ActionDelayAfter",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ActionDelayAfter",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                  "context": "ContextModifier"
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -3740,13 +3740,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ActionDelayBefore",
+                  "scope": "ContextModifier",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ActionDelayBefore",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
-                  "context": "ContextModifier"
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                 }
               ]
             },

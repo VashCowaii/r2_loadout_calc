@@ -10,11 +10,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "Gepard_MaxHPValue",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "Gepard_MaxHPValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
@@ -85,11 +85,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MDF_MaxSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "MDF_MaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {

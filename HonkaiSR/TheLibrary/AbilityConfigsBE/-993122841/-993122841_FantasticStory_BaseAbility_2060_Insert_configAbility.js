@@ -140,20 +140,20 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "variableName": "_CurrentSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "variableName": "_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -179,20 +179,20 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrentSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "variableName": "_CurrentSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Far Left Player Entity(no Memosprite)}}"
               },
-              "variableName": "_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {

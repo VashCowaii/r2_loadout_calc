@@ -136,11 +136,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBase</span>&nbsp;"
             },
             {
@@ -179,11 +179,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBase</span>&nbsp;"
             },
             {
@@ -222,11 +222,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBase</span>&nbsp;"
             },
             {
@@ -265,11 +265,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBase</span>&nbsp;"
             },
             {
@@ -308,11 +308,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBase</span>&nbsp;"
             },
             {
@@ -351,11 +351,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBase</span>&nbsp;"
             },
             {
@@ -394,11 +394,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_resistanceBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_resistanceBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBase</span>&nbsp;"
             },
             {

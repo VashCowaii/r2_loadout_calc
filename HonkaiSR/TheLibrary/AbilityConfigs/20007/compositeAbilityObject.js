@@ -635,11 +635,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "BaseSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "BaseSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                 },
                 {

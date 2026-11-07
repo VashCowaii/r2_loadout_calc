@@ -186,8 +186,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "BattleEvent_BaseHP",
-      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Define Custom Variable",
@@ -684,7 +684,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "DV_Delay",
+                              "readTarget": {
                                 "name": "Target Sequence",
                                 "TargetList": [
                                   {
@@ -704,7 +705,6 @@ const configAbility = {
                                   }
                                 ]
                               },
-                              "variableName": "DV_Delay",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                             },
                             {
@@ -905,11 +905,11 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "DV_maxHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "DV_maxHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                             },
                             {
@@ -959,11 +959,11 @@ const configAbility = {
                               "ifTargetFound": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "DV_maxHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "DV_maxHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                                 },
                                 {

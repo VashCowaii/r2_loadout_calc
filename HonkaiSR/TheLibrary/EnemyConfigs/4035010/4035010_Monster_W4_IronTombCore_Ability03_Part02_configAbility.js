@@ -38,11 +38,11 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_TargetMaxSP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "variableName": "_TargetMaxSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
     },
     {

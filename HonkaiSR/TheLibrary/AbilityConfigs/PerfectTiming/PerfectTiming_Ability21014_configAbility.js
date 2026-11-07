@@ -85,11 +85,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterStatusResistance",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterStatusResistance",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;"
             },
             {
@@ -124,11 +124,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterStatusResistance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CasterStatusResistance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;"
                 },
                 {

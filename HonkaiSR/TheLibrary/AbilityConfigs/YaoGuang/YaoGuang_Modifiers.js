@@ -430,11 +430,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_ElationDamageAddedRatioBase",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_ElationDamageAddedRatioBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;"
             },
             {
@@ -551,11 +551,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ElationDamageAddedRatioBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ElationDamageAddedRatioBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;"
                 },
                 {
@@ -644,20 +644,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ElationDamageAddedRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ElationDamageAddedRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ElationDamageAddedRatio_YG",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_ElationDamageAddedRatio_YG",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGSUM</span>&nbsp;"
                 },
                 {
@@ -694,11 +694,11 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_ElationEchoPoint_YG",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_ElationEchoPoint_YG",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;"
                 },
                 {

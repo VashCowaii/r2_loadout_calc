@@ -31,11 +31,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ChangePhase_MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "ChangePhase_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -110,11 +110,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ChangePhase_MaxHPValue",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "ChangePhase_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -250,13 +250,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Base Break Damage",
@@ -329,13 +329,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
@@ -387,13 +387,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
@@ -444,13 +444,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "IF",
@@ -532,13 +532,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
@@ -590,13 +590,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
@@ -649,13 +649,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
@@ -720,13 +720,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -764,13 +764,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -809,13 +809,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -853,13 +853,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -898,13 +898,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -943,13 +943,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -988,13 +988,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1064,13 +1064,13 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1235,13 +1235,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TargetStance",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TargetStance",
-          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-          "warningType": "MaxToughness"
+          "warningType": "MaxToughness",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",

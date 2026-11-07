@@ -3073,13 +3073,13 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MaxSP",
+                  "scope": "ContextAbility",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_MaxSP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
-                  "context": "ContextAbility"
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
                   "name": "Update Energy Value",
@@ -3176,13 +3176,13 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MaxSP",
+                  "scope": "ContextAbility",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_MaxSP",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
-                  "context": "ContextAbility"
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
                   "name": "Update Energy Value",
@@ -3334,13 +3334,13 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSP",
+              "scope": "ContextAbility",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_MaxSP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
-              "context": "ContextAbility"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {
               "name": "Update Energy Value",
@@ -3550,20 +3550,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MortenaxBlade_00_EntityMaxSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MortenaxBlade_00_EntityMaxSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
                     {
@@ -3758,11 +3758,11 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "_PointB1_EntityCurrentSP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "_PointB1_EntityCurrentSP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                         },
                         {
@@ -3785,11 +3785,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MortenaxBlade_00_EntityMaxSP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MortenaxBlade_00_EntityMaxSP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                         },
                         {
@@ -3992,11 +3992,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_MaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
@@ -4072,13 +4072,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_MaxSP",
+                      "scope": "ContextModifier",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_MaxSP",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
-                      "context": "ContextModifier"
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
                     {
                       "name": "Update Energy Value",

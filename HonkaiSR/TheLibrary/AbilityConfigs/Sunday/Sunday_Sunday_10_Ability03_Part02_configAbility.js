@@ -76,11 +76,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_MAXSP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "variableName": "_MAXSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
     },
     {
@@ -631,11 +631,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_ownerCritDamage",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "_ownerCritDamage",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
                     },
                     {

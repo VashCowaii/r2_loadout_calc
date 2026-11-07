@@ -378,11 +378,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterBaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterBaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
             },
             {
@@ -481,11 +481,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterBaseAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterBaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
             },
             {
@@ -1321,11 +1321,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_Defence",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "MDF_Defence",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
             {
@@ -2565,11 +2565,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -2667,11 +2667,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentShieldValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentShieldValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
             },
             {

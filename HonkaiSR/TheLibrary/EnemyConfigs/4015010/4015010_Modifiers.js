@@ -701,11 +701,11 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "MDF_BreakStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "variableName": "MDF_BreakStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -1229,11 +1229,11 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MDF_BreakStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "variableName": "MDF_BreakStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {
@@ -1711,11 +1711,11 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_BreakStance",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "MDF_BreakStance",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                     },
                     {
@@ -2528,11 +2528,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_BaseAttack",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_BaseAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                 }
               ]
@@ -2673,11 +2673,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_BaseAttack",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "MDF_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                     }
                   ]
@@ -2820,11 +2820,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_BaseAttack",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "MDF_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
                     }
                   ]

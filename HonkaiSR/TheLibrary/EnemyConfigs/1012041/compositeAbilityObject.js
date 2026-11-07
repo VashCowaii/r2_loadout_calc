@@ -221,11 +221,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Owner_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Svarog's Confinement Target v2}}"
               },
-              "variableName": "Owner_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -604,11 +604,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Owner_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Svarog's Confinement Target v2}}"
               },
-              "variableName": "Owner_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
@@ -814,11 +814,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Owner_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Svarog's Confinement Target v2}}"
               },
-              "variableName": "Owner_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {

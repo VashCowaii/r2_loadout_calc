@@ -23,11 +23,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "MDF_CasterAttack",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Snapshot Stat Source}}"
       },
-      "variableName": "MDF_CasterAttack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
     },
     {

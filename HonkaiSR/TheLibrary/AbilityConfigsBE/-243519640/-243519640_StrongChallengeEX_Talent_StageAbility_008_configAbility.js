@@ -164,11 +164,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurrSpeed",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_CurrSpeed",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
             }
           ]

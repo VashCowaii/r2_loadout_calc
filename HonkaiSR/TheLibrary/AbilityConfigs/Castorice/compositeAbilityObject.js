@@ -390,11 +390,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Castorice_MaxSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Castorice_MaxSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
                 },
                 {
@@ -477,11 +477,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "CastoriceServant_CurrentHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Caster's Memosprite}}"
                           },
-                          "variableName": "CastoriceServant_CurrentHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                         },
                         {
@@ -1036,11 +1036,11 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MDF_PreShowCurrentHP",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PreShowCurrentHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                         },
                         {
@@ -2673,11 +2673,11 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "Passive_CastoriceServant_CurrentHP",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Caster's Memosprite}}"
                                   },
-                                  "variableName": "Passive_CastoriceServant_CurrentHP",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                                 },
                                 {
@@ -2807,11 +2807,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "Castorice_Level",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Castorice_Level",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;"
                         },
                         {
@@ -2941,20 +2941,20 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Passive_CastoriceServant_CurrentSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Passive_CastoriceServant_CurrentSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Passive_CastoriceServant_CurrentExtraSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "Passive_CastoriceServant_CurrentExtraSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
                 },
                 {
@@ -3613,11 +3613,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Castorice_Rank02_MaxSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Castorice_Rank02_MaxSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -4130,20 +4130,20 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_CurSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_MaxSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -4218,11 +4218,11 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_CurExtraSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_CurExtraSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
             },
             {
@@ -4841,11 +4841,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_PreShowMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PreShowMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -6218,11 +6218,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CastoriceServant_CurrentCount",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CastoriceServant_CurrentCount",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
@@ -6240,11 +6240,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CastoriceServant_CurrentCount",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CastoriceServant_CurrentCount",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
@@ -6323,11 +6323,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CastoriceServant_SkillMaxHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CastoriceServant_SkillMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     }
                   ]
@@ -9227,29 +9227,29 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CastoriceServant_SummonMaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CastoriceServant_SummonMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CastoriceServant_CurrentHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CastoriceServant_CurrentHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CastoriceServant_MaxHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CastoriceServant_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             }
           ]

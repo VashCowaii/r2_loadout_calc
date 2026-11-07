@@ -103,11 +103,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "Owner_MaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Svarog's Confinement Target}}"
           },
-          "variableName": "Owner_MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {

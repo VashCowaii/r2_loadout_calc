@@ -1421,11 +1421,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "SkillTree_PointB2_StatusProbabilityValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "SkillTree_PointB2_StatusProbabilityValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
             },
             {

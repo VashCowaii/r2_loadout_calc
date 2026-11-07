@@ -3193,20 +3193,20 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CasterHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHPConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CasterHPConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
             },
             {
@@ -3303,11 +3303,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterCritRatio",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CasterCritRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
                 },
                 {
@@ -3372,20 +3372,20 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHPConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterHPConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
             },
             {
@@ -3421,11 +3421,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterCritRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterCritRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
             },
             {
@@ -3589,20 +3589,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterHPConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterHPConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
             },
             {
@@ -3638,11 +3638,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterCritRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterCritRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
             },
             {
@@ -3950,11 +3950,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_MaxSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_MaxSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
@@ -3987,11 +3987,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MaxSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_MaxSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
                 },
                 {
@@ -4184,20 +4184,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurExtraSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CurExtraSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_MaxSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_MaxSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
                 },
                 {
@@ -4644,11 +4644,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CyreneHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_CyreneHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {

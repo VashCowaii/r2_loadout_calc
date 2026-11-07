@@ -164,11 +164,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_Temp_Hp",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "_Temp_Hp",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                     },
                     {
@@ -503,11 +503,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_Temp_Hp",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "_Temp_Hp",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;"
                     },
                     {

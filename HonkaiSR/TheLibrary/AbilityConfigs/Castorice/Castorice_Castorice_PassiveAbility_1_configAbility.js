@@ -718,11 +718,11 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "Passive_CastoriceServant_CurrentHP",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Caster's Memosprite}}"
                               },
-                              "variableName": "Passive_CastoriceServant_CurrentHP",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                             },
                             {
@@ -852,11 +852,11 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "Castorice_Level",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Castorice_Level",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;"
                     },
                     {
@@ -986,20 +986,20 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Passive_CastoriceServant_CurrentSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Passive_CastoriceServant_CurrentSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "Passive_CastoriceServant_CurrentExtraSpecialSP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "Passive_CastoriceServant_CurrentExtraSpecialSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
             },
             {

@@ -6,20 +6,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_CurrentSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "variableName": "_CurrentSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_ServantCurrentSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "_ServantCurrentSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
     },
     {

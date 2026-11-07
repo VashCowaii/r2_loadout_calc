@@ -82,11 +82,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "MDF_CurrentDefence2",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "MDF_CurrentDefence2",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {

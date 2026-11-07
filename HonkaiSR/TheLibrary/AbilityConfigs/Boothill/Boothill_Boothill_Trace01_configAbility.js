@@ -83,11 +83,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterBreakDamageAdded",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "CasterBreakDamageAdded",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
             {
@@ -147,11 +147,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterBreakDamageAdded",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CasterBreakDamageAdded",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                 },
                 {

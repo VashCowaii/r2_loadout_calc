@@ -94,20 +94,20 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentAttack",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentAttackConvert",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CurrentAttackConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
             },
             {

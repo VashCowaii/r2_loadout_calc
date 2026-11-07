@@ -2512,11 +2512,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_CurrentSpeed",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_CurrentSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
@@ -2553,11 +2553,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "_CurrentSpeedConvert",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_CurrentSpeedConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                     },
                     {
@@ -2893,11 +2893,11 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBase</span>&nbsp;"
                 },
                 {
@@ -2936,11 +2936,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBase</span>&nbsp;"
                 },
                 {
@@ -2979,11 +2979,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBase</span>&nbsp;"
                 },
                 {
@@ -3022,11 +3022,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIceBase</span>&nbsp;"
                 },
                 {
@@ -3065,11 +3065,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBase</span>&nbsp;"
                 },
                 {
@@ -3108,11 +3108,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumBase</span>&nbsp;"
                 },
                 {
@@ -3151,11 +3151,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_resistanceBase",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_resistanceBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryBase</span>&nbsp;"
                 },
                 {
@@ -4111,13 +4111,13 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "_critChance",
+                  "scope": "ContextTaskTemplate",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "_critChance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                  "context": "ContextTaskTemplate"
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4301,11 +4301,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_CurSpecialSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "MDF_CurSpecialSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
                     },
                     {
@@ -4334,11 +4334,11 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "MDF_CurExtraSpecialSP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "MDF_CurExtraSpecialSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
                     },
                     {
@@ -7169,11 +7169,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_tmp_OverflowSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "_tmp_OverflowSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
         },
         {
@@ -7547,23 +7547,23 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "TDF_MaxSP",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "TDF_MaxSP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
-              "context": "ContextTaskTemplate"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "TDF_CurSP",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "TDF_CurSP",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
-              "context": "ContextTaskTemplate"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable",
@@ -7580,11 +7580,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "TDF_OverflowSPForCost",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "TDF_OverflowSPForCost",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
             },
             {

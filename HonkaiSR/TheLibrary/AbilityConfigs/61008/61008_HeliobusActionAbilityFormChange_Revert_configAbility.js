@@ -50,11 +50,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_MaxHP",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Summoner of Ability Target(ST)}}"
       },
-      "variableName": "_MaxHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
@@ -122,11 +122,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "_CurrentStance",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Summoner of Ability Target(ST)}}"
       },
-      "variableName": "_CurrentStance",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
     },
     {

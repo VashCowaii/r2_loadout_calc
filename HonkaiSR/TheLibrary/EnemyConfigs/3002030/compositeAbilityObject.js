@@ -45,11 +45,11 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Owner_MaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Owner_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 }
               ]
@@ -69,11 +69,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Owner_MaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Owner_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -92,11 +92,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -106,12 +106,12 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDamage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
+                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
+                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
                       "constants": [],
                       "variables": [
                         "Modifier_Bleed_MaxDamagePercentage",
-                        "MDF_CasterMaxHP"
+                        "MDF_CurrentDamage"
                       ]
                     }
                   },
@@ -120,12 +120,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageValue",
                       "value": {
-                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
+                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
+                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
                         "constants": [],
                         "variables": [
                           "Modifier_Bleed_MaxDamagePercentage",
-                          "MDF_CasterMaxHP"
+                          "MDF_CurrentDamage"
                         ]
                       }
                     }
@@ -188,11 +188,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "Owner_MaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Owner_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -211,11 +211,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CasterMaxHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Snapshot Stat Source}}"
                   },
-                  "variableName": "MDF_CasterMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
@@ -225,12 +225,12 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDamage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
+                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
+                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
                       "constants": [],
                       "variables": [
                         "Modifier_Bleed_MaxDamagePercentage",
-                        "MDF_CasterMaxHP"
+                        "MDF_CurrentDamage"
                       ]
                     }
                   },
@@ -239,12 +239,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageValue",
                       "value": {
-                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
-                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
+                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
+                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
                         "constants": [],
                         "variables": [
                           "Modifier_Bleed_MaxDamagePercentage",
-                          "MDF_CasterMaxHP"
+                          "MDF_CurrentDamage"
                         ]
                       }
                     }

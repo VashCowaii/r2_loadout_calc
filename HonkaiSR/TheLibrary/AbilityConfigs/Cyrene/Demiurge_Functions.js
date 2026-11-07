@@ -119,20 +119,20 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterSummonerMaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "CasterSummonerMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
@@ -147,11 +147,11 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "CasterSummonerNegativeHP",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "CasterSummonerNegativeHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPNegative</span>&nbsp;"
             },
             {
@@ -239,11 +239,11 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CasterHP",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "variableName": "CasterHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
@@ -297,11 +297,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "CasterHP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "CasterHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
@@ -936,20 +936,20 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_CurSpecialSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_CurSpecialSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "_MaxSpecialSP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_MaxSpecialSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;"
         },
         {

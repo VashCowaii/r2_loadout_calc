@@ -108,20 +108,20 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ServantMaxHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "ServantMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "ServantCurrentHP",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "ServantCurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {

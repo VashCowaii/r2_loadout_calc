@@ -67,11 +67,11 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "MDF_CurrentBreakDamageAddedRatio",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "MDF_CurrentBreakDamageAddedRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
             {

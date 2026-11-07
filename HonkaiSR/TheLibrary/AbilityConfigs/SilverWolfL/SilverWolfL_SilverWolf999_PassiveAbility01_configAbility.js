@@ -118,13 +118,13 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "_critChance",
+              "scope": "ContextTaskTemplate",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "_critChance",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-              "context": "ContextTaskTemplate"
+              "value": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable",
@@ -308,11 +308,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_CurSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;"
                 },
                 {
@@ -341,11 +341,11 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MDF_CurExtraSpecialSP",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_CurExtraSpecialSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;"
                 },
                 {

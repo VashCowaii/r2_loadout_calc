@@ -39,11 +39,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "HeadDelay",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "HeadDelay",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
         },
         {
@@ -83,11 +83,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "LimbDelay",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "LimbDelay",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
         },
         {
@@ -127,11 +127,11 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "TailDelay",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "TailDelay",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
         },
         {
@@ -152,11 +152,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": {
+      "variableName": "CurrentSpeed",
+      "readTarget": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "variableName": "CurrentSpeed",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
     },
     {
@@ -288,13 +288,13 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MaxStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MaxStance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -389,11 +389,11 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "CurrentStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "CurrentStance",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                         },
                         {
@@ -479,11 +479,11 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CurrentStance",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "CurrentStance",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                     },
                     {
@@ -588,13 +588,13 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MaxStance",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MaxStance",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                  "warningType": "MaxToughness"
+                  "warningType": "MaxToughness",
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -689,11 +689,11 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "CurrentStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "CurrentStance",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                         },
                         {
@@ -779,11 +779,11 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": {
+                      "variableName": "CurrentStance",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "CurrentStance",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                     },
                     {
@@ -876,11 +876,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": {
+                  "variableName": "MainDelay",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "MainDelay",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;"
                 },
                 {
@@ -1016,13 +1016,13 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MaxStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MaxStance",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                          "warningType": "MaxToughness"
+                          "warningType": "MaxToughness",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                         },
                         {
                           "name": "IF",
@@ -1098,23 +1098,23 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "MaxStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "MaxStance",
-                                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                                  "warningType": "MaxToughness"
+                                  "warningType": "MaxToughness",
+                                  "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -1200,11 +1200,11 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "CurrentStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "CurrentStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {
@@ -1309,13 +1309,13 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MaxStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MaxStance",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                          "warningType": "MaxToughness"
+                          "warningType": "MaxToughness",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                         },
                         {
                           "name": "IF",
@@ -1410,11 +1410,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -1500,11 +1500,11 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "CurrentStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "CurrentStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {
@@ -1632,13 +1632,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -1733,11 +1733,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -1823,11 +1823,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -1937,13 +1937,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -2038,11 +2038,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -2128,11 +2128,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -2244,13 +2244,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -2345,11 +2345,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -2435,11 +2435,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -2544,13 +2544,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -2645,11 +2645,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -2735,11 +2735,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -2871,13 +2871,13 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MaxStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MaxStance",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                          "warningType": "MaxToughness"
+                          "warningType": "MaxToughness",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                         },
                         {
                           "name": "IF",
@@ -2972,11 +2972,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -3062,11 +3062,11 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "CurrentStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "CurrentStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {
@@ -3171,13 +3171,13 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": {
+                          "variableName": "MaxStance",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MaxStance",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                          "warningType": "MaxToughness"
+                          "warningType": "MaxToughness",
+                          "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                         },
                         {
                           "name": "IF",
@@ -3272,11 +3272,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -3362,11 +3362,11 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "CurrentStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "CurrentStance",
                               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                             },
                             {
@@ -3494,13 +3494,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -3595,11 +3595,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -3685,11 +3685,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -3794,13 +3794,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -3895,11 +3895,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -3985,11 +3985,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -4101,13 +4101,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -4202,11 +4202,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -4292,11 +4292,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {
@@ -4401,13 +4401,13 @@ const configAbility = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable with Stat",
-                              "target": {
+                              "variableName": "MaxStance",
+                              "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "MaxStance",
-                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
-                              "warningType": "MaxToughness"
+                              "warningType": "MaxToughness",
+                              "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
                             },
                             {
                               "name": "IF",
@@ -4502,11 +4502,11 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable with Stat",
-                                      "target": {
+                                      "variableName": "CurrentStance",
+                                      "readTarget": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "CurrentStance",
                                       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                     },
                                     {
@@ -4592,11 +4592,11 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable with Stat",
-                                  "target": {
+                                  "variableName": "CurrentStance",
+                                  "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "CurrentStance",
                                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
                                 },
                                 {

@@ -205,20 +205,20 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": {
+              "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
             },
             {

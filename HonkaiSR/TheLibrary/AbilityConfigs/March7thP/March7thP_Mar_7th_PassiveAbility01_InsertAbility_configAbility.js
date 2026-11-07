@@ -14,11 +14,11 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": {
+          "variableName": "CasterDefence",
+          "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
         {
