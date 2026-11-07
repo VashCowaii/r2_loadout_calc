@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Warning Countdown",
-                  "time": {
+                  "countdownTime": {
                     "operator": "Variables[0] (MAX) || Variables[1] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((BattleEventTurnLeftParam - 1), 0)",
                     "constants": [
@@ -1761,7 +1761,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Set Warning Countdown",
-                      "time": {
+                      "countdownTime": {
                         "operator": "Variables[0] (BattleEventTurnLeftParam) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(BattleEventTurnLeftParam - 1)",
                         "constants": [
