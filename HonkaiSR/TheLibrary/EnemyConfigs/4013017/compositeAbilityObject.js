@@ -185,11 +185,11 @@ const compositeAbilityObject = {
                               "Sort by AITag Params DamageCarry[Trimmed]",
                               {
                                 "name": "Sort by Matching Weakness",
-                                "matchFirst": true,
                                 "defenders": {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
-                                }
+                                },
+                                "matchFirst": true
                               }
                             ]
                           },
@@ -234,11 +234,11 @@ const compositeAbilityObject = {
                                   "Sort by AITag Params DamageCarry[Trimmed]",
                                   {
                                     "name": "Sort by Matching Weakness",
-                                    "matchFirst": true,
                                     "defenders": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
-                                    }
+                                    },
+                                    "matchFirst": true
                                   }
                                 ]
                               },
@@ -269,11 +269,11 @@ const compositeAbilityObject = {
                                   "Sort by AITag Params DamageCarry[Trimmed]",
                                   {
                                     "name": "Sort by Matching Weakness",
-                                    "matchFirst": true,
                                     "defenders": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
-                                    }
+                                    },
+                                    "matchFirst": true
                                   }
                                 ]
                               },
