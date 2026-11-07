@@ -164,10 +164,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "matchToPathFrom": [
+              "variableName": "MemoryTypeCount",
+              "path": [
                 "Remembrance"
-              ],
-              "variableName": "MemoryTypeCount"
+              ]
             },
             {
               "name": "IF",

@@ -58,11 +58,11 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "matchToPathFrom": {
+              "variableName": "SameTypeCount",
+              "pathTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "SameTypeCount"
+              }
             },
             {
               "name": "IF",

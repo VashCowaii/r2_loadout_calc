@@ -129,11 +129,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Matching Path",
-              "target": null,
-              "matchToPathFrom": [
+              "variableName": "_Elation_PreviousCount",
+              "path": [
                 "Elation"
-              ],
-              "variableName": "_Elation_PreviousCount"
+              ]
             },
             {
               "name": "Define Custom Variable",
@@ -209,11 +208,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Matching Path",
-              "target": null,
-              "matchToPathFrom": [
+              "variableName": "_Elation_CurrentCount",
+              "path": [
                 "Elation"
-              ],
-              "variableName": "_Elation_CurrentCount"
+              ]
             },
             {
               "name": "Define Custom Variable",

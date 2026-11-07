@@ -198,10 +198,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "matchToPathFrom": [
+              "variableName": "ElationTypeCount",
+              "path": [
                 "Elation"
-              ],
-              "variableName": "ElationTypeCount"
+              ]
             },
             {
               "name": "IF",

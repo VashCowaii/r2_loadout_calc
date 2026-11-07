@@ -398,11 +398,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Matching Path",
-                  "target": null,
-                  "matchToPathFrom": [
+                  "variableName": "Acheron_BaseTypeCount",
+                  "path": [
                     "Nihility"
-                  ],
-                  "variableName": "Acheron_BaseTypeCount"
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",

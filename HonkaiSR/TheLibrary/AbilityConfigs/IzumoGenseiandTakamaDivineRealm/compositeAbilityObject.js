@@ -72,11 +72,11 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
                       },
-                      "matchToPathFrom": {
+                      "variableName": "_SameTypeCount",
+                      "pathTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
-                      },
-                      "variableName": "_SameTypeCount"
+                      }
                     },
                     {
                       "name": "IF",

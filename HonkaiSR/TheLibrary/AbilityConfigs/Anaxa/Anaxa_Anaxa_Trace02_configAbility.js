@@ -135,12 +135,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Matching Path",
-                  "target": null,
-                  "matchToPathFrom": [
-                    "Erudition"
-                  ],
                   "variableName": "_count",
-                  "context": "ContextModifier"
+                  "scope": "ContextModifier",
+                  "path": [
+                    "Erudition"
+                  ]
                 },
                 {
                   "name": "IF",

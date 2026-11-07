@@ -440,10 +440,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]]"
                   },
-                  "matchToPathFrom": [
+                  "variableName": "ElationTypeCount",
+                  "path": [
                     "Elation"
-                  ],
-                  "variableName": "ElationTypeCount"
+                  ]
                 },
                 {
                   "name": "IF",
@@ -4595,10 +4595,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]]"
                   },
-                  "matchToPathFrom": [
+                  "variableName": "MemoryTypeCount",
+                  "path": [
                     "Remembrance"
-                  ],
-                  "variableName": "MemoryTypeCount"
+                  ]
                 },
                 {
                   "name": "IF",
@@ -10055,10 +10055,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
                   },
-                  "matchToPathFrom": [
+                  "variableName": "MageTypeCount",
+                  "path": [
                     "Erudition"
-                  ],
-                  "variableName": "MageTypeCount"
+                  ]
                 },
                 {
                   "name": "IF",
@@ -10120,10 +10120,10 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]]"
                   },
-                  "matchToPathFrom": [
+                  "variableName": "MageTypeCount",
+                  "path": [
                     "Erudition"
-                  ],
-                  "variableName": "MageTypeCount"
+                  ]
                 },
                 {
                   "name": "IF",

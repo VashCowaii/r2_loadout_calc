@@ -759,11 +759,10 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Matching Path",
-              "target": null,
-              "matchToPathFrom": [
+              "variableName": "_Elation_Count",
+              "path": [
                 "Elation"
-              ],
-              "variableName": "_Elation_Count"
+              ]
             },
             {
               "name": "SWITCH",

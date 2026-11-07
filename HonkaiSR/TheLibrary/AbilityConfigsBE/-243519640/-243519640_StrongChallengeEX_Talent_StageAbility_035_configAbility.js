@@ -112,10 +112,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
               },
-              "matchToPathFrom": [
+              "variableName": "MageTypeCount",
+              "path": [
                 "Erudition"
-              ],
-              "variableName": "MageTypeCount"
+              ]
             },
             {
               "name": "IF",
@@ -177,10 +177,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}.[[removeMemosprite]]"
               },
-              "matchToPathFrom": [
+              "variableName": "MageTypeCount",
+              "path": [
                 "Erudition"
-              ],
-              "variableName": "MageTypeCount"
+              ]
             },
             {
               "name": "IF",

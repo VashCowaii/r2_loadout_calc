@@ -8527,10 +8527,10 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
                       },
-                      "matchToPathFrom": [
+                      "variableName": "DV_Plus6_WarlockCount",
+                      "path": [
                         "Nihility"
-                      ],
-                      "variableName": "DV_Plus6_WarlockCount"
+                      ]
                     },
                     {
                       "name": "IF",
