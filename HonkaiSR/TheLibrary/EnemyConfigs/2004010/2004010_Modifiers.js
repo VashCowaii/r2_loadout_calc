@@ -223,11 +223,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Ability Hits",
-              "target": {
+              "variableName": "SkillMaxHit",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target 2}}"
-              },
-              "variableName": "SkillMaxHit"
+              }
             },
             {
               "name": "ATK Scaling DMG",

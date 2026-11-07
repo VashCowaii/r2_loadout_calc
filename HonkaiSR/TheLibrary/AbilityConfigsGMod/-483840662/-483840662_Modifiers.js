@@ -5592,11 +5592,11 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Ability Hits",
-              "target": {
+              "variableName": "MDF_SkillMaxHit",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Parameter Target 2}}"
-              },
-              "variableName": "MDF_SkillMaxHit"
+              }
             },
             {
               "name": "ATK Scaling DMG",
