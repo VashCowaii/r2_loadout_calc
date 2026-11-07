@@ -2033,6 +2033,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Team Action",
+                  "actionName": "GepardCommand",
                   "conditionsActor": {
                     "name": "OR",
                     "conditionList": [
@@ -2053,8 +2054,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]"
-                  },
-                  "abilityName": "GepardCommand"
+                  }
                 }
               ]
             }

@@ -6981,6 +6981,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Team Action",
+                  "actionName": "LycanKingCommand",
                   "conditionsActor": {
                     "name": "OR",
                     "conditionList": [
@@ -7001,8 +7002,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"659682696\">Enemy_W2_LycanKing_IF_PickUpMark</a>"
-                  },
-                  "abilityName": "LycanKingCommand"
+                  }
                 }
               ]
             }

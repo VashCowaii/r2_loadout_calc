@@ -402,6 +402,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Team Action",
+              "actionName": "Sam01Command",
               "conditionsActor": {
                 "name": "Is Related Summoned Entity",
                 "target": {
@@ -420,11 +421,11 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]"
-              },
-              "abilityName": "Sam01Command"
+              }
             },
             {
               "name": "Team Action",
+              "actionName": "Sam01CommandCaster",
               "conditionsActor": {
                 "name": "Compare: Target",
                 "target": {
@@ -444,8 +445,7 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-781925470\">Enemy_W3_Sam_01_Ability04Target</a>[<span class=\"descriptionNumberColor\">Nemesis</span>]",
                 "invertCondition": true
-              },
-              "abilityName": "Sam01CommandCaster"
+              }
             }
           ]
         },
@@ -454,12 +454,12 @@ const configAbility = {
           "execute": [
             {
               "name": "Team Action",
-              "abilityName": "Sam01Command",
+              "actionName": "Sam01Command",
               "activated": false
             },
             {
               "name": "Team Action",
-              "abilityName": "Sam01CommandCaster",
+              "actionName": "Sam01CommandCaster",
               "activated": false
             }
           ]

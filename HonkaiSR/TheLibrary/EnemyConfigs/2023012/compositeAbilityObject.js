@@ -89,6 +89,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Team Action",
+                  "actionName": "Abomi04Command",
                   "conditionsActor": {
                     "name": "OR",
                     "conditionList": [
@@ -109,8 +110,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                  },
-                  "abilityName": "Abomi04Command"
+                  }
                 }
               ]
             }
