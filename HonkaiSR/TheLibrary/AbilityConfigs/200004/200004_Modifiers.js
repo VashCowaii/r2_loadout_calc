@@ -795,7 +795,7 @@ const configAbility = {
                   "Adjust Relative to Target, Get Team",
                   {
                     "name": "Filter by Life-State",
-                    "state": "Mask_DiedButNotDispose"
+                    "stateType": "Mask_DiedButNotDispose"
                   }
                 ]
               }
@@ -998,7 +998,7 @@ const configAbility = {
                   "Adjust Relative to Target, Get Team",
                   {
                     "name": "Filter by Life-State",
-                    "state": "Mask_DiedButNotDispose"
+                    "stateType": "Mask_DiedButNotDispose"
                   }
                 ]
               },

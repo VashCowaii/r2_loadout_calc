@@ -3031,7 +3031,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Filter by Life-State",
-                            "state": "Mask_AliveOrRevivable"
+                            "stateType": "Mask_AliveOrRevivable"
                           }
                         ]
                       },

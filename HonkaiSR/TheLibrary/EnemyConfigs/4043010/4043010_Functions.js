@@ -398,9 +398,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              {
-                "name": "Sort by Action Order"
-              }
+              "Sort by Action Order"
             ]
           },
           "maxTargets": 1,

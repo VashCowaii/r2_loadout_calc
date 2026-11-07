@@ -149,7 +149,7 @@ const configAbility = {
               },
               {
                 "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
+                "stateType": "Mask_AliveOnly"
               },
               {
                 "name": "Sort by Monster Rank",

@@ -806,7 +806,7 @@ const compositeAbilityObject = {
                       "Adjust Relative to Target, Get Team",
                       {
                         "name": "Filter by Life-State",
-                        "state": "Mask_DiedButNotDispose"
+                        "stateType": "Mask_DiedButNotDispose"
                       }
                     ]
                   }
@@ -1009,7 +1009,7 @@ const compositeAbilityObject = {
                       "Adjust Relative to Target, Get Team",
                       {
                         "name": "Filter by Life-State",
-                        "state": "Mask_DiedButNotDispose"
+                        "stateType": "Mask_DiedButNotDispose"
                       }
                     ]
                   },

@@ -7287,7 +7287,7 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
+                "stateType": "Mask_AliveOnly"
               },
               {
                 "name": "Target Index",
@@ -7419,7 +7419,7 @@ const compositeAbilityObject = {
               "Sort by Physical Positioning",
               {
                 "name": "Filter by Life-State",
-                "state": "Mask_AliveOnly"
+                "stateType": "Mask_AliveOnly"
               },
               {
                 "name": "Target Index",

@@ -51,9 +51,7 @@ const configAbility = {
       "nameTarget": "sortByAV",
       "isTargetOperator": true,
       "execute": [
-        {
-          "name": "Sort by Action Order"
-        }
+        "Sort by Action Order"
       ]
     },
     {

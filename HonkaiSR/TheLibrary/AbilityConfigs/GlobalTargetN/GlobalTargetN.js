@@ -148,7 +148,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Life-State",
-              "state": "Mask_AliveOnly"
+              "stateType": "Mask_AliveOnly"
             },
             {
               "name": "Sort by Lineup Name Index",
@@ -794,7 +794,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Life-State",
-              "state": "Mask_AliveOnly"
+              "stateType": "Mask_AliveOnly"
             },
             {
               "name": "Sort by Monster Rank",
@@ -849,7 +849,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Life-State",
-              "state": "Mask_AliveOnly"
+              "stateType": "Mask_AliveOnly"
             },
             {
               "name": "Sort by Lineup Name Index",
@@ -962,7 +962,7 @@ const configAbility = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOrLimbo"
+                  "stateType": "Mask_AliveOrLimbo"
                 },
                 "Shuffle Targets"
               ]
@@ -1028,7 +1028,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Life-State",
-              "state": "Mask_AliveOnly"
+              "stateType": "Mask_AliveOnly"
             },
             "Shuffle Targets",
             {
@@ -1126,7 +1126,7 @@ const configAbility = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOnly"
+                      "stateType": "Mask_AliveOnly"
                     },
                     "Shuffle Targets"
                   ]
@@ -1251,7 +1251,7 @@ const configAbility = {
                       },
                       {
                         "name": "Filter by Life-State",
-                        "state": "Mask_AliveOnly"
+                        "stateType": "Mask_AliveOnly"
                       },
                       "Shuffle Targets"
                     ]
@@ -1289,7 +1289,7 @@ const configAbility = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOnly"
+                      "stateType": "Mask_AliveOnly"
                     },
                     "Shuffle Targets"
                   ]
@@ -1303,7 +1303,7 @@ const configAbility = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOnly"
+                      "stateType": "Mask_AliveOnly"
                     },
                     "Shuffle Targets"
                   ]
@@ -1600,7 +1600,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Life-State",
-              "state": "Mask_AliveOnly"
+              "stateType": "Mask_AliveOnly"
             }
           ]
         }
@@ -2086,7 +2086,7 @@ const configAbility = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOrLimbo"
+                  "stateType": "Mask_AliveOrLimbo"
                 },
                 "Shuffle Targets"
               ]
@@ -4181,7 +4181,7 @@ const configAbility = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 }
               ]
             },
@@ -4221,7 +4221,7 @@ const configAbility = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOrLimbo"
+                  "stateType": "Mask_AliveOrLimbo"
                 },
                 "Shuffle Targets"
               ]

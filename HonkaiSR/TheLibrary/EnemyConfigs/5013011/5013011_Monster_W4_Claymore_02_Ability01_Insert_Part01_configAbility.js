@@ -37,7 +37,7 @@ const configAbility = {
           "Sort by Physical Positioning",
           {
             "name": "Filter by Life-State",
-            "state": "Mask_AliveOnly"
+            "stateType": "Mask_AliveOnly"
           },
           {
             "name": "Target Index",

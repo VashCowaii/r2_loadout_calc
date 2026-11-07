@@ -156,7 +156,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 },
                 {
                   "name": "Sort by Lineup Name Index",
@@ -802,7 +802,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 },
                 {
                   "name": "Sort by Monster Rank",
@@ -857,7 +857,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 },
                 {
                   "name": "Sort by Lineup Name Index",
@@ -970,7 +970,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOrLimbo"
+                      "stateType": "Mask_AliveOrLimbo"
                     },
                     "Shuffle Targets"
                   ]
@@ -1036,7 +1036,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 },
                 "Shuffle Targets",
                 {
@@ -1134,7 +1134,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Filter by Life-State",
-                          "state": "Mask_AliveOnly"
+                          "stateType": "Mask_AliveOnly"
                         },
                         "Shuffle Targets"
                       ]
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Filter by Life-State",
-                            "state": "Mask_AliveOnly"
+                            "stateType": "Mask_AliveOnly"
                           },
                           "Shuffle Targets"
                         ]
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Filter by Life-State",
-                          "state": "Mask_AliveOnly"
+                          "stateType": "Mask_AliveOnly"
                         },
                         "Shuffle Targets"
                       ]
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Filter by Life-State",
-                          "state": "Mask_AliveOnly"
+                          "stateType": "Mask_AliveOnly"
                         },
                         "Shuffle Targets"
                       ]
@@ -1608,7 +1608,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Life-State",
-                  "state": "Mask_AliveOnly"
+                  "stateType": "Mask_AliveOnly"
                 }
               ]
             }
@@ -2094,7 +2094,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOrLimbo"
+                      "stateType": "Mask_AliveOrLimbo"
                     },
                     "Shuffle Targets"
                   ]
@@ -4189,7 +4189,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOnly"
+                      "stateType": "Mask_AliveOnly"
                     }
                   ]
                 },
@@ -4229,7 +4229,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Filter by Life-State",
-                      "state": "Mask_AliveOrLimbo"
+                      "stateType": "Mask_AliveOrLimbo"
                     },
                     "Shuffle Targets"
                   ]
