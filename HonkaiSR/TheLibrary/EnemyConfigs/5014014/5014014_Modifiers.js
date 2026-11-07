@@ -1744,7 +1744,7 @@ const configAbility = {
                       "checkOverride": {
                         "name": "Condition Priority",
                         "overridePriority": "LevelPerformMonster",
-                        "condition": {
+                        "conditions": {
                           "name": "Compare: Ability Value",
                           "target": {
                             "name": "Target Name",
@@ -2134,7 +2134,7 @@ const configAbility = {
                       "checkOverride": {
                         "name": "Condition Priority",
                         "overridePriority": "LevelPerformMonster",
-                        "condition": {
+                        "conditions": {
                           "name": "Compare: Ability Value",
                           "target": {
                             "name": "Target Name",
@@ -2617,7 +2617,7 @@ const configAbility = {
                           "checkOverride": {
                             "name": "Condition Priority",
                             "overridePriority": "LevelPerformMonster",
-                            "condition": {
+                            "conditions": {
                               "name": "Compare: Ability Value",
                               "target": {
                                 "name": "Target Name",

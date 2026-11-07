@@ -1624,7 +1624,7 @@ const compositeAbilityObject = {
                   "checkOverride": {
                     "name": "Condition Priority",
                     "overridePriority": "MonsterForceKill",
-                    "condition": {
+                    "conditions": {
                       "name": "Compare: Ability Value",
                       "target": {
                         "name": "Target Name",
@@ -1789,7 +1789,7 @@ const compositeAbilityObject = {
                   "checkOverride": {
                     "name": "Condition Priority",
                     "overridePriority": "MonsterForceKill",
-                    "condition": {
+                    "conditions": {
                       "name": "Compare: Ability Value",
                       "target": {
                         "name": "Target Name",
@@ -1954,7 +1954,7 @@ const compositeAbilityObject = {
                   "checkOverride": {
                     "name": "Condition Priority",
                     "overridePriority": "MonsterForceKill",
-                    "condition": {
+                    "conditions": {
                       "name": "Compare: Ability Value",
                       "target": {
                         "name": "Target Name",

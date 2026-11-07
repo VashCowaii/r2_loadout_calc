@@ -1847,7 +1847,7 @@ const configAbility = {
                           "checkOverride": {
                             "name": "Condition Priority",
                             "overridePriority": "MonsterForceKill",
-                            "condition": {
+                            "conditions": {
                               "name": "Compare: Ability Value",
                               "target": {
                                 "name": "Target Name",
@@ -2110,7 +2110,7 @@ const configAbility = {
                           "checkOverride": {
                             "name": "Condition Priority",
                             "overridePriority": "MonsterForceKill",
-                            "condition": {
+                            "conditions": {
                               "name": "Compare: Ability Value",
                               "target": {
                                 "name": "Target Name",
@@ -2379,7 +2379,7 @@ const configAbility = {
                           "checkOverride": {
                             "name": "Condition Priority",
                             "overridePriority": "MonsterForceKill",
-                            "condition": {
+                            "conditions": {
                               "name": "Compare: Ability Value",
                               "target": {
                                 "name": "Target Name",
@@ -2645,7 +2645,7 @@ const configAbility = {
                           "checkOverride": {
                             "name": "Condition Priority",
                             "overridePriority": "MonsterForceKill",
-                            "condition": {
+                            "conditions": {
                               "name": "Compare: Ability Value",
                               "target": {
                                 "name": "Target Name",
