@@ -783,7 +783,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Turn-State",
-                        "states": [
+                        "turnState": [
                           "InsertUltraSkillExecuting"
                         ]
                       }
@@ -856,7 +856,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Turn-State",
-                        "states": [
+                        "turnState": [
                           "InsertUltraSkillExecuting"
                         ]
                       },

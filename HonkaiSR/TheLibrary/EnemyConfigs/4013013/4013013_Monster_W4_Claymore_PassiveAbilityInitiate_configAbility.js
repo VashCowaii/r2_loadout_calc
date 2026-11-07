@@ -204,10 +204,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Turn-State",
-                        "invertCondition": true,
-                        "states": [
+                        "turnState": [
                           "InsertAbilityActionPhase"
-                        ]
+                        ],
+                        "invertCondition": true
                       }
                     ]
                   }

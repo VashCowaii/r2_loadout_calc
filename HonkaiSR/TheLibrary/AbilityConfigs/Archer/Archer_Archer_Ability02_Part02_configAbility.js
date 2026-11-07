@@ -127,9 +127,7 @@ const configAbility = {
         }
       ]
     },
-    {
-      "name": "Allow Queued Actions(Ult?)"
-    },
+    "Allow Queued Actions(Ult?)",
     {
       "name": "IF",
       "conditions": {

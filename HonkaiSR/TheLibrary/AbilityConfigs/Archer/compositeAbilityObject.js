@@ -4489,9 +4489,7 @@ const compositeAbilityObject = {
             }
           ]
         },
-        {
-          "name": "Allow Queued Actions(Ult?)"
-        },
+        "Allow Queued Actions(Ult?)",
         {
           "name": "IF",
           "conditions": {

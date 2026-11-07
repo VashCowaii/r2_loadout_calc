@@ -98,7 +98,7 @@ const configAbility = {
                   },
                   {
                     "name": "Has Turn-State",
-                    "states": [
+                    "turnState": [
                       "InsertUltraSkillExecuting"
                     ]
                   }
@@ -171,7 +171,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Turn-State",
-                    "states": [
+                    "turnState": [
                       "InsertUltraSkillExecuting"
                     ]
                   },

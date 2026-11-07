@@ -2911,10 +2911,10 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Has Turn-State",
-                    "invertCondition": true,
-                    "states": [
+                    "turnState": [
                       "ModifierPhase1Begin"
-                    ]
+                    ],
+                    "invertCondition": true
                   }
                 ]
               },
