@@ -211,14 +211,15 @@ const configAbility = {
             },
             {
               "name": "Copy Weaknesses",
+              "sourceTarget": {
+                "name": "Target Name",
+                "target": "{{Summoner of Modifier Holder}}"
+              },
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "from": {
-                "name": "Target Name",
-                "target": "{{Summoner of Modifier Holder}}"
-              }
+              "keepProtected": false
             },
             {
               "name": "Dispel Debuffs",
