@@ -48,9 +48,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 3
+              "resetValue": 3,
+              "scope": "TargetEntity"
             }
           ]
         }

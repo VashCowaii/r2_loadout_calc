@@ -4020,8 +4020,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhaseCheck"
+                          "variableName": "ChangePhaseCheck",
+                          "scope": "TargetEntity"
                         }
                       ]
                     },

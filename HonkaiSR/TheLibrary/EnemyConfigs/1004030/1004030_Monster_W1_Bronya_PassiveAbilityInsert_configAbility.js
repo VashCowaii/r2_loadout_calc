@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W1_Bronya_00_InsertFlag"
+      "variableName": "W1_Bronya_00_InsertFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

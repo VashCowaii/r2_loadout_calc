@@ -35,9 +35,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W2_Yanqing_00_AICounter",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -45,9 +45,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W2_Yanqing_00_AIPhase",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Set Enemy Phase"
@@ -58,8 +58,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Yanqing_00_WeakPointState"
+      "variableName": "W2_Yanqing_00_WeakPointState",
+      "scope": "TargetEntity"
     },
     {
       "name": "Boss Bar Display",
@@ -75,9 +75,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W2_Yanqing_00_MaxPhaseNum",
-      "value": 3
+      "resetValue": 3,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -362,9 +362,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -522,9 +522,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_AICounter",
-                      "value": 20
+                      "resetValue": 20,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -655,9 +655,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_AICounter",
-                      "value": 20
+                      "resetValue": 20,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

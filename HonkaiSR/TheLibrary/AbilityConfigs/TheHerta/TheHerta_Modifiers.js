@@ -703,8 +703,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "DV_HitCount"
+              "variableName": "DV_HitCount",
+              "scope": "TargetEntity"
             }
           ]
         },

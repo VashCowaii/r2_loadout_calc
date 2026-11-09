@@ -14,9 +14,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "SpecialFlag",
-      "value": 2
+      "resetValue": 2,
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

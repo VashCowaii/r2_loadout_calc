@@ -11,16 +11,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P1_MaxCount",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_1_Get) || RETURN",
         "displayLines": "ADF_1_Get",
         "constants": [],
         "variables": [
           "ADF_1_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -28,16 +28,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P2_Ratio",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_2_Get) || RETURN",
         "displayLines": "ADF_2_Get",
         "constants": [],
         "variables": [
           "ADF_2_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -45,16 +45,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2210_BeforeFever_P3_ElationPoint",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_3_Get) || RETURN",
         "displayLines": "ADF_3_Get",
         "constants": [],
         "variables": [
           "ADF_3_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Events/Bonuses",

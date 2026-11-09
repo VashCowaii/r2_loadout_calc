@@ -75,16 +75,16 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "BurningBPDamageUpRatio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[2]]}",
             "constants": [],
             "variables": [
               "{[PassiveSkill01[2]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         }
       ]
     },

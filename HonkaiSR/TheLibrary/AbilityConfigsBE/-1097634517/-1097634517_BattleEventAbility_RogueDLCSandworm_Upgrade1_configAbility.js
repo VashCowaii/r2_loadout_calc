@@ -28,16 +28,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ExtraChance",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (#ADF_1) || RETURN",
                 "displayLines": "#ADF_1",
                 "constants": [],
                 "variables": [
                   "#ADF_1"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -45,16 +45,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ExtraLifeTime",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (#ADF_2) || RETURN",
                 "displayLines": "#ADF_2",
                 "constants": [],
                 "variables": [
                   "#ADF_2"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         }

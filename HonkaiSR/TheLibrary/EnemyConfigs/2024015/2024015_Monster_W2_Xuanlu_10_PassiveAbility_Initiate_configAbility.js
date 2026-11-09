@@ -70,9 +70,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "InsertCheck",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -295,9 +295,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -352,9 +352,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -378,9 +378,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -451,9 +451,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -493,9 +493,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 7
+                      "resetValue": 7,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -535,9 +535,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -578,9 +578,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

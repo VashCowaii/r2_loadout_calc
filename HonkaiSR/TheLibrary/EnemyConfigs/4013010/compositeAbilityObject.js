@@ -343,8 +343,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -352,8 +352,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -503,8 +503,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
+                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3450,7 +3450,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "variableName": "MaxSummonCount",
-              "value": 4
+              "resetValue": 4
             }
           ],
           "failed": [
@@ -3461,7 +3461,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "variableName": "MaxSummonCount",
-              "value": 2
+              "resetValue": 2
             }
           ]
         },
@@ -4128,9 +4128,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "IF",
@@ -4238,7 +4238,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2
                   },
                   {
                     "name": "Use Ability Option",
@@ -4273,7 +4273,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 3
+                    "resetValue": 3
                   },
                   {
                     "name": "IF",
@@ -4492,7 +4492,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 4
+                        "resetValue": 4
                       },
                       {
                         "name": "Remove Events/Bonuses",
@@ -4544,9 +4544,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

@@ -217,8 +217,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

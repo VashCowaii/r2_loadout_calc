@@ -232,8 +232,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ChangePhase_MaxHPValue"
+          "variableName": "ChangePhase_MaxHPValue",
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -290,9 +290,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -495,9 +495,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "InsertCheck",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -505,9 +505,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Modifier-Specific Variable",

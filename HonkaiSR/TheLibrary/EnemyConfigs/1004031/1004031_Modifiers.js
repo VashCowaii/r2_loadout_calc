@@ -65,9 +65,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "InsertCheck",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Dispel Debuffs",

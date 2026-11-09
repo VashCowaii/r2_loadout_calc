@@ -304,8 +304,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "ChangePhase"
+                      "variableName": "ChangePhase",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Dispel Debuffs",
@@ -397,8 +397,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "ChangePhase"
+                          "variableName": "ChangePhase",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Dispel Debuffs",
@@ -492,8 +492,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "ChangePhase"
+                  "variableName": "ChangePhase",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Dispel Debuffs",

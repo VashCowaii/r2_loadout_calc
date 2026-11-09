@@ -1287,9 +1287,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PowerFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },

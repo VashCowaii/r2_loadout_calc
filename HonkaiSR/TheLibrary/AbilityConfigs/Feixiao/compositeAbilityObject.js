@@ -3712,9 +3712,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextAbility",
           "variableName": "ADF_Effect_Index",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
             "constants": [
@@ -3725,7 +3724,8 @@ const compositeAbilityObject = {
               "FLOOR",
               "ComboHitCount"
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "IF",
@@ -3754,9 +3754,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextAbility",
           "variableName": "ADF_Effect_Index",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
             "constants": [
@@ -3767,7 +3766,8 @@ const compositeAbilityObject = {
               "FLOOR",
               "ComboHitCount"
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "IF",
@@ -3977,9 +3977,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "CDF_Combo_2_StartFrame",
-                  "value": 12
+                  "resetValue": 12,
+                  "scope": "ContextCaster"
                 }
               ],
               "failed": [
@@ -3989,9 +3989,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "CDF_Combo_2_StartFrame",
-                  "value": 12
+                  "resetValue": 12,
+                  "scope": "ContextCaster"
                 }
               ]
             }
@@ -4007,9 +4007,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "CDF_Combo_2_StartFrame",
-                  "value": 6
+                  "resetValue": 6,
+                  "scope": "ContextCaster"
                 }
               ],
               "failed": [
@@ -4019,9 +4019,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "CDF_Combo_2_StartFrame",
-                  "value": 6
+                  "resetValue": 6,
+                  "scope": "ContextCaster"
                 }
               ]
             }
@@ -4641,9 +4641,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_1_StartFrame",
-              "value": 4
+              "resetValue": 4,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
@@ -4653,9 +4653,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_1_StartFrame",
-              "value": 6
+              "resetValue": 6,
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -6508,9 +6508,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextAbility",
               "variableName": "ADF_Effect_Index",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
                 "constants": [
@@ -6521,7 +6520,8 @@ const compositeAbilityObject = {
                   "FLOOR",
                   "ComboHitCount"
                 ]
-              }
+              },
+              "scope": "ContextAbility"
             },
             {
               "name": "IF",

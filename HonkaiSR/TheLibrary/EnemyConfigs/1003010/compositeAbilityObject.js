@@ -58,8 +58,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Soldier03_00_BattleScore2_Flag"
+                  "variableName": "W1_Soldier03_00_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -232,8 +232,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "ReturnAttackCounter"
+                  "variableName": "ReturnAttackCounter",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -337,8 +337,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "W1_Soldier03_00_BattleScore1_Flag"
+                          "variableName": "W1_Soldier03_00_BattleScore1_Flag",
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -405,9 +405,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "W1_Soldier03_00_InsertAttackFlag",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -462,9 +462,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "ReturnAttackCounter",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -504,8 +504,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "ReturnAttackCounter"
+                  "variableName": "ReturnAttackCounter",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -538,9 +538,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W1_Soldier03_00_AICounter",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -568,9 +568,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W1_Soldier03_00_AICounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -583,8 +583,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W1_Soldier03_00_InsertAttackFlag"
+                  "variableName": "W1_Soldier03_00_InsertAttackFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -642,9 +642,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W1_Soldier03_00_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "IF",
@@ -681,9 +681,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "W1_Soldier03_00_AICounter",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -741,9 +741,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W1_Soldier03_00_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "IF",
@@ -780,9 +780,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "W1_Soldier03_00_AICounter",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -818,8 +818,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W1_Soldier03_00_SummonCounter"
+          "variableName": "W1_Soldier03_00_SummonCounter",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -827,9 +827,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W1_Soldier03_00_AICounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1588,9 +1588,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W1_Soldier03_00_AICounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Action Advance/Delay",
@@ -2189,9 +2189,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2226,9 +2226,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2278,9 +2278,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2330,9 +2330,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2376,9 +2376,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2443,9 +2443,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2480,9 +2480,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2532,9 +2532,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2584,9 +2584,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2630,9 +2630,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2697,9 +2697,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2734,9 +2734,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2786,9 +2786,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2838,9 +2838,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2884,9 +2884,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2951,9 +2951,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2988,9 +2988,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3040,9 +3040,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3092,9 +3092,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3138,9 +3138,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3205,9 +3205,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3242,9 +3242,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3294,9 +3294,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3346,9 +3346,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3392,9 +3392,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3459,9 +3459,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3496,9 +3496,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3548,9 +3548,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3600,9 +3600,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3646,9 +3646,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3713,9 +3713,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3750,9 +3750,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3802,9 +3802,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3854,9 +3854,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3900,9 +3900,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -3967,9 +3967,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4004,9 +4004,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4056,9 +4056,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4108,9 +4108,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4154,9 +4154,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4221,9 +4221,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4258,9 +4258,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4310,9 +4310,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4362,9 +4362,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4408,9 +4408,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4475,9 +4475,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4512,9 +4512,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4564,9 +4564,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4616,9 +4616,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4662,9 +4662,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4729,9 +4729,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4766,9 +4766,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4818,9 +4818,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4870,9 +4870,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4916,9 +4916,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4983,9 +4983,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5020,9 +5020,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5072,9 +5072,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5124,9 +5124,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5170,9 +5170,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5237,9 +5237,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5274,9 +5274,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5326,9 +5326,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5378,9 +5378,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5424,9 +5424,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W1_Soldier03_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

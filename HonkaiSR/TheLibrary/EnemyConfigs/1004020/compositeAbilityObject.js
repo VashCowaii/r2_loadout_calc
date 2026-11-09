@@ -105,8 +105,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_BattleScore2_Flag"
+                  "variableName": "Gepard_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -160,8 +160,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_BattleScore1_Flag"
+                  "variableName": "Gepard_BattleScore1_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -478,9 +478,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Gepard_SummonCounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -488,9 +488,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Gepard_AICounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -565,9 +565,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Gepard_AICounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -866,9 +866,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Gepard_SummonCounter",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -878,8 +878,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_SummonCounter"
+              "variableName": "Gepard_SummonCounter",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1240,9 +1240,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1286,9 +1286,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1328,9 +1328,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1365,9 +1365,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1411,9 +1411,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1478,9 +1478,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1524,9 +1524,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1566,9 +1566,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1603,9 +1603,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1649,9 +1649,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1716,9 +1716,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1762,9 +1762,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1804,9 +1804,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1841,9 +1841,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -1887,9 +1887,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1954,9 +1954,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2000,9 +2000,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2042,9 +2042,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2079,9 +2079,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2125,9 +2125,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2192,9 +2192,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2238,9 +2238,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2280,9 +2280,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2317,9 +2317,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2363,9 +2363,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2430,9 +2430,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2476,9 +2476,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2518,9 +2518,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2555,9 +2555,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -2601,9 +2601,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Gepard_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

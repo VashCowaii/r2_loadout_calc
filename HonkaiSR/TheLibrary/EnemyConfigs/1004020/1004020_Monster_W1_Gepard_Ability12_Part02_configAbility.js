@@ -201,9 +201,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Gepard_SummonCounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -213,8 +213,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Gepard_SummonCounter"
+          "variableName": "Gepard_SummonCounter",
+          "scope": "TargetEntity"
         }
       ]
     },

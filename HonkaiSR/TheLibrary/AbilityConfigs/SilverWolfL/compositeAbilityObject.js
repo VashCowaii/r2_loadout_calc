@@ -3255,8 +3255,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "scope": "ContextModifier",
-                      "variableName": "CurrentEP"
+                      "variableName": "CurrentEP",
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Adjust Target Stats",

@@ -831,16 +831,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ExtraChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (#ADF_1) || RETURN",
                     "displayLines": "#ADF_1",
                     "constants": [],
                     "variables": [
                       "#ADF_1"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -848,16 +848,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ExtraLifeTime",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (#ADF_2) || RETURN",
                     "displayLines": "#ADF_2",
                     "constants": [],
                     "variables": [
                       "#ADF_2"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2623,8 +2623,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -2755,8 +2755,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Looped Event",
@@ -2881,8 +2881,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Looped Event",
@@ -3032,8 +3032,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Ability",
@@ -3147,8 +3147,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Ability",
@@ -3243,8 +3243,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Ability",
@@ -3317,8 +3317,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3404,8 +3404,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "SummonCount"
+          "variableName": "SummonCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3461,8 +3461,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SummonCount"
+                  "variableName": "SummonCount",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3515,9 +3515,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Insert_Flag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -3577,8 +3577,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3642,8 +3642,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "SummonCount"
+          "variableName": "SummonCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3699,8 +3699,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SummonCount"
+                  "variableName": "SummonCount",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3753,9 +3753,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Insert_Flag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Inject Ability Use",

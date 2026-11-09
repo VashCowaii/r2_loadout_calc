@@ -247,9 +247,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -257,9 +257,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 2
+                          "resetValue": 2,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -267,9 +267,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 3
+                          "resetValue": 3,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -281,9 +281,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Sequence_i",
-                      "value": 0.5
+                      "resetValue": 0.5,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -769,9 +769,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Sequence_i",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -860,9 +860,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Sequence_i",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -951,9 +951,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Sequence_i",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2187,8 +2187,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -2254,8 +2254,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -2321,8 +2321,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -2407,8 +2407,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "SWITCH",
@@ -2431,9 +2431,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 2
+                                "resetValue": 2,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2451,9 +2451,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 2
+                                "resetValue": 2,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2471,9 +2471,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 2
+                                "resetValue": 2,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2506,9 +2506,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2526,9 +2526,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2546,9 +2546,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2591,8 +2591,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "SWITCH",
@@ -2615,9 +2615,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 3
+                                "resetValue": 3,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2635,9 +2635,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 3
+                                "resetValue": 3,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2655,9 +2655,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 3
+                                "resetValue": 3,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2690,9 +2690,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2710,9 +2710,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2730,9 +2730,9 @@ const compositeAbilityObject = {
                                           "name": "Target Name",
                                           "target": "{{Caster}}"
                                         },
-                                        "scope": "TargetEntity",
                                         "variableName": "Sequence_i",
-                                        "value": 1
+                                        "resetValue": 1,
+                                        "scope": "TargetEntity"
                                       },
                                       {
                                         "name": "Use Ability Option",
@@ -2775,8 +2775,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "AIFlag"
+                        "variableName": "AIFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "SWITCH",
@@ -2799,9 +2799,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2819,9 +2819,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -2839,9 +2839,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Sequence_i",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",

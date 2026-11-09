@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bronya_LimboFlag"
+      "variableName": "Bronya_LimboFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

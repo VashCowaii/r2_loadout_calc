@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "AML_Boss_00_BattleScore2_Flag"
+      "variableName": "AML_Boss_00_BattleScore2_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

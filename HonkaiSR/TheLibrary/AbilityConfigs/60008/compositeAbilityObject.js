@@ -187,8 +187,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "TalkCount"
+          "variableName": "TalkCount",
+          "scope": "TargetEntity"
         }
       ],
       "references": [],

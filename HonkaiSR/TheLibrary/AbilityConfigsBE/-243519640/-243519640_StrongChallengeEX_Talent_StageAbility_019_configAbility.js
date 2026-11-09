@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_Layer"
+      "variableName": "_Layer",
+      "scope": "TargetEntity"
     }
   ],
   "references": [

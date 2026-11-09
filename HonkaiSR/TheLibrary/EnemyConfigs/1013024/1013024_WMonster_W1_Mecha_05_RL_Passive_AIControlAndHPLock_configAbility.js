@@ -272,8 +272,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_W1_Mecha04_00_InsertFlag"
+              "variableName": "Monster_W1_Mecha04_00_InsertFlag",
+              "scope": "TargetEntity"
             }
           ]
         },

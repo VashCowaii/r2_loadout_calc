@@ -1481,8 +1481,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "LoseHPTrigger"
+              "variableName": "LoseHPTrigger",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1509,8 +1509,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "LoseHPTrigger"
+                  "variableName": "LoseHPTrigger",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1518,8 +1518,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "BeingAttack"
+                  "variableName": "BeingAttack",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1833,9 +1833,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "BeingAttack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1850,8 +1850,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "LoseHPTrigger"
+              "variableName": "LoseHPTrigger",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1859,8 +1859,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BeingAttack"
+              "variableName": "BeingAttack",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1986,8 +1986,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "LoseHPTrigger"
+              "variableName": "LoseHPTrigger",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1995,8 +1995,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BeingAttack"
+              "variableName": "BeingAttack",
+              "scope": "TargetEntity"
             }
           ]
         },

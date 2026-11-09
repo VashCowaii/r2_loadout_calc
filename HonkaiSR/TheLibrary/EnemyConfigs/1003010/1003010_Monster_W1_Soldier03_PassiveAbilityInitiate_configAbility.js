@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W1_Soldier03_00_SummonCounter"
+      "variableName": "W1_Soldier03_00_SummonCounter",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -28,9 +28,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W1_Soldier03_00_AICounter",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

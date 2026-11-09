@@ -15,8 +15,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ResistedFlag"
+          "variableName": "ResistedFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -70,9 +70,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ResistedFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         }

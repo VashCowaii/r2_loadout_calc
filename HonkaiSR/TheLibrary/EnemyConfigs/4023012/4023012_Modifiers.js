@@ -21,8 +21,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BattleScoreCount"
+              "variableName": "BattleScoreCount",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -628,8 +628,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -692,8 +692,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W4_Griffin_00_Debuff_Resolve"
+              "variableName": "W4_Griffin_00_Debuff_Resolve",
+              "scope": "TargetEntity"
             }
           ]
         }

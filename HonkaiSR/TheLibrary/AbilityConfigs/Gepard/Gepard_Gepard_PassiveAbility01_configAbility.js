@@ -86,8 +86,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "_Gepard_00_PassiveSkill_InsertController"
+              "variableName": "_Gepard_00_PassiveSkill_InsertController",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -95,8 +95,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_00_PassiveSkillSuccess"
+              "variableName": "Gepard_00_PassiveSkillSuccess",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -149,9 +149,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Gepard_00_PassiveSkillSuccess",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Dispel Debuffs",
@@ -175,9 +175,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_Gepard_00_PassiveSkill_InsertController",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

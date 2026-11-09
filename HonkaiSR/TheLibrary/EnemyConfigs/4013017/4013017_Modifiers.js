@@ -138,8 +138,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team(Exclude Memosprites)}}"
               },
-              "scope": "AITag",
-              "variableName": "_LocalLegend_PreSelectFlag"
+              "variableName": "_LocalLegend_PreSelectFlag",
+              "scope": "AITag"
             },
             {
               "name": "IF",
@@ -1988,9 +1988,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1998,9 +1998,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Light Praetor: 3}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2008,8 +2008,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -2543,9 +2543,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2553,9 +2553,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2563,8 +2563,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -2729,8 +2729,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BattleScoreCount"
+              "variableName": "BattleScoreCount",
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -2797,9 +2797,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2891,16 +2891,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "_EntityScore",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                 "displayLines": "MDF_EntityScore",
                 "constants": [],
                 "variables": [
                   "MDF_EntityScore"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Use Custom Character Function",
@@ -3252,16 +3252,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "_EntityScore",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                 "displayLines": "MDF_EntityScore",
                 "constants": [],
                 "variables": [
                   "MDF_EntityScore"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -3281,8 +3281,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "MDF_AddStore"
+              "variableName": "MDF_AddStore",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -4652,8 +4652,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",

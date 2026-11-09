@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Yanqing_00_SkillP01_InsertFlag"
+      "variableName": "W2_Yanqing_00_SkillP01_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

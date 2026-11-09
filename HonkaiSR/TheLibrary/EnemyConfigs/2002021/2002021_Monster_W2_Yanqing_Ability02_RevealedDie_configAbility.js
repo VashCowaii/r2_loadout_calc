@@ -33,9 +33,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -118,8 +118,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag"
+          "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
+          "scope": "TargetEntity"
         }
       ]
     }

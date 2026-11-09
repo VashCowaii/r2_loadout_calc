@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 3
+                "resetValue": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -122,9 +122,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -237,9 +237,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 5
+                "resetValue": 5,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -324,9 +324,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 6
+                "resetValue": 6,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -373,9 +373,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 7
+                "resetValue": 7,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -422,9 +422,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -537,9 +537,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 13
+                "resetValue": 13,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -624,9 +624,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 14
+                "resetValue": 14,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -739,9 +739,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 12
+                "resetValue": 12,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -788,9 +788,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 3
+                "resetValue": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -875,9 +875,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -990,9 +990,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 5
+                "resetValue": 5,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1039,9 +1039,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 6
+                "resetValue": 6,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1126,9 +1126,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 7
+                "resetValue": 7,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1175,9 +1175,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1290,9 +1290,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 13
+                "resetValue": 13,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1377,9 +1377,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 14
+                "resetValue": 14,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1492,9 +1492,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 15
+                "resetValue": 15,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1541,9 +1541,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 16
+                "resetValue": 16,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1628,9 +1628,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 17
+                "resetValue": 17,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -1743,9 +1743,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 12
+                "resetValue": 12,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

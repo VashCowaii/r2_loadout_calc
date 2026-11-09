@@ -130,9 +130,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 4
+                  "resetValue": 4,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -151,9 +151,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -199,9 +199,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -241,9 +241,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 4
+                  "resetValue": 4,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -265,9 +265,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -425,9 +425,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Phase2InsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -610,9 +610,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "InsertCheck",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Lock HP",
@@ -845,8 +845,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Set Enemy Phase",
@@ -893,8 +893,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -979,8 +979,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Exit Broken-State",
@@ -1140,9 +1140,9 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                                  "value": 1
+                                  "resetValue": 1,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }
@@ -1209,8 +1209,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -1389,8 +1389,8 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "scope": "TargetEntity",
-                                                  "variableName": "InsertCheck"
+                                                  "variableName": "InsertCheck",
+                                                  "scope": "TargetEntity"
                                                 },
                                                 {
                                                   "name": "Set Enemy Phase",
@@ -1437,8 +1437,8 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "scope": "TargetEntity",
-                                                  "variableName": "InsertCheck"
+                                                  "variableName": "InsertCheck",
+                                                  "scope": "TargetEntity"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
@@ -1525,8 +1525,8 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Modifier Holder}}"
                                               },
-                                              "scope": "TargetEntity",
-                                              "variableName": "InsertCheck"
+                                              "variableName": "InsertCheck",
+                                              "scope": "TargetEntity"
                                             },
                                             {
                                               "name": "Exit Broken-State",
@@ -1702,9 +1702,9 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Modifier Holder}}"
                                               },
-                                              "scope": "TargetEntity",
                                               "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                                              "value": 1
+                                              "resetValue": 1,
+                                              "scope": "TargetEntity"
                                             }
                                           ]
                                         }
@@ -1738,8 +1738,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "TeammateSurvive"
+                                  "variableName": "TeammateSurvive",
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             },
@@ -2014,8 +2014,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Mecha04_BattleScore2_Flag"
+              "variableName": "Mecha04_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -2170,9 +2170,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]

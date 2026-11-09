@@ -48,9 +48,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Cocolia_AICounter",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -126,8 +126,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Cocolia_ChangePhase_InsertController"
+              "variableName": "Cocolia_ChangePhase_InsertController",
+              "scope": "TargetEntity"
             }
           ]
         },

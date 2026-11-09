@@ -138,9 +138,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 11
+          "resetValue": 11,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -202,9 +202,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -212,9 +212,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Phase3FirstTurn",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },

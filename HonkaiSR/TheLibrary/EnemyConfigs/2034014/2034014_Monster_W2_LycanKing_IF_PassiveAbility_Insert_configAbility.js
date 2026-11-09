@@ -278,9 +278,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -288,8 +288,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Huimie_InsertFlag"
+      "variableName": "Huimie_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",

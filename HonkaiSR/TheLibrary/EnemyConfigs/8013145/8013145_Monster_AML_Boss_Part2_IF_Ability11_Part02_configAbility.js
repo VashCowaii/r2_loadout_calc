@@ -10,9 +10,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AML_Boss_00_BattleScore2_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     "Ability Start",
     {

@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "InsertController"
+      "variableName": "InsertController",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

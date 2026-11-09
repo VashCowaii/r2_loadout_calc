@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "MarkCount"
+      "variableName": "MarkCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",
@@ -28,9 +28,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Monster_W3_Figure_02_RLElite_AimTargetCount",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -46,9 +46,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Monster_W3_Figure_02_AimTargetCount",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },

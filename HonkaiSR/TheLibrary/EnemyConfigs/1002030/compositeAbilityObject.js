@@ -63,8 +63,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SupportAttackCounter"
+                  "variableName": "SupportAttackCounter",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -72,8 +72,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SupportAttackTriggerFlag"
+                  "variableName": "SupportAttackTriggerFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -86,9 +86,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "SupportAttackCounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -101,8 +101,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SupportAttackCounter"
+                  "variableName": "SupportAttackCounter",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -110,9 +110,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "SupportAttackTriggerFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -147,8 +147,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "SupportAttackCounter"
+                      "variableName": "SupportAttackCounter",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -156,9 +156,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "SupportAttackTriggerFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -528,8 +528,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "CurrentSupportNumber"
+          "variableName": "CurrentSupportNumber",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -560,8 +560,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "CurrentSupportNumber"
+                  "variableName": "CurrentSupportNumber",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",

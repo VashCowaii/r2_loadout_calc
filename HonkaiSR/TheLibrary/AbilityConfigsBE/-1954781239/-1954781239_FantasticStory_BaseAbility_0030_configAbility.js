@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
+      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0031"
+      "variableName": "DV_FantasticStory_PlusAbility_0031",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0032"
+      "variableName": "DV_FantasticStory_PlusAbility_0032",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0033"
+      "variableName": "DV_FantasticStory_PlusAbility_0033",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -47,8 +47,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0034"
+      "variableName": "DV_FantasticStory_PlusAbility_0034",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -56,8 +56,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0035"
+      "variableName": "DV_FantasticStory_PlusAbility_0035",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -65,8 +65,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0036"
+      "variableName": "DV_FantasticStory_PlusAbility_0036",
+      "scope": "ContextCaster"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -97,8 +97,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag"
+      "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -106,8 +106,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
+      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -115,9 +115,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_1",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || Constants[0] (0.33) || MUL || RETURN",
         "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.33)",
         "constants": [
@@ -127,7 +126,8 @@ const configAbility = {
           "BattleEvent_BaseHP",
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -135,9 +135,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_2",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || Constants[0] (0.67) || MUL || RETURN",
         "displayLines": "((BattleEvent_BaseHP * #ADF_1) * 0.67)",
         "constants": [
@@ -147,7 +146,8 @@ const configAbility = {
           "BattleEvent_BaseHP",
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -155,9 +155,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_3",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (#ADF_1) || MUL || RETURN",
         "displayLines": "(BattleEvent_BaseHP * #ADF_1)",
         "constants": [],
@@ -165,7 +164,8 @@ const configAbility = {
           "BattleEvent_BaseHP",
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Events/Bonuses",
@@ -876,8 +876,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextCaster",
-                      "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
+                      "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount",
+                      "scope": "ContextCaster"
                     }
                   ]
                 },
@@ -897,8 +897,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)v2}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityCurrentSP"
+                      "variableName": "EntityCurrentSP",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -906,8 +906,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)v2}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityStockSP"
+                      "variableName": "EntityStockSP",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -915,8 +915,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)v2}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityMaxSP"
+                      "variableName": "EntityMaxSP",
+                      "scope": "TargetEntity"
                     }
                   ]
                 },

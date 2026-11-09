@@ -204,9 +204,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Phase_Flag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -214,9 +214,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Change Entity Turn-State",

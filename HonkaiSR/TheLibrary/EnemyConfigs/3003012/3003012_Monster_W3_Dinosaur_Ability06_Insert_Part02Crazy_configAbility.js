@@ -40,9 +40,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Crazy_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -158,9 +158,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 8
+      "resetValue": 8,
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

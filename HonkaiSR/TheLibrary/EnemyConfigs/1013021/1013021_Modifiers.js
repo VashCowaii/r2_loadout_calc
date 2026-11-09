@@ -266,8 +266,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Mecha04_BattleScore2_Flag"
+              "variableName": "Mecha04_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -422,9 +422,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]

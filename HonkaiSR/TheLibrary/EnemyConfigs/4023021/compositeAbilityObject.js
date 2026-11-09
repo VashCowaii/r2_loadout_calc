@@ -38,8 +38,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Unicorn_00_Debuff_Resolve"
+                  "variableName": "W4_Unicorn_00_Debuff_Resolve",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -935,9 +935,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2135,9 +2135,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2177,9 +2177,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -2219,9 +2219,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

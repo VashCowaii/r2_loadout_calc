@@ -10,9 +10,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Storage_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     "Ability Start",
     {
@@ -46,9 +46,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Power_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

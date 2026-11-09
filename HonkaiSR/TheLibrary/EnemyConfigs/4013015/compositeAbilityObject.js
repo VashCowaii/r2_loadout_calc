@@ -364,9 +364,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -374,9 +374,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -384,8 +384,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -550,8 +550,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "BattleScoreCount"
+                  "variableName": "BattleScoreCount",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -618,9 +618,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -712,16 +712,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_EntityScore",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                     "displayLines": "MDF_EntityScore",
                     "constants": [],
                     "variables": [
                       "MDF_EntityScore"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -1073,16 +1073,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_EntityScore",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                     "displayLines": "MDF_EntityScore",
                     "constants": [],
                     "variables": [
                       "MDF_EntityScore"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1102,8 +1102,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "MDF_AddStore"
+                  "variableName": "MDF_AddStore",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2473,8 +2473,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -2855,8 +2855,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2864,8 +2864,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3015,8 +3015,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
+                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -5477,9 +5477,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -7175,7 +7175,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1
                   },
                   {
                     "name": "Use Ability Option",
@@ -7344,7 +7344,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5
                   },
                   {
                     "name": "Use Ability Option",
@@ -7378,9 +7378,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 6
+                    "resetValue": 6,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7415,9 +7415,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "IF",

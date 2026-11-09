@@ -454,8 +454,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "CallbackTemporary",
-                  "variableName": "_ElationPoint"
+                  "variableName": "_ElationPoint",
+                  "scope": "CallbackTemporary"
                 },
                 {
                   "name": "Define Custom Variable with Changes to Certified Banger",
@@ -635,8 +635,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "CallbackTemporary",
-                      "variableName": "_MergeElationEchoPointMDF"
+                      "variableName": "_MergeElationEchoPointMDF",
+                      "scope": "CallbackTemporary"
                     },
                     {
                       "name": "IF",

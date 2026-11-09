@@ -933,9 +933,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_Deathrattle",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Dispel Debuffs",

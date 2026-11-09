@@ -21,8 +21,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_Figure_02_BattleScore1_Flag1"
+              "variableName": "W3_Figure_02_BattleScore1_Flag1",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -30,8 +30,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_Figure_02_BattleScore1_Flag2"
+              "variableName": "W3_Figure_02_BattleScore1_Flag2",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -489,9 +489,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Monster_W3_Figure_02_AimTargetCount",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Update Displayed Energy Bar",

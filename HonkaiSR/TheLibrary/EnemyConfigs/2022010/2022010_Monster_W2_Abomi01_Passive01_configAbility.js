@@ -92,9 +92,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -104,8 +104,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+                  "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -126,9 +126,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_W2_Abomi01_00_BreakFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -141,8 +141,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_W2_Abomi01_00_BreakFlag"
+              "variableName": "Monster_W2_Abomi01_00_BreakFlag",
+              "scope": "TargetEntity"
             }
           ]
         }

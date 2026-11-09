@@ -45,8 +45,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "MDF_IsNegative"
+              "variableName": "MDF_IsNegative",
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",

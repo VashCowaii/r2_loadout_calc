@@ -151,8 +151,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+      "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

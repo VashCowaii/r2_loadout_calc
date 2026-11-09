@@ -157,8 +157,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -166,9 +166,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

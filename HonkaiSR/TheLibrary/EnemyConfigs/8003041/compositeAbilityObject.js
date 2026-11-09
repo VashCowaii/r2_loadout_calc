@@ -50,8 +50,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "XP_Elite02_01_BattleScore1_Flag"
+                  "variableName": "XP_Elite02_01_BattleScore1_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -241,9 +241,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_AIFlag",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1317,9 +1317,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ChargeFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -1357,9 +1357,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Monster_XP_Elite02_01_AIFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ],
                       "failed": [
@@ -1369,9 +1369,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Monster_XP_Elite02_01_AIFlag",
-                          "value": 4
+                          "resetValue": 4,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -1383,9 +1383,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_XP_Elite02_01_AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -1395,8 +1395,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_AIFlag_02"
+                  "variableName": "Monster_XP_Elite02_01_AIFlag_02",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1462,8 +1462,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "ChargeFlag"
+                      "variableName": "ChargeFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -2171,9 +2171,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2193,8 +2193,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -2645,9 +2645,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2667,8 +2667,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -3119,9 +3119,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3141,8 +3141,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -3593,9 +3593,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3615,8 +3615,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -4067,9 +4067,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -4089,8 +4089,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -4541,9 +4541,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -4563,8 +4563,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -5015,9 +5015,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -5037,8 +5037,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -5489,9 +5489,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -5511,8 +5511,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -5963,9 +5963,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -5985,8 +5985,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+                  "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -6270,9 +6270,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "XP_Elite02_01_BattleScore1_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Looped Event",
@@ -9297,8 +9297,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Monster_XP_Elite02_01_ShieldEffect"
+          "variableName": "Monster_XP_Elite02_01_ShieldEffect",
+          "scope": "TargetEntity"
         },
         {
           "name": "UI Display Event (On Entity)",
@@ -9324,9 +9324,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_ShieldEffect",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -9336,8 +9336,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Monster_XP_Elite02_01_InsertFlag"
+          "variableName": "Monster_XP_Elite02_01_InsertFlag",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -9516,9 +9516,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_XP_Elite02_01_AIFlag",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9554,9 +9554,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_XP_Elite02_01_AIFlag",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9592,9 +9592,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_XP_Elite02_01_AIFlag",
-                    "value": 6
+                    "resetValue": 6,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "IF",
@@ -9647,9 +9647,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_XP_Elite02_01_AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

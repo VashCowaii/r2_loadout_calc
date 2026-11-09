@@ -123,9 +123,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "RL_Phase",
-                  "value": 4
+                  "resetValue": 4,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -133,9 +133,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DecisionFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -187,9 +187,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "PartDecisionFlag",
-                              "value": 2
+                              "resetValue": 2,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }

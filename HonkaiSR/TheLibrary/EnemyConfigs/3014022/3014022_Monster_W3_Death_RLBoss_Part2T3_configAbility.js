@@ -50,8 +50,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bullet_Flag"
+      "variableName": "Bullet_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -88,9 +88,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

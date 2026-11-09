@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire1_Flag"
+      "variableName": "Fire1_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "FireBallCount"
+      "variableName": "FireBallCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -56,9 +56,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire1_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -253,8 +253,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire1_Flag"
+      "variableName": "Fire1_Flag",
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

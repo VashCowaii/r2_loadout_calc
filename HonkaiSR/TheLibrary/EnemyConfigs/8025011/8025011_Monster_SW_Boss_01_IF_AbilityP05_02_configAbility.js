@@ -23,8 +23,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "ContextAbility",
-          "variableName": "Ability_Count"
+          "variableName": "Ability_Count",
+          "scope": "ContextAbility"
         },
         {
           "name": "Find New Target",
@@ -206,9 +206,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "BreakEndFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     }

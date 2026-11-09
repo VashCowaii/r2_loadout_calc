@@ -380,9 +380,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 13
+                  "resetValue": 13,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -458,8 +458,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck02"
+                  "variableName": "InsertCheck02",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -947,9 +947,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 20
+                  "resetValue": 20,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1243,9 +1243,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 11
+              "resetValue": 11,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1253,9 +1253,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 11
+              "resetValue": 11,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2335,8 +2335,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "IronTombCore_BattleScore2_Flag"
+              "variableName": "IronTombCore_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3087,8 +3087,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CharacterID_30231_Flag01"
+              "variableName": "CharacterID_30231_Flag01",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -3096,8 +3096,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CharacterID_30231_Flag02"
+              "variableName": "CharacterID_30231_Flag02",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -3105,8 +3105,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CharacterID_30231_Flag03"
+              "variableName": "CharacterID_30231_Flag03",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -3114,8 +3114,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CharacterID_30231_Flag04"
+              "variableName": "CharacterID_30231_Flag04",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -5141,8 +5141,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck02"
+                  "variableName": "InsertCheck02",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -5204,8 +5204,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -5447,9 +5447,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -5469,9 +5469,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Irontomb: Part 1}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -5493,9 +5493,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Irontomb: Part 2}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -5507,9 +5507,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 11
+                  "resetValue": 11,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -5529,9 +5529,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Irontomb: Part 1}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 11
+                      "resetValue": 11,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -5553,9 +5553,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Irontomb: Part 2}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 11
+                      "resetValue": 11,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

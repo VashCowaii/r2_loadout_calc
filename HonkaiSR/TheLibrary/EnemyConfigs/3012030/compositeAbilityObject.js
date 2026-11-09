@@ -249,9 +249,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Insert_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -264,8 +264,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -278,8 +278,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -440,8 +440,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -934,9 +934,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DeathPart_Appear_Flag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Trigger Ability",

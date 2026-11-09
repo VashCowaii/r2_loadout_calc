@@ -30,9 +30,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 5
+                "resetValue": 5,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -140,7 +140,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2
               },
               {
                 "name": "Use Ability Option",
@@ -175,7 +175,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "variableName": "AIFlag",
-                "value": 3
+                "resetValue": 3
               },
               {
                 "name": "IF",
@@ -394,7 +394,7 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 4
+                    "resetValue": 4
                   },
                   {
                     "name": "Remove Events/Bonuses",
@@ -446,9 +446,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

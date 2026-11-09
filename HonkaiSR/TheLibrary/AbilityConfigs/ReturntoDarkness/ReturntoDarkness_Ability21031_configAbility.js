@@ -71,9 +71,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Flag_21031",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -90,8 +90,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Flag_21031"
+              "variableName": "Flag_21031",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -104,8 +104,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Flag_21031"
+              "variableName": "Flag_21031",
+              "scope": "TargetEntity"
             }
           ]
         }

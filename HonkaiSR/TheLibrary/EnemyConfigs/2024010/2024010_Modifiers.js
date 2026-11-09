@@ -91,8 +91,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -326,8 +326,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "HealHPCheck"
+                  "variableName": "HealHPCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -335,8 +335,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "HealHPTurn"
+                  "variableName": "HealHPTurn",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

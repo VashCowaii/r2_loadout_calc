@@ -198,7 +198,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "ReflexInsertFlag",
-                  "value": 1
+                  "resetValue": 1
                 },
                 {
                   "name": "Action Advance/Delay",

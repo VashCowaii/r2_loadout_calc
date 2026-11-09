@@ -87,8 +87,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_Theater_00_BattleScore1_Flag"
+              "variableName": "W3_Theater_00_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1721,8 +1721,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Vibrate_Count"
+              "variableName": "Vibrate_Count",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1730,8 +1730,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Crazy_Flag"
+              "variableName": "Crazy_Flag",
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1775,9 +1775,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },

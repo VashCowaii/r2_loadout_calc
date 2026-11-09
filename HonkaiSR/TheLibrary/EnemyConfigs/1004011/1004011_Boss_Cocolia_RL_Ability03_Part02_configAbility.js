@@ -99,8 +99,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ChargeFlag"
+      "variableName": "ChargeFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

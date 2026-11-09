@@ -383,9 +383,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
           "variableName": "PauseLevelForCameraPerform",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -393,8 +393,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "PauseLevelForCameraPerform"
+          "variableName": "PauseLevelForCameraPerform",
+          "scope": "TargetEntity"
         }
       ]
     }

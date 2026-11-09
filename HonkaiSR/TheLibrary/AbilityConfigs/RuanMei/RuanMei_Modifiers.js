@@ -197,8 +197,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "DV_NeedDettachEffect"
+              "variableName": "DV_NeedDettachEffect",
+              "scope": "TargetEntity"
             }
           ]
         },

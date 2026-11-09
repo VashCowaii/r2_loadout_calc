@@ -845,8 +845,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "#CL_HaveBuff"
+              "variableName": "#CL_HaveBuff",
+              "scope": "TargetEntity"
             }
           ]
         }

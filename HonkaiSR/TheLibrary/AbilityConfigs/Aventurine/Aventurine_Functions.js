@@ -38,8 +38,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "tmp_currentshield"
+                  "variableName": "tmp_currentshield",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -59,16 +59,16 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AventurineShieldValue",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (tmp_currentshield) || RETURN",
                     "displayLines": "tmp_currentshield",
                     "constants": [],
                     "variables": [
                       "tmp_currentshield"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -78,16 +78,16 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AventurineShieldValue",
-                  "value": {
+                  "resetValue": {
                     "operator": "Constants[0] (0) || RETURN",
                     "displayLines": "0",
                     "constants": [
                       0
                     ],
                     "variables": []
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }

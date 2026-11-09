@@ -26,9 +26,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Crazy_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

@@ -764,8 +764,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ListenAllDieController"
+      "variableName": "ListenAllDieController",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

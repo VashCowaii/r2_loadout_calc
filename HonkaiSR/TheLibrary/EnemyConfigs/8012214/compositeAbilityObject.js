@@ -661,8 +661,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "PartDecisionFlag"
+                    "variableName": "PartDecisionFlag",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -698,9 +698,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "PartDecisionFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "IF",
@@ -863,9 +863,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "PartDecisionFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -936,9 +936,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "PartDecisionFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",

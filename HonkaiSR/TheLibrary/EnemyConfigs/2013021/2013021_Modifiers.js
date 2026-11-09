@@ -105,9 +105,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -363,8 +363,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+              "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -448,9 +448,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable with Stat",

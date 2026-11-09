@@ -47,9 +47,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
           "variableName": "DeathPart_Appear_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Ability",

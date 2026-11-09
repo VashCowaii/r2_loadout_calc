@@ -866,8 +866,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",

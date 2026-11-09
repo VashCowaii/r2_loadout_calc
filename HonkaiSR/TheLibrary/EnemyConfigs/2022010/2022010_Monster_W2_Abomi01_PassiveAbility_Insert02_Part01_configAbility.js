@@ -158,8 +158,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_W2_Abomi01_00_ReviveEff"
+                      "variableName": "Monster_W2_Abomi01_00_ReviveEff",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -296,8 +296,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_W2_Abomi01_00_ReviveEff"
+                      "variableName": "Monster_W2_Abomi01_00_ReviveEff",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",

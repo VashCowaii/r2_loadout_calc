@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "DecisionFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -84,9 +84,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "DecisionFlag",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   }
                 ],
                 "failed": [
@@ -96,9 +96,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "DecisionFlag",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   }
                 ]
               },
@@ -136,9 +136,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "DecisionFlag",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -211,9 +211,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "DecisionFlag",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

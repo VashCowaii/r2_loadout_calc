@@ -31,7 +31,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2
               },
               {
                 "name": "Choose Ability Target",

@@ -1153,7 +1153,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "variableName": "HealCD",
-                          "value": 1
+                          "resetValue": 1
                         }
                       ]
                     }
@@ -1253,7 +1253,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "variableName": "HealCD",
-                          "value": 1
+                          "resetValue": 1
                         }
                       ]
                     }

@@ -16,9 +16,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Cocolia_BattleScore5_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Trigger Ability",
@@ -44,9 +44,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "ChargeFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

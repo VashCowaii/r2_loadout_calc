@@ -40,8 +40,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Burn_Layer"
+              "variableName": "Burn_Layer",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -54,8 +54,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Burn_Layer"
+              "variableName": "Burn_Layer",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -103,16 +103,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Burn_Layer",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (ModifierLayers) || RETURN",
                 "displayLines": "ModifierLayers",
                 "constants": [],
                 "variables": [
                   "ModifierLayers"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -212,9 +212,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Phase_Flag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -222,9 +222,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -243,9 +243,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Phase_Flag",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             }
           ]
         }

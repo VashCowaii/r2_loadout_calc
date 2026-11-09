@@ -2287,16 +2287,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Override_ElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
                     "constants": [],
                     "variables": [
                       "MDF_PropertyValue"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }

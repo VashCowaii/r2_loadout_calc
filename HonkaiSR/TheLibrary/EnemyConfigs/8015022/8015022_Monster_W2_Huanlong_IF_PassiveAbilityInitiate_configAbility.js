@@ -421,9 +421,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartDecisionFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -624,8 +624,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag"
+                  "variableName": "AIFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }

@@ -520,8 +520,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -529,9 +529,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 8
+      "resetValue": 8,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -547,9 +547,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextOwner",
       "variableName": "Skill06BgmGapSeconds",
-      "value": 1
+      "resetValue": 1,
+      "scope": "ContextOwner"
     },
     {
       "name": "IF",
@@ -615,16 +615,16 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Skill06BgmGapSeconds",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (Skill06BgmGapSeconds) || RETURN",
             "displayLines": "Skill06BgmGapSeconds",
             "constants": [],
             "variables": [
               "Skill06BgmGapSeconds"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Ability",

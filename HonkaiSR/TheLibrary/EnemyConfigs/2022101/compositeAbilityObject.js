@@ -145,9 +145,9 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "scope": "TargetEntity",
           "variableName": "CanUseUltra",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Action Advance/Delay",
@@ -324,9 +324,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -334,9 +334,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Xuanlu_04_Charged",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -419,8 +419,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Level Entity}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "Xuanlu_04_Charged"
+                    "variableName": "Xuanlu_04_Charged",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

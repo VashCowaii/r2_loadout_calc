@@ -2022,16 +2022,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13699) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13699",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13699"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2039,16 +2039,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13713",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13713"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2056,16 +2056,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13690",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13690"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2073,16 +2073,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13689) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13689",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13689"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2090,16 +2090,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13697) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13697",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13697"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2107,16 +2107,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13711) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13711",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13711"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2124,16 +2124,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13695) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13695",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13695"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2141,16 +2141,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13691) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13691",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13691"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2158,16 +2158,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13693) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13693",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13693"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2175,16 +2175,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13715) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13715",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13715"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2192,16 +2192,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13716) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13716",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13716"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2209,16 +2209,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13717) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13717",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13717"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2657,16 +2657,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13699) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13699",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13699"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2674,16 +2674,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13713",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13713"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2691,16 +2691,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13690",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13690"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2708,16 +2708,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13689) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13689",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13689"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2725,16 +2725,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13697) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13697",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13697"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2742,16 +2742,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13711) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13711",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13711"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2759,16 +2759,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13695) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13695",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13695"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2776,16 +2776,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13691) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13691",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13691"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2793,16 +2793,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13693) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13693",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13693"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2810,16 +2810,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13715) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13715",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13715"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2827,16 +2827,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13716) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13716",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13716"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2844,16 +2844,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13717) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13717",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_13717"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3415,8 +3415,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -3470,8 +3470,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -4631,16 +4631,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "BattleEvent_P1_ADF",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
             "displayLines": "#BattleEvent_P1_ADF",
             "constants": [],
             "variables": [
               "#BattleEvent_P1_ADF"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Assign Unique Name",

@@ -158,9 +158,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PursuitCheck",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Use Controlled Ability",
@@ -190,8 +190,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "PursuitCheck"
+              "variableName": "PursuitCheck",
+              "scope": "TargetEntity"
             },
             "Reset Triggers: Attack"
           ]
@@ -383,16 +383,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PursuitCount",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Count) || RETURN",
                 "displayLines": "MDF_Count",
                 "constants": [],
                 "variables": [
                   "MDF_Count"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -460,9 +460,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PursuitCheck",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -488,16 +488,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PursuitCount",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Count) || RETURN",
                 "displayLines": "MDF_Count",
                 "constants": [],
                 "variables": [
                   "MDF_Count"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         },

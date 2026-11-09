@@ -208,9 +208,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 3
+          "resetValue": 3,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -220,9 +220,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 6
+          "resetValue": 6,
+          "scope": "TargetEntity"
         }
       ]
     },

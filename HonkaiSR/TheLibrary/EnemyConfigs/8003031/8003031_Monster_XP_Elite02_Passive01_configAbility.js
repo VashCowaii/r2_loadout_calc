@@ -538,9 +538,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_00_AIFlag_02",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -576,9 +576,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_00_AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -588,9 +588,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_00_AIFlag",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }

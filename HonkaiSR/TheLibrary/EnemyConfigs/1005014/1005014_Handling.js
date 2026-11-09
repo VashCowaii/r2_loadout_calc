@@ -323,9 +323,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 13
+                "resetValue": 13,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Define Custom Variable",
@@ -371,9 +371,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 11
+                "resetValue": 11,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Define Custom Variable",

@@ -234,9 +234,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 12
+      "resetValue": 12,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove from Team Target Grouping",

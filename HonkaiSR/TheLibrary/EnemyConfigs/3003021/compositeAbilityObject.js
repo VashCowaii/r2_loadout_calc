@@ -523,8 +523,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Storage_Flag"
+                      "variableName": "Storage_Flag",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -532,9 +532,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 6
+                      "resetValue": 6,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -691,8 +691,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "BattleScore_FireBallCount"
+          "variableName": "BattleScore_FireBallCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -700,9 +700,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -710,9 +710,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Phase_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -720,8 +720,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Storage_Flag"
+          "variableName": "Storage_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -729,8 +729,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire1_Flag"
+          "variableName": "Fire1_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -738,8 +738,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire2_Flag"
+          "variableName": "Fire2_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -747,8 +747,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire3_Flag"
+          "variableName": "Fire3_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -756,8 +756,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire4_Flag"
+          "variableName": "Fire4_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -841,9 +841,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Storage_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         "Ability Start",
         {
@@ -877,9 +877,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Power_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1150,8 +1150,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "FireBallCount"
+          "variableName": "FireBallCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -1159,8 +1159,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Storage_Flag"
+          "variableName": "Storage_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1269,9 +1269,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire1_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1577,9 +1577,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire2_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1885,9 +1885,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire3_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -2159,9 +2159,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire4_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -3087,9 +3087,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "CountFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3097,8 +3097,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire1_Flag"
+          "variableName": "Fire1_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3106,8 +3106,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire2_Flag"
+          "variableName": "Fire2_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3115,8 +3115,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire3_Flag"
+          "variableName": "Fire3_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3124,8 +3124,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire4_Flag"
+          "variableName": "Fire4_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3218,8 +3218,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Fire1_Flag"
+          "variableName": "Fire1_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3227,8 +3227,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "FireBallCount"
+          "variableName": "FireBallCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3263,9 +3263,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Fire1_Flag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -3652,9 +3652,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -3703,9 +3703,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

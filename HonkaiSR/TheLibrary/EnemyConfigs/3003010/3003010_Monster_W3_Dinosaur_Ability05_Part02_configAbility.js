@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Crazy_Flag"
+      "variableName": "Crazy_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Modifier Behavior Flag(s)",
@@ -40,8 +40,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Vibrate_Count"
+      "variableName": "Vibrate_Count",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -49,9 +49,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

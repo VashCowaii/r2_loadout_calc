@@ -62,8 +62,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Cunhu_CurrentCount"
+                  "variableName": "Cunhu_CurrentCount",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",

@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01"
+      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -28,8 +28,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02"
+      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -37,8 +37,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03"
+      "variableName": "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",

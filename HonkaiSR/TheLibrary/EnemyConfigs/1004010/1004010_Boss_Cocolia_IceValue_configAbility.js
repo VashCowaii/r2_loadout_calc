@@ -67,8 +67,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "InsertController"
+              "variableName": "InsertController",
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -125,9 +125,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "InsertController",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

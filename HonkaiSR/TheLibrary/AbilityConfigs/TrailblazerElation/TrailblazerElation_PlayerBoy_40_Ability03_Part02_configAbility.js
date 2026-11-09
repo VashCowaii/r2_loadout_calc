@@ -201,8 +201,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_Rank01_ElationEcho"
+              "variableName": "_Rank01_ElationEcho",
+              "scope": "ContextCaster"
             },
             {
               "name": "Remove Events/Bonuses",

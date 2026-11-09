@@ -2544,8 +2544,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -2601,8 +2601,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -2926,8 +2926,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2987,8 +2987,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -3086,8 +3086,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -3147,8 +3147,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -5293,8 +5293,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",

@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_IF_InsertCount"
+      "variableName": "Monster_IF_InsertCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_IF_InsertCameraFlag"
+      "variableName": "Monster_IF_InsertCameraFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_IF_InsertCount02"
+      "variableName": "Monster_IF_InsertCount02",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_IF_InsertCameraFlag02"
+      "variableName": "Monster_IF_InsertCameraFlag02",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

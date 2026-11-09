@@ -105,9 +105,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 9
+                  "resetValue": 9,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -117,9 +117,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 10
+                  "resetValue": 10,
+                  "scope": "TargetEntity"
                 }
               ]
             }

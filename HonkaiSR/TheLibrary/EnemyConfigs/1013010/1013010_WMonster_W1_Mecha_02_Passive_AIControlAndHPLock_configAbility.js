@@ -52,9 +52,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "SummonSequence",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -132,9 +132,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 2
+                          "resetValue": 2,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -146,9 +146,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

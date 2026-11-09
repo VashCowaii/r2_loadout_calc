@@ -571,8 +571,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextTaskTemplate",
-          "variableName": "LightTeamCount"
+          "variableName": "LightTeamCount",
+          "scope": "ContextTaskTemplate"
         },
         {
           "name": "Declare Custom Variable",
@@ -580,8 +580,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextTaskTemplate",
-          "variableName": "DarkTeamCount"
+          "variableName": "DarkTeamCount",
+          "scope": "ContextTaskTemplate"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -628,9 +628,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "CyreneIndex",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -698,9 +698,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "CyreneIndex",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -732,9 +732,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "CyreneIndex",
-                              "value": 3
+                              "resetValue": 3,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -800,9 +800,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "CyreneIndex",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -834,9 +834,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "CyreneIndex",
-                              "value": 2
+                              "resetValue": 2,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -868,9 +868,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "CyreneIndex",
-                              "value": 3
+                              "resetValue": 3,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Use Custom Character Function",

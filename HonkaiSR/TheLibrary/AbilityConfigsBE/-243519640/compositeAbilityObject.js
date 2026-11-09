@@ -3908,8 +3908,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextCaster",
-                  "variableName": "StageAbility_MST_074_DotCount"
+                  "variableName": "StageAbility_MST_074_DotCount",
+                  "scope": "ContextCaster"
                 }
               ]
             },
@@ -5880,8 +5880,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Layer"
+          "variableName": "_Layer",
+          "scope": "TargetEntity"
         }
       ],
       "references": [
@@ -9353,8 +9353,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Layer"
+          "variableName": "_Layer",
+          "scope": "TargetEntity"
         }
       ],
       "references": [
@@ -12749,8 +12749,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Layer"
+          "variableName": "_Layer",
+          "scope": "TargetEntity"
         }
       ],
       "references": [

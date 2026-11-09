@@ -473,8 +473,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ToastFlag"
+      "variableName": "ToastFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

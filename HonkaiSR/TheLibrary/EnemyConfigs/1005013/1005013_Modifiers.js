@@ -259,9 +259,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]
@@ -813,8 +813,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W1_CocoliaP2_BattleScore1_Flag"
+              "variableName": "W1_CocoliaP2_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -872,9 +872,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W1_CocoliaP2_BattleScore1_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1165,9 +1165,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Cocolia_AICounter",
-              "value": 7
+              "resetValue": 7,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",

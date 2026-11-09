@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

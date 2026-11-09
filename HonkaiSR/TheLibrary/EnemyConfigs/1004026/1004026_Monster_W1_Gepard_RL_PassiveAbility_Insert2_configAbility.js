@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "DieInsert_Flag"
+      "variableName": "DieInsert_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Die_Flag"
+      "variableName": "Die_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -95,9 +95,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Inject Ability Use",

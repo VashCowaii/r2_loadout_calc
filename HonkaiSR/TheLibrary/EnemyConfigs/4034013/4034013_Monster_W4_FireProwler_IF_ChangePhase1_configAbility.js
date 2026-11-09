@@ -72,8 +72,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "InsertFlag_LMin"
+      "variableName": "InsertFlag_LMin",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -81,8 +81,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "InsertFlag_LMout"
+      "variableName": "InsertFlag_LMout",
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",
@@ -111,9 +111,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "ChangePhase",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -121,9 +121,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -131,9 +131,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Assist_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -141,9 +141,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Phase_Flag",
-      "value": 2
+      "resetValue": 2,
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Custom Variable",

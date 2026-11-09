@@ -174,8 +174,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W1_Soldier03_00_InsertFlag"
+      "variableName": "W1_Soldier03_00_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -183,9 +183,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W1_Soldier03_00_AICounter",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

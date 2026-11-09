@@ -11,16 +11,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_1_Get) || RETURN",
         "displayLines": "ADF_1_Get",
         "constants": [],
         "variables": [
           "ADF_1_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Events/Bonuses",

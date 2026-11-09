@@ -261,8 +261,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -322,8 +322,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -421,8 +421,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -482,8 +482,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DamageUpFlag"
+                  "variableName": "DamageUpFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -883,8 +883,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Cocolia_BattleScore5_Flag"
+              "variableName": "Cocolia_BattleScore5_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1048,8 +1048,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_BattleScore2_Flag"
+              "variableName": "Gepard_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1103,8 +1103,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CocoliaP1_BattleScore1_Flag"
+              "variableName": "CocoliaP1_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },

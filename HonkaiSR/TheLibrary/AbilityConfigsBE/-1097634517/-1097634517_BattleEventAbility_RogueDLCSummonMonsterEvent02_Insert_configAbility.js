@@ -32,8 +32,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Insert_Flag"
+      "variableName": "Insert_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -119,8 +119,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "SummonCount"
+      "variableName": "SummonCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

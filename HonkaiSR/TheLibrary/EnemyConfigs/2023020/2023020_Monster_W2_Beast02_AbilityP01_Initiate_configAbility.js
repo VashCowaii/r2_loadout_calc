@@ -36,8 +36,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Beast02_Num_Flag"
+          "variableName": "Beast02_Num_Flag",
+          "scope": "TargetEntity"
         }
       ]
     },

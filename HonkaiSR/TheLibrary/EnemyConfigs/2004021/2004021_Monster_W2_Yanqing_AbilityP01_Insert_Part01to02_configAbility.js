@@ -178,8 +178,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Yanqing_00_SkillP01_InsertFlag"
+      "variableName": "W2_Yanqing_00_SkillP01_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -187,8 +187,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
+      "variableName": "W2_Yanqing_00_Skill02_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -196,9 +196,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W2_Yanqing_00_AICounter",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

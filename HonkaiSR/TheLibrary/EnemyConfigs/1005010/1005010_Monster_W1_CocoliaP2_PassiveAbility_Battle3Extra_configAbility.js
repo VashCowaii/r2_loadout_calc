@@ -47,8 +47,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W1_CocoliaP2_00_Battle3LockHP_Trigger"
+              "variableName": "W1_CocoliaP2_00_Battle3LockHP_Trigger",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -126,9 +126,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W1_CocoliaP2_00_Battle3LockHP_Trigger",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -236,9 +236,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Cocolia_AICounter",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",

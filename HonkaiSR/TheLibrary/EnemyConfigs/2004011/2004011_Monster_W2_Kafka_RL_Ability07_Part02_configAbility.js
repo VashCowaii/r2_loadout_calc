@@ -17,8 +17,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "MindControlCount"
+      "variableName": "MindControlCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -58,8 +58,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ShowHint04"
+      "variableName": "ShowHint04",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",

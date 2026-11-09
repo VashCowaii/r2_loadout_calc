@@ -21,9 +21,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "W3_FigureBoss_00_BattleScore2_Flag1",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -72,8 +72,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_FigureBoss_00_BattleScore1_Flag1"
+              "variableName": "W3_FigureBoss_00_BattleScore1_Flag1",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -81,8 +81,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_FigureBoss_00_BattleScore1_Flag2"
+              "variableName": "W3_FigureBoss_00_BattleScore1_Flag2",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -90,8 +90,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_FigureBoss_00_BattleScore1_Flag3"
+              "variableName": "W3_FigureBoss_00_BattleScore1_Flag3",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -296,16 +296,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_AIFlag) || RETURN",
                 "displayLines": "MDF_AIFlag",
                 "constants": [],
                 "variables": [
                   "MDF_AIFlag"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Action Advance/Delay",
@@ -357,9 +357,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 10
+              "resetValue": 10,
+              "scope": "TargetEntity"
             },
             {
               "name": "Action Advance/Delay",
@@ -857,8 +857,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "HaveAnyChosenOne"
+                  "variableName": "HaveAnyChosenOne",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -1345,8 +1345,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",

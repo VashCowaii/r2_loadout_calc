@@ -1428,9 +1428,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 7
+                  "resetValue": 7,
+                  "scope": "TargetEntity"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1487,9 +1487,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Yanqing_00_WeakPointState",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1566,9 +1566,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_WeakPointState",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1652,9 +1652,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Yanqing_00_WeakPointState",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1731,9 +1731,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_WeakPointState",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1817,9 +1817,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Yanqing_00_WeakPointState",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1896,9 +1896,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_WeakPointState",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2278,9 +2278,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_Skill02_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2462,9 +2462,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Yanqing_00_Skill02_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2788,9 +2788,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "scope": "TargetEntity",
               "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -2873,8 +2873,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag"
+              "variableName": "W2_Yanqing_00_SummonMinionsPerformFlag",
+              "scope": "TargetEntity"
             }
           ]
         }

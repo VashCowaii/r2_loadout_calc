@@ -3365,8 +3365,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoPhysical"
+                      "variableName": "TDF_NoPhysical",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3376,8 +3376,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoPhysical"
+                      "variableName": "TDF_NoPhysical",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3389,9 +3389,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoPhysical",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3425,8 +3425,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoWind"
+                      "variableName": "TDF_NoWind",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3436,8 +3436,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoWind"
+                      "variableName": "TDF_NoWind",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3449,9 +3449,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoWind",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3485,8 +3485,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoFire"
+                      "variableName": "TDF_NoFire",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3496,8 +3496,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoFire"
+                      "variableName": "TDF_NoFire",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3509,9 +3509,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoFire",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3545,8 +3545,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoThunder"
+                      "variableName": "TDF_NoThunder",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3556,8 +3556,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoThunder"
+                      "variableName": "TDF_NoThunder",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3569,9 +3569,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoThunder",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3605,8 +3605,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoIce"
+                      "variableName": "TDF_NoIce",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3616,8 +3616,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoIce"
+                      "variableName": "TDF_NoIce",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3629,9 +3629,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoIce",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3665,8 +3665,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoQuantum"
+                      "variableName": "TDF_NoQuantum",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3676,8 +3676,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoQuantum"
+                      "variableName": "TDF_NoQuantum",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3689,9 +3689,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoQuantum",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -3725,8 +3725,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoImaginary"
+                      "variableName": "TDF_NoImaginary",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -3736,8 +3736,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoImaginary"
+                      "variableName": "TDF_NoImaginary",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -3749,9 +3749,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoImaginary",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },

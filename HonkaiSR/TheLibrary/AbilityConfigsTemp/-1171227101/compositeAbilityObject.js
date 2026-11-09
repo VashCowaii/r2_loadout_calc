@@ -35,8 +35,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "ChangePhase_MaxHPValue"
+              "variableName": "ChangePhase_MaxHPValue",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -114,8 +114,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "ChangePhase_MaxHPValue"
+              "variableName": "ChangePhase_MaxHPValue",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1331,8 +1331,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}.[[living]]"
               },
-              "scope": "TargetEntity",
-              "variableName": "MDF_PerformanceDelay"
+              "variableName": "MDF_PerformanceDelay",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -1444,8 +1444,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
-              "variableName": "MDF_PerformanceDelay"
+              "variableName": "MDF_PerformanceDelay",
+              "scope": "ContextModifier"
             },
             {
               "name": "Find New Target",
@@ -1555,8 +1555,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
-                  "variableName": "MDF_OriginalDamagePercentage"
+                  "variableName": "MDF_OriginalDamagePercentage",
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1564,8 +1564,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
-                  "variableName": "MDF_OriginalDamageValue"
+                  "variableName": "MDF_OriginalDamageValue",
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable with Damage Data",
@@ -1820,8 +1820,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextAbility",
-              "variableName": "_TargetNum"
+              "variableName": "_TargetNum",
+              "scope": "ContextAbility"
             },
             {
               "name": "Define Custom Variable with Team Count",
@@ -1851,8 +1851,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextAbility",
-              "variableName": "_TargetNum"
+              "variableName": "_TargetNum",
+              "scope": "ContextAbility"
             },
             {
               "name": "Define Custom Variable with Team Count",
@@ -1893,8 +1893,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextAbility",
-              "variableName": "_TargetNum"
+              "variableName": "_TargetNum",
+              "scope": "ContextAbility"
             },
             {
               "name": "Define Custom Variable with Team Count",
@@ -1935,8 +1935,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextAbility",
-              "variableName": "_TargetNum"
+              "variableName": "_TargetNum",
+              "scope": "ContextAbility"
             },
             {
               "name": "Define Custom Variable with Team Count",
@@ -2193,8 +2193,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "TDF_TotalStanceDamageOnTarget"
+                  "variableName": "TDF_TotalStanceDamageOnTarget",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "IF",
@@ -2314,8 +2314,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "TDF_TotalStanceDamageOnTarget"
+                  "variableName": "TDF_TotalStanceDamageOnTarget",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "IF",
@@ -2432,8 +2432,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "TDF_TotalStanceDamageOnTarget"
+                  "variableName": "TDF_TotalStanceDamageOnTarget",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2441,8 +2441,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "BreakDamagePercentage"
+                  "variableName": "BreakDamagePercentage",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "IF",
@@ -2545,8 +2545,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "TDF_TotalStanceDamageOnTarget"
+                  "variableName": "TDF_TotalStanceDamageOnTarget",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2554,8 +2554,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextTaskTemplate",
-                  "variableName": "BreakDamagePercentage"
+                  "variableName": "BreakDamagePercentage",
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "IF",

@@ -30,8 +30,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Feixiao_BattleScore2_Flag"
+                  "variableName": "Feixiao_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -155,8 +155,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Feixiao_BattleScore1_Flag"
+                  "variableName": "Feixiao_BattleScore1_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1905,9 +1905,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2826,8 +2826,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -2890,8 +2890,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",

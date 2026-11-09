@@ -183,9 +183,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "CDF_Combo_1_StartFrame",
-          "value": 4
+          "resetValue": 4,
+          "scope": "ContextCaster"
         }
       ],
       "failed": [
@@ -195,9 +195,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "CDF_Combo_1_StartFrame",
-          "value": 6
+          "resetValue": 6,
+          "scope": "ContextCaster"
         }
       ]
     },

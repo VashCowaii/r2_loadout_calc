@@ -84,8 +84,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "CurrentSupportNumber"
+      "variableName": "CurrentSupportNumber",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {
@@ -116,8 +116,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "CurrentSupportNumber"
+              "variableName": "CurrentSupportNumber",
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",

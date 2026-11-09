@@ -52,9 +52,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "TimeSlowSpeed",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -94,8 +94,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "TimeSlowSpeed"
+                      "variableName": "TimeSlowSpeed",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -132,8 +132,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "TimeSlowSpeed"
+                      "variableName": "TimeSlowSpeed",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -188,9 +188,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "TimeSlowSpeed",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -238,8 +238,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "TimeSlowSpeed"
+                          "variableName": "TimeSlowSpeed",
+                          "scope": "TargetEntity"
                         }
                       ]
                     }

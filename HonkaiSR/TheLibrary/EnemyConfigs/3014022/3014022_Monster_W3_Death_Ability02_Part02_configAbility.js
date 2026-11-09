@@ -11,9 +11,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Effect_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "ATK Scaling DMG",
@@ -44,8 +44,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Effect_Flag"
+      "variableName": "Effect_Flag",
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

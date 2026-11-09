@@ -79,8 +79,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "WeatherBEFlag"
+                      "variableName": "WeatherBEFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1545,8 +1545,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BattleEventHeal_HPDeltaLayer"
+              "variableName": "BattleEventHeal_HPDeltaLayer",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1556,8 +1556,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "BattleEventHeal_HPDeltaLayer"
+          "variableName": "BattleEventHeal_HPDeltaLayer",
+          "scope": "TargetEntity"
         }
       ],
       "references": [

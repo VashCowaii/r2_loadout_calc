@@ -11,16 +11,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "BattleEvent_P1_ADF",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
         "displayLines": "#BattleEvent_P1_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P1_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Ability",

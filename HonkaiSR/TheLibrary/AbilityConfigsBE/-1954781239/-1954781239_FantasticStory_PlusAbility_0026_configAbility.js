@@ -16,16 +16,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_PlusAbility_0026_ADF_1",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#ADF_1) || RETURN",
         "displayLines": "#ADF_1",
         "constants": [],
         "variables": [
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -33,16 +33,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_PlusAbility_0026_ADF_2",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#ADF_2) || RETURN",
         "displayLines": "#ADF_2",
         "constants": [],
         "variables": [
           "#ADF_2"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     }
   ],
   "references": []

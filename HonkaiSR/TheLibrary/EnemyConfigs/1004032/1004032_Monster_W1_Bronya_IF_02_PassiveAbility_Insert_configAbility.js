@@ -110,9 +110,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": -1
+          "resetValue": -1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -120,9 +120,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 2
+          "resetValue": 2,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -130,9 +130,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "PhaseFlag",
-          "value": 2
+          "resetValue": 2,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -140,9 +140,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "PhaseFlag",
-          "value": 2
+          "resetValue": 2,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",

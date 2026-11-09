@@ -157,9 +157,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -178,9 +178,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                          "value": 3
+                          "resetValue": 3,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -226,9 +226,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -268,9 +268,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -292,9 +292,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -452,9 +452,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Phase2InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -637,9 +637,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "InsertCheck",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Lock HP",
@@ -872,8 +872,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "scope": "TargetEntity",
-                                      "variableName": "InsertCheck"
+                                      "variableName": "InsertCheck",
+                                      "scope": "TargetEntity"
                                     },
                                     {
                                       "name": "Set Enemy Phase",
@@ -920,8 +920,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "scope": "TargetEntity",
-                                      "variableName": "InsertCheck"
+                                      "variableName": "InsertCheck",
+                                      "scope": "TargetEntity"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1006,8 +1006,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "scope": "TargetEntity",
-                                      "variableName": "InsertCheck"
+                                      "variableName": "InsertCheck",
+                                      "scope": "TargetEntity"
                                     },
                                     {
                                       "name": "Exit Broken-State",
@@ -1167,9 +1167,9 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "scope": "TargetEntity",
                                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                                      "value": 1
+                                      "resetValue": 1,
+                                      "scope": "TargetEntity"
                                     }
                                   ]
                                 }
@@ -1236,8 +1236,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Set Enemy Phase",
@@ -1416,8 +1416,8 @@ const compositeAbilityObject = {
                                                         "name": "Target Name",
                                                         "target": "{{Modifier Holder}}"
                                                       },
-                                                      "scope": "TargetEntity",
-                                                      "variableName": "InsertCheck"
+                                                      "variableName": "InsertCheck",
+                                                      "scope": "TargetEntity"
                                                     },
                                                     {
                                                       "name": "Set Enemy Phase",
@@ -1464,8 +1464,8 @@ const compositeAbilityObject = {
                                                         "name": "Target Name",
                                                         "target": "{{Parameter Target}}"
                                                       },
-                                                      "scope": "TargetEntity",
-                                                      "variableName": "InsertCheck"
+                                                      "variableName": "InsertCheck",
+                                                      "scope": "TargetEntity"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
@@ -1552,8 +1552,8 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "scope": "TargetEntity",
-                                                  "variableName": "InsertCheck"
+                                                  "variableName": "InsertCheck",
+                                                  "scope": "TargetEntity"
                                                 },
                                                 {
                                                   "name": "Exit Broken-State",
@@ -1729,9 +1729,9 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "scope": "TargetEntity",
                                                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                                                  "value": 1
+                                                  "resetValue": 1,
+                                                  "scope": "TargetEntity"
                                                 }
                                               ]
                                             }
@@ -1765,8 +1765,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "scope": "TargetEntity",
-                                      "variableName": "TeammateSurvive"
+                                      "variableName": "TeammateSurvive",
+                                      "scope": "TargetEntity"
                                     }
                                   ]
                                 },
@@ -2041,8 +2041,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Mecha04_BattleScore2_Flag"
+                  "variableName": "Mecha04_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2197,9 +2197,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -2405,9 +2405,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2706,9 +2706,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "InsertCheck",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -2716,9 +2716,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -2726,9 +2726,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "InsertCheck",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -2736,9 +2736,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -3022,8 +3022,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha04_00_InsertFlag"
+                  "variableName": "Monster_W1_Mecha04_00_InsertFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3239,9 +3239,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3296,8 +3296,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Mecha04_Aim_Flag"
+          "variableName": "Mecha04_Aim_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",
@@ -3324,9 +3324,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Mecha04_Aim_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3591,8 +3591,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Mecha04_Aim_Flag"
+          "variableName": "Mecha04_Aim_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",
@@ -3619,9 +3619,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Mecha04_Aim_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4049,8 +4049,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Mecha04_EnemySelector"
+                      "variableName": "Mecha04_EnemySelector",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -4069,9 +4069,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Mecha04_EnemySelector",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ],
                       "failed": [
@@ -4081,9 +4081,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Mecha04_EnemySelector",
-                          "value": 2
+                          "resetValue": 2,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -4171,9 +4171,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "Monster_W1_Mecha04_00_InsertFlag",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ],
                           "failed": [
@@ -4183,8 +4183,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "Mecha04_EnemySelector"
+                              "variableName": "Mecha04_EnemySelector",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "IF",
@@ -4203,9 +4203,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "Mecha04_EnemySelector",
-                                  "value": 1
+                                  "resetValue": 1,
+                                  "scope": "TargetEntity"
                                 }
                               ],
                               "failed": [
@@ -4215,9 +4215,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "Mecha04_EnemySelector",
-                                  "value": 2
+                                  "resetValue": 2,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }
@@ -4263,9 +4263,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Monster_W1_Mecha04_00_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -4455,8 +4455,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Mecha04_AttackCount"
+                  "variableName": "Mecha04_AttackCount",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -4549,8 +4549,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Mecha04_AttackCount"
+                          "variableName": "Mecha04_AttackCount",
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -4744,8 +4744,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "Monster_W1_Mecha04_00_InsertFlag"
+                    "variableName": "Monster_W1_Mecha04_00_InsertFlag",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4791,8 +4791,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "Phase2InsertFlag"
+                    "variableName": "Phase2InsertFlag",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -4800,9 +4800,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -4900,9 +4900,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                        "value": 2
+                        "resetValue": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -4916,9 +4916,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -4983,9 +4983,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5045,9 +5045,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5104,9 +5104,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                        "value": 2
+                        "resetValue": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5120,9 +5120,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5197,9 +5197,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                            "value": 3
+                            "resetValue": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "IF",
@@ -5231,9 +5231,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                            "value": 2
+                            "resetValue": 2,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5306,9 +5306,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5377,9 +5377,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

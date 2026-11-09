@@ -53,9 +53,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "UsedEnterBattleFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

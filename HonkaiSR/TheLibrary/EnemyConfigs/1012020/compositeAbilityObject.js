@@ -176,8 +176,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_BoomTimes"
+          "variableName": "_BoomTimes",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -185,8 +185,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_BoomRound"
+          "variableName": "_BoomRound",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -391,8 +391,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_BoomTimes"
+          "variableName": "_BoomTimes",
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],

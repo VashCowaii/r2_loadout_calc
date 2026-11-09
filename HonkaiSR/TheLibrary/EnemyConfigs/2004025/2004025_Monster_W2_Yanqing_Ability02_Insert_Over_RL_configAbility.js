@@ -105,8 +105,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Yanqing_00_Skill02_InsertFlag"
+      "variableName": "W2_Yanqing_00_Skill02_InsertFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

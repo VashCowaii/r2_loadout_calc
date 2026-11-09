@@ -166,9 +166,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PartDecisionFlag",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

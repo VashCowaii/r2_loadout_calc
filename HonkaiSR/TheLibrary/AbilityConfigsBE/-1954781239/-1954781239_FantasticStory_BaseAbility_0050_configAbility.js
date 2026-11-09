@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
+      "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0051"
+      "variableName": "DV_FantasticStory_PlusAbility_0051",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0052"
+      "variableName": "DV_FantasticStory_PlusAbility_0052",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0053"
+      "variableName": "DV_FantasticStory_PlusAbility_0053",
+      "scope": "ContextCaster"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -70,8 +70,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
+      "variableName": "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -79,9 +79,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_1",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#ADF_1) || Constants[0] (0.33) || MUL || RETURN",
         "displayLines": "(#ADF_1 * 0.33)",
         "constants": [
@@ -90,7 +89,8 @@ const configAbility = {
         "variables": [
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -98,9 +98,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_2",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#ADF_1) || Constants[0] (0.67) || MUL || RETURN",
         "displayLines": "(#ADF_1 * 0.67)",
         "constants": [
@@ -109,7 +108,8 @@ const configAbility = {
         "variables": [
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -117,16 +117,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_RangeGap_3",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#ADF_1) || RETURN",
         "displayLines": "#ADF_1",
         "constants": [],
         "variables": [
           "#ADF_1"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Start Battle Track Progress",

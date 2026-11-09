@@ -23,8 +23,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_BoomTimes"
+      "variableName": "_BoomTimes",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -32,8 +32,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_BoomRound"
+      "variableName": "_BoomRound",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

@@ -37,9 +37,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "CounterCheck",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -97,8 +97,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "CounterCheck"
+                  "variableName": "CounterCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

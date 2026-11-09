@@ -32,7 +32,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "MaxSummonCount",
-          "value": 4
+          "resetValue": 4
         }
       ],
       "failed": [
@@ -43,7 +43,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "MaxSummonCount",
-          "value": 2
+          "resetValue": 2
         }
       ]
     },

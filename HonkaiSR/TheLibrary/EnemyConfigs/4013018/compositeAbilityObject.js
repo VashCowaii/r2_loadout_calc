@@ -343,8 +343,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountBefore",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -352,8 +352,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter"
+                  "variableName": "W4_Claymore_00_BattleScore2_TargetCountAfter",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -503,8 +503,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
+                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
+                  "scope": "TargetEntity"
                 }
               ]
             },

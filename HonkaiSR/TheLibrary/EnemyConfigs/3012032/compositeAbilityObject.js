@@ -243,9 +243,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Insert_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -258,8 +258,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -272,8 +272,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Insert_Flag"
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             }

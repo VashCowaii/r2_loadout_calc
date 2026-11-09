@@ -39,8 +39,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_BattleSore2_Flag"
+                  "variableName": "W2_Mecha03_BattleSore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -109,9 +109,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_Overdrive_State",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -119,9 +119,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_AICounter",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -134,8 +134,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_00_Overdrive_State"
+                  "variableName": "W2_Mecha03_00_Overdrive_State",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -151,9 +151,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_AICounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -218,9 +218,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_Overdrive_State",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -228,9 +228,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_AICounter",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -243,8 +243,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_00_Overdrive_State"
+                  "variableName": "W2_Mecha03_00_Overdrive_State",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -260,9 +260,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Mecha03_00_AICounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -415,9 +415,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -473,8 +473,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+                      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -694,9 +694,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Mecha03_00_Overdrive_State",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -798,9 +798,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -902,9 +902,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Mecha03_00_Overdrive_State",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -1006,9 +1006,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -1120,8 +1120,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_00_Overdrive_AttackedFlag"
+                  "variableName": "W2_Mecha03_00_Overdrive_AttackedFlag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1129,8 +1129,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_00_CTRLState"
+                  "variableName": "W2_Mecha03_00_CTRLState",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1169,8 +1169,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "W2_Mecha03_00_CTRLState"
+                      "variableName": "W2_Mecha03_00_CTRLState",
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -1180,9 +1180,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Mecha03_00_CTRLState",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1274,9 +1274,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Mecha03_00_Overdrive_AttackedFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1350,8 +1350,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Mecha03_00_Overdrive_AttackedFlag"
+                  "variableName": "W2_Mecha03_00_Overdrive_AttackedFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1381,9 +1381,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W2_Mecha03_00_AICounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -1391,8 +1391,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_State"
+          "variableName": "W2_Mecha03_00_Overdrive_State",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -1400,8 +1400,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1647,8 +1647,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+          "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",

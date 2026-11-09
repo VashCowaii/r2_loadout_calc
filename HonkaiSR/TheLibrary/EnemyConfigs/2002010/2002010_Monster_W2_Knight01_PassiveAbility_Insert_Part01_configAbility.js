@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "FollowTrigger"
+      "variableName": "FollowTrigger",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

@@ -320,8 +320,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Wolf_AttackCount"
+                      "variableName": "Wolf_AttackCount",
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -382,16 +382,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Wolf_MaxAttackCount",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MaxAttackCount) || RETURN",
                         "displayLines": "MaxAttackCount",
                         "constants": [],
                         "variables": [
                           "MaxAttackCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Stage Ability",
@@ -494,8 +494,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Wolf_AttackCount"
+                      "variableName": "Wolf_AttackCount",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -503,16 +503,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Wolf_MaxAttackCount",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MaxAttackCount) || RETURN",
                         "displayLines": "MaxAttackCount",
                         "constants": [],
                         "variables": [
                           "MaxAttackCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -2245,9 +2245,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AI_HeiShengBei_Need",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },

@@ -1140,16 +1140,16 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
                     "displayLines": "{[PassiveSkill03[4]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill03[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -1159,16 +1159,16 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
                     "displayLines": "{[PassiveSkill03[1]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill03[1]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1239,16 +1239,16 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
                         "displayLines": "{[PassiveSkill03[4]]}",
                         "constants": [],
                         "variables": [
                           "{[PassiveSkill03[4]]}"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -1258,16 +1258,16 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
                         "displayLines": "{[PassiveSkill03[1]]}",
                         "constants": [],
                         "variables": [
                           "{[PassiveSkill03[1]]}"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 },

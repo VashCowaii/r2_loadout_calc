@@ -1676,9 +1676,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "Bounce_Count",
-              "value": 5
+              "resetValue": 5,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
@@ -1688,9 +1688,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "Bounce_Count",
-              "value": 4
+              "resetValue": 4,
+              "scope": "ContextCaster"
             }
           ]
         },

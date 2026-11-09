@@ -296,8 +296,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_W1_Mecha04_00_InsertFlag"
+              "variableName": "Monster_W1_Mecha04_00_InsertFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -413,9 +413,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 10
+                  "resetValue": 10,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -434,9 +434,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -482,9 +482,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -524,9 +524,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 10
+                  "resetValue": 10,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -548,9 +548,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WMonster_W1_Mecha_02_AIFlag_P2",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }

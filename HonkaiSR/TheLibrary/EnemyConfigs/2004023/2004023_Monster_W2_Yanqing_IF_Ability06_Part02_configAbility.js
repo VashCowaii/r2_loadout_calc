@@ -205,9 +205,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W2_Yanqing_00_MainBattle_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },

@@ -362,8 +362,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "MDF_PointB1Trigger"
+              "variableName": "MDF_PointB1Trigger",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -443,9 +443,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_PointB1Trigger",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -460,8 +460,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "MDF_PointB1Trigger"
+              "variableName": "MDF_PointB1Trigger",
+              "scope": "TargetEntity"
             }
           ]
         }

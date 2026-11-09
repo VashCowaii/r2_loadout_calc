@@ -35,9 +35,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -89,9 +89,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -143,9 +143,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -197,9 +197,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 4
+                  "resetValue": 4,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -251,9 +251,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 5
+                  "resetValue": 5,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -305,9 +305,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 6
+                  "resetValue": 6,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -359,9 +359,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WeaknessPlayCheck",
-                  "value": 7
+                  "resetValue": 7,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -838,9 +838,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "W3_Sunday_00_TimePause_ActionCounter",
-              "value": 7
+              "resetValue": 7,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1771,16 +1771,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
               },
-              "scope": "TargetEntity",
               "variableName": "_WeakResistance",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
                 "constants": [],
                 "variables": [
                   "{[SkillEX03[0]]}"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -1883,9 +1883,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -2266,8 +2266,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_Sunday_00_BattleScore2_Flag"
+              "variableName": "W3_Sunday_00_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3154,7 +3154,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "LockHPTriggerFlag",
-                  "value": 1
+                  "resetValue": 1
                 },
                 {
                   "name": "SWITCH",
@@ -3277,7 +3277,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "LockHPTriggerFlag",
-                  "value": 1
+                  "resetValue": 1
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -3374,7 +3374,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "variableName": "LockHPTriggerFlag",
-                  "value": 1
+                  "resetValue": 1
                 },
                 {
                   "name": "SWITCH",
@@ -3406,9 +3406,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 5
+                          "resetValue": 5,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -3422,9 +3422,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 6
+                          "resetValue": 6,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -4662,16 +4662,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AssistSkill01_DamagePercentage",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
                 "displayLines": "MDF_Assist_DamagePercentage",
                 "constants": [],
                 "variables": [
                   "MDF_Assist_DamagePercentage"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -4941,9 +4941,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "W3_Sunday_00_TimePause_ActionCounter",
-              "value": 7
+              "resetValue": 7,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -5123,9 +5123,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -5230,9 +5230,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -5309,9 +5309,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -6362,9 +6362,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -6410,9 +6410,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

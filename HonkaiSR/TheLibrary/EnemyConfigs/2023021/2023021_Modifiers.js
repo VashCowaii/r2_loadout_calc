@@ -159,8 +159,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bullet_Count"
+              "variableName": "Bullet_Count",
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -207,8 +207,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Action_Flag"
+              "variableName": "Action_Flag",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -216,9 +216,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 4
+              "resetValue": 4,
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -258,8 +258,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Action_Flag"
+                      "variableName": "Action_Flag",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Action Advance/Delay",

@@ -43,8 +43,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bronya_SummonCounter"
+      "variableName": "Bronya_SummonCounter",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -52,8 +52,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bronya_SummonMode"
+      "variableName": "Bronya_SummonMode",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -119,8 +119,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_SummonMode"
+              "variableName": "Bronya_SummonMode",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -128,9 +128,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Bronya_AICounter_Act2",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -159,9 +159,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Bronya_AICounter_Act2",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -206,8 +206,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W1_Bronya_00_InsertFlag"
+              "variableName": "W1_Bronya_00_InsertFlag",
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -355,9 +355,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W1_Bronya_00_InsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

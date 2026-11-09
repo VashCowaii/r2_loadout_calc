@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "EntityCurrentSP"
+      "variableName": "EntityCurrentSP",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "EntityStockSP"
+      "variableName": "EntityStockSP",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -47,8 +47,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Player Team All}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "EntityMaxSP"
+      "variableName": "EntityMaxSP",
+      "scope": "TargetEntity"
     }
   ],
   "references": [

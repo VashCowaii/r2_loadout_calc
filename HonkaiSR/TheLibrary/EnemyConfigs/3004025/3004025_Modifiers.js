@@ -87,8 +87,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W3_Theater_00_BattleScore1_Flag"
+              "variableName": "W3_Theater_00_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },

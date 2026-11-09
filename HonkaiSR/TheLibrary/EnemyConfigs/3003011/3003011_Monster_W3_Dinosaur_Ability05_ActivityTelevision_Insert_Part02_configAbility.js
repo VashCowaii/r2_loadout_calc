@@ -26,8 +26,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Vibrate_Count"
+      "variableName": "Vibrate_Count",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

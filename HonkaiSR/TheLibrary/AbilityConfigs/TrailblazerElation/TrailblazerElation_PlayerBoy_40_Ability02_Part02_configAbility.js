@@ -202,9 +202,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "_Rank01_ElationEcho",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (2) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * 2)",
                 "constants": [],
@@ -212,7 +211,8 @@ const configAbility = {
                   "MDF_Layer",
                   2
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             }
           ]
         }

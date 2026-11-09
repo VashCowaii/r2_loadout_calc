@@ -28,8 +28,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "StageAbility_MST_074_DotCount"
+              "variableName": "StageAbility_MST_074_DotCount",
+              "scope": "ContextCaster"
             }
           ]
         },

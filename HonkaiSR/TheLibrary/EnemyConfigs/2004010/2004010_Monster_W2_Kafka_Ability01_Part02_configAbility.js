@@ -139,9 +139,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "ElectricFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -208,8 +208,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ElectricFlag"
+      "variableName": "ElectricFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "BattleEvent_BlackSwan"
+      "variableName": "BattleEvent_BlackSwan",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -313,9 +313,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "BattleEvent_BlackSwan",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -323,8 +323,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "MDF_MaxSP"
+                      "variableName": "MDF_MaxSP",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -403,9 +403,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "BattleEvent_BlackSwan",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -413,8 +413,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "MDF_MaxSP"
+                          "variableName": "MDF_MaxSP",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable with Stat",

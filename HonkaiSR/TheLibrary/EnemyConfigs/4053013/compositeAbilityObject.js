@@ -1151,8 +1151,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -4327,9 +4327,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 3
+          "resetValue": 3,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5504,7 +5504,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2
                   },
                   {
                     "name": "Use Ability Option",
@@ -5548,7 +5548,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 3
+                        "resetValue": 3
                       }
                     ],
                     "failed": [
@@ -5559,7 +5559,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1
                       }
                     ]
                   },
@@ -5596,7 +5596,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5
                   },
                   {
                     "name": "Use Ability Option",

@@ -85,9 +85,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 5
+          "resetValue": 5,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -97,9 +97,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 4
+          "resetValue": 4,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",

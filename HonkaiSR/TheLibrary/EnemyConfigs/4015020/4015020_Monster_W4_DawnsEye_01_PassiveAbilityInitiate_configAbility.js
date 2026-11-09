@@ -96,9 +96,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 7
+              "resetValue": 7,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -635,8 +635,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "ChangePhase_InsertController"
+              "variableName": "ChangePhase_InsertController",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -709,9 +709,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ChangePhase_InsertController",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Dispel Debuffs",

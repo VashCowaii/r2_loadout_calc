@@ -148,8 +148,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Nikador - The Giver: Self}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ChangePhase_MaxHPValue"
+      "variableName": "ChangePhase_MaxHPValue",
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -230,9 +230,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

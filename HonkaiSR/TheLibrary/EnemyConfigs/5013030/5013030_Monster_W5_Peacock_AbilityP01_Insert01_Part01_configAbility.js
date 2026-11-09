@@ -22,8 +22,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ColorInInsertFlag"
+      "variableName": "ColorInInsertFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

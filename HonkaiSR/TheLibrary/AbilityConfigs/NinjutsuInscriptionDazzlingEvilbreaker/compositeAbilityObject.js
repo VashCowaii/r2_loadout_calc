@@ -35,8 +35,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "DV_CastSkill01Count"
+          "variableName": "DV_CastSkill01Count",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",

@@ -128,8 +128,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Skill07_EffectFlag"
+              "variableName": "Skill07_EffectFlag",
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -142,8 +142,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Skill07_EffectFlag"
+      "variableName": "Skill07_EffectFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

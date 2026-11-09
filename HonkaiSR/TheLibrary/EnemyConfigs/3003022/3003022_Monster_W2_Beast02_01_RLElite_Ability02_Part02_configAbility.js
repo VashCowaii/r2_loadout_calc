@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "FireBallCount"
+      "variableName": "FireBallCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -27,8 +27,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Storage_Flag"
+      "variableName": "Storage_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -184,9 +184,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire1_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -405,9 +405,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire2_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -626,9 +626,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire3_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -802,9 +802,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Fire4_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1277,9 +1277,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "CountFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -1287,8 +1287,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire1_Flag"
+      "variableName": "Fire1_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -1296,8 +1296,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire2_Flag"
+      "variableName": "Fire2_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -1305,8 +1305,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire3_Flag"
+      "variableName": "Fire3_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -1314,8 +1314,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Fire4_Flag"
+      "variableName": "Fire4_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

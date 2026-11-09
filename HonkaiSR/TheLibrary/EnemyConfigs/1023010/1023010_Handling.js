@@ -45,9 +45,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   }
                 ],
                 "failed": [
@@ -57,9 +57,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   }
                 ]
               },
@@ -118,9 +118,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   }
                 ],
                 "failed": [
@@ -130,9 +130,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   }
                 ]
               },
@@ -266,9 +266,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

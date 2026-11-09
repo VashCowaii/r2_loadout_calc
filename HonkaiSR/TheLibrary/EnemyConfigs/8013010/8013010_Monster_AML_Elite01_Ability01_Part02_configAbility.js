@@ -44,8 +44,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_AML_Elite01_00_BreakCounter"
+      "variableName": "Monster_AML_Elite01_00_BreakCounter",
+      "scope": "TargetEntity"
     },
     "Trigger: Attack End",
     "Trigger: Ability End"

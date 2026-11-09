@@ -33,8 +33,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "XP_Elite02_03_BattleScore1_Flag"
+              "variableName": "XP_Elite02_03_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },

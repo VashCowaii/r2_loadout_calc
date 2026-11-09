@@ -150,9 +150,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "DecisionFlag",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -412,9 +412,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PartDecisionFlag",
-                  "value": 2
+                  "resetValue": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             }

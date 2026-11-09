@@ -211,8 +211,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "BattleEventAttack_Layer"
+              "variableName": "BattleEventAttack_Layer",
+              "scope": "TargetEntity"
             }
           ]
         },

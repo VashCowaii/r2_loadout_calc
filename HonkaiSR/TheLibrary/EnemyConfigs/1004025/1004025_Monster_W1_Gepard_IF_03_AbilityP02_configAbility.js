@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Gepard_LimboFlag"
+      "variableName": "Gepard_LimboFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

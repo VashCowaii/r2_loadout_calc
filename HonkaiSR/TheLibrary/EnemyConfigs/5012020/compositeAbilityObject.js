@@ -882,9 +882,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Choose Ability Target",
@@ -955,9 +955,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -973,9 +973,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -1126,9 +1126,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Choose Ability Target",
@@ -1199,9 +1199,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "resetValue": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -1217,9 +1217,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",

@@ -195,8 +195,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Declare Custom Variable",
@@ -204,8 +204,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Find New Target",
@@ -282,8 +282,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Reset Toughness",
@@ -713,9 +713,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ReturnAttackCounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -870,8 +870,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_BattleScore2_Flag"
+              "variableName": "Gepard_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -925,8 +925,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_BattleScore1_Flag"
+              "variableName": "Gepard_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1884,9 +1884,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Shield",
@@ -2184,9 +2184,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ReturnAttackCounter",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -2266,9 +2266,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Die_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2307,9 +2307,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Insert_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",

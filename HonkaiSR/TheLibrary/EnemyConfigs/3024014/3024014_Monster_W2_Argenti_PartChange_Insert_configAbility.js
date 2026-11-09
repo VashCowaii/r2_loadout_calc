@@ -28,8 +28,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Die_Flag"
+          "variableName": "Die_Flag",
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -72,9 +72,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Phase_Flag",
-      "value": 2
+      "resetValue": 2,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -82,9 +82,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

@@ -115,9 +115,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Flag_21029",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -127,8 +127,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Flag_21029"
+                      "variableName": "Flag_21029",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -143,8 +143,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Flag_21029"
+                  "variableName": "Flag_21029",
+                  "scope": "TargetEntity"
                 }
               ]
             }

@@ -1614,16 +1614,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2113_ADF_1",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_1) || RETURN",
             "displayLines": "#ADF_1",
             "constants": [],
             "variables": [
               "#ADF_1"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -1631,16 +1631,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2113_ADF_2",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_2) || RETURN",
             "displayLines": "#ADF_2",
             "constants": [],
             "variables": [
               "#ADF_2"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -1648,16 +1648,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2113_ADF_3",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_3) || RETURN",
             "displayLines": "#ADF_3",
             "constants": [],
             "variables": [
               "#ADF_3"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ],
       "references": []
@@ -1680,16 +1680,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2112_ADF_1",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_1) || RETURN",
             "displayLines": "#ADF_1",
             "constants": [],
             "variables": [
               "#ADF_1"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -1697,16 +1697,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2112_ADF_2",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_2) || RETURN",
             "displayLines": "#ADF_2",
             "constants": [],
             "variables": [
               "#ADF_2"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -1714,16 +1714,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2112_ADF_3",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_3) || RETURN",
             "displayLines": "#ADF_3",
             "constants": [],
             "variables": [
               "#ADF_3"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ],
       "references": []
@@ -1746,16 +1746,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_PlusAbility_2111_ADF_1",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (#ADF_1) || RETURN",
             "displayLines": "#ADF_1",
             "constants": [],
             "variables": [
               "#ADF_1"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ],
       "references": []
@@ -2134,16 +2134,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_EnterFever_P1_Ratio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_1_Get) || RETURN",
             "displayLines": "ADF_1_Get",
             "constants": [],
             "variables": [
               "ADF_1_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -2151,16 +2151,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_EnterFever_P2_Ratio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_2_Get) || RETURN",
             "displayLines": "ADF_2_Get",
             "constants": [],
             "variables": [
               "ADF_2_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -2168,16 +2168,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_3_Get) || RETURN",
             "displayLines": "ADF_3_Get",
             "constants": [],
             "variables": [
               "ADF_3_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2262,8 +2262,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityCurrentSP"
+                      "variableName": "EntityCurrentSP",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -2271,8 +2271,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityStockSP"
+                      "variableName": "EntityStockSP",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -2280,8 +2280,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "EntityMaxSP"
+                      "variableName": "EntityMaxSP",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2358,16 +2358,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P1_MaxLayer",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_1_Get) || RETURN",
             "displayLines": "ADF_1_Get",
             "constants": [],
             "variables": [
               "ADF_1_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -2375,16 +2375,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_2_Get) || RETURN",
             "displayLines": "ADF_2_Get",
             "constants": [],
             "variables": [
               "ADF_2_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2991,9 +2991,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_2110_BaseAddOn_P1_Ratio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_1_Get) || Constants[0] (100) || DIV || RETURN",
             "displayLines": "(ADF_1_Get / 100)",
             "constants": [
@@ -3002,7 +3001,8 @@ const compositeAbilityObject = {
             "variables": [
               "ADF_1_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3202,8 +3202,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_BaseAbility_CountSum"
+          "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3211,8 +3211,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
+          "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3220,16 +3220,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_EnterFeverValue",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_1_Get) || RETURN",
             "displayLines": "ADF_1_Get",
             "constants": [],
             "variables": [
               "ADF_1_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3237,16 +3237,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_BeforeFeverEliteDmgRatio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_3_Get) || RETURN",
             "displayLines": "ADF_3_Get",
             "constants": [],
             "variables": [
               "ADF_3_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3254,16 +3254,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_BeforeFeverKillChargeRatio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_4_Get) || RETURN",
             "displayLines": "ADF_4_Get",
             "constants": [],
             "variables": [
               "ADF_4_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3271,16 +3271,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FeverKillReturnRatio",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_5_Get) || RETURN",
             "displayLines": "ADF_5_Get",
             "constants": [],
             "variables": [
               "ADF_5_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3288,16 +3288,16 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FeverBESpeed",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_6_Get) || RETURN",
             "displayLines": "ADF_6_Get",
             "constants": [],
             "variables": [
               "ADF_6_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3305,9 +3305,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "DV_FantasticStory_BaseAbility_CountSumTempMax",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (ADF_1_Get) || Variables[1] (ADF_2_Get) || MUL || RETURN",
             "displayLines": "(ADF_1_Get * ADF_2_Get)",
             "constants": [],
@@ -3315,7 +3314,8 @@ const compositeAbilityObject = {
               "ADF_1_Get",
               "ADF_2_Get"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3323,8 +3323,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_PlusAbility_2111"
+          "variableName": "DV_FantasticStory_PlusAbility_2111",
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3332,8 +3332,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_PlusAbility_2112"
+          "variableName": "DV_FantasticStory_PlusAbility_2112",
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3341,8 +3341,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_PlusAbility_2113"
+          "variableName": "DV_FantasticStory_PlusAbility_2113",
+          "scope": "ContextCaster"
         },
         {
           "name": "Declare Custom Variable",
@@ -3350,8 +3350,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "BattleEvent_BaseHP"
+          "variableName": "BattleEvent_BaseHP",
+          "scope": "ContextCaster"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -3382,8 +3382,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
-          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
+          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
+          "scope": "ContextCaster"
         },
         {
           "name": "Update Surging Grit[PF]",

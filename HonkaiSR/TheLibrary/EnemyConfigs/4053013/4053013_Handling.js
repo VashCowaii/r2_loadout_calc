@@ -31,7 +31,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2
               },
               {
                 "name": "Use Ability Option",
@@ -75,7 +75,7 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 3
+                    "resetValue": 3
                   }
                 ],
                 "failed": [
@@ -86,7 +86,7 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1
                   }
                 ]
               },
@@ -123,7 +123,7 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "variableName": "AIFlag",
-                "value": 5
+                "resetValue": 5
               },
               {
                 "name": "Use Ability Option",

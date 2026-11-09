@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_XP_Elite02_01_ShieldEffect"
+      "variableName": "Monster_XP_Elite02_01_ShieldEffect",
+      "scope": "TargetEntity"
     },
     {
       "name": "UI Display Event (On Entity)",
@@ -38,9 +38,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Monster_XP_Elite02_01_ShieldEffect",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -50,8 +50,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_XP_Elite02_01_InsertFlag"
+      "variableName": "Monster_XP_Elite02_01_InsertFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

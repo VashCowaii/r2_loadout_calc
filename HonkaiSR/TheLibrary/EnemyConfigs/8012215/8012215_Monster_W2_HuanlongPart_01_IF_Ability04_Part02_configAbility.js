@@ -34,9 +34,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "PartDecisionFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -304,9 +304,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 4
+      "resetValue": 4,
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",

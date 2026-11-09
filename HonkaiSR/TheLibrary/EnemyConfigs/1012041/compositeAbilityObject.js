@@ -188,9 +188,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "PartDecisionFlag",
-                          "value": 2
+                          "resetValue": 2,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -344,9 +344,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "CanUseSkill03",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -354,9 +354,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartCanUseSkill03",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -364,9 +364,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SelfDestroy_Controller",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Change Entity Turn-State",
@@ -521,9 +521,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Svarog_00_BattleScore2_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Change Entity Turn-State",
@@ -981,9 +981,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "CanUseSkill03",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -991,9 +991,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PartCanUseSkill03",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1134,8 +1134,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "PartCanUseSkill03"
+                    "variableName": "PartCanUseSkill03",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -1143,8 +1143,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "CanUseSkill03"
+                    "variableName": "CanUseSkill03",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1324,9 +1324,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "PartDecisionFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -1394,9 +1394,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "PartDecisionFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -1464,8 +1464,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "PartCanUseSkill03"
+                    "variableName": "PartCanUseSkill03",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -1473,8 +1473,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster's Summoner}}"
                     },
-                    "scope": "TargetEntity",
-                    "variableName": "CanUseSkill03"
+                    "variableName": "CanUseSkill03",
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1654,9 +1654,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "PartDecisionFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -1724,9 +1724,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "PartDecisionFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",

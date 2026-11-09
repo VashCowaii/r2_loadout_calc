@@ -806,16 +806,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DamagePercentageLight",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_DamagePercentageLightTeam) || RETURN",
                 "displayLines": "MDF_DamagePercentageLightTeam",
                 "constants": [],
                 "variables": [
                   "MDF_DamagePercentageLightTeam"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -823,16 +823,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DamagePercentageDark",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__316) || RETURN",
                 "displayLines": "ENEMIES_OBJECT_UNUSED__316",
                 "constants": [],
                 "variables": [
                   "ENEMIES_OBJECT_UNUSED__316"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -840,16 +840,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_BaseAttack",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_BaseAttack) || RETURN",
                 "displayLines": "MDF_BaseAttack",
                 "constants": [],
                 "variables": [
                   "MDF_BaseAttack"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -857,16 +857,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_MaxHP",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_MaxHP) || RETURN",
                 "displayLines": "MDF_MaxHP",
                 "constants": [],
                 "variables": [
                   "MDF_MaxHP"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -874,16 +874,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DamageTakenUpRatio",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
                 "displayLines": "MDF_DamageTakenUpRatio",
                 "constants": [],
                 "variables": [
                   "MDF_DamageTakenUpRatio"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -891,16 +891,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DamageTakenMaxLayer",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_DamageTakenMaxLayer) || RETURN",
                 "displayLines": "MDF_DamageTakenMaxLayer",
                 "constants": [],
                 "variables": [
                   "MDF_DamageTakenMaxLayer"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -908,16 +908,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DirtyBloodRatioPerLayer",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_DirtyBloodRatioPerLayer) || RETURN",
                 "displayLines": "MDF_DirtyBloodRatioPerLayer",
                 "constants": [],
                 "variables": [
                   "MDF_DirtyBloodRatioPerLayer"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -925,16 +925,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_DirtyBloodMaxLayer",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_DirtyBloodMaxLayer) || RETURN",
                 "displayLines": "MDF_DirtyBloodMaxLayer",
                 "constants": [],
                 "variables": [
                   "MDF_DirtyBloodMaxLayer"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -942,16 +942,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AsatPramad_Skill3_Chance",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Chance) || RETURN",
                 "displayLines": "MDF_Chance",
                 "constants": [],
                 "variables": [
                   "MDF_Chance"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -959,8 +959,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "AsatPramad_Skill3_isInsert"
+              "variableName": "AsatPramad_Skill3_isInsert",
+              "scope": "TargetEntity"
             },
             {
               "name": "Automatically use Ultimate",
@@ -1492,8 +1492,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1580,8 +1580,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",

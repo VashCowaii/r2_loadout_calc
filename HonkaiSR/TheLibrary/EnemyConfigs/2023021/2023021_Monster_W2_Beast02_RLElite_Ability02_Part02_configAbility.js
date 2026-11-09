@@ -28,8 +28,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bullet_Count"
+      "variableName": "Bullet_Count",
+      "scope": "TargetEntity"
     },
     {
       "name": "Update Displayed Energy Bar",

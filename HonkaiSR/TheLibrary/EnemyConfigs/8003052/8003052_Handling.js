@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -45,9 +45,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -106,9 +106,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -116,9 +116,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -132,9 +132,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -142,9 +142,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -194,9 +194,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -204,9 +204,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                "value": 3
+                "resetValue": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -283,9 +283,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -293,9 +293,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -354,9 +354,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -364,9 +364,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -380,9 +380,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Declare Custom Variable",
@@ -390,9 +390,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

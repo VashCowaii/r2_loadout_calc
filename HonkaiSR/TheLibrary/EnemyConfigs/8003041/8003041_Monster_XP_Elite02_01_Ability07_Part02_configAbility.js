@@ -377,9 +377,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -399,8 +399,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -851,9 +851,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -873,8 +873,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -1325,9 +1325,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1347,8 +1347,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -1799,9 +1799,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1821,8 +1821,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -2273,9 +2273,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -2295,8 +2295,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -2747,9 +2747,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -2769,8 +2769,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -3221,9 +3221,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3243,8 +3243,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -3695,9 +3695,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3717,8 +3717,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -4169,9 +4169,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_Skill07Attack",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -4191,8 +4191,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_Skill07Attack"
+              "variableName": "Monster_XP_Elite02_01_Skill07Attack",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",

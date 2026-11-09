@@ -146,8 +146,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Declare Custom Variable",
@@ -155,8 +155,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Find New Target",
@@ -233,8 +233,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "InsertCheck"
+                              "variableName": "InsertCheck",
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Reset Toughness",
@@ -680,8 +680,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_BattleScore2_Flag"
+              "variableName": "Gepard_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -735,8 +735,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_BattleScore1_Flag"
+              "variableName": "Bronya_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },

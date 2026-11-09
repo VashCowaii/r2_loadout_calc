@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "AttackCount"
+      "variableName": "AttackCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -28,8 +28,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "IsInDeathRattle"
+      "variableName": "IsInDeathRattle",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -37,8 +37,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "MarkRemainCount"
+      "variableName": "MarkRemainCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -125,8 +125,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DeathrattleFlag"
+                  "variableName": "DeathrattleFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }

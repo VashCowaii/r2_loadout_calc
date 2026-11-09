@@ -35,9 +35,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "CanUseUltra",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",

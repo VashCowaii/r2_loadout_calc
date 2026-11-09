@@ -40,8 +40,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_Arlan_00_PassiveSkill03_InsertController"
+      "variableName": "_Arlan_00_PassiveSkill03_InsertController",
+      "scope": "TargetEntity"
     }
   ],
   "references": [],

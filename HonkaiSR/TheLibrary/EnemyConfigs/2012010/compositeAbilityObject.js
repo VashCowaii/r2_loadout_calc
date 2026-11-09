@@ -163,8 +163,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Mecha02_00_BoomTimes"
+          "variableName": "W2_Mecha02_00_BoomTimes",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {

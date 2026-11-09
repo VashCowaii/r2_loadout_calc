@@ -24,9 +24,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "scope": "TargetEntity",
       "variableName": "PartDecisionFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Trigger Ability",

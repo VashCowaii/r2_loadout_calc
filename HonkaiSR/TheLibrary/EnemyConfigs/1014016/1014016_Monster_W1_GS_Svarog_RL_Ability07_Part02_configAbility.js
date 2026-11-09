@@ -110,9 +110,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "CanUseSkill03",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -170,8 +170,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "SelfDestroy_Controller"
+          "variableName": "SelfDestroy_Controller",
+          "scope": "TargetEntity"
         }
       ]
     },

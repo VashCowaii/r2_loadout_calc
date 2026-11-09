@@ -128,8 +128,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_Gepard_00_PassiveSkill_InsertController"
+      "variableName": "_Gepard_00_PassiveSkill_InsertController",
+      "scope": "TargetEntity"
     }
   ],
   "references": [

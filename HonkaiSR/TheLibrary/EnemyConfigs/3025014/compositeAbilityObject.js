@@ -93,8 +93,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W3_Sunday_00_BattleScore2_Flag"
+                  "variableName": "W3_Sunday_00_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -981,7 +981,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "variableName": "LockHPTriggerFlag",
-                      "value": 1
+                      "resetValue": 1
                     },
                     {
                       "name": "SWITCH",
@@ -1104,7 +1104,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "variableName": "LockHPTriggerFlag",
-                      "value": 1
+                      "resetValue": 1
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -1201,7 +1201,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "variableName": "LockHPTriggerFlag",
-                      "value": 1
+                      "resetValue": 1
                     },
                     {
                       "name": "SWITCH",
@@ -1233,9 +1233,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "AIFlag",
-                              "value": 5
+                              "resetValue": 5,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -1249,9 +1249,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "AIFlag",
-                              "value": 6
+                              "resetValue": 6,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -2486,16 +2486,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AssistSkill01_DamagePercentage",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
                     "displayLines": "MDF_Assist_DamagePercentage",
                     "constants": [],
                     "variables": [
                       "MDF_Assist_DamagePercentage"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2765,9 +2765,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W3_Sunday_00_TimePause_ActionCounter",
-                  "value": 7
+                  "resetValue": 7,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2947,9 +2947,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -3054,9 +3054,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -3133,9 +3133,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -4186,9 +4186,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "IF",
@@ -4234,9 +4234,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -4392,8 +4392,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+          "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4441,9 +4441,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Set Enemy Phase"
@@ -5430,8 +5430,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+          "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -5439,9 +5439,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 8
+          "resetValue": 8,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5457,9 +5457,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextOwner",
           "variableName": "Skill06BgmGapSeconds",
-          "value": 1
+          "resetValue": 1,
+          "scope": "ContextOwner"
         },
         {
           "name": "IF",
@@ -5525,16 +5525,16 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Skill06BgmGapSeconds",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Skill06BgmGapSeconds) || RETURN",
                 "displayLines": "Skill06BgmGapSeconds",
                 "constants": [],
                 "variables": [
                   "Skill06BgmGapSeconds"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Trigger Ability",
@@ -5938,8 +5938,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextOwner",
-          "variableName": "Skill06BgmStateDelaySeconds"
+          "variableName": "Skill06BgmStateDelaySeconds",
+          "scope": "ContextOwner"
         },
         {
           "name": "Declare Custom Variable",
@@ -5947,8 +5947,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextOwner",
-          "variableName": "Skill06BgmGapSeconds"
+          "variableName": "Skill06BgmGapSeconds",
+          "scope": "ContextOwner"
         },
         {
           "name": "IF",
@@ -5967,9 +5967,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextOwner",
               "variableName": "Skill06BgmGapSeconds",
-              "value": 1
+              "resetValue": 1,
+              "scope": "ContextOwner"
             }
           ],
           "failed": [
@@ -6039,16 +6039,16 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Skill06BgmGapSeconds",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Skill06BgmGapSeconds) || RETURN",
                 "displayLines": "Skill06BgmGapSeconds",
                 "constants": [],
                 "variables": [
                   "Skill06BgmGapSeconds"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Trigger Ability",
@@ -7179,8 +7179,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Skill05AssistNumber"
+          "variableName": "Skill05AssistNumber",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -7188,8 +7188,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Skill05ErrorNumber"
+          "variableName": "Skill05ErrorNumber",
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -9021,9 +9021,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "resetValue": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9063,9 +9063,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9105,9 +9105,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9147,9 +9147,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "resetValue": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Define Custom Variable with Team Count",
@@ -9364,9 +9364,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "resetValue": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9417,9 +9417,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 6
+                            "resetValue": 6,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -9433,9 +9433,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 7
+                            "resetValue": 7,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -9477,9 +9477,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9529,9 +9529,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "resetValue": 3,
+                            "scope": "TargetEntity"
                           }
                         ],
                         "failed": [
@@ -9541,9 +9541,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 5
+                            "resetValue": 5,
+                            "scope": "TargetEntity"
                           }
                         ]
                       },
@@ -9652,9 +9652,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",

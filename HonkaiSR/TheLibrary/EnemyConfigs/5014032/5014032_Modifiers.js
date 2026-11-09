@@ -288,9 +288,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SpecialSkill06",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -356,8 +356,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SpecialWinPerformFlag"
+                  "variableName": "SpecialWinPerformFlag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -395,9 +395,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SpecialWinPerformFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -405,9 +405,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "TutorialFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -1071,9 +1071,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -1190,8 +1190,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "PhaseInsertCheck"
+                      "variableName": "PhaseInsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1302,8 +1302,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "PhaseInsertCheck"
+                      "variableName": "PhaseInsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1493,16 +1493,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Skill01_DamagePercentage",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Inferno_Skill01_DamagePercentage) || RETURN",
                 "displayLines": "Inferno_Skill01_DamagePercentage",
                 "constants": [],
                 "variables": [
                   "Inferno_Skill01_DamagePercentage"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1510,16 +1510,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Skill02_DamagePercentage",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Inferno_Skill02_DamagePercentage) || RETURN",
                 "displayLines": "Inferno_Skill02_DamagePercentage",
                 "constants": [],
                 "variables": [
                   "Inferno_Skill02_DamagePercentage"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1527,16 +1527,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Skill02_SuccessChance",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
                 "displayLines": "Inferno_Skill02_SuccessChance",
                 "constants": [],
                 "variables": [
                   "Inferno_Skill02_SuccessChance"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1544,16 +1544,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Skill02_Bonus_SPRatio",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__311) || RETURN",
                 "displayLines": "ENEMIES_OBJECT_UNUSED__311",
                 "constants": [],
                 "variables": [
                   "ENEMIES_OBJECT_UNUSED__311"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1561,16 +1561,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Skill02_Bonus_HPRatio",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Inferno_Skill02_Bonus_HPRatio) || RETURN",
                 "displayLines": "Inferno_Skill02_Bonus_HPRatio",
                 "constants": [],
                 "variables": [
                   "Inferno_Skill02_Bonus_HPRatio"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1578,8 +1578,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Inferno_CurrentTryTimes"
+              "variableName": "Inferno_CurrentTryTimes",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1587,16 +1587,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Inferno_Final_SuccessChance",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
                 "displayLines": "Inferno_Skill02_SuccessChance",
                 "constants": [],
                 "variables": [
                   "Inferno_Skill02_SuccessChance"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",

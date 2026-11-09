@@ -57,9 +57,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 20
+      "resetValue": 20,
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",

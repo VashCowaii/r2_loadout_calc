@@ -191,9 +191,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_2_StartFrame",
-              "value": 12
+              "resetValue": 12,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
@@ -203,9 +203,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_2_StartFrame",
-              "value": 12
+              "resetValue": 12,
+              "scope": "ContextCaster"
             }
           ]
         }
@@ -221,9 +221,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_2_StartFrame",
-              "value": 6
+              "resetValue": 6,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
@@ -233,9 +233,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "CDF_Combo_2_StartFrame",
-              "value": 6
+              "resetValue": 6,
+              "scope": "ContextCaster"
             }
           ]
         }

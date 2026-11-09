@@ -66,9 +66,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "scope": "TargetEntity",
       "variableName": "ToastFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

@@ -193,8 +193,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Herta_Count"
+              "variableName": "Herta_Count",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -207,8 +207,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Herta_Count_ATK"
+              "variableName": "Herta_Count_ATK",
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -257,8 +257,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Herta_Count_ATK"
+                  "variableName": "Herta_Count_ATK",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -266,8 +266,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Herta_Count"
+                  "variableName": "Herta_Count",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -281,8 +281,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Herta_Count"
+                  "variableName": "Herta_Count",
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [

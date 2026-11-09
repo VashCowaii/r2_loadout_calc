@@ -378,16 +378,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AssistSkill02_DamagePercentage",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (MDF_Assist_DamagePercentage) || RETURN",
                 "displayLines": "MDF_Assist_DamagePercentage",
                 "constants": [],
                 "variables": [
                   "MDF_Assist_DamagePercentage"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         }

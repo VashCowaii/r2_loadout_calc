@@ -48,8 +48,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Target Part 0}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_Part3_Alive"
+      "variableName": "_Part3_Alive",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

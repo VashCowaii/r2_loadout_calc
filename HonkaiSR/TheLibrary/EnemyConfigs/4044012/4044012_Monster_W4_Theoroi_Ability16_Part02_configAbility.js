@@ -61,8 +61,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "EnhanceCount"
+      "variableName": "EnhanceCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Custom Variable with Modifier Values",

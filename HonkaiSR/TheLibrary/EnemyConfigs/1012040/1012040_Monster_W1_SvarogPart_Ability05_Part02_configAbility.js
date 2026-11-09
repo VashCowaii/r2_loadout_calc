@@ -34,9 +34,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Svarog_00_BattleScore2_Flag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Change Entity Turn-State",

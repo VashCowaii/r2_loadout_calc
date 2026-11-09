@@ -24,8 +24,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Svarog_00_BattleScore1_Flag"
+              "variableName": "Svarog_00_BattleScore1_Flag",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -33,8 +33,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Svarog_00_BattleScore2_Flag"
+              "variableName": "Svarog_00_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -83,8 +83,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Svarog_00_BattleScore2_Flag"
+                  "variableName": "Svarog_00_BattleScore2_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             }

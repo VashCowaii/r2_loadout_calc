@@ -54,8 +54,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "FollowTrigger"
+          "variableName": "FollowTrigger",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -183,8 +183,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "FollowTrigger"
+          "variableName": "FollowTrigger",
+          "scope": "TargetEntity"
         },
         {
           "name": "Looped Event",

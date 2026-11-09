@@ -1796,9 +1796,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ListenAllDieController",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2150,9 +2150,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AML_Boss_00_IF_PassiveSkillInitiate_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2174,8 +2174,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "_Part3_Alive"
+                  "variableName": "_Part3_Alive",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2188,9 +2188,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_Part3_Alive",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2252,8 +2252,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "_Part2_Alive"
+                  "variableName": "_Part2_Alive",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2266,9 +2266,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_Part2_Alive",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2330,8 +2330,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "_Part1_Alive"
+                  "variableName": "_Part1_Alive",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2344,9 +2344,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_Part1_Alive",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2497,9 +2497,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_Part1_Alive",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -2520,9 +2520,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_Part2_Alive",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -2543,9 +2543,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_Part3_Alive",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2605,8 +2605,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "ChangePhase_MaxHPValue"
+                      "variableName": "ChangePhase_MaxHPValue",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -2681,9 +2681,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2809,8 +2809,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Part3_Alive"
+          "variableName": "_Part3_Alive",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3126,8 +3126,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Part2_Alive"
+          "variableName": "_Part2_Alive",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3389,8 +3389,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "_Part1_Alive"
+          "variableName": "_Part1_Alive",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4076,8 +4076,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ListenAllDieController"
+          "variableName": "ListenAllDieController",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4263,8 +4263,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ListenAllDieController"
+          "variableName": "ListenAllDieController",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -5854,8 +5854,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ListenAllDieController"
+          "variableName": "ListenAllDieController",
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",

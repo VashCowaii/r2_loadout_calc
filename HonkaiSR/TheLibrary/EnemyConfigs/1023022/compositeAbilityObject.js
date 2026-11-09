@@ -538,9 +538,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1118,9 +1118,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1156,9 +1156,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1204,8 +1204,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "Monster_SummonFlag"
+                        "variableName": "Monster_SummonFlag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Declare Custom Variable",
@@ -1213,9 +1213,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                        "value": 4
+                        "resetValue": 4,
+                        "scope": "TargetEntity"
                       }
                     ],
                     "failed": [
@@ -1225,9 +1225,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                        "value": 8
+                        "resetValue": 8,
+                        "scope": "TargetEntity"
                       }
                     ]
                   },
@@ -1276,9 +1276,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                        "value": 8
+                        "resetValue": 8,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -1305,9 +1305,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                            "value": 9
+                            "resetValue": 9,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -1334,9 +1334,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                                "value": 11
+                                "resetValue": 11,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -1350,9 +1350,9 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "scope": "TargetEntity",
                                 "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                                "value": 11
+                                "resetValue": 11,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -1394,9 +1394,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                    "value": 8
+                    "resetValue": 8,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1441,9 +1441,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                    "value": 8
+                    "resetValue": 8,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1479,9 +1479,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                    "value": 8
+                    "resetValue": 8,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -1545,9 +1545,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Declare Custom Variable",
@@ -1555,9 +1555,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_SummonFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -1571,9 +1571,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "Monster_W1_Mecha03_01_AICounter_01",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",

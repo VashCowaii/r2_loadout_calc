@@ -59,8 +59,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "DisPelCount"
+      "variableName": "DisPelCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -263,9 +263,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 3
+                      "resetValue": 3,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",

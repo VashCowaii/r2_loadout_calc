@@ -28,8 +28,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Beast02RL_Num_Flag"
+          "variableName": "Beast02RL_Num_Flag",
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -288,8 +288,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "HaveBullet_Flag"
+                  "variableName": "HaveBullet_Flag",
+                  "scope": "TargetEntity"
                 }
               ],
               "noTargetFound": [
@@ -315,9 +315,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "HaveBullet_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

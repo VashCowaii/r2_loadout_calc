@@ -206,8 +206,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_Seconds"
+              "variableName": "_Seconds",
+              "scope": "ContextCaster"
             },
             {
               "name": "Declare Custom Variable",
@@ -215,8 +215,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "#CL_PhotoCheck"
+              "variableName": "#CL_PhotoCheck",
+              "scope": "ContextCaster"
             },
             {
               "name": "Declare Custom Variable",
@@ -224,8 +224,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_KillerSkill"
+              "variableName": "_KillerSkill",
+              "scope": "ContextCaster"
             },
             {
               "name": "Declare Custom Variable",
@@ -233,8 +233,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_SpecialPhoto"
+              "variableName": "_SpecialPhoto",
+              "scope": "ContextCaster"
             },
             {
               "name": "Declare Custom Variable",
@@ -242,8 +242,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_SpecialPhoto_BeingLimbo"
+              "variableName": "_SpecialPhoto_BeingLimbo",
+              "scope": "ContextCaster"
             },
             {
               "name": "Declare Custom Variable",
@@ -251,8 +251,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextCaster",
-              "variableName": "_LimaoLimboCount"
+              "variableName": "_LimaoLimboCount",
+              "scope": "ContextCaster"
             }
           ]
         },

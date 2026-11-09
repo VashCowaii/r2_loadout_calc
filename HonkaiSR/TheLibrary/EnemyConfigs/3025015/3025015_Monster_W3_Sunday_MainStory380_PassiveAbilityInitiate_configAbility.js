@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag"
+      "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -52,9 +52,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Set Enemy Phase"
@@ -110,9 +110,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W3_Sunday_00_PassiveSkillInitiate_InsertFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Inject Ability Use",

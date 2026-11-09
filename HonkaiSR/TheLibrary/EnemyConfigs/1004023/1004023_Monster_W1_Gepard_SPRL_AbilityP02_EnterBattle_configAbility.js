@@ -14,8 +14,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "SPRLCount"
+      "variableName": "SPRLCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -23,8 +23,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Strike_SPRLCount"
+      "variableName": "Strike_SPRLCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

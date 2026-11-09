@@ -237,8 +237,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertFlag_W5_JK_00"
+                  "variableName": "InsertFlag_W5_JK_00",
+                  "scope": "TargetEntity"
                 }
               ]
             }

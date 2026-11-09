@@ -185,8 +185,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W2_Abomi04_00_InsertFlag"
+              "variableName": "W2_Abomi04_00_InsertFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -287,9 +287,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Abomi04_00_InsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

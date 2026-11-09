@@ -22,8 +22,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "DisPelCount"
+      "variableName": "DisPelCount",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

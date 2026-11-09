@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_XP_Minion03_00_AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "IF",
@@ -94,9 +94,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "Monster_XP_Minion03_00_AIFlag",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

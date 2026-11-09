@@ -585,7 +585,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "variableName": "SplitRatio",
-      "value": {
+      "resetValue": {
         "operator": "Constants[0] (1) || Constants[1] (7) || DIV || RETURN",
         "displayLines": "(1 / 7)",
         "constants": [

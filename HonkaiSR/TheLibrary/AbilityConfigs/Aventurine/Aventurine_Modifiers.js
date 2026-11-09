@@ -1019,7 +1019,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "variableName": "_AttackAddedRatio",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
                         "displayLines": "(MDF_ShieldCount * 0.5)",
                         "constants": [],
@@ -1178,7 +1178,7 @@ const configAbility = {
                         "target": "{{Caster}}"
                       },
                       "variableName": "_AttackAddedRatio",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
                         "displayLines": "(MDF_ShieldCount * 0.5)",
                         "constants": [],

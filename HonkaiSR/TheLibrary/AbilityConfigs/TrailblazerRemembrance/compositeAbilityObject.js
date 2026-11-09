@@ -1568,9 +1568,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "_chargeEnergy",
-                          "value": {
+                          "resetValue": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (TeamAddSP) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((TeamAddSP / 10))",
                             "constants": [],
@@ -1579,7 +1578,8 @@ const compositeAbilityObject = {
                               "TeamAddSP",
                               10
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",

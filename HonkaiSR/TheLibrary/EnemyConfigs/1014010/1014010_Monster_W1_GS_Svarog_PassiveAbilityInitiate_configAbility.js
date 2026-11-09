@@ -103,8 +103,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DecisionFlag"
+                  "variableName": "DecisionFlag",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -129,9 +129,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Svarog_SpecialVictory_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

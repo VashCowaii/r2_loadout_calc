@@ -534,8 +534,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "MDF_PerformanceDelay"
+          "variableName": "MDF_PerformanceDelay",
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",

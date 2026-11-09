@@ -294,8 +294,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Skill05AssistNumber"
+      "variableName": "Skill05AssistNumber",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -303,8 +303,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Skill05ErrorNumber"
+      "variableName": "Skill05ErrorNumber",
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Custom Variable with Team Count",

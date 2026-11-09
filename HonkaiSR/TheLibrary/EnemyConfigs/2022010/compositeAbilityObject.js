@@ -145,9 +145,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -157,8 +157,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -238,8 +238,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "Monster_W2_Abomi01_00_ReviveTimes"
+                              "variableName": "Monster_W2_Abomi01_00_ReviveTimes",
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -277,9 +277,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -289,8 +289,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -479,8 +479,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_W2_Abomi01_00_ReviveEff"
+                          "variableName": "Monster_W2_Abomi01_00_ReviveEff",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -617,8 +617,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_W2_Abomi01_00_ReviveEff"
+                          "variableName": "Monster_W2_Abomi01_00_ReviveEff",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -827,9 +827,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -839,8 +839,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+                      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -861,9 +861,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_W2_Abomi01_00_BreakFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -876,8 +876,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W2_Abomi01_00_BreakFlag"
+                  "variableName": "Monster_W2_Abomi01_00_BreakFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1048,8 +1048,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "ATK Scaling DMG",
@@ -1218,8 +1218,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+          "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "ATK Scaling DMG",

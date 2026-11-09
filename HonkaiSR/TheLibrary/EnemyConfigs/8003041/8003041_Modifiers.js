@@ -21,8 +21,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "XP_Elite02_01_BattleScore1_Flag"
+              "variableName": "XP_Elite02_01_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -212,9 +212,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Monster_XP_Elite02_01_AIFlag",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             }
           ]
         }

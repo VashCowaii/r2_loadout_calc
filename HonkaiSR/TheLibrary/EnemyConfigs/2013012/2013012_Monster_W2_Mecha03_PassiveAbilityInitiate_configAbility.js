@@ -19,9 +19,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "W2_Mecha03_00_AICounter",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Mecha03_00_Overdrive_State"
+      "variableName": "W2_Mecha03_00_Overdrive_State",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag"
+      "variableName": "W2_Mecha03_00_Overdrive_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

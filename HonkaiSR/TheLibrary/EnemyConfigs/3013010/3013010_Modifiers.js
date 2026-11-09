@@ -24,8 +24,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Dinosaur_BreakCount"
+              "variableName": "Dinosaur_BreakCount",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -88,8 +88,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Dinosaur_BreakModifierMaxCount"
+              "variableName": "Dinosaur_BreakModifierMaxCount",
+              "scope": "TargetEntity"
             }
           ]
         },

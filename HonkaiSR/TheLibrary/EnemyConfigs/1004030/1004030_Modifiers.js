@@ -24,8 +24,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Gepard_BattleScore2_Flag"
+              "variableName": "Gepard_BattleScore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -79,8 +79,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_BattleScore1_Flag"
+              "variableName": "Bronya_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },

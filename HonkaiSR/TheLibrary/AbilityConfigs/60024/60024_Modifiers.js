@@ -62,8 +62,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "WeatherBEFlag"
+                  "variableName": "WeatherBEFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }

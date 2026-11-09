@@ -28,8 +28,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W5_Peacock_00_BattleScore1_ColorType"
+                  "variableName": "W5_Peacock_00_BattleScore1_ColorType",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -1942,9 +1942,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ColorOutInsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -2433,9 +2433,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ColorOutInsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0011"
+      "variableName": "DV_FantasticStory_PlusAbility_0011",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0012"
+      "variableName": "DV_FantasticStory_PlusAbility_0012",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0013"
+      "variableName": "DV_FantasticStory_PlusAbility_0013",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -38,8 +38,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0014"
+      "variableName": "DV_FantasticStory_PlusAbility_0014",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -47,8 +47,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0015"
+      "variableName": "DV_FantasticStory_PlusAbility_0015",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -56,8 +56,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0016"
+      "variableName": "DV_FantasticStory_PlusAbility_0016",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -65,8 +65,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0017"
+      "variableName": "DV_FantasticStory_PlusAbility_0017",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -74,8 +74,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_FantasticStory_PlusAbility_0018"
+      "variableName": "DV_FantasticStory_PlusAbility_0018",
+      "scope": "ContextCaster"
     },
     {
       "name": "Define Custom Variable with Stat",

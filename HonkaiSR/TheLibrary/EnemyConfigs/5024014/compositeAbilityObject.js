@@ -2037,16 +2037,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
                     "displayLines": "{[Skill06[2]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[2]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2054,16 +2054,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
                     "displayLines": "{[PassiveSkill01[3]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill01[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2071,16 +2071,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
                     "displayLines": "{[PassiveSkill01[4]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill01[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2088,16 +2088,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
                     "displayLines": "{[Skill06[3]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2105,16 +2105,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
                     "displayLines": "{[Skill06[4]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2122,16 +2122,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
                     "displayLines": "{[Skill06[5]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[5]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2139,16 +2139,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[0]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[0]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2156,16 +2156,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[1]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[1]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2173,16 +2173,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[2]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[2]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2190,16 +2190,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[3]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2207,16 +2207,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[4]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2224,16 +2224,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[5]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[5]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2672,16 +2672,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
                     "displayLines": "{[Skill06[2]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[2]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2689,16 +2689,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
                     "displayLines": "{[PassiveSkill01[3]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill01[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2706,16 +2706,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
                     "displayLines": "{[PassiveSkill01[4]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill01[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2723,16 +2723,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
                     "displayLines": "{[Skill06[3]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2740,16 +2740,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
                     "displayLines": "{[Skill06[4]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2757,16 +2757,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
                     "displayLines": "{[Skill06[5]]}",
                     "constants": [],
                     "variables": [
                       "{[Skill06[5]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2774,16 +2774,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[0]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[0]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2791,16 +2791,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[1]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[1]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2808,16 +2808,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[2]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[2]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2825,16 +2825,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[3]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[3]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2842,16 +2842,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[4]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[4]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2859,16 +2859,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
                     "displayLines": "{[PassiveSkill02[5]]}",
                     "constants": [],
                     "variables": [
                       "{[PassiveSkill02[5]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3430,8 +3430,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -3485,8 +3485,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -4710,9 +4710,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "InsertCheck",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -4720,9 +4720,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -6706,8 +6706,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "7023RoleID"
+                  "variableName": "7023RoleID",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -6715,8 +6715,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "7023RoleID"
+                  "variableName": "7023RoleID",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -7408,7 +7408,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "variableName": "SplitRatio",
-          "value": {
+          "resetValue": {
             "operator": "Constants[0] (1) || Constants[1] (7) || DIV || RETURN",
             "displayLines": "(1 / 7)",
             "constants": [
@@ -8091,9 +8091,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "resetValue": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -8175,9 +8175,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -8217,9 +8217,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "resetValue": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -8312,9 +8312,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 4
+                            "resetValue": 4,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -8328,9 +8328,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 5
+                            "resetValue": 5,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -8372,9 +8372,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -8414,9 +8414,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "resetValue": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",

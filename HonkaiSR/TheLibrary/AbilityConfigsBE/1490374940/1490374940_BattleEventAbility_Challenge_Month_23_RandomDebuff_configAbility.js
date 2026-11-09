@@ -199,16 +199,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "BattleEvent_P2_ADF",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
         "displayLines": "#BattleEvent_P2_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P2_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -216,16 +216,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "BattleEvent_P3_ADF",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
         "displayLines": "#BattleEvent_P3_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P3_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -233,16 +233,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "BattleEvent_P4_ADF",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
         "displayLines": "#BattleEvent_P4_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P4_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -250,16 +250,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "BattleEvent_P5_ADF",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P5_ADF) || RETURN",
         "displayLines": "#BattleEvent_P5_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P5_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     }
   ],
   "references": [],

@@ -73,8 +73,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "InsertFlag_LMin"
+      "variableName": "InsertFlag_LMin",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -82,8 +82,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "InsertFlag_LMout"
+      "variableName": "InsertFlag_LMout",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -133,9 +133,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -143,9 +143,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "SkillFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

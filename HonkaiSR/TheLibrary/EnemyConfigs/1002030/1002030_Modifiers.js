@@ -44,8 +44,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "SupportAttackCounter"
+              "variableName": "SupportAttackCounter",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -53,8 +53,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "SupportAttackTriggerFlag"
+              "variableName": "SupportAttackTriggerFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -67,9 +67,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SupportAttackCounter",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -82,8 +82,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "SupportAttackCounter"
+              "variableName": "SupportAttackCounter",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -91,9 +91,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SupportAttackTriggerFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -128,8 +128,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SupportAttackCounter"
+                  "variableName": "SupportAttackCounter",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -137,9 +137,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "SupportAttackTriggerFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

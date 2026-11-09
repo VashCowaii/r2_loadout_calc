@@ -60,9 +60,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Bronya_SummonMode",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -101,9 +101,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Bronya_SummonCounter",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -132,8 +132,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_SummonCounter"
+              "variableName": "Bronya_SummonCounter",
+              "scope": "TargetEntity"
             }
           ]
         }

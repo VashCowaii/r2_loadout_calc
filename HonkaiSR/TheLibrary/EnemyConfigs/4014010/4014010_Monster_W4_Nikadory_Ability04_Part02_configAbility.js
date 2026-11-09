@@ -34,8 +34,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Skill04Damage"
+      "variableName": "Skill04Damage",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

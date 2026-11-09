@@ -67,8 +67,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Mecha04_EnemySelector"
+                  "variableName": "Mecha04_EnemySelector",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -87,9 +87,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Mecha04_EnemySelector",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -99,9 +99,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Mecha04_EnemySelector",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -189,9 +189,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Monster_W1_Mecha04_00_InsertFlag",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ],
                       "failed": [
@@ -201,8 +201,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Mecha04_EnemySelector"
+                          "variableName": "Mecha04_EnemySelector",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "IF",
@@ -221,9 +221,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "Mecha04_EnemySelector",
-                              "value": 1
+                              "resetValue": 1,
+                              "scope": "TargetEntity"
                             }
                           ],
                           "failed": [
@@ -233,9 +233,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "Mecha04_EnemySelector",
-                              "value": 2
+                              "resetValue": 2,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -281,9 +281,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_W1_Mecha04_00_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -473,8 +473,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Mecha04_AttackCount"
+              "variableName": "Mecha04_AttackCount",
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -567,8 +567,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Mecha04_AttackCount"
+                      "variableName": "Mecha04_AttackCount",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

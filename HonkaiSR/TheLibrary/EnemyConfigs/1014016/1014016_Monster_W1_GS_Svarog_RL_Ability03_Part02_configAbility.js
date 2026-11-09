@@ -198,9 +198,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "CanUseSkill03",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -208,9 +208,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartCanUseSkill03",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]

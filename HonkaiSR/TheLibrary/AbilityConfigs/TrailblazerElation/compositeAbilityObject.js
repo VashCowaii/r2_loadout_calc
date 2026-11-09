@@ -1067,9 +1067,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "_Rank01",
-              "value": 1
+              "resetValue": 1,
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -1086,9 +1086,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "_Rank02",
-              "value": 1
+              "resetValue": 1,
+              "scope": "ContextCaster"
             }
           ]
         }
@@ -1486,9 +1486,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "player_SkillTree_PointB1_AddedValue",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (1000) || SUB || Variables[4] (200) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.1) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 1000) / 200)) * 0.1)",
                     "constants": [],
@@ -1500,7 +1499,8 @@ const compositeAbilityObject = {
                       200,
                       0.1
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "IF",
@@ -2084,8 +2084,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
-                  "variableName": "_Rank01_ElationEcho"
+                  "variableName": "_Rank01_ElationEcho",
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2547,9 +2547,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextCaster",
                   "variableName": "_Rank01_ElationEcho",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (2) || MUL || RETURN",
                     "displayLines": "(MDF_Layer * 2)",
                     "constants": [],
@@ -2557,7 +2556,8 @@ const compositeAbilityObject = {
                       "MDF_Layer",
                       2
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 }
               ]
             }

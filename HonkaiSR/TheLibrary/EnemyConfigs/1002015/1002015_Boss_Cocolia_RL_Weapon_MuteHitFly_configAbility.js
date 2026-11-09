@@ -92,9 +92,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SummonCD",
-              "value": 5
+              "resetValue": 5,
+              "scope": "TargetEntity"
             }
           ]
         }

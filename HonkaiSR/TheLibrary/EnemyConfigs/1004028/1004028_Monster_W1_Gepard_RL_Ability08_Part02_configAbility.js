@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ReturnAttackCounter"
+      "variableName": "ReturnAttackCounter",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

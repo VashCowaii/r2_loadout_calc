@@ -347,8 +347,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Skill07_EffectFlag"
+          "variableName": "Skill07_EffectFlag",
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -402,8 +402,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Bullet_Flag"
+          "variableName": "Bullet_Flag",
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -439,8 +439,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Skill07_EffectFlag"
+              "variableName": "Skill07_EffectFlag",
+              "scope": "TargetEntity"
             }
           ]
         }

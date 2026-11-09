@@ -172,9 +172,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Phase2ChargeFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -317,9 +317,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Phase2InsertFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -483,9 +483,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "InsertCheck",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Lock HP",
@@ -718,8 +718,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Set Enemy Phase",
@@ -766,8 +766,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -869,8 +869,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Exit Broken-State",
@@ -1091,9 +1091,9 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "AIFlag",
-                                  "value": 1
+                                  "resetValue": 1,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }
@@ -1160,8 +1160,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -1384,8 +1384,8 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Modifier Holder}}"
                                                   },
-                                                  "scope": "TargetEntity",
-                                                  "variableName": "InsertCheck"
+                                                  "variableName": "InsertCheck",
+                                                  "scope": "TargetEntity"
                                                 },
                                                 {
                                                   "name": "Set Enemy Phase",
@@ -1432,8 +1432,8 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "scope": "TargetEntity",
-                                                  "variableName": "InsertCheck"
+                                                  "variableName": "InsertCheck",
+                                                  "scope": "TargetEntity"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
@@ -1537,8 +1537,8 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Modifier Holder}}"
                                               },
-                                              "scope": "TargetEntity",
-                                              "variableName": "InsertCheck"
+                                              "variableName": "InsertCheck",
+                                              "scope": "TargetEntity"
                                             },
                                             {
                                               "name": "Exit Broken-State",
@@ -1775,9 +1775,9 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Modifier Holder}}"
                                               },
-                                              "scope": "TargetEntity",
                                               "variableName": "AIFlag",
-                                              "value": 1
+                                              "resetValue": 1,
+                                              "scope": "TargetEntity"
                                             }
                                           ]
                                         }
@@ -1811,8 +1811,8 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "TeammateSurvive"
+                                  "variableName": "TeammateSurvive",
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             },

@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag"
+      "variableName": "Monster_W2_Abomi01_00_HitFlyFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "ATK Scaling DMG",

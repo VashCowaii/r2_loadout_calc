@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Abomi04_00_InsertFlag"
+      "variableName": "W2_Abomi04_00_InsertFlag",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

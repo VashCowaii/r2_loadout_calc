@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Mecha02_02_DeathRattle"
+      "variableName": "W2_Mecha02_02_DeathRattle",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

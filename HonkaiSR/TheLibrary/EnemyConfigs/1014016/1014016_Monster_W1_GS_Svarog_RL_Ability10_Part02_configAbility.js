@@ -20,8 +20,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Phase1_PhaseFlag"
+          "variableName": "Phase1_PhaseFlag",
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -275,8 +275,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "SummonMinions"
+              "variableName": "SummonMinions",
+              "scope": "TargetEntity"
             }
           ],
           "failed": [

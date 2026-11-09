@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "UsedShieldFlag"
+      "variableName": "UsedShieldFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "UI Display Event",

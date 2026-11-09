@@ -3155,8 +3155,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Sunny_Temperature"
+                  "variableName": "Sunny_Temperature",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3914,9 +3914,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4090,8 +4090,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "ChangePhase_InsertController"
+              "variableName": "ChangePhase_InsertController",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -4241,9 +4241,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ChangePhase_InsertController",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Dispel Debuffs",

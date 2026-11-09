@@ -117,9 +117,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 3
+              "resetValue": 3,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -174,8 +174,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Mecha04_Aim_Flag"
+      "variableName": "Mecha04_Aim_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",
@@ -202,9 +202,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Mecha04_Aim_Flag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",

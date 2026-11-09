@@ -35,9 +35,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -45,8 +45,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -92,9 +92,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 3
+                "resetValue": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -102,8 +102,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Choose Ability Target",
@@ -158,9 +158,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -168,8 +168,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -215,9 +215,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag_Wait",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -225,9 +225,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "CD_SkillIF01",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -283,9 +283,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag_Wait",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -293,9 +293,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "CD_SkillIF01",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -351,9 +351,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -361,8 +361,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -408,9 +408,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 3
+                "resetValue": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -418,8 +418,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Choose Ability Target",
@@ -474,9 +474,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 4
+                "resetValue": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -484,8 +484,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -531,9 +531,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -541,8 +541,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CD_SkillIF01"
+                "variableName": "CD_SkillIF01",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Choose Ability Target",
@@ -597,9 +597,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag_Wait",
-                "value": 2
+                "resetValue": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -607,9 +607,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "CD_SkillIF01",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -665,9 +665,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "AIFlag_Wait",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -675,9 +675,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
                 "variableName": "CD_SkillIF01",
-                "value": 1
+                "resetValue": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

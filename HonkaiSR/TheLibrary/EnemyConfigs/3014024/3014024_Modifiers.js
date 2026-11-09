@@ -104,8 +104,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "DeathPart_Appear_Flag"
+              "variableName": "DeathPart_Appear_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -130,8 +130,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DeathPart_Appear_Flag"
+                  "variableName": "DeathPart_Appear_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1108,9 +1108,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 3
+                          "resetValue": 3,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1138,9 +1138,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 6
+                      "resetValue": 6,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1785,8 +1785,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",

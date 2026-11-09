@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "variableName": "_AttackAddedRatio",
-                          "value": {
+                          "resetValue": {
                             "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
                             "displayLines": "(MDF_ShieldCount * 0.5)",
                             "constants": [],
@@ -1205,7 +1205,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "variableName": "_AttackAddedRatio",
-                          "value": {
+                          "resetValue": {
                             "operator": "Variables[0] (MDF_ShieldCount) || Variables[1] (0.5) || MUL || RETURN",
                             "displayLines": "(MDF_ShieldCount * 0.5)",
                             "constants": [],
@@ -3996,9 +3996,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "MDF_AttackGap",
-          "value": {
+          "resetValue": {
             "operator": "Constants[0] (1) || Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || DIV || RETURN",
             "displayLines": "(1 / (7 + MDF_AttackCount))",
             "constants": [
@@ -4008,7 +4007,8 @@ const compositeAbilityObject = {
               7,
               "MDF_AttackCount"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Looped Event",
@@ -5013,8 +5013,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "tmp_currentshield"
+                      "variableName": "tmp_currentshield",
+                      "scope": "ContextTaskTemplate"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -5034,16 +5034,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AventurineShieldValue",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (tmp_currentshield) || RETURN",
                         "displayLines": "tmp_currentshield",
                         "constants": [],
                         "variables": [
                           "tmp_currentshield"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -5053,16 +5053,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AventurineShieldValue",
-                      "value": {
+                      "resetValue": {
                         "operator": "Constants[0] (0) || RETURN",
                         "displayLines": "0",
                         "constants": [
                           0
                         ],
                         "variables": []
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

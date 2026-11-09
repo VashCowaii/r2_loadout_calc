@@ -862,8 +862,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "7023RoleID"
+              "variableName": "7023RoleID",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -871,8 +871,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "7023RoleID"
+              "variableName": "7023RoleID",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable with Varying Data",

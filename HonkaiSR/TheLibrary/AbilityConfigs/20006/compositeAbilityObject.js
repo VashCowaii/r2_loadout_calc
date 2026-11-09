@@ -204,8 +204,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Declare Custom Variable",
@@ -213,8 +213,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Find New Target",
@@ -291,8 +291,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "InsertCheck"
+                                  "variableName": "InsertCheck",
+                                  "scope": "TargetEntity"
                                 },
                                 {
                                   "name": "Reset Toughness",
@@ -722,9 +722,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ReturnAttackCounter",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",

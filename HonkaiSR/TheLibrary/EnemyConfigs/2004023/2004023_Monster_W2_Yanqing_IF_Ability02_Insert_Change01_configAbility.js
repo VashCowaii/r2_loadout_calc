@@ -59,8 +59,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextAbility",
-      "variableName": "BreakDarkTeamFlag"
+      "variableName": "BreakDarkTeamFlag",
+      "scope": "ContextAbility"
     },
     {
       "name": "IF",
@@ -108,9 +108,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "ContextAbility",
               "variableName": "BreakDarkTeamFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "ContextAbility"
             }
           ]
         },

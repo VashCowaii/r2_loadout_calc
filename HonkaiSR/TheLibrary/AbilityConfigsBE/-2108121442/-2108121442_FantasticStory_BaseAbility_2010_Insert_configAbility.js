@@ -97,7 +97,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "BEBreakRatio",
-          "value": 1
+          "resetValue": 1
         },
         {
           "name": "Declare Custom Variable",
@@ -106,7 +106,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "CasterBreakBaseDamage",
-          "value": 100
+          "resetValue": 100
         },
         {
           "name": "Declare Custom Variable",
@@ -115,7 +115,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "TargetStance",
-          "value": 30
+          "resetValue": 30
         },
         {
           "name": "Declare Custom Variable",
@@ -124,7 +124,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "variableName": "StanceUnit",
-          "value": 30
+          "resetValue": 30
         },
         {
           "name": "Declare Custom Variable",

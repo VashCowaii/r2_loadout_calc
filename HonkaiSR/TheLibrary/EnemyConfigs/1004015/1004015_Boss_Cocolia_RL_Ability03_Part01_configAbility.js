@@ -16,8 +16,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Cocolia_BattleScore5_Flag"
+      "variableName": "Cocolia_BattleScore5_Flag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

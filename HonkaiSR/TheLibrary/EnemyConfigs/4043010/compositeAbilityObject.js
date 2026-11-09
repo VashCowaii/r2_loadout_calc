@@ -100,8 +100,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "TV_01_GroupFlag"
+              "variableName": "TV_01_GroupFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -125,8 +125,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "TV_01_EliteFlag"
+              "variableName": "TV_01_EliteFlag",
+              "scope": "TargetEntity"
             }
           ]
         },

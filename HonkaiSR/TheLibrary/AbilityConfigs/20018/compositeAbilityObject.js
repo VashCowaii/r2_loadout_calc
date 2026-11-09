@@ -179,8 +179,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Wolf_AttackCount"
+                      "variableName": "Wolf_AttackCount",
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -227,16 +227,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Wolf_MaxAttackCount",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MaxAttackCount) || RETURN",
                         "displayLines": "MaxAttackCount",
                         "constants": [],
                         "variables": [
                           "MaxAttackCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -325,8 +325,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "Wolf_AttackCount"
+                      "variableName": "Wolf_AttackCount",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -334,16 +334,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Wolf_MaxAttackCount",
-                      "value": {
+                      "resetValue": {
                         "operator": "Variables[0] (MaxAttackCount) || RETURN",
                         "displayLines": "MaxAttackCount",
                         "constants": [],
                         "variables": [
                           "MaxAttackCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     },
                     "Modifier Deletes Itself"
                   ]

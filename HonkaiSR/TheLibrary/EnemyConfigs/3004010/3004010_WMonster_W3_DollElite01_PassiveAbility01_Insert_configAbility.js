@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "BreakEndFlag"
+      "variableName": "BreakEndFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Battle Event",
@@ -222,9 +222,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "InsertCheck",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -248,9 +248,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 7
+      "resetValue": 7,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -274,9 +274,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -300,9 +300,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 3
+      "resetValue": 3,
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",

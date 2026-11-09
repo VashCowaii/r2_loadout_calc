@@ -97,9 +97,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "MDF_AttackGap",
-      "value": {
+      "resetValue": {
         "operator": "Constants[0] (1) || Variables[0] (7) || Variables[1] (MDF_AttackCount) || ADD || DIV || RETURN",
         "displayLines": "(1 / (7 + MDF_AttackCount))",
         "constants": [
@@ -109,7 +108,8 @@ const configAbility = {
           7,
           "MDF_AttackCount"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Looped Event",

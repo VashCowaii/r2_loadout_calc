@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "FollowTrigger"
+      "variableName": "FollowTrigger",
+      "scope": "TargetEntity"
     },
     {
       "name": "Looped Event",

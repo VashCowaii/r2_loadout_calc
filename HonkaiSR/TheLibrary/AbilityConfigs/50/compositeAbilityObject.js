@@ -271,8 +271,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -332,8 +332,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -431,8 +431,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -492,8 +492,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

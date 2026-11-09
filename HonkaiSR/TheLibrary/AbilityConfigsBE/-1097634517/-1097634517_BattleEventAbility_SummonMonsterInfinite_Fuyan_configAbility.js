@@ -57,8 +57,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Insert_Flag"
+              "variableName": "Insert_Flag",
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Ability",

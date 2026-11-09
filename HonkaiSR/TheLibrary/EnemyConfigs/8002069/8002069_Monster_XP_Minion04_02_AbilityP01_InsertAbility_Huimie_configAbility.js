@@ -60,8 +60,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Huimie_BeHitCounter"
+      "variableName": "Huimie_BeHitCounter",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -69,8 +69,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "XP_Minion04_02_Huimie_InsertFlag"
+      "variableName": "XP_Minion04_02_Huimie_InsertFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

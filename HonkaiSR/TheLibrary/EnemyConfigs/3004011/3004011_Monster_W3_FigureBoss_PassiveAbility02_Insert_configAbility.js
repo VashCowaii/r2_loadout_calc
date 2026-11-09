@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "BreakEndFlag"
+      "variableName": "BreakEndFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",
@@ -257,9 +257,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 7
+      "resetValue": 7,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -283,9 +283,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 4
+      "resetValue": 4,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -309,9 +309,9 @@ const configAbility = {
           }
         ]
       },
-      "scope": "TargetEntity",
       "variableName": "AIFlag",
-      "value": 4
+      "resetValue": 4,
+      "scope": "TargetEntity"
     },
     {
       "name": "Action Advance/Delay",

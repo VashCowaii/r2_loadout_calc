@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_AbilityEnd"
+      "variableName": "DV_AbilityEnd",
+      "scope": "ContextCaster"
     },
     {
       "name": "Define Custom Variable",

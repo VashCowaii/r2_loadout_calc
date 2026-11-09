@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "BattleEvent_BlackSwan"
+      "variableName": "BattleEvent_BlackSwan",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

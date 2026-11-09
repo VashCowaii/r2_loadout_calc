@@ -86,7 +86,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "variableName": "MDF_MaxDirtyHPRatio",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                 "displayLines": "{[SkillP01[0]]}",
                 "constants": [],
@@ -447,7 +447,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "variableName": "MDF_DirtyHPAddFlag",
-              "value": 1
+              "resetValue": 1
             }
           ]
         }

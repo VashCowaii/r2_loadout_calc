@@ -35,8 +35,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "PartCanUseSkill03"
+                "variableName": "PartCanUseSkill03",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Declare Custom Variable",
@@ -44,8 +44,8 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster's Summoner}}"
                 },
-                "scope": "TargetEntity",
-                "variableName": "CanUseSkill03"
+                "variableName": "CanUseSkill03",
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -225,9 +225,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "PartDecisionFlag",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -295,9 +295,9 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "PartDecisionFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

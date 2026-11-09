@@ -11,9 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_1_Get) || Constants[0] (100) || DIV || RETURN",
         "displayLines": "(ADF_1_Get / 100)",
         "constants": [
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           "ADF_1_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -30,16 +30,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P2_MaxTrigger",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (ADF_2_Get) || RETURN",
         "displayLines": "ADF_2_Get",
         "constants": [],
         "variables": [
           "ADF_2_Get"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Events/Bonuses",

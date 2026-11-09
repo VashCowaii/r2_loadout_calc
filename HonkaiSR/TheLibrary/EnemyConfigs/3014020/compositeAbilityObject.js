@@ -139,8 +139,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "DeathPart_Appear_Flag"
+                  "variableName": "DeathPart_Appear_Flag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -165,8 +165,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DeathPart_Appear_Flag"
+                      "variableName": "DeathPart_Appear_Flag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1143,9 +1143,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "AIFlag",
-                              "value": 3
+                              "resetValue": 3,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -1173,9 +1173,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 6
+                          "resetValue": 6,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1820,8 +1820,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "InsertCheck"
+                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1927,9 +1927,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2026,9 +2026,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DeathPart_AppearSkill_Flag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2046,8 +2046,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Effect_Flag"
+          "variableName": "Effect_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2063,9 +2063,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "UsedSkill08_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -2073,8 +2073,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Bullet_Flag"
+          "variableName": "Bullet_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -2128,9 +2128,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 3
+                  "resetValue": 3,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -2179,8 +2179,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "DeathPart_AppearSkill_Flag"
+          "variableName": "DeathPart_AppearSkill_Flag",
+          "scope": "TargetEntity"
         }
       ],
       "whenAdded": [
@@ -2190,8 +2190,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "DeathPart_AppearSkill_Flag"
+          "variableName": "DeathPart_AppearSkill_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2331,9 +2331,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 7
+                      "resetValue": 7,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -2358,9 +2358,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Death_SpecialVictory_Flag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2701,8 +2701,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Skill07_EffectFlag"
+                  "variableName": "Skill07_EffectFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2715,8 +2715,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Skill07_EffectFlag"
+          "variableName": "Skill07_EffectFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3600,8 +3600,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Skill07_EffectFlag"
+              "variableName": "Skill07_EffectFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3655,8 +3655,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bullet_Flag"
+              "variableName": "Bullet_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3692,8 +3692,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Skill07_EffectFlag"
+                  "variableName": "Skill07_EffectFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -3876,9 +3876,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Bullet_Flag",
-          "value": 2
+          "resetValue": 2,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4392,9 +4392,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Effect_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4425,8 +4425,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Effect_Flag"
+          "variableName": "Effect_Flag",
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],
@@ -4479,9 +4479,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Effect_Flag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4511,8 +4511,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Effect_Flag"
+          "variableName": "Effect_Flag",
+          "scope": "TargetEntity"
         },
         "Trigger: Attack End",
         {
@@ -4735,8 +4735,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "UsedSkill08_Flag"
+                        "variableName": "UsedSkill08_Flag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Define Custom Variable with Added Value",
@@ -4963,9 +4963,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -4998,9 +4998,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "UsedSkill08_Flag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5328,9 +5328,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Remove Events/Bonuses",
@@ -5422,8 +5422,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "UsedSkill08_Flag"
+                        "variableName": "UsedSkill08_Flag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Define Custom Variable with Added Value",
@@ -5650,9 +5650,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -5685,9 +5685,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "UsedSkill08_Flag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6015,9 +6015,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Remove Events/Bonuses",
@@ -6109,8 +6109,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "UsedSkill08_Flag"
+                        "variableName": "UsedSkill08_Flag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Define Custom Variable with Added Value",
@@ -6337,9 +6337,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -6372,9 +6372,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "UsedSkill08_Flag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6702,9 +6702,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Remove Events/Bonuses",
@@ -6796,8 +6796,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
-                        "variableName": "UsedSkill08_Flag"
+                        "variableName": "UsedSkill08_Flag",
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Define Custom Variable with Added Value",
@@ -7024,9 +7024,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "IF",
@@ -7059,9 +7059,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "UsedSkill08_Flag",
-                            "value": 1
+                            "resetValue": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -7389,9 +7389,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Remove Events/Bonuses",

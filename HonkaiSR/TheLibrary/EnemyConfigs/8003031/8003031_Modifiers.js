@@ -812,8 +812,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_00_Edict01Num"
+              "variableName": "Monster_XP_Elite02_00_Edict01Num",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -840,9 +840,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_00_Edict01Num",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },

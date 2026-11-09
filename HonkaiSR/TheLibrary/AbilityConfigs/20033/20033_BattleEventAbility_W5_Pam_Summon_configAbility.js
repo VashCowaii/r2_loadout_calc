@@ -53,8 +53,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "CurrentSpeed"
+          "variableName": "CurrentSpeed",
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable with Stat",

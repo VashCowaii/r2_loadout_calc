@@ -185,8 +185,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "PursuitCheck"
+      "variableName": "PursuitCheck",
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

@@ -109,9 +109,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "FinalPhase",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -119,9 +119,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "FinalPhaseFirstCheck",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -129,9 +129,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -393,9 +393,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShowHint04",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -445,9 +445,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShowHint04",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -626,8 +626,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -896,9 +896,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PursuitCheck",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1084,8 +1084,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -1141,8 +1141,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -1232,9 +1232,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "FinalPhase",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1242,9 +1242,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -1506,9 +1506,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShowHint04",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -1558,9 +1558,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShowHint04",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -1722,8 +1722,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DamageUpFlag"
+                      "variableName": "DamageUpFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1962,9 +1962,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PursuitCheck",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2150,8 +2150,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -2207,8 +2207,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -2245,9 +2245,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextAbility",
                   "variableName": "Kafka_AOEFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2255,9 +2255,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextAbility",
                   "variableName": "Kafka_HPExchangeFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2265,9 +2265,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextAbility",
                   "variableName": "Kafka_SummonFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "ContextAbility"
                 }
               ]
             },
@@ -2289,8 +2289,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "SummonCount"
+                  "variableName": "SummonCount",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2499,9 +2499,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 2
+                      "resetValue": 2,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Find New Target",
@@ -2608,8 +2608,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "InsertCheck"
+                          "variableName": "InsertCheck",
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Set Enemy Phase",
@@ -3049,9 +3049,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PursuitCheck",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Use Controlled Ability",
@@ -3081,8 +3081,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "PursuitCheck"
+                  "variableName": "PursuitCheck",
+                  "scope": "TargetEntity"
                 },
                 "Reset Triggers: Attack"
               ]
@@ -3274,16 +3274,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PursuitCount",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_Count) || RETURN",
                     "displayLines": "MDF_Count",
                     "constants": [],
                     "variables": [
                       "MDF_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3351,9 +3351,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PursuitCheck",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -3379,16 +3379,16 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PursuitCount",
-                  "value": {
+                  "resetValue": {
                     "operator": "Variables[0] (MDF_Count) || RETURN",
                     "displayLines": "MDF_Count",
                     "constants": [],
                     "variables": [
                       "MDF_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3519,8 +3519,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Insert_Flag"
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Looped Event",
@@ -3884,9 +3884,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",
@@ -3968,9 +3968,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "InsertCheck",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -3978,9 +3978,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -4049,8 +4049,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "DisPelCount"
+          "variableName": "DisPelCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4253,9 +4253,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AIFlag",
-                          "value": 3
+                          "resetValue": 3,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -4600,9 +4600,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 3
+              "resetValue": 3,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -4612,9 +4612,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 6
+              "resetValue": 6,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -4708,8 +4708,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "MindControlCount"
+          "variableName": "MindControlCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4749,8 +4749,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ShowHint04"
+          "variableName": "ShowHint04",
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",
@@ -5212,8 +5212,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "PursuitCheck"
+          "variableName": "PursuitCheck",
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -5675,9 +5675,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ElectricFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -5743,8 +5743,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "ElectricFlag"
+              "variableName": "ElectricFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -6899,9 +6899,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ElectricFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -6968,8 +6968,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "ElectricFlag"
+          "variableName": "ElectricFlag",
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -7172,8 +7172,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoPhysical"
+                      "variableName": "TDF_NoPhysical",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7183,8 +7183,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoPhysical"
+                      "variableName": "TDF_NoPhysical",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7196,9 +7196,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoPhysical",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7232,8 +7232,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoWind"
+                      "variableName": "TDF_NoWind",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7243,8 +7243,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoWind"
+                      "variableName": "TDF_NoWind",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7256,9 +7256,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoWind",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7292,8 +7292,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoFire"
+                      "variableName": "TDF_NoFire",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7303,8 +7303,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoFire"
+                      "variableName": "TDF_NoFire",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7316,9 +7316,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoFire",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7352,8 +7352,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoThunder"
+                      "variableName": "TDF_NoThunder",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7363,8 +7363,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoThunder"
+                      "variableName": "TDF_NoThunder",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7376,9 +7376,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoThunder",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7412,8 +7412,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoIce"
+                      "variableName": "TDF_NoIce",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7423,8 +7423,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoIce"
+                      "variableName": "TDF_NoIce",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7436,9 +7436,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoIce",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7472,8 +7472,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoQuantum"
+                      "variableName": "TDF_NoQuantum",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7483,8 +7483,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoQuantum"
+                      "variableName": "TDF_NoQuantum",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7496,9 +7496,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoQuantum",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7532,8 +7532,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoImaginary"
+                      "variableName": "TDF_NoImaginary",
+                      "scope": "ContextTaskTemplate"
                     }
                   ],
                   "failed": [
@@ -7543,8 +7543,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "ContextTaskTemplate",
-                      "variableName": "TDF_NoImaginary"
+                      "variableName": "TDF_NoImaginary",
+                      "scope": "ContextTaskTemplate"
                     }
                   ]
                 }
@@ -7556,9 +7556,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoImaginary",
-                  "value": 1000
+                  "resetValue": 1000,
+                  "scope": "ContextTaskTemplate"
                 }
               ]
             },
@@ -7780,9 +7780,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7829,9 +7829,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 3
+                    "resetValue": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7878,9 +7878,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -7936,9 +7936,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7996,9 +7996,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "resetValue": 6,
+                        "scope": "TargetEntity"
                       }
                     ],
                     "failed": [
@@ -8008,9 +8008,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "resetValue": 1,
+                        "scope": "TargetEntity"
                       }
                     ]
                   },
@@ -8068,9 +8068,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8117,9 +8117,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8175,9 +8175,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -8191,9 +8191,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "resetValue": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Choose Ability Target",
@@ -8251,9 +8251,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -8309,9 +8309,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8358,9 +8358,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 6
+                    "resetValue": 6,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -8416,9 +8416,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8465,9 +8465,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8523,9 +8523,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "resetValue": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -8548,8 +8548,8 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
-                            "variableName": "FinalPhaseFirstCheck"
+                            "variableName": "FinalPhaseFirstCheck",
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Declare Custom Variable",
@@ -8557,9 +8557,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "resetValue": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -8573,9 +8573,9 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 5
+                            "resetValue": 5,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Choose Ability Target",
@@ -8635,9 +8635,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 4
+                    "resetValue": 4,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -8693,9 +8693,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 5
+                    "resetValue": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8742,9 +8742,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 6
+                    "resetValue": 6,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Choose Ability Target",
@@ -8800,9 +8800,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

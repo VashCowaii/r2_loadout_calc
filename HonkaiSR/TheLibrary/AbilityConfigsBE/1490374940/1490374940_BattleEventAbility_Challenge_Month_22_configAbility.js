@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus1"
+      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus1",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus2"
+      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus2",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -29,8 +29,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus3"
+      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus3",
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Ability",

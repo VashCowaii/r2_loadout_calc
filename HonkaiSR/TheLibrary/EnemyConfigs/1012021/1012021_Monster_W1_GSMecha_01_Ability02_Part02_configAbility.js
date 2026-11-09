@@ -47,8 +47,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_BoomTimes"
+      "variableName": "_BoomTimes",
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

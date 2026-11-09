@@ -89,9 +89,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "Bounce_Count",
-          "value": {
+          "resetValue": {
             "operator": "Constants[0] (4) || Variables[0] (2) || ADD || RETURN",
             "displayLines": "(4 + 2)",
             "constants": [
@@ -100,7 +99,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ],
       "failed": [
@@ -110,9 +110,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextCaster",
           "variableName": "Bounce_Count",
-          "value": 4
+          "resetValue": 4,
+          "scope": "ContextCaster"
         }
       ]
     },

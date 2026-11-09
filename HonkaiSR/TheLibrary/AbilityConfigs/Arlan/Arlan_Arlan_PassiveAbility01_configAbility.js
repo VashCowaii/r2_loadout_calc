@@ -146,8 +146,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "_Arlan_00_PassiveSkill03_InsertController"
+              "variableName": "_Arlan_00_PassiveSkill03_InsertController",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -155,8 +155,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Arlan_00_PassiveSkill03Success"
+              "variableName": "Arlan_00_PassiveSkill03Success",
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -214,9 +214,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Arlan_00_PassiveSkill03Success",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Dispel Debuffs",
@@ -244,9 +244,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_Arlan_00_PassiveSkill03_InsertController",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

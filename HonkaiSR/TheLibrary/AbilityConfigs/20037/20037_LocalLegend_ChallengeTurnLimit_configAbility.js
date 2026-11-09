@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_MonsterChangeCnt"
+      "variableName": "_MonsterChangeCnt",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_MonsterChangeCnt02"
+      "variableName": "_MonsterChangeCnt02",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

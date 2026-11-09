@@ -1151,8 +1151,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W2_Argenti_00_BattleSore2_Flag"
+              "variableName": "W2_Argenti_00_BattleSore2_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1214,9 +1214,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "W2_Argenti_00_BattleSore2_Flag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

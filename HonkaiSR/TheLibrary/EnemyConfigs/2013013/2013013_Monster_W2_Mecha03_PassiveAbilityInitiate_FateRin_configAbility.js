@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "W2_Mecha03_00_Overdrive_State"
+      "variableName": "W2_Mecha03_00_Overdrive_State",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

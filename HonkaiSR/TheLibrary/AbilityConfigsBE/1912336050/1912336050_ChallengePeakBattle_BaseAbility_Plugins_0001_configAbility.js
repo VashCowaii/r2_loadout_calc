@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_TeamLight_Num"
+      "variableName": "_TeamLight_Num",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -20,8 +20,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_MDF_Layer"
+      "variableName": "_MDF_Layer",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

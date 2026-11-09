@@ -10,9 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextAbility",
       "variableName": "ADF_Effect_Index",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (FLOOR) || Variables[2] (ComboHitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Constants[0] (2) || PARAM_2 || FUNCTION || RETURN",
         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((ComboHitCount / 2)), 2)",
         "constants": [
@@ -23,7 +22,8 @@ const configAbility = {
           "FLOOR",
           "ComboHitCount"
         ]
-      }
+      },
+      "scope": "ContextAbility"
     },
     {
       "name": "IF",

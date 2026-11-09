@@ -5689,8 +5689,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "PursuitCheck"
+                  "variableName": "PursuitCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -5853,8 +5853,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "PursuitCheck"
+                  "variableName": "PursuitCheck",
+                  "scope": "TargetEntity"
                 },
                 "Reset Triggers: Attack"
               ]

@@ -44,8 +44,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "BreakEndFlag"
+      "variableName": "BreakEndFlag",
+      "scope": "TargetEntity"
     },
     {
       "name": "Find New Target",
@@ -205,9 +205,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "InsertCheck",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

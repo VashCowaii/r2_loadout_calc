@@ -11,16 +11,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "_Init_Layer",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
         "displayLines": "#BattleEvent_P1_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P1_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -28,16 +28,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "_DmgUp_Ratio",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
         "displayLines": "#BattleEvent_P2_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P2_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -45,16 +45,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "_Damage_Ratio",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P3_ADF) || RETURN",
         "displayLines": "#BattleEvent_P3_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P3_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -62,16 +62,16 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
       "variableName": "_Damage_Ratio_2",
-      "value": {
+      "resetValue": {
         "operator": "Variables[0] (#BattleEvent_P4_ADF) || RETURN",
         "displayLines": "#BattleEvent_P4_ADF",
         "constants": [],
         "variables": [
           "#BattleEvent_P4_ADF"
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -79,8 +79,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "_Current_Layer"
+      "variableName": "_Current_Layer",
+      "scope": "ContextCaster"
     },
     {
       "name": "Declare Custom Variable",
@@ -88,8 +88,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextCaster",
-      "variableName": "_Trigger_Effect_Flag"
+      "variableName": "_Trigger_Effect_Flag",
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Ability",

@@ -306,9 +306,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "IsInDeathRattle",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Exit Broken-State",
@@ -364,9 +364,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "IsInDeathRattle",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Exit Broken-State",
@@ -563,8 +563,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "AttackCount"
+          "variableName": "AttackCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -572,8 +572,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "IsInDeathRattle"
+          "variableName": "IsInDeathRattle",
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -581,8 +581,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "MarkRemainCount"
+          "variableName": "MarkRemainCount",
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",
@@ -669,8 +669,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "DeathrattleFlag"
+                      "variableName": "DeathrattleFlag",
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

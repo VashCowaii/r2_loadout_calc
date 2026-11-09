@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Phase2FirstTurn"
+      "variableName": "Phase2FirstTurn",
+      "scope": "TargetEntity"
     },
     "Ability Start",
     {

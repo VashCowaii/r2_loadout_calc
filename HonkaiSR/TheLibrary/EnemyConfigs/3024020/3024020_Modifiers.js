@@ -21,8 +21,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Sam_BattleScore1_Flag"
+              "variableName": "Sam_BattleScore1_Flag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -181,8 +181,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
-                      "variableName": "PhaseInsertCheck"
+                      "variableName": "PhaseInsertCheck",
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1468,8 +1468,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Burn_Layer"
+              "variableName": "Burn_Layer",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1482,8 +1482,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Burn_Layer"
+              "variableName": "Burn_Layer",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1569,16 +1569,16 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Burn_Layer",
-              "value": {
+              "resetValue": {
                 "operator": "Variables[0] (ModifierLayers) || RETURN",
                 "displayLines": "ModifierLayers",
                 "constants": [],
                 "variables": [
                   "ModifierLayers"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         },

@@ -57,8 +57,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Monster_AML_Elite01_01_DOTHitCounter"
+      "variableName": "Monster_AML_Elite01_01_DOTHitCounter",
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

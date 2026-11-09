@@ -283,8 +283,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Huimie_BeHitCounter"
+              "variableName": "Huimie_BeHitCounter",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -292,8 +292,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "XP_Minion04_02_Huimie_InsertFlag"
+              "variableName": "XP_Minion04_02_Huimie_InsertFlag",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -327,8 +327,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Huimie_BeHitCounter"
+              "variableName": "Huimie_BeHitCounter",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -398,9 +398,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "XP_Minion04_02_Huimie_InsertFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -435,8 +435,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Huimie_BeHitCounter"
+                          "variableName": "Huimie_BeHitCounter",
+                          "scope": "TargetEntity"
                         }
                       ]
                     }

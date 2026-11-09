@@ -10,9 +10,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
       "variableName": "Monster_XP_Elite02_00_Achievement",
-      "value": 1
+      "resetValue": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -85,8 +85,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "Monster_XP_Elite02_00_Achievement_02"
+          "variableName": "Monster_XP_Elite02_00_Achievement_02",
+          "scope": "TargetEntity"
         }
       ]
     },

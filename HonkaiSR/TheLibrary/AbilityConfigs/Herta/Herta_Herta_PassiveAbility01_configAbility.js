@@ -186,9 +186,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "MAvatar_Herta_Passive_CoolDown",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -226,9 +226,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "MAvatar_Herta_Passive_CoolDown",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -266,8 +266,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "MAvatar_Herta_Passive_CoolDown"
+                  "variableName": "MAvatar_Herta_Passive_CoolDown",
+                  "scope": "TargetEntity"
                 }
               ]
             }

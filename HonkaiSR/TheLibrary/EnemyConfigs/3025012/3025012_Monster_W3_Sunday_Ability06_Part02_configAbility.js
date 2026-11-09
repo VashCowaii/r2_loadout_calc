@@ -10,8 +10,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextOwner",
-      "variableName": "Skill06BgmStateDelaySeconds"
+      "variableName": "Skill06BgmStateDelaySeconds",
+      "scope": "ContextOwner"
     },
     {
       "name": "Declare Custom Variable",
@@ -19,8 +19,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "ContextOwner",
-      "variableName": "Skill06BgmGapSeconds"
+      "variableName": "Skill06BgmGapSeconds",
+      "scope": "ContextOwner"
     },
     {
       "name": "IF",
@@ -39,9 +39,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "ContextOwner",
           "variableName": "Skill06BgmGapSeconds",
-          "value": 1
+          "resetValue": 1,
+          "scope": "ContextOwner"
         }
       ],
       "failed": [
@@ -111,16 +111,16 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Skill06BgmGapSeconds",
-          "value": {
+          "resetValue": {
             "operator": "Variables[0] (Skill06BgmGapSeconds) || RETURN",
             "displayLines": "Skill06BgmGapSeconds",
             "constants": [],
             "variables": [
               "Skill06BgmGapSeconds"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Ability",

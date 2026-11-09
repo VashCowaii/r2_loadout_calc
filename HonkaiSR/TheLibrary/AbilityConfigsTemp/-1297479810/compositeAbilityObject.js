@@ -27,8 +27,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "TP_DynamicValue_Origin_MemberCount"
+              "variableName": "TP_DynamicValue_Origin_MemberCount",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -36,8 +36,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "TP_DynamicValue_Origin_ActiveLevel"
+              "variableName": "TP_DynamicValue_Origin_ActiveLevel",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -45,8 +45,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "TP_DynamicValue_Origin"
+              "variableName": "TP_DynamicValue_Origin",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -259,8 +259,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "ContextAbility",
-                  "variableName": "TP_Temp"
+                  "variableName": "TP_Temp",
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "Define Custom Variable with Copy",

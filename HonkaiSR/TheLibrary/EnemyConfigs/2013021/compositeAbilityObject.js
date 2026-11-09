@@ -130,9 +130,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -388,8 +388,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+                  "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -473,9 +473,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -603,9 +603,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
           "variableName": "W2_Valkyrie02_00_AICounter",
-          "value": 1
+          "resetValue": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Declare Custom Variable",
@@ -613,8 +613,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -766,8 +766,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],
@@ -1166,8 +1166,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "scope": "TargetEntity",
-          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag"
+          "variableName": "W2_Valkyrie02_00_Skill04_TriggerFlag",
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],
@@ -1912,9 +1912,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "scope": "TargetEntity",
                     "variableName": "W2_Valkyrie02_00_AICounter",
-                    "value": 1
+                    "resetValue": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

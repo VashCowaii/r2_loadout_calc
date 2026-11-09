@@ -4249,7 +4249,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 2
+                    "resetValue": 2
                   },
                   {
                     "name": "Use Ability Option",
@@ -4284,7 +4284,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 3
+                    "resetValue": 3
                   },
                   {
                     "name": "Use Ability Option",
@@ -4319,7 +4319,7 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "variableName": "AIFlag",
-                    "value": 4
+                    "resetValue": 4
                   },
                   {
                     "name": "IF",
@@ -4386,7 +4386,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 4
+                        "resetValue": 4
                       },
                       {
                         "name": "Use Ability Option",
@@ -4401,7 +4401,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 5
+                        "resetValue": 5
                       },
                       {
                         "name": "Use Ability Option",
@@ -4463,7 +4463,7 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "variableName": "AIFlag",
-                        "value": 5
+                        "resetValue": 5
                       },
                       {
                         "name": "Use Ability Option",

@@ -702,9 +702,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartDecisionFlag",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             },
             {
               "name": "Exit Broken-State",
@@ -747,8 +747,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "PartActivityCount"
+              "variableName": "PartActivityCount",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -859,9 +859,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartDecisionFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -874,8 +874,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "PartActivityCount"
+              "variableName": "PartActivityCount",
+              "scope": "TargetEntity"
             },
             {
               "name": "Find New Target",
@@ -1162,9 +1162,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "PartDecisionFlag",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]
@@ -1843,8 +1843,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "NeedRemoveActivity"
+              "variableName": "NeedRemoveActivity",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -1852,8 +1852,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "PartDecisionFlag"
+              "variableName": "PartDecisionFlag",
+              "scope": "TargetEntity"
             }
           ]
         },

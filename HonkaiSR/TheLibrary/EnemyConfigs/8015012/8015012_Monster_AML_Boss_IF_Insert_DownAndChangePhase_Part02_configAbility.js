@@ -146,8 +146,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "ListenAllDieController"
+      "variableName": "ListenAllDieController",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

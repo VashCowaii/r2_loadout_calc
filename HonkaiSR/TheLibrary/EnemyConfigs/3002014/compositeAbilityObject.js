@@ -37,8 +37,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "TV_AchievementFlag"
+                  "variableName": "TV_AchievementFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             },

@@ -116,9 +116,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ChargeFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -156,9 +156,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_XP_Elite02_01_AIFlag",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -168,9 +168,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Monster_XP_Elite02_01_AIFlag",
-                      "value": 4
+                      "resetValue": 4,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -182,9 +182,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Monster_XP_Elite02_01_AIFlag",
-                  "value": 1
+                  "resetValue": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -194,8 +194,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Monster_XP_Elite02_01_AIFlag_02"
+              "variableName": "Monster_XP_Elite02_01_AIFlag_02",
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -261,8 +261,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "ChargeFlag"
+                  "variableName": "ChargeFlag",
+                  "scope": "TargetEntity"
                 }
               ]
             },

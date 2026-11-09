@@ -43,8 +43,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bronya_SummonCounter"
+      "variableName": "Bronya_SummonCounter",
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",
@@ -52,8 +52,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "Bronya_SummonMode"
+      "variableName": "Bronya_SummonMode",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",
@@ -88,8 +88,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Bronya_SummonMode"
+              "variableName": "Bronya_SummonMode",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -97,9 +97,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Bronya_AICounter_Act2",
-              "value": 2
+              "resetValue": 2,
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -128,9 +128,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Bronya_AICounter_Act2",
-              "value": 1
+              "resetValue": 1,
+              "scope": "TargetEntity"
             }
           ]
         },

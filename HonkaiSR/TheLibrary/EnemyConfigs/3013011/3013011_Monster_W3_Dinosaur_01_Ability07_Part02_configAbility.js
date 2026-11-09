@@ -117,7 +117,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 30
+              "resetValue": 30
             },
             {
               "name": "Declare Custom Variable",
@@ -126,7 +126,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 60
+              "resetValue": 60
             },
             {
               "name": "Declare Custom Variable",
@@ -135,7 +135,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 90
+              "resetValue": 90
             },
             {
               "name": "Declare Custom Variable",
@@ -144,7 +144,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 120
+              "resetValue": 120
             },
             {
               "name": "Declare Custom Variable",
@@ -153,7 +153,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 150
+              "resetValue": 150
             },
             {
               "name": "Declare Custom Variable",
@@ -162,7 +162,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 180
+              "resetValue": 180
             },
             {
               "name": "Declare Custom Variable",
@@ -171,7 +171,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 210
+              "resetValue": 210
             },
             {
               "name": "Declare Custom Variable",
@@ -180,7 +180,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 240
+              "resetValue": 240
             },
             {
               "name": "Declare Custom Variable",
@@ -189,7 +189,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 270
+              "resetValue": 270
             },
             {
               "name": "Declare Custom Variable",
@@ -198,7 +198,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 300
+              "resetValue": 300
             },
             {
               "name": "Declare Custom Variable",
@@ -207,7 +207,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 330
+              "resetValue": 330
             },
             {
               "name": "Declare Custom Variable",
@@ -216,7 +216,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "variableName": "EffRandomYaw",
-              "value": 360
+              "resetValue": 360
             }
           ]
         },

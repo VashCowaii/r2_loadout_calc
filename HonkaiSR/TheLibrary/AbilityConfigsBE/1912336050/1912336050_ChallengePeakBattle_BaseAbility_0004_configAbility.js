@@ -11,8 +11,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "scope": "TargetEntity",
-      "variableName": "_Elite_Num"
+      "variableName": "_Elite_Num",
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

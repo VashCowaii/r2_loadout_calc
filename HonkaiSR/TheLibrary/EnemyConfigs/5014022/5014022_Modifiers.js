@@ -64,8 +64,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W5_Pam_00_BattleScore2_Flag"
+              "variableName": "W5_Pam_00_BattleScore2_Flag",
+              "scope": "TargetEntity"
             },
             {
               "name": "Declare Custom Variable",
@@ -73,8 +73,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "W5_Pam_00_BattleScore2_Flag2"
+              "variableName": "W5_Pam_00_BattleScore2_Flag2",
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1248,8 +1248,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",
@@ -1337,8 +1337,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "InsertCheck"
+                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Enemy Phase",

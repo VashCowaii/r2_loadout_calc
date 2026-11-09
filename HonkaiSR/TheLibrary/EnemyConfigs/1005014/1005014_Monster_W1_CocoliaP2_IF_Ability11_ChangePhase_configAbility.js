@@ -112,8 +112,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
-              "variableName": "Cocolia_ChangePhase_InsertController"
+              "variableName": "Cocolia_ChangePhase_InsertController",
+              "scope": "TargetEntity"
             }
           ]
         }

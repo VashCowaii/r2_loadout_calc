@@ -63,9 +63,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "TimeSlowSpeed",
-                      "value": 1
+                      "resetValue": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -105,8 +105,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "TimeSlowSpeed"
+                          "variableName": "TimeSlowSpeed",
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -143,8 +143,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "TimeSlowSpeed"
+                          "variableName": "TimeSlowSpeed",
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -199,9 +199,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "TimeSlowSpeed",
-                          "value": 1
+                          "resetValue": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -249,8 +249,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "TimeSlowSpeed"
+                              "variableName": "TimeSlowSpeed",
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
