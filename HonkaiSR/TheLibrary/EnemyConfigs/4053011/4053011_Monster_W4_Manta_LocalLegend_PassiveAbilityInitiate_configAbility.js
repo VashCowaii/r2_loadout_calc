@@ -41,11 +41,11 @@ const configAbility = {
       "whenCreated": [
         {
           "name": "Assign Unique Name",
-          "uniqueName": "SelectTarget",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          }
+          },
+          "identifier": "SelectTarget"
         },
         {
           "name": "Add Events/Bonuses",

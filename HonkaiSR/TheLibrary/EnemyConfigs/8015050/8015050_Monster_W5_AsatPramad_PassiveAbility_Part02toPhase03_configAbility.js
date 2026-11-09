@@ -425,11 +425,11 @@ const configAbility = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "BE_AsatPramad_00",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "BE_AsatPramad_00"
             },
             {
               "name": "Add Events/Bonuses",
@@ -466,11 +466,11 @@ const configAbility = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "BE_AsatPramad_01",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "BE_AsatPramad_01"
             },
             {
               "name": "Add Events/Bonuses",
@@ -536,11 +536,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "HimekoBE",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "HimekoBE"
             },
             {
               "name": "Show BattleEvent Button",

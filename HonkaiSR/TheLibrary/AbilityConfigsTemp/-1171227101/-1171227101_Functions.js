@@ -236,11 +236,11 @@ const configAbility = {
       "parse": [
         {
           "name": "Assign Unique Name",
-          "uniqueName": "_Puman_Create",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          }
+          },
+          "identifier": "_Puman_Create"
         }
       ]
     },

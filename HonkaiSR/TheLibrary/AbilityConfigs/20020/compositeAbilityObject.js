@@ -3056,11 +3056,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "Monster_W4_Manta_00_BE",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "Monster_W4_Manta_00_BE"
         },
         {
           "name": "Add Stage Ability",

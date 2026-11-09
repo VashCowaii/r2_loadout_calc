@@ -35,11 +35,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "SelectTarget"
             },
             {
               "name": "Add Events/Bonuses",
@@ -78,11 +78,11 @@ const configAbility = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "W5_Vtuber_00",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "W5_Vtuber_00"
         },
         {
           "name": "Add Events/Bonuses",
@@ -192,11 +192,11 @@ const configAbility = {
       "failed": [
         {
           "name": "Assign Unique Name",
-          "uniqueName": "W5_Vtuber_00_Virtual",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "W5_Vtuber_00_Virtual"
         }
       ]
     }

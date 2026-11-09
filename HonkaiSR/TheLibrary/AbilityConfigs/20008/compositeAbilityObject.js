@@ -592,11 +592,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "LycanSummon",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "LycanSummon"
         }
       ],
       "references": [

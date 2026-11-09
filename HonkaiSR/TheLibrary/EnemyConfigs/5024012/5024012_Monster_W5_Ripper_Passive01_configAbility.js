@@ -47,11 +47,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "Monster_W5_Ripper_00",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "Monster_W5_Ripper_00"
     },
     {
       "name": "Add Events/Bonuses",

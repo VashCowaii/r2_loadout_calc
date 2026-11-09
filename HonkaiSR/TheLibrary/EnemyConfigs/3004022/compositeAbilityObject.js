@@ -6646,11 +6646,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "TheaterCore",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "TheaterCore"
         },
         {
           "name": "Add Stage Ability",

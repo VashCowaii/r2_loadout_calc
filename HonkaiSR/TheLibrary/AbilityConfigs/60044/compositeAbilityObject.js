@@ -607,11 +607,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "BossAfterBE",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "BossAfterBE"
             }
           ]
         },

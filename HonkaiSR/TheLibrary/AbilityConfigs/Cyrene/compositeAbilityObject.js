@@ -1254,17 +1254,17 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "uniqueName": "Cyrene_TargetCount_{MDF_ID}",
+                            "variableName": "Cyrene_TargetCount_{MDF_ID}",
                             "invertCondition": true
                           },
                           "passed": [
                             {
                               "name": "Assign Unique Name",
-                              "uniqueName": "Cyrene_TargetCount_{MDF_ID}",
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
                               },
+                              "variableName": "Cyrene_TargetCount_{MDF_ID}",
                               "unknownBoolean": true
                             },
                             {

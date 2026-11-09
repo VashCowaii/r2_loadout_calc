@@ -2479,15 +2479,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Unbind Unique Name",
-          "uniqueName": "Target_Elation"
+          "identifier": "Target_Elation"
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "Target_Elation",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "Target_Elation"
         },
         {
           "name": "IF",

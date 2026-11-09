@@ -3224,11 +3224,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition1",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition1"
                     }
                   ]
                 },
@@ -3252,11 +3252,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition5",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition5"
                     }
                   ]
                 },
@@ -3304,11 +3304,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition2",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition2"
                     }
                   ]
                 },
@@ -3356,11 +3356,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition4",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition4"
                     }
                   ]
                 },
@@ -3475,11 +3475,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition1",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition1"
                     }
                   ]
                 },
@@ -3503,11 +3503,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition5",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition5"
                     }
                   ]
                 },
@@ -3555,11 +3555,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition2",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition2"
                     }
                   ]
                 },
@@ -3607,11 +3607,11 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "W3_Sunday_00_SundayPartPosition4",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "W3_Sunday_00_SundayPartPosition4"
                     }
                   ]
                 },
@@ -4280,11 +4280,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W3_Sunday_00_SundayPartPosition5",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W3_Sunday_00_SundayPartPosition5"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4328,11 +4328,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W3_Sunday_00_SundayPartPosition4",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W3_Sunday_00_SundayPartPosition4"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4376,11 +4376,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W3_Sunday_00_SundayPartPosition2",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W3_Sunday_00_SundayPartPosition2"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4424,11 +4424,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W3_Sunday_00_SundayPartPosition1",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W3_Sunday_00_SundayPartPosition1"
             },
             {
               "name": "Add Events/Bonuses",

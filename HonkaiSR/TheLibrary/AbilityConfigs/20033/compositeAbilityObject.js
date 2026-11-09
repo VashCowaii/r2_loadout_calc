@@ -1534,11 +1534,11 @@ const compositeAbilityObject = {
                       "whenCreated": [
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "Pamu_Robot",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "Pamu_Robot"
                         }
                       ]
                     }
@@ -2715,11 +2715,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "PamuSummon",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "PamuSummon"
         }
       ],
       "references": [
@@ -2973,11 +2973,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "Pamu_Robot"
                     },
                     {
                       "name": "Remove from Team Target Grouping",
@@ -3002,11 +3002,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "Pamu_Robot"
                     },
                     {
                       "name": "Remove from Team Target Grouping",

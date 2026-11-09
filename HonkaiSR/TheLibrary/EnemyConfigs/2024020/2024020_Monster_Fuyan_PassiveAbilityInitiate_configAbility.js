@@ -8,11 +8,11 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Assign Unique Name",
-      "uniqueName": "Fuyan",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "Fuyan"
     },
     {
       "name": "Add Events/Bonuses",

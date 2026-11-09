@@ -2456,11 +2456,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "W4_FireProwler_00",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "W4_FireProwler_00"
         },
         {
           "name": "IF",

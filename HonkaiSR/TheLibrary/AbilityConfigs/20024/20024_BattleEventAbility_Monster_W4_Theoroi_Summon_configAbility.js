@@ -31,11 +31,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "TheoroiSummon",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "TheoroiSummon"
     }
   ],
   "references": [

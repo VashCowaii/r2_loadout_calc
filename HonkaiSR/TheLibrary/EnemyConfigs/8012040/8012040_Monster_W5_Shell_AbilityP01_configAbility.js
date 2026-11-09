@@ -59,11 +59,11 @@ const configAbility = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W5_Shell_Attack",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W5_Shell_Attack"
             }
           ]
         }

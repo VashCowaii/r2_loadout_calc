@@ -1577,11 +1577,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition1",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition1"
                 }
               ]
             },
@@ -1605,11 +1605,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition5",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition5"
                 }
               ]
             },
@@ -1657,11 +1657,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition2",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition2"
                 }
               ]
             },
@@ -1709,11 +1709,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition4",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition4"
                 }
               ]
             },
@@ -5406,11 +5406,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition1",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition1"
                 }
               ]
             },
@@ -5434,11 +5434,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition5",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition5"
                 }
               ]
             },
@@ -5486,11 +5486,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition2",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition2"
                 }
               ]
             },
@@ -5538,11 +5538,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition4",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition4"
                 }
               ]
             },
@@ -5657,11 +5657,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition1",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition1"
                 }
               ]
             },
@@ -5685,11 +5685,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition5",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition5"
                 }
               ]
             },
@@ -5737,11 +5737,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition2",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition2"
                 }
               ]
             },
@@ -5789,11 +5789,11 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W3_Sunday_00_SundayPartPosition4",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "W3_Sunday_00_SundayPartPosition4"
                 }
               ]
             },

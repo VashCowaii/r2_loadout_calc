@@ -7,11 +7,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Assign Unique Name",
-      "uniqueName": "W4_Serpent_01",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "W4_Serpent_01"
     },
     {
       "name": "Add Events/Bonuses",
@@ -89,11 +89,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "SelectTarget"
             },
             {
               "name": "Add Events/Bonuses",
@@ -162,11 +162,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "SelectTarget",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "SelectTarget"
             },
             {
               "name": "Add Events/Bonuses",

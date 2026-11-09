@@ -93,11 +93,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "PamuSummon",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "PamuSummon"
     }
   ],
   "references": [

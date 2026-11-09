@@ -1404,11 +1404,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "AML_Boss_00",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "AML_Boss_00"
         },
         {
           "name": "IF",

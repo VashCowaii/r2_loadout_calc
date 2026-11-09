@@ -2933,11 +2933,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "BE_AsatPramad_00",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "BE_AsatPramad_00"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2974,11 +2974,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "BE_AsatPramad_01",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "BE_AsatPramad_01"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3044,11 +3044,11 @@ const compositeAbilityObject = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "HimekoBE",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "HimekoBE"
                 },
                 {
                   "name": "Show BattleEvent Button",
@@ -3369,11 +3369,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "BossUltra",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "BossUltra"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3647,11 +3647,11 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "W5_AsatPramad_02",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  }
+                  },
+                  "identifier": "W5_AsatPramad_02"
                 },
                 {
                   "name": "IF",
@@ -3712,11 +3712,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "W5_AsatPramad_01",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "W5_AsatPramad_01"
                         },
                         {
                           "name": "Remove from Team Target Grouping",
@@ -3744,11 +3744,11 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "W5_AsatPramad_00",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "W5_AsatPramad_00"
                         },
                         {
                           "name": "Remove from Team Target Grouping",
@@ -3877,11 +3877,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "BossSummonMonster",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "BossSummonMonster"
                     }
                   ]
                 },
@@ -4105,11 +4105,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "BossUltra",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "BossUltra"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -4163,11 +4163,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "BE_AsatPramad_00",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "BE_AsatPramad_00"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -4204,11 +4204,11 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "BE_AsatPramad_01",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "BE_AsatPramad_01"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -4243,11 +4243,11 @@ const compositeAbilityObject = {
                       "whenCreated": [
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "HimekoBE",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "HimekoBE"
                         },
                         {
                           "name": "Show BattleEvent Button",

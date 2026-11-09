@@ -48,11 +48,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "TVBroadcast_Neutral",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "TVBroadcast_Neutral"
     }
   ],
   "references": [

@@ -4678,11 +4678,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "TVBroadcast_Positive",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "TVBroadcast_Positive"
         }
       ],
       "references": [

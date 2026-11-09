@@ -17,7 +17,7 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "SilverWolf999_Skill11_EnemyGround",
+      "identifier": "SilverWolf999_Skill11_EnemyGround",
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"

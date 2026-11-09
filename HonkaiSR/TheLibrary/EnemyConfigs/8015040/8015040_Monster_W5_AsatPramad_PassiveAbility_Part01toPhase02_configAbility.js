@@ -242,11 +242,11 @@ const configAbility = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "BossUltra",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          }
+          },
+          "identifier": "BossUltra"
         },
         {
           "name": "Add Events/Bonuses",

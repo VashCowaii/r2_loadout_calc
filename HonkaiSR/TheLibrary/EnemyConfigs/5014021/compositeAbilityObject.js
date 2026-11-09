@@ -1551,11 +1551,11 @@ const compositeAbilityObject = {
                       "whenCreated": [
                         {
                           "name": "Assign Unique Name",
-                          "uniqueName": "Pamu_Robot",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "identifier": "Pamu_Robot"
                         }
                       ]
                     }
@@ -3211,11 +3211,11 @@ const compositeAbilityObject = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Summon",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "Pamu_Summon"
                 }
               ]
             }
@@ -3238,11 +3238,11 @@ const compositeAbilityObject = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Summon",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "Pamu_Summon"
                 }
               ]
             }
@@ -3565,11 +3565,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "Pamu_Robot"
                     },
                     {
                       "name": "Remove from Team Target Grouping",
@@ -3594,11 +3594,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "Pamu_Robot",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "Pamu_Robot"
                     },
                     {
                       "name": "Remove from Team Target Grouping",

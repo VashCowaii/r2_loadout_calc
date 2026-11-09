@@ -205,11 +205,11 @@ const configAbility = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "RagBattleEvent",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          }
+          },
+          "identifier": "RagBattleEvent"
         },
         {
           "name": "Add Events/Bonuses",
@@ -495,11 +495,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "HealBattleEvent",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "HealBattleEvent"
             },
             {
               "name": "Update Energy",

@@ -6633,11 +6633,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W2_Yanqing_00_Skill02_SummonMinion_Pos_2",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W2_Yanqing_00_Skill02_SummonMinion_Pos_2"
             }
           ]
         },
@@ -6661,11 +6661,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W2_Yanqing_00_Skill02_SummonMinion_Pos_4",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W2_Yanqing_00_Skill02_SummonMinion_Pos_4"
             }
           ]
         },
@@ -6703,11 +6703,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W2_Yanqing_00_Skill02_SummonMinion_Pos_1",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W2_Yanqing_00_Skill02_SummonMinion_Pos_1"
             }
           ]
         },
@@ -6731,11 +6731,11 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W2_Yanqing_00_Skill02_SummonMinion_Pos_5",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "W2_Yanqing_00_Skill02_SummonMinion_Pos_5"
             }
           ]
         },

@@ -6757,11 +6757,11 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "RagBattleEvent",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "RagBattleEvent"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -6971,11 +6971,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "HealBattleEvent",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "HealBattleEvent"
                     },
                     {
                       "name": "Update Energy",
@@ -7014,11 +7014,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "HealBattleEvent",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "HealBattleEvent"
                     },
                     {
                       "name": "Action Advance/Delay",

@@ -93,11 +93,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "RageEnd",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "RageEnd"
     }
   ],
   "references": [

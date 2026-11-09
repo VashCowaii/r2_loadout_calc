@@ -1975,11 +1975,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Assign Unique Name",
-          "uniqueName": "TheoroiEnhance",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "identifier": "TheoroiEnhance"
         }
       ],
       "references": [

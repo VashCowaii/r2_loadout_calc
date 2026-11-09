@@ -1219,11 +1219,11 @@ const compositeAbilityObject = {
                   "whenCreated": [
                     {
                       "name": "Assign Unique Name",
-                      "uniqueName": "BattleEvent02",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "identifier": "BattleEvent02"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -6143,11 +6143,11 @@ const compositeAbilityObject = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "BattleEvent01",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "BattleEvent01"
             },
             {
               "name": "Update Energy",

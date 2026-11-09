@@ -105,11 +105,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "Pamu_Summon",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "Pamu_Summon"
             }
           ]
         }
@@ -132,11 +132,11 @@ const configAbility = {
           "whenCreated": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "Pamu_Summon",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              }
+              },
+              "identifier": "Pamu_Summon"
             }
           ]
         }

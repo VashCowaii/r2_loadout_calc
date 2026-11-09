@@ -43,11 +43,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "DollBoss",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "DollBoss"
     },
     {
       "name": "Add Stage Ability",

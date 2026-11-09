@@ -107,11 +107,11 @@ const configAbility = {
       "whenCreated": [
         {
           "name": "Assign Unique Name",
-          "uniqueName": "BattleEvent01",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          }
+          },
+          "identifier": "BattleEvent01"
         },
         {
           "name": "Update Energy",

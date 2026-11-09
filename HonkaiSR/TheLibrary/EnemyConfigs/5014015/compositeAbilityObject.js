@@ -3874,11 +3874,11 @@ const compositeAbilityObject = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "SelectTarget",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "SelectTarget"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3917,11 +3917,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W5_Vtuber_00",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              }
+              },
+              "identifier": "W5_Vtuber_00"
             },
             {
               "name": "Add Events/Bonuses",
@@ -4031,11 +4031,11 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Assign Unique Name",
-              "uniqueName": "W5_Vtuber_00_Virtual",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              }
+              },
+              "identifier": "W5_Vtuber_00_Virtual"
             }
           ]
         }

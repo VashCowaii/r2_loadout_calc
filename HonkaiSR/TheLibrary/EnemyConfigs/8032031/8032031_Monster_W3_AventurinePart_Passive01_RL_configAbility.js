@@ -33,11 +33,11 @@ const configAbility = {
     },
     {
       "name": "Assign Unique Name",
-      "uniqueName": "W3_AventurinePart_00_RL",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "identifier": "W3_AventurinePart_00_RL"
     }
   ],
   "targetObjectData": {

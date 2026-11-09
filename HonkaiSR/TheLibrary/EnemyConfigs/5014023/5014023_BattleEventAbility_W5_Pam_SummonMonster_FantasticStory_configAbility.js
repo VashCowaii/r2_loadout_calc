@@ -50,11 +50,11 @@ const configAbility = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Robot",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "Pamu_Robot"
                 },
                 {
                   "name": "Remove from Team Target Grouping",
@@ -79,11 +79,11 @@ const configAbility = {
               "whenCreated": [
                 {
                   "name": "Assign Unique Name",
-                  "uniqueName": "Pamu_Robot",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  }
+                  },
+                  "identifier": "Pamu_Robot"
                 },
                 {
                   "name": "Remove from Team Target Grouping",
