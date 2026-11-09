@@ -3989,17 +3989,14 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "Monster_W5_JK_PowerOut"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageSpecialAbility_20501090_Ability03End"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert02_Part01"
                           },
                           {
@@ -4014,7 +4011,6 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "RuanMei_TriggerImprintEffect",
                         "invertCondition": true
                       }
@@ -4061,7 +4057,6 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "Monster_W5_Vtuber_IF_AbilityP01_Insert01_Part01"
                           },
                           {
@@ -4076,7 +4071,6 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "RuanMei_TriggerImprintEffect",
                         "invertCondition": true
                       }
@@ -4140,17 +4134,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "DanHengPT_BE_InsertShield_Part01"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "DanHengPT_BE_InsertAttack_Part01"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "BattleEvent_GridFight_DanHengPT_BE_InsertAttack_Part01"
                       }
                     ]
@@ -4212,17 +4203,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "DanHengPT_BE_InsertShield_Part01"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "DanHengPT_BE_InsertAttack_Part01"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "BattleEvent_GridFight_DanHengPT_BE_InsertAttack_Part01"
                       }
                     ]
@@ -4264,27 +4252,22 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2001_Sub"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2002_Sub"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2008_Insert"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "GridFight_Augment_35402032_Insert"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Augment_35402043_AttackAbility"
                           }
                         ]
@@ -4325,27 +4308,22 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2001_Sub"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2002_Sub"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Origin_2008_Insert"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "GridFight_Augment_35402032_Insert"
                           },
                           {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "StageAbility_GridFight_Augment_35402043_AttackAbility"
                           }
                         ]

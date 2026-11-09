@@ -1743,7 +1743,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "ActionTag_Windfury"
               },
               "passed": [
@@ -1869,7 +1868,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "ActionTag_Windfury"
               },
               "passed": [

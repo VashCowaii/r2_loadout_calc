@@ -177,11 +177,11 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "partOf": {
+                    "compareTarget": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "exclude": {
+                    "excludeTarget": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     }

@@ -1578,7 +1578,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Phainon_BEInsertAction"
               },
               "passed": [

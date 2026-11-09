@@ -159,7 +159,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "FantasticStory_BaseAbility_2210"
               },
               "passed": [
@@ -179,7 +178,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "FantasticStory_BaseAbility_2210"
               },
               "passed": [

@@ -708,12 +708,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W4_Serpent_Ability05_Insert"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W4_Serpent_Ability05ToStb_Insert"
                       }
                     ]

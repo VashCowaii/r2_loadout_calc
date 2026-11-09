@@ -680,7 +680,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Monster_W5_Eater_Ability03_Part01"
               },
               "passed": [
@@ -1416,7 +1415,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Monster_W5_Eater_Ability03_Part01_FateRin"
               },
               "passed": [

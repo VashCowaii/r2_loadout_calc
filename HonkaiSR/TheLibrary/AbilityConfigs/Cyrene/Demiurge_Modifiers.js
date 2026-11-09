@@ -2221,7 +2221,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "ActionTag_Windfury"
               },
               "passed": [
@@ -2251,7 +2250,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "ActionTag_Windfury"
               },
               "passed": [
@@ -2778,7 +2776,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneGivenMydeimos"
               },
               "passed": [
@@ -2811,7 +2808,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneGivenMydeimos"
               },
               "passed": [
@@ -3149,7 +3145,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneServant_Ability01_PlayerExtra"
               },
               "passed": [
@@ -3168,7 +3163,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneServant_Ability01_PlayerExtra"
               },
               "passed": [
@@ -4767,7 +4761,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneServant_Ability01_Eidolon1"
               },
               "passed": [
@@ -4786,7 +4779,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "CyreneServant_Ability01_Eidolon1"
               },
               "passed": [

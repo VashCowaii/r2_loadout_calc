@@ -794,17 +794,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W2_Xuanlu_IF_AbilityP01_EnterBattleSummon_Part01"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W2_Xuanlu_IF_AbilityP01_PartChange01to02"
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W2_Xuanlu_IF_AbilityP01_InfiniteSummon"
                       }
                     ]
@@ -3360,7 +3357,6 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak"
                       }
                     ]

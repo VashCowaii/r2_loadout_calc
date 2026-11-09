@@ -241,7 +241,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "SilverWolf999_Eidolon2"
               },
               "passed": [
@@ -260,7 +259,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "SilverWolf999_Eidolon2"
               },
               "passed": [
@@ -1788,7 +1786,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "SilverWolf999_Ability11Succession"
               },
               "passed": [

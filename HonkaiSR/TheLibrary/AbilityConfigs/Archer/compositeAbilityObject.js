@@ -3610,7 +3610,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "ActionTag_Windfury"
                   },
                   "passed": [
@@ -3630,7 +3629,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "ActionTag_Windfury"
                   },
                   "passed": [

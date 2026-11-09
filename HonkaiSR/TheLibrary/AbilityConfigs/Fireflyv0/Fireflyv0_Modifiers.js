@@ -1452,7 +1452,6 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Sam_Eidolon2_Bonus"
                   }
                 ]
@@ -1501,7 +1500,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "soundevent_marker_vo_avatar_advantage02_sam_start"
               },
               "failed": [
@@ -1509,7 +1507,6 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_01_start"
                   },
                   "failed": [
@@ -1517,7 +1514,6 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_02_start"
                       },
                       "failed": [
@@ -1525,7 +1521,6 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Parameter String",
-                            "compareType": "=",
                             "value2": "soundevent_marker_vo_avatar_waiting02_sam_start"
                           }
                         }

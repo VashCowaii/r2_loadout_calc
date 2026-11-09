@@ -714,7 +714,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "RuanMei_TriggerImprintEffect",
                 "invertCondition": true
               },
@@ -928,7 +927,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "RuanMei_TriggerImprintEffect",
                 "invertCondition": true
               },

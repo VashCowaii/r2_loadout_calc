@@ -1511,7 +1511,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "EnergyTrigger_ElationAbility"
                   },
                   "passed": [
@@ -1632,7 +1631,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "EnergyTrigger_ElationAbility"
                   },
                   "passed": [

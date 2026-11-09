@@ -1334,7 +1334,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Phainon_BEInsertAction"
                   },
                   "passed": [
@@ -4969,7 +4968,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Phainon_Free_Ability22"
                   },
                   "passed": [

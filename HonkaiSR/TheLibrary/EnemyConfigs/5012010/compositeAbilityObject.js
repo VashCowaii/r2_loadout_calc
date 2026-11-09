@@ -465,7 +465,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Monster_W3_TV_03_Ability02_Part01"
                   },
                   "passed": [

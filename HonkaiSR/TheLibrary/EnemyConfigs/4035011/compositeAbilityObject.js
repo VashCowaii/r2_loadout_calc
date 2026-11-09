@@ -708,7 +708,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "partOf": {
+                            "compareTarget": {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
                             }
@@ -2232,7 +2232,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "partOf": {
+                            "compareTarget": {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
                             }

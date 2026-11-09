@@ -194,7 +194,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Advanced_Seele_Ability02InsertCheck"
                   },
                   "passed": [
@@ -2314,7 +2313,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Seele_BonusInsertAction"
                   },
                   "passed": [
@@ -2337,7 +2335,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Seele_BonusInsertAction"
                   },
                   "passed": [
@@ -2378,7 +2375,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "Seele_BonusInsertAction"
                   },
                   "passed": [

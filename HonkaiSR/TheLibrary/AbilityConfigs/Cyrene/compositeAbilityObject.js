@@ -6293,7 +6293,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "ActionTag_Windfury"
                   },
                   "passed": [
@@ -6323,7 +6322,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "ActionTag_Windfury"
                   },
                   "passed": [
@@ -6850,7 +6848,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneGivenMydeimos"
                   },
                   "passed": [
@@ -6883,7 +6880,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneGivenMydeimos"
                   },
                   "passed": [
@@ -7221,7 +7217,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneServant_Ability01_PlayerExtra"
                   },
                   "passed": [
@@ -7240,7 +7235,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneServant_Ability01_PlayerExtra"
                   },
                   "passed": [
@@ -8839,7 +8833,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneServant_Ability01_Eidolon1"
                   },
                   "passed": [
@@ -8858,7 +8851,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "CyreneServant_Ability01_Eidolon1"
                   },
                   "passed": [

@@ -1486,7 +1486,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "EnergyTrigger_ElationAbility"
               },
               "passed": [
@@ -1607,7 +1606,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "EnergyTrigger_ElationAbility"
               },
               "passed": [

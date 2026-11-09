@@ -299,7 +299,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "SilverWolf999_Eidolon2"
                   },
                   "passed": [
@@ -318,7 +317,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "SilverWolf999_Eidolon2"
                   },
                   "passed": [
@@ -1846,7 +1844,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "SilverWolf999_Ability11Succession"
                   },
                   "passed": [

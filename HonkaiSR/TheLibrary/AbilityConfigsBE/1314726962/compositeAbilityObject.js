@@ -2445,7 +2445,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "FantasticStory_BaseAbility_2210"
                   },
                   "passed": [
@@ -2465,7 +2464,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "FantasticStory_BaseAbility_2210"
                   },
                   "passed": [

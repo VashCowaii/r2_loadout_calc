@@ -2500,7 +2500,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "YaoGuang_Ability03_Part02"
                   },
                   "passed": [
@@ -2520,7 +2519,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "YaoGuang_Ability03_Part02"
                   },
                   "passed": [
@@ -2541,7 +2539,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "YaoGuang_Ability03_Part02"
                   },
                   "passed": [
@@ -2561,7 +2558,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "YaoGuang_Ability03_Part02"
                   },
                   "passed": [

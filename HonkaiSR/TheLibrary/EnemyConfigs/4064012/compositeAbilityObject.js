@@ -792,7 +792,6 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "Monster_W4_Serpent_01_IF_SpecialLimboInsert",
                         "invertCondition": true
                       }

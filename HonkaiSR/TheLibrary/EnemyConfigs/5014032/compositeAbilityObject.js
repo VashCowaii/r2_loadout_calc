@@ -700,7 +700,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "partOf": {
+                    "compareTarget": {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     }
@@ -1902,7 +1902,6 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Parameter String",
-                        "compareType": "=",
                         "value2": "HimekoNova_PointB2"
                       },
                       {

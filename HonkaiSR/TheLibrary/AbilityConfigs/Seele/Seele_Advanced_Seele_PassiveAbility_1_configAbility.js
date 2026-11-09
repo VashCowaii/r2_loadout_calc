@@ -675,7 +675,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Seele_BonusInsertAction"
               },
               "passed": [
@@ -698,7 +697,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Seele_BonusInsertAction"
               },
               "passed": [
@@ -739,7 +737,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Seele_BonusInsertAction"
               },
               "passed": [

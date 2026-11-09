@@ -170,7 +170,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Advanced_Seele_Ability02InsertCheck"
               },
               "passed": [

@@ -742,7 +742,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "RuanMei_TriggerImprintEffect",
                     "invertCondition": true
                   },
@@ -956,7 +955,6 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Parameter String",
-                    "compareType": "=",
                     "value2": "RuanMei_TriggerImprintEffect",
                     "invertCondition": true
                   },

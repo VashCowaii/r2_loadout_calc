@@ -783,7 +783,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "Monster_W4_Claymore_02_Ability042_Part01"
               },
               "passed": [

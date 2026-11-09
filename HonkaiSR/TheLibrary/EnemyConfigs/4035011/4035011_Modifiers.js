@@ -666,7 +666,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "partOf": {
+                        "compareTarget": {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
                         }
@@ -2190,7 +2190,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "partOf": {
+                        "compareTarget": {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
                         }

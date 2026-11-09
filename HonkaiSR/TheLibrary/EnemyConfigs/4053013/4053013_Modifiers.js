@@ -19,7 +19,6 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Parameter String",
-                "compareType": "=",
                 "value2": "AvatarChange_W2_Mecha02_02_PassiveAbility_Insert"
               },
               "passed": [
