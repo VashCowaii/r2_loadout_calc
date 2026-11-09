@@ -1238,9 +1238,7 @@ const compositeAbilityObject = {
                       {
                         "name": "AND",
                         "conditionList": [
-                          {
-                            "name": "Is Extra-Turn"
-                          },
+                          "Is Extra-Turn",
                           {
                             "name": "Compare: Variable",
                             "value1": "Seele_BonusInsertAction",
@@ -1314,9 +1312,7 @@ const compositeAbilityObject = {
                       {
                         "name": "AND",
                         "conditionList": [
-                          {
-                            "name": "Is Extra-Turn"
-                          },
+                          "Is Extra-Turn",
                           {
                             "name": "Compare: Variable",
                             "value1": "Seele_BonusInsertAction",
@@ -1415,7 +1411,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       "passed": [
                         {
@@ -1467,9 +1463,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Is Extra-Turn"
-                      },
+                      "Is Extra-Turn",
                       {
                         "name": "Compare: Variable",
                         "value1": "Seele_BonusInsertAction",
@@ -2158,9 +2152,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Extra-Turn"
-              },
+              "conditions": "Is Extra-Turn",
               "passed": [
                 {
                   "name": "IF",

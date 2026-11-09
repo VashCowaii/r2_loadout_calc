@@ -57,7 +57,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   "Technique Modifies Current Wave",
                   {
@@ -122,7 +122,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -180,7 +180,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },

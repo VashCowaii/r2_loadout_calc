@@ -936,7 +936,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "includeNonTargets": true
+            "includeUnselectable": true
           },
           "passed": [
             {
@@ -1259,7 +1259,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "includeNonTargets": true
+                                "includeUnselectable": true
                               },
                               {
                                 "name": "Has Flag",
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           "passed": [
                             {
@@ -1499,7 +1499,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "includeNonTargets": true
+                                "includeUnselectable": true
                               },
                               {
                                 "name": "Has Flag",
@@ -1754,7 +1754,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           "passed": [
                             {
@@ -1834,7 +1834,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
-                                "includeNonTargets": true
+                                "includeUnselectable": true
                               },
                               {
                                 "name": "Has Flag",

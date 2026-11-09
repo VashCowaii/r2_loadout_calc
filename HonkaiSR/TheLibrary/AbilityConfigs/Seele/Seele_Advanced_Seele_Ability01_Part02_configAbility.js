@@ -73,9 +73,7 @@ const configAbility = {
       "passed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Extra-Turn"
-          },
+          "conditions": "Is Extra-Turn",
           "passed": [
             {
               "name": "IF",

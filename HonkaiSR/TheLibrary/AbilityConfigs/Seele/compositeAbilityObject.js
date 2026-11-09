@@ -2198,7 +2198,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       "passed": [
                         {
@@ -2943,9 +2943,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Extra-Turn"
-              },
+              "conditions": "Is Extra-Turn",
               "passed": [
                 {
                   "name": "IF",

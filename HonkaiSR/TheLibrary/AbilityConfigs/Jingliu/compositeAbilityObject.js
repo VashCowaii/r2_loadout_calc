@@ -1409,7 +1409,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Has Flag",
@@ -1913,7 +1913,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Has Flag",
@@ -2049,7 +2049,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Has Flag",
@@ -2221,7 +2221,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           }
                         ]
                       },
@@ -2421,7 +2421,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Has Flag",

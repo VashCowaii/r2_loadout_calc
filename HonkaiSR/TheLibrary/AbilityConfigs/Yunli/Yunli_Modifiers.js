@@ -725,7 +725,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   {
                     "name": "Living State",
@@ -797,7 +797,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   {
                     "name": "Living State",

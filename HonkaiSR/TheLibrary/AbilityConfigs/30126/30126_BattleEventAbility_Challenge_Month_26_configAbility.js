@@ -131,7 +131,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   {
                     "name": "Compare: Variable",
@@ -403,7 +403,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   {
                     "name": "Compare: Variable",

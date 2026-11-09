@@ -2822,9 +2822,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Is Extra-Turn"
-                      },
+                      "Is Extra-Turn",
                       {
                         "name": "Compare: Target",
                         "target": {

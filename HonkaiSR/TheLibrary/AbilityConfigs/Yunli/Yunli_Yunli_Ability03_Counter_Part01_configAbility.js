@@ -388,7 +388,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "includeNonTargets": true
+            "includeUnselectable": true
           },
           "passed": [
             {

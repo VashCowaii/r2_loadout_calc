@@ -1337,8 +1337,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "invertCondition": true,
-                        "includeNonTargets": true
+                        "includeUnselectable": true,
+                        "invertCondition": true
                       }
                     ]
                   },

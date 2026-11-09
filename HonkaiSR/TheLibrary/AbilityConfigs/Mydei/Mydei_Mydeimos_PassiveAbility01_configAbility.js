@@ -374,7 +374,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -423,7 +423,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -581,7 +581,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -630,7 +630,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -679,7 +679,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },
@@ -798,7 +798,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   }
                 ]
               },

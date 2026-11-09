@@ -128,9 +128,7 @@ const configAbility = {
                   {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Is Extra-Turn"
-                      },
+                      "Is Extra-Turn",
                       {
                         "name": "Compare: Variable",
                         "value1": "Seele_BonusInsertAction",
@@ -204,9 +202,7 @@ const configAbility = {
                   {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Is Extra-Turn"
-                      },
+                      "Is Extra-Turn",
                       {
                         "name": "Compare: Variable",
                         "value1": "Seele_BonusInsertAction",
@@ -305,7 +301,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "includeNonTargets": true
+                    "includeUnselectable": true
                   },
                   "passed": [
                     {
@@ -357,9 +353,7 @@ const configAbility = {
               "conditions": {
                 "name": "AND",
                 "conditionList": [
-                  {
-                    "name": "Is Extra-Turn"
-                  },
+                  "Is Extra-Turn",
                   {
                     "name": "Compare: Variable",
                     "value1": "Seele_BonusInsertAction",

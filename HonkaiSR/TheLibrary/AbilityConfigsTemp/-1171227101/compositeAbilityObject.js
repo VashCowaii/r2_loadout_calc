@@ -2097,9 +2097,7 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "OR",
                         "conditionList": [
-                          {
-                            "name": "Is Extra-Turn"
-                          },
+                          "Is Extra-Turn",
                           {
                             "name": "Is Extra-Turn",
                             "actionType": "UltraSkill"

@@ -21,9 +21,7 @@ const configAbility = {
     },
     {
       "name": "WAIT FOR",
-      "conditions": {
-        "name": "Has Queued Ult"
-      }
+      "conditions": "Has Queued Ult"
     },
     {
       "name": "Remove Events/Bonuses",

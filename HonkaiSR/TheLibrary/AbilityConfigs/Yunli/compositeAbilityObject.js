@@ -754,7 +754,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Living State",
@@ -826,7 +826,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       {
                         "name": "Living State",
@@ -1972,7 +1972,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       }
                     ]
                   },
@@ -2031,7 +2031,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       }
                     ]
                   },
@@ -2090,7 +2090,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       }
                     ]
                   },
@@ -2319,7 +2319,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "includeNonTargets": true
+                "includeUnselectable": true
               },
               {
                 "name": "Compare: Variable",
@@ -3052,8 +3052,8 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "invertCondition": true,
-                    "includeNonTargets": true
+                    "includeUnselectable": true,
+                    "invertCondition": true
                   },
                   {
                     "name": "Compare: Variable",
@@ -3853,7 +3853,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "includeNonTargets": true
+                "includeUnselectable": true
               },
               "passed": [
                 {

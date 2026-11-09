@@ -397,7 +397,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           {
                             "name": "Has Flag",
@@ -527,7 +527,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       "passed": [
                         {
@@ -718,7 +718,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       "passed": [
                         {
@@ -793,7 +793,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           {
                             "name": "Has Flag",

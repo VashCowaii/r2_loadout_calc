@@ -2439,7 +2439,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "includeNonTargets": true
+                        "includeUnselectable": true
                       },
                       "abilityName": "Mar_7th_10_Ready_Special",
                       "abilitySource": {
@@ -2520,7 +2520,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           "abilityName": "Mar_7th_10_Ready_Special",
                           "abilitySource": {
@@ -2640,7 +2640,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "includeNonTargets": true
+                            "includeUnselectable": true
                           },
                           "abilityName": "Mar_7th_10_Ready_Special",
                           "abilitySource": {
