@@ -435,7 +435,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "canDelay": true,
-                  "ToughnessDMGType": "Damage Type Source"
+                  "ToughnessDMGType": "Null Type"
                 },
                 {
                   "name": "Deal Toughness DMG",

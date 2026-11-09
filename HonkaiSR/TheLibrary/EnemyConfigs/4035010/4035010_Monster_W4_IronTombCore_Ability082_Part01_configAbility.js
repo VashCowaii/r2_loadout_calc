@@ -67,7 +67,7 @@ const configAbility = {
       },
       "forceReduction": true,
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source",
+      "ToughnessDMGType": "Null Type",
       "bypassBreakMute": true
     }
   ],

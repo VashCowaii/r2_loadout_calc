@@ -1288,7 +1288,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source",
+                      "ToughnessDMGType": "Null Type",
                       "bypassBreakMute": true
                     }
                   ]
@@ -10755,7 +10755,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "canDelay": true,
-              "ToughnessDMGType": "Damage Type Source",
+              "ToughnessDMGType": "Null Type",
               "bypassBreakMute": true
             }
           ],
@@ -10775,7 +10775,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "canDelay": true,
-              "ToughnessDMGType": "Damage Type Source",
+              "ToughnessDMGType": "Null Type",
               "bypassBreakMute": true
             }
           ]

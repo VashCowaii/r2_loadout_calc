@@ -66,7 +66,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "AttackScaling": {
-        "DamageType": "Damage Type Source",
+        "DamageType": "Null Type",
         "DamageFlat": {
           "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
           "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -92,7 +92,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "AttackScaling": {
-        "DamageType": "Damage Type Source",
+        "DamageType": "Null Type",
         "DamageFlat": {
           "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
           "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -118,7 +118,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "AttackScaling": {
-        "DamageType": "Damage Type Source",
+        "DamageType": "Null Type",
         "DamageFlat": {
           "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
           "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -144,7 +144,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "AttackScaling": {
-        "DamageType": "Damage Type Source",
+        "DamageType": "Null Type",
         "DamageFlat": {
           "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
           "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -170,7 +170,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "AttackScaling": {
-        "DamageType": "Damage Type Source",
+        "DamageType": "Null Type",
         "DamageFlat": {
           "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
           "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -259,7 +259,7 @@ const configAbility = {
             ]
           },
           "AttackScaling": {
-            "DamageType": "Damage Type Source",
+            "DamageType": "Null Type",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",
@@ -294,7 +294,7 @@ const configAbility = {
             "target": "{{ST and Blast}}"
           },
           "AttackScaling": {
-            "DamageType": "Damage Type Source",
+            "DamageType": "Null Type",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",

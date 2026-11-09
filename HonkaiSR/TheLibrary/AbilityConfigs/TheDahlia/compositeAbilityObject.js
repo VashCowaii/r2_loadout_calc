@@ -3120,7 +3120,7 @@ const compositeAbilityObject = {
                       "ignoreAttackerBonuses": true,
                       "canDelay": true,
                       "livingState": "Mask_AliveOrLimbo",
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     },
                     {
                       "name": "Add Events/Bonuses",

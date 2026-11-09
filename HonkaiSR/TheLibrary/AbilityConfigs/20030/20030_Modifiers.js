@@ -1367,7 +1367,7 @@ const configAbility = {
                   },
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
-                  "ToughnessDMGType": "Damage Type Source"
+                  "ToughnessDMGType": "Null Type"
                 },
                 {
                   "name": "Remove Events/Bonuses",

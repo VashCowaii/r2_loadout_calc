@@ -277,7 +277,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "ToughnessDMGType": "Damage Type Source",
+      "ToughnessDMGType": "Null Type",
       "bypassBreakMute": true
     },
     {

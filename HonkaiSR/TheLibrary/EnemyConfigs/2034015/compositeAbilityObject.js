@@ -641,7 +641,7 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": "Damage Type Source"
+              "ToughnessDMGType": "Null Type"
             },
             {
               "name": "IF",

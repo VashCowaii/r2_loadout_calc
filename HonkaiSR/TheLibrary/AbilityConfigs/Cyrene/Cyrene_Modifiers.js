@@ -871,7 +871,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": "Damage Type Source",
+                        "DamageType": "Null Type",
                         "DamageFlat": {
                           "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",
@@ -1059,7 +1059,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": "Damage Type Source",
+                        "DamageType": "Null Type",
                         "DamageFlat": {
                           "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",

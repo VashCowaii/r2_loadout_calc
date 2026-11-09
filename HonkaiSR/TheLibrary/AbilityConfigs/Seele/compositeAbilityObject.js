@@ -107,7 +107,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "DamageFlat": {
                       "operator": "Variables[0] (MDF_Eidolon6_DamageValue) || RETURN",
                       "displayLines": "MDF_Eidolon6_DamageValue",

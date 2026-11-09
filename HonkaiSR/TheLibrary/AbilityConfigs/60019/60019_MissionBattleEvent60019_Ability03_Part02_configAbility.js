@@ -93,7 +93,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -128,7 +128,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "ATK Scaling DMG",
@@ -191,7 +191,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -226,7 +226,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "ATK Scaling DMG",
@@ -289,7 +289,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -324,7 +324,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "ATK Scaling DMG",
@@ -387,7 +387,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -422,7 +422,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "ATK Scaling DMG",
@@ -485,7 +485,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -520,7 +520,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "ATK Scaling DMG",
@@ -583,7 +583,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Deal Toughness DMG",
@@ -618,7 +618,7 @@ const configAbility = {
         ]
       },
       "canDelay": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     "Trigger: Attack End",
     {

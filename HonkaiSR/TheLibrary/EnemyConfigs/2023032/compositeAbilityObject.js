@@ -2652,7 +2652,7 @@ const compositeAbilityObject = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": "Damage Type Source",
+                        "DamageType": "Null Type",
                         "Damage": {
                           "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
                           "displayLines": "MDF_DamageRatio",
@@ -2704,7 +2704,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source",
+                          "ToughnessDMGType": "Null Type",
                           "bypassBreakMute": true
                         }
                       ],
@@ -2729,7 +2729,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source"
+                          "ToughnessDMGType": "Null Type"
                         }
                       ]
                     }

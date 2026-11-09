@@ -1178,7 +1178,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
                   "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
@@ -1236,7 +1236,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
                   "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
@@ -3472,7 +3472,7 @@ const compositeAbilityObject = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] ({[Skill05[0]]}) || Variables[1] (_TargetMaxHp) || MUL || RETURN",
                   "displayLines": "({[Skill05[0]]} * _TargetMaxHp)",

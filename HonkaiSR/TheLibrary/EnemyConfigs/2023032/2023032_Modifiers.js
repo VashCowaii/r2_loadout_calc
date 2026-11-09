@@ -2632,7 +2632,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "Damage": {
                       "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
                       "displayLines": "MDF_DamageRatio",
@@ -2684,7 +2684,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source",
+                      "ToughnessDMGType": "Null Type",
                       "bypassBreakMute": true
                     }
                   ],
@@ -2709,7 +2709,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     }
                   ]
                 }

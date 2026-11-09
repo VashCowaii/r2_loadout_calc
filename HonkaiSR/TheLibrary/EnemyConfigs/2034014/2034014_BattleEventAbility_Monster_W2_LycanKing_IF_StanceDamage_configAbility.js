@@ -47,7 +47,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "forceReduction": true,
-      "ToughnessDMGType": "Damage Type Source"
+      "ToughnessDMGType": "Null Type"
     },
     {
       "name": "Looped Event",

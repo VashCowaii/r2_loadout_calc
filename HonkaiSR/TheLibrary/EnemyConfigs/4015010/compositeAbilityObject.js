@@ -3756,7 +3756,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source"
+                          "ToughnessDMGType": "Null Type"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -3784,7 +3784,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source"
+                          "ToughnessDMGType": "Null Type"
                         }
                       ]
                     }
@@ -4086,7 +4086,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source"
+                          "ToughnessDMGType": "Null Type"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -4114,7 +4114,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Damage Type Source"
+                          "ToughnessDMGType": "Null Type"
                         }
                       ]
                     }

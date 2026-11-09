@@ -1528,7 +1528,7 @@ const configAbility = {
                     ]
                   },
                   "forceReduction": true,
-                  "ToughnessDMGType": "Damage Type Source"
+                  "ToughnessDMGType": "Null Type"
                 }
               ]
             }

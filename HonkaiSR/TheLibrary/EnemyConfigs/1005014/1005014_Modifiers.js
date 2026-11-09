@@ -2373,7 +2373,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "canDelay": true,
-                  "ToughnessDMGType": "Damage Type Source",
+                  "ToughnessDMGType": "Null Type",
                   "bypassBreakMute": true
                 },
                 {

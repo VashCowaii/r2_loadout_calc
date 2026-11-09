@@ -7263,7 +7263,7 @@ const compositeAbilityObject = {
                         "target": "{{Summoner of Parameter Target}}"
                       },
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     }
                   ]
                 },

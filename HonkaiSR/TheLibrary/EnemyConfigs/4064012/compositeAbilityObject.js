@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
                       },
                       "ignoreAttackerBonuses": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source",
+                      "ToughnessDMGType": "Null Type",
                       "bypassBreakMute": true
                     },
                     {
@@ -1168,7 +1168,7 @@ const compositeAbilityObject = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": "Damage Type Source",
+                        "DamageType": "Null Type",
                         "Damage": {
                           "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                           "displayLines": "MDF_DamagePercentage",
@@ -1774,7 +1774,7 @@ const compositeAbilityObject = {
                       },
                       "ignoreAttackerBonuses": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source",
+                      "ToughnessDMGType": "Null Type",
                       "bypassBreakMute": true
                     },
                     {
@@ -3150,7 +3150,7 @@ const compositeAbilityObject = {
                       },
                       "ignoreAttackerBonuses": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3357,7 +3357,7 @@ const compositeAbilityObject = {
           },
           "ignoreAttackerBonuses": true,
           "canDelay": true,
-          "ToughnessDMGType": "Damage Type Source",
+          "ToughnessDMGType": "Null Type",
           "bypassBreakMute": true
         },
         {

@@ -436,7 +436,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Summoner}}"
           },
           "canDelay": true,
-          "ToughnessDMGType": "Damage Type Source",
+          "ToughnessDMGType": "Null Type",
           "bypassBreakMute": true
         },
         {

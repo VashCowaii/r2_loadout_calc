@@ -101,7 +101,7 @@ const compositeAbilityObject = {
                               "name": "Deal Toughness DMG",
                               "value": 60,
                               "forceReduction": true,
-                              "ToughnessDMGType": "Damage Type Source"
+                              "ToughnessDMGType": "Null Type"
                             },
                             {
                               "name": "IF",

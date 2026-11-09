@@ -37,7 +37,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -80,7 +80,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -130,7 +130,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -173,7 +173,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -216,7 +216,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": "Damage Type Source",
+                "DamageType": "Null Type",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",

@@ -444,7 +444,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "canDelay": true,
-                  "ToughnessDMGType": "Damage Type Source"
+                  "ToughnessDMGType": "Null Type"
                 },
                 {
                   "name": "Deal Toughness DMG",
@@ -5004,7 +5004,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source",
+                      "ToughnessDMGType": "Null Type",
                       "bypassBreakMute": true
                     },
                     {

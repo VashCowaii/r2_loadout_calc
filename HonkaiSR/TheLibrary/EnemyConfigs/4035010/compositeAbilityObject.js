@@ -3757,7 +3757,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "ToughnessDMGType": "Damage Type Source",
+          "ToughnessDMGType": "Null Type",
           "bypassBreakMute": true
         },
         {
@@ -5230,7 +5230,7 @@ const compositeAbilityObject = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Damage Type Source",
+          "ToughnessDMGType": "Null Type",
           "bypassBreakMute": true
         }
       ],
@@ -6006,7 +6006,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "ToughnessDMGType": "Damage Type Source",
+              "ToughnessDMGType": "Null Type",
               "bypassBreakMute": true
             },
             {

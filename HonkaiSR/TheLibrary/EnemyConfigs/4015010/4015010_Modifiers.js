@@ -3708,7 +3708,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3736,7 +3736,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     }
                   ]
                 }
@@ -4038,7 +4038,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4066,7 +4066,7 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Damage Type Source"
+                      "ToughnessDMGType": "Null Type"
                     }
                   ]
                 }

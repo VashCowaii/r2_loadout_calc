@@ -341,7 +341,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "Damage": {
                       "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
                       "displayLines": "{[Skill03[3]]}",
@@ -644,7 +644,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "DamageFlat": {
                       "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.3) || MUL || RETURN",
                       "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)",
@@ -675,7 +675,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "DamageFlat": {
                       "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.3) || MUL || RETURN",
                       "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.3)",
@@ -706,7 +706,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "DamageFlat": {
                       "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || Constants[0] (0.4) || MUL || RETURN",
                       "displayLines": "((Target_MaxHP * Skill07_P3_ToMonsterHpPercentage) * 0.4)",
@@ -739,7 +739,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": "Damage Type Source",
+                    "DamageType": "Null Type",
                     "DamageFlat": {
                       "operator": "Variables[0] (Target_MaxHP) || Variables[1] (Skill07_P3_ToMonsterHpPercentage) || MUL || RETURN",
                       "displayLines": "(Target_MaxHP * Skill07_P3_ToMonsterHpPercentage)",
