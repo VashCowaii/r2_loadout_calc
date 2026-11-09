@@ -90,7 +90,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": {
                       "name": "Damage Type Source",
-                      "sourceTarget": "ReadTargetType",
+                      "sourceType": "ReadTargetType",
                       "readTarget": {
                         "name": "Target Name",
                         "target": "{{Marth 7th's Shifu}}"

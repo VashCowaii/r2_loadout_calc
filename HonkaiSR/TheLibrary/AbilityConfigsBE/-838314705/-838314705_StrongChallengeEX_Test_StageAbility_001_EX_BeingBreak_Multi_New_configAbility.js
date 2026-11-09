@@ -350,7 +350,7 @@ const configAbility = {
               "canDelay": true,
               "ToughnessDMGType": {
                 "name": "Damage Type Source",
-                "sourceTarget": "ReadTargetType",
+                "sourceType": "ReadTargetType",
                 "readTarget": {
                   "name": "Target Name",
                   "target": "{{Caster}}"

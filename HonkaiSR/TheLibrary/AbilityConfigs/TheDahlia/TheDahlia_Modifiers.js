@@ -509,7 +509,7 @@ const configAbility = {
                   "name": "SWITCH",
                   "source": {
                     "name": "Damage Type Source",
-                    "sourceTarget": "ReadTargetType",
+                    "sourceType": "ReadTargetType",
                     "readTarget": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"

@@ -831,7 +831,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": {
                               "name": "Damage Type Source",
-                              "sourceTarget": "ReadTargetType",
+                              "sourceType": "ReadTargetType",
                               "readTarget": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
@@ -909,7 +909,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": {
                                   "name": "Damage Type Source",
-                                  "sourceTarget": "ReadTargetType",
+                                  "sourceType": "ReadTargetType",
                                   "readTarget": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"

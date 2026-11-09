@@ -436,7 +436,7 @@ const compositeAbilityObject = {
                   "name": "SWITCH",
                   "source": {
                     "name": "Damage Type Source",
-                    "sourceTarget": "ReadTargetType",
+                    "sourceType": "ReadTargetType",
                     "readTarget": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -745,7 +745,7 @@ const compositeAbilityObject = {
                         },
                         "DamageType": {
                           "name": "Damage Type Source",
-                          "sourceTarget": "ReadTargetType",
+                          "sourceType": "ReadTargetType",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
                           "canDelay": true,
                           "ToughnessDMGType": {
                             "name": "Damage Type Source",
-                            "sourceTarget": "ReadTargetType",
+                            "sourceType": "ReadTargetType",
                             "readTarget": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
@@ -824,7 +824,7 @@ const compositeAbilityObject = {
                           "canDelay": true,
                           "ToughnessDMGType": {
                             "name": "Damage Type Source",
-                            "sourceTarget": "ReadTargetType",
+                            "sourceType": "ReadTargetType",
                             "readTarget": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"

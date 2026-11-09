@@ -211,7 +211,7 @@ const configAbility = {
             },
             {
               "name": "Copy Weaknesses",
-              "sourceTarget": {
+              "sourceType": {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
