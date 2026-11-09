@@ -427,7 +427,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterID": "1506 (Silver Wolf LV.<unbreak>999</unbreak>)"
+                "characterID": "1506 (Silver Wolf LV.999)"
               }
             }
           ]

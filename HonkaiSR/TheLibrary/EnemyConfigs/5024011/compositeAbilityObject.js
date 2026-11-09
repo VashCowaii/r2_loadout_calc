@@ -460,7 +460,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterID": "8009 ({NICKNAME})"
+                            "characterID": "8009 (Trailblazer - Elation[M])"
                           },
                           "ifTargetFound": [
                             {
@@ -604,7 +604,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterID": "8009 ({NICKNAME})"
+                        "characterID": "8009 (Trailblazer - Elation[M])"
                       },
                       {
                         "name": "Character ID",
@@ -676,7 +676,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterID": "8009 ({NICKNAME})"
+                            "characterID": "8009 (Trailblazer - Elation[M])"
                           },
                           {
                             "name": "Character ID",
@@ -835,7 +835,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterID": "8009 ({NICKNAME})"
+                            "characterID": "8009 (Trailblazer - Elation[M])"
                           },
                           {
                             "name": "Character ID",
@@ -981,7 +981,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterID": "8009 ({NICKNAME})"
+                            "characterID": "8009 (Trailblazer - Elation[M])"
                           },
                           {
                             "name": "Character ID",
@@ -5116,7 +5116,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterID": "8009 ({NICKNAME})"
+                            "characterID": "8009 (Trailblazer - Elation[M])"
                           },
                           {
                             "name": "Character ID",
