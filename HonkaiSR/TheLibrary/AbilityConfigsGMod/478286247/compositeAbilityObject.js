@@ -95,8 +95,12 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || RETURN",
                         "displayLines": "BattleEventAbility_Challenge_Month_21_Count",
                         "constants": [],
@@ -104,14 +108,17 @@ const compositeAbilityObject = {
                           "BattleEventAbility_Challenge_Month_21_Count"
                         ]
                       },
-                      "on": null,
                       "show": true
                     }
                   ],
                   "failed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
                         "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
@@ -119,7 +126,6 @@ const compositeAbilityObject = {
                           "BattleEvent_P1_ADF"
                         ]
                       },
-                      "on": null,
                       "show": true
                     },
                     {
@@ -196,8 +202,12 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || RETURN",
                         "displayLines": "BattleEventAbility_Challenge_Month_21_Count",
                         "constants": [],
@@ -205,14 +215,17 @@ const compositeAbilityObject = {
                           "BattleEventAbility_Challenge_Month_21_Count"
                         ]
                       },
-                      "on": null,
                       "show": true
                     }
                   ],
                   "failed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
                         "displayLines": "BattleEvent_P1_ADF",
                         "constants": [],
@@ -220,7 +233,6 @@ const compositeAbilityObject = {
                           "BattleEvent_P1_ADF"
                         ]
                       },
-                      "on": null,
                       "show": true
                     },
                     {

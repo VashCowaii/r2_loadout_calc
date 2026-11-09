@@ -6,9 +6,12 @@ const configAbility = {
   "parse": [],
   "whenAdded": [
     {
-      "name": "Show Attack Time",
-      "time": 0,
-      "on": null,
+      "name": "Show Attack Count",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "attackCount": 0,
       "show": true
     },
     {
@@ -266,9 +269,12 @@ const configAbility = {
                   "value": 0
                 },
                 {
-                  "name": "Show Attack Time",
-                  "time": 0,
-                  "on": null,
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "attackCount": 0,
                   "show": true
                 }
               ]
@@ -373,8 +379,12 @@ const configAbility = {
               ]
             },
             {
-              "name": "Show Attack Time",
-              "time": {
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "attackCount": {
                 "operator": "Variables[0] (BattleEventAbility_Challenge_Month_24_Count) || RETURN",
                 "displayLines": "BattleEventAbility_Challenge_Month_24_Count",
                 "constants": [],
@@ -382,7 +392,6 @@ const configAbility = {
                   "BattleEventAbility_Challenge_Month_24_Count"
                 ]
               },
-              "on": null,
               "show": true
             }
           ]

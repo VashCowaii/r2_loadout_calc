@@ -633,8 +633,12 @@ const configAbility = {
               }
             },
             {
-              "name": "Show Attack Time",
-              "time": {
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "attackCount": {
                 "operator": "Variables[0] (_AttackTime) || RETURN",
                 "displayLines": "_AttackTime",
                 "constants": [],
@@ -642,7 +646,6 @@ const configAbility = {
                   "_AttackTime"
                 ]
               },
-              "on": null,
               "show": true
             },
             {
@@ -707,8 +710,12 @@ const configAbility = {
               }
             },
             {
-              "name": "Show Attack Time",
-              "time": {
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "attackCount": {
                 "operator": "Variables[0] (_AttackTime) || RETURN",
                 "displayLines": "_AttackTime",
                 "constants": [],
@@ -716,7 +723,6 @@ const configAbility = {
                   "_AttackTime"
                 ]
               },
-              "on": null,
               "show": true
             }
           ]

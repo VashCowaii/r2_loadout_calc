@@ -842,8 +842,12 @@ const configAbility = {
                   }
                 },
                 {
-                  "name": "Show Attack Time",
-                  "time": {
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Souldragon}}"
+                  },
+                  "attackCount": {
                     "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
                     "displayLines": "DanHengPT_Passive_Count",
                     "constants": [],
@@ -851,7 +855,6 @@ const configAbility = {
                       "DanHengPT_Passive_Count"
                     ]
                   },
-                  "on": null,
                   "show": true
                 },
                 {
@@ -887,10 +890,12 @@ const configAbility = {
                     },
                     "Modifier Deletes Itself",
                     {
-                      "name": "Show Attack Time",
-                      "time": 0,
-                      "on": null,
-                      "show": false
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Souldragon}}"
+                      },
+                      "attackCount": 0
                     }
                   ]
                 }

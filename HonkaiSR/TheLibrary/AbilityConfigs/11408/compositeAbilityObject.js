@@ -2510,8 +2510,12 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Show Attack Time",
-          "time": {
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "attackCount": {
             "operator": "Variables[0] (BE_Count) || Variables[1] (BE_Index) || SUB || Constants[0] (1) || SUB || RETURN",
             "displayLines": "((BE_Count - BE_Index) - 1)",
             "constants": [
@@ -2522,7 +2526,6 @@ const compositeAbilityObject = {
               "BE_Index"
             ]
           },
-          "on": null,
           "show": true
         },
         {

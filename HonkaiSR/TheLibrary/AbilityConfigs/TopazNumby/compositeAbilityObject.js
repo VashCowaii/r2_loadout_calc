@@ -2158,8 +2158,12 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
-              "name": "Show Attack Time",
-              "enhanced": {
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
+              "attackCountEnhanced": {
                 "operator": "Variables[0] (CurEnhance) || RETURN",
                 "displayLines": "CurEnhance",
                 "constants": [],
@@ -2167,7 +2171,6 @@ const compositeAbilityObject = {
                   "CurEnhance"
                 ]
               },
-              "on": null,
               "show": true
             },
             {
@@ -2191,9 +2194,11 @@ const compositeAbilityObject = {
           ],
           "failed": [
             {
-              "name": "Show Attack Time",
-              "on": null,
-              "show": false
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              }
             },
             {
               "name": "Remove Events/Bonuses",
@@ -3521,8 +3526,12 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Show Attack Time",
-          "enhanced": {
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
+          "attackCountEnhanced": {
             "operator": "Variables[0] (MaxEnhance) || RETURN",
             "displayLines": "MaxEnhance",
             "constants": [],
@@ -3530,7 +3539,6 @@ const compositeAbilityObject = {
               "MaxEnhance"
             ]
           },
-          "on": null,
           "show": true
         },
         {
@@ -3981,8 +3989,12 @@ const compositeAbilityObject = {
               },
               "passed": [
                 {
-                  "name": "Show Attack Time",
-                  "enhanced": {
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
+                  "attackCountEnhanced": {
                     "operator": "Variables[0] (CurEnhance) || RETURN",
                     "displayLines": "CurEnhance",
                     "constants": [],
@@ -3990,7 +4002,6 @@ const compositeAbilityObject = {
                       "CurEnhance"
                     ]
                   },
-                  "on": null,
                   "show": true
                 },
                 {
@@ -4014,9 +4025,11 @@ const compositeAbilityObject = {
               ],
               "failed": [
                 {
-                  "name": "Show Attack Time",
-                  "on": null,
-                  "show": false
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  }
                 },
                 {
                   "name": "Remove Events/Bonuses",

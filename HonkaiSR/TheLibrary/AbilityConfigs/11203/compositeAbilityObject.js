@@ -341,9 +341,11 @@ const compositeAbilityObject = {
                       "ignoreDeathTriggers": true
                     },
                     {
-                      "name": "Show Attack Time",
-                      "on": null,
-                      "show": false
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     }
                   ]
                 }

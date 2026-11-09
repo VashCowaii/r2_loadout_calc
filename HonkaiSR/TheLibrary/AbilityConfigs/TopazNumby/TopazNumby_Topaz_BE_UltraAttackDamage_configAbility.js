@@ -263,8 +263,12 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Show Attack Time",
-          "enhanced": {
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
+          "attackCountEnhanced": {
             "operator": "Variables[0] (CurEnhance) || RETURN",
             "displayLines": "CurEnhance",
             "constants": [],
@@ -272,7 +276,6 @@ const configAbility = {
               "CurEnhance"
             ]
           },
-          "on": null,
           "show": true
         },
         {
@@ -296,9 +299,11 @@ const configAbility = {
       ],
       "failed": [
         {
-          "name": "Show Attack Time",
-          "on": null,
-          "show": false
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          }
         },
         {
           "name": "Remove Events/Bonuses",

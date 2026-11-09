@@ -148,8 +148,12 @@ const configAbility = {
       },
       "ifTargetFound": [
         {
-          "name": "Show Attack Time",
-          "time": {
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Souldragon}}"
+          },
+          "attackCount": {
             "operator": "Variables[0] (DanHengPT_Passive_Count) || RETURN",
             "displayLines": "DanHengPT_Passive_Count",
             "constants": [],
@@ -157,7 +161,6 @@ const configAbility = {
               "DanHengPT_Passive_Count"
             ]
           },
-          "on": null,
           "show": true
         }
       ]

@@ -101,8 +101,12 @@ const configAbility = {
       }
     },
     {
-      "name": "Show Attack Time",
-      "enhanced": {
+      "name": "Show Attack Count",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
+      "attackCountEnhanced": {
         "operator": "Variables[0] (MaxEnhance) || RETURN",
         "displayLines": "MaxEnhance",
         "constants": [],
@@ -110,7 +114,6 @@ const configAbility = {
           "MaxEnhance"
         ]
       },
-      "on": null,
       "show": true
     },
     {

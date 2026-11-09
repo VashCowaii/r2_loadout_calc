@@ -88,9 +88,12 @@ const configAbility = {
       }
     },
     {
-      "name": "Show Attack Time",
-      "time": 0,
-      "on": null,
+      "name": "Show Attack Count",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "attackCount": 0,
       "show": true
     }
   ],
@@ -330,9 +333,12 @@ const configAbility = {
                   "value": 0
                 },
                 {
-                  "name": "Show Attack Time",
-                  "time": 0,
-                  "on": null,
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "attackCount": 0,
                   "show": true
                 }
               ]
@@ -428,8 +434,12 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (MDF_Count) || RETURN",
                         "displayLines": "MDF_Count",
                         "constants": [],
@@ -437,14 +447,17 @@ const configAbility = {
                           "MDF_Count"
                         ]
                       },
-                      "on": null,
                       "show": true
                     }
                   ],
                   "failed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
                         "displayLines": "BattleEvent_P5_ADF",
                         "constants": [],
@@ -452,7 +465,6 @@ const configAbility = {
                           "BattleEvent_P5_ADF"
                         ]
                       },
-                      "on": null,
                       "show": true
                     },
                     {
@@ -553,8 +565,12 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (MDF_Count) || RETURN",
                         "displayLines": "MDF_Count",
                         "constants": [],
@@ -562,14 +578,17 @@ const configAbility = {
                           "MDF_Count"
                         ]
                       },
-                      "on": null,
                       "show": true
                     }
                   ],
                   "failed": [
                     {
-                      "name": "Show Attack Time",
-                      "time": {
+                      "name": "Show Attack Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "attackCount": {
                         "operator": "Variables[0] (BattleEvent_P5_ADF) || RETURN",
                         "displayLines": "BattleEvent_P5_ADF",
                         "constants": [],
@@ -577,7 +596,6 @@ const configAbility = {
                           "BattleEvent_P5_ADF"
                         ]
                       },
-                      "on": null,
                       "show": true
                     },
                     {

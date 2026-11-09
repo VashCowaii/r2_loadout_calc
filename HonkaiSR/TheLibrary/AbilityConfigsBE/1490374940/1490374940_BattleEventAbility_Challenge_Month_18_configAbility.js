@@ -12,9 +12,12 @@ const configAbility = {
       "variables": null,
       "whenCreated": [
         {
-          "name": "Show Attack Time",
-          "time": 0,
-          "on": null,
+          "name": "Show Attack Count",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "attackCount": 0,
           "show": true
         },
         {
@@ -526,9 +529,12 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1785729743\">Modifier_BattleEventAbility_Challenge_Month_18_Sub</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]"
             },
             {
-              "name": "Show Attack Time",
-              "time": 0,
-              "on": null,
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Monthly Challenge Battle Event}}"
+              },
+              "attackCount": 0,
               "show": true
             }
           ]
@@ -588,8 +594,12 @@ const configAbility = {
                   "multiplier": 1
                 },
                 {
-                  "name": "Show Attack Time",
-                  "time": {
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Monthly Challenge Battle Event}}"
+                  },
+                  "attackCount": {
                     "operator": "Variables[0] (CurrentLayer) || RETURN",
                     "displayLines": "CurrentLayer",
                     "constants": [],
@@ -597,7 +607,6 @@ const configAbility = {
                       "CurrentLayer"
                     ]
                   },
-                  "on": null,
                   "show": true
                 }
               ]

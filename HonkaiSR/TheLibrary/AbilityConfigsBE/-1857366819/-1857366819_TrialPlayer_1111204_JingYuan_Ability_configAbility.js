@@ -106,9 +106,13 @@ const configAbility = {
               "cooldown": 0
             },
             {
-              "name": "Show Attack Time",
-              "time": 10,
-              "on": null,
+              "name": "Show Attack Count",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Self-Made Battle-Events}}"
+              },
+              "attackCount": 10,
+              "attackCountEnhanced": 0,
               "show": true
             },
             {

@@ -113,8 +113,12 @@ const configAbility = {
                   "cooldown": 0
                 },
                 {
-                  "name": "Show Attack Time",
-                  "time": {
+                  "name": "Show Attack Count",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Jing Yuan: Lightning Lord}}"
+                  },
+                  "attackCount": {
                     "operator": "Variables[0] (EnergyBar_ATKCount) || RETURN",
                     "displayLines": "EnergyBar_ATKCount",
                     "constants": [],
@@ -122,7 +126,7 @@ const configAbility = {
                       "EnergyBar_ATKCount"
                     ]
                   },
-                  "enhanced": {
+                  "attackCountEnhanced": {
                     "operator": "Variables[0] (EnergyBar_UltraATKCount) || RETURN",
                     "displayLines": "EnergyBar_UltraATKCount",
                     "constants": [],
@@ -130,7 +134,6 @@ const configAbility = {
                       "EnergyBar_UltraATKCount"
                     ]
                   },
-                  "on": null,
                   "show": true
                 },
                 {
