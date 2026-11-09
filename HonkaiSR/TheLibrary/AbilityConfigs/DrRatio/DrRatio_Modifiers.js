@@ -21,7 +21,7 @@ const configAbility = {
           "name": "Set Target Parameter",
           "readTarget": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
@@ -42,7 +42,7 @@ const configAbility = {
               "TargetList": [
                 {
                   "name": "Add Target by Summoned Units",
-                  "target": {
+                  "targetSummoner": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },

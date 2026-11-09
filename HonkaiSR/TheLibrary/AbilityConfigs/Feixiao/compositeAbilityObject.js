@@ -112,7 +112,7 @@ const compositeAbilityObject = {
               "name": "Set Target Parameter",
               "readTarget": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
@@ -133,7 +133,7 @@ const compositeAbilityObject = {
                   "TargetList": [
                     {
                       "name": "Add Target by Summoned Units",
-                      "target": {
+                      "targetSummoner": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
@@ -167,7 +167,7 @@ const compositeAbilityObject = {
                   "TargetList": [
                     {
                       "name": "Add Target by Summoned Units",
-                      "target": {
+                      "targetSummoner": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
@@ -228,7 +228,7 @@ const compositeAbilityObject = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
@@ -256,7 +256,7 @@ const compositeAbilityObject = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
@@ -1774,7 +1774,7 @@ const compositeAbilityObject = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },

@@ -36,7 +36,7 @@ const configAbility = {
           "name": "Remove Overworld Entity",
           "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Adventure Player}}"
             },
@@ -53,7 +53,7 @@ const configAbility = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
@@ -68,7 +68,7 @@ const configAbility = {
           "name": "Remove Overworld Entity",
           "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Adventure Player}}"
             },
@@ -134,7 +134,7 @@ const configAbility = {
           "name": "Remove Overworld Entity",
           "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },

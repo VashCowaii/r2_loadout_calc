@@ -89,7 +89,7 @@ const compositeAbilityObject = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
@@ -102,7 +102,7 @@ const compositeAbilityObject = {
               "name": "Remove Overworld Entity",
               "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
-                "target": {
+                "targetSummoner": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },

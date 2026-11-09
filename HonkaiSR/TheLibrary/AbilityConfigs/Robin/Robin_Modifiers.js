@@ -18,7 +18,7 @@ const configAbility = {
           "name": "Set Target Parameter",
           "readTarget": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
@@ -39,7 +39,7 @@ const configAbility = {
               "TargetList": [
                 {
                   "name": "Add Target by Summoned Units",
-                  "target": {
+                  "targetSummoner": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
@@ -94,7 +94,7 @@ const configAbility = {
           "name": "Remove Overworld Entity",
           "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
-            "target": {
+            "targetSummoner": {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },

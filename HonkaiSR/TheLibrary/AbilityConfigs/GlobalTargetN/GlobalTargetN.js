@@ -9198,7 +9198,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Modifier Holder}}"
             },
-            "Adjust Target by Part Number"
+            "Adjust Target by Part Sub-Targets"
           ]
         }
       ]
