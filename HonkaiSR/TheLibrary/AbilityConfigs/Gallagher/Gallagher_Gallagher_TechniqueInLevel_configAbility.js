@@ -14,12 +14,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Random Value",
-      "variableName": "Effect_Random_Key",
-      "values": [
+      "valuesList": [
         1,
         2,
         3
-      ]
+      ],
+      "variableName": "Effect_Random_Key"
     },
     {
       "name": "Add Events/Bonuses",

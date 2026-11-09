@@ -207,7 +207,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "trait": "TP_Origin_Tag"
+                        "traitName": "TP_Origin_Tag"
                       },
                       "ifTargetFound": [
                         {
@@ -238,7 +238,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "trait": "TP_Origin_Tag"
+                        "traitName": "TP_Origin_Tag"
                       },
                       "ifTargetFound": [
                         {
@@ -269,7 +269,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "trait": "TP_Origin_Tag"
+                        "traitName": "TP_Origin_Tag"
                       },
                       "ifTargetFound": [
                         {
@@ -350,7 +350,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "trait": "TP_Origin_Tag"
+                "traitName": "TP_Origin_Tag"
               },
               "ifTargetFound": [
                 {
@@ -406,7 +406,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "trait": "TP_Origin_Tag"
+                "traitName": "TP_Origin_Tag"
               },
               "ifTargetFound": [
                 {
@@ -465,7 +465,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "trait": "TP_Origin_Tag"
+                "traitName": "TP_Origin_Tag"
               },
               "ifTargetFound": [
                 {

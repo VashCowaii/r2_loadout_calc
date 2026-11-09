@@ -34,9 +34,7 @@ const compositeAbilityObject = {
                     },
                     "team": "Enemy Team"
                   },
-                  {
-                    "name": "Infinite Enemy Waves Remain"
-                  }
+                  "Infinite Enemy Waves Remain"
                 ]
               },
               "passed": [
@@ -94,9 +92,7 @@ const compositeAbilityObject = {
                     },
                     "team": "Enemy Team"
                   },
-                  {
-                    "name": "Infinite Enemy Waves Remain"
-                  }
+                  "Infinite Enemy Waves Remain"
                 ]
               },
               "passed": [

@@ -26,9 +26,7 @@ const configAbility = {
                 },
                 "team": "Enemy Team"
               },
-              {
-                "name": "Infinite Enemy Waves Remain"
-              }
+              "Infinite Enemy Waves Remain"
             ]
           },
           "passed": [
@@ -86,9 +84,7 @@ const configAbility = {
                 },
                 "team": "Enemy Team"
               },
-              {
-                "name": "Infinite Enemy Waves Remain"
-              }
+              "Infinite Enemy Waves Remain"
             ]
           },
           "passed": [

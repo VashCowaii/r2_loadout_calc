@@ -675,9 +675,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "AND",
             "conditionList": [
-              {
-                "name": "Infinite Enemy Waves Remain"
-              }
+              "Infinite Enemy Waves Remain"
             ]
           },
           "execute": [
