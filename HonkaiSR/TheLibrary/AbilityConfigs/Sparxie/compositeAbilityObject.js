@@ -282,8 +282,8 @@ const compositeAbilityObject = {
               "enteringRange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "_CurrentEP"
+                  "variableName": "_CurrentEP",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -357,8 +357,8 @@ const compositeAbilityObject = {
               "onChange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "_CurrentEP"
+                  "variableName": "_CurrentEP",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -616,8 +616,8 @@ const compositeAbilityObject = {
               "enteringRange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "_CurrentEP"
+                  "variableName": "_CurrentEP",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -691,8 +691,8 @@ const compositeAbilityObject = {
               "onChange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "_CurrentEP"
+                  "variableName": "_CurrentEP",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",

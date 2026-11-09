@@ -1893,8 +1893,8 @@ const compositeAbilityObject = {
               "onChange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "Elation_CurrentPoint"
+                  "variableName": "Elation_CurrentPoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",
@@ -2112,8 +2112,8 @@ const compositeAbilityObject = {
               "onChange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
-                  "variableName": "Elation_CurrentPoint"
+                  "variableName": "Elation_CurrentPoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;"
                 },
                 {
                   "name": "IF",
