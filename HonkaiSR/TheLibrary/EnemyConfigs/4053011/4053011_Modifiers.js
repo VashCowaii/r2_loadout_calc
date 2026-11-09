@@ -1076,15 +1076,13 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260130,
                         "compareType": ">=",
-                        "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                        "stageID": "4260130 (Synergy Duo: Bloodbound Dark Duelist)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260136,
                         "compareType": "<=",
-                        "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                        "stageID": "4260136 (Synergy Duo: Bloodbound Dark Duelist)"
                       }
                     ]
                   },

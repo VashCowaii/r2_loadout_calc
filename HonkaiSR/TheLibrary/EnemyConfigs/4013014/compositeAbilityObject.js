@@ -331,15 +331,13 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 4260100,
                             "compareType": ">=",
-                            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                            "stageID": "4260100 (Synergy Duo: Bloodbound Dark Duelist)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260106,
                             "compareType": "<=",
-                            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                            "stageID": "4260106 (Synergy Duo: Bloodbound Dark Duelist)"
                           }
                         ]
                       },
@@ -505,15 +503,13 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260120,
                         "compareType": ">=",
-                        "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                        "stageID": "4260120 (Synergy Duo: Bloodbound Dark Duelist)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260126,
                         "compareType": "<=",
-                        "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+                        "stageID": "4260126 (Synergy Duo: Bloodbound Dark Duelist)"
                       }
                     ]
                   },
@@ -1469,15 +1465,13 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260010,
                             "compareType": ">=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260016,
                             "compareType": "<=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
                           }
                         ]
                       },
@@ -1527,15 +1521,13 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260010,
                             "compareType": ">=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260016,
                             "compareType": "<=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
                           }
                         ]
                       },
@@ -1583,15 +1575,13 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260010,
                             "compareType": ">=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260016,
                             "compareType": "<=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
                           }
                         ]
                       },
@@ -1639,15 +1629,13 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260010,
                             "compareType": ">=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260016,
                             "compareType": "<=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
                           }
                         ]
                       },
@@ -2405,15 +2393,13 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 4260010,
                             "compareType": ">=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260016,
                             "compareType": "<=",
-                            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                            "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
                           }
                         ]
                       },
@@ -5590,9 +5576,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 426005,
             "compareType": "=",
-            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+            "stageID": "426005 (Greatsword Guardian: Vanguard Wallbreaker)"
           },
           "passed": [
             {
@@ -5702,27 +5687,23 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260010,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260010 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260011,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260011 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260040,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260040 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260041,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260041 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -5808,15 +5789,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260012,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260012 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260042,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260042 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -5902,15 +5881,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260013,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260013 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260043,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260043 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -5996,15 +5973,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260014,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260014 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260044,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260044 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -6090,15 +6065,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260015,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260015 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260045,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260045 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -6184,15 +6157,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260016,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260016 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260046,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260046 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },

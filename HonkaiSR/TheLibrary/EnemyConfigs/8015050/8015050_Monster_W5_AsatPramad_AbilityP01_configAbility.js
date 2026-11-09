@@ -173,15 +173,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 2350,
             "compareType": "<=",
-            "characterName": null
+            "stageID": 2350
           },
           {
             "name": "Stage ID",
-            "ID": 2344,
             "compareType": ">=",
-            "characterName": null
+            "stageID": 2344
           }
         ]
       },
@@ -212,9 +210,8 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Stage ID",
-                "ID": 2350,
                 "compareType": "=",
-                "characterName": null
+                "stageID": 2350
               },
               "passed": [
                 {
@@ -345,15 +342,13 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Stage ID",
-                    "ID": 2344,
                     "compareType": "NOT=",
-                    "characterName": null
+                    "stageID": 2344
                   },
                   {
                     "name": "Stage ID",
-                    "ID": 2350,
                     "compareType": "NOT=",
-                    "characterName": null
+                    "stageID": 2350
                   }
                 ]
               }

@@ -361,38 +361,38 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 203110050,
-                            "compareType": "="
+                            "compareType": "=",
+                            "stageID": 203110050
                           }
                         ]
                       },

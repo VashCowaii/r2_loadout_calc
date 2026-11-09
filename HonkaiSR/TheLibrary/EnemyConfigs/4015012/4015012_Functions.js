@@ -105,9 +105,8 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 429301,
             "compareType": "=",
-            "characterName": "The Ascended"
+            "stageID": "429301 (The Ascended)"
           },
           "passed": [
             {

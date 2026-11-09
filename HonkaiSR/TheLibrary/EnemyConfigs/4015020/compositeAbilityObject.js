@@ -2951,9 +2951,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 2148,
             "compareType": "=",
-            "characterName": null
+            "stageID": 2148
           },
           "passed": [
             {

@@ -91,9 +91,8 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Stage ID",
-        "ID": 426011,
         "compareType": "=",
-        "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+        "stageID": "426011 (Synergy Duo: Bloodbound Dark Duelist)"
       },
       "passed": [
         {
@@ -165,27 +164,23 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260100,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260100 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260101,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260101 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260120,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260120 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260121,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260121 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -259,15 +254,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260102,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260102 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260122,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260122 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -341,15 +334,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260103,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260103 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260123,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260123 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -423,15 +414,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260104,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260104 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260124,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260124 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -505,15 +494,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260105,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260105 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260125,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260125 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -587,15 +574,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260106,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260106 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260126,
             "compareType": "=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260126 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },
@@ -669,15 +654,13 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Stage ID",
-            "ID": 4260120,
             "compareType": ">=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260120 (Synergy Duo: Bloodbound Dark Duelist)"
           },
           {
             "name": "Stage ID",
-            "ID": 4260126,
             "compareType": "<=",
-            "characterName": "Synergy Duo: Bloodbound Dark Duelist"
+            "stageID": "4260126 (Synergy Duo: Bloodbound Dark Duelist)"
           }
         ]
       },

@@ -198,15 +198,13 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260030,
                 "compareType": ">=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260036,
                 "compareType": "<=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
               }
             ]
           },

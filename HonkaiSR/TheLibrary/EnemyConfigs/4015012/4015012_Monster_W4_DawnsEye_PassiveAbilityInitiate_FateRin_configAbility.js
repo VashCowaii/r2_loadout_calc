@@ -75,9 +75,8 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Stage ID",
-        "ID": 429302,
         "compareType": "NOT=",
-        "characterName": "The Ascended"
+        "stageID": "429302 (The Ascended)"
       },
       "passed": [
         {
@@ -266,9 +265,8 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Stage ID",
-        "ID": 2145,
         "compareType": "=",
-        "characterName": null
+        "stageID": 2145
       },
       "passed": [
         {
@@ -474,9 +472,8 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Stage ID",
-        "ID": 2145,
         "compareType": "=",
-        "characterName": null
+        "stageID": 2145
       },
       "passed": [
         {

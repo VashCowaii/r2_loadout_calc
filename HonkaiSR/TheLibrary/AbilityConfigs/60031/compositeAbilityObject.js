@@ -671,9 +671,8 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Stage ID",
-                "ID": 2294,
                 "compareType": "=",
-                "characterName": null
+                "stageID": 2294
               }
             ]
           },
@@ -1026,9 +1025,8 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Stage ID",
-                "ID": 2294,
                 "compareType": "=",
-                "characterName": null
+                "stageID": 2294
               }
             ]
           }

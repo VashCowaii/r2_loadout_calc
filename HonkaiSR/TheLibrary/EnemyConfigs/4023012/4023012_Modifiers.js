@@ -576,15 +576,13 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260020,
                         "compareType": ">=",
-                        "characterName": "Earthshaker Leo: Solblaze Winged Beast"
+                        "stageID": "4260020 (Earthshaker Leo: Solblaze Winged Beast)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260026,
                         "compareType": "<=",
-                        "characterName": "Earthshaker Leo: Solblaze Winged Beast"
+                        "stageID": "4260026 (Earthshaker Leo: Solblaze Winged Beast)"
                       }
                     ]
                   },

@@ -598,15 +598,13 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 4260020,
                             "compareType": ">=",
-                            "characterName": "Earthshaker Leo: Solblaze Winged Beast"
+                            "stageID": "4260020 (Earthshaker Leo: Solblaze Winged Beast)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260026,
                             "compareType": "<=",
-                            "characterName": "Earthshaker Leo: Solblaze Winged Beast"
+                            "stageID": "4260026 (Earthshaker Leo: Solblaze Winged Beast)"
                           }
                         ]
                       },
@@ -1860,9 +1858,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 426007,
             "compareType": "=",
-            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+            "stageID": "426007 (Greatsword Guardian: Vanguard Wallbreaker)"
           },
           "passed": [
             {
@@ -2268,9 +2265,8 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 426007,
                         "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "426007 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       {
                         "name": "Modifier Was",

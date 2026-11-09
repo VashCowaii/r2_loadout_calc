@@ -551,38 +551,38 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 205110800,
-                        "compareType": "="
+                        "compareType": "=",
+                        "stageID": 205110800
                       }
                     ]
                   }

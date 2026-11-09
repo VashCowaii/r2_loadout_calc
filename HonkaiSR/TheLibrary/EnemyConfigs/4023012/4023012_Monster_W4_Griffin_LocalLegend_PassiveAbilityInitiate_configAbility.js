@@ -93,9 +93,8 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Stage ID",
-        "ID": 426007,
         "compareType": "=",
-        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+        "stageID": "426007 (Greatsword Guardian: Vanguard Wallbreaker)"
       },
       "passed": [
         {
@@ -501,9 +500,8 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Stage ID",
-                    "ID": 426007,
                     "compareType": "=",
-                    "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                    "stageID": "426007 (Greatsword Guardian: Vanguard Wallbreaker)"
                   },
                   {
                     "name": "Modifier Was",

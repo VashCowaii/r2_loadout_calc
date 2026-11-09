@@ -3774,15 +3774,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 2350,
                 "compareType": "<=",
-                "characterName": null
+                "stageID": 2350
               },
               {
                 "name": "Stage ID",
-                "ID": 2344,
                 "compareType": ">=",
-                "characterName": null
+                "stageID": 2344
               }
             ]
           },
@@ -3813,9 +3811,8 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Stage ID",
-                    "ID": 2350,
                     "compareType": "=",
-                    "characterName": null
+                    "stageID": 2350
                   },
                   "passed": [
                     {
@@ -3946,15 +3943,13 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 2344,
                         "compareType": "NOT=",
-                        "characterName": null
+                        "stageID": 2344
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 2350,
                         "compareType": "NOT=",
-                        "characterName": null
+                        "stageID": 2350
                       }
                     ]
                   }

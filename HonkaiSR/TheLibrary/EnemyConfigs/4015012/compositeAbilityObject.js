@@ -5473,9 +5473,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 429302,
             "compareType": "NOT=",
-            "characterName": "The Ascended"
+            "stageID": "429302 (The Ascended)"
           },
           "passed": [
             {
@@ -5664,9 +5663,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 2145,
             "compareType": "=",
-            "characterName": null
+            "stageID": 2145
           },
           "passed": [
             {
@@ -5872,9 +5870,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 2145,
             "compareType": "=",
-            "characterName": null
+            "stageID": 2145
           },
           "passed": [
             {
@@ -10899,9 +10896,8 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Stage ID",
-                "ID": 429301,
                 "compareType": "=",
-                "characterName": "The Ascended"
+                "stageID": "429301 (The Ascended)"
               },
               "passed": [
                 {

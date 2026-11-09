@@ -136,15 +136,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 429205,
                 "compareType": "=",
-                "characterName": "The Ascended"
+                "stageID": "429205 (The Ascended)"
               },
               {
                 "name": "Stage ID",
-                "ID": 429215,
                 "compareType": "=",
-                "characterName": "The Ascended"
+                "stageID": "429215 (The Ascended)"
               }
             ]
           },

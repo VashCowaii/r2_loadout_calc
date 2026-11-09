@@ -165,15 +165,13 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260030,
                         "compareType": ">=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260036,
                         "compareType": "<=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       }
                     ]
                   },
@@ -194,9 +192,8 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Stage ID",
-                    "ID": 426009,
                     "compareType": "=",
-                    "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                    "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
                   },
                   "passed": [
                     {
@@ -319,15 +316,13 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260030,
                         "compareType": ">=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260036,
                         "compareType": "<=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -376,15 +371,13 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260030,
                         "compareType": ">=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260036,
                         "compareType": "<=",
-                        "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                        "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -433,9 +426,8 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 426009,
                         "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -484,9 +476,8 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 426009,
                         "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -535,9 +526,8 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 426009,
                         "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -611,15 +601,13 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 4260030,
                             "compareType": ">=",
-                            "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                            "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260036,
                             "compareType": "<=",
-                            "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                            "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                           }
                         ]
                       },
@@ -648,9 +636,8 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Stage ID",
-                        "ID": 426009,
                         "compareType": "=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       "passed": [
                         {
@@ -860,15 +847,13 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Stage ID",
-                            "ID": 4260030,
                             "compareType": ">=",
-                            "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                            "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                           },
                           {
                             "name": "Stage ID",
-                            "ID": 4260036,
                             "compareType": "<=",
-                            "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                            "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                           }
                         ]
                       },
@@ -989,15 +974,13 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Stage ID",
-                        "ID": 4260080,
                         "compareType": ">=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "4260080 (Greatsword Guardian: Vanguard Wallbreaker)"
                       },
                       {
                         "name": "Stage ID",
-                        "ID": 4260086,
                         "compareType": "<=",
-                        "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                        "stageID": "4260086 (Greatsword Guardian: Vanguard Wallbreaker)"
                       }
                     ]
                   },
@@ -1291,15 +1274,13 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Stage ID",
-                    "ID": 4260030,
                     "compareType": ">=",
-                    "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                    "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
                   },
                   {
                     "name": "Stage ID",
-                    "ID": 4260036,
                     "compareType": "<=",
-                    "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                    "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
                   }
                 ]
               },
@@ -1739,9 +1720,8 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Stage ID",
-            "ID": 426009,
             "compareType": "=",
-            "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+            "stageID": "426009 (Greatsword Guardian: Vanguard Wallbreaker)"
           },
           "passed": [
             {
@@ -1786,27 +1766,23 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260030,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260030 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260031,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260031 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260080,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260080 (Greatsword Guardian: Vanguard Wallbreaker)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260081,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260081 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -1844,15 +1820,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260032,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260032 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260082,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260082 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -1890,15 +1864,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260033,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260033 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260083,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260083 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -1936,15 +1908,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260034,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260034 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260084,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260084 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -1982,15 +1952,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260035,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260035 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260085,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260085 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
@@ -2028,15 +1996,13 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Stage ID",
-                "ID": 4260036,
                 "compareType": "=",
-                "characterName": "Corrupting Shadowfiend: Torrential Rotbringer"
+                "stageID": "4260036 (Corrupting Shadowfiend: Torrential Rotbringer)"
               },
               {
                 "name": "Stage ID",
-                "ID": 4260086,
                 "compareType": "=",
-                "characterName": "Greatsword Guardian: Vanguard Wallbreaker"
+                "stageID": "4260086 (Greatsword Guardian: Vanguard Wallbreaker)"
               }
             ]
           },
