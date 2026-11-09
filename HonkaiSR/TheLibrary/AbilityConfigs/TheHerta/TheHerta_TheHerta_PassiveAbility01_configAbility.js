@@ -2601,8 +2601,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "invertCondition": true,
-                          "expectedType": "Summon"
+                          "expectedType": "Summon",
+                          "invertCondition": true
                         }
                       ]
                     }
@@ -2745,8 +2745,8 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "invertCondition": true,
-                    "expectedType": "Summon"
+                    "expectedType": "Summon",
+                    "invertCondition": true
                   }
                 ]
               },

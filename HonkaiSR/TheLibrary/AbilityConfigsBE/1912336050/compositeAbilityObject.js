@@ -3123,7 +3123,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "type": "Memosprite"
+                      "entityType": "Memosprite"
                     }
                   },
                   "failed": [
@@ -3140,7 +3140,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       "living": true
                     },
@@ -4935,7 +4935,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -5504,7 +5504,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -5687,7 +5687,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           {
                             "name": "Is Entity Type",
@@ -5695,7 +5695,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           }
                         ]
                       },
@@ -5994,7 +5994,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -6092,7 +6092,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -9245,7 +9245,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       }
                     ]
                   },
@@ -14870,7 +14870,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -15058,7 +15058,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -15197,7 +15197,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -15358,7 +15358,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -15497,7 +15497,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -15658,7 +15658,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -15797,7 +15797,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -15958,7 +15958,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -16222,7 +16222,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -16335,7 +16335,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -16607,7 +16607,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -16720,7 +16720,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -16992,7 +16992,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -17105,7 +17105,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Is Part Of Team",
@@ -18243,7 +18243,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
@@ -18872,7 +18872,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       }
                     ]
                   },

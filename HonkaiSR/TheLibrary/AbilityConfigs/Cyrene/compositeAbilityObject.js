@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       }
                     ]
                   },
@@ -1408,7 +1408,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       }
                     ]
                   },
@@ -2223,7 +2223,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Is Part Of Team",

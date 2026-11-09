@@ -1561,7 +1561,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Battle Event",
+                        "entityType": "Battle Event",
                         "invertCondition": true
                       },
                       {

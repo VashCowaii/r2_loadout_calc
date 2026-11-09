@@ -185,7 +185,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Is Part Of",
@@ -227,7 +227,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Is Part Of",

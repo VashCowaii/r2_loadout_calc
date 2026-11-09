@@ -145,7 +145,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -241,7 +241,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "ifTargetFound": [
                     {
@@ -370,7 +370,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -410,7 +410,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -452,7 +452,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -492,7 +492,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -532,7 +532,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -572,7 +572,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -693,7 +693,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character",
+                "entityType": "Character",
                 "livingState": "Mask_AliveOnly"
               },
               {
@@ -807,7 +807,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "type": "Character",
+            "entityType": "Character",
             "livingState": "Mask_AliveOnly"
           },
           "ifTargetFound": [

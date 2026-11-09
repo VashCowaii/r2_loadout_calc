@@ -422,7 +422,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               },
               "passed": [
                 {

@@ -405,7 +405,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
-                "type": "Team Characters"
+                "entityType": "Team Characters"
               }
             }
           ],
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
-                "type": "Team Characters"
+                "entityType": "Team Characters"
               }
             },
             "Deleted bullshit"

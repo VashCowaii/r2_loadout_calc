@@ -2007,7 +2007,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   {
                     "name": "Compare: Target",
@@ -2864,7 +2864,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite",
+                    "entityType": "Memosprite",
                     "invertCondition": true
                   },
                   "passed": [
@@ -2971,7 +2971,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           "failed": [
                             {

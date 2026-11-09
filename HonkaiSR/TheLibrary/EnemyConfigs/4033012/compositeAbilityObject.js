@@ -350,7 +350,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -407,7 +407,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -458,7 +458,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -509,7 +509,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -553,7 +553,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -597,7 +597,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },

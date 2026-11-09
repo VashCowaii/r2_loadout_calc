@@ -2010,7 +2010,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "passed": [
                     {
@@ -2032,7 +2032,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   },
                   "passed": [
                     {
@@ -2183,7 +2183,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "passed": [
                     {
@@ -2253,7 +2253,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   },
                   "passed": [
                     {
@@ -2618,7 +2618,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },

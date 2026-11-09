@@ -3083,7 +3083,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           {
                             "name": "Has Modifier",
@@ -3105,7 +3105,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           {
                             "name": "Has Modifier",
@@ -3127,7 +3127,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Battle Event"
+                            "entityType": "Battle Event"
                           },
                           {
                             "name": "Battle Event ID",
@@ -3158,7 +3158,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Enemy"
+                            "entityType": "Enemy"
                           },
                           {
                             "name": "Has Modifier",
@@ -3204,7 +3204,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           {
                             "name": "Has Modifier",
@@ -3225,7 +3225,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           {
                             "name": "Has Modifier",
@@ -3246,7 +3246,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Battle Event"
+                            "entityType": "Battle Event"
                           },
                           {
                             "name": "Battle Event ID",
@@ -3276,7 +3276,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Enemy"
+                            "entityType": "Enemy"
                           },
                           {
                             "name": "Has Modifier",

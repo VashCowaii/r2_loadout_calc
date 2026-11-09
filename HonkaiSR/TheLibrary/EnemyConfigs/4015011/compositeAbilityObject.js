@@ -1024,7 +1024,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite",
+                    "entityType": "Memosprite",
                     "invertCondition": true
                   },
                   "passed": [
@@ -9113,7 +9113,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "type": "Character",
+                      "entityType": "Character",
                       "livingState": "Anyone"
                     }
                   }

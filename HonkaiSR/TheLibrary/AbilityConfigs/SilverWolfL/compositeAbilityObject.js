@@ -752,7 +752,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Battle Event",
+                        "entityType": "Battle Event",
                         "invertCondition": true
                       }
                     ]
@@ -5669,7 +5669,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
-            "type": "Team Characters"
+            "entityType": "Team Characters"
           }
         }
       ],
@@ -6095,7 +6095,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
-            "type": "Team Characters"
+            "entityType": "Team Characters"
           }
         }
       ],
@@ -8204,7 +8204,7 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Death Animation Completed",
                 "team": "Enemy Team",
-                "type": "Team Characters"
+                "entityType": "Team Characters"
               }
             }
           ]
@@ -9360,7 +9360,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Death Animation Completed",
                     "team": "Enemy Team",
-                    "type": "Team Characters"
+                    "entityType": "Team Characters"
                   }
                 }
               ],

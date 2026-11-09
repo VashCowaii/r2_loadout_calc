@@ -1280,7 +1280,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           {
                             "name": "Target is Unselectable",
@@ -1330,7 +1330,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "type": "Memosprite"
+                                    "entityType": "Memosprite"
                                   },
                                   {
                                     "name": "Is Entity Type",
@@ -1338,7 +1338,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}.[[getCreator]]"
                                     },
-                                    "type": "Character"
+                                    "entityType": "Character"
                                   },
                                   {
                                     "name": "Target is Unselectable",
@@ -1363,7 +1363,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}"
                                     },
-                                    "type": "Battle Event"
+                                    "entityType": "Battle Event"
                                   },
                                   {
                                     "name": "Is Entity Type",
@@ -1371,7 +1371,7 @@ const compositeAbilityObject = {
                                       "name": "Target Name",
                                       "target": "{{Parameter Target}}.[[getCreator]]"
                                     },
-                                    "type": "Character"
+                                    "entityType": "Character"
                                   },
                                   {
                                     "name": "Target is Unselectable",

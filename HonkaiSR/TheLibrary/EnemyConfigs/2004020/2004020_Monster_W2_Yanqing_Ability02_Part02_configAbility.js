@@ -67,7 +67,7 @@ const configAbility = {
       "conditions": {
         "name": "Death Animation Completed",
         "team": "Enemy Team",
-        "type": "Team Characters"
+        "entityType": "Team Characters"
       }
     },
     {

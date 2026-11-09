@@ -542,8 +542,8 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "invertCondition": true,
-                "expectedType": "Memosprite[Battle Event]"
+                "expectedType": "Memosprite[Battle Event]",
+                "invertCondition": true
               }
             }
           ]
@@ -561,9 +561,9 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite",
-                "invertCondition": true,
-                "livingState": "Anyone"
+                "entityType": "Memosprite",
+                "livingState": "Anyone",
+                "invertCondition": true
               }
             }
           ]
@@ -596,7 +596,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 }
               ]
@@ -774,9 +774,9 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Battle Event",
-                    "invertCondition": true,
-                    "livingState": "Anyone"
+                    "entityType": "Battle Event",
+                    "livingState": "Anyone",
+                    "invertCondition": true
                   },
                   {
                     "name": "Compare: Target",
@@ -873,9 +873,9 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Battle Event",
-                "invertCondition": true,
-                "livingState": "Anyone"
+                "entityType": "Battle Event",
+                "livingState": "Anyone",
+                "invertCondition": true
               }
             }
           ]
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ],
                 "invertCondition": true

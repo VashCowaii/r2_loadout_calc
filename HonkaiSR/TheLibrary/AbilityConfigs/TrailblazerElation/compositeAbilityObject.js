@@ -1283,7 +1283,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Player's Aim Primary-Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           }
                         }
                       ],

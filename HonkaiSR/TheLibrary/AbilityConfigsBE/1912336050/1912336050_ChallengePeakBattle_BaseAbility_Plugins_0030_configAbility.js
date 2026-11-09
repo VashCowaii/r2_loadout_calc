@@ -177,7 +177,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "type": "Memosprite"
+                  "entityType": "Memosprite"
                 }
               },
               "failed": [
@@ -194,7 +194,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   "living": true
                 },

@@ -1646,7 +1646,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           "passed": [
                             {
@@ -2990,7 +2990,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           {
                             "name": "Is Entity a Battle Event/Summon",
@@ -3398,7 +3398,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}.[[getSummoner]]"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           }
                         ]
                       }

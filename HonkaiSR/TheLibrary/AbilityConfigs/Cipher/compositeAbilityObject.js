@@ -952,7 +952,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Character",
+                            "entityType": "Character",
                             "livingState": "Mask_NotDestroyed"
                           },
                           {
@@ -961,7 +961,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           {
                             "name": "Is Entity Type",
@@ -969,7 +969,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}.[[getSourceCreator]]"
                             },
-                            "type": "Character",
+                            "entityType": "Character",
                             "livingState": "Mask_NotDestroyed"
                           },
                           {
@@ -978,7 +978,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}.[[getSourceCreator]]"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           }
                         ]
                       },
@@ -3520,7 +3520,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}"
                             },
-                            "type": "Character",
+                            "entityType": "Character",
                             "livingState": "Mask_NotDestroyed"
                           },
                           {
@@ -3529,7 +3529,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           {
                             "name": "Is Entity Type",
@@ -3537,7 +3537,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                             },
-                            "type": "Character",
+                            "entityType": "Character",
                             "livingState": "Mask_NotDestroyed"
                           },
                           {
@@ -3546,7 +3546,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}.[[getSourceCreator]]"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           }
                         ]
                       },

@@ -71,7 +71,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -106,7 +106,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -141,7 +141,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -176,7 +176,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -219,7 +219,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },

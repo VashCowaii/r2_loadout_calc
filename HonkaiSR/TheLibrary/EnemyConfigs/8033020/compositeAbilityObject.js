@@ -323,7 +323,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Enemy"
+                        "entityType": "Enemy"
                       },
                       {
                         "name": "Compare: Target List Entities",

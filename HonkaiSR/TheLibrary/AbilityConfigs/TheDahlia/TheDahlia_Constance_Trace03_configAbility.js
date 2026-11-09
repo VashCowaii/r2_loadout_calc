@@ -103,7 +103,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "type": "Character"
+              "entityType": "Character"
             }
           ]
         }
@@ -169,7 +169,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   },
                   {
@@ -201,7 +201,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -248,7 +248,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "type": "Battle Event"
+                "entityType": "Battle Event"
               },
               "passed": [
                 {
@@ -337,7 +337,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -403,7 +403,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -552,7 +552,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "type": "Battle Event"
+                "entityType": "Battle Event"
               },
               "passed": [
                 {
@@ -610,7 +610,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "type": "Battle Event"
+                "entityType": "Battle Event"
               },
               "passed": [
                 {
@@ -690,7 +690,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   },
                   {

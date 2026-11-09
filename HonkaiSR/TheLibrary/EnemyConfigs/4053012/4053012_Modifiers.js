@@ -1117,7 +1117,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   },
                   "failed": [
                     {
@@ -1201,7 +1201,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   },
                   "failed": [
                     {
@@ -1863,7 +1863,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Enemy"
+                            "entityType": "Enemy"
                           },
                           "passed": [
                             {
@@ -2084,7 +2084,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   }
                 }
               ]

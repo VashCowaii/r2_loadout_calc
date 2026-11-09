@@ -85,7 +85,7 @@ const configAbility = {
                         }
                       ]
                     },
-                    "type": "Memosprite",
+                    "entityType": "Memosprite",
                     "invertCondition": true
                   }
                 ]
@@ -151,7 +151,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite",
+                "entityType": "Memosprite",
                 "invertCondition": true
               },
               "passed": [

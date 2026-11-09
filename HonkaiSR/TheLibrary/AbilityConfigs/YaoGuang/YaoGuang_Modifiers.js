@@ -20,9 +20,7 @@ const configAbility = {
             "target": "{{Parameter Target List}}"
           },
           "includeDyingTargets": true,
-          "conditions": {
-            "name": "Is Entity Type"
-          }
+          "conditions": "Is Entity Type"
         }
       ]
     },

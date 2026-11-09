@@ -82,7 +82,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   {
                     "name": "Compare: Target",
@@ -243,7 +243,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   {
                     "name": "Is Part Of Team",

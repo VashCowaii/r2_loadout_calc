@@ -2292,7 +2292,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Enemy"
+                        "entityType": "Enemy"
                       },
                       "failed": [
                         {
@@ -2376,7 +2376,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Enemy"
+                        "entityType": "Enemy"
                       },
                       "failed": [
                         {
@@ -3038,7 +3038,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "type": "Enemy"
+                                "entityType": "Enemy"
                               },
                               "passed": [
                                 {
@@ -3259,7 +3259,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Enemy"
+                        "entityType": "Enemy"
                       }
                     }
                   ]

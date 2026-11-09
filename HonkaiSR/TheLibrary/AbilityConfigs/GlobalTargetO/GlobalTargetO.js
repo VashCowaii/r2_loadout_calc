@@ -534,8 +534,8 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "invertCondition": true,
-            "expectedType": "Memosprite[Battle Event]"
+            "expectedType": "Memosprite[Battle Event]",
+            "invertCondition": true
           }
         }
       ]
@@ -553,9 +553,9 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "type": "Memosprite",
-            "invertCondition": true,
-            "livingState": "Anyone"
+            "entityType": "Memosprite",
+            "livingState": "Anyone",
+            "invertCondition": true
           }
         }
       ]
@@ -588,7 +588,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               }
             }
           ]
@@ -766,9 +766,9 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Battle Event",
-                "invertCondition": true,
-                "livingState": "Anyone"
+                "entityType": "Battle Event",
+                "livingState": "Anyone",
+                "invertCondition": true
               },
               {
                 "name": "Compare: Target",
@@ -865,9 +865,9 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "type": "Battle Event",
-            "invertCondition": true,
-            "livingState": "Anyone"
+            "entityType": "Battle Event",
+            "livingState": "Anyone",
+            "invertCondition": true
           }
         }
       ]
@@ -899,7 +899,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               }
             ],
             "invertCondition": true

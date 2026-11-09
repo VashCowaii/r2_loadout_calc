@@ -641,7 +641,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   "passed": [
                     {
@@ -665,7 +665,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "passed": [
                     {

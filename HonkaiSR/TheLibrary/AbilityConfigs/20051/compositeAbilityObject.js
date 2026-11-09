@@ -2032,7 +2032,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2128,7 +2128,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       "ifTargetFound": [
                         {
@@ -2257,7 +2257,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2297,7 +2297,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2339,7 +2339,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2379,7 +2379,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2419,7 +2419,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2459,7 +2459,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -2580,7 +2580,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character",
+                    "entityType": "Character",
                     "livingState": "Mask_AliveOnly"
                   },
                   {
@@ -2694,7 +2694,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character",
+                "entityType": "Character",
                 "livingState": "Mask_AliveOnly"
               },
               "ifTargetFound": [

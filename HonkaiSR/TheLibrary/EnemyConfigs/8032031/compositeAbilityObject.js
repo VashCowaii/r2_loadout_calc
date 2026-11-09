@@ -1227,7 +1227,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Memosprite",
+                            "entityType": "Memosprite",
                             "invertCondition": true
                           },
                           {
@@ -1269,7 +1269,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Memosprite",
+                            "entityType": "Memosprite",
                             "invertCondition": true
                           }
                         ]
@@ -1480,7 +1480,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Memosprite",
+                        "entityType": "Memosprite",
                         "invertCondition": true
                       }
                     ]
@@ -3742,7 +3742,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "type": "Memosprite"
+                            "entityType": "Memosprite"
                           },
                           "passed": [
                             {

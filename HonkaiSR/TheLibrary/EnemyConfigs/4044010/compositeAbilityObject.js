@@ -1728,9 +1728,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character",
-                        "invertCondition": true,
-                        "livingState": "Mask_AliveOnly"
+                        "entityType": "Character",
+                        "livingState": "Mask_AliveOnly",
+                        "invertCondition": true
                       },
                       {
                         "name": "Has Modifier",
@@ -1990,7 +1990,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Death Animation Completed",
             "team": "Enemy Team",
-            "type": "Team Characters"
+            "entityType": "Team Characters"
           }
         },
         {

@@ -131,7 +131,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   {
                     "name": "Trace Activated",
@@ -230,7 +230,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -303,7 +303,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -349,7 +349,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Trace Activated",

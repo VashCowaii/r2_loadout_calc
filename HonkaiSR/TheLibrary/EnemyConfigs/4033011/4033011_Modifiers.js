@@ -328,7 +328,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -385,7 +385,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -436,7 +436,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -487,7 +487,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -531,7 +531,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -575,7 +575,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },

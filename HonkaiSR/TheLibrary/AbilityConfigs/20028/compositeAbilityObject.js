@@ -1701,9 +1701,9 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character",
-                        "invertCondition": true,
-                        "livingState": "Mask_AliveOnly"
+                        "entityType": "Character",
+                        "livingState": "Mask_AliveOnly",
+                        "invertCondition": true
                       },
                       {
                         "name": "Has Modifier",

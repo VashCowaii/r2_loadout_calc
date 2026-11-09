@@ -916,7 +916,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "type": "Character"
+                  "entityType": "Character"
                 }
               ]
             }
@@ -982,7 +982,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Battle Event",
+                        "entityType": "Battle Event",
                         "invertCondition": true
                       },
                       {
@@ -1014,7 +1014,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           }
                         ]
                       },
@@ -1061,7 +1061,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Battle Event"
+                    "entityType": "Battle Event"
                   },
                   "passed": [
                     {
@@ -1150,7 +1150,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -1216,7 +1216,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       }
                     ]
                   },
@@ -1365,7 +1365,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Battle Event"
+                    "entityType": "Battle Event"
                   },
                   "passed": [
                     {
@@ -1423,7 +1423,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Battle Event"
+                    "entityType": "Battle Event"
                   },
                   "passed": [
                     {
@@ -1503,7 +1503,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Battle Event",
+                        "entityType": "Battle Event",
                         "invertCondition": true
                       },
                       {

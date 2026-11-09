@@ -1660,7 +1660,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   {
                     "name": "Is Part Of Team",

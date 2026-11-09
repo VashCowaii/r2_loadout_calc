@@ -881,7 +881,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   {
                     "name": "Is Entity Type",
@@ -889,7 +889,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   }
                 ]
               },
@@ -1122,7 +1122,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   {
                     "name": "Is Entity Type",
@@ -1130,7 +1130,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Enemy"
+                    "entityType": "Enemy"
                   }
                 ]
               },
@@ -1337,7 +1337,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "type": "Character"
+                "entityType": "Character"
               },
               "passed": [
                 {
@@ -1442,7 +1442,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Stage ID",
@@ -1500,7 +1500,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Stage ID",
@@ -1556,7 +1556,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Stage ID",
@@ -1612,7 +1612,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Stage ID",
@@ -2205,7 +2205,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               },
               "passed": [
                 {
@@ -2508,7 +2508,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               },
               "passed": [
                 {

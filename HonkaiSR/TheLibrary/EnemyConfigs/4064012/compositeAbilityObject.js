@@ -5268,7 +5268,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Has Modifier",
@@ -5895,7 +5895,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "type": "Memosprite"
+            "entityType": "Memosprite"
           }
         },
         {
@@ -5956,7 +5956,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "type": "Memosprite"
+            "entityType": "Memosprite"
           },
           "passed": [
             {

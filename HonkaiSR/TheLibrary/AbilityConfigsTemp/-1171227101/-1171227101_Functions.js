@@ -146,8 +146,8 @@ const configAbility = {
           "name": "WAIT FOR",
           "conditions": {
             "name": "Group has Dying Target",
-            "entityType": "Team Characters",
             "team": "Enemy Team",
+            "entityType": "Team Characters",
             "invertCondition": true
           }
         },

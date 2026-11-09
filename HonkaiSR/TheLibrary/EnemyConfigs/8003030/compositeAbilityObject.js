@@ -1834,7 +1834,7 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Death Animation Completed",
             "team": "Player Team",
-            "type": "Team Characters"
+            "entityType": "Team Characters"
           }
         }
       ],

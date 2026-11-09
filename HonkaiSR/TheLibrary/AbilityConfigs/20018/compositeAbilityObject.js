@@ -2018,7 +2018,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character"
+                        "entityType": "Character"
                       },
                       {
                         "name": "Compare: Target",
@@ -2875,7 +2875,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "type": "Memosprite",
+                        "entityType": "Memosprite",
                         "invertCondition": true
                       },
                       "passed": [
@@ -2982,7 +2982,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "type": "Memosprite"
+                                "entityType": "Memosprite"
                               },
                               "failed": [
                                 {
@@ -3805,7 +3805,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               },
               "passed": [
                 {

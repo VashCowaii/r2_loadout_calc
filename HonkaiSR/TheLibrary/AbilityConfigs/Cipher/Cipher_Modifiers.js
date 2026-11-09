@@ -927,7 +927,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Character",
+                        "entityType": "Character",
                         "livingState": "Mask_NotDestroyed"
                       },
                       {
@@ -936,7 +936,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Is Entity Type",
@@ -944,7 +944,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}.[[getSourceCreator]]"
                         },
-                        "type": "Character",
+                        "entityType": "Character",
                         "livingState": "Mask_NotDestroyed"
                       },
                       {
@@ -953,7 +953,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}.[[getSourceCreator]]"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       }
                     ]
                   },

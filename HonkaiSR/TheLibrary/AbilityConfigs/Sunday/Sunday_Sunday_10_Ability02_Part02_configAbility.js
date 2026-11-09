@@ -33,7 +33,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "type": "Character"
+            "entityType": "Character"
           },
           "passed": [
             {
@@ -98,7 +98,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "type": "Character"
+        "entityType": "Character"
       },
       "passed": [
         {
@@ -365,7 +365,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "type": "Character"
+        "entityType": "Character"
       },
       "passed": [
         {
@@ -539,7 +539,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character"
+                "entityType": "Character"
               },
               "passed": [
                 {
@@ -586,7 +586,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Memosprite"
+                "entityType": "Memosprite"
               },
               "passed": [
                 {

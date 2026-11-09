@@ -7556,7 +7556,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   }
                 ]
               },
@@ -7637,7 +7637,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite",
+                    "entityType": "Memosprite",
                     "invertCondition": true
                   }
                 ]

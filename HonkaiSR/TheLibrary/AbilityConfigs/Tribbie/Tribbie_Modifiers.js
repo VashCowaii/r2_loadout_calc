@@ -397,7 +397,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   }
                 ]
@@ -453,7 +453,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   }
                 ]
@@ -497,7 +497,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   }
                 ]
@@ -626,7 +626,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character"
+                "entityType": "Character"
               },
               "ifTargetFound": [
                 {
@@ -767,7 +767,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character"
+                "entityType": "Character"
               },
               "ifTargetFound": [
                 {
@@ -874,7 +874,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "ifTargetFound": [
                     {
@@ -981,7 +981,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "ifTargetFound": [
                     {

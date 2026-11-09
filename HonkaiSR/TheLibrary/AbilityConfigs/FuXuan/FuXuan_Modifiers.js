@@ -415,7 +415,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Battle Event",
+                    "entityType": "Battle Event",
                     "invertCondition": true
                   },
                   {
@@ -1077,9 +1077,9 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite",
-                        "invertCondition": true,
-                        "livingState": "Mask_AliveOnly"
+                        "entityType": "Memosprite",
+                        "livingState": "Mask_AliveOnly",
+                        "invertCondition": true
                       }
                     ]
                   },

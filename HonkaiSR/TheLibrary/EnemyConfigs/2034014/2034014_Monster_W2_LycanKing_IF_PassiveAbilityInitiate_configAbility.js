@@ -723,7 +723,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   }
                 ]
               },
@@ -1752,7 +1752,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "type": "Character"
+                "entityType": "Character"
               },
               "ifTargetFound": [
                 {

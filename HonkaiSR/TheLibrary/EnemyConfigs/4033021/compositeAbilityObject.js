@@ -600,7 +600,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "passed": [
                     {
@@ -621,7 +621,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   "passed": [
                     {
@@ -813,7 +813,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Character"
+                    "entityType": "Character"
                   },
                   "passed": [
                     {
@@ -834,7 +834,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "type": "Memosprite"
+                    "entityType": "Memosprite"
                   },
                   "passed": [
                     {
@@ -1106,7 +1106,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Memosprite"
+                        "entityType": "Memosprite"
                       },
                       {
                         "name": "Is Entity Type",
@@ -1114,7 +1114,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Enemy"
+                        "entityType": "Enemy"
                       }
                     ]
                   },

@@ -1646,7 +1646,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "type": "Character"
+                            "entityType": "Character"
                           },
                           "passed": [
                             {
