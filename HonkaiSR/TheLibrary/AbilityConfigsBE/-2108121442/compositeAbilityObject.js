@@ -1864,7 +1864,7 @@ const compositeAbilityObject = {
             },
             "conditions": {
               "name": "Has Toughness Reduction Preview",
-              "caster": {
+              "abilityCaster": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },

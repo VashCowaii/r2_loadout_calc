@@ -208,7 +208,7 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Toughness Reduction Preview",
-                        "caster": {
+                        "abilityCaster": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
