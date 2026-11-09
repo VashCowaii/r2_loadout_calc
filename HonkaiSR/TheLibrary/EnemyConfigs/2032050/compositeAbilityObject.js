@@ -1245,6 +1245,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Set Target Parameter",
+          "variableName": "CameraTarget",
           "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1252,8 +1253,7 @@ const compositeAbilityObject = {
           "paramTarget": {
             "name": "Target Name",
             "target": "{{Enemy Team All, ST, and Blast}} + {{ST and Blast}}.[[getCharByChangeSource]]"
-          },
-          "variableName": "CameraTarget"
+          }
         },
         "Trigger: Attack End",
         {

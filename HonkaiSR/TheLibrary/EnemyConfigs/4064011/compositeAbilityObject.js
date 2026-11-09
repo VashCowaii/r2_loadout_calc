@@ -311,6 +311,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W4_Serpent_01_Charge02_Target_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -318,8 +319,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "W4_Serpent_01"
-                  },
-                  "variableName": "MMonster_W4_Serpent_01_Charge02_Target_DynamicTarget"
+                  }
                 }
               ]
             }
@@ -341,6 +341,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W4_Serpent_01_Charge02_Target_Sub_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -348,8 +349,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "W4_Serpent_01"
-                  },
-                  "variableName": "MMonster_W4_Serpent_01_Charge02_Target_Sub_DynamicTarget"
+                  }
                 }
               ]
             }
@@ -471,6 +471,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W4_Serpent_01_Charge01_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -478,8 +479,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MMonster_W4_Serpent_01_Charge01_DynamicTarget"
+                  }
                 }
               ]
             },

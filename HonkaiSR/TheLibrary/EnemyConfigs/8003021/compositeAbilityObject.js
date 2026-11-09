@@ -1691,6 +1691,7 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Set Target Parameter",
+          "variableName": "ProjectileFirstTarget",
           "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1698,8 +1699,7 @@ const compositeAbilityObject = {
           "paramTarget": {
             "name": "Target Name",
             "target": "{{Enemies by Taunt OR Random Aggro}}"
-          },
-          "variableName": "ProjectileFirstTarget"
+          }
         },
         {
           "name": "Find New Target",

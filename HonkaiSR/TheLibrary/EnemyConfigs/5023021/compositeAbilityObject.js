@@ -1495,6 +1495,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W5_Eater_00_Skill02_Ate_FateRin_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1502,8 +1503,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MMonster_W5_Eater_00_Skill02_Ate_FateRin_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1606,6 +1606,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W5_Eater_00_Skill03_Attack_FateRin_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1613,8 +1614,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MMonster_W5_Eater_00_Skill03_Attack_FateRin_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Stack Target Stat Value",

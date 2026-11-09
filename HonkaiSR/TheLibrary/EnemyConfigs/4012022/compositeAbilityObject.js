@@ -51,6 +51,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MModifier_Monster_W4_Scholar_00_LocalLegend_BookController_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -58,8 +59,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MModifier_Monster_W4_Scholar_00_LocalLegend_BookController_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -561,6 +561,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MModifier_Monster_W4_Scholar_00_BookController_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -568,8 +569,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MModifier_Monster_W4_Scholar_00_BookController_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",

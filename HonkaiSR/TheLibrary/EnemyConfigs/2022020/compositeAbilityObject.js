@@ -127,6 +127,7 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Set Target Parameter",
+                      "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget",
                       "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -134,8 +135,7 @@ const compositeAbilityObject = {
                       "paramTarget": {
                         "name": "Target Name",
                         "target": "{{No Target}}"
-                      },
-                      "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget"
+                      }
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -183,7 +183,8 @@ const compositeAbilityObject = {
                       },
                       "ifTargetFound": [
                         {
-                          "name": "Set Target Parameter",
+                          "name": "Add Target Parameter",
+                          "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -191,8 +192,7 @@ const compositeAbilityObject = {
                           "paramTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget"
+                          }
                         }
                       ]
                     }
@@ -200,6 +200,7 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Set Target Parameter",
+                      "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget",
                       "readTarget": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -207,8 +208,7 @@ const compositeAbilityObject = {
                       "paramTarget": {
                         "name": "Target Name",
                         "target": "{{No Target}}"
-                      },
-                      "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget"
+                      }
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -256,7 +256,8 @@ const compositeAbilityObject = {
                       },
                       "ifTargetFound": [
                         {
-                          "name": "Set Target Parameter",
+                          "name": "Add Target Parameter",
+                          "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -264,8 +265,7 @@ const compositeAbilityObject = {
                           "paramTarget": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "variableName": "Monster_W2_Abomi02_00_TargetList_DynamicTarget"
+                          }
                         }
                       ]
                     }

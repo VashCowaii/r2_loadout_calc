@@ -53,6 +53,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W2_Beast02_00_BlockDamage_FateRin_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -60,8 +61,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MMonster_W2_Beast02_00_BlockDamage_FateRin_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Set Hit-Class"

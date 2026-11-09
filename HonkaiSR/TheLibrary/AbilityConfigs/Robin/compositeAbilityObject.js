@@ -37,7 +37,8 @@ const compositeAbilityObject = {
           "stackType": "Refresh",
           "onCreation": [
             {
-              "name": "Set Target Parameter",
+              "name": "Add Target Parameter",
+              "variableName": "_Robin_Taunt_Count",
               "readTarget": {
                 "name": "Add Target by Summoned Units",
                 "targetSummoner": {
@@ -49,8 +50,7 @@ const compositeAbilityObject = {
               "paramTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "_Robin_Taunt_Count"
+              }
             },
             {
               "name": "IF",

@@ -57,7 +57,8 @@ const configAbility = {
       "stackType": "Replace",
       "onCreation": [
         {
-          "name": "Set Target Parameter",
+          "name": "Add Target Parameter",
+          "variableName": "_Feixiao_Achievement_Count",
           "readTarget": {
             "name": "Add Target by Summoned Units",
             "targetSummoner": {
@@ -69,8 +70,7 @@ const configAbility = {
           "paramTarget": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "variableName": "_Feixiao_Achievement_Count"
+          }
         },
         {
           "name": "IF",

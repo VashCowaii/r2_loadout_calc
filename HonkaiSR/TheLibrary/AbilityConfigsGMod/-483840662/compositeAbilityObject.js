@@ -229,6 +229,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Set Target Parameter",
+                          "variableName": "HimekoNova_00_AssistTarget_Copy",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -236,8 +237,7 @@ const compositeAbilityObject = {
                           "paramTarget": {
                             "name": "Target Name",
                             "target": "{{Himeko Nova: Assist Target}}"
-                          },
-                          "variableName": "HimekoNova_00_AssistTarget_Copy"
+                          }
                         },
                         {
                           "name": "Define Modifier-Specific Variable",
@@ -249,6 +249,7 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Set Target Parameter",
+                          "variableName": "HimekoNova_00_AssistTarget_Copy",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -256,8 +257,7 @@ const compositeAbilityObject = {
                           "paramTarget": {
                             "name": "Target Name",
                             "target": "{{Himeko Nova: Assist Target}}"
-                          },
-                          "variableName": "HimekoNova_00_AssistTarget_Copy"
+                          }
                         },
                         {
                           "name": "Define Modifier-Specific Variable",
@@ -1758,6 +1758,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Set Target Parameter",
+                          "variableName": "HimekoNova_00_Assist",
                           "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -1770,8 +1771,7 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               }
                             ]
-                          },
-                          "variableName": "HimekoNova_00_Assist"
+                          }
                         },
                         {
                           "name": "IF",

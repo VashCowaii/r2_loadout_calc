@@ -987,6 +987,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "Dead_DynamicTarget03",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -994,8 +995,7 @@ const configAbility = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}.[[getCharByChangeSource]]"
-                  },
-                  "variableName": "Dead_DynamicTarget03"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1028,6 +1028,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "Dead_DynamicTarget02",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1035,8 +1036,7 @@ const configAbility = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}.[[getCharByChangeSource]]"
-                  },
-                  "variableName": "Dead_DynamicTarget02"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1069,6 +1069,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "Dead_DynamicTarget01",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1076,8 +1077,7 @@ const configAbility = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}.[[getCharByChangeSource]]"
-                  },
-                  "variableName": "Dead_DynamicTarget01"
+                  }
                 },
                 {
                   "name": "Define Custom Variable",

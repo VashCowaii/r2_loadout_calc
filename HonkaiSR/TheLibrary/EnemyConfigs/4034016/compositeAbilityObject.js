@@ -389,6 +389,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Target Parameter",
+                  "variableName": "MMonster_W4_FireProwler_01_Repeat_DynamicTarget",
                   "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -396,8 +397,7 @@ const compositeAbilityObject = {
                   "paramTarget": {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
-                  },
-                  "variableName": "MMonster_W4_FireProwler_01_Repeat_DynamicTarget"
+                  }
                 },
                 {
                   "name": "Stack Target Resistance",

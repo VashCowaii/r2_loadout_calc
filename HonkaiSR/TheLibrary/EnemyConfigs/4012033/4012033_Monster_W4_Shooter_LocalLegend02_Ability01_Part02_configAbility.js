@@ -107,6 +107,7 @@ const configAbility = {
         },
         {
           "name": "Set Target Parameter",
+          "variableName": "RandomTarget",
           "readTarget": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -114,8 +115,7 @@ const configAbility = {
           "paramTarget": {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Light Praetor: Light Characters}}.[[index0]]"
-          },
-          "variableName": "RandomTarget"
+          }
         },
         {
           "name": "Shot Fired",
