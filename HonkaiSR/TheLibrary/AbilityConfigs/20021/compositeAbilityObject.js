@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                  "conditions": {
+                  "loopCondition": {
                     "name": "AND",
                     "conditionList": [
                       {
@@ -1490,7 +1490,7 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                    "conditions": {
+                    "loopCondition": {
                       "name": "AND",
                       "conditionList": [
                         {
@@ -1551,7 +1551,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                      "conditions": {
+                      "loopCondition": {
                         "name": "AND",
                         "conditionList": [
                           {
@@ -1618,7 +1618,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
+                        "loopCondition": {
                           "name": "AND",
                           "conditionList": [
                             {
@@ -1666,7 +1666,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
+                        "loopCondition": {
                           "name": "AND",
                           "conditionList": [
                             {
@@ -1714,7 +1714,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                        "conditions": {
+                        "loopCondition": {
                           "name": "Is Part Of Team",
                           "target": {
                             "name": "Target Name",
@@ -1722,6 +1722,7 @@ const compositeAbilityObject = {
                           },
                           "team": "Enemy Team"
                         },
+                        "includeSource": false,
                         "greaterThanMax": 0
                       }
                     ]
@@ -1819,7 +1820,7 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                "conditions": {
+                                "loopCondition": {
                                   "name": "Is Part Of Team",
                                   "target": {
                                     "name": "Target Name",
@@ -1827,6 +1828,7 @@ const compositeAbilityObject = {
                                   },
                                   "team": "Enemy Team"
                                 },
+                                "includeSource": false,
                                 "lessThanMax": 0
                               }
                             ]
@@ -1991,7 +1993,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -2083,7 +2085,7 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
+                                  "loopCondition": {
                                     "name": "Has Modifier",
                                     "target": {
                                       "name": "Target Name",
@@ -2182,7 +2184,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -2274,7 +2276,7 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
+                                  "loopCondition": {
                                     "name": "Has Modifier",
                                     "target": {
                                       "name": "Target Name",
@@ -2373,7 +2375,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -2465,7 +2467,7 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
+                                  "loopCondition": {
                                     "name": "Has Modifier",
                                     "target": {
                                       "name": "Target Name",
@@ -2564,7 +2566,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -2572,6 +2574,7 @@ const compositeAbilityObject = {
                                 },
                                 "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
                               },
+                              "includeSource": false,
                               "greaterThanMax": 0
                             }
                           ]
@@ -2664,7 +2667,7 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                                  "conditions": {
+                                  "loopCondition": {
                                     "name": "Has Modifier",
                                     "target": {
                                       "name": "Target Name",
@@ -2672,6 +2675,7 @@ const compositeAbilityObject = {
                                     },
                                     "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
                                   },
+                                  "includeSource": false,
                                   "lessThanMax": 0
                                 }
                               ]

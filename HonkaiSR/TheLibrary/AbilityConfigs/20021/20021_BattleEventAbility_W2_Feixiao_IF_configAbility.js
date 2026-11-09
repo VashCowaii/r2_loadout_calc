@@ -159,7 +159,7 @@ const configAbility = {
             },
             {
               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-              "conditions": {
+              "loopCondition": {
                 "name": "AND",
                 "conditionList": [
                   {
@@ -235,7 +235,7 @@ const configAbility = {
               },
               {
                 "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                "conditions": {
+                "loopCondition": {
                   "name": "AND",
                   "conditionList": [
                     {
@@ -296,7 +296,7 @@ const configAbility = {
                 },
                 {
                   "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                  "conditions": {
+                  "loopCondition": {
                     "name": "AND",
                     "conditionList": [
                       {
@@ -363,7 +363,7 @@ const configAbility = {
                   },
                   {
                     "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                    "conditions": {
+                    "loopCondition": {
                       "name": "AND",
                       "conditionList": [
                         {
@@ -411,7 +411,7 @@ const configAbility = {
                   },
                   {
                     "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                    "conditions": {
+                    "loopCondition": {
                       "name": "AND",
                       "conditionList": [
                         {
@@ -459,7 +459,7 @@ const configAbility = {
                   },
                   {
                     "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                    "conditions": {
+                    "loopCondition": {
                       "name": "Is Part Of Team",
                       "target": {
                         "name": "Target Name",
@@ -467,6 +467,7 @@ const configAbility = {
                       },
                       "team": "Enemy Team"
                     },
+                    "includeSource": false,
                     "greaterThanMax": 0
                   }
                 ]
@@ -564,7 +565,7 @@ const configAbility = {
                           },
                           {
                             "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                            "conditions": {
+                            "loopCondition": {
                               "name": "Is Part Of Team",
                               "target": {
                                 "name": "Target Name",
@@ -572,6 +573,7 @@ const configAbility = {
                               },
                               "team": "Enemy Team"
                             },
+                            "includeSource": false,
                             "lessThanMax": 0
                           }
                         ]
@@ -736,7 +738,7 @@ const configAbility = {
                         },
                         {
                           "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                          "conditions": {
+                          "loopCondition": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -828,7 +830,7 @@ const configAbility = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -927,7 +929,7 @@ const configAbility = {
                         },
                         {
                           "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                          "conditions": {
+                          "loopCondition": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -1019,7 +1021,7 @@ const configAbility = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -1118,7 +1120,7 @@ const configAbility = {
                         },
                         {
                           "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                          "conditions": {
+                          "loopCondition": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -1210,7 +1212,7 @@ const configAbility = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -1309,7 +1311,7 @@ const configAbility = {
                         },
                         {
                           "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                          "conditions": {
+                          "loopCondition": {
                             "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
@@ -1317,6 +1319,7 @@ const configAbility = {
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
                           },
+                          "includeSource": false,
                           "greaterThanMax": 0
                         }
                       ]
@@ -1409,7 +1412,7 @@ const configAbility = {
                             },
                             {
                               "name": "Adjust Relative to Action Bar, Adjacent Targets",
-                              "conditions": {
+                              "loopCondition": {
                                 "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
@@ -1417,6 +1420,7 @@ const configAbility = {
                                 },
                                 "modifier": "<a class=\"gModGreen\" id=\"1912631465\">Monster_W2_Feixiao_IF_AlreadyConnect</a>[<span class=\"descriptionNumberColor\">Resonate</span>]"
                               },
+                              "includeSource": false,
                               "lessThanMax": 0
                             }
                           ]
