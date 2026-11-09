@@ -289,7 +289,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Check Modifier Death Source",
-                        "source": "CasterDead",
+                        "deathSource": "CasterDead",
                         "invertCondition": true
                       }
                     ]
