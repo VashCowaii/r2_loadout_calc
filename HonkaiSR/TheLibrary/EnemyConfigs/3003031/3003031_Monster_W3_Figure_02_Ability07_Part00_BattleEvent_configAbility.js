@@ -71,8 +71,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Add Target by Enemy ID",
-            "ID": 3003041,
-            "characterName": "\"Tomorrow in Harmonious Chords\""
+            "enemyID": "3003041 (\"Tomorrow in Harmonious Chords\")"
           },
           "inherentTarget": {
             "name": "Target Name",
@@ -84,8 +83,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Add Target by Enemy ID",
-            "ID": 3003051,
-            "characterName": "\"Present Inebriated in Revelry\""
+            "enemyID": "3003051 (\"Present Inebriated in Revelry\")"
           },
           "inherentTarget": {
             "name": "Target Name",

@@ -1829,53 +1829,43 @@ const configAbility = {
                 "TargetList": [
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205045,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205045 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205046,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205046 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205047,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205047 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205048,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205048 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205049,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205049 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205050,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205050 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205051,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205051 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205052,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205052 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205064,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205064 (Sequence Trotter)"
                   },
                   {
                     "name": "Add Target by Enemy ID",
-                    "ID": 800205065,
-                    "characterName": "Sequence Trotter"
+                    "enemyID": "800205065 (Sequence Trotter)"
                   }
                 ]
               }

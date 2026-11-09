@@ -240,8 +240,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Add Target by Enemy ID",
-            "ID": 301301201,
-            "characterName": "Memory Zone Meme \"Shell of Faded Rage\""
+            "enemyID": "301301201 (Memory Zone Meme \"Shell of Faded Rage\")"
           },
           "conditions": {
             "name": "AND",
@@ -280,8 +279,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 301301201,
-                  "characterName": "Memory Zone Meme \"Shell of Faded Rage\""
+                  "enemyID": "301301201 (Memory Zone Meme \"Shell of Faded Rage\")"
                 },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
@@ -290,8 +288,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 301301201,
-                  "characterName": "Memory Zone Meme \"Shell of Faded Rage\""
+                  "enemyID": "301301201 (Memory Zone Meme \"Shell of Faded Rage\")"
                 },
                 "flagName": "DisableAction",
                 "invertCondition": true
@@ -300,8 +297,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 301301201,
-                  "characterName": "Memory Zone Meme \"Shell of Faded Rage\""
+                  "enemyID": "301301201 (Memory Zone Meme \"Shell of Faded Rage\")"
                 },
                 "flagName": "Break",
                 "invertCondition": true
@@ -314,8 +310,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Add Target by Enemy ID",
-            "ID": 300301401,
-            "characterName": "Dreamjolt Troupe's Beyond Overcooked"
+            "enemyID": "300301401 (Dreamjolt Troupe's Beyond Overcooked)"
           },
           "conditions": {
             "name": "AND",
@@ -354,8 +349,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 300301401,
-                  "characterName": "Dreamjolt Troupe's Beyond Overcooked"
+                  "enemyID": "300301401 (Dreamjolt Troupe's Beyond Overcooked)"
                 },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
@@ -364,8 +358,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 300301401,
-                  "characterName": "Dreamjolt Troupe's Beyond Overcooked"
+                  "enemyID": "300301401 (Dreamjolt Troupe's Beyond Overcooked)"
                 },
                 "flagName": "DisableAction",
                 "invertCondition": true
@@ -374,8 +367,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Add Target by Enemy ID",
-                  "ID": 300301401,
-                  "characterName": "Dreamjolt Troupe's Beyond Overcooked"
+                  "enemyID": "300301401 (Dreamjolt Troupe's Beyond Overcooked)"
                 },
                 "flagName": "Break",
                 "invertCondition": true

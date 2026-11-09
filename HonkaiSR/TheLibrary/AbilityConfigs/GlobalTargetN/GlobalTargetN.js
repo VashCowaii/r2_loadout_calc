@@ -6660,8 +6660,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by Enemy ID",
-          "ID": 1005011,
-          "characterName": "Cocolia, Mother of Deception"
+          "enemyID": "1005011 (Cocolia, Mother of Deception)"
         }
       ]
     },

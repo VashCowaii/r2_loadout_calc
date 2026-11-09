@@ -298,8 +298,7 @@ const configAbility = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Add Target by Enemy ID",
-                          "ID": 301402002,
-                          "characterName": "Memory Zone Meme \"Something Unto Death\""
+                          "enemyID": "301402002 (Memory Zone Meme \"Something Unto Death\")"
                         },
                         "value1": "AIFlag",
                         "compareType": "=",
