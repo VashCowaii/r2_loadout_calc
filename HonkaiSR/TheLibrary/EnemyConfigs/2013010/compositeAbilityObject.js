@@ -2243,7 +2243,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -2255,7 +2254,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2275,7 +2275,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2295,7 +2294,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2325,7 +2325,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2346,7 +2345,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

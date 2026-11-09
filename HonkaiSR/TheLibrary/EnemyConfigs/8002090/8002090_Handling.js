@@ -62,7 +62,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -70,7 +69,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -90,7 +90,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -98,7 +97,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

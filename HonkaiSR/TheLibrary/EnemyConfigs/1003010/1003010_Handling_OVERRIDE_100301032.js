@@ -49,14 +49,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "W1_Soldier03_00_AICounter",
                 "compareType": "=",
                 "value2": 1,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -86,7 +86,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -108,7 +107,8 @@ const configAbility = {
                     "value2": 3
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -138,7 +138,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -160,7 +159,8 @@ const configAbility = {
                     "value2": 4
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -190,14 +190,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "W1_Soldier03_00_AICounter",
                 "compareType": "=",
                 "value2": 3,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -236,14 +236,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "W1_Soldier03_00_AICounter",
                 "compareType": "=",
                 "value2": 4,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

@@ -391,7 +391,8 @@ const configAbility = {
                     "variables": [
                       "MDF_RedStanceRatio"
                     ]
-                  }
+                  },
+                  "exoFlat": 0
                 }
               ]
             }

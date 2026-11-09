@@ -46,7 +46,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "target": {
@@ -57,7 +56,8 @@ const configAbility = {
                     "compareType": "=",
                     "value2": 2,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -77,7 +77,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "target": {
@@ -88,7 +87,8 @@ const configAbility = {
                     "compareType": "=",
                     "value2": 1,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }
@@ -97,7 +97,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -112,7 +111,8 @@ const configAbility = {
                     "value2": 1
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

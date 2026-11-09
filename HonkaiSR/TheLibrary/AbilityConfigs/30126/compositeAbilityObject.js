@@ -1288,6 +1288,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Stack Exo-Toughness",
+                      "exoPercent": 0,
                       "exoFlat": {
                         "operator": "Variables[0] (MDF_MinStance) || RETURN",
                         "displayLines": "MDF_MinStance",
@@ -1308,7 +1309,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_RedStanceRatio"
                         ]
-                      }
+                      },
+                      "exoFlat": 0
                     }
                   ]
                 }

@@ -414,7 +414,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_RedStanceRatio"
                         ]
-                      }
+                      },
+                      "exoFlat": 0
                     }
                   ]
                 }

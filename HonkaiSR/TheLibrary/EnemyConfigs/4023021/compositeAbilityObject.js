@@ -2149,7 +2149,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2161,7 +2160,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2191,7 +2191,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2203,7 +2202,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2233,7 +2233,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2245,7 +2244,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

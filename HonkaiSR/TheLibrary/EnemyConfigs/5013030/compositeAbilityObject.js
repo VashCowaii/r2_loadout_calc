@@ -14099,7 +14099,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -14107,7 +14106,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -14127,7 +14127,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -14148,7 +14147,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -14178,7 +14178,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -14207,7 +14206,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -14237,7 +14237,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -14266,7 +14265,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

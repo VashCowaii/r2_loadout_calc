@@ -66,7 +66,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -79,7 +78,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-1102283112\">Enemy_W4_Mascot_EscapingCharge00</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -108,7 +108,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -121,7 +120,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-1085505493\">Enemy_W4_Mascot_EscapingCharge01</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -150,7 +150,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -163,7 +162,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-1068727874\">Enemy_W4_Mascot_EscapingCharge02</a>[<span class=\"descriptionNumberColor\">Brainteaser</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

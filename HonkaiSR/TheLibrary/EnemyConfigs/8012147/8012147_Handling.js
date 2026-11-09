@@ -39,7 +39,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -48,7 +47,8 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
                 "invertCondition": true
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -68,14 +68,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
                 "compareType": "=",
                 "value2": 1,
                 "valueType": "Layer"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -95,14 +95,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "<a class=\"gModGreen\" id=\"-2123264245\">Enemy_AML_Boss_Part2_IF_Enhancement</a>",
                 "compareType": "=",
                 "value2": 2,
                 "valueType": "Layer"
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

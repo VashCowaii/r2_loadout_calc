@@ -71,7 +71,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -79,7 +78,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"1434034112\">Enemy_AML_Minion04_Overheat</a>[<span class=\"descriptionNumberColor\">Overloaded</span>]"
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

@@ -45,7 +45,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -65,7 +64,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -130,7 +130,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -150,7 +149,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -181,7 +181,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -201,7 +200,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -261,7 +261,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -281,7 +280,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"534638248\">Monster_W4_Theoroi_Part1</a>[<span class=\"descriptionNumberColor\">To Logos</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -312,7 +312,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -332,7 +331,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -392,7 +392,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -412,7 +411,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -443,7 +443,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -463,7 +462,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -494,7 +494,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -514,7 +513,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -545,7 +545,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -565,7 +564,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -596,7 +596,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -616,7 +615,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"584971105\">Monster_W4_Theoroi_Part2</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

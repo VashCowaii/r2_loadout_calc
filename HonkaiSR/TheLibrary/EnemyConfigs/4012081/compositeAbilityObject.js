@@ -739,7 +739,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -795,7 +794,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -815,7 +815,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -840,7 +839,8 @@ const compositeAbilityObject = {
                       ]
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-39064349\">Modifier_Monster_W4_DawnsEye_WheaterSunny</a>"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -860,7 +860,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -915,7 +914,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

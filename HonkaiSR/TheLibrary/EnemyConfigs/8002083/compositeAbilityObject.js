@@ -2011,7 +2011,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -2019,7 +2018,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1500151389\">Enemy_XP_Minion04_02_EscapingCharge01</a>"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -2039,7 +2039,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -2047,7 +2046,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1449818532\">Enemy_XP_Minion04_02_EscapingCharge02</a>"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

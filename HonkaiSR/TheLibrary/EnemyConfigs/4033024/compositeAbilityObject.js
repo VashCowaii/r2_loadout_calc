@@ -2665,14 +2665,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 1,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2752,14 +2752,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 2,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2802,7 +2802,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -2821,7 +2820,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2851,14 +2851,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 6,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

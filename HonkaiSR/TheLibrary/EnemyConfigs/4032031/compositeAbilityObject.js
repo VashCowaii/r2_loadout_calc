@@ -1056,7 +1056,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -1065,7 +1064,8 @@ const compositeAbilityObject = {
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]",
                     "invertCondition": true
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1085,7 +1085,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -1093,7 +1092,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1771764709\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood</a>[<span class=\"descriptionNumberColor\">HP Overload</span>]"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

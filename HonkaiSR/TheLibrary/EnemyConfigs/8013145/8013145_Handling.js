@@ -53,7 +53,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -95,7 +94,8 @@ const configAbility = {
                         "value2": 1
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -125,7 +125,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -171,7 +170,8 @@ const configAbility = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -226,7 +226,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -252,7 +251,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -282,7 +282,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -324,7 +323,8 @@ const configAbility = {
                         "value2": 1
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -354,7 +354,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -400,7 +399,8 @@ const configAbility = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -454,7 +454,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -466,7 +465,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -475,7 +475,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -485,7 +484,8 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": 1
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -519,7 +519,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -591,7 +590,8 @@ const configAbility = {
                         "value2": 1
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -621,7 +621,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -697,7 +696,8 @@ const configAbility = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -727,7 +727,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -803,7 +802,8 @@ const configAbility = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -833,7 +833,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -913,7 +912,8 @@ const configAbility = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -943,7 +943,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -955,7 +954,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -986,7 +986,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1005,7 +1004,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1035,7 +1035,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1047,7 +1046,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1077,7 +1077,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -1089,7 +1088,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1119,7 +1119,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -1131,7 +1130,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -1140,7 +1140,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -1150,7 +1149,8 @@ const configAbility = {
                 "value1": "HP_Bars_Remaining",
                 "compareType": "=",
                 "value2": 2
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

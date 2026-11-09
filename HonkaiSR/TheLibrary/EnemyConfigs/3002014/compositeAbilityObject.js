@@ -1229,7 +1229,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -1248,7 +1247,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -1274,14 +1274,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "FlopSide",
                     "compareType": "=",
                     "value2": -1,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -1307,7 +1307,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -1326,7 +1325,8 @@ const compositeAbilityObject = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

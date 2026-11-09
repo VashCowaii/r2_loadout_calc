@@ -39,7 +39,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -95,7 +94,8 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -115,7 +115,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -140,7 +139,8 @@ const configAbility = {
                   ]
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-39064349\">Modifier_Monster_W4_DawnsEye_WheaterSunny</a>"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -160,7 +160,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -215,7 +214,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-1414068042\">Modifier_Monster_W4_DawnsEye_WheaterMarkAbility04</a>[<span class=\"descriptionNumberColor\">Ionization</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

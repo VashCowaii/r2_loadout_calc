@@ -12185,7 +12185,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12196,7 +12195,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 1,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12226,7 +12226,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12237,7 +12236,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 3,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12267,7 +12267,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12278,7 +12277,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 8,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12308,7 +12308,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12319,7 +12318,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 5,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12379,7 +12379,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12390,7 +12389,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 2,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12420,7 +12420,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12431,7 +12430,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 7,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12491,7 +12491,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12502,7 +12501,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 4,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 }
@@ -12511,7 +12511,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -12526,7 +12525,8 @@ const compositeAbilityObject = {
                         "value2": 1
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -12560,7 +12560,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12571,7 +12570,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 1,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12601,7 +12601,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12612,7 +12611,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 3,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12642,7 +12642,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12653,7 +12652,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 8,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12683,7 +12683,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12694,7 +12693,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 5,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12754,7 +12754,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12765,7 +12764,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 2,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12795,7 +12795,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12806,7 +12805,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 7,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12866,7 +12866,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12877,7 +12876,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 4,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 }
@@ -12886,7 +12886,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -12901,7 +12900,8 @@ const compositeAbilityObject = {
                         "value2": 2
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -12935,7 +12935,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12946,7 +12945,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 3,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -12976,7 +12976,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -12987,7 +12986,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 4,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -13017,7 +13017,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -13028,7 +13027,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 5,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -13099,7 +13099,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -13110,7 +13109,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 1,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -13152,7 +13152,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -13163,7 +13162,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 2,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 }
@@ -13172,7 +13172,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -13187,7 +13186,8 @@ const compositeAbilityObject = {
                         "value2": 3
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

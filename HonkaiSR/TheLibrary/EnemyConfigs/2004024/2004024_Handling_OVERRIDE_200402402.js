@@ -50,7 +50,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -92,7 +91,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         },
@@ -123,7 +123,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -151,7 +150,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         },
@@ -182,7 +182,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -210,7 +209,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         },
@@ -241,7 +241,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -269,7 +268,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         },
@@ -310,7 +310,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -338,7 +337,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         },
@@ -363,7 +363,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.4,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -391,7 +390,8 @@ const configAbility = {
                     ]
                   }
                 ]
-              }
+              },
+              "passedValue": 0.4
             }
           ]
         }

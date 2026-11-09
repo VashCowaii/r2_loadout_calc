@@ -45,7 +45,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -71,7 +70,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -102,7 +102,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -128,7 +127,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -159,7 +159,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -185,7 +184,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -245,7 +245,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -271,7 +270,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -302,7 +302,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -328,7 +327,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -359,7 +359,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -385,7 +384,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

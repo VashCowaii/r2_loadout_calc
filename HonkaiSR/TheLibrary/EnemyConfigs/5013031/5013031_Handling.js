@@ -34,7 +34,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -42,7 +41,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -62,7 +62,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -83,7 +82,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -113,7 +113,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -142,7 +141,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -172,7 +172,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -201,7 +200,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

@@ -1713,7 +1713,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -1724,7 +1723,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 1,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 },
@@ -1878,7 +1878,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 1,
                       "conditions": {
                         "name": "Compare: Variable",
                         "target": {
@@ -1889,7 +1888,8 @@ const compositeAbilityObject = {
                         "compareType": "=",
                         "value2": 2,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 1
                     }
                   ]
                 }

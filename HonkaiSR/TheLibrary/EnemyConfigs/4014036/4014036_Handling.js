@@ -38,7 +38,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -46,7 +45,8 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -71,7 +71,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -92,7 +91,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -117,7 +117,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -138,7 +137,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -147,7 +147,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -167,7 +166,8 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -252,7 +252,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -260,7 +259,8 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -285,7 +285,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -306,7 +305,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -331,7 +331,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -352,7 +351,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -361,7 +361,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -380,7 +379,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -404,7 +404,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -412,7 +411,8 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -437,7 +437,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -458,7 +457,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -483,7 +483,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -504,7 +503,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -513,7 +513,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -533,7 +532,8 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -586,14 +586,14 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 3,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -674,7 +674,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -682,7 +681,8 @@ const configAbility = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -707,7 +707,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -728,7 +727,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -753,7 +753,6 @@ const configAbility = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -774,7 +773,8 @@ const configAbility = {
                         "contextScope": "TargetEntity"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -783,7 +783,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -802,7 +801,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

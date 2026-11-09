@@ -39,7 +39,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -53,7 +52,8 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -73,7 +73,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -86,7 +85,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"1604945835\">Enemy_W2_Valkyrie01_01_AbilityP01_ComboAttack</a>[<span class=\"descriptionNumberColor\">Maddened</span>]"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

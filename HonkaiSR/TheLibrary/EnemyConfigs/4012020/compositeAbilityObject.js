@@ -994,7 +994,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.9,
                   "conditions": {
                     "name": "Compare: Variable",
                     "target": {
@@ -1027,7 +1026,8 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  }
+                  },
+                  "passedValue": 0.9
                 },
                 {
                   "name": "Check Ability Use Value",

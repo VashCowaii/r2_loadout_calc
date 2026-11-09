@@ -75,7 +75,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.9,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -108,7 +107,8 @@ const configAbility = {
                     }
                   ]
                 }
-              }
+              },
+              "passedValue": 0.9
             },
             {
               "name": "Check Ability Use Value",

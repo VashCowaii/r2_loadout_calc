@@ -10382,7 +10382,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -10390,7 +10389,8 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10415,7 +10415,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10436,7 +10435,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10461,7 +10461,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10482,7 +10481,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 }
@@ -10491,7 +10491,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -10511,7 +10510,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -10596,7 +10596,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -10604,7 +10603,8 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10629,7 +10629,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10650,7 +10649,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10675,7 +10675,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10696,7 +10695,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 }
@@ -10705,7 +10705,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -10724,7 +10723,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -10748,7 +10748,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -10756,7 +10755,8 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10781,7 +10781,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10802,7 +10801,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -10827,7 +10827,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -10848,7 +10847,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 }
@@ -10857,7 +10857,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -10877,7 +10876,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -10930,14 +10930,14 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "Compare: Variable",
                         "value1": "AIFlag",
                         "compareType": "=",
                         "value2": 3,
                         "contextScope": "TargetEntity"
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -11018,7 +11018,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "Has Modifier",
                         "target": {
@@ -11026,7 +11025,8 @@ const compositeAbilityObject = {
                           "target": "{{Caster}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -11051,7 +11051,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -11072,7 +11071,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 },
@@ -11097,7 +11097,6 @@ const compositeAbilityObject = {
                   "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
-                      "passedValue": 0.5,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
@@ -11118,7 +11117,8 @@ const compositeAbilityObject = {
                             "contextScope": "TargetEntity"
                           }
                         ]
-                      }
+                      },
+                      "passedValue": 0.5
                     }
                   ]
                 }
@@ -11127,7 +11127,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -11146,7 +11145,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"1085805355\">Enemy_W4_Pollux_IF_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

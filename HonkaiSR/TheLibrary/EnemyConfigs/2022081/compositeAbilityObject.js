@@ -690,14 +690,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 1,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -717,18 +717,17 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 2,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 },
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -753,7 +752,8 @@ const compositeAbilityObject = {
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>[<span class=\"descriptionNumberColor\">Engender</span>]",
                     "invertCondition": true
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -773,18 +773,17 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "AIFlag",
                     "compareType": "=",
                     "value2": 2,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 1
                 },
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -808,7 +807,8 @@ const compositeAbilityObject = {
                       ]
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>[<span class=\"descriptionNumberColor\">Engender</span>]"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

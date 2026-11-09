@@ -50,14 +50,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 1,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -117,14 +117,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 2,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -184,14 +184,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 3,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -222,14 +222,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 4,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

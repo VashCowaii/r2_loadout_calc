@@ -1158,14 +1158,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "Monster_W1_Mecha_Fire_AICounter_01",
                     "compareType": "=",
                     "value2": 1,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1214,14 +1214,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "Monster_W1_Mecha_Fire_AICounter_01",
                     "compareType": "=",
                     "value2": 2,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1251,14 +1251,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "Monster_W1_Mecha_Fire_AICounter_01",
                     "compareType": "=",
                     "value2": 3,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1317,14 +1317,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "Monster_W1_Mecha_Fire_AICounter_01",
                     "compareType": "=",
                     "value2": 4,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1354,14 +1354,14 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Compare: Variable",
                     "value1": "Monster_W1_Mecha_Fire_AICounter_01",
                     "compareType": "=",
                     "value2": 5,
                     "contextScope": "TargetEntity"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

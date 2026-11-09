@@ -39,7 +39,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -47,7 +46,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -67,7 +67,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -76,7 +75,8 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
                 "invertCondition": true
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

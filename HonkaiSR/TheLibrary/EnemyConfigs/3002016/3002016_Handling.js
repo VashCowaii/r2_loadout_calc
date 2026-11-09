@@ -45,7 +45,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -64,7 +63,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -90,14 +90,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "FlopSide",
                 "compareType": "=",
                 "value2": -1,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -123,7 +123,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -142,7 +141,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

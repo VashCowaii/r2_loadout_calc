@@ -2288,7 +2288,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2309,7 +2308,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2339,7 +2339,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -2360,7 +2359,8 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2400,7 +2400,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -2408,7 +2407,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

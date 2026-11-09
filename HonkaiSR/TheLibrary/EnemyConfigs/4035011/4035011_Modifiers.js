@@ -812,7 +812,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Skill Point Lock-Out",
-              "amount": 999
+              "blockedCount": 999
             },
             {
               "name": "Disable Abilities",
@@ -3950,7 +3950,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Skill Point Lock-Out",
-              "amount": {
+              "blockedCount": {
                 "operator": "Variables[0] (_MissionTalkType) || RETURN",
                 "displayLines": "_MissionTalkType",
                 "constants": [],

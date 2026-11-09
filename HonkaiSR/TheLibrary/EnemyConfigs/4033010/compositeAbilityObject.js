@@ -1575,7 +1575,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1592,7 +1591,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1622,7 +1622,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1639,7 +1638,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1698,7 +1698,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1715,7 +1714,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1793,7 +1793,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1810,7 +1809,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1840,7 +1840,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1857,7 +1856,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }
@@ -1917,7 +1917,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1934,7 +1933,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -1964,7 +1964,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -1981,7 +1980,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2040,7 +2040,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -2057,7 +2056,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2135,7 +2135,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -2152,7 +2151,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -2182,7 +2182,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "OR",
                     "conditionList": [
@@ -2199,7 +2198,8 @@ const compositeAbilityObject = {
                         ]
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

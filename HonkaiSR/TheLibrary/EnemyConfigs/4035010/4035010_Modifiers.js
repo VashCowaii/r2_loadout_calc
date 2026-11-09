@@ -1643,7 +1643,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Skill Point Lock-Out",
-              "amount": {
+              "blockedCount": {
                 "operator": "Variables[0] (FREEVAR) || RETURN",
                 "displayLines": "FREEVAR",
                 "constants": [],

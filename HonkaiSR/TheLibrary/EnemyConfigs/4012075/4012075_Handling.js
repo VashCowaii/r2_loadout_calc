@@ -34,7 +34,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -43,7 +42,8 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
                 "invertCondition": true
-              }
+              },
+              "passedValue": 1
             }
           ]
         },
@@ -63,7 +63,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -71,7 +70,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
-              }
+              },
+              "passedValue": 1
             }
           ]
         }

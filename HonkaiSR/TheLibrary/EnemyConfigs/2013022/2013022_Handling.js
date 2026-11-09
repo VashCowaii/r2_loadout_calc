@@ -58,7 +58,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -67,7 +66,8 @@ const configAbility = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"1206666143\">Enemy_W2_Valkyrie02_DynamicAI_ToastAndEffect_FateRin</a>",
                 "invertCondition": true
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -97,7 +97,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -109,7 +108,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -139,7 +139,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -151,7 +150,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

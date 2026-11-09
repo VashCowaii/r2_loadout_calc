@@ -5164,7 +5164,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -5173,7 +5172,8 @@ const compositeAbilityObject = {
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
                     "invertCondition": true
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             },
@@ -5193,7 +5193,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 1,
                   "conditions": {
                     "name": "Has Modifier",
                     "target": {
@@ -5201,7 +5200,8 @@ const compositeAbilityObject = {
                       "target": "{{Caster}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-2030876773\">Enemy_W4_PolluxPart_IF_Shield</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
-                  }
+                  },
+                  "passedValue": 1
                 }
               ]
             }

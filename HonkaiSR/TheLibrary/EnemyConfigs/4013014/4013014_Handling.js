@@ -43,13 +43,13 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 0
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -166,7 +166,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -183,7 +182,8 @@ const configAbility = {
                     "value2": 3
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -212,13 +212,13 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 4
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -248,14 +248,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 5,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -344,13 +344,13 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "AIFlag",
                 "compareType": "=",
                 "value2": 6
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

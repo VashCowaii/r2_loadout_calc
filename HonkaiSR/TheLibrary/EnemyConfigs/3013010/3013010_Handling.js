@@ -44,7 +44,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -64,7 +63,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -94,7 +94,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -114,7 +113,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -144,7 +144,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -164,7 +163,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -184,7 +184,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -198,7 +197,8 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         }

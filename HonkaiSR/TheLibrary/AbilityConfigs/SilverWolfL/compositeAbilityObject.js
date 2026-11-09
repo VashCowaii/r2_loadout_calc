@@ -3596,7 +3596,7 @@ const compositeAbilityObject = {
             {
               "name": "Create Overworld Entity",
               "summonID": 15061,
-              "execute": [
+              "onCreation": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

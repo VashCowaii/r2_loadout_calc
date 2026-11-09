@@ -62,7 +62,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -70,7 +69,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -143,7 +143,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 1,
               "conditions": {
                 "name": "Compare: Variable",
                 "target": {
@@ -164,7 +163,8 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]"
                   }
                 }
-              }
+              },
+              "passedValue": 1
             },
             {
               "name": "Check Ability Use Value",

@@ -9137,7 +9137,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9163,7 +9162,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -9194,7 +9194,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9220,7 +9219,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -9251,7 +9251,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9277,7 +9276,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -9337,7 +9337,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9363,7 +9362,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -9394,7 +9394,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9420,7 +9419,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             },
@@ -9451,7 +9451,6 @@ const compositeAbilityObject = {
               "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
-                  "passedValue": 0.5,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
@@ -9477,7 +9476,8 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-945349590\">Monster_W4_Nikadory_FullPhase1</a>"
                       }
                     ]
-                  }
+                  },
+                  "passedValue": 0.5
                 }
               ]
             }

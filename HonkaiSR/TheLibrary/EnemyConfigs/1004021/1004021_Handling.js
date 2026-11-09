@@ -60,7 +60,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -79,7 +78,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -109,7 +109,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -121,7 +120,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -151,14 +151,14 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "Gepard_AICounter",
                 "compareType": "=",
                 "value2": 3,
                 "contextScope": "TargetEntity"
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -221,7 +221,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.5,
               "conditions": {
                 "name": "OR",
                 "conditionList": [
@@ -240,7 +239,8 @@ const configAbility = {
                     "contextScope": "TargetEntity"
                   }
                 ]
-              }
+              },
+              "passedValue": 0.5
             }
           ]
         },
@@ -260,7 +260,6 @@ const configAbility = {
           "optionCheck": [
             {
               "name": "Check Ability Use Condition",
-              "passedValue": 0.7,
               "conditions": {
                 "name": "Has Modifier",
                 "target": {
@@ -268,7 +267,8 @@ const configAbility = {
                   "target": "{{Caster}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"53778821\">Enemy_W1_Gepard_M0SpecialVictory</a>"
-              }
+              },
+              "passedValue": 0.7
             }
           ]
         }

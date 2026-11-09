@@ -79,6 +79,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Create Overworld Entity",
+                  "targetSummoner": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "summonID": 11121
                 }
               ]
@@ -130,6 +134,10 @@ const compositeAbilityObject = {
           "onStageEntry": [
             {
               "name": "Create Overworld Entity",
+              "targetSummoner": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "summonID": 11121
             }
           ]
