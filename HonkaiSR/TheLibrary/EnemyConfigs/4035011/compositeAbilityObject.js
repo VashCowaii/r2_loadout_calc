@@ -1066,7 +1066,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Trial Entity"
+                        "compareType": "Trial Entity"
                       },
                       {
                         "name": "Is Entity Special Type",
@@ -1074,7 +1074,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Mission Entity"
+                        "compareType": "Mission Entity"
                       },
                       {
                         "name": "Is Entity Special Type",
@@ -1082,7 +1082,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "type": "Story Entity"
+                        "compareType": "Story Entity"
                       }
                     ]
                   },
