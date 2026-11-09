@@ -3412,10 +3412,7 @@ const compositeAbilityObject = {
                       "P3_ExploreDamagePercentage"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
+                  "DamageType": "AllType"
                 }
               ]
             }

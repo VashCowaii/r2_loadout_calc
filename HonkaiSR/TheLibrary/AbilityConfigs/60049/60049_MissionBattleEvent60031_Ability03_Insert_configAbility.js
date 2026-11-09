@@ -89,10 +89,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 1
         },
@@ -113,10 +110,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 6
         },
@@ -133,10 +127,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 28
         },
@@ -153,10 +144,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 134
         },
@@ -177,10 +165,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 496
         },
@@ -197,10 +182,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 8128
         },
@@ -217,10 +199,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 108642
         },
@@ -241,10 +220,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 2003432
         },
@@ -261,10 +237,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 4000001
         },
@@ -285,10 +258,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 23570000
         },
@@ -305,10 +275,7 @@ const configAbility = {
         "target": "{{Irontomb: Phantom}}"
       },
       "AttackScaling": {
-        "DamageType": {
-          "name": "Damage Type Source",
-          "sourceType": {}
-        },
+        "DamageType": "Damage Type Source",
         "DamageFlat": {
           "displayLines": 33550336
         },

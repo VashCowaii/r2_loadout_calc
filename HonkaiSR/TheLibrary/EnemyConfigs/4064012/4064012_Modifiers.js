@@ -1112,10 +1112,7 @@ const configAbility = {
                   },
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
-                  "ToughnessDMGType": {
-                    "name": "Damage Type Source",
-                    "sourceType": {}
-                  },
+                  "ToughnessDMGType": "Damage Type Source",
                   "bypassBreakMute": true
                 },
                 {
@@ -1126,10 +1123,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "Damage": {
                       "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
                       "displayLines": "MDF_DamagePercentage",
@@ -1735,10 +1729,7 @@ const configAbility = {
                   },
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
-                  "ToughnessDMGType": {
-                    "name": "Damage Type Source",
-                    "sourceType": {}
-                  },
+                  "ToughnessDMGType": "Damage Type Source",
                   "bypassBreakMute": true
                 },
                 {
@@ -3114,10 +3105,7 @@ const configAbility = {
                   },
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
-                  "ToughnessDMGType": {
-                    "name": "Damage Type Source",
-                    "sourceType": {}
-                  }
+                  "ToughnessDMGType": "Damage Type Source"
                 },
                 {
                   "name": "Remove Events/Bonuses",

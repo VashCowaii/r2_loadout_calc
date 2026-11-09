@@ -1171,10 +1171,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": "Quantum"
-                            }
+                            "DamageType": "Quantum"
                           }
                         ]
                       },
@@ -1197,10 +1194,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": "Fire"
-                            }
+                            "DamageType": "Fire"
                           }
                         ]
                       },
@@ -1223,10 +1217,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": "Imaginary"
-                            }
+                            "DamageType": "Imaginary"
                           }
                         ]
                       },
@@ -1249,10 +1240,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": "Physical"
-                            }
+                            "DamageType": "Physical"
                           }
                         ]
                       }

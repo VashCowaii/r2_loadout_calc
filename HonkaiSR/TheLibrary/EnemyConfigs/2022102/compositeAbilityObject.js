@@ -2644,10 +2644,7 @@ const compositeAbilityObject = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "Damage": {
                           "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
                           "displayLines": "MDF_DamageRatio",
@@ -2699,10 +2696,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          },
+                          "ToughnessDMGType": "Damage Type Source",
                           "bypassBreakMute": true
                         }
                       ],
@@ -2727,10 +2721,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         }
                       ]
                     }

@@ -330,10 +330,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "DamageFlat": {
                           "operator": "Variables[0] (MDF_DamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_DamagePercentage * _originalDamage)",

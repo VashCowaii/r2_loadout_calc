@@ -61,10 +61,7 @@ const configAbility = {
               },
               "eatShield": true,
               "attackType": "Level",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Physical"
-              }
+              "DamageType": "Physical"
             }
           ]
         }

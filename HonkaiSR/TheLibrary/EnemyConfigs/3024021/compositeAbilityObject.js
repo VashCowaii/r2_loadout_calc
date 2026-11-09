@@ -1247,10 +1247,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "dmgType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Fire"
-                      },
+                      "dmgType": "Fire",
                       "attackType": "Additional DMG",
                       "damagePrecent": {
                         "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
@@ -1329,10 +1326,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "dmgType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Fire"
-                      },
+                      "dmgType": "Fire",
                       "attackType": "Additional DMG",
                       "damagePrecent": {
                         "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",

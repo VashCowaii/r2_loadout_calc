@@ -152,10 +152,7 @@ const configAbility = {
                     ]
                   },
                   "attackType": "Unknown",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
+                  "DamageType": "Physical"
                 },
                 {
                   "name": "UI Display Event (On Entity)",
@@ -1283,10 +1280,7 @@ const configAbility = {
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
+                  "DamageType": "Physical"
                 }
               ]
             }
@@ -1327,10 +1321,7 @@ const configAbility = {
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
+                  "DamageType": "Physical"
                 }
               ]
             }

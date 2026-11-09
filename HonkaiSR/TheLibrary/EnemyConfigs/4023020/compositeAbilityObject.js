@@ -708,10 +708,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
+                            "DamageType": "Damage Type Source",
                             "DamageFlat": {
                               "operator": "Variables[0] (_MaxHP) || Variables[1] (_MixedMark_LoseHpRatio) || MUL || RETURN",
                               "displayLines": "(_MaxHP * _MixedMark_LoseHpRatio)",

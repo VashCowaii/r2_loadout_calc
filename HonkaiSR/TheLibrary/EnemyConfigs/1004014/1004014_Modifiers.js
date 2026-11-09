@@ -401,10 +401,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "canDelay": true,
-              "ToughnessDMGType": {
-                "name": "Damage Type Source",
-                "sourceType": {}
-              }
+              "ToughnessDMGType": "Damage Type Source"
             },
             {
               "name": "Deal Toughness DMG",
@@ -4964,10 +4961,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "canDelay": true,
-                  "ToughnessDMGType": {
-                    "name": "Damage Type Source",
-                    "sourceType": {}
-                  },
+                  "ToughnessDMGType": "Damage Type Source",
                   "bypassBreakMute": true
                 },
                 {

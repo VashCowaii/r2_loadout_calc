@@ -65,10 +65,7 @@ const configAbility = {
                   "ENEMIES_OBJECT_UNUSED__85"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             }
           ]
         }

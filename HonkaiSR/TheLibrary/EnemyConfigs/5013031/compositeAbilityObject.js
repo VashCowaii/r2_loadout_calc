@@ -2048,10 +2048,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Fire"
-                                },
+                                "DamageType": "Fire",
                                 "invertCondition": true
                               }
                             ]
@@ -2090,10 +2087,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Ice"
-                                },
+                                "DamageType": "Ice",
                                 "invertCondition": true
                               }
                             ]
@@ -2132,10 +2126,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Imaginary"
-                                },
+                                "DamageType": "Imaginary",
                                 "invertCondition": true
                               }
                             ]
@@ -2174,10 +2165,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Physical"
-                                },
+                                "DamageType": "Physical",
                                 "invertCondition": true
                               }
                             ]
@@ -2216,10 +2204,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Quantum"
-                                },
+                                "DamageType": "Quantum",
                                 "invertCondition": true
                               }
                             ]
@@ -2258,10 +2243,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Thunder"
-                                },
+                                "DamageType": "Thunder",
                                 "invertCondition": true
                               }
                             ]
@@ -2300,10 +2282,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Wind"
-                                },
+                                "DamageType": "Wind",
                                 "invertCondition": true
                               }
                             ]

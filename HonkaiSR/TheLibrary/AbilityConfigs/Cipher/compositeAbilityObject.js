@@ -1931,10 +1931,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Physical"
-            }
+            "DamageType": "Physical"
           },
           "passed": [
             {
@@ -1955,10 +1952,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Fire"
-            }
+            "DamageType": "Fire"
           },
           "passed": [
             {
@@ -1979,10 +1973,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Ice"
-            }
+            "DamageType": "Ice"
           },
           "passed": [
             {
@@ -2003,10 +1994,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Thunder"
-            }
+            "DamageType": "Thunder"
           },
           "passed": [
             {
@@ -2027,10 +2015,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Wind"
-            }
+            "DamageType": "Wind"
           },
           "passed": [
             {
@@ -2051,10 +2036,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Quantum"
-            }
+            "DamageType": "Quantum"
           },
           "passed": [
             {
@@ -2075,10 +2057,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Imaginary"
-            }
+            "DamageType": "Imaginary"
           },
           "passed": [
             {
@@ -4567,10 +4546,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -4596,10 +4572,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -4625,10 +4598,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -4654,10 +4624,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -4683,10 +4650,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (SkillP01_FinalDamage) || Constants[0] (0.2) || MUL || Variables[1] (0.25) || MUL || RETURN",
               "displayLines": "((SkillP01_FinalDamage * 0.2) * 0.25)",
@@ -4775,10 +4739,7 @@ const compositeAbilityObject = {
                 ]
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
                   "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",
@@ -4813,10 +4774,7 @@ const compositeAbilityObject = {
                 "target": "{{ST and Blast}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (0.75) || MUL || Variables[2] (S03_Alive_Count) || DIV || RETURN",
                   "displayLines": "((SkillP01_FinalDamage * 0.75) / S03_Alive_Count)",

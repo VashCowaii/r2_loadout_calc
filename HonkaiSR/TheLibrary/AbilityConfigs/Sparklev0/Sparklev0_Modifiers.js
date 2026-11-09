@@ -66,10 +66,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": "Quantum"
-                    }
+                    "DamageType": "Quantum"
                   },
                   {
                     "name": "Is Entity Type",

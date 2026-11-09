@@ -28,10 +28,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] ({[Skill05[0]]}) || Variables[1] (_TargetMaxHp) || MUL || RETURN",
               "displayLines": "({[Skill05[0]]} * _TargetMaxHp)",

@@ -161,10 +161,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Quantum"
-                        }
+                        "DamageType": "Quantum"
                       },
                       {
                         "name": "Has Modifier",
@@ -458,10 +455,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Quantum"
-                        }
+                        "DamageType": "Quantum"
                       },
                       {
                         "name": "Has Modifier",

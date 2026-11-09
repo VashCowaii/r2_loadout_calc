@@ -254,10 +254,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -292,10 +289,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "ATK Scaling DMG",
@@ -358,10 +352,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -396,10 +387,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "ATK Scaling DMG",
@@ -462,10 +450,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -500,10 +485,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "ATK Scaling DMG",
@@ -566,10 +548,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -604,10 +583,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "ATK Scaling DMG",
@@ -670,10 +646,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -708,10 +681,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "ATK Scaling DMG",
@@ -774,10 +744,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Deal Toughness DMG",
@@ -812,10 +779,7 @@ const compositeAbilityObject = {
             ]
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         "Trigger: Attack End",
         {

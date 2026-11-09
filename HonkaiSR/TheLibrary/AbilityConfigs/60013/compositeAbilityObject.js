@@ -461,10 +461,7 @@ const compositeAbilityObject = {
               "consumePercent": 1,
               "consumeFloor": 0.0009999999,
               "attackType": "Ultra",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Imaginary"
-              }
+              "DamageType": "Imaginary"
             }
           ]
         },

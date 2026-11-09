@@ -29,10 +29,7 @@ const configAbility = {
         ]
       },
       "attackType": "Pursued",
-      "DamageType": {
-        "name": "Damage Type Source",
-        "sourceType": "AllType"
-      }
+      "DamageType": "AllType"
     },
     {
       "name": "Deal Toughness DMG",
@@ -50,10 +47,7 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "forceReduction": true,
-      "ToughnessDMGType": {
-        "name": "Damage Type Source",
-        "sourceType": {}
-      }
+      "ToughnessDMGType": "Damage Type Source"
     },
     {
       "name": "Looped Event",

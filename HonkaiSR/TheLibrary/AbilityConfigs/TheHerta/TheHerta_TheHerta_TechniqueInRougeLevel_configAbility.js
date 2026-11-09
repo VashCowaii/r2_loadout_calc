@@ -59,10 +59,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "DamageFlat": {
                           "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
                           "displayLines": "(TargetHP * EliteDamagePercentage)",
@@ -88,10 +85,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "DamageFlat": {
                           "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
                           "displayLines": "(TargetHP * BasicDamagePercentage)",

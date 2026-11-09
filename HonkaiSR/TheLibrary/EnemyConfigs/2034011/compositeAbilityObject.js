@@ -762,10 +762,7 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": {
-                "name": "Damage Type Source",
-                "sourceType": {}
-              }
+              "ToughnessDMGType": "Damage Type Source"
             },
             {
               "name": "IF",
@@ -5727,10 +5724,7 @@ const compositeAbilityObject = {
                   },
                   "consumeFloor": 0.0009999999,
                   "attackType": "DOT",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
+                  "DamageType": "AllType"
                 }
               ]
             },
@@ -5758,10 +5752,7 @@ const compositeAbilityObject = {
                       },
                       "consumeFloor": 0.0009999999,
                       "attackType": "DOT",
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "AllType"
-                      }
+                      "DamageType": "AllType"
                     }
                   ]
                 }

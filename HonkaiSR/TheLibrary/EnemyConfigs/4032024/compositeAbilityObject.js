@@ -167,10 +167,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "attackType": "Unknown",
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Physical"
-                      }
+                      "DamageType": "Physical"
                     },
                     {
                       "name": "UI Display Event (On Entity)",

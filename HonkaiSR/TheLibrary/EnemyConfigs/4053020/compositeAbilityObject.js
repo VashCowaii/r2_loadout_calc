@@ -1531,10 +1531,7 @@ const compositeAbilityObject = {
                   "{[Skill03[4]]}"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             },
             {
               "name": "Find New Target",
@@ -1737,10 +1734,7 @@ const compositeAbilityObject = {
                   "{[Skill03[4]]}"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             }
           ]
         },
@@ -2146,10 +2140,7 @@ const compositeAbilityObject = {
                   "{[Skill03[4]]}"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             },
             {
               "name": "Find New Target",
@@ -2352,10 +2343,7 @@ const compositeAbilityObject = {
                   "{[Skill03[4]]}"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             }
           ]
         },

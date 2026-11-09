@@ -2983,10 +2983,7 @@ const compositeAbilityObject = {
                           },
                           "canPhase": true,
                           "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
+                            "DamageType": "Damage Type Source",
                             "DamageFlat": {
                               "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
                               "displayLines": "(TargetHP * EliteDamagePercentage)",
@@ -3012,10 +3009,7 @@ const compositeAbilityObject = {
                           },
                           "canPhase": true,
                           "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
+                            "DamageType": "Damage Type Source",
                             "DamageFlat": {
                               "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
                               "displayLines": "(TargetHP * BasicDamagePercentage)",
@@ -3074,10 +3068,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Physical"
-            }
+            "DamageType": "Physical"
           },
           "passed": [
             {
@@ -3098,10 +3089,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Fire"
-            }
+            "DamageType": "Fire"
           },
           "passed": [
             {
@@ -3122,10 +3110,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Ice"
-            }
+            "DamageType": "Ice"
           },
           "passed": [
             {
@@ -3146,10 +3131,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Thunder"
-            }
+            "DamageType": "Thunder"
           },
           "passed": [
             {
@@ -3170,10 +3152,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Wind"
-            }
+            "DamageType": "Wind"
           },
           "passed": [
             {
@@ -3194,10 +3173,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Quantum"
-            }
+            "DamageType": "Quantum"
           },
           "passed": [
             {
@@ -3218,10 +3194,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Imaginary"
-            }
+            "DamageType": "Imaginary"
           },
           "passed": [
             {

@@ -1862,10 +1862,7 @@ const compositeAbilityObject = {
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Physical"
-                  }
+                  "DamageType": "Physical"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -6402,10 +6399,7 @@ const compositeAbilityObject = {
               },
               "consumeFloor": 1,
               "attackType": "Unknown",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Physical"
-              }
+              "DamageType": "Physical"
             },
             {
               "name": "Add Events/Bonuses",

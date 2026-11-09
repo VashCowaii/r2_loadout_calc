@@ -2006,10 +2006,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Fire"
-                      }
+                      "DamageType": "Fire"
                     },
                     {
                       "name": "Has Weakness",
@@ -2031,10 +2028,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Ice"
-                      }
+                      "DamageType": "Ice"
                     },
                     {
                       "name": "Has Weakness",
@@ -2056,10 +2050,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     },
                     {
                       "name": "Has Weakness",
@@ -2081,10 +2072,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Quantum"
-                      }
+                      "DamageType": "Quantum"
                     },
                     {
                       "name": "Has Weakness",
@@ -2106,10 +2094,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Physical"
-                      }
+                      "DamageType": "Physical"
                     },
                     {
                       "name": "Has Weakness",
@@ -2131,10 +2116,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Thunder"
-                      }
+                      "DamageType": "Thunder"
                     },
                     {
                       "name": "Has Weakness",
@@ -2156,10 +2138,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Wind"
-                      }
+                      "DamageType": "Wind"
                     },
                     {
                       "name": "Has Weakness",
@@ -2199,10 +2178,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Fire"
-                        }
+                        "DamageType": "Fire"
                       },
                       {
                         "name": "Has Weakness",
@@ -2239,10 +2215,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Ice"
-                        }
+                        "DamageType": "Ice"
                       },
                       {
                         "name": "Has Weakness",
@@ -2279,10 +2252,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Imaginary"
-                        }
+                        "DamageType": "Imaginary"
                       },
                       {
                         "name": "Has Weakness",
@@ -2319,10 +2289,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Quantum"
-                        }
+                        "DamageType": "Quantum"
                       },
                       {
                         "name": "Has Weakness",
@@ -2359,10 +2326,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Physical"
-                        }
+                        "DamageType": "Physical"
                       },
                       {
                         "name": "Has Weakness",
@@ -2399,10 +2363,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Thunder"
-                        }
+                        "DamageType": "Thunder"
                       },
                       {
                         "name": "Has Weakness",
@@ -2439,10 +2400,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Wind"
-                        }
+                        "DamageType": "Wind"
                       },
                       {
                         "name": "Has Weakness",

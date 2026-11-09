@@ -401,10 +401,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "canDelay": true,
-              "ToughnessDMGType": {
-                "name": "Damage Type Source",
-                "sourceType": {}
-              }
+              "ToughnessDMGType": "Damage Type Source"
             },
             {
               "name": "Deal Toughness DMG",

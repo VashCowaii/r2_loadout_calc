@@ -529,10 +529,7 @@ const configAbility = {
                       "MDF_LoseHP"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Fire"
-                  }
+                  "DamageType": "Fire"
                 },
                 {
                   "name": "Define Custom Variable",

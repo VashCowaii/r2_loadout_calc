@@ -172,10 +172,7 @@ const configAbility = {
                       "LoopCount"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
+                  "DamageType": "Imaginary"
                 }
               ]
             }
@@ -210,10 +207,7 @@ const configAbility = {
                       "LoopCount"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
+                  "DamageType": "Imaginary"
                 }
               ]
             }
@@ -248,10 +242,7 @@ const configAbility = {
                       "LoopCount"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
+                  "DamageType": "Imaginary"
                 }
               ]
             },
@@ -271,10 +262,7 @@ const configAbility = {
                   "LoopCount"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Imaginary"
-              }
+              "DamageType": "Imaginary"
             }
           ]
         }

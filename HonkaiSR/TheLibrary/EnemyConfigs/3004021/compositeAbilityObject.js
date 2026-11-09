@@ -5448,10 +5448,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 }
@@ -5486,10 +5483,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 }
@@ -5524,10 +5518,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 },
@@ -5547,10 +5538,7 @@ const compositeAbilityObject = {
                       "LoopCount"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
+                  "DamageType": "Imaginary"
                 }
               ]
             }

@@ -80,10 +80,7 @@ const configAbility = {
               "{[SkillEX03[1]]}"
             ]
           },
-          "DamageType": {
-            "name": "Damage Type Source",
-            "sourceType": "AllType"
-          }
+          "DamageType": "AllType"
         },
         {
           "name": "Exit Broken-State",

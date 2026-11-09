@@ -37,10 +37,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -83,10 +80,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -136,10 +130,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -182,10 +173,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -228,10 +216,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                   "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",

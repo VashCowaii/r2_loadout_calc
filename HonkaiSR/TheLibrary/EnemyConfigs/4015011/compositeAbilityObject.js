@@ -1247,10 +1247,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "AttackScaling": {
-                            "DamageType": {
-                              "name": "Damage Type Source",
-                              "sourceType": {}
-                            },
+                            "DamageType": "Damage Type Source",
                             "Damage": {
                               "operator": "Variables[0] (MDF_TotalDamageRatio) || Variables[1] (MDF_DamagePercentage) || MUL || RETURN",
                               "displayLines": "(MDF_TotalDamageRatio * MDF_DamagePercentage)",
@@ -1638,10 +1635,7 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": {
-                        "name": "Damage Type Source",
-                        "sourceType": {}
-                      }
+                      "ToughnessDMGType": "Damage Type Source"
                     }
                   ]
                 }
@@ -1942,10 +1936,7 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": {
-                        "name": "Damage Type Source",
-                        "sourceType": {}
-                      }
+                      "ToughnessDMGType": "Damage Type Source"
                     }
                   ]
                 }
@@ -5653,10 +5644,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -5684,10 +5672,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         }
                       ]
                     }
@@ -5989,10 +5974,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -6020,10 +6002,7 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         }
                       ]
                     }

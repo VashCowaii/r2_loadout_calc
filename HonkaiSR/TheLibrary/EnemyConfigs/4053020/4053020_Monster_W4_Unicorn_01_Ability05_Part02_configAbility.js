@@ -348,10 +348,7 @@ const configAbility = {
               "{[Skill03[4]]}"
             ]
           },
-          "DamageType": {
-            "name": "Damage Type Source",
-            "sourceType": "AllType"
-          }
+          "DamageType": "AllType"
         },
         {
           "name": "Find New Target",
@@ -554,10 +551,7 @@ const configAbility = {
               "{[Skill03[4]]}"
             ]
           },
-          "DamageType": {
-            "name": "Damage Type Source",
-            "sourceType": "AllType"
-          }
+          "DamageType": "AllType"
         }
       ]
     },

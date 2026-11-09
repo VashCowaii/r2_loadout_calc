@@ -5466,10 +5466,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 }
@@ -5504,10 +5501,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 }
@@ -5542,10 +5536,7 @@ const compositeAbilityObject = {
                           "LoopCount"
                         ]
                       },
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Imaginary"
-                      }
+                      "DamageType": "Imaginary"
                     }
                   ]
                 },
@@ -5565,10 +5556,7 @@ const compositeAbilityObject = {
                       "LoopCount"
                     ]
                   },
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Imaginary"
-                  }
+                  "DamageType": "Imaginary"
                 }
               ]
             }
@@ -5785,10 +5773,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             },
             {
               "name": "Exit Broken-State",

@@ -727,10 +727,7 @@ const configAbility = {
                   },
                   "canPhase": true,
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "Damage": {
                       "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
                       "displayLines": "{[Skill03[3]]}",

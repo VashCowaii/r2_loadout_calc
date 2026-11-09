@@ -61,10 +61,7 @@ const configAbility = {
               },
               "consumeFloor": 0.0009999999,
               "attackType": "DOT",
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "AllType"
-              }
+              "DamageType": "AllType"
             }
           ]
         },
@@ -92,10 +89,7 @@ const configAbility = {
                   },
                   "consumeFloor": 0.0009999999,
                   "attackType": "DOT",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "AllType"
-                  }
+                  "DamageType": "AllType"
                 }
               ]
             }

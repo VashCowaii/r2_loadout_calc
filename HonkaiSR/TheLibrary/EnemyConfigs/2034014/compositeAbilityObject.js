@@ -2313,10 +2313,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Fire"
-                        }
+                        "DamageType": "Fire"
                       },
                       "passed": [
                         {
@@ -2351,10 +2348,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Thunder"
-                        }
+                        "DamageType": "Thunder"
                       },
                       "passed": [
                         {
@@ -2389,10 +2383,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Ice"
-                        }
+                        "DamageType": "Ice"
                       },
                       "passed": [
                         {
@@ -2427,10 +2418,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Wind"
-                        }
+                        "DamageType": "Wind"
                       },
                       "passed": [
                         {
@@ -2465,10 +2453,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Physical"
-                        }
+                        "DamageType": "Physical"
                       },
                       "passed": [
                         {
@@ -2503,10 +2488,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Imaginary"
-                        }
+                        "DamageType": "Imaginary"
                       },
                       "passed": [
                         {
@@ -2541,10 +2523,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": "Quantum"
-                        }
+                        "DamageType": "Quantum"
                       },
                       "passed": [
                         {
@@ -4575,10 +4554,7 @@ const compositeAbilityObject = {
             ]
           },
           "attackType": "Pursued",
-          "DamageType": {
-            "name": "Damage Type Source",
-            "sourceType": "AllType"
-          }
+          "DamageType": "AllType"
         },
         {
           "name": "Deal Toughness DMG",
@@ -4596,10 +4572,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "forceReduction": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          }
+          "ToughnessDMGType": "Damage Type Source"
         },
         {
           "name": "Looped Event",
@@ -5941,10 +5914,7 @@ const compositeAbilityObject = {
                       },
                       "roundDMG": true,
                       "attackType": "Pursued",
-                      "DamageType": {
-                        "name": "Damage Type Source",
-                        "sourceType": "Thunder"
-                      }
+                      "DamageType": "Thunder"
                     },
                     {
                       "name": "Remove Events/Bonuses",

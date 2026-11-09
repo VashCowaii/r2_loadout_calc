@@ -787,10 +787,7 @@ const configAbility = {
                   },
                   "roundDMG": true,
                   "attackType": "Pursued",
-                  "DamageType": {
-                    "name": "Damage Type Source",
-                    "sourceType": "Thunder"
-                  }
+                  "DamageType": "Thunder"
                 },
                 {
                   "name": "Remove Events/Bonuses",

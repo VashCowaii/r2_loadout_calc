@@ -89,10 +89,7 @@ const configAbility = {
                           "name": "Deal Toughness DMG",
                           "value": 60,
                           "forceReduction": true,
-                          "ToughnessDMGType": {
-                            "name": "Damage Type Source",
-                            "sourceType": {}
-                          }
+                          "ToughnessDMGType": "Damage Type Source"
                         },
                         {
                           "name": "IF",

@@ -982,10 +982,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Physical"
-            }
+            "DamageType": "Physical"
           },
           "passed": [
             {
@@ -1006,10 +1003,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Fire"
-            }
+            "DamageType": "Fire"
           },
           "passed": [
             {
@@ -1030,10 +1024,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Ice"
-            }
+            "DamageType": "Ice"
           },
           "passed": [
             {
@@ -1054,10 +1045,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Thunder"
-            }
+            "DamageType": "Thunder"
           },
           "passed": [
             {
@@ -1078,10 +1066,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Wind"
-            }
+            "DamageType": "Wind"
           },
           "passed": [
             {
@@ -1102,10 +1087,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Quantum"
-            }
+            "DamageType": "Quantum"
           },
           "passed": [
             {
@@ -1126,10 +1108,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": "Imaginary"
-            }
+            "DamageType": "Imaginary"
           },
           "passed": [
             {
@@ -1562,8 +1541,8 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": {
               "name": "Damage Type Source",
-              "sourceType": "ReadTargetType",
-              "target": {
+              "sourceTarget": "ReadTargetType",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Bondmate}}"
               }
@@ -1642,8 +1621,8 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": {
                   "name": "Damage Type Source",
-                  "sourceType": "ReadTargetType",
-                  "target": {
+                  "sourceTarget": "ReadTargetType",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Bondmate}}"
                   }
@@ -1708,8 +1687,8 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
-                          "sourceType": "ReadTargetType",
-                          "target": {
+                          "sourceTarget": "ReadTargetType",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Bondmate}}"
                           }
@@ -2649,8 +2628,8 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": {
                       "name": "Damage Type Source",
-                      "sourceType": "ReadTargetType",
-                      "target": {
+                      "sourceTarget": "ReadTargetType",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Bondmate}}"
                       }

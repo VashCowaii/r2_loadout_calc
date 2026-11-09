@@ -327,10 +327,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 1
             },
@@ -351,10 +348,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 6
             },
@@ -371,10 +365,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 28
             },
@@ -391,10 +382,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 134
             },
@@ -415,10 +403,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 496
             },
@@ -435,10 +420,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 8128
             },
@@ -455,10 +437,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 108642
             },
@@ -479,10 +458,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 2003432
             },
@@ -499,10 +475,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 4000001
             },
@@ -523,10 +496,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 23570000
             },
@@ -543,10 +513,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 33550336
             },
@@ -779,10 +746,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 1
             },
@@ -803,10 +767,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 6
             },
@@ -823,10 +784,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 28
             },
@@ -843,10 +801,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 134
             },
@@ -867,10 +822,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 496
             },
@@ -887,10 +839,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 8128
             },
@@ -907,10 +856,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 108642
             },
@@ -931,10 +877,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 2003432
             },
@@ -951,10 +894,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 4000001
             },
@@ -975,10 +915,7 @@ const compositeAbilityObject = {
             "target": "{{Irontomb: Phantom}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "displayLines": 23570000
             },
@@ -1004,10 +941,7 @@ const compositeAbilityObject = {
                 "target": "{{Irontomb: Phantom}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "displayLines": 33550336
                 },
@@ -1026,10 +960,7 @@ const compositeAbilityObject = {
                 "target": "{{Irontomb: Phantom}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "displayLines": 33550336
                 },
@@ -1222,10 +1153,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "DamageFlat": {
                       "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                       "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -1268,10 +1196,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "DamageFlat": {
                       "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                       "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -1321,10 +1246,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "DamageFlat": {
                       "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                       "displayLines": "((_MaxHp * {[Skill03[0]]}) / 5)",
@@ -1367,10 +1289,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "DamageFlat": {
                       "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                       "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",
@@ -1413,10 +1332,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "AttackScaling": {
-                    "DamageType": {
-                      "name": "Damage Type Source",
-                      "sourceType": {}
-                    },
+                    "DamageType": "Damage Type Source",
                     "DamageFlat": {
                       "operator": "Variables[0] (_MaxHp) || Variables[1] ({[Skill03[2]]}) || MUL || Constants[0] (5) || DIV || RETURN",
                       "displayLines": "((_MaxHp * {[Skill03[2]]}) / 5)",

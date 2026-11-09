@@ -711,10 +711,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Physical"
-                }
+                "DamageType": "Physical"
               },
               "passed": [
                 {
@@ -736,10 +733,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Fire"
-                }
+                "DamageType": "Fire"
               },
               "passed": [
                 {
@@ -761,10 +755,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Ice"
-                }
+                "DamageType": "Ice"
               },
               "passed": [
                 {
@@ -786,10 +777,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Thunder"
-                }
+                "DamageType": "Thunder"
               },
               "passed": [
                 {
@@ -811,10 +799,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Wind"
-                }
+                "DamageType": "Wind"
               },
               "passed": [
                 {
@@ -836,10 +821,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Quantum"
-                }
+                "DamageType": "Quantum"
               },
               "passed": [
                 {
@@ -861,10 +843,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": "Imaginary"
-                }
+                "DamageType": "Imaginary"
               },
               "passed": [
                 {

@@ -29,10 +29,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          },
+          "ToughnessDMGType": "Damage Type Source",
           "bypassBreakMute": true
         }
       ],
@@ -52,10 +49,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "canDelay": true,
-          "ToughnessDMGType": {
-            "name": "Damage Type Source",
-            "sourceType": {}
-          },
+          "ToughnessDMGType": "Damage Type Source",
           "bypassBreakMute": true
         }
       ]

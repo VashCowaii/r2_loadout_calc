@@ -85,10 +85,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
               "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
@@ -146,10 +143,7 @@ const configAbility = {
             "target": "{{Parameter Target}}"
           },
           "AttackScaling": {
-            "DamageType": {
-              "name": "Damage Type Source",
-              "sourceType": {}
-            },
+            "DamageType": "Damage Type Source",
             "DamageFlat": {
               "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
               "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",

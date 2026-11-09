@@ -871,10 +871,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "DamageFlat": {
                           "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",
@@ -1062,10 +1059,7 @@ const configAbility = {
                       },
                       "canPhase": true,
                       "AttackScaling": {
-                        "DamageType": {
-                          "name": "Damage Type Source",
-                          "sourceType": {}
-                        },
+                        "DamageType": "Damage Type Source",
                         "DamageFlat": {
                           "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",

@@ -1688,10 +1688,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Quantum"
-                                }
+                                "DamageType": "Quantum"
                               }
                             ]
                           },
@@ -1714,10 +1711,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Fire"
-                                }
+                                "DamageType": "Fire"
                               }
                             ]
                           },
@@ -1740,10 +1734,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Imaginary"
-                                }
+                                "DamageType": "Imaginary"
                               }
                             ]
                           },
@@ -1766,10 +1757,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": {
-                                  "name": "Damage Type Source",
-                                  "sourceType": "Physical"
-                                }
+                                "DamageType": "Physical"
                               }
                             ]
                           }

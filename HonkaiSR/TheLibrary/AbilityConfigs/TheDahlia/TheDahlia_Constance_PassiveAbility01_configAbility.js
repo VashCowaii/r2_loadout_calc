@@ -247,10 +247,7 @@ const configAbility = {
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
                   "livingState": "Mask_AliveOrLimbo",
-                  "ToughnessDMGType": {
-                    "name": "Damage Type Source",
-                    "sourceType": {}
-                  }
+                  "ToughnessDMGType": "Damage Type Source"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -395,8 +392,8 @@ const configAbility = {
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
-                          "sourceType": "ReadTargetType",
-                          "target": {
+                          "sourceTarget": "ReadTargetType",
+                          "readTarget": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           }

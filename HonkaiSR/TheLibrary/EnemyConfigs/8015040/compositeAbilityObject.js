@@ -4921,10 +4921,7 @@ const compositeAbilityObject = {
               },
               "consumePercent": 1,
               "roundDMG": true,
-              "DamageType": {
-                "name": "Damage Type Source",
-                "sourceType": "Quantum"
-              }
+              "DamageType": "Quantum"
             }
           ]
         },

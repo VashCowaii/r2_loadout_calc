@@ -83,10 +83,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "AttackScaling": {
-                "DamageType": {
-                  "name": "Damage Type Source",
-                  "sourceType": {}
-                },
+                "DamageType": "Damage Type Source",
                 "DamageFlat": {
                   "operator": "Variables[0] (MDF_Eidolon6_DamageValue) || RETURN",
                   "displayLines": "MDF_Eidolon6_DamageValue",

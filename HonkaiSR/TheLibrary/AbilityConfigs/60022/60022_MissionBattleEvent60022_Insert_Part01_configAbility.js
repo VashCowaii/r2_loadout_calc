@@ -58,10 +58,7 @@ const configAbility = {
       "consumePercent": 0.1,
       "consumeFloor": 1,
       "attackType": "Pursued",
-      "DamageType": {
-        "name": "Damage Type Source",
-        "sourceType": "Physical"
-      }
+      "DamageType": "Physical"
     },
     {
       "name": "Add Events/Bonuses",
