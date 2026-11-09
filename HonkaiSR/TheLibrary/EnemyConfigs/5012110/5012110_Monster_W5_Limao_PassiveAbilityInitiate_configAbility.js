@@ -89,12 +89,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 11415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "characterName": null
+                    "characterID": 11415
                   },
                   {
                     "name": "Has Turn-State",
@@ -1110,12 +1109,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1208,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Fu Xuan"
+                            "characterID": "1208 (Fu Xuan)"
                           }
                         ]
                       },
@@ -1147,12 +1145,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1223,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Moze"
+                            "characterID": "1223 (Moze)"
                           }
                         ]
                       },
@@ -1184,12 +1181,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1414,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Dan Heng • Permansor Terrae"
+                            "characterID": "1414 (Dan Heng • Permansor Terrae)"
                           }
                         ]
                       },
@@ -1221,49 +1217,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1212,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Jingliu"
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "variableName": "_Seconds",
-                          "value": 0.1
-                        },
-                        {
-                          "name": "Define Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Level Entity}}"
-                          },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Character ID",
-                            "ID": 1220,
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Parameter Target}}"
-                            },
-                            "characterName": "Feixiao"
+                            "characterID": "1212 (Jingliu)"
                           }
                         ]
                       },
@@ -1295,12 +1253,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1308,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Acheron"
+                            "characterID": "1220 (Feixiao)"
                           }
                         ]
                       },
@@ -1332,12 +1289,47 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1314,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Jade"
+                            "characterID": "1308 (Acheron)"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "variableName": "_Seconds",
+                          "value": 0.1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "variableName": "_SpecialPhoto",
+                          "value": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "characterID": "1314 (Jade)"
                           }
                         ]
                       },
@@ -1369,12 +1361,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1005,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Kafka"
+                            "characterID": "1005 (Kafka)"
                           }
                         ]
                       },
@@ -1406,21 +1397,19 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8007,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Trailblazer - Remembrance[M]"
+                            "characterID": "8007 (Trailblazer - Remembrance[M])"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8008,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Trailblazer - Remembrance[F]"
+                            "characterID": "8008 (Trailblazer - Remembrance[F])"
                           }
                         ]
                       },
@@ -1452,12 +1441,11 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1510,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Himeko • Nova"
+                            "characterID": "1510 (Himeko • Nova)"
                           }
                         ]
                       },

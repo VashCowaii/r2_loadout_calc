@@ -944,21 +944,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8003,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Preservation[M]"
+                        "characterID": "8003 (Trailblazer - Preservation[M])"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8004,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Preservation[F]"
+                        "characterID": "8004 (Trailblazer - Preservation[F])"
                       }
                     ]
                   },
@@ -1003,21 +1001,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8003,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Preservation[M]"
+                        "characterID": "8003 (Trailblazer - Preservation[M])"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8004,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Preservation[F]"
+                        "characterID": "8004 (Trailblazer - Preservation[F])"
                       }
                     ]
                   },

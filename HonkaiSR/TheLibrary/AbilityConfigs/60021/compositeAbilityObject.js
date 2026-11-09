@@ -878,21 +878,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8007,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Trailblazer - Remembrance[M]"
+                        "characterID": "8007 (Trailblazer - Remembrance[M])"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8008,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Trailblazer - Remembrance[F]"
+                        "characterID": "8008 (Trailblazer - Remembrance[F])"
                       }
                     ]
                   },
@@ -1142,12 +1140,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1205,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Blade"
+                        "characterID": "1205 (Blade)"
                       },
                       "passed": [
                         {
@@ -1194,21 +1191,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8007,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Trailblazer - Remembrance[M]"
+                            "characterID": "8007 (Trailblazer - Remembrance[M])"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8008,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Trailblazer - Remembrance[F]"
+                            "characterID": "8008 (Trailblazer - Remembrance[F])"
                           }
                         ]
                       },
@@ -1254,12 +1249,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1005,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Kafka"
+                        "characterID": "1005 (Kafka)"
                       },
                       "passed": [
                         {
@@ -1303,12 +1297,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1310,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Firefly"
+                        "characterID": "1310 (Firefly)"
                       },
                       "passed": [
                         {
@@ -1402,12 +1395,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 18007,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": null
+            "characterID": 18007
           },
           "ifTargetFound": [
             {

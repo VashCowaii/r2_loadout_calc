@@ -54,21 +54,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1407,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Castorice"
+                        "characterID": "1407 (Castorice)"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1407,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}.[[getSummoner]]"
                         },
-                        "characterName": "Castorice"
+                        "characterID": "1407 (Castorice)"
                       }
                     ]
                   },

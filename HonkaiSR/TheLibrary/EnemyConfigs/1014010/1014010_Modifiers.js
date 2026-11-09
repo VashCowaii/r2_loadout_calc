@@ -705,12 +705,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1310,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "characterName": "Firefly"
+                "characterID": "1310 (Firefly)"
               }
             },
             {

@@ -2814,12 +2814,11 @@ const compositeAbilityObject = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": "MainLine_Character_1",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": "MainLine_Character_1"
                   },
                   "ifTargetFound": [
                     {
@@ -2860,12 +2859,11 @@ const compositeAbilityObject = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": "MainLine_Character_2",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": "MainLine_Character_2"
                   },
                   "ifTargetFound": [
                     {

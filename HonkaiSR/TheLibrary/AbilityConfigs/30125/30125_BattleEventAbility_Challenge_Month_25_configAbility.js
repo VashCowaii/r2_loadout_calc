@@ -199,12 +199,11 @@ const configAbility = {
                     "name": "NOT",
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 800205000,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": null
+                      "characterID": 800205000
                     }
                   },
                   "noTargetFound": [

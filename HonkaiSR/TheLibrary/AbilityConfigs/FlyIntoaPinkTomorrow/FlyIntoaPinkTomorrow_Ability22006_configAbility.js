@@ -132,21 +132,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 8007,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Trailblazer - Remembrance[M]"
+                    "characterID": "8007 (Trailblazer - Remembrance[M])"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 8008,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Trailblazer - Remembrance[F]"
+                    "characterID": "8008 (Trailblazer - Remembrance[F])"
                   }
                 ]
               },

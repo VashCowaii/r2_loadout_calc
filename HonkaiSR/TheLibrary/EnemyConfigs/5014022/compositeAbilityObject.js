@@ -4324,21 +4324,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 6039,
                         "target": {
                           "name": "Add Target by Unique Identifier",
                           "identifier": "Activity_FateRin_ServantAvatar"
                         },
-                        "characterName": null
+                        "characterID": 6039
                       },
                       {
                         "name": "Character ID",
-                        "ID": 6040,
                         "target": {
                           "name": "Add Target by Unique Identifier",
                           "identifier": "Activity_FateRin_ServantAvatar"
                         },
-                        "characterName": null
+                        "characterID": 6040
                       }
                     ]
                   },
@@ -4353,12 +4351,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 6041,
                     "target": {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "Activity_FateRin_ServantAvatar"
                     },
-                    "characterName": null
+                    "characterID": 6041
                   },
                   "passed": [
                     {
@@ -4371,12 +4368,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 6037,
                     "target": {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "Activity_FateRin_ServantAvatar"
                     },
-                    "characterName": null
+                    "characterID": 6037
                   },
                   "passed": [
                     {
@@ -4389,12 +4385,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 6036,
                     "target": {
                       "name": "Add Target by Unique Identifier",
                       "identifier": "Activity_FateRin_ServantAvatar"
                     },
-                    "characterName": null
+                    "characterID": 6036
                   },
                   "passed": [
                     {

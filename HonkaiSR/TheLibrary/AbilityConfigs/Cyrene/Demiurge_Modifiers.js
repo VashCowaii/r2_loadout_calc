@@ -107,12 +107,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1414,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Dan Heng • Permansor Terrae"
+                "characterID": "1414 (Dan Heng • Permansor Terrae)"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -489,12 +488,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -570,12 +568,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 {
@@ -646,12 +643,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -1302,12 +1298,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -1398,12 +1393,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 "Modifier Deletes Itself"
@@ -1544,12 +1538,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "passed": [
                 "Modifier Deletes Itself"

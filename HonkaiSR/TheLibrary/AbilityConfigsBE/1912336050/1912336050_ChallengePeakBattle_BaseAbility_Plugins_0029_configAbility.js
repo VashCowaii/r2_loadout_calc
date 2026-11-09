@@ -64,12 +64,11 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 503401000,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 503401000
                   }
                 ]
               },

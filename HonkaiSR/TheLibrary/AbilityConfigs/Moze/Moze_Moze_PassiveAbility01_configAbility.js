@@ -198,12 +198,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1223,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Moze",
+                    "characterID": "1223 (Moze)",
                     "invertCondition": true
                   },
                   {
@@ -299,12 +298,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1223,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Moze",
+                    "characterID": "1223 (Moze)",
                     "invertCondition": true
                   },
                   {
@@ -376,12 +374,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1223,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Moze",
+                    "characterID": "1223 (Moze)",
                     "invertCondition": true
                   },
                   {
@@ -508,12 +505,11 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1223,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Moze",
+                        "characterID": "1223 (Moze)",
                         "invertCondition": true
                       },
                       {
@@ -589,12 +585,11 @@ const configAbility = {
               "includeDyingTargets": true,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1223,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Moze",
+                "characterID": "1223 (Moze)",
                 "invertCondition": true
               },
               "ifTargetFound": [
@@ -674,12 +669,11 @@ const configAbility = {
               "includeDyingTargets": true,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1223,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Moze",
+                "characterID": "1223 (Moze)",
                 "invertCondition": true
               },
               "ifTargetFound": [

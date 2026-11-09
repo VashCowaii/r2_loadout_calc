@@ -2079,12 +2079,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1508,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Rin Tohsaka"
+                  "characterID": "1508 (Rin Tohsaka)"
                 }
               },
               {

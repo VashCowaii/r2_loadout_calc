@@ -136,21 +136,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 5024010,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 5024010
                       },
                       {
                         "name": "Character ID",
-                        "ID": 5022010,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 5022010
                       }
                     ]
                   }

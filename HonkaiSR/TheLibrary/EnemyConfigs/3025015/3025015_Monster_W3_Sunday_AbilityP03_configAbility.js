@@ -80,12 +80,11 @@ const configAbility = {
       "maxTargets": 1,
       "conditions": {
         "name": "Character ID",
-        "ID": 1001,
         "target": {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "characterName": "March 7th"
+        "characterID": "1001 (March 7th)"
       },
       "ifTargetFound": [
         {

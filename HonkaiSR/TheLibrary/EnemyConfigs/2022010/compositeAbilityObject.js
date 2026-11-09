@@ -923,12 +923,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1002,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Dan Heng"
+                    "characterID": "1002 (Dan Heng)"
                   },
                   "failed": [
                     "Modifier Deletes Itself"
@@ -978,12 +977,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1206,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Sushang"
+                    "characterID": "1206 (Sushang)"
                   },
                   "failed": [
                     "Modifier Deletes Itself"

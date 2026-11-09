@@ -396,12 +396,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1220,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "characterName": "Feixiao"
+                "characterID": "1220 (Feixiao)"
               },
               "passed": [
                 {
@@ -2064,12 +2063,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1220,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Feixiao"
+                "characterID": "1220 (Feixiao)"
               },
               "passed": [
                 {
@@ -2328,12 +2326,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1220,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Feixiao"
+                "characterID": "1220 (Feixiao)"
               }
             }
           ]
@@ -2411,12 +2408,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   },
                   {
                     "name": "Has Modifier",
@@ -2449,12 +2445,11 @@ const configAbility = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1220,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Feixiao"
+                "characterID": "1220 (Feixiao)"
               },
               "ifTargetFound": [
                 {
@@ -2594,12 +2589,11 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   },
                   "ifTargetFound": [
                     {
@@ -2638,12 +2632,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   },
                   {
                     "name": "Has Modifier",

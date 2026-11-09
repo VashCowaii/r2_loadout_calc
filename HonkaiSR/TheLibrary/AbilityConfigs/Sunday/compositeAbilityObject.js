@@ -592,30 +592,27 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1204,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Jing Yuan"
+                        "characterID": "1204 (Jing Yuan)"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1222,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Lingsha"
+                        "characterID": "1222 (Lingsha)"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1112,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Topaz & Numby"
+                        "characterID": "1112 (Topaz & Numby)"
                       }
                     ]
                   },
@@ -654,30 +651,27 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1204,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Jing Yuan"
+                            "characterID": "1204 (Jing Yuan)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1222,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Lingsha"
+                            "characterID": "1222 (Lingsha)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1112,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Topaz & Numby"
+                            "characterID": "1112 (Topaz & Numby)"
                           }
                         ],
                         "invertCondition": true
@@ -710,30 +704,27 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1204,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Jing Yuan"
+                            "characterID": "1204 (Jing Yuan)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1222,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Lingsha"
+                            "characterID": "1222 (Lingsha)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1112,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Topaz & Numby"
+                            "characterID": "1112 (Topaz & Numby)"
                           }
                         ],
                         "invertCondition": true
@@ -766,30 +757,27 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1204,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Jing Yuan"
+                            "characterID": "1204 (Jing Yuan)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1222,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Lingsha"
+                            "characterID": "1222 (Lingsha)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1112,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Topaz & Numby"
+                            "characterID": "1112 (Topaz & Numby)"
                           }
                         ],
                         "invertCondition": true
@@ -1648,21 +1636,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1204,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Jing Yuan"
+                        "characterID": "1204 (Jing Yuan)"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1112,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Topaz & Numby"
+                        "characterID": "1112 (Topaz & Numby)"
                       }
                     ]
                   },
@@ -1751,21 +1737,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1204,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Jing Yuan"
+                        "characterID": "1204 (Jing Yuan)"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1112,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Topaz & Numby"
+                        "characterID": "1112 (Topaz & Numby)"
                       }
                     ]
                   },

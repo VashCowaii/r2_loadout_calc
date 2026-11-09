@@ -1085,12 +1085,11 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1415,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Cyrene",
+                        "characterID": "1415 (Cyrene)",
                         "invertCondition": true
                       },
                       "ifTargetFound": [
@@ -1225,12 +1224,11 @@ const compositeAbilityObject = {
                       "maxTargets": 2,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1415,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Cyrene",
+                        "characterID": "1415 (Cyrene)",
                         "invertCondition": true
                       },
                       "ifTargetFound": [
@@ -1313,12 +1311,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1415,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Cyrene",
+                            "characterID": "1415 (Cyrene)",
                             "invertCondition": true
                           },
                           {

@@ -4566,12 +4566,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1409,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Hyacine"
+            "characterID": "1409 (Hyacine)"
           }
         }
       ],

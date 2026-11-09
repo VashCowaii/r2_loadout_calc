@@ -970,12 +970,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 6024,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6024
                   },
                   {
                     "name": "Compare: Variable",
@@ -1012,12 +1011,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 6024,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6024
                   },
                   {
                     "name": "Compare: Variable",
@@ -1054,12 +1052,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 6024,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6024
                   },
                   {
                     "name": "Compare: Variable",

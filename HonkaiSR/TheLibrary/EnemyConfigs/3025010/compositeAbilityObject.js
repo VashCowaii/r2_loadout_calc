@@ -65,12 +65,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1313,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Sunday"
+                    "characterID": "1313 (Sunday)"
                   },
                   "passed": [
                     {
@@ -4836,21 +4835,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8005,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Harmony[M]"
+                        "characterID": "8005 (Trailblazer - Harmony[M])"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8006,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Harmony[F]"
+                        "characterID": "8006 (Trailblazer - Harmony[F])"
                       }
                     ]
                   },
@@ -6714,12 +6711,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1001,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "March 7th"
+                            "characterID": "1001 (March 7th)"
                           },
                           "ifTargetFound": [
                             {
@@ -6758,12 +6754,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1002,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Dan Heng"
+                            "characterID": "1002 (Dan Heng)"
                           },
                           "ifTargetFound": [
                             {
@@ -6802,12 +6797,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1004,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Welt"
+                            "characterID": "1004 (Welt)"
                           },
                           "ifTargetFound": [
                             {
@@ -6846,12 +6840,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1003,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Himeko"
+                            "characterID": "1003 (Himeko)"
                           },
                           "ifTargetFound": [
                             {

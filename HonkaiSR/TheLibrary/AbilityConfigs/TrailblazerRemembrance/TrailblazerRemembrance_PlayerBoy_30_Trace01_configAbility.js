@@ -36,12 +36,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": "ServantID",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": "ServantID"
                   },
                   {
                     "name": "Compare: Target",

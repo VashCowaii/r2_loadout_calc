@@ -88,39 +88,35 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Character ID",
-                "ID": 1001,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "March 7th"
+                "characterID": "1001 (March 7th)"
               },
               {
                 "name": "Character ID",
-                "ID": 1101,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Bronya"
+                "characterID": "1101 (Bronya)"
               },
               {
                 "name": "Character ID",
-                "ID": 1105,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Natasha"
+                "characterID": "1105 (Natasha)"
               },
               {
                 "name": "Character ID",
-                "ID": 1203,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Luocha"
+                "characterID": "1203 (Luocha)"
               }
             ]
           },

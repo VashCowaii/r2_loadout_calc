@@ -442,12 +442,11 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   },
                   "ifTargetFound": [
                     {

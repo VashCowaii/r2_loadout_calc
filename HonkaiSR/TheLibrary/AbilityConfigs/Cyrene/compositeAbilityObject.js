@@ -1221,12 +1221,11 @@ const compositeAbilityObject = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "ifTargetFound": [
                     {
@@ -2160,12 +2159,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 11415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 11415
                   },
                   "passed": [
                     {
@@ -2324,12 +2322,11 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1408,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Phainon"
+                        "characterID": "1408 (Phainon)"
                       },
                       "ifTargetFound": [
                         {
@@ -4152,12 +4149,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1414,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Dan Heng • Permansor Terrae"
+                    "characterID": "1414 (Dan Heng • Permansor Terrae)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -4534,12 +4530,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -4615,12 +4610,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     {
@@ -4691,12 +4685,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -5347,12 +5340,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -5443,12 +5435,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -5589,12 +5580,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -9087,12 +9077,11 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Character ID",
-                  "ID": 1404,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Player's Aim Target List}}"
                   },
-                  "characterName": "Mydei"
+                  "characterID": "1404 (Mydei)"
                 },
                 {
                   "name": "Has Modifier",
@@ -9123,12 +9112,11 @@ const compositeAbilityObject = {
             },
             "conditions": {
               "name": "Character ID",
-              "ID": 1414,
               "target": {
                 "name": "Target Name",
                 "target": "{{Player's Aim Target List}}"
               },
-              "characterName": "Dan Heng • Permansor Terrae"
+              "characterID": "1414 (Dan Heng • Permansor Terrae)"
             },
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
@@ -9194,12 +9182,11 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "Character ID",
-              "ID": 1405,
               "target": {
                 "name": "Target Name",
                 "target": "{{Player's Aim Target List}}"
               },
-              "characterName": "Anaxa"
+              "characterID": "1405 (Anaxa)"
             },
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
@@ -10139,12 +10126,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1409,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Hyacine"
+            "characterID": "1409 (Hyacine)"
           },
           "passed": [
             {
@@ -10192,12 +10178,11 @@ const compositeAbilityObject = {
               },
               "conditions": {
                 "name": "Character ID",
-                "ID": 1409,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Hyacine"
+                "characterID": "1409 (Hyacine)"
               },
               "ifTargetFound": [
                 {
@@ -10227,12 +10212,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1410,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Hysilens"
+            "characterID": "1410 (Hysilens)"
           },
           "passed": [
             {
@@ -10293,12 +10277,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1413,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Evernight"
+            "characterID": "1413 (Evernight)"
           },
           "passed": [
             {
@@ -10349,12 +10332,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1414,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Dan Heng • Permansor Terrae"
+            "characterID": "1414 (Dan Heng • Permansor Terrae)"
           },
           "passed": [
             {
@@ -10458,12 +10440,11 @@ const compositeAbilityObject = {
                     "name": "Target Filter",
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1414,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Dan Heng • Permansor Terrae"
+                      "characterID": "1414 (Dan Heng • Permansor Terrae)"
                     }
                   }
                 ]
@@ -10509,12 +10490,11 @@ const compositeAbilityObject = {
                     "name": "Target Filter",
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1414,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Dan Heng • Permansor Terrae"
+                      "characterID": "1414 (Dan Heng • Permansor Terrae)"
                     }
                   }
                 ]
@@ -10553,12 +10533,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1407,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Castorice"
+            "characterID": "1407 (Castorice)"
           },
           "passed": [
             {
@@ -10617,12 +10596,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1408,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Phainon"
+            "characterID": "1408 (Phainon)"
           },
           "passed": [
             {
@@ -10717,21 +10695,19 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Character ID",
-                "ID": 8007,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Trailblazer - Remembrance[M]"
+                "characterID": "8007 (Trailblazer - Remembrance[M])"
               },
               {
                 "name": "Character ID",
-                "ID": 8008,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Trailblazer - Remembrance[F]"
+                "characterID": "8008 (Trailblazer - Remembrance[F])"
               }
             ]
           },
@@ -10768,12 +10744,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1403,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Tribbie"
+            "characterID": "1403 (Tribbie)"
           },
           "passed": [
             {
@@ -10816,12 +10791,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1404,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Mydei"
+            "characterID": "1404 (Mydei)"
           },
           "passed": [
             {
@@ -10918,12 +10892,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1402,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Aglaea"
+            "characterID": "1402 (Aglaea)"
           },
           "passed": [
             {
@@ -10976,12 +10949,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1405,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Anaxa"
+            "characterID": "1405 (Anaxa)"
           },
           "passed": [
             {
@@ -11082,12 +11054,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1406,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Cipher"
+            "characterID": "1406 (Cipher)"
           },
           "passed": [
             {
@@ -11130,12 +11101,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1412,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Cerydra"
+            "characterID": "1412 (Cerydra)"
           },
           "passed": [
             {
@@ -11636,12 +11606,11 @@ const compositeAbilityObject = {
           },
           "conditions": {
             "name": "Character ID",
-            "ID": 1409,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Hyacine"
+            "characterID": "1409 (Hyacine)"
           },
           "ifTargetFound": [
             {
@@ -11678,12 +11647,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1414,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Dan Heng • Permansor Terrae"
+                  "characterID": "1414 (Dan Heng • Permansor Terrae)"
                 }
               }
             ]
@@ -11729,12 +11697,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1414,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Dan Heng • Permansor Terrae"
+                  "characterID": "1414 (Dan Heng • Permansor Terrae)"
                 }
               }
             ]

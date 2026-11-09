@@ -979,12 +979,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 6024,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 6024
                       },
                       {
                         "name": "Compare: Variable",
@@ -1021,12 +1020,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 6024,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 6024
                       },
                       {
                         "name": "Compare: Variable",
@@ -1063,12 +1061,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 6024,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 6024
                       },
                       {
                         "name": "Compare: Variable",

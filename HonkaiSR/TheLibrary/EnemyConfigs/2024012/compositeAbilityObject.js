@@ -2135,12 +2135,11 @@ const compositeAbilityObject = {
                 "value2": 1,
                 "conditions": {
                   "name": "Character ID",
-                  "ID": "SummonMinionID_4",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": null
+                  "characterID": "SummonMinionID_4"
                 }
               }
             ]
@@ -2251,12 +2250,11 @@ const compositeAbilityObject = {
                 "value2": 1,
                 "conditions": {
                   "name": "Character ID",
-                  "ID": "SummonMinionID_4",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": null
+                  "characterID": "SummonMinionID_4"
                 }
               }
             ]
@@ -2367,12 +2365,11 @@ const compositeAbilityObject = {
                 "value2": 0,
                 "conditions": {
                   "name": "Character ID",
-                  "ID": "SummonMinionID_2",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": null
+                  "characterID": "SummonMinionID_2"
                 }
               }
             ]
@@ -2619,12 +2616,11 @@ const compositeAbilityObject = {
                 "value2": 0,
                 "conditions": {
                   "name": "Character ID",
-                  "ID": "SummonMinionID_3",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": null
+                  "characterID": "SummonMinionID_3"
                 }
               }
             ]
@@ -2735,12 +2731,11 @@ const compositeAbilityObject = {
                 "value2": 0,
                 "conditions": {
                   "name": "Character ID",
-                  "ID": "SummonMinionID_1",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": null
+                  "characterID": "SummonMinionID_1"
                 }
               }
             ]

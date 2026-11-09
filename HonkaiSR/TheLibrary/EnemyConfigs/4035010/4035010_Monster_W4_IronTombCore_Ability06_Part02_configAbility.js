@@ -156,12 +156,11 @@ const configAbility = {
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1415,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Cyrene",
+                            "characterID": "1415 (Cyrene)",
                             "invertCondition": true
                           }
                         ]
@@ -221,12 +220,11 @@ const configAbility = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1415,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Cyrene",
+                        "characterID": "1415 (Cyrene)",
                         "invertCondition": true
                       }
                     ]
@@ -280,12 +278,11 @@ const configAbility = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1415,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Cyrene",
+                        "characterID": "1415 (Cyrene)",
                         "invertCondition": true
                       }
                     ]

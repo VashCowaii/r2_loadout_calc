@@ -32,12 +32,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1408,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Phainon"
+            "characterID": "1408 (Phainon)"
           },
           "ifTargetFound": [
             {
@@ -63,12 +62,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1408,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Phainon"
+            "characterID": "1408 (Phainon)"
           },
           "ifTargetFound": [
             {

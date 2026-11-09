@@ -182,12 +182,11 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "Character ID",
-            "ID": "W2_Yanqing_00_Skill02_SummonID01",
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": null
+            "characterID": "W2_Yanqing_00_Skill02_SummonID01"
           },
           "ifTargetFound": [
             {
@@ -210,12 +209,11 @@ const configAbility = {
           "maxTargets": 2,
           "conditions": {
             "name": "Character ID",
-            "ID": "W2_Yanqing_00_Skill02_SummonID02",
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": null
+            "characterID": "W2_Yanqing_00_Skill02_SummonID02"
           },
           "ifTargetFound": [
             {

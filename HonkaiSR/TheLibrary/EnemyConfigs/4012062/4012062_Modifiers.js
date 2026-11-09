@@ -870,12 +870,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   }
                 },
                 {

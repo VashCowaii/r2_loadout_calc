@@ -2356,12 +2356,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1223,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Moze",
+                        "characterID": "1223 (Moze)",
                         "invertCondition": true
                       },
                       {
@@ -2457,12 +2456,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1223,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Moze",
+                        "characterID": "1223 (Moze)",
                         "invertCondition": true
                       },
                       {
@@ -2534,12 +2532,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1223,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Moze",
+                        "characterID": "1223 (Moze)",
                         "invertCondition": true
                       },
                       {
@@ -2666,12 +2663,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1223,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Moze",
+                            "characterID": "1223 (Moze)",
                             "invertCondition": true
                           },
                           {
@@ -2747,12 +2743,11 @@ const compositeAbilityObject = {
                   "includeDyingTargets": true,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1223,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Moze",
+                    "characterID": "1223 (Moze)",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
@@ -2832,12 +2827,11 @@ const compositeAbilityObject = {
                   "includeDyingTargets": true,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1223,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Moze",
+                    "characterID": "1223 (Moze)",
                     "invertCondition": true
                   },
                   "ifTargetFound": [

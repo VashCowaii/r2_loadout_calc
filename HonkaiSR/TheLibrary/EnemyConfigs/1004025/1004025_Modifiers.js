@@ -829,12 +829,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1103,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Serval"
+                "characterID": "1103 (Serval)"
               },
               "passed": [
                 {
@@ -886,12 +885,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1101,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Bronya"
+                    "characterID": "1101 (Bronya)"
                   },
                   {
                     "name": "Skill Type",

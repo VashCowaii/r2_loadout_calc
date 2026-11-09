@@ -1303,12 +1303,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1501,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Sparxie"
+                        "characterID": "1501 (Sparxie)"
                       },
                       {
                         "name": "Skill Name",

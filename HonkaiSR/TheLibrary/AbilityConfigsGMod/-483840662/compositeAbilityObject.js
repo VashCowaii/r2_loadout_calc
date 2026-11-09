@@ -183,12 +183,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Himeko • Nova"
+                        "characterID": "1510 (Himeko • Nova)"
                       },
                       {
                         "name": "Is Part Of",
@@ -425,12 +424,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1412,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Cerydra"
+                    "characterID": "1412 (Cerydra)"
                   }
                 }
               ]
@@ -564,12 +562,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Himeko • Nova"
+                        "characterID": "1510 (Himeko • Nova)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -743,12 +740,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1412,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "characterName": "Cerydra"
+                        "characterID": "1412 (Cerydra)"
                       }
                     }
                   ]
@@ -765,12 +761,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1501,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Sparxie"
+                        "characterID": "1501 (Sparxie)"
                       },
                       {
                         "name": "Skill Name",
@@ -802,12 +797,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1501,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Sparxie"
+                        "characterID": "1501 (Sparxie)"
                       },
                       {
                         "name": "Skill Name",
@@ -928,39 +922,35 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1213,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Dan Heng • Imbibitor Lunae"
+                            "characterID": "1213 (Dan Heng • Imbibitor Lunae)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1501,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Sparxie"
+                            "characterID": "1501 (Sparxie)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1507,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Mortenax Blade"
+                            "characterID": "1507 (Mortenax Blade)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1510,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Himeko • Nova"
+                            "characterID": "1510 (Himeko • Nova)"
                           }
                         ]
                       },
@@ -969,12 +959,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1510,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Himeko • Nova"
+                            "characterID": "1510 (Himeko • Nova)"
                           },
                           "passed": [
                             {
@@ -1256,12 +1245,11 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Character ID",
-                                "ID": 1213,
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "characterName": "Dan Heng • Imbibitor Lunae"
+                                "characterID": "1213 (Dan Heng • Imbibitor Lunae)"
                               },
                               "passed": [
                                 {
@@ -1276,12 +1264,11 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Character ID",
-                                    "ID": 1501,
                                     "target": {
                                       "name": "Target Name",
                                       "target": "{{Modifier Holder}}"
                                     },
-                                    "characterName": "Sparxie"
+                                    "characterID": "1501 (Sparxie)"
                                   },
                                   "passed": [
                                     {
@@ -1312,12 +1299,11 @@ const compositeAbilityObject = {
                                       "name": "IF",
                                       "conditions": {
                                         "name": "Character ID",
-                                        "ID": 1507,
                                         "target": {
                                           "name": "Target Name",
                                           "target": "{{Modifier Holder}}"
                                         },
-                                        "characterName": "Mortenax Blade"
+                                        "characterID": "1507 (Mortenax Blade)"
                                       },
                                       "passed": [
                                         {
@@ -1734,12 +1720,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1412,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "characterName": "Cerydra"
+                    "characterID": "1412 (Cerydra)"
                   }
                 }
               ]
@@ -1764,12 +1749,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Himeko • Nova"
+                        "characterID": "1510 (Himeko • Nova)"
                       },
                       "passed": [
                         {
@@ -1904,12 +1888,11 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Himeko • Nova"
+                        "characterID": "1510 (Himeko • Nova)"
                       },
                       "passed": [
                         {
@@ -2011,21 +1994,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1213,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Dan Heng • Imbibitor Lunae"
+                            "characterID": "1213 (Dan Heng • Imbibitor Lunae)"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 1501,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Sparxie"
+                            "characterID": "1501 (Sparxie)"
                           }
                         ]
                       },
@@ -2142,12 +2123,11 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1507,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Mortenax Blade"
+                            "characterID": "1507 (Mortenax Blade)"
                           },
                           "passed": [
                             {
@@ -2262,12 +2242,11 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Character ID",
-                                "ID": 1510,
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "characterName": "Himeko • Nova"
+                                "characterID": "1510 (Himeko • Nova)"
                               },
                               "passed": [
                                 {
@@ -7952,12 +7931,11 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Character ID",
-                                "ID": 1310,
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Ability Target DEALING DMG}}"
                                 },
-                                "characterName": "Firefly"
+                                "characterID": "1310 (Firefly)"
                               }
                             }
                           ]
@@ -7973,21 +7951,19 @@ const compositeAbilityObject = {
                                 "conditionList": [
                                   {
                                     "name": "Character ID",
-                                    "ID": 1310,
                                     "target": {
                                       "name": "Target Name",
                                       "target": "{{Current Action Owner}}"
                                     },
-                                    "characterName": "Firefly"
+                                    "characterID": "1310 (Firefly)"
                                   },
                                   {
                                     "name": "Character ID",
-                                    "ID": 1303,
                                     "target": {
                                       "name": "Target Name",
                                       "target": "{{Ability Target DEALING DMG}}"
                                     },
-                                    "characterName": "Ruan Mei"
+                                    "characterID": "1303 (Ruan Mei)"
                                   }
                                 ]
                               },
@@ -7999,21 +7975,19 @@ const compositeAbilityObject = {
                                     "conditionList": [
                                       {
                                         "name": "Character ID",
-                                        "ID": 1303,
                                         "target": {
                                           "name": "Target Name",
                                           "target": "{{Ability Target DEALING DMG}}"
                                         },
-                                        "characterName": "Ruan Mei"
+                                        "characterID": "1303 (Ruan Mei)"
                                       },
                                       {
                                         "name": "Character ID",
-                                        "ID": 1220,
                                         "target": {
                                           "name": "Target Name",
                                           "target": "{{Current Action Owner}}"
                                         },
-                                        "characterName": "Feixiao"
+                                        "characterID": "1220 (Feixiao)"
                                       },
                                       {
                                         "name": "Has Modifier",
@@ -8033,21 +8007,19 @@ const compositeAbilityObject = {
                                     "conditionList": [
                                       {
                                         "name": "Character ID",
-                                        "ID": 1303,
                                         "target": {
                                           "name": "Target Name",
                                           "target": "{{Ability Target DEALING DMG}}"
                                         },
-                                        "characterName": "Ruan Mei"
+                                        "characterID": "1303 (Ruan Mei)"
                                       },
                                       {
                                         "name": "Character ID",
-                                        "ID": 1317,
                                         "target": {
                                           "name": "Target Name",
                                           "target": "{{Current Action Owner}}"
                                         },
-                                        "characterName": "Rappa"
+                                        "characterID": "1317 (Rappa)"
                                       }
                                     ]
                                   }
@@ -8071,12 +8043,11 @@ const compositeAbilityObject = {
                                 "conditionList": [
                                   {
                                     "name": "Character ID",
-                                    "ID": 1220,
                                     "target": {
                                       "name": "Target Name",
                                       "target": "{{Ability Target DEALING DMG}}"
                                     },
-                                    "characterName": "Feixiao"
+                                    "characterID": "1220 (Feixiao)"
                                   },
                                   {
                                     "name": "Has Modifier",
@@ -8103,12 +8074,11 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Character ID",
-                                "ID": 1317,
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Ability Target DEALING DMG}}"
                                 },
-                                "characterName": "Rappa"
+                                "characterID": "1317 (Rappa)"
                               }
                             }
                           ]

@@ -315,21 +315,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 8007,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Trailblazer - Remembrance[M]"
+                    "characterID": "8007 (Trailblazer - Remembrance[M])"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 8008,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Trailblazer - Remembrance[F]"
+                    "characterID": "8008 (Trailblazer - Remembrance[F])"
                   }
                 ]
               },
@@ -579,12 +577,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1205,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Blade"
+                    "characterID": "1205 (Blade)"
                   },
                   "passed": [
                     {
@@ -631,21 +628,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8007,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Remembrance[M]"
+                        "characterID": "8007 (Trailblazer - Remembrance[M])"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8008,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Trailblazer - Remembrance[F]"
+                        "characterID": "8008 (Trailblazer - Remembrance[F])"
                       }
                     ]
                   },
@@ -691,12 +686,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1005,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Kafka"
+                    "characterID": "1005 (Kafka)"
                   },
                   "passed": [
                     {
@@ -740,12 +734,11 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1310,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Firefly"
+                    "characterID": "1310 (Firefly)"
                   },
                   "passed": [
                     {

@@ -67,21 +67,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 8001,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Trailblazer - Destruction[M]"
+                    "characterID": "8001 (Trailblazer - Destruction[M])"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 8002,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Trailblazer - Destruction[F]"
+                    "characterID": "8002 (Trailblazer - Destruction[F])"
                   }
                 ]
               },

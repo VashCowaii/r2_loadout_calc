@@ -2827,12 +2827,11 @@ const configAbility = {
                     "name": "Target Filter",
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1013,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Herta"
+                      "characterID": "1013 (Herta)"
                     }
                   }
                 ]
@@ -2851,12 +2850,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1013,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Herta"
+                "characterID": "1013 (Herta)"
               },
               "passed": [
                 {

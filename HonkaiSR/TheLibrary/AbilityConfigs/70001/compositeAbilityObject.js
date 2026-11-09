@@ -2133,12 +2133,11 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1511,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 1511
                       },
                       "ifTargetFound": [
                         {

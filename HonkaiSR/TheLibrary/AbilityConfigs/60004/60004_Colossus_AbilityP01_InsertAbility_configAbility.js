@@ -31,12 +31,11 @@ const configAbility = {
       "searchRandom": true,
       "conditions": {
         "name": "Character ID",
-        "ID": 8003,
         "target": {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "characterName": "Trailblazer - Preservation[M]"
+        "characterID": "8003 (Trailblazer - Preservation[M])"
       },
       "ifTargetFound": [
         {

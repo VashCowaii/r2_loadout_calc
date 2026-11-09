@@ -652,12 +652,11 @@ const configAbility = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1001,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "March 7th"
+                        "characterID": "1001 (March 7th)"
                       },
                       "ifTargetFound": [
                         {
@@ -696,12 +695,11 @@ const configAbility = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1002,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Dan Heng"
+                        "characterID": "1002 (Dan Heng)"
                       },
                       "ifTargetFound": [
                         {
@@ -740,12 +738,11 @@ const configAbility = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1004,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Welt"
+                        "characterID": "1004 (Welt)"
                       },
                       "ifTargetFound": [
                         {
@@ -784,12 +781,11 @@ const configAbility = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1003,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Himeko"
+                        "characterID": "1003 (Himeko)"
                       },
                       "ifTargetFound": [
                         {

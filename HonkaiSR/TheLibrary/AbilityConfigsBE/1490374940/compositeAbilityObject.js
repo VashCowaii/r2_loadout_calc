@@ -5098,12 +5098,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 100403000,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 100403000
                       }
                     ]
                   },
@@ -5117,12 +5116,11 @@ const compositeAbilityObject = {
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 100401016,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 100401016
                       },
                       "ifTargetFound": [
                         {
@@ -16872,12 +16870,11 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 800205000,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": null
+                          "characterID": 800205000
                         }
                       },
                       "noTargetFound": [

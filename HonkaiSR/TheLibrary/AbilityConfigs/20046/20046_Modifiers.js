@@ -1679,12 +1679,11 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1510,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Himeko • Nova"
+                    "characterID": "1510 (Himeko • Nova)"
                   }
                 ]
               },
@@ -1750,12 +1749,11 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Himeko • Nova"
+                        "characterID": "1510 (Himeko • Nova)"
                       },
                       "passed": [
                         {

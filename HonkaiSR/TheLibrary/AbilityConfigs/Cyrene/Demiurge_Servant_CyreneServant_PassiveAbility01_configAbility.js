@@ -79,12 +79,11 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Character ID",
-              "ID": 1404,
               "target": {
                 "name": "Target Name",
                 "target": "{{Player's Aim Target List}}"
               },
-              "characterName": "Mydei"
+              "characterID": "1404 (Mydei)"
             },
             {
               "name": "Has Modifier",
@@ -115,12 +114,11 @@ const configAbility = {
         },
         "conditions": {
           "name": "Character ID",
-          "ID": 1414,
           "target": {
             "name": "Target Name",
             "target": "{{Player's Aim Target List}}"
           },
-          "characterName": "Dan Heng • Permansor Terrae"
+          "characterID": "1414 (Dan Heng • Permansor Terrae)"
         },
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
@@ -186,12 +184,11 @@ const configAbility = {
         ],
         "conditions": {
           "name": "Character ID",
-          "ID": 1405,
           "target": {
             "name": "Target Name",
             "target": "{{Player's Aim Target List}}"
           },
-          "characterName": "Anaxa"
+          "characterID": "1405 (Anaxa)"
         },
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",

@@ -292,12 +292,11 @@ const configAbility = {
       },
       "conditions": {
         "name": "Character ID",
-        "ID": 1409,
         "target": {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "characterName": "Hyacine"
+        "characterID": "1409 (Hyacine)"
       },
       "ifTargetFound": [
         {
@@ -334,12 +333,11 @@ const configAbility = {
             "name": "Target Filter",
             "conditions": {
               "name": "Character ID",
-              "ID": 1414,
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "characterName": "Dan Heng • Permansor Terrae"
+              "characterID": "1414 (Dan Heng • Permansor Terrae)"
             }
           }
         ]
@@ -385,12 +383,11 @@ const configAbility = {
             "name": "Target Filter",
             "conditions": {
               "name": "Character ID",
-              "ID": 1414,
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "characterName": "Dan Heng • Permansor Terrae"
+              "characterID": "1414 (Dan Heng • Permansor Terrae)"
             }
           }
         ]

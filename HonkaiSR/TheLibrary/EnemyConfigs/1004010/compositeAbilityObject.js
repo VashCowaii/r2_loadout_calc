@@ -290,12 +290,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1101,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Bronya"
+                    "characterID": "1101 (Bronya)"
                   },
                   "passed": [
                     {
@@ -330,12 +329,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1103,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Serval"
+                    "characterID": "1103 (Serval)"
                   },
                   "passed": [
                     {
@@ -387,12 +385,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1101,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Bronya"
+                        "characterID": "1101 (Bronya)"
                       },
                       {
                         "name": "Skill Type",

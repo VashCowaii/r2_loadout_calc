@@ -24,12 +24,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1015,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Archer"
+                "characterID": "1015 (Archer)"
               }
             }
           ]
@@ -52,12 +51,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1014,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Saber"
+                "characterID": "1014 (Saber)"
               }
             }
           ]
@@ -425,12 +423,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1506,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Silver Wolf LV.<unbreak>999</unbreak>"
+                "characterID": "1506 (Silver Wolf LV.<unbreak>999</unbreak>)"
               }
             }
           ]
@@ -480,12 +477,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}.[[getSummoner]]"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               }
             }
           ]
@@ -508,12 +504,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               }
             }
           ]
@@ -768,12 +763,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1412,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cerydra"
+                "characterID": "1412 (Cerydra)"
               }
             }
           ]
@@ -1703,12 +1697,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1404,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Mydei"
+                "characterID": "1404 (Mydei)"
               }
             }
           ]
@@ -3443,12 +3436,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 6032,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": 6032
               }
             }
           ]
@@ -4787,12 +4779,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 11415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": 11415
               }
             }
           ]
@@ -5820,21 +5811,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 8005,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Trailblazer - Harmony[M]"
+                    "characterID": "8005 (Trailblazer - Harmony[M])"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 8006,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Trailblazer - Harmony[F]"
+                    "characterID": "8006 (Trailblazer - Harmony[F])"
                   }
                 ]
               }
@@ -10313,12 +10302,11 @@ const configAbility = {
               "name": "Target Filter",
               "conditions": {
                 "name": "Character ID",
-                "ID": 11407,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": 11407
               }
             }
           ]

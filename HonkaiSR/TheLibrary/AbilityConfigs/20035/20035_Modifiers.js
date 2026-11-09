@@ -633,12 +633,11 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 6032,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6032
                   }
                 ]
               },
@@ -693,12 +692,11 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 6032,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6032
                   }
                 ]
               },
@@ -1006,12 +1004,11 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 6032,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": null
+                    "characterID": 6032
                   }
                 ]
               },

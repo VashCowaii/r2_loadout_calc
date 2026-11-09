@@ -1514,12 +1514,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1014,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Saber"
+                          "characterID": "1014 (Saber)"
                         }
                       }
                     ]
@@ -1560,12 +1559,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1014,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Saber"
+                          "characterID": "1014 (Saber)"
                         }
                       }
                     ]
@@ -1622,12 +1620,11 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 1014,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Saber"
+                            "characterID": "1014 (Saber)"
                           },
                           {
                             "name": "Compare: Target",
@@ -3115,12 +3112,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1509,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Gilgamesh"
+                  "characterID": "1509 (Gilgamesh)"
                 }
               },
               {
@@ -3146,12 +3142,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1509,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Gilgamesh"
+                  "characterID": "1509 (Gilgamesh)"
                 }
               },
               {
@@ -3177,12 +3172,11 @@ const compositeAbilityObject = {
                 "name": "Target Filter",
                 "conditions": {
                   "name": "Character ID",
-                  "ID": 1509,
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "characterName": "Gilgamesh"
+                  "characterID": "1509 (Gilgamesh)"
                 }
               },
               {

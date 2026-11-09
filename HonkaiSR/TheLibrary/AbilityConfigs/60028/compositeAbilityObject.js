@@ -266,12 +266,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1014,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Saber"
+                            "characterID": "1014 (Saber)"
                           },
                           "ifTargetFound": [
                             {
@@ -295,12 +294,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1014,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "Saber"
+                            "characterID": "1014 (Saber)"
                           },
                           "ifTargetFound": [
                             {
@@ -346,12 +344,11 @@ const compositeAbilityObject = {
                   },
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1014,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Saber"
+                    "characterID": "1014 (Saber)"
                   },
                   "ifTargetFound": [
                     {
@@ -602,12 +599,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1014,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Saber"
+            "characterID": "1014 (Saber)"
           },
           "ifTargetFound": [
             "Deleted bullshit",

@@ -50,12 +50,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1220,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Feixiao"
+                    "characterID": "1220 (Feixiao)"
                   },
                   "passed": [
                     {
@@ -93,12 +92,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1212,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Jingliu"
+                        "characterID": "1212 (Jingliu)"
                       }
                     ]
                   },
@@ -138,12 +136,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1209,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Yanqing"
+                        "characterID": "1209 (Yanqing)"
                       }
                     ]
                   },
@@ -183,12 +180,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 1002,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Dan Heng"
+                        "characterID": "1002 (Dan Heng)"
                       }
                     ]
                   },
@@ -225,12 +221,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1204,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Jing Yuan"
+                    "characterID": "1204 (Jing Yuan)"
                   },
                   "passed": [
                     {
@@ -265,12 +260,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1203,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Luocha"
+                    "characterID": "1203 (Luocha)"
                   },
                   "passed": [
                     {
@@ -305,12 +299,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1206,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Sushang"
+                    "characterID": "1206 (Sushang)"
                   },
                   "passed": [
                     {
@@ -2637,12 +2630,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 7213,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": 7213
                       }
                     ]
                   },
@@ -4103,12 +4095,11 @@ const compositeAbilityObject = {
               "maxTargets": 2,
               "conditions": {
                 "name": "Character ID",
-                "ID": "W2_Yanqing_00_Skill02_SummonID01",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": "W2_Yanqing_00_Skill02_SummonID01"
               },
               "ifTargetFound": [
                 {
@@ -4131,12 +4122,11 @@ const compositeAbilityObject = {
               "maxTargets": 2,
               "conditions": {
                 "name": "Character ID",
-                "ID": "W2_Yanqing_00_Skill02_SummonID02",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": "W2_Yanqing_00_Skill02_SummonID02"
               },
               "ifTargetFound": [
                 {

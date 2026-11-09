@@ -522,12 +522,11 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   {
                     "name": "Has Modifier",
@@ -1973,12 +1972,11 @@ const configAbility = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "ifTargetFound": [
                 {
@@ -2620,120 +2618,107 @@ const configAbility = {
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1413,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Evernight"
+                    "characterID": "1413 (Evernight)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1414,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Dan Heng • Permansor Terrae"
+                    "characterID": "1414 (Dan Heng • Permansor Terrae)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1402,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Aglaea"
+                    "characterID": "1402 (Aglaea)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1403,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Tribbie"
+                    "characterID": "1403 (Tribbie)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1404,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Mydei"
+                    "characterID": "1404 (Mydei)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1407,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Castorice"
+                    "characterID": "1407 (Castorice)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1405,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Anaxa"
+                    "characterID": "1405 (Anaxa)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1409,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Hyacine"
+                    "characterID": "1409 (Hyacine)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1406,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Cipher"
+                    "characterID": "1406 (Cipher)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1412,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Cerydra"
+                    "characterID": "1412 (Cerydra)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1410,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Hysilens"
+                    "characterID": "1410 (Hysilens)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1415,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Cyrene"
+                    "characterID": "1415 (Cyrene)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1408,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Ability Targets of Modifier Holder}}"
                     },
-                    "characterName": "Phainon"
+                    "characterID": "1408 (Phainon)"
                   }
                 ]
               },

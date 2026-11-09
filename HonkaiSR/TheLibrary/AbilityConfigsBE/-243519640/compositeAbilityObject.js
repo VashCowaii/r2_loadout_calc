@@ -15422,12 +15422,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 8002060,
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "characterName": null
+            "characterID": 8002060
           }
         },
         {

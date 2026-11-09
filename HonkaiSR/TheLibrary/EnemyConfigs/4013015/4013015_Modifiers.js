@@ -3119,12 +3119,11 @@ const configAbility = {
               },
               "conditions": {
                 "name": "Character ID",
-                "ID": 1407,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}.[[getSummoner]]"
                 },
-                "characterName": "Castorice"
+                "characterID": "1407 (Castorice)"
               },
               "noTargetFound": [
                 {
@@ -3158,12 +3157,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1407,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}.[[getSummoner]]"
                 },
-                "characterName": "Castorice"
+                "characterID": "1407 (Castorice)"
               },
               "passed": [
                 {
@@ -3231,12 +3229,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1407,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}.[[getSummoner]]"
                 },
-                "characterName": "Castorice"
+                "characterID": "1407 (Castorice)"
               },
               "passed": [
                 {

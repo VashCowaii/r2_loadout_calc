@@ -521,12 +521,11 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": "ServantID",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": null
+                        "characterID": "ServantID"
                       },
                       {
                         "name": "Compare: Target",
@@ -1396,12 +1395,11 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 8007,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "characterName": "Trailblazer - Remembrance[M]"
+                "characterID": "8007 (Trailblazer - Remembrance[M])"
               },
               "passed": [
                 {

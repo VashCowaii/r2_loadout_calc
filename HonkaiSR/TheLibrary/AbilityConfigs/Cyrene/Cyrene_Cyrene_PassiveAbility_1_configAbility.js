@@ -253,12 +253,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 11415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": null
+                "characterID": 11415
               },
               "passed": [
                 {
@@ -417,12 +416,11 @@ const configAbility = {
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1408,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Phainon"
+                    "characterID": "1408 (Phainon)"
                   },
                   "ifTargetFound": [
                     {

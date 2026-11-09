@@ -1053,12 +1053,11 @@ const configAbility = {
                     },
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1015,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Archer"
+                      "characterID": "1015 (Archer)"
                     }
                   }
                 ]
@@ -1090,12 +1089,11 @@ const configAbility = {
                     },
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1015,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Archer"
+                      "characterID": "1015 (Archer)"
                     }
                   }
                 ]
@@ -1200,12 +1198,11 @@ const configAbility = {
                     },
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1015,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Archer"
+                      "characterID": "1015 (Archer)"
                     }
                   },
                   "passed": [
@@ -1601,12 +1598,11 @@ const configAbility = {
                     },
                     "conditions": {
                       "name": "Character ID",
-                      "ID": 1015,
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "characterName": "Archer"
+                      "characterID": "1015 (Archer)"
                     }
                   },
                   "passed": [

@@ -268,21 +268,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1204,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Jing Yuan"
+                    "characterID": "1204 (Jing Yuan)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1112,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Topaz & Numby"
+                    "characterID": "1112 (Topaz & Numby)"
                   }
                 ]
               },
@@ -371,21 +369,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Character ID",
-                    "ID": 1204,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Jing Yuan"
+                    "characterID": "1204 (Jing Yuan)"
                   },
                   {
                     "name": "Character ID",
-                    "ID": 1112,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Topaz & Numby"
+                    "characterID": "1112 (Topaz & Numby)"
                   }
                 ]
               },

@@ -456,12 +456,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 8009,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8009 ({NICKNAME})"
                           },
                           "ifTargetFound": [
                             {
@@ -500,12 +499,11 @@ const compositeAbilityObject = {
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 8010,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8010 ({NICKNAME})"
                           },
                           "ifTargetFound": [
                             {
@@ -602,21 +600,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Character ID",
-                        "ID": 8009,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "{NICKNAME}"
+                        "characterID": "8009 ({NICKNAME})"
                       },
                       {
                         "name": "Character ID",
-                        "ID": 8010,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "{NICKNAME}"
+                        "characterID": "8010 ({NICKNAME})"
                       }
                     ]
                   },
@@ -676,21 +672,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8009,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8009 ({NICKNAME})"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8010,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8010 ({NICKNAME})"
                           }
                         ]
                       },
@@ -837,21 +831,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8009,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8009 ({NICKNAME})"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8010,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8010 ({NICKNAME})"
                           }
                         ]
                       },
@@ -985,21 +977,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8009,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8009 ({NICKNAME})"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8010,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8010 ({NICKNAME})"
                           }
                         ]
                       },
@@ -5122,21 +5112,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Character ID",
-                            "ID": 8009,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8009 ({NICKNAME})"
                           },
                           {
                             "name": "Character ID",
-                            "ID": 8010,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "characterName": "{NICKNAME}"
+                            "characterID": "8010 ({NICKNAME})"
                           }
                         ]
                       },

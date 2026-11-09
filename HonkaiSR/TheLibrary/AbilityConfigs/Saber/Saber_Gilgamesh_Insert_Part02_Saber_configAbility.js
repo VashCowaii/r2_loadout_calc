@@ -17,12 +17,11 @@ const configAbility = {
             "name": "Target Filter",
             "conditions": {
               "name": "Character ID",
-              "ID": 1509,
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "characterName": "Gilgamesh"
+              "characterID": "1509 (Gilgamesh)"
             }
           },
           {
@@ -48,12 +47,11 @@ const configAbility = {
             "name": "Target Filter",
             "conditions": {
               "name": "Character ID",
-              "ID": 1509,
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "characterName": "Gilgamesh"
+              "characterID": "1509 (Gilgamesh)"
             }
           },
           {
@@ -79,12 +77,11 @@ const configAbility = {
             "name": "Target Filter",
             "conditions": {
               "name": "Character ID",
-              "ID": 1509,
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "characterName": "Gilgamesh"
+              "characterID": "1509 (Gilgamesh)"
             }
           },
           {

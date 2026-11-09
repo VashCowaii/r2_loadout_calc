@@ -1676,12 +1676,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1015,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Archer"
+            "characterID": "1015 (Archer)"
           },
           "ifTargetFound": [
             {
@@ -1936,12 +1935,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Character ID",
-                        "ID": 1015,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "characterName": "Archer"
+                        "characterID": "1015 (Archer)"
                       },
                       {
                         "name": "Compare: Variable",
@@ -3227,12 +3225,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1015,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Archer"
+                          "characterID": "1015 (Archer)"
                         }
                       }
                     ]
@@ -3264,12 +3261,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1015,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Archer"
+                          "characterID": "1015 (Archer)"
                         }
                       }
                     ]
@@ -3374,12 +3370,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1015,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Archer"
+                          "characterID": "1015 (Archer)"
                         }
                       },
                       "passed": [
@@ -3775,12 +3770,11 @@ const compositeAbilityObject = {
                         },
                         "conditions": {
                           "name": "Character ID",
-                          "ID": 1015,
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "characterName": "Archer"
+                          "characterID": "1015 (Archer)"
                         }
                       },
                       "passed": [

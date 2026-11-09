@@ -414,12 +414,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1310,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Firefly"
+                    "characterID": "1310 (Firefly)"
                   }
                 },
                 {
@@ -1717,12 +1716,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1310,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "characterName": "Firefly"
+                    "characterID": "1310 (Firefly)"
                   }
                 },
                 {
@@ -3518,12 +3516,11 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 1310,
             "target": {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "characterName": "Firefly"
+            "characterID": "1310 (Firefly)"
           }
         },
         {

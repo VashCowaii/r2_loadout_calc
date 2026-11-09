@@ -176,12 +176,11 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               },
               "ifTargetFound": [
                 {
@@ -335,156 +334,143 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1413,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Evernight"
+                "characterID": "1413 (Evernight)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1414,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Dan Heng • Permansor Terrae"
+                "characterID": "1414 (Dan Heng • Permansor Terrae)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1402,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Aglaea"
+                "characterID": "1402 (Aglaea)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1403,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Tribbie"
+                "characterID": "1403 (Tribbie)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1404,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Mydei"
+                "characterID": "1404 (Mydei)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1407,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Castorice"
+                "characterID": "1407 (Castorice)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1405,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Anaxa"
+                "characterID": "1405 (Anaxa)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1409,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Hyacine"
+                "characterID": "1409 (Hyacine)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1406,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Cipher"
+                "characterID": "1406 (Cipher)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1412,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Cerydra"
+                "characterID": "1412 (Cerydra)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1410,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Hysilens"
+                "characterID": "1410 (Hysilens)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1415,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Cyrene"
+                "characterID": "1415 (Cyrene)"
               }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1408,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
                 },
-                "characterName": "Phainon"
+                "characterID": "1408 (Phainon)"
               }
             }
           ]

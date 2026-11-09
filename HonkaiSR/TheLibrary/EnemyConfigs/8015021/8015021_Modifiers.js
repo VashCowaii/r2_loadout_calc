@@ -22,12 +22,11 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Character ID",
-                "ID": 1225,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Fugue"
+                "characterID": "1225 (Fugue)"
               },
               "passed": [
                 {

@@ -92,21 +92,19 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Character ID",
-                "ID": 8005,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[M]"
+                "characterID": "8005 (Trailblazer - Harmony[M])"
               },
               {
                 "name": "Character ID",
-                "ID": 8006,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[F]"
+                "characterID": "8006 (Trailblazer - Harmony[F])"
               }
             ]
           },
@@ -350,21 +348,19 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Character ID",
-                "ID": 8005,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[M]"
+                "characterID": "8005 (Trailblazer - Harmony[M])"
               },
               {
                 "name": "Character ID",
-                "ID": 8006,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[F]"
+                "characterID": "8006 (Trailblazer - Harmony[F])"
               }
             ]
           },
@@ -744,21 +740,19 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Character ID",
-                "ID": 8005,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[M]"
+                "characterID": "8005 (Trailblazer - Harmony[M])"
               },
               {
                 "name": "Character ID",
-                "ID": 8006,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Trailblazer - Harmony[F]"
+                "characterID": "8006 (Trailblazer - Harmony[F])"
               }
             ]
           },

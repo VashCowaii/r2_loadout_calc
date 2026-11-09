@@ -55,12 +55,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1313,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Sunday"
+                    "characterID": "1313 (Sunday)"
                   },
                   "passed": [
                     {

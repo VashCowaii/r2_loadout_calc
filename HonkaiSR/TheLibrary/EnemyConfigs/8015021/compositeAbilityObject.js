@@ -80,12 +80,11 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Character ID",
-                    "ID": 1225,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "characterName": "Fugue"
+                    "characterID": "1225 (Fugue)"
                   },
                   "passed": [
                     {
@@ -2642,12 +2641,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1204,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Jing Yuan"
+            "characterID": "1204 (Jing Yuan)"
           },
           "ifTargetFound": [
             {
@@ -2729,12 +2727,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1204,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Jing Yuan"
+            "characterID": "1204 (Jing Yuan)"
           },
           "ifTargetFound": [
             {
@@ -2859,12 +2856,11 @@ const compositeAbilityObject = {
           "maxTargets": 1,
           "conditions": {
             "name": "Character ID",
-            "ID": 1204,
             "target": {
               "name": "Target Name",
               "target": "{{Parameter Target}}"
             },
-            "characterName": "Jing Yuan"
+            "characterID": "1204 (Jing Yuan)"
           },
           "ifTargetFound": [
             {
@@ -3605,12 +3601,11 @@ const compositeAbilityObject = {
               "maxTargets": 1,
               "conditions": {
                 "name": "Character ID",
-                "ID": 1204,
                 "target": {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "characterName": "Jing Yuan"
+                "characterID": "1204 (Jing Yuan)"
               },
               "ifTargetFound": [
                 {

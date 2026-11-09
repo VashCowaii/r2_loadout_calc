@@ -49,12 +49,11 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Character ID",
-            "ID": 8007,
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "characterName": "Trailblazer - Remembrance[M]"
+            "characterID": "8007 (Trailblazer - Remembrance[M])"
           },
           "passed": [
             {
