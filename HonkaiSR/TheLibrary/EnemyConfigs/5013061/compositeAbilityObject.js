@@ -1027,7 +1027,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Quantum"
                                 ]
                               }
@@ -1064,7 +1064,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Fire"
                                 ]
                               }
@@ -1101,7 +1101,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Imaginary"
                                 ]
                               }
@@ -1138,7 +1138,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Physical"
                                 ]
                               }
@@ -1506,7 +1506,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Quantum"
+                                "damageType": "Quantum"
                               }
                             ]
                           },
@@ -1529,7 +1529,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Fire"
+                                "damageType": "Fire"
                               }
                             ]
                           },
@@ -1552,7 +1552,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Imaginary"
+                                "damageType": "Imaginary"
                               }
                             ]
                           },
@@ -1575,7 +1575,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Physical"
+                                "damageType": "Physical"
                               }
                             ]
                           }

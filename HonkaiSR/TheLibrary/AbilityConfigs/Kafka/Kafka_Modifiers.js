@@ -46,7 +46,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "list": [
+                    "dmgTypeList": [
                       "Lightning"
                     ]
                   },

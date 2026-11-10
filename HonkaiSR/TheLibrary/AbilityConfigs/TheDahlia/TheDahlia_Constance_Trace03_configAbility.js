@@ -85,7 +85,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "DamageType": "Fire"
+              "damageType": "Fire"
             },
             {
               "name": "Is Entity Type",
@@ -175,7 +175,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Fire"
+                        "damageType": "Fire"
                       },
                       {
                         "name": "Is Entity Type",
@@ -308,7 +308,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "DamageType": "Fire"
+                    "damageType": "Fire"
                   },
                   {
                     "name": "Is Entity Type",
@@ -364,7 +364,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "DamageType": "Fire"
+                    "damageType": "Fire"
                   },
                   {
                     "name": "Is Entity Type",

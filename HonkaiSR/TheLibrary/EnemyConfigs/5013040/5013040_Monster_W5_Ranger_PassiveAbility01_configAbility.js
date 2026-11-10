@@ -158,7 +158,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "list": [
+                "dmgTypeList": [
                   "Physical"
                 ]
               }
@@ -255,7 +255,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "list": [
+                "dmgTypeList": [
                   "Imaginary"
                 ]
               }
@@ -352,7 +352,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "list": [
+                "dmgTypeList": [
                   "Fire"
                 ]
               }
@@ -449,7 +449,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "list": [
+                "dmgTypeList": [
                   "Quantum"
                 ]
               }

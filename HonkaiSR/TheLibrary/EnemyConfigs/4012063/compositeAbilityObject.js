@@ -443,7 +443,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Fire"
                             ]
                           },
@@ -492,7 +492,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Ice"
                             ]
                           },
@@ -541,7 +541,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Imaginary"
                             ]
                           },
@@ -590,7 +590,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Physical"
                             ]
                           },
@@ -639,7 +639,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Quantum"
                             ]
                           },
@@ -688,7 +688,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Lightning"
                             ]
                           },
@@ -737,7 +737,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "list": [
+                            "dmgTypeList": [
                               "Wind"
                             ]
                           },

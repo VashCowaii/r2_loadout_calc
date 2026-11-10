@@ -1863,7 +1863,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Fire"
                                 ]
                               },
@@ -1873,7 +1873,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Fire",
+                                "damageType": "Fire",
                                 "invertCondition": true
                               }
                             ]
@@ -1902,7 +1902,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Ice"
                                 ]
                               },
@@ -1912,7 +1912,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Ice",
+                                "damageType": "Ice",
                                 "invertCondition": true
                               }
                             ]
@@ -1941,7 +1941,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Imaginary"
                                 ]
                               },
@@ -1951,7 +1951,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Imaginary",
+                                "damageType": "Imaginary",
                                 "invertCondition": true
                               }
                             ]
@@ -1980,7 +1980,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Physical"
                                 ]
                               },
@@ -1990,7 +1990,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Physical",
+                                "damageType": "Physical",
                                 "invertCondition": true
                               }
                             ]
@@ -2019,7 +2019,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Quantum"
                                 ]
                               },
@@ -2029,7 +2029,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Quantum",
+                                "damageType": "Quantum",
                                 "invertCondition": true
                               }
                             ]
@@ -2058,7 +2058,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Lightning"
                                 ]
                               },
@@ -2068,7 +2068,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Thunder",
+                                "damageType": "Thunder",
                                 "invertCondition": true
                               }
                             ]
@@ -2097,7 +2097,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "list": [
+                                "dmgTypeList": [
                                   "Wind"
                                 ]
                               },
@@ -2107,7 +2107,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "DamageType": "Wind",
+                                "damageType": "Wind",
                                 "invertCondition": true
                               }
                             ]

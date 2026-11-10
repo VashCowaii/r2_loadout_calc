@@ -87,7 +87,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Fire"
+                        "damageType": "Fire"
                       },
                       {
                         "name": "Has Weakness",
@@ -130,7 +130,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Ice"
+                        "damageType": "Ice"
                       },
                       {
                         "name": "Has Weakness",
@@ -173,7 +173,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Imaginary"
+                        "damageType": "Imaginary"
                       },
                       {
                         "name": "Has Weakness",
@@ -216,7 +216,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Physical"
+                        "damageType": "Physical"
                       },
                       {
                         "name": "Has Weakness",
@@ -259,7 +259,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Quantum"
+                        "damageType": "Quantum"
                       },
                       {
                         "name": "Has Weakness",
@@ -302,7 +302,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Thunder"
+                        "damageType": "Thunder"
                       },
                       {
                         "name": "Has Weakness",
@@ -345,7 +345,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "DamageType": "Wind"
+                        "damageType": "Wind"
                       },
                       {
                         "name": "Has Weakness",

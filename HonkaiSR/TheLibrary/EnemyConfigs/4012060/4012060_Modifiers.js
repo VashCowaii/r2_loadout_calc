@@ -431,7 +431,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Fire"
                         ]
                       },
@@ -480,7 +480,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Ice"
                         ]
                       },
@@ -529,7 +529,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Imaginary"
                         ]
                       },
@@ -578,7 +578,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Physical"
                         ]
                       },
@@ -627,7 +627,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Quantum"
                         ]
                       },
@@ -676,7 +676,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Lightning"
                         ]
                       },
@@ -725,7 +725,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Wind"
                         ]
                       },

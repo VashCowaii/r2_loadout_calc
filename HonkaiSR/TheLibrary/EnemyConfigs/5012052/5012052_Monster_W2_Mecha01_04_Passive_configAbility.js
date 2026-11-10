@@ -81,7 +81,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "list": [
+                "dmgTypeList": [
                   "Wind"
                 ]
               }

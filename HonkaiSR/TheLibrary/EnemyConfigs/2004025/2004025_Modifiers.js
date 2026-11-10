@@ -1495,7 +1495,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "list": [
+                    "dmgTypeList": [
                       "Imaginary"
                     ]
                   },
@@ -1660,7 +1660,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "list": [
+                    "dmgTypeList": [
                       "Lightning"
                     ]
                   },
@@ -1825,7 +1825,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "list": [
+                    "dmgTypeList": [
                       "Wind"
                     ]
                   },

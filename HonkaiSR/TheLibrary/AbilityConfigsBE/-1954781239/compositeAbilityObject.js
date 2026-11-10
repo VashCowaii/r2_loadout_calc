@@ -6393,7 +6393,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Fire"
                         ]
                       },
@@ -6431,7 +6431,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Physical"
                         ]
                       },
@@ -6469,7 +6469,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Lightning"
                         ]
                       },
@@ -6507,7 +6507,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "list": [
+                        "dmgTypeList": [
                           "Wind"
                         ]
                       },

@@ -236,7 +236,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Physical"
+                    "damageType": "Physical"
                   },
                   "passed": [
                     {
@@ -266,7 +266,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Fire"
+                    "damageType": "Fire"
                   },
                   "passed": [
                     {
@@ -296,7 +296,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Ice"
+                    "damageType": "Ice"
                   },
                   "passed": [
                     {
@@ -326,7 +326,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Thunder"
+                    "damageType": "Thunder"
                   },
                   "passed": [
                     {
@@ -356,7 +356,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Wind"
+                    "damageType": "Wind"
                   },
                   "passed": [
                     {
@@ -386,7 +386,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Quantum"
+                    "damageType": "Quantum"
                   },
                   "passed": [
                     {
@@ -416,7 +416,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Imaginary"
+                    "damageType": "Imaginary"
                   },
                   "passed": [
                     {
@@ -448,7 +448,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Physical"
+                    "damageType": "Physical"
                   },
                   "passed": [
                     {
@@ -478,7 +478,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Fire"
+                    "damageType": "Fire"
                   },
                   "passed": [
                     {
@@ -508,7 +508,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Ice"
+                    "damageType": "Ice"
                   },
                   "passed": [
                     {
@@ -538,7 +538,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Thunder"
+                    "damageType": "Thunder"
                   },
                   "passed": [
                     {
@@ -568,7 +568,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Wind"
+                    "damageType": "Wind"
                   },
                   "passed": [
                     {
@@ -598,7 +598,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Quantum"
+                    "damageType": "Quantum"
                   },
                   "passed": [
                     {
@@ -628,7 +628,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "DamageType": "Imaginary"
+                    "damageType": "Imaginary"
                   },
                   "passed": [
                     {
@@ -5410,7 +5410,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Fire"
+                            "damageType": "Fire"
                           },
                           {
                             "name": "Has Weakness",
@@ -5453,7 +5453,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Ice"
+                            "damageType": "Ice"
                           },
                           {
                             "name": "Has Weakness",
@@ -5496,7 +5496,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Imaginary"
+                            "damageType": "Imaginary"
                           },
                           {
                             "name": "Has Weakness",
@@ -5539,7 +5539,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Physical"
+                            "damageType": "Physical"
                           },
                           {
                             "name": "Has Weakness",
@@ -5582,7 +5582,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Quantum"
+                            "damageType": "Quantum"
                           },
                           {
                             "name": "Has Weakness",
@@ -5625,7 +5625,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Thunder"
+                            "damageType": "Thunder"
                           },
                           {
                             "name": "Has Weakness",
@@ -5668,7 +5668,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "DamageType": "Wind"
+                            "damageType": "Wind"
                           },
                           {
                             "name": "Has Weakness",

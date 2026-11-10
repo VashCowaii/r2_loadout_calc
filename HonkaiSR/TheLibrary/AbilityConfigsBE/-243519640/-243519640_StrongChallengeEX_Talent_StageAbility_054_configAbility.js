@@ -94,7 +94,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "DamageType": "Quantum"
+                "damageType": "Quantum"
               },
               "living": true
             },

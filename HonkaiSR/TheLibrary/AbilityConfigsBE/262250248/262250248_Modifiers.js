@@ -69,7 +69,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Physical"
+                "damageType": "Physical"
               },
               "passed": [
                 {
@@ -116,7 +116,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Fire"
+                "damageType": "Fire"
               },
               "passed": [
                 {
@@ -163,7 +163,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Wind"
+                "damageType": "Wind"
               },
               "passed": [
                 {
@@ -210,7 +210,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Thunder"
+                "damageType": "Thunder"
               },
               "passed": [
                 {
@@ -257,7 +257,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Imaginary"
+                "damageType": "Imaginary"
               },
               "passed": [
                 {
@@ -304,7 +304,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Quantum"
+                "damageType": "Quantum"
               },
               "passed": [
                 {
@@ -351,7 +351,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "DamageType": "Ice"
+                "damageType": "Ice"
               },
               "passed": [
                 {
