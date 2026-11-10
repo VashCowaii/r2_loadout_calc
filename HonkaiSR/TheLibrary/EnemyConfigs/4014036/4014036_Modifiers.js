@@ -4342,9 +4342,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "InsertFlag02",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -4593,9 +4593,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "InsertFlag01",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Inject Ability Use",

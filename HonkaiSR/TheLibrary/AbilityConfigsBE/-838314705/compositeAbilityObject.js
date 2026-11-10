@@ -4238,15 +4238,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "ODCountDown",
-          "value": 8
+          "value": 8,
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable with Stat",

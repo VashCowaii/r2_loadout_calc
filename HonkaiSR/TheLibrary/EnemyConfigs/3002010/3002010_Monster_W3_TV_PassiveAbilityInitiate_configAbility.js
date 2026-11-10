@@ -176,15 +176,14 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
-                  "value": -1
+                  "value": -1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
                   "value": {
                     "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
@@ -193,7 +192,8 @@ const configAbility = {
                     "variables": [
                       "FlopSide"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -330,9 +330,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
-                  "value": -1
+                  "value": -1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",

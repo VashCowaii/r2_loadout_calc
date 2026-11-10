@@ -1792,7 +1792,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "DiceResult",
                       "value": {
                         "operator": "Variables[0] (MDF_DiceResult) || RETURN",
@@ -1801,7 +1800,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DiceResult"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -2765,9 +2765,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "MDF_DiceResult",
-                          "value": 6
+                          "value": 6,
+                          "scope": "ContextModifier"
                         }
                       ],
                       "failed": [
@@ -2969,7 +2969,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "DiceResult",
                       "value": {
                         "operator": "Variables[0] (DiceResult) || Variables[1] (MDF_DiceResult) || ADD || RETURN",
@@ -2979,7 +2978,8 @@ const compositeAbilityObject = {
                           "DiceResult",
                           "MDF_DiceResult"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -3000,7 +3000,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DiceResult",
                   "value": {
                     "operator": "Variables[0] (MDF_DiceResult) || RETURN",
@@ -3009,7 +3008,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_DiceResult"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3144,9 +3144,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "DiceGamblingInsertCheck",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -3215,9 +3215,9 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W3_Aventurine_00"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "DiceGamblingInsertCheck",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -3750,9 +3750,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "WaitInsert",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -4321,9 +4321,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DiceGamblingInsertCheck",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },

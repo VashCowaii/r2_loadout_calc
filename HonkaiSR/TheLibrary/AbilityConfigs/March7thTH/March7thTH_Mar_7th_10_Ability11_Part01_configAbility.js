@@ -17,9 +17,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "scope": "ContextCaster",
       "variableName": "Skill11_HitCount",
-      "value": 0
+      "value": 0,
+      "scope": "ContextCaster"
     },
     {
       "name": "Looped Event",
@@ -57,7 +57,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Skill11_HitCount",
           "value": {
             "operator": "Variables[0] (Skill11_HitCount) || Constants[0] (1) || ADD || RETURN",
@@ -68,7 +67,8 @@ const configAbility = {
             "variables": [
               "Skill11_HitCount"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ]
     },

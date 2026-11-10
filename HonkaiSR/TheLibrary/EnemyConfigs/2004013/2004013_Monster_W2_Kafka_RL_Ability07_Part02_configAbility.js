@@ -7,9 +7,9 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "BattleEventFlag",
-      "value": 1
+      "value": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",

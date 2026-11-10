@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "scope": "ContextCaster",
       "variableName": "MazeSkill_Triggered",
-      "value": 1
+      "value": 1,
+      "scope": "ContextCaster"
     },
     {
       "name": "Define Custom Variable",
@@ -250,7 +250,6 @@ const configAbility = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "_can_continue",
                   "value": {
                     "operator": "Constants[0] (1) || RETURN",
@@ -259,7 +258,8 @@ const configAbility = {
                       1
                     ],
                     "variables": []
-                  }
+                  },
+                  "scope": "ContextAbility"
                 }
               ],
               "failed": [

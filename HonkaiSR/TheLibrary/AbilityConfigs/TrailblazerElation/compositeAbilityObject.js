@@ -709,9 +709,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextAbility",
               "variableName": "_random",
-              "value": 100
+              "value": 100,
+              "scope": "ContextAbility"
             }
           ],
           "failed": [
@@ -777,15 +777,14 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "_no_ssr_times",
-              "value": 0
+              "value": 0,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "_no_ssr_times",
               "value": {
                 "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
@@ -796,7 +795,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_no_ssr_times"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -847,9 +847,9 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "_no_ssr_times",
-          "value": 0
+          "value": 0,
+          "scope": "ContextCaster"
         }
       ],
       "onAbortReg": [],

@@ -80,7 +80,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextCaster",
       "variableName": "Skill11_DamagePercatage",
       "value": {
         "operator": "Variables[0] (0.8) || RETURN",
@@ -89,7 +88,8 @@ const configAbility = {
         "variables": [
           0.8
         ]
-      }
+      },
+      "scope": "ContextCaster"
     },
     {
       "name": "Add Events/Bonuses",

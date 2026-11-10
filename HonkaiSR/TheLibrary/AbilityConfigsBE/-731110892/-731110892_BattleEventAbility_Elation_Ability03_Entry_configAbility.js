@@ -256,7 +256,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "ElationTime_IsNoConsume",
           "value": {
             "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
@@ -265,21 +264,22 @@ const configAbility = {
             "variables": [
               "ElationTime_IsNoConsumeTemp"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextAbility",
       "variableName": "ElationTime_IsNoConsumeTemp",
-      "value": 0
+      "value": 0,
+      "scope": "ContextAbility"
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextAbility",
       "variableName": "ElationTime_OverrideElationPointTemp",
-      "value": -1
+      "value": -1,
+      "scope": "ContextAbility"
     },
     {
       "name": "Define Custom String with Value",

@@ -907,9 +907,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "scope": "AITag"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -960,9 +960,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 10
+                  "value": 10,
+                  "scope": "AITag"
                 },
                 {
                   "name": "Disable Abilities",
@@ -1978,17 +1978,17 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "OverHeal",
-              "value": 1
+              "value": 1,
+              "scope": "AITag"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "OverHeal",
-              "value": 0
+              "value": 0,
+              "scope": "AITag"
             }
           ]
         },
@@ -4127,7 +4127,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextTaskTemplate",
               "variableName": "_ExtraSpecialSP",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (_FixedAddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
@@ -4141,7 +4140,8 @@ const compositeAbilityObject = {
                   "_FixedAddValue",
                   "_MaxSpecialSP"
                 ]
-              }
+              },
+              "scope": "ContextTaskTemplate"
             },
             {
               "name": "IF",
@@ -7314,7 +7314,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Castorice_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
@@ -7323,7 +7322,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
@@ -7883,7 +7883,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Castorice_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
@@ -7892,7 +7891,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
@@ -8419,7 +8419,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Castorice_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
@@ -8428,7 +8427,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",

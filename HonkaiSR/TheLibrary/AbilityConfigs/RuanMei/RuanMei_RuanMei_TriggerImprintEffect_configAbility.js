@@ -86,9 +86,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "scope": "TargetEntity",
       "variableName": "DV_NeedDettachEffect",
-      "value": 1
+      "value": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

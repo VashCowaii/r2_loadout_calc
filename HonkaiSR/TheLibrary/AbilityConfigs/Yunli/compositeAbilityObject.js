@@ -1881,9 +1881,9 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "MazeSkill_Triggered",
-              "value": 1
+              "value": 1,
+              "scope": "ContextCaster"
             },
             "Deleted bullshit",
             {

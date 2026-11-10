@@ -994,9 +994,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SW_Minion01_EnhancementLevel",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1103,7 +1103,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SW_Minion01_EnhancementLevel",
               "value": {
                 "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
@@ -1112,7 +1111,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EnhancementLevel"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1579,9 +1579,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1633,9 +1633,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1660,9 +1660,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1714,9 +1714,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1741,9 +1741,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1795,9 +1795,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2456,23 +2456,23 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "FirstTime",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "FirstSkillInPhase02",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "FirstSkillInPhase02",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -2631,9 +2631,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "MDF_SummonFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",

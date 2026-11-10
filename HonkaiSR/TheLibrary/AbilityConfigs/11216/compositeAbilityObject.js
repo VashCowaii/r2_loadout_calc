@@ -1450,9 +1450,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "_damageStart",
-              "value": 1
+              "value": 1,
+              "scope": "ContextCaster"
             }
           ],
           "failed": [
@@ -1463,9 +1463,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "scope": "ContextCaster",
               "variableName": "_damageStart",
-              "value": 1
+              "value": 1,
+              "scope": "ContextCaster"
             }
           ]
         }

@@ -1859,9 +1859,9 @@ const configAbility = {
                           },
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AccumulateFlag",
-                            "value": 1
+                            "value": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -1933,9 +1933,9 @@ const configAbility = {
                       },
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AccumulateFlag",
-                        "value": 0
+                        "value": 0,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",

@@ -214,7 +214,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "_BPAddValue",
                   "value": {
                     "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
@@ -223,7 +222,8 @@ const configAbility = {
                     "variables": [
                       "_BPAddValue"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Looped Event",

@@ -1610,7 +1610,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "MDF_DamageUpRatio",
               "value": {
                 "operator": "Variables[0] (BurningBPDamageUpRatio) || RETURN",
@@ -1619,7 +1618,8 @@ const configAbility = {
                 "variables": [
                   "BurningBPDamageUpRatio"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "Find New Target",

@@ -177,7 +177,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_QuantumCount",
                       "value": {
                         "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
@@ -188,7 +187,8 @@ const configAbility = {
                         "variables": [
                           "MDF_QuantumCount"
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -471,7 +471,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_QuantumCount",
                       "value": {
                         "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
@@ -482,7 +481,8 @@ const configAbility = {
                         "variables": [
                           "MDF_QuantumCount"
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Add Events/Bonuses",

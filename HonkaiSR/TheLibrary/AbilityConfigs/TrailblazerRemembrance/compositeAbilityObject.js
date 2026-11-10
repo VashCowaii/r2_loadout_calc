@@ -1744,7 +1744,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "scope": "TargetEntity",
           "variableName": "Skill11_Stance",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
@@ -1755,7 +1754,8 @@ const compositeAbilityObject = {
             "variables": [
               "AOE Toughness Value"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Joint-Attack Ability",
@@ -1845,7 +1845,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "scope": "TargetEntity",
           "variableName": "Ultra_Stance",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
@@ -1854,7 +1853,8 @@ const compositeAbilityObject = {
             "variables": [
               "AOE Toughness Value"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Ability",

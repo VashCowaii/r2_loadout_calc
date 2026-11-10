@@ -1879,9 +1879,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "PartDecisionFlag",
-                      "value": 3
+                      "value": 3,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -1989,9 +1989,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Phase2_BattlePerform",
-                      "value": 4
+                      "value": 4,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -5377,9 +5377,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "BreakFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -6048,9 +6048,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "BreakFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",

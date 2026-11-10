@@ -752,9 +752,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "AlwaysNeedBP",
-                      "value": 1
+                      "value": 1,
+                      "scope": "AITag"
                     }
                   ]
                 }
@@ -770,9 +770,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "AlwaysNeedBP",
-                  "value": 0
+                  "value": 0,
+                  "scope": "AITag"
                 },
                 {
                   "name": "IF",

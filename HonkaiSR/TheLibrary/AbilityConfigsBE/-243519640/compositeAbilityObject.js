@@ -1166,9 +1166,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_AttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -1181,9 +1181,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_AttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -8616,7 +8616,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -8626,7 +8625,8 @@ const compositeAbilityObject = {
                       "MDF_CriticalDamage",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -11049,7 +11049,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -11059,7 +11058,8 @@ const compositeAbilityObject = {
                       "MDF_AttackAddedRatio",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Stack Target Stat Value",

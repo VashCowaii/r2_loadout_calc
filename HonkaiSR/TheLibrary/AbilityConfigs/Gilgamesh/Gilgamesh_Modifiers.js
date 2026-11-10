@@ -16,7 +16,6 @@ const configAbility = {
       "onCreation": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Gilgamesh_00_MazeSkill_AchievementCount",
           "value": {
             "operator": "Variables[0] (Gilgamesh_00_MazeSkill_AchievementCount) || Constants[0] (1) || ADD || RETURN",
@@ -27,7 +26,8 @@ const configAbility = {
             "variables": [
               "Gilgamesh_00_MazeSkill_AchievementCount"
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "IF",
@@ -1581,17 +1581,17 @@ const configAbility = {
                 "Deleted bullshit",
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 10
+                  "value": 10,
+                  "scope": "AITag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "scope": "AITag"
                 }
               ]
             }
@@ -1626,17 +1626,17 @@ const configAbility = {
                 "Deleted bullshit",
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 10
+                  "value": 10,
+                  "scope": "AITag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "scope": "AITag"
                 }
               ]
             }

@@ -739,9 +739,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 3
+                  "value": 3,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -821,9 +821,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 2
+                  "value": 2,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -910,9 +910,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",

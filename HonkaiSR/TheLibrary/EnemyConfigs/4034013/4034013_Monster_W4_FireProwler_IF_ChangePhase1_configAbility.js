@@ -147,9 +147,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "LMCountDown",
-      "value": 8
+      "value": 8,
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

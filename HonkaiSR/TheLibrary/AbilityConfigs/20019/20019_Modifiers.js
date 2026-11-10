@@ -563,9 +563,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
@@ -575,9 +575,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 5
+                  "value": 5,
+                  "scope": "TargetEntity"
                 }
               ]
             }

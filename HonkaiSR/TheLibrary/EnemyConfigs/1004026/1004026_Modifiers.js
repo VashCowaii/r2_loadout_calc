@@ -485,9 +485,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_AttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -511,9 +511,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_AttackFlag",
-              "value": 1
+              "value": 1,
+              "scope": "ContextModifier"
             }
           ]
         }

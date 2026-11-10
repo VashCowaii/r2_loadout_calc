@@ -124,9 +124,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Mar7th_00_Passive_CounterView",
-          "value": 0
+          "value": 0,
+          "scope": "ContextCaster"
         }
       ]
     },

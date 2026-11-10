@@ -110,9 +110,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_SpecialPhoto",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -120,9 +120,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_SpecialPhoto_BeingLimbo",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -130,9 +130,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_KillerSkill",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -140,9 +140,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "#CL_PhotoCheck",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -187,9 +187,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_SpecialPhoto",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -197,9 +197,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_SpecialPhoto_BeingLimbo",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -207,9 +207,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_KillerSkill",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -217,9 +217,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "#CL_PhotoCheck",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -451,9 +451,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "#CL_PhotoCheck",
-                          "value": 0
+                          "value": 0,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -475,9 +475,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "#CL_PhotoCheck",
-                      "value": 2
+                      "value": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -872,9 +872,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "#CL_PhotoCheck",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -898,9 +898,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Self_KillerSkill",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -944,9 +944,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_KillerSkill",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -954,9 +954,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "#CL_PhotoCheck",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Trigger Ability",

@@ -1363,9 +1363,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 2
+                  "value": 2,
+                  "scope": "TargetEntity"
                 },
                 "Modifier Deletes Itself"
               ],
@@ -1376,9 +1376,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

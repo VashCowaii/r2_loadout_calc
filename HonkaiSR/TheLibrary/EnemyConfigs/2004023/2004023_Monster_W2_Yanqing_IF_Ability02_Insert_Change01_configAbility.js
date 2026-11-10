@@ -37,17 +37,17 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextAbility",
               "variableName": "MonsterPhase",
-              "value": 1
+              "value": 1,
+              "scope": "ContextAbility"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextAbility",
               "variableName": "MonsterPhase",
-              "value": 2
+              "value": 2,
+              "scope": "ContextAbility"
             }
           ]
         }

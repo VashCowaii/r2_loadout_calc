@@ -2191,9 +2191,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "MazeSkill_Triggered",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "Find New Target",

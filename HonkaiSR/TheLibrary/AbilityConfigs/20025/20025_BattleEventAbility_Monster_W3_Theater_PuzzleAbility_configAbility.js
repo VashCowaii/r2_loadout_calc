@@ -92,9 +92,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -113,9 +113,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "AIFlag",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -123,9 +123,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "FlopSide",
-          "value": -1
+          "value": -1,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",

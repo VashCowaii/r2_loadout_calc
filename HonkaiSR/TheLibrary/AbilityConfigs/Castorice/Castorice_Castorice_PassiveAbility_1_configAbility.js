@@ -44,17 +44,17 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "AITag",
           "variableName": "OverHeal",
-          "value": 1
+          "value": 1,
+          "scope": "AITag"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "scope": "AITag",
           "variableName": "OverHeal",
-          "value": 0
+          "value": 0,
+          "scope": "AITag"
         }
       ]
     },

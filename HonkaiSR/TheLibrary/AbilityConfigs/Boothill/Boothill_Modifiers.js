@@ -176,9 +176,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextOwner",
               "variableName": "CurEnhance",
-              "value": 0
+              "value": 0,
+              "scope": "ContextOwner"
             }
           ]
         },
@@ -308,7 +308,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextOwner",
               "variableName": "CurEnhance",
               "value": {
                 "operator": "Variables[0] (_layer) || RETURN",
@@ -317,7 +316,8 @@ const configAbility = {
                 "variables": [
                   "_layer"
                 ]
-              }
+              },
+              "scope": "ContextOwner"
             },
             {
               "name": "IF",

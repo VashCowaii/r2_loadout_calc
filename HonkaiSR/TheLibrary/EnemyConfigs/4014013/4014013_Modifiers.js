@@ -820,9 +820,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ShieldBreakBonusFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Force Entity Death",
@@ -928,9 +928,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2593,9 +2593,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act4Flag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2616,9 +2616,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act4Flag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2651,9 +2651,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act3Flag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2674,9 +2674,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act3Flag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2709,9 +2709,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act2Flag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2732,9 +2732,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act2Flag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2767,9 +2767,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act1Flag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2790,9 +2790,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Act1Flag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2936,9 +2936,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShieldBreakBonusFlag",
-                          "value": 0
+                          "value": 0,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -4500,9 +4500,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShieldBreakBonusFlag",
-                          "value": 0
+                          "value": 0,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -5033,9 +5033,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "ShieldBreakBonusFlag",
-                          "value": 0
+                          "value": 0,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -5230,9 +5230,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "_OnBeingBreakTriggered",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -5307,9 +5307,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ShieldBreakBonusFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -5434,9 +5434,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_OnBeingBreakTriggered",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -5584,9 +5584,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_OnBeingBreakTriggered",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -5691,9 +5691,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "ShieldBreakBonusFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -5818,9 +5818,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_OnBeingBreakTriggered",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -6316,9 +6316,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ShieldAddMaxLayer",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -6481,7 +6481,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ShieldAddMaxLayer",
               "value": {
                 "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
@@ -6490,7 +6489,8 @@ const configAbility = {
                 "variables": [
                   "MDF_AddMaxLayer"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -6542,9 +6542,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ShieldAddMaxLayer",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -6707,7 +6707,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ShieldAddMaxLayer",
               "value": {
                 "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
@@ -6716,7 +6715,8 @@ const configAbility = {
                 "variables": [
                   "MDF_AddMaxLayer"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Displayed Energy Bar",

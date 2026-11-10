@@ -22,9 +22,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextCaster",
       "variableName": "Max_DOT_Layer",
-      "value": 999
+      "value": 999,
+      "scope": "ContextCaster"
     },
     {
       "name": "IF",

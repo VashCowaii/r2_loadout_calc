@@ -1096,9 +1096,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "DebuffBonusTriggeredFlag_Attack",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -1197,9 +1197,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Attack",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1207,9 +1207,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Debuff",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -1236,9 +1236,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "DebuffBonusTriggeredFlag_Pre",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -1253,9 +1253,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Pre",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1263,9 +1263,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Attack",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1273,9 +1273,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Debuff",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -1322,9 +1322,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "DebuffBonusTriggeredFlag_Debuff",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -3511,9 +3511,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "Deathrattle",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",

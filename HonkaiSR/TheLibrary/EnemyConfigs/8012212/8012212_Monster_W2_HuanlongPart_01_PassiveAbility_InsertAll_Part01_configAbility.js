@@ -24,9 +24,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
           "variableName": "InsertFlag",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -112,9 +112,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "TeammateInsertFlag",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -207,9 +207,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "TeammateInsertFlag2",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -392,9 +392,9 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "TeammateInsertFlag",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -498,9 +498,9 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "TeammateInsertFlag2",
-                                  "value": 1
+                                  "value": 1,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }
@@ -667,9 +667,9 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "TeammateInsertFlag",
-                                  "value": 1
+                                  "value": 1,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }
@@ -762,9 +762,9 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "scope": "TargetEntity",
                                       "variableName": "TeammateInsertFlag2",
-                                      "value": 1
+                                      "value": 1,
+                                      "scope": "TargetEntity"
                                     }
                                   ]
                                 }

@@ -1758,7 +1758,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -1769,7 +1768,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "CurrentWeakPoint"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -1791,9 +1791,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "CurrentWeakPoint",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     },
@@ -2011,7 +2011,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -2022,7 +2021,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "CurrentWeakPoint"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -2044,9 +2044,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "CurrentWeakPoint",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     },
@@ -2191,7 +2191,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -2202,7 +2201,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "CurrentWeakPoint"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -2224,9 +2224,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "CurrentWeakPoint",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     },
@@ -2739,9 +2739,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "ChangeWeakPointFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -2895,9 +2895,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "ChangeWeakPointFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Clear Weaknesses",
@@ -3653,9 +3653,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "ChangeWeakPointFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -3825,9 +3825,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "ChangeWeakPointFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Clear Weaknesses",
@@ -5064,9 +5064,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 3
+                  "value": 3,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -5146,9 +5146,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 2
+                  "value": 2,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -5235,9 +5235,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EXSkill01",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -7105,17 +7105,17 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "MonsterPhase",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextAbility"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "MonsterPhase",
-                  "value": 2
+                  "value": 2,
+                  "scope": "ContextAbility"
                 }
               ]
             }
@@ -9726,9 +9726,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextAbility",
               "variableName": "SwordNumber",
-              "value": 1
+              "value": 1,
+              "scope": "ContextAbility"
             },
             {
               "name": "Create Enemies",

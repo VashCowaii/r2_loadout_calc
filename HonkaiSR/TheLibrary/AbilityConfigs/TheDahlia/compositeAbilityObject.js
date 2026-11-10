@@ -725,9 +725,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "BPSkillPriority",
-                  "value": 0
+                  "value": 0,
+                  "scope": "AITag"
                 }
               ]
             },
@@ -741,9 +741,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "BPSkillPriority",
-                  "value": 1
+                  "value": 1,
+                  "scope": "AITag"
                 }
               ]
             },
@@ -2442,7 +2442,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "ADF_AttackGap",
           "value": {
             "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
@@ -2453,7 +2452,8 @@ const compositeAbilityObject = {
             "variables": [
               5
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
@@ -3090,7 +3090,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_StanceValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
@@ -3100,7 +3099,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxStanceValue",
                           "MDF_StanceRatio"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Deal Toughness DMG",
@@ -4220,7 +4220,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueCaster) || Variables[1] (0.24) || MUL || Variables[2] (0.5) || ADD || RETURN",
@@ -4231,7 +4230,8 @@ const compositeAbilityObject = {
                       0.24,
                       0.5
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Stack Target Stat Value",

@@ -1708,9 +1708,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "InsertFlag02",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -1959,9 +1959,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "InsertFlag01",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -4700,7 +4700,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "scope": "TargetEntity",
           "variableName": "StanceDamagePreshowValue",
           "value": {
             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -4709,7 +4708,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {

@@ -170,9 +170,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -220,9 +220,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 1
+                      "value": 1,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -278,9 +278,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -377,9 +377,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 100
+                          "value": 100,
+                          "scope": "AITag"
                         }
                       ],
                       "failed": [
@@ -411,9 +411,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         }
                       ]
                     }

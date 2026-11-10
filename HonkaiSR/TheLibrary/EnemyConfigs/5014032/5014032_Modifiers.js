@@ -227,9 +227,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "TutorialFlag",
-                      "value": 2
+                      "value": 2,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1604,7 +1604,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_SuccessChance",
               "value": {
                 "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
@@ -1613,7 +1612,8 @@ const configAbility = {
                 "variables": [
                   "Inferno_Skill02_SuccessChance"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1630,7 +1630,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_LoseHPPreshow",
               "value": {
                 "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
@@ -1640,7 +1639,8 @@ const configAbility = {
                   "MDF_MaxHP",
                   "Inferno_Skill02_DamagePercentage"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -1744,9 +1744,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Painter: Self}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "TutorialFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }

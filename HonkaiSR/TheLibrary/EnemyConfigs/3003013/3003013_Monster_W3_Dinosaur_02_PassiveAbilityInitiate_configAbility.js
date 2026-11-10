@@ -154,9 +154,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -190,9 +190,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AI_HeiShengBei_SpecialAI",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -200,9 +200,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AI_HeiShengBei_Need",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -222,9 +222,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "IF",
@@ -258,9 +258,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AI_HeiShengBei_SpecialAI",
-                          "value": 0
+                          "value": 0,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -268,9 +268,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "AI_HeiShengBei_Need",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -411,9 +411,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -447,9 +447,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AI_HeiShengBei_SpecialAI",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -457,9 +457,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AI_HeiShengBei_Need",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },

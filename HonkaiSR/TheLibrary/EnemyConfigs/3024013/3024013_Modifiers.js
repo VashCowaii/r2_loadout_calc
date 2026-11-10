@@ -1956,9 +1956,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "FlowerPower",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1983,9 +1983,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "FlowerPower",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         }

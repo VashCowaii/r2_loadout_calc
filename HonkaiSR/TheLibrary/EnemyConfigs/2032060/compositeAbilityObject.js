@@ -1015,7 +1015,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Feixiao: Self}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Skill06DamagePercentage",
           "value": {
             "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
@@ -1024,7 +1023,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill02[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -1032,7 +1032,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self Initial}}"
           },
-          "scope": "TargetEntity",
           "variableName": "Skill06DamagePercentage",
           "value": {
             "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
@@ -1041,7 +1040,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill01[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",

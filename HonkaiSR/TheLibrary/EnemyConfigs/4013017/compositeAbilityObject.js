@@ -199,9 +199,9 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "scope": "AITag",
                       "variableName": "_LocalLegend_PreSelectFlag",
-                      "value": 1
+                      "value": 1,
+                      "scope": "AITag"
                     }
                   ],
                   "failed": [
@@ -248,9 +248,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "scope": "AITag",
                           "variableName": "_LocalLegend_PreSelectFlag",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         }
                       ],
                       "failed": [
@@ -283,9 +283,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "scope": "AITag",
                           "variableName": "_LocalLegend_PreSelectFlag",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         }
                       ]
                     }
@@ -1985,9 +1985,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -2540,9 +2540,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -3591,7 +3591,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_MonsterChangeCnt",
                           "value": {
                             "operator": "Variables[0] (_EntityScore) || RETURN",
@@ -3600,7 +3599,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_EntityScore"
                             ]
-                          }
+                          },
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -3879,9 +3879,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "MDF_AddStore",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -4276,7 +4276,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_MonsterChangeCnt",
                   "value": {
                     "operator": "Variables[0] (_Avatar_LifeCount) || RETURN",
@@ -4285,7 +4284,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_Avatar_LifeCount"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Find New Target",
@@ -4602,9 +4602,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S1_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -4630,9 +4630,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "MDF_AddStore",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",

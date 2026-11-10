@@ -31,9 +31,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 2
+                "value": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -75,9 +75,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 1
+                "value": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -119,9 +119,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 2
+                "value": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -163,9 +163,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 3
+                "value": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -207,9 +207,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 4
+                "value": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -261,9 +261,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 4
+                "value": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -315,9 +315,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 5
+                "value": 5,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -359,9 +359,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 6
+                "value": 6,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -403,9 +403,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 1
+                "value": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -447,9 +447,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 92
+                "value": 92,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -491,9 +491,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 93
+                "value": 93,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -535,9 +535,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 94
+                "value": 94,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -589,9 +589,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 94
+                "value": 94,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -643,9 +643,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 95
+                "value": 95,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -687,9 +687,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 96
+                "value": 96,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -731,9 +731,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 97
+                "value": 97,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -775,9 +775,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 1
+                "value": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -819,9 +819,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 2
+                "value": 2,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -863,9 +863,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 3
+                "value": 3,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -907,9 +907,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 4
+                "value": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -961,9 +961,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 4
+                "value": 4,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1015,9 +1015,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 5
+                "value": 5,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1059,9 +1059,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 6
+                "value": 6,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1103,9 +1103,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 1
+                "value": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1147,9 +1147,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 100
+                "value": 100,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1185,9 +1185,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 102
+                "value": 102,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -1223,9 +1223,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "W2_Yanqing_00_AICounter",
-                "value": 101
+                "value": 101,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

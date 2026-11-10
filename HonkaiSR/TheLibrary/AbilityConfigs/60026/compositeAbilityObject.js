@@ -175,13 +175,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_count",
-          "value": 0
+          "value": 0,
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_delta_frame",
           "value": {
             "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (Count) || Constants[0] (1) || SUB || DIV || RETURN",
@@ -194,7 +193,8 @@ const compositeAbilityObject = {
               "PHAINON_OBJECT_UNUSED_2",
               "Count"
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Looped Event",
@@ -217,7 +217,6 @@ const compositeAbilityObject = {
               "paramSequence": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "_count",
                   "value": {
                     "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
@@ -228,7 +227,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_count"
                     ]
-                  }
+                  },
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "ATK Scaling DMG",

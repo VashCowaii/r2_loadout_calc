@@ -299,7 +299,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "MDF_FrozenCount",
                           "value": {
                             "operator": "Variables[0] (MDF_FrozenCount) || Constants[0] (1) || ADD || RETURN",
@@ -310,7 +309,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_FrozenCount"
                             ]
-                          }
+                          },
+                          "scope": "ContextCaster"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -1085,9 +1085,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Mar7th_00_Passive_CounterView",
-              "value": 0
+              "value": 0,
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -1233,7 +1233,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Mar7th_00_Passive_CounterView",
               "value": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -1244,7 +1243,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1289,7 +1289,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Mar7th_00_Passive_CounterView",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1298,7 +1297,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1505,7 +1505,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "Mar7th_00_Passive_CounterView",
                       "value": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -1516,7 +1515,8 @@ const compositeAbilityObject = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Find New Target",
@@ -1609,7 +1609,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "Mar7th_00_Passive_CounterView",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -1618,7 +1617,8 @@ const compositeAbilityObject = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Find New Target",

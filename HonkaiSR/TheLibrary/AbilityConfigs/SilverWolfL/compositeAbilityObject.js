@@ -4097,7 +4097,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextTaskTemplate",
                   "variableName": "_addCritChanceScore",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Constants[0] (1) || Variables[1] (_critChance) || SUB || Variables[2] (0.0039999997) || DIV || PARAM_1 || FUNCTION || RETURN",
@@ -4110,7 +4109,8 @@ const compositeAbilityObject = {
                       "_critChance",
                       0.0039999997
                     ]
-                  }
+                  },
+                  "scope": "ContextTaskTemplate"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4807,9 +4807,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "_Item3_AchievementFlag",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4888,9 +4888,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "_Item3_AchievementFlag",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "UI Display Event",
@@ -5534,9 +5534,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "_Item2_AchievementFlag",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "UI Display Event",
@@ -5952,9 +5952,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "_Item1_AchievementFlag",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "UI Display Event",
@@ -7064,7 +7064,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "Skill11_Shoot_Stance",
           "value": {
             "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -7073,7 +7072,8 @@ const compositeAbilityObject = {
             "variables": [
               "ST Toughness Value"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",

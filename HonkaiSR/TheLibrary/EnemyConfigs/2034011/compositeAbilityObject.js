@@ -730,7 +730,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "WolfBoss_BloodRageCount",
               "value": {
                 "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
@@ -739,7 +738,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "ResetBloodRageCount"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Action Advance/Delay",

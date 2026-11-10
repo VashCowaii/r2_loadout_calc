@@ -2001,9 +2001,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 10
+              "value": 10,
+              "scope": "AITag"
             }
           ]
         }
@@ -2571,7 +2571,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "CurSpecialSP",
                       "value": {
                         "operator": "Variables[0] (CurSpecialSP) || RETURN",
@@ -2580,7 +2579,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "CurSpecialSP"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -3281,7 +3281,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "scope": "TargetEntity",
           "variableName": "CurSpecialSP",
           "value": {
             "operator": "Variables[0] (CurSpecialSP) || RETURN",
@@ -3290,7 +3289,8 @@ const compositeAbilityObject = {
             "variables": [
               "CurSpecialSP"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -3919,7 +3919,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextTaskTemplate",
               "variableName": "_ExtraSpecialSP",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
@@ -3933,7 +3932,8 @@ const compositeAbilityObject = {
                   "parameter[0]_AddValue",
                   "_MaxSpecialSP"
                 ]
-              }
+              },
+              "scope": "ContextTaskTemplate"
             },
             {
               "name": "IF",
@@ -4367,9 +4367,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "S02_ExtraRatio",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextOwner"
                 }
               ]
             },
@@ -6651,9 +6651,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BPSkill21_Plus",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -6892,9 +6892,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "MDF_ExtraLoopCount",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextOwner"
                 }
               ]
             },
@@ -6947,7 +6947,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextOwner",
                       "variableName": "MDF_ExtraLoopCount",
                       "value": {
                         "operator": "Variables[0] (MDF_TribbieLoopCount) || RETURN",
@@ -6956,7 +6955,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_TribbieLoopCount"
                         ]
-                      }
+                      },
+                      "scope": "ContextOwner"
                     }
                   ],
                   "failed": [
@@ -6966,9 +6966,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextOwner",
                       "variableName": "MDF_ExtraLoopCount",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextOwner"
                     }
                   ]
                 }
@@ -12445,9 +12445,9 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextTaskTemplate",
                           "variableName": "LightTeamCount",
-                          "value": 2
+                          "value": 2,
+                          "scope": "ContextTaskTemplate"
                         },
                         {
                           "name": "Declare Custom Variable",
@@ -12751,9 +12751,9 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextOwner",
               "variableName": "#CL_MirrorSetupFlag",
-              "value": 1
+              "value": 1,
+              "scope": "ContextOwner"
             }
           ]
         },
@@ -12781,7 +12781,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextTaskTemplate",
               "variableName": "_ExtraSpecialSP",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
@@ -12795,7 +12794,8 @@ const compositeAbilityObject = {
                   "parameter[0]_AddValue",
                   "_MaxSpecialSP"
                 ]
-              }
+              },
+              "scope": "ContextTaskTemplate"
             },
             {
               "name": "IF",

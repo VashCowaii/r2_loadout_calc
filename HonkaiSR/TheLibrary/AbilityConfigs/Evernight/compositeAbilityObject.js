@@ -3708,7 +3708,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "scope": "TargetEntity",
           "variableName": "_Skill03_Stance",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
@@ -3717,7 +3716,8 @@ const compositeAbilityObject = {
             "variables": [
               "AOE Toughness Value"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -3725,7 +3725,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "scope": "TargetEntity",
           "variableName": "_Skill03_P1_DamagePercentage",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
@@ -3734,7 +3733,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Trigger Ability",

@@ -2525,9 +2525,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "EndBreakFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2563,9 +2563,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "EndBreakFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             }

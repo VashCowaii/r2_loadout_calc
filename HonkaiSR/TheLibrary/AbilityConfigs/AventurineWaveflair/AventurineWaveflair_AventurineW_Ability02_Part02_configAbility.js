@@ -41,9 +41,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextCaster",
       "variableName": "_SpecialAttackEnergyPointTriggerCount",
-      "value": 0
+      "value": 0,
+      "scope": "ContextCaster"
     },
     {
       "name": "ATK Scaling DMG",

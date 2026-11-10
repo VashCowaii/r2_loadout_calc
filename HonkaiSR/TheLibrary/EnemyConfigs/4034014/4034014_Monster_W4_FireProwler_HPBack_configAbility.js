@@ -371,9 +371,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "HPBack",
-      "value": 0
+      "value": 0,
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

@@ -326,9 +326,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DV_HitCount",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },

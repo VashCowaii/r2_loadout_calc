@@ -108,9 +108,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "BreakFlag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -779,9 +779,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "scope": "TargetEntity",
               "variableName": "BreakFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",

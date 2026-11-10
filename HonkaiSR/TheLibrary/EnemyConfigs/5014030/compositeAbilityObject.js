@@ -250,9 +250,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "TutorialFlag",
-                          "value": 2
+                          "value": 2,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -1627,7 +1627,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_SuccessChance",
                   "value": {
                     "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
@@ -1636,7 +1635,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Inferno_Skill02_SuccessChance"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1653,7 +1653,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_LoseHPPreshow",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
@@ -1663,7 +1662,8 @@ const compositeAbilityObject = {
                       "MDF_MaxHP",
                       "Inferno_Skill02_DamagePercentage"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -1767,9 +1767,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Painter: Self}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "TutorialFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2443,9 +2443,9 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "TutorialFlag",
-              "value": 3
+              "value": 3,
+              "scope": "TargetEntity"
             },
             {
               "name": "Skill Points Modification",
@@ -3865,9 +3865,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "TutorialFlag",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",

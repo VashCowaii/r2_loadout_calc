@@ -1045,9 +1045,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1744,9 +1744,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "FlopSide",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2261,9 +2261,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2271,9 +2271,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "FlopSide",
-                  "value": -1
+                  "value": -1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2813,9 +2813,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DoingFlop",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -2835,9 +2835,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DoingFlop",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -2994,9 +2994,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3076,9 +3076,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DoingFlop",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3098,9 +3098,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DoingFlop",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3257,9 +3257,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3345,9 +3345,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DoingFlop",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3367,9 +3367,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DoingFlop",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3526,9 +3526,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3611,9 +3611,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "DoingFlop",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3633,9 +3633,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DoingFlop",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -3792,9 +3792,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3849,9 +3849,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3950,9 +3950,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Negative_Count",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -4154,9 +4154,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Negative_Count",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             "Modifier Deletes Itself"
           ]
@@ -4176,9 +4176,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -4186,9 +4186,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Negative_Count",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -4365,9 +4365,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "ReadytoFlop",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -4411,7 +4411,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Negative_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
@@ -4420,7 +4419,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Negative_Count"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -4454,9 +4454,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ReadytoFlop",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -4471,7 +4471,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Negative_Count) || Constants[0] (1) || ADD || RETURN",
@@ -4482,7 +4481,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Negative_Count"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -4490,7 +4490,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Negative_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
@@ -4499,7 +4498,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Negative_Count"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -4533,7 +4533,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_Negative_Count_Diff",
               "value": {
                 "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
@@ -4543,7 +4542,8 @@ const configAbility = {
                   "MDF_Negative_Count_Max",
                   "MDF_Negative_Count"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",
@@ -4565,9 +4565,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ReadytoFlop",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -4598,9 +4598,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "FlopSide",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4807,9 +4807,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Negative_Count",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Update Override Controller",

@@ -128,7 +128,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextTaskTemplate",
               "variableName": "_addCritChanceScore",
               "value": {
                 "operator": "Variables[0] (CEIL) || Constants[0] (1) || Variables[1] (_critChance) || SUB || Variables[2] (0.0039999997) || DIV || PARAM_1 || FUNCTION || RETURN",
@@ -141,7 +140,8 @@ const configAbility = {
                   "_critChance",
                   0.0039999997
                 ]
-              }
+              },
+              "scope": "ContextTaskTemplate"
             },
             {
               "name": "Define Custom Variable",

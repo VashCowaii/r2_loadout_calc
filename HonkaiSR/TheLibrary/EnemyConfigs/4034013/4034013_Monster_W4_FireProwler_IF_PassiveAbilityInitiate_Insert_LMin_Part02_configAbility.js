@@ -45,9 +45,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "scope": "TargetEntity",
       "variableName": "LMCountDown",
-      "value": 0
+      "value": 0,
+      "scope": "TargetEntity"
     },
     {
       "name": "Declare Custom Variable",

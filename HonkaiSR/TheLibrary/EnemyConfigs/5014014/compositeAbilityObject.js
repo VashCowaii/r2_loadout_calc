@@ -5073,9 +5073,9 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W5_Vtuber_00"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "Win",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Inject Ability Use",

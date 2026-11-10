@@ -512,23 +512,23 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "FirstTime",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "FirstSkillInPhase02",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "FirstSkillInPhase02",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -687,9 +687,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "MDF_SummonFlag",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -2530,9 +2530,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "AbilityFlag",
-          "value": 0
+          "value": 0,
+          "scope": "ContextAbility"
         },
         {
           "name": "Looped Event",

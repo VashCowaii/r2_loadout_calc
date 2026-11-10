@@ -389,7 +389,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX02_P1_Core_StanceDamageValue",
           "value": {
             "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
@@ -398,7 +397,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX02[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -406,7 +406,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX02_P1_Core_StanceDamageValue",
           "value": {
             "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
@@ -415,7 +414,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX02[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         }
       ]
     },
@@ -460,7 +460,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P1_AttackAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
@@ -469,7 +468,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -477,7 +477,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P1_AttackAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
@@ -486,7 +485,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -494,7 +494,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P1_AttackAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
@@ -503,7 +502,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[0]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -511,7 +511,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P2_SpeedAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
@@ -520,7 +519,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[1]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -528,7 +528,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P2_SpeedAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
@@ -537,7 +536,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[1]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -545,7 +545,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P2_SpeedAddedRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
@@ -554,7 +553,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[1]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -562,7 +562,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P3_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
@@ -571,7 +570,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[2]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -579,7 +579,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P3_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
@@ -588,7 +587,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[2]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -596,7 +596,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P3_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
@@ -605,7 +604,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[2]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -613,7 +613,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P4_ActionDelayRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
@@ -622,7 +621,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[3]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -630,7 +630,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P4_ActionDelayRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
@@ -639,7 +638,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[3]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -647,7 +647,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
           },
-          "scope": "TargetEntity",
           "variableName": "SkillEX03_P4_ActionDelayRatio",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
@@ -656,7 +655,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[3]]}"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         }
       ]
     },

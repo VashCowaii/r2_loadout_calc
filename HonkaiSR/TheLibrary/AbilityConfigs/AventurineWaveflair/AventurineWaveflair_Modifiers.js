@@ -157,9 +157,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "ElationCharacterCount",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Find New Target",
@@ -327,9 +327,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "_SpecialAttackTriggerFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -340,9 +340,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "_SpecialAttackTriggerFlag",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -367,9 +367,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "_SpecialAttackTriggerFlag",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -1267,15 +1267,14 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "_AlreadyTriggerElationSkill",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "MDF_LayerMod",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_Layer) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
@@ -1286,7 +1285,8 @@ const configAbility = {
                   "MDF_Layer",
                   10
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",
@@ -1372,7 +1372,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "MDF_LayerModTriggerLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_LayerMod) || RETURN",
@@ -1381,7 +1380,8 @@ const configAbility = {
                         "variables": [
                           "MDF_LayerMod"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -1593,9 +1593,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "_IsEnergyTrigger",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -1615,9 +1615,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_IsEnergyTrigger",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 },
                 "Unknown EventType2 (Not always an error)[2 true][3_NAME AventurineW]"
               ]

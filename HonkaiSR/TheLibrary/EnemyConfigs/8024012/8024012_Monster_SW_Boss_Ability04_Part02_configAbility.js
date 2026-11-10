@@ -19,9 +19,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "MonsterNumDamageUpLayer",
-          "value": 3
+          "value": 3,
+          "scope": "TargetEntity"
         }
       ],
       "failed": [
@@ -40,9 +40,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "MonsterNumDamageUpLayer",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -61,17 +61,17 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "MonsterNumDamageUpLayer",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "MonsterNumDamageUpLayer",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -100,9 +100,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "Phase2FirstSummon",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",
@@ -517,7 +517,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "scope": "TargetEntity",
       "variableName": "DamageUpRatio",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
@@ -526,7 +525,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill01[0]]}"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -658,9 +658,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "MonsterNumDamageUpLayer",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             }
           ]
         },

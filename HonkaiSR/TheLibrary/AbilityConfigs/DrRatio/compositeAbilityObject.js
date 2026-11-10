@@ -204,7 +204,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
@@ -214,7 +213,8 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue",
                           "MDF_DebuffNumber"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -238,7 +238,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "MDF_PropertyValueChange",
                           "value": {
                             "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
@@ -247,7 +246,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_PropertyValueMax"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         }
                       ],
                       "failed": [
@@ -257,7 +257,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "MDF_PropertyValueChange",
                           "value": {
                             "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
@@ -267,7 +266,8 @@ const compositeAbilityObject = {
                               "MDF_PropertyValue",
                               "MDF_DebuffNumber"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         }
                       ]
                     }
@@ -279,9 +279,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -306,9 +306,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -316,9 +316,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_DebuffNumber",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -331,9 +331,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -341,9 +341,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_DebuffNumber",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             }

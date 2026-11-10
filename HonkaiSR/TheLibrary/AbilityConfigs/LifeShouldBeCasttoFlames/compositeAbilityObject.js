@@ -179,9 +179,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "_have_caster_weakness",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
@@ -191,9 +191,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "_have_caster_weakness",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },

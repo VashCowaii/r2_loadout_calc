@@ -521,9 +521,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "MDF_Hit_Count",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -1438,9 +1438,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1453,9 +1453,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 2
+                  "value": 2,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1475,7 +1475,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "CleanNum",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__205) || RETURN",
@@ -1484,7 +1483,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "ENEMIES_OBJECT_UNUSED__205"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2569,9 +2569,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "UltraSkillTimelineStart",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     }
@@ -2605,9 +2605,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "UltraSkillTimelineEnd",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     }

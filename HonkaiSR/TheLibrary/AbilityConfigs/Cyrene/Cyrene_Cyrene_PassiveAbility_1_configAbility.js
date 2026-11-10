@@ -95,9 +95,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "scope": "AITag",
           "variableName": "DamageCarry",
-          "value": 10
+          "value": 10,
+          "scope": "AITag"
         }
       ]
     }
@@ -665,7 +665,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "CurSpecialSP",
                   "value": {
                     "operator": "Variables[0] (CurSpecialSP) || RETURN",
@@ -674,7 +673,8 @@ const configAbility = {
                     "variables": [
                       "CurSpecialSP"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }

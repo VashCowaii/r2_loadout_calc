@@ -42,9 +42,9 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "value": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -54,9 +54,9 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 0
+                    "value": 0,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -112,9 +112,9 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 1
+                    "value": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -124,9 +124,9 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 0
+                    "value": 0,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -171,9 +171,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 1
+                "value": 1,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",
@@ -216,9 +216,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "scope": "TargetEntity",
                 "variableName": "AIFlag",
-                "value": 0
+                "value": 0,
+                "scope": "TargetEntity"
               },
               {
                 "name": "Use Ability Option",

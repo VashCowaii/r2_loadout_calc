@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "SameMonsterNum",
-      "value": 0
+      "value": 0,
+      "scope": "TargetEntity"
     },
     {
       "name": "Define Custom Variable",

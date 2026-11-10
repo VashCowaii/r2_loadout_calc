@@ -260,7 +260,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextTaskTemplate",
           "variableName": "_ExtraSpecialSP",
           "value": {
             "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
@@ -274,7 +273,8 @@ const configAbility = {
               "parameter[0]_AddValue",
               "_MaxSpecialSP"
             ]
-          }
+          },
+          "scope": "ContextTaskTemplate"
         },
         {
           "name": "IF",

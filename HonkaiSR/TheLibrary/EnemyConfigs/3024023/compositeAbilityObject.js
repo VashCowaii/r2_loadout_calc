@@ -1641,7 +1641,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "MDF_DamageUpRatio",
                   "value": {
                     "operator": "Variables[0] (BurningBPDamageUpRatio) || RETURN",
@@ -1650,7 +1649,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "BurningBPDamageUpRatio"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Find New Target",
@@ -4466,17 +4466,17 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",

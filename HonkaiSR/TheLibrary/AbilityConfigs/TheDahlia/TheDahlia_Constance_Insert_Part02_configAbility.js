@@ -114,7 +114,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextAbility",
       "variableName": "ADF_AttackGap",
       "value": {
         "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
@@ -125,7 +124,8 @@ const configAbility = {
         "variables": [
           5
         ]
-      }
+      },
+      "scope": "ContextAbility"
     },
     {
       "name": "Define Custom Variable",

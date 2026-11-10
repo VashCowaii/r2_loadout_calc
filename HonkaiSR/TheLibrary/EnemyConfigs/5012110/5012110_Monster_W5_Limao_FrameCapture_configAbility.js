@@ -23,9 +23,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
           "variableName": "#CL_PhotoCheck",
-          "value": 2
+          "value": 2,
+          "scope": "TargetEntity"
         }
       ]
     }

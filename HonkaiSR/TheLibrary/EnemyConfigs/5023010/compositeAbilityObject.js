@@ -201,9 +201,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 7
+                  "value": 7,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -257,9 +257,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 7
+                  "value": 7,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -584,9 +584,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "SummonMonsterNum",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -605,17 +605,17 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummonMonsterNum",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummonMonsterNum",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -898,9 +898,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "SummonMonsterNum",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             }
           ],
           "failed": [
@@ -919,17 +919,17 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummonMonsterNum",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummonMonsterNum",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -3627,9 +3627,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "SameMonsterNum",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",

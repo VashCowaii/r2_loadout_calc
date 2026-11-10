@@ -55,7 +55,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
@@ -65,7 +64,8 @@ const configAbility = {
                       "BattleEventAbility_Challenge_Month_21_Count",
                       "BattleEvent_P4_ADF"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -122,7 +122,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
@@ -131,7 +130,8 @@ const configAbility = {
                     "variables": [
                       "BattleEvent_P1_ADF"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -154,7 +154,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEventAbility_Challenge_Month_21_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
@@ -164,7 +163,8 @@ const configAbility = {
                       "BattleEventAbility_Challenge_Month_21_Count",
                       "BattleEvent_P3_ADF"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -229,7 +229,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "BattleEventAbility_Challenge_Month_21_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
@@ -238,7 +237,8 @@ const configAbility = {
                     "variables": [
                       "BattleEvent_P1_ADF"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }

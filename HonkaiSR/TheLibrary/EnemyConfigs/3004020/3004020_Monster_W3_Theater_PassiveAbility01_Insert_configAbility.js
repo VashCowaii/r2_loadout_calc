@@ -258,9 +258,9 @@ const configAbility = {
               }
             ]
           },
-          "scope": "TargetEntity",
           "variableName": "AI_HeiShengBei_SpecialAI",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable",
@@ -284,9 +284,9 @@ const configAbility = {
               }
             ]
           },
-          "scope": "TargetEntity",
           "variableName": "AI_HeiShengBei_Need",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -422,9 +422,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "FlopSide",
-          "value": -1
+          "value": -1,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",

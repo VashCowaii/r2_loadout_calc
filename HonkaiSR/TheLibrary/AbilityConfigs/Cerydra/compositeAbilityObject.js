@@ -317,9 +317,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "_RemoveFlag",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -357,9 +357,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -445,9 +445,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -483,7 +483,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "DV_CurrentPoint",
                       "value": {
                         "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (6) || SUB || Variables[2] (_WindfuryCostFixValue) || ADD || RETURN",
@@ -494,13 +493,14 @@ const compositeAbilityObject = {
                           6,
                           "_WindfuryCostFixValue"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "Rank01toRank00",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -634,9 +634,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1026,9 +1026,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "DV_CurrentPoint",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextCaster"
                 }
               ]
             },
@@ -1509,7 +1509,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "ContextCaster",
                               "variableName": "DV_PursuedDamage_LimitCount",
                               "value": {
                                 "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
@@ -1520,7 +1519,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "DV_PursuedDamage_LimitCount"
                                 ]
-                              }
+                              },
+                              "scope": "ContextCaster"
                             }
                           ]
                         }
@@ -1560,7 +1560,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "ContextCaster",
                               "variableName": "DV_PursuedDamage_LimitCount",
                               "value": {
                                 "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
@@ -1571,7 +1570,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "DV_PursuedDamage_LimitCount"
                                 ]
-                              }
+                              },
+                              "scope": "ContextCaster"
                             }
                           ]
                         }
@@ -1772,9 +1772,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "DV_Rank02_Effcet",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextCaster"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -2106,9 +2106,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 0.0009999999
+                  "value": 0.0009999999,
+                  "scope": "AITag"
                 }
               ]
             }
@@ -3640,7 +3640,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "DV_PursuedDamage_LimitCount",
           "value": {
             "operator": "Variables[0] (20) || RETURN",
@@ -3649,7 +3648,8 @@ const compositeAbilityObject = {
             "variables": [
               20
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Find New Target",

@@ -436,7 +436,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_Rank01ExtraDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
@@ -446,7 +445,8 @@ const compositeAbilityObject = {
                           "MDF_Rank01ExtraDamage",
                           "MDF_TempDamage"
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     }
                   ]
                 }
@@ -482,15 +482,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_Rank01ExtraDamage",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_TempDamage",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextCaster"
                     }
                   ]
                 }
@@ -526,7 +526,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "MDF_Rank01ExtraDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (0.24) || MUL || RETURN",
@@ -536,7 +535,8 @@ const compositeAbilityObject = {
                           "MDF_Rank01ExtraDamage",
                           0.24
                         ]
-                      }
+                      },
+                      "scope": "ContextCaster"
                     },
                     {
                       "name": "ATK Scaling DMG",

@@ -202,9 +202,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Deathrattle",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -262,9 +262,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Deathrattle",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -2499,9 +2499,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "HPBack",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -2864,9 +2864,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "LMRatio",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3077,7 +3077,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "LMRatio",
                   "value": {
                     "operator": "Variables[0] (LMCurrentValue) || Variables[1] (LMMaxValue) || DIV || RETURN",
@@ -3087,7 +3086,8 @@ const compositeAbilityObject = {
                       "LMCurrentValue",
                       "LMMaxValue"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3293,9 +3293,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "LMCountDown",
-                  "value": 8
+                  "value": 8,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3482,9 +3482,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "LMCountDown",
-                  "value": 8
+                  "value": 8,
+                  "scope": "TargetEntity"
                 }
               ]
             }

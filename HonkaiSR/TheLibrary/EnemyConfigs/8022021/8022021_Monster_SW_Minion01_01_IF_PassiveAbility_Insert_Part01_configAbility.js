@@ -127,9 +127,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             }
           ]
         }

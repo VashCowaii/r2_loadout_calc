@@ -204,9 +204,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "CurEnhance",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextOwner"
                 }
               ]
             },
@@ -336,7 +336,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "CurEnhance",
                   "value": {
                     "operator": "Variables[0] (_layer) || RETURN",
@@ -345,7 +344,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_layer"
                     ]
-                  }
+                  },
+                  "scope": "ContextOwner"
                 },
                 {
                   "name": "IF",
@@ -2528,9 +2528,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_show_badge_01",
-                          "value": 1
+                          "value": 1,
+                          "scope": "ContextModifier"
                         }
                       ]
                     },
@@ -2558,9 +2558,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_show_badge_02",
-                          "value": 1
+                          "value": 1,
+                          "scope": "ContextModifier"
                         }
                       ]
                     },
@@ -2588,9 +2588,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_show_badge_03",
-                          "value": 1
+                          "value": 1,
+                          "scope": "ContextModifier"
                         }
                       ]
                     }
@@ -3052,9 +3052,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_is_active",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }

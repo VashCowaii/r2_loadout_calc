@@ -169,7 +169,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "_LastElationSkillIndex",
                   "value": {
                     "operator": "Variables[0] (_CurrentElationSkillIndex) || RETURN",
@@ -178,7 +177,8 @@ const configAbility = {
                     "variables": [
                       "_CurrentElationSkillIndex"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -232,9 +232,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_ElationSkillCastNum",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }

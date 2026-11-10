@@ -816,7 +816,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_SkillUseCount",
                       "value": {
                         "operator": "Variables[0] (_1501_SkillUseCount) || RETURN",
@@ -825,7 +824,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_1501_SkillUseCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -1029,15 +1029,15 @@ const compositeAbilityObject = {
                                             },
                                             {
                                               "name": "Define Custom Variable",
-                                              "scope": "ContextModifier",
                                               "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                              "value": 0
+                                              "value": 0,
+                                              "scope": "ContextModifier"
                                             },
                                             {
                                               "name": "Define Custom Variable",
-                                              "scope": "ContextModifier",
                                               "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                              "value": 0
+                                              "value": 0,
+                                              "scope": "ContextModifier"
                                             },
                                             {
                                               "name": "IF",
@@ -1124,15 +1124,15 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1205,15 +1205,15 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1741,9 +1741,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_IsWindfurySkill",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -1817,9 +1817,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextOwner",
                               "variableName": "HimekoNova_PassiveMode_Flag02",
-                              "value": 1
+                              "value": 1,
+                              "scope": "ContextOwner"
                             }
                           ],
                           "failed": [
@@ -1839,9 +1839,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "scope": "ContextOwner",
                                   "variableName": "HimekoNova_PassiveMode_Flag01",
-                                  "value": 1
+                                  "value": 1,
+                                  "scope": "ContextOwner"
                                 }
                               ]
                             }
@@ -1897,15 +1897,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "TEST DATA: Assist Skill Energy",
@@ -2319,15 +2319,15 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "scope": "ContextModifier",
                                                   "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "scope": "ContextModifier"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2426,15 +2426,15 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "scope": "ContextModifier",
                                                       "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "scope": "ContextModifier"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "scope": "ContextModifier",
                                                       "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "scope": "ContextModifier"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -2519,15 +2519,15 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "scope": "ContextModifier",
                                                       "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "scope": "ContextModifier"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "scope": "ContextModifier",
                                                       "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "scope": "ContextModifier"
                                                     },
                                                     {
                                                       "name": "IF",

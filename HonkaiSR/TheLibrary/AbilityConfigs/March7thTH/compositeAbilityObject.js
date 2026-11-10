@@ -2322,7 +2322,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Skill11_DamagePercatage",
           "value": {
             "operator": "Variables[0] (0.8) || RETURN",
@@ -2331,7 +2330,8 @@ const compositeAbilityObject = {
             "variables": [
               0.8
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2874,7 +2874,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Skill11_BasicCount",
                   "value": {
                     "operator": "Variables[0] (3) || Variables[1] (MDF_Value) || ADD || RETURN",
@@ -2884,11 +2883,11 @@ const compositeAbilityObject = {
                       3,
                       "MDF_Value"
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Skill11_FixedChance",
                   "value": {
                     "operator": "Variables[0] (0.6) || Variables[1] (MDF_Chance) || ADD || RETURN",
@@ -2898,7 +2897,8 @@ const compositeAbilityObject = {
                       0.6,
                       "MDF_Chance"
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 }
               ]
             },
@@ -2907,7 +2907,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Skill11_BasicCount",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -2916,11 +2915,11 @@ const compositeAbilityObject = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Skill11_FixedChance",
                   "value": {
                     "operator": "Variables[0] (0.6) || RETURN",
@@ -2929,11 +2928,11 @@ const compositeAbilityObject = {
                     "variables": [
                       0.6
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Skill11_DamagePercatage",
                   "value": {
                     "operator": "Variables[0] (0.8) || RETURN",
@@ -2942,7 +2941,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.8
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 }
               ]
             },
@@ -4313,9 +4313,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Skill11_HitCount",
-          "value": 0
+          "value": 0,
+          "scope": "ContextCaster"
         },
         {
           "name": "Looped Event",
@@ -4353,7 +4353,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_HitCount",
               "value": {
                 "operator": "Variables[0] (Skill11_HitCount) || Constants[0] (1) || ADD || RETURN",
@@ -4364,7 +4363,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Skill11_HitCount"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             }
           ]
         },

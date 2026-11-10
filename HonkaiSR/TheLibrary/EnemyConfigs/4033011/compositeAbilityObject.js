@@ -97,9 +97,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "_IsLose",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -358,9 +358,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BattleTarget_LocalLegend_S3_2_Check",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -413,9 +413,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BattleTarget_LocalLegend_S3_3_Check",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -463,9 +463,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BattleTarget_LocalLegend_S3_6_Check",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -513,9 +513,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BattleTarget_LocalLegend_S3_7_Check",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -618,7 +618,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
                           "value": {
                             "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
@@ -628,7 +627,8 @@ const compositeAbilityObject = {
                               "CEIL",
                               "MDF_NegativeHP"
                             ]
-                          }
+                          },
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -646,7 +646,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S3_5_ProgressInfo",
                           "value": {
                             "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
@@ -656,7 +655,8 @@ const compositeAbilityObject = {
                               "CEIL",
                               "MDF_NegativeHP"
                             ]
-                          }
+                          },
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -666,7 +666,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_MonsterChangeCnt",
                       "value": {
                         "operator": "Variables[0] (MDF_NegativeHP) || RETURN",
@@ -675,7 +674,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_NegativeHP"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -864,9 +864,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S3_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -1291,9 +1291,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "_BattleTarget_LocalLegend_S3_1_Check",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -3644,9 +3644,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "FireBallNum",
-          "value": 1
+          "value": 1,
+          "scope": "ContextAbility"
         },
         {
           "name": "Trigger Multiple Functions",

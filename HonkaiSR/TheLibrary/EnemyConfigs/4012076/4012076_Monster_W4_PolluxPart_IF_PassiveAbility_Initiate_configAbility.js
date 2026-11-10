@@ -62,7 +62,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "scope": "TargetEntity",
       "variableName": "StanceDamagePreshowValue",
       "value": {
         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
@@ -71,7 +70,8 @@ const configAbility = {
         "variables": [
           "{[SkillP01[0]]}"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     }
   ],
   "targetObjectData": {

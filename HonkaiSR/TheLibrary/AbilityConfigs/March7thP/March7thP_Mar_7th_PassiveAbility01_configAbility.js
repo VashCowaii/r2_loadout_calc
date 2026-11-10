@@ -61,7 +61,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Mar7th_00_Passive_CounterView",
           "value": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -72,7 +71,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -117,7 +117,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Mar7th_00_Passive_CounterView",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
@@ -126,7 +125,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -333,7 +333,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Mar7th_00_Passive_CounterView",
                   "value": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -344,7 +343,8 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Find New Target",
@@ -437,7 +437,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Mar7th_00_Passive_CounterView",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -446,7 +445,8 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Find New Target",

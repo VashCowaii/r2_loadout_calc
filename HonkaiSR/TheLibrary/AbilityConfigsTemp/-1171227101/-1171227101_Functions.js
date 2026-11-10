@@ -1472,9 +1472,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PerformanceDelay",
-                      "value": 0.3
+                      "value": 0.3,
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
@@ -1484,9 +1484,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PerformanceDelay",
-                      "value": 0.2
+                      "value": 0.2,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -1505,9 +1505,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PerformanceDelay",
-                      "value": 0.5
+                      "value": 0.5,
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
@@ -1517,9 +1517,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PerformanceDelay",
-                      "value": 0.3
+                      "value": 0.3,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -2866,9 +2866,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextTaskTemplate",
                       "variableName": "_FinalMergeMDF",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextTaskTemplate"
                     },
                     {
                       "name": "IF",
@@ -2961,9 +2961,9 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "scope": "ContextTaskTemplate",
                                   "variableName": "_FinalMergeMDF",
-                                  "value": 1
+                                  "value": 1,
+                                  "scope": "ContextTaskTemplate"
                                 }
                               ]
                             }

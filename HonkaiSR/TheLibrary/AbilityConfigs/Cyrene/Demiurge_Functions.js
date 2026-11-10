@@ -618,9 +618,9 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextTaskTemplate",
                       "variableName": "LightTeamCount",
-                      "value": 2
+                      "value": 2,
+                      "scope": "ContextTaskTemplate"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -924,9 +924,9 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextOwner",
           "variableName": "#CL_MirrorSetupFlag",
-          "value": 1
+          "value": 1,
+          "scope": "ContextOwner"
         }
       ]
     },
@@ -954,7 +954,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextTaskTemplate",
           "variableName": "_ExtraSpecialSP",
           "value": {
             "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
@@ -968,7 +967,8 @@ const configAbility = {
               "parameter[0]_AddValue",
               "_MaxSpecialSP"
             ]
-          }
+          },
+          "scope": "ContextTaskTemplate"
         },
         {
           "name": "IF",

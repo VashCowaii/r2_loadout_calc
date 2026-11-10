@@ -1720,7 +1720,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "CurrentWeakPoint",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -1731,7 +1730,8 @@ const configAbility = {
                     "variables": [
                       "CurrentWeakPoint"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -1753,9 +1753,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -1973,7 +1973,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "CurrentWeakPoint",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -1984,7 +1983,8 @@ const configAbility = {
                     "variables": [
                       "CurrentWeakPoint"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -2006,9 +2006,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -2153,7 +2153,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "CurrentWeakPoint",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
@@ -2164,7 +2163,8 @@ const configAbility = {
                     "variables": [
                       "CurrentWeakPoint"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -2186,9 +2186,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "CurrentWeakPoint",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -2701,9 +2701,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "ChangeWeakPointFlag",
-              "value": 1
+              "value": 1,
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",
@@ -2857,9 +2857,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "ChangeWeakPointFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Clear Weaknesses",
@@ -3615,9 +3615,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "ChangeWeakPointFlag",
-              "value": 1
+              "value": 1,
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",
@@ -3787,9 +3787,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "ChangeWeakPointFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Clear Weaknesses",
@@ -5026,9 +5026,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "EXSkill01",
-              "value": 3
+              "value": 3,
+              "scope": "TargetEntity"
             },
             {
               "name": "Adjust Variable Value",
@@ -5108,9 +5108,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "EXSkill01",
-              "value": 2
+              "value": 2,
+              "scope": "TargetEntity"
             },
             {
               "name": "Adjust Variable Value",
@@ -5197,9 +5197,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "EXSkill01",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             },
             {
               "name": "Adjust Variable Value",

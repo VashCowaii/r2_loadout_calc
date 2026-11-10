@@ -82,9 +82,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "Deathrattle",
-      "value": 0
+      "value": 0,
+      "scope": "TargetEntity"
     },
     {
       "name": "Remove Events/Bonuses",

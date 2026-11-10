@@ -3251,17 +3251,17 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "AI_HeiShengBei_SpecialAI",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "AI_HeiShengBei_Need",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             }
           ]
         }

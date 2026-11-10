@@ -1263,9 +1263,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "scope": "TargetEntity",
           "variableName": "isMainAttack",
-          "value": -1
+          "value": -1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",

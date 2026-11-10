@@ -53,9 +53,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "TutorialFlag",
-          "value": 2
+          "value": 2,
+          "scope": "TargetEntity"
         },
         {
           "name": "Add Events/Bonuses",

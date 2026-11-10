@@ -20,9 +20,9 @@ const configAbility = {
       "onStageExit": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "TohsakaRin_00_AchievementPassive_Money",
-          "value": 0
+          "value": 0,
+          "scope": "ContextCaster"
         }
       ],
       "Money Taken": [
@@ -32,7 +32,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "TohsakaRin_00_AchievementPassive_Money",
               "value": {
                 "operator": "Variables[0] (TohsakaRin_00_AchievementPassive_Money) || Constants[0] (1) || ADD || RETURN",
@@ -43,7 +42,8 @@ const configAbility = {
                 "variables": [
                   "TohsakaRin_00_AchievementPassive_Money"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "IF",

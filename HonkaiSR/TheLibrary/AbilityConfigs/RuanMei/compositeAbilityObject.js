@@ -377,9 +377,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "DV_NeedDettachEffect",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2504,9 +2504,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "scope": "TargetEntity",
           "variableName": "DV_NeedDettachEffect",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Remove Events/Bonuses",

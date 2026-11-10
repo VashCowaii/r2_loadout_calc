@@ -125,9 +125,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "DanHengPT_ExtraDamageCount",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         }
@@ -427,7 +427,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "MDF_AchievementCount",
               "value": {
                 "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
@@ -436,13 +435,14 @@ const configAbility = {
                 "variables": [
                   "MDF_DanHengPT_InitShieldValue"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "MDF_AchievementCount",
-              "value": 0
+              "value": 0,
+              "scope": "ContextCaster"
             }
           ]
         }
@@ -656,9 +656,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "AITag",
                   "variableName": "HadServant",
-                  "value": 1
+                  "value": 1,
+                  "scope": "AITag"
                 }
               ]
             }
@@ -714,9 +714,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "AITag",
                   "variableName": "HadServant",
-                  "value": 0
+                  "value": 0,
+                  "scope": "AITag"
                 }
               ]
             }
@@ -828,7 +828,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "DanHengPT_Passive_Count",
                   "value": {
                     "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
@@ -839,7 +838,8 @@ const configAbility = {
                     "variables": [
                       "DanHengPT_Passive_Count"
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Show Attack Count",

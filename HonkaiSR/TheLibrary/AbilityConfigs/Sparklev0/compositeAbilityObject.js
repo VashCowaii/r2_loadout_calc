@@ -1538,7 +1538,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "MDF_QuantumCount",
                           "value": {
                             "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
@@ -1549,7 +1548,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_QuantumCount"
                             ]
-                          }
+                          },
+                          "scope": "ContextCaster"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1832,7 +1832,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "MDF_QuantumCount",
                           "value": {
                             "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
@@ -1843,7 +1842,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_QuantumCount"
                             ]
-                          }
+                          },
+                          "scope": "ContextCaster"
                         },
                         {
                           "name": "Add Events/Bonuses",

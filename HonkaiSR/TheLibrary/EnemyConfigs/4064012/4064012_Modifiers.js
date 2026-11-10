@@ -1051,9 +1051,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Attack",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -1152,9 +1152,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "DebuffBonusTriggeredFlag_Attack",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -1162,9 +1162,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "DebuffBonusTriggeredFlag_Debuff",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -1191,9 +1191,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Pre",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -1208,9 +1208,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "DebuffBonusTriggeredFlag_Pre",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -1218,9 +1218,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "DebuffBonusTriggeredFlag_Attack",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -1228,9 +1228,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "DebuffBonusTriggeredFlag_Debuff",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -1277,9 +1277,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "DebuffBonusTriggeredFlag_Debuff",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextModifier"
                 }
               ]
             }

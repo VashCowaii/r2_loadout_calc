@@ -217,7 +217,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_StanceValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
@@ -227,7 +226,8 @@ const configAbility = {
                       "MDF_TargetMaxStanceValue",
                       "MDF_StanceRatio"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Deal Toughness DMG",
@@ -1347,7 +1347,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValueCaster) || Variables[1] (0.24) || MUL || Variables[2] (0.5) || ADD || RETURN",
@@ -1358,7 +1357,8 @@ const configAbility = {
                   0.24,
                   0.5
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "Stack Target Stat Value",

@@ -43,7 +43,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -53,7 +52,8 @@ const configAbility = {
                   "MDF_AttackAddedRatio",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             },
             {
               "name": "Stack Target Stat Value",

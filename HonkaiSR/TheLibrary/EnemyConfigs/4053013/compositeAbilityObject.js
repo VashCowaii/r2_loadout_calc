@@ -1114,9 +1114,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S5_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -1126,9 +1126,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Manta: Event Target 02}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_ChangePhaseKill",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Force Entity Death",

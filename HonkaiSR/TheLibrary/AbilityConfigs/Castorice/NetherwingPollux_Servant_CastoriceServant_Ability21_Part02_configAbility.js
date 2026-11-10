@@ -198,7 +198,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "scope": "TargetEntity",
               "variableName": "Castorice_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
@@ -207,7 +206,8 @@ const configAbility = {
                 "variables": [
                   "CastoriceServant_Rank02_Count"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Set Netherwing's Ardent Will Stacks",

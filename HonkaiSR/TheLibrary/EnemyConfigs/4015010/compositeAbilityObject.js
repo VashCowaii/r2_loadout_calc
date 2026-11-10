@@ -1411,9 +1411,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 2
+                      "value": 2,
+                      "scope": "TargetEntity"
                     },
                     "Modifier Deletes Itself"
                   ],
@@ -1424,9 +1424,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -7174,9 +7174,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "ChangePhase_InsertController",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "IF",
@@ -7782,7 +7782,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "Skill05P1TotalDamage",
           "value": {
             "operator": "Variables[0] ({[Skill05P1[0]]}) || Variables[1] (Skill04P1SunnyHeat) || MUL || RETURN",
@@ -7792,7 +7791,8 @@ const compositeAbilityObject = {
               "{[Skill05P1[0]]}",
               "Skill04P1SunnyHeat"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         },
         {
           "name": "Define Custom Variable with Team Count",

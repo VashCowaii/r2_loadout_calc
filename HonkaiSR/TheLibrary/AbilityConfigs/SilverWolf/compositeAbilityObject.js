@@ -2254,9 +2254,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 1
+              "value": 1,
+              "scope": "AITag"
             }
           ]
         }

@@ -1035,9 +1035,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AML_Boss_00_Part_EnhancementLevel",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1136,7 +1136,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AML_Boss_00_Part_EnhancementLevel",
                   "value": {
                     "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
@@ -1145,7 +1144,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_EnhancementLevel"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },

@@ -31,7 +31,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "Summon_MonsterIDKey",
                   "value": {
                     "operator": "Variables[0] (SummonID01) || RETURN",
@@ -40,11 +39,11 @@ const configAbility = {
                     "variables": [
                       "SummonID01"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "Summon_MonsterIDKey",
                   "value": {
                     "operator": "Variables[0] (SummonID02) || RETURN",
@@ -53,7 +52,8 @@ const configAbility = {
                     "variables": [
                       "SummonID02"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -85,7 +85,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "Summon_MonsterIDKey",
                       "value": {
                         "operator": "Variables[0] (SummonID01) || RETURN",
@@ -94,7 +93,8 @@ const configAbility = {
                         "variables": [
                           "SummonID01"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -108,7 +108,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "Summon_MonsterIDKey",
                       "value": {
                         "operator": "Variables[0] (SummonID02) || RETURN",
@@ -117,7 +116,8 @@ const configAbility = {
                         "variables": [
                           "SummonID02"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

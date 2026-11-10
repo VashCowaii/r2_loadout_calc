@@ -325,9 +325,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextOwner",
               "variableName": "S02_ExtraRatio",
-              "value": 0
+              "value": 0,
+              "scope": "ContextOwner"
             }
           ]
         },
@@ -2609,9 +2609,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BPSkill21_Plus",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -2850,9 +2850,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextOwner",
               "variableName": "MDF_ExtraLoopCount",
-              "value": 0
+              "value": 0,
+              "scope": "ContextOwner"
             }
           ]
         },
@@ -2905,7 +2905,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "MDF_ExtraLoopCount",
                   "value": {
                     "operator": "Variables[0] (MDF_TribbieLoopCount) || RETURN",
@@ -2914,7 +2913,8 @@ const configAbility = {
                     "variables": [
                       "MDF_TribbieLoopCount"
                     ]
-                  }
+                  },
+                  "scope": "ContextOwner"
                 }
               ],
               "failed": [
@@ -2924,9 +2924,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextOwner",
                   "variableName": "MDF_ExtraLoopCount",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextOwner"
                 }
               ]
             }

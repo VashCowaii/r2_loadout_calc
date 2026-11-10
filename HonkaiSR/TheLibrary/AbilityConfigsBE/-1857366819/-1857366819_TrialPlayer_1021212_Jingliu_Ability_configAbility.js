@@ -122,7 +122,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_ActionTime",
                       "value": {
                         "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
@@ -133,7 +132,8 @@ const configAbility = {
                         "variables": [
                           "MDF_ActionTime"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
@@ -164,7 +164,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "MDF_ActionTime",
                           "value": {
                             "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
@@ -175,7 +174,8 @@ const configAbility = {
                             "variables": [
                               "MDF_ActionTime"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         }
                       ],
                       "failed": [
@@ -206,7 +206,6 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextModifier",
                               "variableName": "MDF_ActionTime",
                               "value": {
                                 "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
@@ -217,7 +216,8 @@ const configAbility = {
                                 "variables": [
                                   "MDF_ActionTime"
                                 ]
-                              }
+                              },
+                              "scope": "ContextModifier"
                             }
                           ]
                         }
@@ -264,7 +264,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_ActionTime",
                   "value": {
                     "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
@@ -275,7 +274,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ActionTime"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 }
               ]
             }

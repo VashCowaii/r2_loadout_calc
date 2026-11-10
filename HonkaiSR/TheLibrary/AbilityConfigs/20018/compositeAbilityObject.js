@@ -799,9 +799,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "AIFlag",
-                              "value": 0
+                              "value": 0,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -1185,9 +1185,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "scope": "TargetEntity",
                                   "variableName": "AIFlag",
-                                  "value": 0
+                                  "value": 0,
+                                  "scope": "TargetEntity"
                                 }
                               ]
                             }

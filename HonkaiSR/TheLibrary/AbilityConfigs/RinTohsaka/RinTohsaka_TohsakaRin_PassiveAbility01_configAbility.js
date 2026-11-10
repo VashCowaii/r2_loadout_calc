@@ -615,7 +615,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_BPAddValue",
                       "value": {
                         "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
@@ -624,7 +623,8 @@ const configAbility = {
                         "variables": [
                           "_BPAddValue"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Looped Event",
@@ -1608,9 +1608,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1623,17 +1623,17 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Rin: Archer}}"
                       },
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1646,9 +1646,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Rin: Archer}}"
                       },
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "scope": "AITag"
                     }
                   ]
                 }
@@ -1775,9 +1775,9 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "scope": "AITag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1790,9 +1790,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Rin: Archer}}"
                   },
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 10
+                  "value": 10,
+                  "scope": "AITag"
                 }
               ],
               "onChange": [

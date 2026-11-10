@@ -65,9 +65,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "scope": "TargetEntity",
           "variableName": "ComboFlag",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],

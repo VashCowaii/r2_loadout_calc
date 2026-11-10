@@ -860,9 +860,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 100
+              "value": 100,
+              "scope": "AITag"
             },
             {
               "name": "Update Ability Binding",
@@ -913,9 +913,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 10
+              "value": 10,
+              "scope": "AITag"
             },
             {
               "name": "Disable Abilities",

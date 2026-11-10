@@ -4387,9 +4387,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "MazeSkill_Triggered",
-          "value": 1
+          "value": 1,
+          "scope": "ContextCaster"
         },
         {
           "name": "Define Custom Variable",
@@ -4621,7 +4621,6 @@ const compositeAbilityObject = {
                   "success": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextAbility",
                       "variableName": "_can_continue",
                       "value": {
                         "operator": "Constants[0] (1) || RETURN",
@@ -4630,7 +4629,8 @@ const compositeAbilityObject = {
                           1
                         ],
                         "variables": []
-                      }
+                      },
+                      "scope": "ContextAbility"
                     }
                   ],
                   "failed": [
@@ -4821,7 +4821,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextCaster",
           "variableName": "Max_DOT_Layer",
           "value": {
             "operator": "Variables[0] (50) || RETURN",
@@ -4830,7 +4829,8 @@ const compositeAbilityObject = {
             "variables": [
               50
             ]
-          }
+          },
+          "scope": "ContextCaster"
         },
         {
           "name": "IF",

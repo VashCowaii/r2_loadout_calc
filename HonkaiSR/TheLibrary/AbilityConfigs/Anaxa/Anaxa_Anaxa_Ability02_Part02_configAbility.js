@@ -58,9 +58,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "ContextAbility",
       "variableName": "_count",
-      "value": 0
+      "value": 0,
+      "scope": "ContextAbility"
     },
     {
       "name": "Define Custom Variable",

@@ -2985,7 +2985,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Owner_MaxHPCount",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
@@ -2994,7 +2993,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "DeathPartMaxHPCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -3599,7 +3599,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "Owner_MaxHPCount",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
@@ -3608,7 +3607,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "DeathPartMaxHPCount"
                         ]
-                      }
+                      },
+                      "scope": "TargetEntity"
                     }
                   ]
                 }
@@ -5230,9 +5230,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5268,9 +5268,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "value": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5306,9 +5306,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5355,9 +5355,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 4
+                            "value": 4,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5367,9 +5367,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 5
+                            "value": 5,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "IF",
@@ -5421,9 +5421,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5454,9 +5454,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "value": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5511,9 +5511,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5560,9 +5560,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 2
+                            "value": 2,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5572,9 +5572,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "value": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5612,9 +5612,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5650,9 +5650,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "value": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5683,9 +5683,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5716,9 +5716,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "value": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5754,9 +5754,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 8
+                        "value": 8,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5803,9 +5803,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 8
+                            "value": 8,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5815,9 +5815,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "value": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5874,9 +5874,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5918,9 +5918,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 2
+                            "value": 2,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -5941,9 +5941,9 @@ const compositeAbilityObject = {
                             "passed": [
                               {
                                 "name": "Define Custom Variable",
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "value": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -5953,9 +5953,9 @@ const compositeAbilityObject = {
                             "failed": [
                               {
                                 "name": "Define Custom Variable",
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 3
+                                "value": 3,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -5995,9 +5995,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6033,9 +6033,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "value": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6071,9 +6071,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6115,9 +6115,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 6
+                            "value": 6,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6127,9 +6127,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 1
+                            "value": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "IF",
@@ -6230,9 +6230,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6268,9 +6268,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 3
+                        "value": 3,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6306,9 +6306,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6355,9 +6355,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 4
+                            "value": 4,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6367,9 +6367,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 5
+                            "value": 5,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "IF",
@@ -6421,9 +6421,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6454,9 +6454,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "value": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6511,9 +6511,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6560,9 +6560,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 2
+                            "value": 2,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6572,9 +6572,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "value": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6612,9 +6612,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6650,9 +6650,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "value": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6683,9 +6683,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6716,9 +6716,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 1
+                        "value": 1,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6754,9 +6754,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 8
+                        "value": 8,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6803,9 +6803,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 8
+                            "value": 8,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6815,9 +6815,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 3
+                            "value": 3,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6874,9 +6874,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 2
+                        "value": 2,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -6918,9 +6918,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 2
+                            "value": 2,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -6941,9 +6941,9 @@ const compositeAbilityObject = {
                             "passed": [
                               {
                                 "name": "Define Custom Variable",
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 1
+                                "value": 1,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -6953,9 +6953,9 @@ const compositeAbilityObject = {
                             "failed": [
                               {
                                 "name": "Define Custom Variable",
-                                "scope": "TargetEntity",
                                 "variableName": "AIFlag",
-                                "value": 3
+                                "value": 3,
+                                "scope": "TargetEntity"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -6995,9 +6995,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 4
+                        "value": 4,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -7033,9 +7033,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 5
+                        "value": 5,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -7071,9 +7071,9 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "scope": "TargetEntity",
                         "variableName": "AIFlag",
-                        "value": 6
+                        "value": 6,
+                        "scope": "TargetEntity"
                       },
                       {
                         "name": "Use Ability Option",
@@ -7115,9 +7115,9 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 6
+                            "value": 6,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "Use Ability Option",
@@ -7127,9 +7127,9 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "scope": "TargetEntity",
                             "variableName": "AIFlag",
-                            "value": 1
+                            "value": 1,
+                            "scope": "TargetEntity"
                           },
                           {
                             "name": "IF",

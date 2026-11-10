@@ -41,7 +41,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextAbility",
               "variableName": "LoopCount",
               "value": {
                 "operator": "Constants[0] (5) || Variables[0] (1) || ADD || RETURN",
@@ -52,7 +51,8 @@ const configAbility = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "scope": "ContextAbility"
             }
           ],
           "failed": [
@@ -67,7 +67,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "LoopCount",
                   "value": {
                     "operator": "Constants[0] (5) || Variables[0] (2) || ADD || RETURN",
@@ -78,13 +77,13 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "scope": "ContextAbility"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "LoopCount",
                   "value": {
                     "operator": "Constants[0] (5) || Variables[0] (4) || ADD || RETURN",
@@ -95,7 +94,8 @@ const configAbility = {
                     "variables": [
                       4
                     ]
-                  }
+                  },
+                  "scope": "ContextAbility"
                 }
               ]
             }
@@ -105,9 +105,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "LoopCount",
-          "value": 5
+          "value": 5,
+          "scope": "ContextAbility"
         }
       ]
     },

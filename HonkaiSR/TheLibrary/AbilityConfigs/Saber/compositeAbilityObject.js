@@ -1527,17 +1527,17 @@ const compositeAbilityObject = {
                     "Deleted bullshit",
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "scope": "AITag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     }
                   ]
                 }
@@ -1572,17 +1572,17 @@ const compositeAbilityObject = {
                     "Deleted bullshit",
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "scope": "AITag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     }
                   ]
                 }

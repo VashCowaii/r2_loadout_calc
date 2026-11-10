@@ -941,9 +941,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "AdvancedBPReserve",
-                  "value": 1
+                  "value": 1,
+                  "scope": "AITag"
                 }
               ]
             }

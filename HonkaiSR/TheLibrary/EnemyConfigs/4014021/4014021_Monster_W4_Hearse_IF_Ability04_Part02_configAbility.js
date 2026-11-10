@@ -529,9 +529,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "scope": "TargetEntity",
           "variableName": "ShieldBreakBonusFlag",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "Force Entity Death",

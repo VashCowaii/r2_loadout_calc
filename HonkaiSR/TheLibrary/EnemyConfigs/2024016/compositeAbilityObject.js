@@ -685,9 +685,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "CanUseUltra_IF",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Action Advance/Delay",
@@ -3503,9 +3503,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "InsertCheck",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -4877,7 +4877,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummmonMinionDelayRatio",
                   "value": {
                     "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
@@ -4886,13 +4885,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[SkillEX03[0]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "SummmonMinionDelayRatio",
                   "value": {
                     "operator": "Variables[0] ({[SkillP01[12]]}) || RETURN",
@@ -4901,7 +4900,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[SkillP01[12]]}"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -4965,9 +4965,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentXuanluPartSummonIndex",
-                              "value": 2
+                              "value": 2,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -5002,9 +5002,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentXuanluPartSummonIndex",
-                              "value": 3
+                              "value": 3,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -5039,9 +5039,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentXuanluPartSummonIndex",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -5050,9 +5050,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "BonusSummonIndex",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     }
                   ],
                   "failed": [
@@ -5098,9 +5098,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentLV2MonsterSummonIndex",
-                              "value": 2
+                              "value": 2,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -5135,9 +5135,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentLV2MonsterSummonIndex",
-                              "value": 3
+                              "value": 3,
+                              "scope": "TargetEntity"
                             }
                           ]
                         },
@@ -5172,9 +5172,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "TargetEntity",
                               "variableName": "CurrentLV2MonsterSummonIndex",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             }
                           ]
                         }
@@ -5238,9 +5238,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
                           "variableName": "CurrentXuanluPartSummonIndex",
-                          "value": 2
+                          "value": 2,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -5275,9 +5275,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
                           "variableName": "CurrentXuanluPartSummonIndex",
-                          "value": 3
+                          "value": 3,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -5312,9 +5312,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
                           "variableName": "CurrentXuanluPartSummonIndex",
-                          "value": 4
+                          "value": 4,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },
@@ -5349,9 +5349,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
                           "variableName": "CurrentXuanluPartSummonIndex",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     }
@@ -5653,9 +5653,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "CurrentXuanluPartSummonIndex",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {

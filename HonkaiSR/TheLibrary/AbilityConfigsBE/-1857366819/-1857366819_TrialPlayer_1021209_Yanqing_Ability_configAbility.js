@@ -37,7 +37,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_KillTalk",
               "value": {
                 "operator": "Constants[0] (1) || RETURN",
@@ -46,7 +45,8 @@ const configAbility = {
                   1
                 ],
                 "variables": []
-              }
+              },
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -89,7 +89,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_KillTalk",
                   "value": {
                     "operator": "Variables[0] (MDF_KillTalk) || Constants[0] (1) || ADD || RETURN",
@@ -100,7 +99,8 @@ const configAbility = {
                     "variables": [
                       "MDF_KillTalk"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 }
               ]
             }
@@ -159,7 +159,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_ActionTime",
               "value": {
                 "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
@@ -170,7 +169,8 @@ const configAbility = {
                 "variables": [
                   "MDF_ActionTime"
                 ]
-              }
+              },
+              "scope": "ContextModifier"
             }
           ]
         }

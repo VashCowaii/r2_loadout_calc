@@ -180,7 +180,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
@@ -190,7 +189,8 @@ const configAbility = {
                       "MDF_PropertyValue",
                       "MDF_DebuffNumber"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "IF",
@@ -214,7 +214,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
@@ -223,7 +222,8 @@ const configAbility = {
                         "variables": [
                           "MDF_PropertyValueMax"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ],
                   "failed": [
@@ -233,7 +233,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
@@ -243,7 +242,8 @@ const configAbility = {
                           "MDF_PropertyValue",
                           "MDF_DebuffNumber"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -255,9 +255,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -282,9 +282,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_PropertyValueChange",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -292,9 +292,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_DebuffNumber",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         },
@@ -307,9 +307,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_PropertyValueChange",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
@@ -317,9 +317,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "ContextModifier",
               "variableName": "MDF_DebuffNumber",
-              "value": 0
+              "value": 0,
+              "scope": "ContextModifier"
             }
           ]
         }

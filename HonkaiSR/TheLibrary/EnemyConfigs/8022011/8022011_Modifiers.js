@@ -994,9 +994,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SW_Minion01_EnhancementLevel",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1103,7 +1103,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "SW_Minion01_EnhancementLevel",
               "value": {
                 "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
@@ -1112,7 +1111,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EnhancementLevel"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1579,9 +1579,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1633,9 +1633,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1660,9 +1660,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1714,9 +1714,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -1741,9 +1741,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "performAccFlag",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -1795,9 +1795,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "performAccFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 }
               ]
             }
@@ -2023,7 +2023,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextModifier",
                   "variableName": "Modifier_TurnCount",
                   "value": {
                     "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
@@ -2034,7 +2033,8 @@ const configAbility = {
                     "variables": [
                       "Modifier_TurnCount"
                     ]
-                  }
+                  },
+                  "scope": "ContextModifier"
                 }
               ]
             },
@@ -2079,9 +2079,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "Modifier_TurnCount",
-                      "value": 2
+                      "value": 2,
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2103,9 +2103,9 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "Modifier_TurnCount",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }

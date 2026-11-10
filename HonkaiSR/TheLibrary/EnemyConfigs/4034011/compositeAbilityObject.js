@@ -619,9 +619,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "HPBack",
-                  "value": 1
+                  "value": 1,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -666,9 +666,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "HPBack",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },
@@ -1910,9 +1910,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "HPBack",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -1984,9 +1984,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "HPBack",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -2119,9 +2119,9 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "Deathrattle",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },

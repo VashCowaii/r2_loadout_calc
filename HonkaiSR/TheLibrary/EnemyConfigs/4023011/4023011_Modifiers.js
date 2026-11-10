@@ -593,9 +593,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "_BattleTarget_LocalLegend_S2_1_Check",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     }
                   ]
                 },

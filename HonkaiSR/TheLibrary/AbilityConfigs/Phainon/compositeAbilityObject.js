@@ -4607,7 +4607,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "Count",
           "value": {
             "operator": "Variables[0] (MIN) || Variables[1] (Skill22_Energy) || Variables[2] (4) || PARAM_2 || FUNCTION || RETURN",
@@ -4618,17 +4617,17 @@ const compositeAbilityObject = {
               "Skill22_Energy",
               4
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_count",
-          "value": 0
+          "value": 0,
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_delta_frame",
           "value": {
             "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (4) || Variables[3] (Count) || MUL || Constants[0] (1) || SUB || DIV || RETURN",
@@ -4642,7 +4641,8 @@ const compositeAbilityObject = {
               4,
               "Count"
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
@@ -4733,7 +4733,6 @@ const compositeAbilityObject = {
               "paramSequence": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "_count",
                   "value": {
                     "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
@@ -4744,7 +4743,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_count"
                     ]
-                  }
+                  },
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -4980,7 +4980,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "Count",
           "value": {
             "operator": "Variables[0] (MIN) || Variables[1] (Skill22_Energy) || Variables[2] (4) || PARAM_2 || FUNCTION || RETURN",
@@ -4991,17 +4990,17 @@ const compositeAbilityObject = {
               "Skill22_Energy",
               4
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_count",
-          "value": 0
+          "value": 0,
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_delta_frame",
           "value": {
             "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (4) || Variables[3] (Count) || MUL || Constants[0] (1) || SUB || DIV || RETURN",
@@ -5015,7 +5014,8 @@ const compositeAbilityObject = {
               4,
               "Count"
             ]
-          }
+          },
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",
@@ -5106,7 +5106,6 @@ const compositeAbilityObject = {
               "paramSequence": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextAbility",
                   "variableName": "_count",
                   "value": {
                     "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
@@ -5117,7 +5116,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_count"
                     ]
-                  }
+                  },
+                  "scope": "ContextAbility"
                 },
                 {
                   "name": "Add Events/Bonuses",

@@ -183,9 +183,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "SwordNumber",
-          "value": 1
+          "value": 1,
+          "scope": "ContextAbility"
         },
         {
           "name": "Create Enemies",

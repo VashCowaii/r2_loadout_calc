@@ -71,7 +71,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "Modifier_TurnCount",
                       "value": {
                         "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
@@ -82,7 +81,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Modifier_TurnCount"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -127,9 +127,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "Modifier_TurnCount",
-                          "value": 2
+                          "value": 2,
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -151,9 +151,9 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "Modifier_TurnCount",
-                          "value": 1
+                          "value": 1,
+                          "scope": "ContextModifier"
                         }
                       ]
                     }
@@ -809,9 +809,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "BossCount",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         {
           "name": "Find New Target",
@@ -848,7 +848,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "scope": "TargetEntity",
               "variableName": "BossCount",
               "value": {
                 "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
@@ -859,7 +858,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "BossCount"
                 ]
-              }
+              },
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -907,7 +907,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "scope": "TargetEntity",
           "variableName": "DamageUpRatio",
           "value": {
             "operator": "Variables[0] (DamageUpRatio) || RETURN",
@@ -916,7 +915,8 @@ const compositeAbilityObject = {
             "variables": [
               "DamageUpRatio"
             ]
-          }
+          },
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {

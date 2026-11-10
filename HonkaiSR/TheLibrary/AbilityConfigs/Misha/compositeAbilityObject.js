@@ -917,7 +917,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_BPAddValue",
                       "value": {
                         "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
@@ -926,7 +925,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_BPAddValue"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Looped Event",

@@ -420,9 +420,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 0
+                  "value": 0,
+                  "scope": "AITag"
                 }
               ]
             }
@@ -664,9 +664,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 1
+                  "value": 1,
+                  "scope": "AITag"
                 }
               ]
             },
@@ -794,9 +794,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "AITag",
                   "variableName": "DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "scope": "AITag"
                 }
               ]
             },
@@ -2380,9 +2380,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "AITag",
           "variableName": "DamageCarry",
-          "value": 1
+          "value": 1,
+          "scope": "AITag"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -4961,9 +4961,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "AITag",
           "variableName": "DamageCarry",
-          "value": 100
+          "value": 100,
+          "scope": "AITag"
         },
         {
           "name": "IF",
@@ -5063,9 +5063,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "scope": "SummonerEntity",
                   "variableName": "BattleEventCount",
-                  "value": 0
+                  "value": 0,
+                  "scope": "SummonerEntity"
                 },
                 {
                   "name": "Remove Events/Bonuses",

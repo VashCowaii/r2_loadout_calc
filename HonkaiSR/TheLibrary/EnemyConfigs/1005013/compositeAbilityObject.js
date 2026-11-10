@@ -4433,9 +4433,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 2
+                    "value": 2,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4504,15 +4504,15 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 3
+                    "value": 3,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AccumulateFlag",
-                    "value": 1
+                    "value": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4557,15 +4557,15 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 5
+                    "value": 5,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AccumulateFlag",
-                    "value": 0
+                    "value": 0,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4601,9 +4601,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 12
+                    "value": 12,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4678,9 +4678,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AIFlag",
-                    "value": 12
+                    "value": 12,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Define Custom Variable",
@@ -4731,9 +4731,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AccumulateFlag",
-                    "value": 1
+                    "value": 1,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4779,9 +4779,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "scope": "TargetEntity",
                     "variableName": "AccumulateFlag",
-                    "value": 0
+                    "value": 0,
+                    "scope": "TargetEntity"
                   },
                   {
                     "name": "Use Ability Option",

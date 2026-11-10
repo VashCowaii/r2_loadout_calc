@@ -47,9 +47,9 @@ const compositeAbilityObject = {
           "onStageExit": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "TohsakaRin_00_AchievementPassive_Money",
-              "value": 0
+              "value": 0,
+              "scope": "ContextCaster"
             }
           ],
           "Money Taken": [
@@ -59,7 +59,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "TohsakaRin_00_AchievementPassive_Money",
                   "value": {
                     "operator": "Variables[0] (TohsakaRin_00_AchievementPassive_Money) || Constants[0] (1) || ADD || RETURN",
@@ -70,7 +69,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "TohsakaRin_00_AchievementPassive_Money"
                     ]
-                  }
+                  },
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "IF",
@@ -2787,7 +2787,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_BPAddValue",
                           "value": {
                             "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
@@ -2796,7 +2795,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_BPAddValue"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "Looped Event",
@@ -3780,9 +3780,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 10
+                          "value": 10,
+                          "scope": "AITag"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -3795,17 +3795,17 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Rin: Archer}}"
                           },
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 100
+                          "value": 100,
+                          "scope": "AITag"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 100
+                          "value": 100,
+                          "scope": "AITag"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -3818,9 +3818,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Rin: Archer}}"
                           },
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 10
+                          "value": 10,
+                          "scope": "AITag"
                         }
                       ]
                     }
@@ -3947,9 +3947,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "scope": "AITag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -3962,9 +3962,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Rin: Archer}}"
                       },
-                      "scope": "AITag",
                       "variableName": "DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "scope": "AITag"
                     }
                   ],
                   "onChange": [

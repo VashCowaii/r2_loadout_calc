@@ -667,9 +667,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "CanUseUltra_IF",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         },
                         {
                           "name": "Action Advance/Delay",
@@ -3485,9 +3485,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "InsertCheck",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Set Enemy Phase",

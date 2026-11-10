@@ -513,9 +513,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "IF",
@@ -539,7 +539,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_DeadLock_HP",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
@@ -549,7 +548,8 @@ const compositeAbilityObject = {
                           "MDF_MaxHP",
                           "MDF_DeadLock_HPRatio"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -557,7 +557,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "DeadLock_HP_CurrentValue",
                       "value": {
                         "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
@@ -566,7 +565,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DeadLock_HP"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -612,7 +612,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "MDF_DeadLock_HP",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (MDF_DeadLock_HPRatio) || MUL || RETURN",
@@ -622,7 +621,8 @@ const compositeAbilityObject = {
                           "MDF_MaxHP",
                           "MDF_DeadLock_HPRatio"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -630,7 +630,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "DeadLock_HP_CurrentValue",
                       "value": {
                         "operator": "Variables[0] (MDF_DeadLock_HP) || RETURN",
@@ -639,7 +638,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DeadLock_HP"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1023,7 +1023,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "DeadLock_HP_CurrentValue",
                           "value": {
                             "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
@@ -1033,7 +1032,8 @@ const compositeAbilityObject = {
                               "DeadLock_HP_CurrentValue",
                               "_Damage"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "IF",
@@ -1055,9 +1055,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextModifier",
                               "variableName": "DeadLock_HP_CurrentValue",
-                              "value": 0
+                              "value": 0,
+                              "scope": "ContextModifier"
                             }
                           ]
                         },
@@ -1122,9 +1122,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "InsertFlag",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1132,9 +1132,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextModifier",
                               "variableName": "DeadLock_HP_CurrentValue",
-                              "value": 0
+                              "value": 0,
+                              "scope": "ContextModifier"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -1172,7 +1172,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "scope": "ContextModifier",
                           "variableName": "DeadLock_HP_CurrentValue",
                           "value": {
                             "operator": "Variables[0] (DeadLock_HP_CurrentValue) || Variables[1] (_Damage) || SUB || RETURN",
@@ -1182,7 +1181,8 @@ const compositeAbilityObject = {
                               "DeadLock_HP_CurrentValue",
                               "_Damage"
                             ]
-                          }
+                          },
+                          "scope": "ContextModifier"
                         },
                         {
                           "name": "IF",
@@ -1204,9 +1204,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextModifier",
                               "variableName": "DeadLock_HP_CurrentValue",
-                              "value": 0
+                              "value": 0,
+                              "scope": "ContextModifier"
                             }
                           ]
                         },
@@ -1271,9 +1271,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "TargetEntity",
                               "variableName": "InsertFlag",
-                              "value": 1
+                              "value": 1,
+                              "scope": "TargetEntity"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1281,9 +1281,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "scope": "ContextModifier",
                               "variableName": "DeadLock_HP_CurrentValue",
-                              "value": 0
+                              "value": 0,
+                              "scope": "ContextModifier"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -1526,9 +1526,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Inject Ability Use",

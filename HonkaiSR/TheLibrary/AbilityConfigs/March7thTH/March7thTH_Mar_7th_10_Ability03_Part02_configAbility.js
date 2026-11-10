@@ -90,7 +90,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_BasicCount",
               "value": {
                 "operator": "Variables[0] (3) || Variables[1] (MDF_Value) || ADD || RETURN",
@@ -100,11 +99,11 @@ const configAbility = {
                   3,
                   "MDF_Value"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_FixedChance",
               "value": {
                 "operator": "Variables[0] (0.6) || Variables[1] (MDF_Chance) || ADD || RETURN",
@@ -114,7 +113,8 @@ const configAbility = {
                   0.6,
                   "MDF_Chance"
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -123,7 +123,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_BasicCount",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -132,11 +131,11 @@ const configAbility = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_FixedChance",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
@@ -145,11 +144,11 @@ const configAbility = {
                 "variables": [
                   0.6
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "Skill11_DamagePercatage",
               "value": {
                 "operator": "Variables[0] (0.8) || RETURN",
@@ -158,7 +157,8 @@ const configAbility = {
                 "variables": [
                   0.8
                 ]
-              }
+              },
+              "scope": "ContextCaster"
             }
           ]
         },

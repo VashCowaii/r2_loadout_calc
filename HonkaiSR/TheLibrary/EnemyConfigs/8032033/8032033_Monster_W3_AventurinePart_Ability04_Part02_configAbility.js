@@ -130,9 +130,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "scope": "TargetEntity",
               "variableName": "WaitInsert",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "IF",

@@ -293,9 +293,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "scope": "ContextModifier",
               "variableName": "_RemoveFlag",
-              "value": 1
+              "value": 1,
+              "scope": "ContextModifier"
             },
             {
               "name": "IF",
@@ -333,9 +333,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -421,9 +421,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
-              "value": 1
+              "value": 1,
+              "scope": "TargetEntity"
             }
           ]
         },
@@ -459,7 +459,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
                   "variableName": "DV_CurrentPoint",
                   "value": {
                     "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (6) || SUB || Variables[2] (_WindfuryCostFixValue) || ADD || RETURN",
@@ -470,13 +469,14 @@ const configAbility = {
                       6,
                       "_WindfuryCostFixValue"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "scope": "ContextCaster",
                   "variableName": "Rank01toRank00",
-                  "value": 1
+                  "value": 1,
+                  "scope": "ContextCaster"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -610,9 +610,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
-              "value": 0
+              "value": 0,
+              "scope": "TargetEntity"
             },
             {
               "name": "Define Custom Variable",
@@ -1002,9 +1002,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "ContextCaster",
               "variableName": "DV_CurrentPoint",
-              "value": 0
+              "value": 0,
+              "scope": "ContextCaster"
             }
           ]
         },
@@ -1485,7 +1485,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "DV_PursuedDamage_LimitCount",
                           "value": {
                             "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
@@ -1496,7 +1495,8 @@ const configAbility = {
                             "variables": [
                               "DV_PursuedDamage_LimitCount"
                             ]
-                          }
+                          },
+                          "scope": "ContextCaster"
                         }
                       ]
                     }
@@ -1536,7 +1536,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextCaster",
                           "variableName": "DV_PursuedDamage_LimitCount",
                           "value": {
                             "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
@@ -1547,7 +1546,8 @@ const configAbility = {
                             "variables": [
                               "DV_PursuedDamage_LimitCount"
                             ]
-                          }
+                          },
+                          "scope": "ContextCaster"
                         }
                       ]
                     }
@@ -1748,9 +1748,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextCaster",
                       "variableName": "DV_Rank02_Effcet",
-                      "value": 0
+                      "value": 0,
+                      "scope": "ContextCaster"
                     },
                     "Modifier Deletes Itself"
                   ]

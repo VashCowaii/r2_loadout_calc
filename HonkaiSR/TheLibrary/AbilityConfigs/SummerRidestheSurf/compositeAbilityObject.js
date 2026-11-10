@@ -194,7 +194,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_LastElationSkillIndex",
                       "value": {
                         "operator": "Variables[0] (_CurrentElationSkillIndex) || RETURN",
@@ -203,7 +202,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_CurrentElationSkillIndex"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     }
                   ]
                 }
@@ -257,9 +257,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "ContextModifier",
                           "variableName": "_ElationSkillCastNum",
-                          "value": 0
+                          "value": 0,
+                          "scope": "ContextModifier"
                         }
                       ]
                     }

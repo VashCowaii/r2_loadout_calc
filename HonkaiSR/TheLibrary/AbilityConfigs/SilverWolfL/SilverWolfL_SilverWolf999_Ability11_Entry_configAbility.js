@@ -22,7 +22,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "Skill11_Shoot_Stance",
       "value": {
         "operator": "Variables[0] (ST Toughness Value) || RETURN",
@@ -31,7 +30,8 @@ const configAbility = {
         "variables": [
           "ST Toughness Value"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     },
     {
       "name": "Add Events/Bonuses",

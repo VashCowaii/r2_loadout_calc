@@ -20,9 +20,9 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "TutorialFlag",
-          "value": 3
+          "value": 3,
+          "scope": "TargetEntity"
         },
         {
           "name": "Skill Points Modification",

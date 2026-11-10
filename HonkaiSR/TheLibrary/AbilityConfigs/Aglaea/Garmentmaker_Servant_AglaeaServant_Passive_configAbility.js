@@ -25,9 +25,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "AITag",
       "variableName": "DamageCarry",
-      "value": 100
+      "value": 100,
+      "scope": "AITag"
     },
     {
       "name": "IF",
@@ -127,9 +127,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "scope": "SummonerEntity",
               "variableName": "BattleEventCount",
-              "value": 0
+              "value": 0,
+              "scope": "SummonerEntity"
             },
             {
               "name": "Remove Events/Bonuses",

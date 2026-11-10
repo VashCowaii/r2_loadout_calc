@@ -14,7 +14,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}.[[getMemosprite]]"
       },
-      "scope": "TargetEntity",
       "variableName": "Ultra_Stance",
       "value": {
         "operator": "Variables[0] (AOE Toughness Value) || RETURN",
@@ -23,7 +22,8 @@ const configAbility = {
         "variables": [
           "AOE Toughness Value"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     },
     {
       "name": "Trigger Ability",

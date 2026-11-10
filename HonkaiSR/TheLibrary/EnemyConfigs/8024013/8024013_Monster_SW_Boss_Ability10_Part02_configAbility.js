@@ -225,7 +225,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "scope": "TargetEntity",
       "variableName": "DamageUpRatio",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
@@ -234,7 +233,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill01[0]]}"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -335,9 +335,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "MonsterNumDamageUpLayer",
-      "value": 1
+      "value": 1,
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",
@@ -417,9 +417,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "scope": "TargetEntity",
       "variableName": "MonsterNumDamageUpLayer",
-      "value": 0
+      "value": 0,
+      "scope": "TargetEntity"
     },
     "Trigger: Ability End"
   ],

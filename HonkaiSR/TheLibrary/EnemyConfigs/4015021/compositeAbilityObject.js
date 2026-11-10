@@ -3739,9 +3739,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "ChangePhase_InsertController",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {

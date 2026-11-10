@@ -175,9 +175,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "AIFlag",
-                  "value": 3
+                  "value": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             }

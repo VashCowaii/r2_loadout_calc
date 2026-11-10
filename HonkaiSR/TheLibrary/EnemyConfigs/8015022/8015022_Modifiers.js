@@ -1825,9 +1825,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "PartDecisionFlag",
-                  "value": 3
+                  "value": 3,
+                  "scope": "TargetEntity"
                 }
               ]
             },
@@ -1935,9 +1935,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "Phase2_BattlePerform",
-                  "value": 4
+                  "value": 4,
+                  "scope": "TargetEntity"
                 }
               ]
             }

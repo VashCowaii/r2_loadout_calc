@@ -4564,9 +4564,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "#CL_State",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         },
         {
           "name": "Consume",
@@ -4671,9 +4671,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "#CL_State",
-          "value": 0
+          "value": 0,
+          "scope": "TargetEntity"
         },
         "Trigger: Ability End"
       ],

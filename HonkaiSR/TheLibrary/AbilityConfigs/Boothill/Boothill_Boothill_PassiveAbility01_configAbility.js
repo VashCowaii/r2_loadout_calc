@@ -306,9 +306,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_show_badge_01",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -336,9 +336,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_show_badge_02",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 },
@@ -366,9 +366,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "scope": "ContextModifier",
                       "variableName": "_show_badge_03",
-                      "value": 1
+                      "value": 1,
+                      "scope": "ContextModifier"
                     }
                   ]
                 }

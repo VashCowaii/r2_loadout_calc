@@ -10,9 +10,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "scope": "SummonerEntity",
       "variableName": "_HealCount",
-      "value": 0
+      "value": 0,
+      "scope": "SummonerEntity"
     },
     {
       "name": "Define Custom Variable",

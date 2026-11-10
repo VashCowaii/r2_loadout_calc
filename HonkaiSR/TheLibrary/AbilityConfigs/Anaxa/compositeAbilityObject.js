@@ -929,9 +929,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 100
+                          "value": 100,
+                          "scope": "AITag"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -979,9 +979,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1037,9 +1037,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "scope": "AITag",
                           "variableName": "DamageCarry",
-                          "value": 100
+                          "value": 100,
+                          "scope": "AITag"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1136,9 +1136,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "AITag",
                               "variableName": "DamageCarry",
-                              "value": 100
+                              "value": 100,
+                              "scope": "AITag"
                             }
                           ],
                           "failed": [
@@ -1170,9 +1170,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "scope": "AITag",
                               "variableName": "DamageCarry",
-                              "value": 1
+                              "value": 1,
+                              "scope": "AITag"
                             }
                           ]
                         }
@@ -3009,9 +3009,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "ContextAbility",
           "variableName": "_count",
-          "value": 0
+          "value": 0,
+          "scope": "ContextAbility"
         },
         {
           "name": "Define Custom Variable",

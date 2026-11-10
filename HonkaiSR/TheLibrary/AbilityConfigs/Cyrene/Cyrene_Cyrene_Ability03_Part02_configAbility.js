@@ -58,7 +58,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "scope": "TargetEntity",
       "variableName": "CurSpecialSP",
       "value": {
         "operator": "Variables[0] (CurSpecialSP) || RETURN",
@@ -67,7 +66,8 @@ const configAbility = {
         "variables": [
           "CurSpecialSP"
         ]
-      }
+      },
+      "scope": "TargetEntity"
     },
     {
       "name": "IF",

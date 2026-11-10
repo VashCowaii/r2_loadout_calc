@@ -132,7 +132,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "scope": "ContextModifier",
                       "variableName": "_TotalDamage",
                       "value": {
                         "operator": "Variables[0] (_TotalDamage) || Variables[1] (_Damage) || ADD || RETURN",
@@ -142,7 +141,8 @@ const compositeAbilityObject = {
                           "_TotalDamage",
                           "_Damage"
                         ]
-                      }
+                      },
+                      "scope": "ContextModifier"
                     },
                     {
                       "name": "IF",
@@ -181,9 +181,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -212,9 +212,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "ContextModifier",
                   "variableName": "_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "scope": "ContextModifier"
                 },
                 {
                   "name": "Remove Events/Bonuses",

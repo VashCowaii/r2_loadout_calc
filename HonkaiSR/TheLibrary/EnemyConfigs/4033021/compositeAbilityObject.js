@@ -210,9 +210,9 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "scope": "AITag",
                       "variableName": "_LocalLegend_PreSelectFlag",
-                      "value": 1
+                      "value": 1,
+                      "scope": "AITag"
                     }
                   ],
                   "failed": [
@@ -259,9 +259,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "scope": "AITag",
                           "variableName": "_LocalLegend_PreSelectFlag",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         }
                       ],
                       "failed": [
@@ -294,9 +294,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "scope": "AITag",
                           "variableName": "_LocalLegend_PreSelectFlag",
-                          "value": 1
+                          "value": 1,
+                          "scope": "AITag"
                         }
                       ]
                     }
@@ -1996,9 +1996,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "scope": "TargetEntity",
                           "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
-                          "value": 1
+                          "value": 1,
+                          "scope": "TargetEntity"
                         }
                       ]
                     },

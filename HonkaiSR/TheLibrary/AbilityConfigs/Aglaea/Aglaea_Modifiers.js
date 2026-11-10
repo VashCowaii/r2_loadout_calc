@@ -380,9 +380,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 0
+              "value": 0,
+              "scope": "AITag"
             }
           ]
         }
@@ -624,9 +624,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 1
+              "value": 1,
+              "scope": "AITag"
             }
           ]
         },
@@ -754,9 +754,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "scope": "AITag",
               "variableName": "DamageCarry",
-              "value": 100
+              "value": 100,
+              "scope": "AITag"
             }
           ]
         },

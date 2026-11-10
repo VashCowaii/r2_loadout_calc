@@ -337,9 +337,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "InsertCheck",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -911,9 +911,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
                       "variableName": "InsertCheck",
-                      "value": 0
+                      "value": 0,
+                      "scope": "TargetEntity"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2128,9 +2128,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "scope": "TargetEntity",
           "variableName": "InsertCheck",
-          "value": 1
+          "value": 1,
+          "scope": "TargetEntity"
         }
       ],
       "targetObjectData": {
@@ -2299,9 +2299,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "scope": "TargetEntity",
                       "variableName": "#Skill01_P1_AttackAddedRatio",
-                      "value": 0.15
+                      "value": 0.15,
+                      "scope": "TargetEntity"
                     }
                   ]
                 }

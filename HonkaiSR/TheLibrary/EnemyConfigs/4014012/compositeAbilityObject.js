@@ -380,9 +380,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ShieldAddMaxLayer",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -545,7 +545,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ShieldAddMaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
@@ -554,7 +553,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_AddMaxLayer"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -606,9 +606,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ShieldAddMaxLayer",
-                  "value": 0
+                  "value": 0,
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -771,7 +771,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "scope": "TargetEntity",
                   "variableName": "ShieldAddMaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
@@ -780,7 +779,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_AddMaxLayer"
                     ]
-                  }
+                  },
+                  "scope": "TargetEntity"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
