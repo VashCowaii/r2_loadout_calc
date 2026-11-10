@@ -833,17 +833,17 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "skipWhenMindControlled": false,
               "value": {
                 "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)"
               },
-              "variableName": "Castorice_Passive_Count"
+              "variableName": "Castorice_Passive_Count",
+              "skipWhenMindControlled": false
             },
             {
               "name": "Define Custom Variable",
-              "skipWhenMindControlled": false,
               "value": 0,
-              "variableName": "Castorice_ChangeValue"
+              "variableName": "Castorice_ChangeValue",
+              "skipWhenMindControlled": false
             }
           ]
         }

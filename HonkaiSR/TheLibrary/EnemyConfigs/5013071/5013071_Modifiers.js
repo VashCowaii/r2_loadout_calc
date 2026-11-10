@@ -775,7 +775,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "MDF_CurrentCharge"
+                    "displayLines": "CurrentChargeValue"
                   },
                   "variableName": "MDF_CurrentCharge"
                 },
@@ -792,7 +792,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -813,7 +813,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -834,7 +834,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -855,7 +855,7 @@ const configAbility = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1308,7 +1308,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "displayLines": "MDF_CurrentCharge"
+                        "displayLines": "CurrentChargeValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1338,7 +1338,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "displayLines": "MDF_CurrentCharge"
+                        "displayLines": "CurrentChargeValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1368,7 +1368,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "displayLines": "MDF_CurrentCharge"
+                        "displayLines": "CurrentChargeValue"
                       },
                       "entityClass": "Enemy",
                       "target": {
@@ -1398,7 +1398,7 @@ const configAbility = {
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
-                        "displayLines": "MDF_CurrentCharge"
+                        "displayLines": "CurrentChargeValue"
                       },
                       "entityClass": "Enemy",
                       "target": {

@@ -1746,9 +1746,6 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-881220179\">MLevel_ElationBE_ActionStateFalse</a>",
-      "latentQueue": [
-        "ElationTime_IsNoConsume"
-      ],
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

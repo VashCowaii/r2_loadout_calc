@@ -53,7 +53,7 @@ const configAbility = {
               {
                 "name": "Define Custom Variable",
                 "value": {
-                  "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)"
+                  "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - DarkTeamStealthCount)"
                 },
                 "variableName": "StealthCondition"
               },

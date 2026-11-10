@@ -2522,12 +2522,12 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
+                      "value": {
+                        "displayLines": "AddValue"
+                      },
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "value": {
-                        "displayLines": "AddValue"
                       },
                       "variableName": "_FinalAddValue"
                     },

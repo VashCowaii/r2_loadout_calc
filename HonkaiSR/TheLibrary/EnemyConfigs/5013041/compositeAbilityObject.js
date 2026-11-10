@@ -791,7 +791,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "MDF_CurrentCharge"
+                        "displayLines": "CurrentChargeValue"
                       },
                       "variableName": "MDF_CurrentCharge"
                     },
@@ -808,7 +808,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "displayLines": "MDF_CurrentCharge"
+                                "displayLines": "CurrentChargeValue"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "displayLines": "MDF_CurrentCharge"
+                                "displayLines": "CurrentChargeValue"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -850,7 +850,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "displayLines": "MDF_CurrentCharge"
+                                "displayLines": "CurrentChargeValue"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -871,7 +871,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
-                                "displayLines": "MDF_CurrentCharge"
+                                "displayLines": "CurrentChargeValue"
                               },
                               "entityClass": "Enemy",
                               "target": {
@@ -1324,7 +1324,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1384,7 +1384,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
-                            "displayLines": "MDF_CurrentCharge"
+                            "displayLines": "CurrentChargeValue"
                           },
                           "entityClass": "Enemy",
                           "target": {

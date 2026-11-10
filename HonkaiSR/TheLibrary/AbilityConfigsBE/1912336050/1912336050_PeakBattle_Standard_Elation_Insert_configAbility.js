@@ -50,10 +50,10 @@ const configAbility = {
             ]
           },
           "baseDelay": {
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
+            "displayLines": "(EEEEEEEEEEENEMIES_OBJECT_UNUSED__337 / ((MDF_EnemyCount + 1) / 2))"
           },
           "delayInterval": {
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
+            "displayLines": "(EEEEEEEEEEENEMIES_OBJECT_UNUSED__337 / ((MDF_EnemyCount + 1) / 2))"
           },
           "useParamEntitiesForParallelCount": true
         }
@@ -84,10 +84,10 @@ const configAbility = {
             ]
           },
           "baseDelay": {
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
+            "displayLines": "(EEEEEEEEEEENEMIES_OBJECT_UNUSED__337 / ((MDF_EnemyCount + 1) / 2))"
           },
           "delayInterval": {
-            "displayLines": "(MDF_FirstHit / ((MDF_EnemyCount + 1) / 2))"
+            "displayLines": "(EEEEEEEEEEENEMIES_OBJECT_UNUSED__337 / ((MDF_EnemyCount + 1) / 2))"
           },
           "useParamEntitiesForParallelCount": true
         }

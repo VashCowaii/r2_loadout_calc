@@ -378,19 +378,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": {
                     "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)"
                   },
-                  "variableName": "Castorice_MaxSpecialSP"
+                  "variableName": "Castorice_MaxSpecialSP",
+                  "skipWhenMindControlled": false
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": {
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))"
                   },
-                  "variableName": "HealAmount_CasterAdd"
+                  "variableName": "HealAmount_CasterAdd",
+                  "skipWhenMindControlled": false
                 },
                 {
                   "name": "IF",
@@ -403,11 +403,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "skipWhenMindControlled": false,
                       "value": {
                         "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)"
                       },
-                      "variableName": "Castorice_SumBeingHealValue"
+                      "variableName": "Castorice_SumBeingHealValue",
+                      "skipWhenMindControlled": false
                     },
                     {
                       "name": "IF",
@@ -422,11 +422,11 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "skipWhenMindControlled": false,
                           "value": {
                             "displayLines": "HealAmount_CasterAdd"
                           },
-                          "variableName": "HealAmount_ServantAdd"
+                          "variableName": "HealAmount_ServantAdd",
+                          "skipWhenMindControlled": false
                         },
                         {
                           "name": "Define Custom Variable with Stat",
@@ -495,15 +495,15 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": 0,
-                  "variableName": "Castorice_SumBeingHealValue"
+                  "variableName": "Castorice_SumBeingHealValue",
+                  "skipWhenMindControlled": false
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": 0,
-                  "variableName": "Castorice_MaxFlag"
+                  "variableName": "Castorice_MaxFlag",
+                  "skipWhenMindControlled": false
                 }
               ]
             },
@@ -512,15 +512,15 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": 0,
-                  "variableName": "Castorice_SumBeingHealValue"
+                  "variableName": "Castorice_SumBeingHealValue",
+                  "skipWhenMindControlled": false
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": 0,
-                  "variableName": "Castorice_MaxFlag"
+                  "variableName": "Castorice_MaxFlag",
+                  "skipWhenMindControlled": false
                 }
               ]
             }
@@ -2533,17 +2533,17 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": {
                     "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)"
                   },
-                  "variableName": "Castorice_Passive_Count"
+                  "variableName": "Castorice_Passive_Count",
+                  "skipWhenMindControlled": false
                 },
                 {
                   "name": "Define Custom Variable",
-                  "skipWhenMindControlled": false,
                   "value": 0,
-                  "variableName": "Castorice_ChangeValue"
+                  "variableName": "Castorice_ChangeValue",
+                  "skipWhenMindControlled": false
                 }
               ]
             }
