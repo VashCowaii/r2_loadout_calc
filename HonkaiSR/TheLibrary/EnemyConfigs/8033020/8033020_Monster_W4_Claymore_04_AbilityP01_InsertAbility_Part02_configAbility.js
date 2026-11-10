@@ -29,17 +29,17 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 5,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         }
       ]
     },

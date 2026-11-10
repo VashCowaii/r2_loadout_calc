@@ -58,8 +58,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -104,8 +104,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -213,8 +213,8 @@ const configAbility = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "AIFlagSkill04",
-                            "value": 1
+                            "value": 1,
+                            "variableName": "AIFlagSkill04"
                           },
                           {
                             "name": "Use Ability Option",
@@ -224,8 +224,8 @@ const configAbility = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "AIFlagSkill04",
-                            "value": 0
+                            "value": 0,
+                            "variableName": "AIFlagSkill04"
                           },
                           {
                             "name": "Use Ability Option",
@@ -237,8 +237,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlagSkill04",
-                        "value": 0
+                        "value": 0,
+                        "variableName": "AIFlagSkill04"
                       },
                       {
                         "name": "Use Ability Option",
@@ -272,8 +272,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -318,8 +318,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -424,8 +424,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -470,8 +470,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -560,8 +560,8 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
-                        "value": 3
+                        "value": 3,
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -571,8 +571,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -635,8 +635,8 @@ const configAbility = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "AIFlagSkill04",
-                            "value": 1
+                            "value": 1,
+                            "variableName": "AIFlagSkill04"
                           },
                           {
                             "name": "Use Ability Option",
@@ -646,8 +646,8 @@ const configAbility = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "AIFlagSkill04",
-                            "value": 0
+                            "value": 0,
+                            "variableName": "AIFlagSkill04"
                           },
                           {
                             "name": "Use Ability Option",
@@ -659,8 +659,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlagSkill04",
-                        "value": 0
+                        "value": 0,
+                        "variableName": "AIFlagSkill04"
                       },
                       {
                         "name": "Use Ability Option",
@@ -694,8 +694,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -740,8 +740,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
-                    "value": 3
+                    "value": 3,
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",

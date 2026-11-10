@@ -27,8 +27,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IsInserting",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_IsInserting"
             },
             {
               "name": "Use Custom Character Function",
@@ -282,8 +282,8 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsInserting",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsInserting"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -326,8 +326,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_IsInserting",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_IsInserting"
                             }
                           ]
                         }
@@ -533,8 +533,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Sorted",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Sorted"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -551,7 +551,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_WeightedSpeed",
                   "value": {
                     "operator": "Variables[0] (MDF_AvatarSpeed) || Variables[1] (_BackEndSpeedRatio) || MUL || RETURN",
                     "displayLines": "(MDF_AvatarSpeed * _BackEndSpeedRatio)",
@@ -560,13 +559,13 @@ const configAbility = {
                       "MDF_AvatarSpeed",
                       "_BackEndSpeedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_WeightedSpeed"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_WeightedSpeed",
                   "value": {
                     "operator": "Variables[0] (MDF_AvatarSpeed) || RETURN",
                     "displayLines": "MDF_AvatarSpeed",
@@ -574,7 +573,8 @@ const configAbility = {
                     "variables": [
                       "MDF_AvatarSpeed"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_WeightedSpeed"
                 }
               ]
             }
@@ -755,8 +755,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CalRank",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CalRank"
                     },
                     {
                       "name": "Find New Target",
@@ -858,7 +858,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_CalRank",
                               "value": {
                                 "operator": "Variables[0] (MDF_CalRank) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_CalRank + 1)",
@@ -868,7 +867,8 @@ const configAbility = {
                                 "variables": [
                                   "MDF_CalRank"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_CalRank"
                             }
                           ]
                         }
@@ -905,7 +905,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleEvent_Elation_00_BaseSpeed",
                   "value": {
                     "operator": "Variables[0] (AHA_OBJECT_UNUSED__194) || RETURN",
                     "displayLines": "AHA_OBJECT_UNUSED__194",
@@ -913,7 +912,8 @@ const configAbility = {
                     "variables": [
                       "AHA_OBJECT_UNUSED__194"
                     ]
-                  }
+                  },
+                  "variableName": "BattleEvent_Elation_00_BaseSpeed"
                 },
                 {
                   "name": "Find New Target",
@@ -996,7 +996,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] (AHA_OBJECT_UNUSED__195) || RETURN",
                                 "displayLines": "AHA_OBJECT_UNUSED__195",
@@ -1004,7 +1003,8 @@ const configAbility = {
                                 "variables": [
                                   "AHA_OBJECT_UNUSED__195"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1014,7 +1014,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] (AHA_OBJECT_UNUSED__196) || RETURN",
                                 "displayLines": "AHA_OBJECT_UNUSED__196",
@@ -1022,7 +1021,8 @@ const configAbility = {
                                 "variables": [
                                   "AHA_OBJECT_UNUSED__196"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1032,7 +1032,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] (AHA_OBJECT_UNUSED__197) || RETURN",
                                 "displayLines": "AHA_OBJECT_UNUSED__197",
@@ -1040,7 +1039,8 @@ const configAbility = {
                                 "variables": [
                                   "AHA_OBJECT_UNUSED__197"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1050,7 +1050,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] (AHA_OBJECT_UNUSED__198) || RETURN",
                                 "displayLines": "AHA_OBJECT_UNUSED__198",
@@ -1058,7 +1057,8 @@ const configAbility = {
                                 "variables": [
                                   "AHA_OBJECT_UNUSED__198"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1068,7 +1068,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] (AHA_OBJECT_UNUSED__199) || RETURN",
                                 "displayLines": "AHA_OBJECT_UNUSED__199",
@@ -1076,7 +1075,8 @@ const configAbility = {
                                 "variables": [
                                   "AHA_OBJECT_UNUSED__199"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         }
@@ -1085,7 +1085,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEvent_Elation_00_BaseSpeed",
                       "value": {
                         "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || Variables[1] (MDF_SpeedCalTemp1) || Variables[2] (MDF_SpeedCalTemp2) || MUL || ADD || RETURN",
                         "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))",
@@ -1095,7 +1094,8 @@ const configAbility = {
                           "MDF_SpeedCalTemp1",
                           "MDF_SpeedCalTemp2"
                         ]
-                      }
+                      },
+                      "variableName": "BattleEvent_Elation_00_BaseSpeed"
                     }
                   ]
                 },
@@ -1220,7 +1220,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleEvent_Elation_00_BaseSpeed",
                   "value": {
                     "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                     "displayLines": "{[SkillP01[0]]}",
@@ -1228,12 +1227,13 @@ const configAbility = {
                     "variables": [
                       "{[SkillP01[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "BattleEvent_Elation_00_BaseSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CalCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CalCount"
                 },
                 {
                   "name": "Find New Target",
@@ -1303,7 +1303,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] ({[SkillP01[5]]}) || RETURN",
                                 "displayLines": "{[SkillP01[5]]}",
@@ -1311,7 +1310,8 @@ const configAbility = {
                                 "variables": [
                                   "{[SkillP01[5]]}"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1321,7 +1321,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] ({[SkillP01[4]]}) || RETURN",
                                 "displayLines": "{[SkillP01[4]]}",
@@ -1329,7 +1328,8 @@ const configAbility = {
                                 "variables": [
                                   "{[SkillP01[4]]}"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1339,7 +1339,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
                                 "displayLines": "{[SkillP01[3]]}",
@@ -1347,7 +1346,8 @@ const configAbility = {
                                 "variables": [
                                   "{[SkillP01[3]]}"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1357,7 +1357,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
                                 "displayLines": "{[SkillP01[2]]}",
@@ -1365,7 +1364,8 @@ const configAbility = {
                                 "variables": [
                                   "{[SkillP01[2]]}"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         },
@@ -1375,7 +1375,6 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpeedCalTemp2",
                               "value": {
                                 "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
                                 "displayLines": "{[SkillP01[1]]}",
@@ -1383,7 +1382,8 @@ const configAbility = {
                                 "variables": [
                                   "{[SkillP01[1]]}"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_SpeedCalTemp2"
                             }
                           ]
                         }
@@ -1392,7 +1392,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CalCount",
                       "value": {
                         "operator": "Variables[0] (MDF_CalCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_CalCount + 1)",
@@ -1402,11 +1401,11 @@ const configAbility = {
                         "variables": [
                           "MDF_CalCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CalCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEvent_Elation_00_BaseSpeed",
                       "value": {
                         "operator": "Variables[0] (BattleEvent_Elation_00_BaseSpeed) || Variables[1] (MDF_SpeedCalTemp1) || Variables[2] (MDF_SpeedCalTemp2) || MUL || ADD || RETURN",
                         "displayLines": "(BattleEvent_Elation_00_BaseSpeed + (MDF_SpeedCalTemp1 * MDF_SpeedCalTemp2))",
@@ -1416,7 +1415,8 @@ const configAbility = {
                           "MDF_SpeedCalTemp1",
                           "MDF_SpeedCalTemp2"
                         ]
-                      }
+                      },
+                      "variableName": "BattleEvent_Elation_00_BaseSpeed"
                     }
                   ]
                 },
@@ -1469,8 +1469,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Aha Instant: Aha Battle Event}}"
                   },
-                  "variableName": "ElationTime_IsNoConsume",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ElationTime_IsNoConsume"
                 }
               ]
             },

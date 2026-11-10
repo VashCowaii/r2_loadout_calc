@@ -18,7 +18,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountDark",
           "value": {
             "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill01P2[1]]}) || ADD || RETURN",
             "displayLines": "(Thunder_CountDark + {[Skill01P2[1]]})",
@@ -27,7 +26,8 @@ const configAbility = {
               "Thunder_CountDark",
               "{[Skill01P2[1]]}"
             ]
-          }
+          },
+          "variableName": "Thunder_CountDark"
         },
         {
           "name": "Add Events/Bonuses",

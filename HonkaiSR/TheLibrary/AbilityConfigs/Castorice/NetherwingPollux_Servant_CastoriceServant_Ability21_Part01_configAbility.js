@@ -50,8 +50,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_ReadyAnimStateFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_ReadyAnimStateFlag"
         },
         "Deleted bullshit",
         {

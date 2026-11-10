@@ -1066,8 +1066,8 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ExplodeLayer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ExplodeLayer"
                 }
               ]
             },
@@ -1379,8 +1379,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All(with Unselectable)}}.[[living]]"
                               },
-                              "variableName": "MDF_PerformanceDelay",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "MDF_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -1390,8 +1390,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All(with Unselectable)}}.[[living]]"
                               },
-                              "variableName": "MDF_PerformanceDelay",
-                              "value": 0.2
+                              "value": 0.2,
+                              "variableName": "MDF_PerformanceDelay"
                             }
                           ]
                         }
@@ -1410,8 +1410,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All(with Unselectable)}}.[[living]]"
                               },
-                              "variableName": "MDF_PerformanceDelay",
-                              "value": 0.5
+                              "value": 0.5,
+                              "variableName": "MDF_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -1421,8 +1421,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Player Team All(with Unselectable)}}.[[living]]"
                               },
-                              "variableName": "MDF_PerformanceDelay",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "MDF_PerformanceDelay"
                             }
                           ]
                         }
@@ -1481,9 +1481,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PerformanceDelay",
+                          "scope": "ContextModifier",
                           "value": 0.3,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PerformanceDelay"
                         }
                       ],
                       "failed": [
@@ -1493,9 +1493,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PerformanceDelay",
+                          "scope": "ContextModifier",
                           "value": 0.2,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PerformanceDelay"
                         }
                       ]
                     }
@@ -1514,9 +1514,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PerformanceDelay",
+                          "scope": "ContextModifier",
                           "value": 0.5,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PerformanceDelay"
                         }
                       ],
                       "failed": [
@@ -1526,9 +1526,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PerformanceDelay",
+                          "scope": "ContextModifier",
                           "value": 0.3,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PerformanceDelay"
                         }
                       ]
                     }
@@ -2226,7 +2226,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
                         "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
                         "displayLines": "TDF_TotalStanceDamageOnTarget",
@@ -2234,7 +2233,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TDF_TotalStanceDamageOnTarget"
                         ]
-                      }
+                      },
+                      "variableName": "TDF_TotalStanceDamageOnTarget"
                     }
                   ]
                 },
@@ -2347,7 +2347,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
                         "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
                         "displayLines": "TDF_TotalStanceDamageOnTarget",
@@ -2355,7 +2354,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TDF_TotalStanceDamageOnTarget"
                         ]
-                      }
+                      },
+                      "variableName": "TDF_TotalStanceDamageOnTarget"
                     }
                   ]
                 },
@@ -2474,7 +2474,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
                         "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
                         "displayLines": "TDF_TotalStanceDamageOnTarget",
@@ -2482,13 +2481,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "TDF_TotalStanceDamageOnTarget"
                         ]
-                      }
+                      },
+                      "variableName": "TDF_TotalStanceDamageOnTarget"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakDamagePercentage",
                   "value": {
                     "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
                     "displayLines": "(DamagePercentage * (StanceValue / 30))",
@@ -2499,7 +2498,8 @@ const compositeAbilityObject = {
                       "DamagePercentage",
                       "StanceValue"
                     ]
-                  }
+                  },
+                  "variableName": "BreakDamagePercentage"
                 },
                 {
                   "name": "IF",
@@ -2587,7 +2587,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TDF_TotalStanceDamageOnTarget",
                       "value": {
                         "operator": "Variables[0] (TDF_TotalStanceDamageOnTarget) || RETURN",
                         "displayLines": "TDF_TotalStanceDamageOnTarget",
@@ -2595,13 +2594,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "TDF_TotalStanceDamageOnTarget"
                         ]
-                      }
+                      },
+                      "variableName": "TDF_TotalStanceDamageOnTarget"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakDamagePercentage",
                   "value": {
                     "operator": "Variables[0] (DamagePercentage) || Variables[1] (StanceValue) || Constants[0] (30) || DIV || MUL || RETURN",
                     "displayLines": "(DamagePercentage * (StanceValue / 30))",
@@ -2612,7 +2611,8 @@ const compositeAbilityObject = {
                       "DamagePercentage",
                       "StanceValue"
                     ]
-                  }
+                  },
+                  "variableName": "BreakDamagePercentage"
                 },
                 {
                   "name": "IF",
@@ -2853,7 +2853,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "_FinalAddValue",
                       "value": {
                         "operator": "Variables[0] (AddValue) || RETURN",
                         "displayLines": "AddValue",
@@ -2861,7 +2860,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "AddValue"
                         ]
-                      }
+                      },
+                      "variableName": "_FinalAddValue"
                     },
                     {
                       "name": "IF",
@@ -2875,9 +2875,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_FinalMergeMDF",
+                          "scope": "ContextTaskTemplate",
                           "value": 0,
-                          "scope": "ContextTaskTemplate"
+                          "variableName": "_FinalMergeMDF"
                         },
                         {
                           "name": "IF",
@@ -2970,9 +2970,9 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "_FinalMergeMDF",
+                                      "scope": "ContextTaskTemplate",
                                       "value": 1,
-                                      "scope": "ContextTaskTemplate"
+                                      "variableName": "_FinalMergeMDF"
                                     }
                                   ]
                                 }

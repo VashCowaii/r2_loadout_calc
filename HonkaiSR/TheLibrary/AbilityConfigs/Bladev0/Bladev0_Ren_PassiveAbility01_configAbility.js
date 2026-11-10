@@ -33,18 +33,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MwRen_isAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "MwRen_isAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MwRen_AttackStart",
-      "value": 0
+      "value": 0,
+      "variableName": "MwRen_AttackStart"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MwRen_isHeal",
-      "value": 0
+      "value": 0,
+      "variableName": "MwRen_isHeal"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -78,15 +78,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MWRen_Qi_MaxLayer",
-          "value": 4
+          "value": 4,
+          "variableName": "MWRen_Qi_MaxLayer"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MWRen_Qi_MaxLayer",
-          "value": 5
+          "value": 5,
+          "variableName": "MWRen_Qi_MaxLayer"
         }
       ]
     },
@@ -137,8 +137,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_isOverHalf",
-          "value": 1
+          "value": 1,
+          "variableName": "MwRen_isOverHalf"
         }
       ]
     }
@@ -156,8 +156,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isHeal"
             }
           ]
         },
@@ -176,15 +176,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isCharmAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_isCharmAttack"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_isAttack"
                 }
               ]
             }
@@ -195,13 +195,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isCharmAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isCharmAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isAttack"
             }
           ]
         },
@@ -210,13 +210,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_AttackStart",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_AttackStart"
             }
           ]
         },
@@ -234,8 +234,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isHeal"
             }
           ]
         },
@@ -263,20 +263,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_isAttack"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_AttackStart",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_AttackStart"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_isAttack"
                 }
               ],
               "failed": [
@@ -305,8 +305,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_isAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MwRen_isAttack"
                         }
                       ]
                     }
@@ -339,8 +339,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isHeal",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_isHeal"
                 }
               ]
             }
@@ -351,8 +351,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isHeal"
             }
           ]
         },
@@ -398,7 +398,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CasterLostHP",
                       "value": {
                         "operator": "Variables[0] (CasterLostHP2) || INVERT || Variables[1] (CasterLostHP) || ADD || RETURN",
                         "displayLines": "(-CasterLostHP2 + CasterLostHP)",
@@ -407,7 +406,8 @@ const configAbility = {
                           "CasterLostHP2",
                           "CasterLostHP"
                         ]
-                      }
+                      },
+                      "variableName": "CasterLostHP"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -424,8 +424,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_AttackStart",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MwRen_AttackStart"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -576,8 +576,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isOverHalf",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MwRen_isOverHalf"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -608,8 +608,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isOverHalf",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_isOverHalf"
                     }
                   ]
                 }
@@ -631,8 +631,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_AttackStart",
-              "value": 1
+              "value": 1,
+              "variableName": "MwRen_AttackStart"
             }
           ]
         },
@@ -641,13 +641,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_AttackStart",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_AttackStart"
             }
           ]
         },
@@ -656,8 +656,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isAttack"
             },
             {
               "name": "IF",
@@ -961,7 +961,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterLostHPPercentage",
                   "value": {
                     "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
                     "displayLines": "(CasterLostHP / CasterMaxHP)",
@@ -970,7 +969,8 @@ const configAbility = {
                       "CasterLostHP",
                       "CasterMaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterLostHPPercentage"
                 }
               ]
             },
@@ -993,7 +993,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterFinalLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                     "displayLines": "(CasterMaxHP * 0.9)",
@@ -1002,13 +1001,13 @@ const configAbility = {
                       "CasterMaxHP",
                       0.9
                     ]
-                  }
+                  },
+                  "variableName": "CasterFinalLostHP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterFinalLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterLostHP) || RETURN",
                     "displayLines": "CasterLostHP",
@@ -1016,7 +1015,8 @@ const configAbility = {
                     "variables": [
                       "CasterLostHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterFinalLostHP"
                 }
               ]
             },

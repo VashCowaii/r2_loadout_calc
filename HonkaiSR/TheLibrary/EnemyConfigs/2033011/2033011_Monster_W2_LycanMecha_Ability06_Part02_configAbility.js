@@ -67,7 +67,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Wolf_AttackCount",
           "value": {
             "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
             "displayLines": "Wolf_MaxAttackCount",
@@ -75,7 +74,8 @@ const configAbility = {
             "variables": [
               "Wolf_MaxAttackCount"
             ]
-          }
+          },
+          "variableName": "Wolf_AttackCount"
         },
         {
           "name": "Define Custom Variable with Copy",
@@ -120,7 +120,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "Wolf_MaxAttackCount",
               "value": {
                 "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
                 "displayLines": "Wolf_MaxAttackCount",
@@ -128,7 +127,8 @@ const configAbility = {
                 "variables": [
                   "Wolf_MaxAttackCount"
                 ]
-              }
+              },
+              "variableName": "Wolf_MaxAttackCount"
             },
             {
               "name": "Define Custom Variable",
@@ -136,7 +136,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "Wolf_AttackCount",
               "value": {
                 "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
                 "displayLines": "Wolf_AttackCount",
@@ -144,7 +143,8 @@ const configAbility = {
                 "variables": [
                   "Wolf_AttackCount"
                 ]
-              }
+              },
+              "variableName": "Wolf_AttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -189,8 +189,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Wolf_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Wolf_AttackCount"
         },
         {
           "name": "Find New Target",
@@ -558,7 +558,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "Wolf_MaxAttackCount",
               "value": {
                 "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
                 "displayLines": "Wolf_MaxAttackCount",
@@ -566,7 +565,8 @@ const configAbility = {
                 "variables": [
                   "Wolf_MaxAttackCount"
                 ]
-              }
+              },
+              "variableName": "Wolf_MaxAttackCount"
             },
             {
               "name": "Update Displayed Energy Bar",

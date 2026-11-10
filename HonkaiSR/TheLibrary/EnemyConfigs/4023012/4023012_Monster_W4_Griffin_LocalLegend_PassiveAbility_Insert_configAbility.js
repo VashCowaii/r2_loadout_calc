@@ -225,8 +225,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck02",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck02"
     },
     {
       "name": "Change Entity Turn-State",

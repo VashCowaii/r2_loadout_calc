@@ -13,7 +13,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank01_LoopTimeAdd",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -21,14 +20,15 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "_Rank01_LoopTimeAdd"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank01_LoopTimeAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "_Rank01_LoopTimeAdd"
         }
       ]
     },
@@ -65,8 +65,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_has_poison_layer_greaterequal_5",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_has_poison_layer_greaterequal_5"
                     },
                     {
                       "name": "Reconstruct Modifier",
@@ -98,8 +98,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_has_poison_layer_greaterequal_5",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_has_poison_layer_greaterequal_5"
                             }
                           ]
                         }

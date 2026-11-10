@@ -812,7 +812,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Modifier_Arlan_00_P03_Ratio",
                   "value": {
                     "operator": "Variables[0] (0.25) || RETURN",
                     "displayLines": "0.25",
@@ -820,7 +819,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.25
                     ]
-                  }
+                  },
+                  "variableName": "Modifier_Arlan_00_P03_Ratio"
                 }
               ]
             },
@@ -879,8 +879,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Arlan_ReviveCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Arlan_ReviveCount"
                         },
                         {
                           "name": "Inject Ability Use",

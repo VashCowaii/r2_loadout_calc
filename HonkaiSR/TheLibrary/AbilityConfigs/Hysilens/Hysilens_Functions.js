@@ -15,28 +15,28 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Tear_Mask",
-          "value": 0
+          "value": 0,
+          "variableName": "DOT_Tear_Mask"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Electric_Mask",
-          "value": 0
+          "value": 0,
+          "variableName": "DOT_Electric_Mask"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Burn_Mask",
-          "value": 0
+          "value": 0,
+          "variableName": "DOT_Burn_Mask"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Poison_Mask",
-          "value": 0
+          "value": 0,
+          "variableName": "DOT_Poison_Mask"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Mask",
-          "value": 0
+          "value": 0,
+          "variableName": "DOT_Mask"
         },
         {
           "name": "IF",
@@ -52,15 +52,15 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Tear_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Tear_Mask"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Tear_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Tear_Mask"
             }
           ]
         },
@@ -78,15 +78,15 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Electric_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Electric_Mask"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Electric_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Electric_Mask"
             }
           ]
         },
@@ -104,15 +104,15 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Burn_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Burn_Mask"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Burn_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Burn_Mask"
             }
           ]
         },
@@ -130,21 +130,20 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Poison_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Poison_Mask"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Poison_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Poison_Mask"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Mask",
           "value": {
             "operator": "Variables[0] (DOT_Tear_Mask) || Variables[1] (DOT_Electric_Mask) || ADD || Variables[2] (DOT_Burn_Mask) || ADD || Variables[3] (DOT_Poison_Mask) || ADD || RETURN",
             "displayLines": "(((DOT_Tear_Mask + DOT_Electric_Mask) + DOT_Burn_Mask) + DOT_Poison_Mask)",
@@ -155,7 +154,8 @@ const configAbility = {
               "DOT_Burn_Mask",
               "DOT_Poison_Mask"
             ]
-          }
+          },
+          "variableName": "DOT_Mask"
         },
         {
           "name": "IF",
@@ -168,23 +168,23 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Tear_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Tear_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Electric_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Electric_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Burn_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Burn_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Poison_Mask",
-              "value": 1
+              "value": 1,
+              "variableName": "DOT_Poison_Mask"
             }
           ]
         }

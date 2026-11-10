@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
     },
     "Deleted bullshit",
     {

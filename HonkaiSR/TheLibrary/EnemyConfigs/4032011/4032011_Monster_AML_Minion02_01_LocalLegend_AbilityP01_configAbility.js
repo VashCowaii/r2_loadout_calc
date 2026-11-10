@@ -122,15 +122,15 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsNegative",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsNegative"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsNegative",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsNegative"
                 },
                 {
                   "name": "Add Events/Bonuses",

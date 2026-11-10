@@ -103,8 +103,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_DelayReachPromotionRank01_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_DelayReachPromotionRank01_Flag"
         },
         {
           "name": "Dispel Debuffs",
@@ -124,7 +124,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_CurrentPoint_Temp",
           "value": {
             "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
             "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
@@ -133,7 +132,8 @@ const configAbility = {
               "DV_CurrentPoint",
               "DV_AddPoint"
             ]
-          }
+          },
+          "variableName": "DV_CurrentPoint_Temp"
         },
         {
           "name": "IF",
@@ -153,7 +153,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CurrentPoint",
               "value": {
                 "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
                 "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
@@ -162,13 +161,13 @@ const configAbility = {
                   "DV_CurrentPoint",
                   "DV_AddPoint"
                 ]
-              }
+              },
+              "variableName": "DV_CurrentPoint"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CurrentPoint",
               "value": {
                 "operator": "Variables[0] (8) || RETURN",
                 "displayLines": "8",
@@ -176,7 +175,8 @@ const configAbility = {
                 "variables": [
                   8
                 ]
-              }
+              },
+              "variableName": "DV_CurrentPoint"
             }
           ]
         }
@@ -200,7 +200,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CurrentPoint_Temp_SelfHandle",
               "value": {
                 "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (DV_AddPoint) || ADD || RETURN",
                 "displayLines": "(DV_CurrentPoint + DV_AddPoint)",
@@ -209,7 +208,8 @@ const configAbility = {
                   "DV_CurrentPoint",
                   "DV_AddPoint"
                 ]
-              }
+              },
+              "variableName": "DV_CurrentPoint_Temp_SelfHandle"
             },
             {
               "name": "IF",
@@ -233,25 +233,25 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_DelayReachPromotionRank01_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_DelayReachPromotionRank01_Flag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CurrentPoint_Temp_SelfHandle",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_CurrentPoint_Temp_SelfHandle"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_DelayReachPromotionRank01_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_DelayReachPromotionRank01_Flag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CurrentPoint_Temp_SelfHandle",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_CurrentPoint_Temp_SelfHandle"
                 }
               ]
             }

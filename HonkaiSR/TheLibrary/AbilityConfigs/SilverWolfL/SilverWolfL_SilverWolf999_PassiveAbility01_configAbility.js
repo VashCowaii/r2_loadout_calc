@@ -24,8 +24,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TriggerItemBaseChance",
-      "value": 1
+      "value": 1,
+      "variableName": "TriggerItemBaseChance"
     },
     {
       "name": "Add Events/Bonuses",
@@ -128,7 +128,7 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_addCritChanceScore",
+              "scope": "ContextTaskTemplate",
               "value": {
                 "operator": "Variables[0] (CEIL) || Constants[0] (1) || Variables[1] (_critChance) || SUB || Variables[2] (0.0039999997) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((1 - _critChance) / 0.0039999997))",
@@ -141,11 +141,10 @@ const configAbility = {
                   0.0039999997
                 ]
               },
-              "scope": "ContextTaskTemplate"
+              "variableName": "_addCritChanceScore"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalChanceScore",
               "value": {
                 "operator": "Variables[0] (CLAMP) || Variables[1] (MDF_CriticalChanceScore) || Variables[2] (_addCritChanceScore) || ADD || Constants[0] (0) || Variables[3] (CurScore) || PARAM_3 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CLAMP</span>((MDF_CriticalChanceScore + _addCritChanceScore), 0, CurScore)",
@@ -158,11 +157,11 @@ const configAbility = {
                   "_addCritChanceScore",
                   "CurScore"
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalChanceScore"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalChangeAdd",
               "value": {
                 "operator": "Variables[0] (0.0039999997) || Variables[1] (MDF_CriticalChanceScore) || MUL || RETURN",
                 "displayLines": "(0.0039999997 * MDF_CriticalChanceScore)",
@@ -171,11 +170,11 @@ const configAbility = {
                   0.0039999997,
                   "MDF_CriticalChanceScore"
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalChangeAdd"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalDamageAdd",
               "value": {
                 "operator": "Variables[0] (0.007999999) || Variables[1] (CurScore) || Variables[2] (MDF_CriticalChanceScore) || SUB || MUL || RETURN",
                 "displayLines": "(0.007999999 * (CurScore - MDF_CriticalChanceScore))",
@@ -185,7 +184,8 @@ const configAbility = {
                   "CurScore",
                   "MDF_CriticalChanceScore"
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalDamageAdd"
             },
             {
               "name": "Stack Target Stat Value",
@@ -317,7 +317,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurScore",
                   "value": {
                     "operator": "Variables[0] (MDF_CurSpecialSP) || Variables[1] (MDF_CurExtraSpecialSP) || ADD || RETURN",
                     "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)",
@@ -326,7 +325,8 @@ const configAbility = {
                       "MDF_CurSpecialSP",
                       "MDF_CurExtraSpecialSP"
                     ]
-                  }
+                  },
+                  "variableName": "CurScore"
                 }
               ]
             }
@@ -350,7 +350,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurScore",
                   "value": {
                     "operator": "Variables[0] (MDF_CurSpecialSP) || Variables[1] (MDF_CurExtraSpecialSP) || ADD || RETURN",
                     "displayLines": "(MDF_CurSpecialSP + MDF_CurExtraSpecialSP)",
@@ -359,7 +358,8 @@ const configAbility = {
                       "MDF_CurSpecialSP",
                       "MDF_CurExtraSpecialSP"
                     ]
-                  }
+                  },
+                  "variableName": "CurScore"
                 }
               ]
             }

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "WeakProtect",
-      "value": 0
+      "value": 0,
+      "variableName": "WeakProtect"
     },
     {
       "name": "IF",
@@ -24,8 +24,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "WeakProtect",
-          "value": 1
+          "value": 1,
+          "variableName": "WeakProtect"
         }
       ]
     },
@@ -558,7 +558,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonTimes_P1",
       "value": {
         "operator": "Variables[0] (SummonTimes_P1) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(SummonTimes_P1 + 1)",
@@ -568,7 +567,8 @@ const configAbility = {
         "variables": [
           "SummonTimes_P1"
         ]
-      }
+      },
+      "variableName": "SummonTimes_P1"
     },
     {
       "name": "Remove Events/Bonuses",

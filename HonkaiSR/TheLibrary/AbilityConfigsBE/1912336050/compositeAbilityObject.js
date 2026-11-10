@@ -148,8 +148,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_FirstHit",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_FirstHit"
         },
         {
           "name": "Trigger Multiple Functions",
@@ -197,8 +197,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_FirstHit",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_FirstHit"
         },
         {
           "name": "Trigger Multiple Functions",
@@ -2643,7 +2643,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ChargeShieldRatioExtraRatio",
                   "value": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0029_ADF_1) || RETURN",
                     "displayLines": "ChallengePeakBattle_Plugins_0029_ADF_1",
@@ -2651,7 +2650,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "ChallengePeakBattle_Plugins_0029_ADF_1"
                     ]
-                  }
+                  },
+                  "variableName": "ChargeShieldRatioExtraRatio"
                 }
               ]
             }
@@ -3233,7 +3233,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ServantNumLast",
                       "value": {
                         "operator": "Variables[0] (ServantNumCurrent) || RETURN",
                         "displayLines": "ServantNumCurrent",
@@ -3241,7 +3240,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "ServantNumCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "ServantNumLast"
                     }
                   ]
                 }
@@ -3526,8 +3526,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Triggered",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Triggered"
                     }
                   ]
                 }
@@ -4061,7 +4061,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDmgUp",
                   "value": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0021_ADF_1) || Variables[1] (ChallengePeakBattle_Plugins_0021_ADF_2) || Variables[2] (MDF_KillCount) || MUL || ADD || RETURN",
                     "displayLines": "(ChallengePeakBattle_Plugins_0021_ADF_1 + (ChallengePeakBattle_Plugins_0021_ADF_2 * MDF_KillCount))",
@@ -4071,7 +4070,8 @@ const compositeAbilityObject = {
                       "ChallengePeakBattle_Plugins_0021_ADF_2",
                       "MDF_KillCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalDmgUp"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -5179,8 +5179,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertMark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InsertMark"
                     }
                   ]
                 }
@@ -5191,8 +5191,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertMark",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InsertMark"
                 }
               ]
             },
@@ -5284,8 +5284,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertMark",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InsertMark"
                 }
               ]
             }
@@ -8039,7 +8039,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "BattleEvent_P1_ADF_ExtraRadio",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (ChallengePeakBattle_Plugins_0004_ADF_2) || RETURN",
                     "displayLines": "ChallengePeakBattle_Plugins_0004_ADF_2",
@@ -8048,7 +8048,7 @@ const compositeAbilityObject = {
                       "ChallengePeakBattle_Plugins_0004_ADF_2"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "BattleEvent_P1_ADF_ExtraRadio"
                 }
               ]
             }
@@ -8569,8 +8569,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillEnhanced",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SkillEnhanced"
                     }
                   ]
                 }
@@ -8606,8 +8606,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InUltra",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InUltra"
                     }
                   ]
                 },
@@ -8649,8 +8649,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillEnhanced",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillEnhanced"
                     }
                   ]
                 }
@@ -8676,8 +8676,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InUltra",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_InUltra"
                     }
                   ]
                 },
@@ -10756,7 +10756,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChallengePeakBattle_0025_ADF_3",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (ChallengePeakBattle_0025_ADF_1) || Variables[0] (MAX) || Variables[2] (LightTeamNumCurrent) || Constants[0] (4) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || Variables[3] (ChallengePeakBattle_0025_ADF_2) || MUL || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((ChallengePeakBattle_0025_ADF_1 - (&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((LightTeamNumCurrent - 4), 0) * ChallengePeakBattle_0025_ADF_2)), 0)",
@@ -10770,7 +10769,8 @@ const compositeAbilityObject = {
                       "LightTeamNumCurrent",
                       "ChallengePeakBattle_0025_ADF_2"
                     ]
-                  }
+                  },
+                  "variableName": "ChallengePeakBattle_0025_ADF_3"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -11064,7 +11064,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "LightTeamNumLast",
                       "value": {
                         "operator": "Variables[0] (LightTeamNumCurrent) || RETURN",
                         "displayLines": "LightTeamNumCurrent",
@@ -11072,7 +11071,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "LightTeamNumCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "LightTeamNumLast"
                     }
                   ]
                 }
@@ -11117,7 +11117,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChallengePeakBattle_0025_ADF_3",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (ChallengePeakBattle_0025_ADF_1) || Variables[0] (MAX) || Variables[2] (LightTeamNumCurrent) || Constants[0] (4) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || Variables[3] (ChallengePeakBattle_0025_ADF_2) || MUL || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((ChallengePeakBattle_0025_ADF_1 - (&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((LightTeamNumCurrent - 4), 0) * ChallengePeakBattle_0025_ADF_2)), 0)",
@@ -11131,7 +11130,8 @@ const compositeAbilityObject = {
                       "LightTeamNumCurrent",
                       "ChallengePeakBattle_0025_ADF_2"
                     ]
-                  }
+                  },
+                  "variableName": "ChallengePeakBattle_0025_ADF_3"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -11425,7 +11425,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "LightTeamNumLast",
                       "value": {
                         "operator": "Variables[0] (LightTeamNumCurrent) || RETURN",
                         "displayLines": "LightTeamNumCurrent",
@@ -11433,7 +11432,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "LightTeamNumCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "LightTeamNumLast"
                     }
                   ]
                 }
@@ -12658,8 +12658,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InsertFlag"
                     }
                   ]
                 }
@@ -12742,8 +12742,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InsertFlag"
                 }
               ]
             },
@@ -12943,8 +12943,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_InsertFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_InsertFlag"
                         }
                       ]
                     }
@@ -13223,8 +13223,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InsertFlag"
                     }
                   ]
                 }
@@ -13307,8 +13307,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InsertFlag"
                 }
               ]
             },
@@ -13508,8 +13508,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_InsertFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_InsertFlag"
                         }
                       ]
                     }
@@ -18599,15 +18599,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff1_Odds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Debuff1_Odds"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff1_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff1_Odds"
                     }
                   ]
                 },
@@ -18624,15 +18624,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff2_Odds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Debuff2_Odds"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff2_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff2_Odds"
                     }
                   ]
                 },
@@ -18649,15 +18649,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff3_Odds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Debuff3_Odds"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff3_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff3_Odds"
                     }
                   ]
                 },
@@ -18674,15 +18674,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff4_Odds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Debuff4_Odds"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff4_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff4_Odds"
                     }
                   ]
                 },
@@ -18699,15 +18699,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff5_Odds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Debuff5_Odds"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff5_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff5_Odds"
                     }
                   ]
                 },
@@ -18761,28 +18761,28 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff1_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff1_Odds"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff2_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff2_Odds"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff3_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff3_Odds"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff4_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff4_Odds"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Debuff5_Odds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Debuff5_Odds"
                     }
                   ]
                 },
@@ -23225,7 +23225,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LoseHPPercentage",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (LoseHPPercentage) || SUB || RETURN",
                     "displayLines": "(1 - LoseHPPercentage)",
@@ -23235,7 +23234,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "LoseHPPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "LoseHPPercentage"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -23243,7 +23243,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LoseHPPercentage",
                   "value": {
                     "operator": "Variables[0] (LoseHPPercentage) || Constants[0] (100) || MUL || RETURN",
                     "displayLines": "(LoseHPPercentage * 100)",
@@ -23253,7 +23252,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "LoseHPPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "LoseHPPercentage"
                 }
               ]
             }

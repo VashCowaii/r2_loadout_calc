@@ -33,7 +33,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageUpCount",
           "value": {
             "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(DamageUpCount + 1)",
@@ -43,7 +42,8 @@ const configAbility = {
             "variables": [
               "DamageUpCount"
             ]
-          }
+          },
+          "variableName": "DamageUpCount"
         }
       ],
       "failed": [
@@ -76,7 +76,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SpeedAddCount",
               "value": {
                 "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(SpeedAddCount + 1)",
@@ -86,7 +85,8 @@ const configAbility = {
                 "variables": [
                   "SpeedAddCount"
                 ]
-              }
+              },
+              "variableName": "SpeedAddCount"
             }
           ],
           "failed": [
@@ -128,7 +128,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageUpCount",
               "value": {
                 "operator": "Variables[0] (DamageUpCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(DamageUpCount + 1)",
@@ -138,11 +137,11 @@ const configAbility = {
                 "variables": [
                   "DamageUpCount"
                 ]
-              }
+              },
+              "variableName": "DamageUpCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SpeedAddCount",
               "value": {
                 "operator": "Variables[0] (SpeedAddCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(SpeedAddCount + 1)",
@@ -152,7 +151,8 @@ const configAbility = {
                 "variables": [
                   "SpeedAddCount"
                 ]
-              }
+              },
+              "variableName": "SpeedAddCount"
             }
           ]
         }

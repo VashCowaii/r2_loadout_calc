@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Sword_FirstFlag",
-      "value": 1
+      "value": 1,
+      "variableName": "Sword_FirstFlag"
     },
     {
       "name": "Random Event",

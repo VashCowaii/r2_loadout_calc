@@ -80,7 +80,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Huohuo_Rank02_ReviveCount",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -88,7 +87,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Huohuo_Rank02_ReviveCount"
         },
         {
           "name": "Add Events/Bonuses",

@@ -267,7 +267,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill07_HealHP",
           "value": {
             "operator": "Variables[0] (Skill07_HealHP) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Skill07_HealHP + 1)",
@@ -277,7 +276,8 @@ const configAbility = {
             "variables": [
               "Skill07_HealHP"
             ]
-          }
+          },
+          "variableName": "Skill07_HealHP"
         },
         {
           "name": "Remove Events/Bonuses",

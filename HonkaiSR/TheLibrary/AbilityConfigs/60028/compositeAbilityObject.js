@@ -87,7 +87,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageUpRatio",
                   "value": {
                     "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
                     "displayLines": "{[Skill03[0]]}",
@@ -95,7 +94,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill03[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageUpRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -501,8 +501,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Trigger",
-              "value": 1
+              "value": 1,
+              "variableName": "_Trigger"
             }
           ],
           "failed": [
@@ -562,8 +562,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Tutorial",
-              "value": 1
+              "value": 1,
+              "variableName": "Tutorial"
             }
           ]
         },

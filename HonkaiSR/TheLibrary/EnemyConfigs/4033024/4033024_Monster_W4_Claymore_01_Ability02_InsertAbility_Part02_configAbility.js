@@ -41,9 +41,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "AIFlag"
     },
     {
       "name": "Add Events/Bonuses",

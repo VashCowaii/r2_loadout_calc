@@ -295,8 +295,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceHead_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceHead_Flag"
                     }
                   ],
                   "failed": [
@@ -315,8 +315,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceLimb_Flag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "EnhanceLimb_Flag"
                         }
                       ],
                       "failed": [
@@ -335,8 +335,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceTail_Flag",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "EnhanceTail_Flag"
                             }
                           ]
                         }
@@ -364,8 +364,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LostConnect",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LostConnect"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -410,8 +410,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AlreadyConnect",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AlreadyConnect"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -851,8 +851,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isReset",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_isReset"
                     }
                   ]
                 }
@@ -946,8 +946,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WaveStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_WaveStart"
                     }
                   ]
                 },
@@ -980,8 +980,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DieCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DieCount"
                 }
               ]
             },
@@ -1039,8 +1039,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "_DieCount"
                     }
                   ]
                 },
@@ -1080,8 +1080,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "_DieCount"
                     }
                   ]
                 },
@@ -1121,8 +1121,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_DieCount"
                     }
                   ]
                 }
@@ -1720,8 +1720,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self}}"
           },
-          "variableName": "_TurnCount",
-          "value": 2
+          "value": 2,
+          "variableName": "_TurnCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2304,8 +2304,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self}}"
           },
-          "variableName": "_TurnCount",
-          "value": 4
+          "value": 4,
+          "variableName": "_TurnCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2394,8 +2394,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self}}"
           },
-          "variableName": "_TurnCount",
-          "value": 0
+          "value": 0,
+          "variableName": "_TurnCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2559,8 +2559,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08DamagePercentage",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill08DamagePercentage"
         },
         {
           "name": "IF",
@@ -2573,7 +2573,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill08DamagePercentage",
               "value": {
                 "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
                 "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
@@ -2582,7 +2581,8 @@ const compositeAbilityObject = {
                   "Skill08DamagePercentage",
                   "{[Skill08[2]]}"
                 ]
-              }
+              },
+              "variableName": "Skill08DamagePercentage"
             }
           ]
         },
@@ -2597,7 +2597,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill08DamagePercentage",
               "value": {
                 "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
                 "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
@@ -2606,7 +2605,8 @@ const compositeAbilityObject = {
                   "Skill08DamagePercentage",
                   "{[Skill08[2]]}"
                 ]
-              }
+              },
+              "variableName": "Skill08DamagePercentage"
             }
           ]
         },
@@ -2621,7 +2621,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill08DamagePercentage",
               "value": {
                 "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[1]]}) || ADD || Variables[2] ({[Skill08[0]]}) || ADD || RETURN",
                 "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})",
@@ -2631,13 +2630,13 @@ const compositeAbilityObject = {
                   "{[Skill08[1]]}",
                   "{[Skill08[0]]}"
                 ]
-              }
+              },
+              "variableName": "Skill08DamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill08DamagePercentage",
               "value": {
                 "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[0]]}) || ADD || RETURN",
                 "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})",
@@ -2646,7 +2645,8 @@ const compositeAbilityObject = {
                   "Skill08DamagePercentage",
                   "{[Skill08[0]]}"
                 ]
-              }
+              },
+              "variableName": "Skill08DamagePercentage"
             }
           ]
         },
@@ -2961,18 +2961,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceHead_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "EnhanceHead_Flag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceLimb_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "EnhanceLimb_Flag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceTail_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "EnhanceTail_Flag"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3327,18 +3327,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceHead_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "EnhanceHead_Flag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceLimb_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "EnhanceLimb_Flag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhanceTail_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "EnhanceTail_Flag"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4562,7 +4562,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "HeadDelay",
               "value": {
                 "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
                 "displayLines": "(HeadDelay - 9.313226e-10)",
@@ -4572,7 +4571,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "HeadDelay"
                 ]
-              }
+              },
+              "variableName": "HeadDelay"
             }
           ]
         },
@@ -4606,7 +4606,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "LimbDelay",
               "value": {
                 "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
                 "displayLines": "(LimbDelay - 9.313226e-10)",
@@ -4616,7 +4615,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "LimbDelay"
                 ]
-              }
+              },
+              "variableName": "LimbDelay"
             }
           ]
         },
@@ -4650,7 +4650,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TailDelay",
               "value": {
                 "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
                 "displayLines": "(TailDelay - 9.313226e-10)",
@@ -4660,7 +4659,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "TailDelay"
                 ]
-              }
+              },
+              "variableName": "TailDelay"
             }
           ]
         },
@@ -4707,8 +4707,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -4770,8 +4770,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -4822,8 +4822,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -4856,8 +4856,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -4950,8 +4950,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -5002,8 +5002,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -5036,8 +5036,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -5090,8 +5090,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -5153,8 +5153,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -5205,8 +5205,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5239,13 +5239,13 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5338,8 +5338,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -5390,8 +5390,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5424,8 +5424,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5462,8 +5462,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -5525,8 +5525,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -5577,8 +5577,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5611,8 +5611,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5705,8 +5705,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -5757,8 +5757,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5791,8 +5791,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -5849,8 +5849,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -5912,8 +5912,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -5964,8 +5964,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -5998,8 +5998,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -6092,8 +6092,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -6144,8 +6144,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -6178,8 +6178,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -6232,8 +6232,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -6295,8 +6295,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -6347,8 +6347,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6381,8 +6381,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6475,8 +6475,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -6527,8 +6527,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6561,8 +6561,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6599,8 +6599,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -6662,8 +6662,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -6714,8 +6714,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6748,8 +6748,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6842,8 +6842,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "EnhanceFlag"
                             },
                             {
                               "name": "IF",
@@ -6894,8 +6894,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",
@@ -6928,8 +6928,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEventPartFlag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "BattleEventPartFlag"
                             },
                             {
                               "name": "Add Battle Event",

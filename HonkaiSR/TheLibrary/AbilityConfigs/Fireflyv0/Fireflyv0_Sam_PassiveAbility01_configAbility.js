@@ -703,7 +703,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_PassiveResRatio",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                 "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -715,7 +714,8 @@ const configAbility = {
                   0.2,
                   "_RedModeResRatio"
                 ]
-              }
+              },
+              "variableName": "_PassiveResRatio"
             },
             {
               "name": "IF",
@@ -774,7 +774,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BreakDamageAddedRatio",
                   "value": {
                     "operator": "Variables[0] (3.6) || RETURN",
                     "displayLines": "3.6",
@@ -782,13 +781,13 @@ const configAbility = {
                     "variables": [
                       3.6
                     ]
-                  }
+                  },
+                  "variableName": "_BreakDamageAddedRatio"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill21_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                 "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
@@ -798,11 +797,11 @@ const configAbility = {
                   0.2,
                   "_BreakDamageAddedRatio"
                 ]
-              }
+              },
+              "variableName": "Skill21_DamagePercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill21_DamagePercentageAD",
               "value": {
                 "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                 "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
@@ -812,7 +811,8 @@ const configAbility = {
                   0.1,
                   "_BreakDamageAddedRatio"
                 ]
-              }
+              },
+              "variableName": "Skill21_DamagePercentageAD"
             }
           ]
         },
@@ -866,7 +866,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PassiveResRatio",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                     "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -878,7 +877,8 @@ const configAbility = {
                       0.2,
                       "_RedModeResRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_PassiveResRatio"
                 },
                 {
                   "name": "IF",
@@ -928,7 +928,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HPChange",
               "value": {
                 "operator": "Variables[0] (_HPChange) || INVERT || RETURN",
                 "displayLines": "-_HPChange",
@@ -936,7 +935,8 @@ const configAbility = {
                 "variables": [
                   "_HPChange"
                 ]
-              }
+              },
+              "variableName": "_HPChange"
             }
           ]
         },
@@ -1077,7 +1077,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BreakDamageAddedRatio",
                       "value": {
                         "operator": "Variables[0] (3.6) || RETURN",
                         "displayLines": "3.6",
@@ -1085,13 +1084,13 @@ const configAbility = {
                         "variables": [
                           3.6
                         ]
-                      }
+                      },
+                      "variableName": "_BreakDamageAddedRatio"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill21_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                     "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
@@ -1101,11 +1100,11 @@ const configAbility = {
                       0.2,
                       "_BreakDamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "Skill21_DamagePercentage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill21_DamagePercentageAD",
                   "value": {
                     "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                     "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
@@ -1115,7 +1114,8 @@ const configAbility = {
                       0.1,
                       "_BreakDamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "Skill21_DamagePercentageAD"
                 }
               ]
             }

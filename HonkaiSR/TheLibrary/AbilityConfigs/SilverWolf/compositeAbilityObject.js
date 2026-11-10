@@ -100,7 +100,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": {
                     "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
                     "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
@@ -109,11 +108,11 @@ const compositeAbilityObject = {
                       "_StatusProbability",
                       "_StatusProbabilityConvert"
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
@@ -124,7 +123,8 @@ const compositeAbilityObject = {
                       0.1,
                       0.1
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "IF",
@@ -138,8 +138,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -170,7 +170,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                           "value": {
                             "operator": "Variables[0] (0.5) || RETURN",
                             "displayLines": "0.5",
@@ -178,7 +177,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.5
                             ]
-                          }
+                          },
+                          "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       ]
                     },
@@ -664,7 +664,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -672,7 +671,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -709,7 +709,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -717,7 +716,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -754,7 +754,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -762,7 +761,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -799,7 +799,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -807,7 +806,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -844,7 +844,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -852,7 +851,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -889,7 +889,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -897,7 +896,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -934,7 +934,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -942,7 +941,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         }
@@ -995,7 +995,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1003,7 +1002,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1040,7 +1040,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1048,7 +1047,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1085,7 +1085,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1093,7 +1092,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1130,7 +1130,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1138,7 +1137,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1175,7 +1175,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1183,7 +1182,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1220,7 +1220,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1228,7 +1227,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         },
@@ -1265,7 +1265,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_WeakType",
                               "value": {
                                 "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                                 "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1273,7 +1272,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Advanced_Silwolf_BPAbility_WeakType_01"
                                 ]
-                              }
+                              },
+                              "variableName": "_WeakType"
                             }
                           ]
                         }
@@ -1384,7 +1384,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -1392,7 +1391,8 @@ const compositeAbilityObject = {
                     "variables": [
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
                 {
                   "name": "Trigger Ability",
@@ -1448,7 +1448,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddedRatio",
                   "value": {
                     "operator": "Variables[0] (_DebuffCount) || Variables[1] (0.2) || MUL || RETURN",
                     "displayLines": "(_DebuffCount * 0.2)",
@@ -1457,7 +1456,8 @@ const compositeAbilityObject = {
                       "_DebuffCount",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddedRatio"
                 },
                 {
                   "name": "IF",
@@ -1477,7 +1477,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageAddedRatio",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1485,7 +1484,8 @@ const compositeAbilityObject = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageAddedRatio"
                     }
                   ]
                 },
@@ -1551,7 +1551,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1559,7 +1558,8 @@ const compositeAbilityObject = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                     },
                     {
                       "name": "Trigger Ability",
@@ -2167,7 +2167,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
               "value": {
                 "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(3 + 1)",
@@ -2176,13 +2175,13 @@ const compositeAbilityObject = {
                   3,
                   1
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -2190,7 +2189,8 @@ const compositeAbilityObject = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
           ]
         },
@@ -2254,9 +2254,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 1,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         }
@@ -2310,7 +2310,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_DebuffCountForRank04",
                               "value": {
                                 "operator": "Variables[0] (5) || RETURN",
                                 "displayLines": "5",
@@ -2318,7 +2317,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   5
                                 ]
-                              }
+                              },
+                              "variableName": "_DebuffCountForRank04"
                             }
                           ]
                         },
@@ -2409,7 +2409,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DebuffCountForRank01",
                           "value": {
                             "operator": "Variables[0] (_DebuffCountForRank01) || Variables[1] (_DebuffCountForRank01_sub) || ADD || RETURN",
                             "displayLines": "(_DebuffCountForRank01 + _DebuffCountForRank01_sub)",
@@ -2418,7 +2417,8 @@ const compositeAbilityObject = {
                               "_DebuffCountForRank01",
                               "_DebuffCountForRank01_sub"
                             ]
-                          }
+                          },
+                          "variableName": "_DebuffCountForRank01"
                         }
                       ]
                     },
@@ -2440,7 +2440,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DebuffCountForRank01",
                           "value": {
                             "operator": "Variables[0] (5) || RETURN",
                             "displayLines": "5",
@@ -2448,7 +2447,8 @@ const compositeAbilityObject = {
                             "variables": [
                               5
                             ]
-                          }
+                          },
+                          "variableName": "_DebuffCountForRank01"
                         }
                       ]
                     },
@@ -2471,8 +2471,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DebuffCountForRank01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_DebuffCountForRank01"
                     }
                   ]
                 }
@@ -2520,7 +2520,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -2528,7 +2527,8 @@ const compositeAbilityObject = {
                     "variables": [
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
                 {
                   "name": "Find New Target",
@@ -2620,8 +2620,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2631,8 +2631,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2642,8 +2642,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 4
+                              "value": 4,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2653,8 +2653,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 8
+                              "value": 8,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2664,8 +2664,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 16
+                              "value": 16,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2675,8 +2675,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 32
+                              "value": 32,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         },
@@ -2686,8 +2686,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_TheFirstAvatarWeakType",
-                              "value": 64
+                              "value": 64,
+                              "variableName": "_TheFirstAvatarWeakType"
                             }
                           ]
                         }
@@ -2927,15 +2927,15 @@ const compositeAbilityObject = {
           "success": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_BPFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "_BPFlag"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_BPFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "_BPFlag"
             }
           ]
         },

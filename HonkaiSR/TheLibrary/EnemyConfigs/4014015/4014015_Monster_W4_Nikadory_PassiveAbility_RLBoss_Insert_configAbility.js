@@ -189,8 +189,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
-      "value": 1
+      "value": 1,
+      "variableName": "InsertCheck"
     }
   ],
   "targetObjectData": {

@@ -181,8 +181,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "AIFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "AIFlag"
                         }
                       ]
                     }
@@ -247,8 +247,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "AIFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "AIFlag"
                         }
                       ]
                     },
@@ -306,8 +306,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -414,7 +414,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_StanceDMGCount",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxStance) || Variables[1] (MDF_CurrentStance) || SUB || RETURN",
                     "displayLines": "(MDF_MaxStance - MDF_CurrentStance)",
@@ -423,7 +422,8 @@ const compositeAbilityObject = {
                       "MDF_MaxStance",
                       "MDF_CurrentStance"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_StanceDMGCount"
                 },
                 {
                   "name": "Deal Toughness DMG",
@@ -715,8 +715,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon04Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon04Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -771,8 +771,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon04Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon04Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1027,8 +1027,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon03Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon03Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1083,8 +1083,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon03Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon03Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1339,8 +1339,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon02Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon02Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1395,8 +1395,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon02Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon02Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1651,8 +1651,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon01Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon01Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1707,8 +1707,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon01Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon01Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -2195,8 +2195,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon02Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon02Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -2219,8 +2219,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon02Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon02Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -2499,8 +2499,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon01Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Summon01Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -2523,8 +2523,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "Summon01Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Summon01Flag"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -3834,8 +3834,8 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_WeaknessCount"
                 },
                 {
                   "name": "IF",
@@ -3850,7 +3850,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3860,7 +3859,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -3877,7 +3877,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3887,7 +3886,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -3904,7 +3904,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3914,7 +3913,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -3931,7 +3931,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3941,7 +3940,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -3958,7 +3958,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3968,7 +3967,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -3985,7 +3985,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -3995,7 +3994,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
@@ -4012,7 +4012,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WeaknessCount",
                       "value": {
                         "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_WeaknessCount + 1)",
@@ -4022,13 +4021,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "_WeaknessCount"
                         ]
-                      }
+                      },
+                      "variableName": "_WeaknessCount"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TotalRatioCount",
                   "value": {
                     "operator": "Variables[0] (MDF_TokenDamageReduceRatio) || Variables[1] (MDF_TokenDamageAddRatioPerlayer) || Variables[2] (_WeaknessCount) || MUL || SUB || RETURN",
                     "displayLines": "(MDF_TokenDamageReduceRatio - (MDF_TokenDamageAddRatioPerlayer * _WeaknessCount))",
@@ -4038,7 +4037,8 @@ const compositeAbilityObject = {
                       "MDF_TokenDamageAddRatioPerlayer",
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_TotalRatioCount"
                 },
                 {
                   "name": "IF",
@@ -4074,7 +4074,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PreTotalRatioCount",
                       "value": {
                         "operator": "Variables[0] (_TotalRatioCount) || RETURN",
                         "displayLines": "_TotalRatioCount",
@@ -4082,7 +4081,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_TotalRatioCount"
                         ]
-                      }
+                      },
+                      "variableName": "_PreTotalRatioCount"
                     },
                     {
                       "name": "IF",
@@ -5054,7 +5054,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#Skill04_P4_FrozenDamagePerTurn",
                       "value": {
                         "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                         "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5062,11 +5061,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ExtraFrozenDamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "#Skill04_P4_FrozenDamagePerTurn"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#Skill07_P1_DamagePercentage",
                       "value": {
                         "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                         "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5074,7 +5073,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ExtraFrozenDamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "#Skill07_P1_DamagePercentage"
                     }
                   ]
                 },
@@ -5091,7 +5091,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#SkillP02_P2_Frozen_DamagePercentage",
                       "value": {
                         "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                         "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5099,7 +5098,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ExtraFrozenDamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "#SkillP02_P2_Frozen_DamagePercentage"
                     }
                   ]
                 }
@@ -6071,7 +6071,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Ice_Lance_ID",
           "value": {
             "operator": "Variables[0] (Ice_Lance_ID) || Variables[1] (HardLevel) || ADD || RETURN",
             "displayLines": "(Ice_Lance_ID + HardLevel)",
@@ -6080,11 +6079,11 @@ const compositeAbilityObject = {
               "Ice_Lance_ID",
               "HardLevel"
             ]
-          }
+          },
+          "variableName": "Ice_Lance_ID"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Ice_Lance_ID_2",
           "value": {
             "operator": "Variables[0] (Ice_Lance_ID_2) || Variables[1] (HardLevel) || ADD || RETURN",
             "displayLines": "(Ice_Lance_ID_2 + HardLevel)",
@@ -6093,7 +6092,8 @@ const compositeAbilityObject = {
               "Ice_Lance_ID_2",
               "HardLevel"
             ]
-          }
+          },
+          "variableName": "Ice_Lance_ID_2"
         },
         {
           "name": "Add Events/Bonuses",
@@ -6230,8 +6230,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -8912,9 +8912,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "IF",
@@ -9142,9 +9142,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 3,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9272,9 +9272,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 4,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9387,9 +9387,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 5,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9420,9 +9420,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 6,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "IF",
@@ -9588,9 +9588,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 3,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "IF",
@@ -9605,9 +9605,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 6,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9617,15 +9617,15 @@ const compositeAbilityObject = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 7,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AccumulateFlag",
+                        "scope": "TargetEntity",
                         "value": 1,
-                        "scope": "TargetEntity"
+                        "variableName": "AccumulateFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -9658,15 +9658,15 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 8,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AccumulateFlag",
+                    "scope": "TargetEntity",
                     "value": 0,
-                    "scope": "TargetEntity"
+                    "variableName": "AccumulateFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -9779,9 +9779,9 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",

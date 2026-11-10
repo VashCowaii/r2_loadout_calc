@@ -68,8 +68,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -190,7 +190,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -199,7 +198,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -207,7 +207,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -216,7 +215,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -325,9 +325,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S4_1_Check"
                     }
                   ]
                 },
@@ -427,7 +427,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -436,7 +435,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -444,7 +444,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -453,7 +452,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -715,8 +715,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageLock",
-              "value": 0
+              "value": 0,
+              "variableName": "DamageLock"
             }
           ]
         },
@@ -761,8 +761,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageLock",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DamageLock"
                 }
               ]
             }
@@ -773,8 +773,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageLock",
-              "value": 0
+              "value": 0,
+              "variableName": "DamageLock"
             }
           ]
         },
@@ -783,8 +783,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageLock",
-              "value": 0
+              "value": 0,
+              "variableName": "DamageLock"
             }
           ]
         }
@@ -820,7 +820,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EntityScore",
               "value": {
                 "operator": "Variables[0] (_EntityScore) || RETURN",
                 "displayLines": "_EntityScore",
@@ -828,7 +827,8 @@ const configAbility = {
                 "variables": [
                   "_EntityScore"
                 ]
-              }
+              },
+              "variableName": "MDF_EntityScore"
             }
           ]
         }
@@ -896,8 +896,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getSummoner]]"
                   },
-                  "variableName": "MDF_AddStore",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AddStore"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -949,12 +949,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TurnReset",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_TurnReset"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEntityScore",
                   "value": {
                     "operator": "Variables[0] (_EntityScore) || RETURN",
                     "displayLines": "_EntityScore",
@@ -962,7 +961,8 @@ const configAbility = {
                     "variables": [
                       "_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LastEntityScore"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -1067,7 +1067,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxEntityScore",
               "value": {
                 "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                 "displayLines": "MDF_EntityScore",
@@ -1075,7 +1074,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EntityScore"
                 ]
-              }
+              },
+              "variableName": "MDF_MaxEntityScore"
             },
             {
               "name": "Declare Custom Variable",
@@ -1088,7 +1088,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastEntityScore",
               "value": {
                 "operator": "Variables[0] (_EntityScore) || RETURN",
                 "displayLines": "_EntityScore",
@@ -1096,7 +1095,8 @@ const configAbility = {
                 "variables": [
                   "_EntityScore"
                 ]
-              }
+              },
+              "variableName": "MDF_LastEntityScore"
             },
             {
               "name": "Use Custom Character Function",
@@ -1137,8 +1137,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_AddStore",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AddStore"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -1252,8 +1252,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_EntityScore",
-              "value": 1
+              "value": 1,
+              "variableName": "_EntityScore"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1284,7 +1284,6 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EntityScore",
               "value": {
                 "operator": "Variables[0] (_EntityScore) || RETURN",
                 "displayLines": "_EntityScore",
@@ -1292,7 +1291,8 @@ const configAbility = {
                 "variables": [
                   "_EntityScore"
                 ]
-              }
+              },
+              "variableName": "MDF_EntityScore"
             },
             {
               "name": "Update Hit-Count Energy Bar",
@@ -1315,7 +1315,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastEntityScore",
               "value": {
                 "operator": "Variables[0] (_EntityScore) || RETURN",
                 "displayLines": "_EntityScore",
@@ -1323,7 +1322,8 @@ const configAbility = {
                 "variables": [
                   "_EntityScore"
                 ]
-              }
+              },
+              "variableName": "MDF_LastEntityScore"
             },
             {
               "name": "IF",
@@ -1376,7 +1376,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_MonsterChangeCnt",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (_EntityScore) || RETURN",
                         "displayLines": "_EntityScore",
@@ -1385,7 +1385,7 @@ const configAbility = {
                           "_EntityScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "_MonsterChangeCnt"
                     }
                   ]
                 }
@@ -1664,9 +1664,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_AddStore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "MDF_AddStore"
                 }
               ]
             }
@@ -2061,7 +2061,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "_MonsterChangeCnt",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (_Avatar_LifeCount) || RETURN",
                 "displayLines": "_Avatar_LifeCount",
@@ -2070,7 +2070,7 @@ const configAbility = {
                   "_Avatar_LifeCount"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "_MonsterChangeCnt"
             },
             {
               "name": "Find New Target",
@@ -2387,9 +2387,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S1_1_Check",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S1_1_Check"
                     }
                   ]
                 },
@@ -2415,9 +2415,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "MDF_AddStore",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "MDF_AddStore"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -2748,7 +2748,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CountBreak",
                   "value": {
                     "operator": "Variables[0] (MDF_CountBefore) || Variables[1] (MDF_CountAfter) || SUB || RETURN",
                     "displayLines": "(MDF_CountBefore - MDF_CountAfter)",
@@ -2757,7 +2756,8 @@ const configAbility = {
                       "MDF_CountBefore",
                       "MDF_CountAfter"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CountBreak"
                 },
                 {
                   "name": "IF",
@@ -2803,8 +2803,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CountBefore",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CountBefore"
             },
             {
               "name": "Define Custom Variable",
@@ -2812,8 +2812,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CountAfter",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CountAfter"
             }
           ]
         }
@@ -3065,8 +3065,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
                     }
                   ]
                 }
@@ -3083,8 +3083,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
-              "value": 0
+              "value": 0,
+              "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
             }
           ]
         }
@@ -3162,8 +3162,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Key",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Key"
                     }
                   ]
                 },
@@ -3224,8 +3224,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Key",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Key"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3303,8 +3303,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Key",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Key"
                 }
               ]
             }
@@ -3350,8 +3350,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -3398,8 +3398,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -3445,8 +3445,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -4424,7 +4424,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_OriginalMaxLayer) || RETURN",
                     "displayLines": "MDF_OriginalMaxLayer",
@@ -4432,7 +4431,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OriginalMaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxLayer"
                 },
                 {
                   "name": "IF",
@@ -4658,7 +4658,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OriginalMaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                     "displayLines": "MDF_MaxLayer",
@@ -4666,7 +4665,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OriginalMaxLayer"
                 },
                 {
                   "name": "Define Custom Variable with Copy",
@@ -4684,7 +4684,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
                     "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
@@ -4693,7 +4692,8 @@ const configAbility = {
                       "MDF_MaxLayer",
                       "MDF_AddMaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxLayer"
                 },
                 {
                   "name": "IF",
@@ -4811,7 +4811,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OriginalMaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                     "displayLines": "MDF_MaxLayer",
@@ -4819,7 +4818,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OriginalMaxLayer"
                 },
                 {
                   "name": "Define Custom Variable with Copy",
@@ -4837,7 +4837,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
                     "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
@@ -4846,7 +4845,8 @@ const configAbility = {
                       "MDF_MaxLayer",
                       "MDF_AddMaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxLayer"
                 },
                 {
                   "name": "IF",
@@ -5339,8 +5339,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",

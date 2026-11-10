@@ -221,8 +221,8 @@ const configAbility = {
       "onCreation": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CDF_IsEnterBattle",
-          "value": 0
+          "value": 0,
+          "variableName": "CDF_IsEnterBattle"
         }
       ],
       "onRemoval": [
@@ -836,28 +836,28 @@ const configAbility = {
             "Toggle View Mode",
             {
               "name": "Define Custom Variable",
-              "variableName": "ComboHitCount",
-              "value": 0
+              "value": 0,
+              "variableName": "ComboHitCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo1_Loop_Index",
-              "value": 0
+              "value": 0,
+              "variableName": "Combo1_Loop_Index"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo2_Loop_Index",
-              "value": 0
+              "value": 0,
+              "variableName": "Combo2_Loop_Index"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ComboType",
-              "value": 0
+              "value": 0,
+              "variableName": "ComboType"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Feixiao_AchievementPrecheck",
-              "value": 0
+              "value": 0,
+              "variableName": "Feixiao_AchievementPrecheck"
             }
           ]
         },

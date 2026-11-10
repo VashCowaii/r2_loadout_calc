@@ -29,7 +29,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(3 + 1)",
@@ -38,13 +37,13 @@ const configAbility = {
               3,
               1
             ]
-          }
+          },
+          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -52,7 +51,8 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
       ]
     },
@@ -160,7 +160,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_Chance",
               "value": {
                 "operator": "Variables[0] (0.72) || RETURN",
                 "displayLines": "0.72",
@@ -168,7 +167,8 @@ const configAbility = {
                 "variables": [
                   0.72
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_Chance"
             },
             {
               "name": "Find New Target",

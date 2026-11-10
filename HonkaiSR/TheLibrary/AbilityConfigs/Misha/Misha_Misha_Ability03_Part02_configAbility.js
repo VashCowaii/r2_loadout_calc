@@ -33,8 +33,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_current_hit_count",
-      "value": 0
+      "value": 0,
+      "variableName": "_current_hit_count"
     },
     {
       "name": "IF",
@@ -55,7 +55,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_Hit_Count",
           "value": {
             "operator": "Variables[0] (MIN) || Variables[1] (1) || Variables[2] (Skill03_Hit_Count) || MUL || Variables[3] (5) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((1 * Skill03_Hit_Count), 5)",
@@ -66,20 +65,20 @@ const configAbility = {
               "Skill03_Hit_Count",
               5
             ]
-          }
+          },
+          "variableName": "Skill03_Hit_Count"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_Hit_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill03_Hit_Count"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_Hit_Count",
       "value": {
         "operator": "Variables[0] (Skill03_Hit_Count) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || Variables[2] (EnergyBar_ExtraUltraAttack) || ADD || RETURN",
         "displayLines": "((Skill03_Hit_Count + EnergyBar_BasicUltraAttack) + EnergyBar_ExtraUltraAttack)",
@@ -89,11 +88,11 @@ const configAbility = {
           "EnergyBar_BasicUltraAttack",
           "EnergyBar_ExtraUltraAttack"
         ]
-      }
+      },
+      "variableName": "Skill03_Hit_Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_delta_ntime",
       "value": {
         "operator": "Variables[0] (MISHA_OBJECT_UNUSED_2) || Variables[1] (MISHA_OBJECT_UNUSED_1) || SUB || Variables[2] (MAX) || Constants[0] (1) || Variables[3] (Skill03_Hit_Count) || Constants[1] (2) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
         "displayLines": "((MISHA_OBJECT_UNUSED_2 - MISHA_OBJECT_UNUSED_1) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (Skill03_Hit_Count - 2)))",
@@ -107,7 +106,8 @@ const configAbility = {
           "MAX",
           "Skill03_Hit_Count"
         ]
-      }
+      },
+      "variableName": "_delta_ntime"
     },
     {
       "name": "IF",
@@ -190,7 +190,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_current_hit_count",
           "value": {
             "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_current_hit_count + 1)",
@@ -200,7 +199,8 @@ const configAbility = {
             "variables": [
               "_current_hit_count"
             ]
-          }
+          },
+          "variableName": "_current_hit_count"
         },
         {
           "name": "Use Custom Character Function",
@@ -231,7 +231,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_current_hit_count",
       "value": {
         "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(_current_hit_count + 1)",
@@ -241,7 +240,8 @@ const configAbility = {
         "variables": [
           "_current_hit_count"
         ]
-      }
+      },
+      "variableName": "_current_hit_count"
     },
     {
       "name": "Use Custom Character Function",
@@ -281,8 +281,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ExtraUltraAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "EnergyBar_ExtraUltraAttack"
     },
     {
       "name": "Remove Events/Bonuses",

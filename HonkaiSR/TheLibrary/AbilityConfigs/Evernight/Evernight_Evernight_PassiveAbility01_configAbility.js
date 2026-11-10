@@ -14,7 +14,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Count_Max",
       "value": {
         "operator": "Variables[0] (16) || RETURN",
         "displayLines": "16",
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           16
         ]
-      }
+      },
+      "variableName": "_Partner_Count_Max"
     },
     {
       "name": "Add Events/Bonuses",
@@ -174,8 +174,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Evernight_PL_Layer",
-      "value": 0
+      "value": 0,
+      "variableName": "_Evernight_PL_Layer"
     },
     {
       "name": "Add Events/Bonuses",
@@ -197,7 +197,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S03_Duration",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -205,7 +204,8 @@ const configAbility = {
         "variables": [
           2
         ]
-      }
+      },
+      "variableName": "S03_Duration"
     },
     {
       "name": "IF",
@@ -216,7 +216,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "S03_Duration",
           "value": {
             "operator": "Variables[0] (S03_Duration) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(S03_Duration + 2)",
@@ -225,11 +224,11 @@ const configAbility = {
               "S03_Duration",
               2
             ]
-          }
+          },
+          "variableName": "S03_Duration"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Evernight_00_Extra_Energy",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -237,7 +236,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "_Evernight_00_Extra_Energy"
         }
       ]
     },
@@ -951,8 +951,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank01_Rat",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Rank01_Rat"
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
@@ -974,8 +974,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Alive_Count",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Alive_Count"
                     }
                   ]
                 },
@@ -990,8 +990,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Alive_Count",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "_Alive_Count"
                     }
                   ]
                 },
@@ -1012,7 +1012,6 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank01_Rat",
                           "value": {
                             "operator": "Variables[0] (1.5) || RETURN",
                             "displayLines": "1.5",
@@ -1020,7 +1019,8 @@ const configAbility = {
                             "variables": [
                               1.5
                             ]
-                          }
+                          },
+                          "variableName": "_Rank01_Rat"
                         }
                       ]
                     },
@@ -1030,7 +1030,6 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank01_Rat",
                           "value": {
                             "operator": "Variables[0] (1.3) || RETURN",
                             "displayLines": "1.3",
@@ -1038,7 +1037,8 @@ const configAbility = {
                             "variables": [
                               1.3
                             ]
-                          }
+                          },
+                          "variableName": "_Rank01_Rat"
                         }
                       ]
                     },
@@ -1048,7 +1048,6 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank01_Rat",
                           "value": {
                             "operator": "Variables[0] (1.25) || RETURN",
                             "displayLines": "1.25",
@@ -1056,7 +1055,8 @@ const configAbility = {
                             "variables": [
                               1.25
                             ]
-                          }
+                          },
+                          "variableName": "_Rank01_Rat"
                         }
                       ]
                     },
@@ -1066,7 +1066,6 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank01_Rat",
                           "value": {
                             "operator": "Variables[0] (1.2) || RETURN",
                             "displayLines": "1.2",
@@ -1074,7 +1073,8 @@ const configAbility = {
                             "variables": [
                               1.2
                             ]
-                          }
+                          },
+                          "variableName": "_Rank01_Rat"
                         }
                       ]
                     }

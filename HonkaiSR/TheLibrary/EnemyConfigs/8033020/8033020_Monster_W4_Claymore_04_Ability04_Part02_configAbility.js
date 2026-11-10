@@ -14,8 +14,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "W4_Claymore_04_Skill04Mark",
-      "value": 1
+      "value": 1,
+      "variableName": "W4_Claymore_04_Skill04Mark"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -216,8 +216,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "W4_Claymore_04_Skill04Mark",
-      "value": 0
+      "value": 0,
+      "variableName": "W4_Claymore_04_Skill04Mark"
     },
     "Trigger: Ability End"
   ],

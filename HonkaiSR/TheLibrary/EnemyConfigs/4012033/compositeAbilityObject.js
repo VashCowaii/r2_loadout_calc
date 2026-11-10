@@ -864,8 +864,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentTarget",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentTarget"
             },
             {
               "name": "Set Target Parameter",
@@ -1041,7 +1041,6 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentTarget",
               "value": {
                 "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
                 "displayLines": "{[Skill01[1]]}",
@@ -1049,7 +1048,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill01[1]]}"
                 ]
-              }
+              },
+              "variableName": "CurrentTarget"
             },
             {
               "name": "Find New Target",

@@ -212,8 +212,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DeathType",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DeathType"
                 }
               ]
             },
@@ -256,8 +256,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
@@ -295,8 +295,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
@@ -334,8 +334,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
@@ -365,8 +365,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DeathType"
                     }
                   ]
                 }
@@ -406,8 +406,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
@@ -448,8 +448,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
@@ -486,8 +486,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "DeathType"
                     }
                   ]
                 }
@@ -511,15 +511,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DeathType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "DeathType"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackCheckFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AttackCheckFlag"
                 }
               ]
             }

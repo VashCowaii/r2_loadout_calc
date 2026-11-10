@@ -725,7 +725,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeakCount",
                   "value": {
                     "operator": "Variables[0] (MIN) || Variables[1] (_WeakCount) || Constants[0] (7) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_WeakCount, 7)",
@@ -736,7 +735,8 @@ const compositeAbilityObject = {
                       "MIN",
                       "_WeakCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeakCount"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -929,9 +929,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DamageCarry",
+                          "scope": "AITag",
                           "value": 100,
-                          "scope": "AITag"
+                          "variableName": "DamageCarry"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -979,9 +979,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DamageCarry",
+                          "scope": "AITag",
                           "value": 1,
-                          "scope": "AITag"
+                          "variableName": "DamageCarry"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1037,9 +1037,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DamageCarry",
+                          "scope": "AITag",
                           "value": 100,
-                          "scope": "AITag"
+                          "variableName": "DamageCarry"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1071,8 +1071,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_count"
                         },
                         {
                           "name": "Find New Target",
@@ -1093,7 +1093,6 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_count",
                               "value": {
                                 "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(_count + 1)",
@@ -1103,7 +1102,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "_count"
                                 ]
-                              }
+                              },
+                              "variableName": "_count"
                             }
                           ]
                         },
@@ -1136,9 +1136,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DamageCarry",
+                              "scope": "AITag",
                               "value": 100,
-                              "scope": "AITag"
+                              "variableName": "DamageCarry"
                             }
                           ],
                           "failed": [
@@ -1170,9 +1170,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DamageCarry",
+                              "scope": "AITag",
                               "value": 1,
-                              "scope": "AITag"
+                              "variableName": "DamageCarry"
                             }
                           ]
                         }
@@ -3009,13 +3009,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_count",
+          "scope": "ContextAbility",
           "value": 0,
-          "scope": "ContextAbility"
+          "variableName": "_count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_LoopCount",
           "value": {
             "operator": "Variables[0] (4) || Variables[1] (Skill02_ExtraHitCount) || ADD || RETURN",
             "displayLines": "(4 + Skill02_ExtraHitCount)",
@@ -3024,7 +3023,8 @@ const compositeAbilityObject = {
               4,
               "Skill02_ExtraHitCount"
             ]
-          }
+          },
+          "variableName": "ADF_LoopCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3848,7 +3848,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoPhysical",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoPhysical) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoPhysical - 1), 0)",
@@ -3860,11 +3859,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoPhysical"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoPhysical"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoWind",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoWind) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoWind - 1), 0)",
@@ -3876,11 +3875,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoWind"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoWind"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoFire",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoFire) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoFire - 1), 0)",
@@ -3892,11 +3891,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoFire"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoFire"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoThunder",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoThunder) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoThunder - 1), 0)",
@@ -3908,11 +3907,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoThunder"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoThunder"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoIce",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoIce) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoIce - 1), 0)",
@@ -3924,11 +3923,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoIce"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoIce"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoQuantum",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoQuantum) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoQuantum - 1), 0)",
@@ -3940,11 +3939,11 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoQuantum"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoQuantum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_NoImaginary",
                   "value": {
                     "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoImaginary) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoImaginary - 1), 0)",
@@ -3956,7 +3955,8 @@ const compositeAbilityObject = {
                       "MAX",
                       "TDF_NoImaginary"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_NoImaginary"
                 }
               ]
             },

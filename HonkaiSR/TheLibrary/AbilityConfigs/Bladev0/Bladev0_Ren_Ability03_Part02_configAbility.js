@@ -29,13 +29,13 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageExtra_HPRatio",
-          "value": 0
+          "value": 0,
+          "variableName": "DamageExtra_HPRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_isHeal",
-          "value": 1
+          "value": 1,
+          "variableName": "MwRen_isHeal"
         }
       ]
     },
@@ -68,8 +68,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MwRen_isHeal",
-      "value": 0
+      "value": 0,
+      "variableName": "MwRen_isHeal"
     },
     {
       "name": "IF",
@@ -90,7 +90,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CasterFinalLostHP",
           "value": {
             "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
             "displayLines": "(CasterMaxHP * 0.9)",
@@ -99,13 +98,13 @@ const configAbility = {
               "CasterMaxHP",
               0.9
             ]
-          }
+          },
+          "variableName": "CasterFinalLostHP"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CasterFinalLostHP",
           "value": {
             "operator": "Variables[0] (CasterLostHP) || RETURN",
             "displayLines": "CasterLostHP",
@@ -113,7 +112,8 @@ const configAbility = {
             "variables": [
               "CasterLostHP"
             ]
-          }
+          },
+          "variableName": "CasterFinalLostHP"
         }
       ]
     },
@@ -270,13 +270,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CasterLostHP",
-      "value": 0
+      "value": 0,
+      "variableName": "CasterLostHP"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CasterFinalLostHP",
-      "value": 0
+      "value": 0,
+      "variableName": "CasterFinalLostHP"
     },
     {
       "name": "Remove Events/Bonuses",

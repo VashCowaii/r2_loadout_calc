@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO",
       "value": {
         "operator": "Variables[0] (DV_StockTempCount) || RETURN",
         "displayLines": "DV_StockTempCount",
@@ -14,12 +13,13 @@ const configAbility = {
         "variables": [
           "DV_StockTempCount"
         ]
-      }
+      },
+      "variableName": "_AMMO"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO_RELOADED",
-      "value": 1
+      "value": 1,
+      "variableName": "_AMMO_RELOADED"
     },
     {
       "name": "Adjust Variable Value",

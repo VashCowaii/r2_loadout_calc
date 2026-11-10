@@ -496,8 +496,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResetValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ResetValue"
                 }
               ]
             }
@@ -515,8 +515,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResetValue",
-                  "value": 10
+                  "value": 10,
+                  "variableName": "MDF_ResetValue"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -539,8 +539,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResetValue",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "MDF_ResetValue"
                 },
                 {
                   "name": "Declare Custom Variable",

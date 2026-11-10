@@ -43,7 +43,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageAddHeat",
           "value": {
             "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
             "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
@@ -54,7 +53,8 @@ const configAbility = {
               "Sunny_Temperature",
               "{[SkillP05[1]]}"
             ]
-          }
+          },
+          "variableName": "DamageAddHeat"
         },
         {
           "name": "IF",
@@ -67,8 +67,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageAddHeat",
-              "value": 10
+              "value": 10,
+              "variableName": "DamageAddHeat"
             }
           ]
         }

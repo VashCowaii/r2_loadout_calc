@@ -184,8 +184,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PointB3_DifferencePassive01_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "PointB3_DifferencePassive01_Count"
                 }
               ]
             },
@@ -268,7 +268,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentBreakDamageAddedRatio) || Variables[1] (1) || MUL || RETURN",
                     "displayLines": "(MDF_CurrentBreakDamageAddedRatio * 1)",
@@ -277,7 +276,8 @@ const compositeAbilityObject = {
                       "MDF_CurrentBreakDamageAddedRatio",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
                 {
                   "name": "IF",
@@ -297,7 +297,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AllDamageTypeAddedRatio",
                       "value": {
                         "operator": "Variables[0] (2.4) || RETURN",
                         "displayLines": "2.4",
@@ -305,7 +304,8 @@ const compositeAbilityObject = {
                         "variables": [
                           2.4
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AllDamageTypeAddedRatio"
                     }
                   ]
                 },
@@ -362,8 +362,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Xueyi_PassiveLayer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Xueyi_PassiveLayer"
                 }
               ]
             },
@@ -488,8 +488,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Change_Count",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Change_Count"
                         }
                       ],
                       "failed": [
@@ -504,7 +504,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Change_Count",
                               "value": {
                                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_Difference) || Constants[0] (30) || DIV || PARAM_1 || FUNCTION || RETURN",
                                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_Difference / 30))",
@@ -515,7 +514,8 @@ const compositeAbilityObject = {
                                   "FLOOR",
                                   "MDF_Difference"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Change_Count"
                             }
                           ]
                         }
@@ -548,7 +548,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Change_Count",
                               "value": {
                                 "operator": "Variables[0] (MDF_Passive_StanceMaxCount) || RETURN",
                                 "displayLines": "MDF_Passive_StanceMaxCount",
@@ -556,14 +555,15 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_Passive_StanceMaxCount"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Change_Count"
                             }
                           ]
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Passive_StanceMaxCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Passive_StanceMaxCount"
                         }
                       ]
                     },
@@ -576,18 +576,18 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "PointB3_CurrentPassive01_Count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "PointB3_CurrentPassive01_Count"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "PointB3_Sum_Passive01_Count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "PointB3_Sum_Passive01_Count"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "PointB3_DifferencePassive01_Count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "PointB3_DifferencePassive01_Count"
                         },
                         {
                           "name": "Define Custom Variable with Modifier Values",
@@ -598,7 +598,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "PointB3_Sum_Passive01_Count",
                           "value": {
                             "operator": "Variables[0] (PointB3_CurrentPassive01_Count) || Variables[1] (MDF_Change_Count) || ADD || RETURN",
                             "displayLines": "(PointB3_CurrentPassive01_Count + MDF_Change_Count)",
@@ -607,7 +606,8 @@ const compositeAbilityObject = {
                               "PointB3_CurrentPassive01_Count",
                               "MDF_Change_Count"
                             ]
-                          }
+                          },
+                          "variableName": "PointB3_Sum_Passive01_Count"
                         },
                         {
                           "name": "IF",
@@ -627,7 +627,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "PointB3_DifferencePassive01_Count",
                               "value": {
                                 "operator": "Variables[0] (PointB3_Sum_Passive01_Count) || Variables[1] (_Xueyi_Count) || SUB || RETURN",
                                 "displayLines": "(PointB3_Sum_Passive01_Count - _Xueyi_Count)",
@@ -636,7 +635,8 @@ const compositeAbilityObject = {
                                   "PointB3_Sum_Passive01_Count",
                                   "_Xueyi_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "PointB3_DifferencePassive01_Count"
                             },
                             {
                               "name": "IF",
@@ -656,7 +656,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB3_DifferencePassive01_Count",
                                   "value": {
                                     "operator": "Variables[0] (6) || RETURN",
                                     "displayLines": "6",
@@ -664,7 +663,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       6
                                     ]
-                                  }
+                                  },
+                                  "variableName": "PointB3_DifferencePassive01_Count"
                                 }
                               ]
                             },
@@ -687,7 +687,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB3_DifferencePassive01_Count",
                                   "value": {
                                     "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || Variables[1] (PointB3_CurrentPassive01_Count) || ADD || RETURN",
                                     "displayLines": "(PointB3_DifferencePassive01_Count + PointB3_CurrentPassive01_Count)",
@@ -696,7 +695,8 @@ const compositeAbilityObject = {
                                       "PointB3_DifferencePassive01_Count",
                                       "PointB3_CurrentPassive01_Count"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "PointB3_DifferencePassive01_Count"
                                 },
                                 {
                                   "name": "IF",
@@ -716,7 +716,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "PointB3_DifferencePassive01_Count",
                                       "value": {
                                         "operator": "Variables[0] (6) || RETURN",
                                         "displayLines": "6",
@@ -724,7 +723,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           6
                                         ]
-                                      }
+                                      },
+                                      "variableName": "PointB3_DifferencePassive01_Count"
                                     }
                                   ]
                                 },
@@ -788,7 +788,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Passive_SumNum",
                           "value": {
                             "operator": "Variables[0] (MDF_Change_Count) || Variables[1] (_Passive_Num) || ADD || RETURN",
                             "displayLines": "(MDF_Change_Count + _Passive_Num)",
@@ -797,7 +796,8 @@ const compositeAbilityObject = {
                               "MDF_Change_Count",
                               "_Passive_Num"
                             ]
-                          }
+                          },
+                          "variableName": "_Passive_SumNum"
                         },
                         {
                           "name": "IF",
@@ -817,7 +817,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Passive_LoopCount",
                               "value": {
                                 "operator": "Variables[0] (_Xueyi_Count) || Variables[1] (_Passive_Num) || SUB || RETURN",
                                 "displayLines": "(_Xueyi_Count - _Passive_Num)",
@@ -826,13 +825,13 @@ const compositeAbilityObject = {
                                   "_Xueyi_Count",
                                   "_Passive_Num"
                                 ]
-                              }
+                              },
+                              "variableName": "_Passive_LoopCount"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Passive_LoopCount",
                               "value": {
                                 "operator": "Variables[0] (MDF_Change_Count) || RETURN",
                                 "displayLines": "MDF_Change_Count",
@@ -840,7 +839,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_Change_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "_Passive_LoopCount"
                             }
                           ]
                         }
@@ -848,7 +848,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Passive_LoopCount",
                           "value": {
                             "operator": "Variables[0] (MDF_Change_Count) || RETURN",
                             "displayLines": "MDF_Change_Count",
@@ -856,7 +855,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_Change_Count"
                             ]
-                          }
+                          },
+                          "variableName": "_Passive_LoopCount"
                         }
                       ]
                     },
@@ -904,33 +904,33 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Change_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Change_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Passive_Num",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Passive_Num"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Passive_SumNum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Passive_SumNum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Passive_LoopCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Passive_LoopCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Difference",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Difference"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Change_Stance",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Change_Stance"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1082,8 +1082,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PreCalcStanceDamage",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_PreCalcStanceDamage"
                     }
                   ],
                   "failed": [
@@ -1098,7 +1098,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PreCalcStanceDamage",
                           "value": {
                             "operator": "Variables[0] (MDF_PreCalcStanceDamage) || Constants[0] (30) || DIV || RETURN",
                             "displayLines": "(MDF_PreCalcStanceDamage / 30)",
@@ -1108,7 +1107,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_PreCalcStanceDamage"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PreCalcStanceDamage"
                         }
                       ]
                     }
@@ -1116,7 +1116,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AddAttackRatio",
                   "value": {
                     "operator": "Variables[0] (0.15) || Variables[1] (MDF_PreCalcStanceDamage) || MUL || RETURN",
                     "displayLines": "(0.15 * MDF_PreCalcStanceDamage)",
@@ -1125,7 +1124,8 @@ const compositeAbilityObject = {
                       0.15,
                       "MDF_PreCalcStanceDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AddAttackRatio"
                 },
                 {
                   "name": "IF",
@@ -1145,7 +1145,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AddAttackRatio",
                       "value": {
                         "operator": "Variables[0] (0.6) || RETURN",
                         "displayLines": "0.6",
@@ -1153,7 +1152,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.6
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AddAttackRatio"
                     }
                   ]
                 },
@@ -1228,7 +1228,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Difference",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Constants[0] (0.5) || Variables[1] (MDF_Difference) || ADD || Variables[2] (MDF_Change_Stance) || ADD || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((0.5 + MDF_Difference) + MDF_Change_Stance))",
@@ -1240,7 +1239,8 @@ const compositeAbilityObject = {
                               "MDF_Difference",
                               "MDF_Change_Stance"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Difference"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1260,7 +1260,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Difference",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Constants[0] (0.5) || Variables[1] (MDF_Difference) || ADD || Variables[2] (MDF_Change_Stance) || ADD || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((0.5 + MDF_Difference) + MDF_Change_Stance))",
@@ -1272,7 +1271,8 @@ const compositeAbilityObject = {
                               "MDF_Difference",
                               "MDF_Change_Stance"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Difference"
                         },
                         {
                           "name": "IF",
@@ -1285,8 +1285,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Xueyi_OnEnterBattle_Attack",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_Xueyi_OnEnterBattle_Attack"
                             }
                           ]
                         }
@@ -1333,7 +1333,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Difference",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Constants[0] (0.5) || Variables[1] (MDF_Difference) || ADD || Variables[2] (MDF_Change_Stance) || ADD || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((0.5 + MDF_Difference) + MDF_Change_Stance))",
@@ -1345,7 +1344,8 @@ const compositeAbilityObject = {
                           "MDF_Difference",
                           "MDF_Change_Stance"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Difference"
                     }
                   ]
                 }
@@ -1660,8 +1660,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill03_StancePreCalc",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_Skill03_StancePreCalc"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1816,8 +1816,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Insert",
-          "value": 1
+          "value": 1,
+          "variableName": "Is_Insert"
         },
         {
           "name": "IF",
@@ -2019,8 +2019,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_PassiveLayer",
-          "value": 0
+          "value": 0,
+          "variableName": "_Xueyi_PassiveLayer"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -2105,18 +2105,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Insert",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_Insert"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Change_Stance",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_Change_Stance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Difference",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_Difference"
         },
         "Trigger: Skip Death Handling"
       ],
@@ -2133,8 +2133,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_Attack",
-          "value": 0
+          "value": 0,
+          "variableName": "_Xueyi_Attack"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2177,15 +2177,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_Attack",
-          "value": 1
+          "value": 1,
+          "variableName": "_Xueyi_Attack"
         }
       ],
       "onAbort": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_Attack",
-          "value": 1
+          "value": 1,
+          "variableName": "_Xueyi_Attack"
         }
       ],
       "references": [],
@@ -2220,7 +2220,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Xueyi_Count",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -2228,13 +2227,13 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "_Xueyi_Count"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Xueyi_Count",
               "value": {
                 "operator": "Variables[0] (8) || RETURN",
                 "displayLines": "8",
@@ -2242,7 +2241,8 @@ const compositeAbilityObject = {
                 "variables": [
                   8
                 ]
-              }
+              },
+              "variableName": "_Xueyi_Count"
             }
           ]
         },
@@ -2365,13 +2365,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Xueyi_OnEnterBattle_Attack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Xueyi_OnEnterBattle_Attack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Xueyi_OnEnterBattle_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Xueyi_OnEnterBattle_Flag"
                 }
               ]
             },
@@ -2380,8 +2380,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Xueyi_OnEnterBattle_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Xueyi_OnEnterBattle_Flag"
                 }
               ]
             }
@@ -2529,13 +2529,13 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Difference",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_Difference"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Change_Stance",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_Change_Stance"
                             }
                           ]
                         }
@@ -3099,8 +3099,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Ultra",
-          "value": 1
+          "value": 1,
+          "variableName": "Is_Ultra"
         },
         {
           "name": "IF",
@@ -3236,13 +3236,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_StanceAddAttackRatio",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_StanceAddAttackRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Ultra",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_Ultra"
         },
         {
           "name": "Remove Events/Bonuses",

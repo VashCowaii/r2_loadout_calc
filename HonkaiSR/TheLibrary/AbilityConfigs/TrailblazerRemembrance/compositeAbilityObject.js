@@ -427,7 +427,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_tmpTeamAddSP",
                           "value": {
                             "operator": "Variables[0] (TeamAddSP) || RETURN",
                             "displayLines": "TeamAddSP",
@@ -435,7 +434,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "TeamAddSP"
                             ]
-                          }
+                          },
+                          "variableName": "_tmpTeamAddSP"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -462,7 +462,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TeamAddSP",
                           "value": {
                             "operator": "Variables[0] (_tmpTeamAddSP) || RETURN",
                             "displayLines": "_tmpTeamAddSP",
@@ -470,7 +469,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_tmpTeamAddSP"
                             ]
-                          }
+                          },
+                          "variableName": "TeamAddSP"
                         }
                       ]
                     }
@@ -731,7 +731,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "mInit_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || RETURN",
                     "displayLines": "MDF_Count",
@@ -739,7 +738,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_Count"
                     ]
-                  }
+                  },
+                  "variableName": "mInit_Count"
                 }
               ]
             },
@@ -1744,7 +1744,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "variableName": "Skill11_Stance",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
             "displayLines": "(AOE Toughness Value / 2)",
@@ -1755,7 +1755,7 @@ const compositeAbilityObject = {
               "AOE Toughness Value"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "Skill11_Stance"
         },
         {
           "name": "Trigger Joint-Attack Ability",
@@ -1845,7 +1845,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "variableName": "Ultra_Stance",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
             "displayLines": "AOE Toughness Value",
@@ -1854,7 +1854,7 @@ const compositeAbilityObject = {
               "AOE Toughness Value"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "Ultra_Stance"
         },
         {
           "name": "Trigger Ability",
@@ -2207,8 +2207,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TeamAddSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TeamAddSP"
                 },
                 {
                   "name": "Summon Memosprite",
@@ -2778,7 +2778,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyRatio",
                   "value": {
                     "operator": "Variables[0] (_propertyBase) || Variables[1] (MDF_PropertyConvert) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
                     "displayLines": "((_propertyBase * MDF_PropertyConvert) + MDF_PropertyBase)",
@@ -2788,7 +2787,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyConvert",
                       "MDF_PropertyBase"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -3562,7 +3562,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurEnergy",
                           "value": {
                             "operator": "Variables[0] (MDF_Max) || RETURN",
                             "displayLines": "MDF_Max",
@@ -3570,7 +3569,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_Max"
                             ]
-                          }
+                          },
+                          "variableName": "CurEnergy"
                         }
                       ]
                     },
@@ -3732,8 +3732,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CurEnergy",
-          "value": 0
+          "value": 0,
+          "variableName": "CurEnergy"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4072,8 +4072,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_index",
-          "value": 0
+          "value": 0,
+          "variableName": "_index"
         },
         {
           "name": "Looped Event",
@@ -4081,7 +4081,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_index",
               "value": {
                 "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_index + 1)",
@@ -4091,7 +4090,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_index"
                 ]
-              }
+              },
+              "variableName": "_index"
             },
             {
               "name": "Use Custom Character Function",
@@ -4244,7 +4244,6 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
                 "displayLines": "MDF_BasicDamagePercentage",
@@ -4252,7 +4251,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "MDF_BasicDamagePercentage"
                 ]
-              }
+              },
+              "variableName": "MDF_DamagePercentage"
             },
             {
               "name": "IF",
@@ -4272,7 +4272,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_maxSP",
                   "value": {
                     "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (FLOOR) || Variables[2] (_maxSP) || Variables[3] (MDF_PointB3_P1_Basic) || SUB || Variables[4] (MDF_PointB3_P2_Delta) || DIV || PARAM_1 || FUNCTION || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((_maxSP - MDF_PointB3_P1_Basic) / MDF_PointB3_P2_Delta)))",
@@ -4286,7 +4285,8 @@ const compositeAbilityObject = {
                       "MDF_PointB3_P1_Basic",
                       "MDF_PointB3_P2_Delta"
                     ]
-                  }
+                  },
+                  "variableName": "_maxSP"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",

@@ -14,7 +14,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_HaloLifeTime",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "Skill03_HaloLifeTime"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -49,7 +49,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_TriggerDotMaxCount",
           "value": {
             "operator": "Variables[0] (12) || RETURN",
             "displayLines": "12",
@@ -57,13 +56,13 @@ const configAbility = {
             "variables": [
               12
             ]
-          }
+          },
+          "variableName": "Skill03_TriggerDotMaxCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_TriggerDotMaxCount",
           "value": {
             "operator": "Variables[0] (8) || RETURN",
             "displayLines": "8",
@@ -71,7 +70,8 @@ const configAbility = {
             "variables": [
               8
             ]
-          }
+          },
+          "variableName": "Skill03_TriggerDotMaxCount"
         }
       ]
     },
@@ -84,7 +84,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_DOTDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.8) || Variables[1] (0.2) || ADD || RETURN",
             "displayLines": "(0.8 + 0.2)",
@@ -93,13 +92,13 @@ const configAbility = {
               0.8,
               0.2
             ]
-          }
+          },
+          "variableName": "Skill03_DOTDamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_DOTDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.8) || RETURN",
             "displayLines": "0.8",
@@ -107,7 +106,8 @@ const configAbility = {
             "variables": [
               0.8
             ]
-          }
+          },
+          "variableName": "Skill03_DOTDamagePercentage"
         }
       ]
     },
@@ -223,7 +223,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_StatusProbabilityValue",
               "value": {
                 "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityPlusConvertValue) || Variables[1] (SkillTree_PointB3_StatusProbabilityConvertValue) || SUB || RETURN",
                 "displayLines": "(SkillTree_PointB3_StatusProbabilityPlusConvertValue - SkillTree_PointB3_StatusProbabilityConvertValue)",
@@ -232,11 +231,11 @@ const configAbility = {
                   "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
                   "SkillTree_PointB3_StatusProbabilityConvertValue"
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_StatusProbabilityValue",
               "value": {
                 "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.6) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.15) || MUL || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_StatusProbabilityValue - 0.6) / 0.1)) * 0.15)",
@@ -248,7 +247,8 @@ const configAbility = {
                   0.1,
                   0.15
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "IF",
@@ -262,8 +262,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 }
               ],
               "failed": [
@@ -286,7 +286,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                       "value": {
                         "operator": "Variables[0] (0.9) || RETURN",
                         "displayLines": "0.9",
@@ -294,7 +293,8 @@ const configAbility = {
                         "variables": [
                           0.9
                         ]
-                      }
+                      },
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     }
                   ]
                 }

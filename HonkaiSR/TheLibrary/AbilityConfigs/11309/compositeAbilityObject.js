@@ -166,7 +166,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_P1_DmgUpForShow",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_6437) || RETURN",
                     "displayLines": "UnusedUnderThisBase_6437",
@@ -174,7 +173,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "UnusedUnderThisBase_6437"
                     ]
-                  }
+                  },
+                  "variableName": "Skill02_P1_DmgUpForShow"
                 }
               ]
             }
@@ -235,7 +235,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank06_BigDmgCount",
                           "value": {
                             "operator": "Variables[0] (_Rank06_BigDmgCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(_Rank06_BigDmgCount - 1)",
@@ -245,7 +244,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_Rank06_BigDmgCount"
                             ]
-                          }
+                          },
+                          "variableName": "_Rank06_BigDmgCount"
                         },
                         {
                           "name": "IF",
@@ -940,7 +940,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank06_BigDmgCount",
                       "value": {
                         "operator": "Variables[0] (UnusedUnderThisBase_14462) || RETURN",
                         "displayLines": "UnusedUnderThisBase_14462",
@@ -948,7 +947,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "UnusedUnderThisBase_14462"
                         ]
-                      }
+                      },
+                      "variableName": "_Rank06_BigDmgCount"
                     }
                   ]
                 },
@@ -972,7 +972,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill03_BaseAttack",
                   "value": {
                     "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Convert) || SUB || RETURN",
                     "displayLines": "(Skill03_BaseAttack - Skill03_BaseAttack_Convert)",
@@ -981,11 +980,11 @@ const compositeAbilityObject = {
                       "Skill03_BaseAttack",
                       "Skill03_BaseAttack_Convert"
                     ]
-                  }
+                  },
+                  "variableName": "Skill03_BaseAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill03_BaseAttack_Total_Ratio",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_6439) || RETURN",
                     "displayLines": "UnusedUnderThisBase_6439",
@@ -993,11 +992,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "UnusedUnderThisBase_6439"
                     ]
-                  }
+                  },
+                  "variableName": "Skill03_BaseAttack_Total_Ratio"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill03_BaseAttack_Total",
                   "value": {
                     "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Total_Ratio) || MUL || RETURN",
                     "displayLines": "(Skill03_BaseAttack * Skill03_BaseAttack_Total_Ratio)",
@@ -1006,7 +1005,8 @@ const compositeAbilityObject = {
                       "Skill03_BaseAttack",
                       "Skill03_BaseAttack_Total_Ratio"
                     ]
-                  }
+                  },
+                  "variableName": "Skill03_BaseAttack_Total"
                 },
                 {
                   "name": "IF",
@@ -1019,7 +1019,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill03_BaseAttack_Total",
                       "value": {
                         "operator": "Variables[0] (UnusedUnderThisBase_6427) || RETURN",
                         "displayLines": "UnusedUnderThisBase_6427",
@@ -1027,13 +1026,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "UnusedUnderThisBase_6427"
                         ]
-                      }
+                      },
+                      "variableName": "Skill03_BaseAttack_Total"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill03_BaseAttack_Total",
                       "value": {
                         "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6427) || ADD || RETURN",
                         "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)",
@@ -1042,7 +1041,8 @@ const compositeAbilityObject = {
                           "Skill03_BaseAttack_Total",
                           "UnusedUnderThisBase_6427"
                         ]
-                      }
+                      },
+                      "variableName": "Skill03_BaseAttack_Total"
                     }
                   ]
                 },
@@ -1365,7 +1365,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack",
                           "value": {
                             "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Convert) || SUB || RETURN",
                             "displayLines": "(Skill03_BaseAttack - Skill03_BaseAttack_Convert)",
@@ -1374,11 +1373,11 @@ const compositeAbilityObject = {
                               "Skill03_BaseAttack",
                               "Skill03_BaseAttack_Convert"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack_Total_Ratio",
                           "value": {
                             "operator": "Variables[0] (UnusedUnderThisBase_6439) || RETURN",
                             "displayLines": "UnusedUnderThisBase_6439",
@@ -1386,11 +1385,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "UnusedUnderThisBase_6439"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack_Total_Ratio"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack_Total",
                           "value": {
                             "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Total_Ratio) || MUL || RETURN",
                             "displayLines": "(Skill03_BaseAttack * Skill03_BaseAttack_Total_Ratio)",
@@ -1399,7 +1398,8 @@ const compositeAbilityObject = {
                               "Skill03_BaseAttack",
                               "Skill03_BaseAttack_Total_Ratio"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack_Total"
                         },
                         {
                           "name": "IF",
@@ -1412,7 +1412,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Skill03_BaseAttack_Total",
                               "value": {
                                 "operator": "Variables[0] (UnusedUnderThisBase_6427) || RETURN",
                                 "displayLines": "UnusedUnderThisBase_6427",
@@ -1420,13 +1419,13 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "UnusedUnderThisBase_6427"
                                 ]
-                              }
+                              },
+                              "variableName": "Skill03_BaseAttack_Total"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Skill03_BaseAttack_Total",
                               "value": {
                                 "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6427) || ADD || RETURN",
                                 "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)",
@@ -1435,7 +1434,8 @@ const compositeAbilityObject = {
                                   "Skill03_BaseAttack_Total",
                                   "UnusedUnderThisBase_6427"
                                 ]
-                              }
+                              },
+                              "variableName": "Skill03_BaseAttack_Total"
                             }
                           ]
                         },
@@ -1545,7 +1545,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack",
                           "value": {
                             "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Convert) || SUB || RETURN",
                             "displayLines": "(Skill03_BaseAttack - Skill03_BaseAttack_Convert)",
@@ -1554,11 +1553,11 @@ const compositeAbilityObject = {
                               "Skill03_BaseAttack",
                               "Skill03_BaseAttack_Convert"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack_Total_Ratio",
                           "value": {
                             "operator": "Variables[0] (UnusedUnderThisBase_6439) || RETURN",
                             "displayLines": "UnusedUnderThisBase_6439",
@@ -1566,11 +1565,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "UnusedUnderThisBase_6439"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack_Total_Ratio"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_BaseAttack_Total",
                           "value": {
                             "operator": "Variables[0] (Skill03_BaseAttack) || Variables[1] (Skill03_BaseAttack_Total_Ratio) || MUL || RETURN",
                             "displayLines": "(Skill03_BaseAttack * Skill03_BaseAttack_Total_Ratio)",
@@ -1579,7 +1578,8 @@ const compositeAbilityObject = {
                               "Skill03_BaseAttack",
                               "Skill03_BaseAttack_Total_Ratio"
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_BaseAttack_Total"
                         },
                         {
                           "name": "IF",
@@ -1592,7 +1592,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Skill03_BaseAttack_Total",
                               "value": {
                                 "operator": "Variables[0] (UnusedUnderThisBase_6427) || RETURN",
                                 "displayLines": "UnusedUnderThisBase_6427",
@@ -1600,13 +1599,13 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "UnusedUnderThisBase_6427"
                                 ]
-                              }
+                              },
+                              "variableName": "Skill03_BaseAttack_Total"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Skill03_BaseAttack_Total",
                               "value": {
                                 "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6427) || ADD || RETURN",
                                 "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)",
@@ -1615,7 +1614,8 @@ const compositeAbilityObject = {
                                   "Skill03_BaseAttack_Total",
                                   "UnusedUnderThisBase_6427"
                                 ]
-                              }
+                              },
+                              "variableName": "Skill03_BaseAttack_Total"
                             }
                           ]
                         },
@@ -1740,8 +1740,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_EnergyBarCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Skill02_EnergyBarCount"
                     }
                   ]
                 },
@@ -1804,8 +1804,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_ActionCount"
                 }
               ]
             },

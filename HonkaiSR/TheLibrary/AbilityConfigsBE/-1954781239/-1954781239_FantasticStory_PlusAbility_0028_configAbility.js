@@ -7,8 +7,8 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_PlusAbility_0028",
-      "value": 1
+      "value": 1,
+      "variableName": "DV_FantasticStory_PlusAbility_0028"
     },
     {
       "name": "Declare Custom Variable",

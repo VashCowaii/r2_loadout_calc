@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_HasDot",
-      "value": 0
+      "value": 0,
+      "variableName": "_HasDot"
     },
     {
       "name": "IF",
@@ -277,8 +277,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HasDot",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_HasDot"
                 }
               ]
             }

@@ -99,8 +99,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "_IsStoryTri",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_IsStoryTri"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -108,8 +108,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 99
+                  "value": 99,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -518,9 +518,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ShieldAddMaxLayer",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "ShieldAddMaxLayer"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -683,7 +683,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ShieldAddMaxLayer",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
                 "displayLines": "MDF_AddMaxLayer",
@@ -692,7 +692,7 @@ const configAbility = {
                   "MDF_AddMaxLayer"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "ShieldAddMaxLayer"
             },
             {
               "name": "Add Events/Bonuses",
@@ -744,9 +744,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ShieldAddMaxLayer",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "ShieldAddMaxLayer"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -909,7 +909,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ShieldAddMaxLayer",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
                 "displayLines": "MDF_AddMaxLayer",
@@ -918,7 +918,7 @@ const configAbility = {
                   "MDF_AddMaxLayer"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "ShieldAddMaxLayer"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1204,8 +1204,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ],
                   "failed": [
@@ -1220,8 +1220,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "AIFlag"
                         }
                       ],
                       "failed": [
@@ -1236,8 +1236,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "AIFlag",
-                              "value": 5
+                              "value": 5,
+                              "variableName": "AIFlag"
                             }
                           ]
                         }
@@ -1249,7 +1249,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentTurn",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_CurrentTurn + 1)",
@@ -1259,7 +1258,8 @@ const configAbility = {
                 "variables": [
                   "MDF_CurrentTurn"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentTurn"
             },
             {
               "name": "IF",
@@ -1272,7 +1272,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentTurn",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (3) || SUB || RETURN",
                     "displayLines": "(MDF_CurrentTurn - 3)",
@@ -1282,7 +1281,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentTurn"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentTurn"
                 }
               ]
             }
@@ -1847,8 +1847,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BattleScore",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_BattleScore"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1945,8 +1945,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstChange",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "FirstChange"
                 }
               ]
             }
@@ -2109,16 +2109,16 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FirstUse",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "MDF_FirstUse"
                 },
                 "Modifier Deletes Itself"
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FirstUse",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_FirstUse"
                 }
               ]
             }
@@ -2190,8 +2190,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FirstStack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_FirstStack"
                 }
               ]
             },
@@ -2602,8 +2602,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ReduceLayer",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_ReduceLayer"
                     }
                   ]
                 }

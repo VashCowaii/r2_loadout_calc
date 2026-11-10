@@ -56,7 +56,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonCount",
           "value": {
             "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(SummonCount + 1)",
@@ -66,7 +65,8 @@ const configAbility = {
             "variables": [
               "SummonCount"
             ]
-          }
+          },
+          "variableName": "SummonCount"
         },
         {
           "name": "IF",
@@ -79,7 +79,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[2]]}",
@@ -87,18 +86,18 @@ const configAbility = {
                 "variables": [
                   "{[PassiveSkill03[2]]}"
                 ]
-              }
+              },
+              "variableName": "DelayRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonCount",
-              "value": 0
+              "value": 0,
+              "variableName": "SummonCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[4]]}",
@@ -106,7 +105,8 @@ const configAbility = {
                 "variables": [
                   "{[PassiveSkill03[4]]}"
                 ]
-              }
+              },
+              "variableName": "DelayRatio"
             }
           ]
         },

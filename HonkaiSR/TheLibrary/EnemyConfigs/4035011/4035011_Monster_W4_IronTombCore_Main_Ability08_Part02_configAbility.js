@@ -18,7 +18,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_QTE_Progress",
       "value": {
         "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__106) || RETURN",
         "displayLines": "ENEMIES_OBJECT_UNUSED__106",
@@ -26,7 +25,8 @@ const configAbility = {
         "variables": [
           "ENEMIES_OBJECT_UNUSED__106"
         ]
-      }
+      },
+      "variableName": "#CL_QTE_Progress"
     },
     {
       "name": "Set IronTomb Progress",
@@ -48,8 +48,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_QTE_Progress",
-      "value": 80
+      "value": 80,
+      "variableName": "#CL_QTE_Progress"
     },
     {
       "name": "Set IronTomb Progress",
@@ -59,8 +59,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_QTE_Progress",
-      "value": 95
+      "value": 95,
+      "variableName": "#CL_QTE_Progress"
     },
     {
       "name": "Trigger Ability",

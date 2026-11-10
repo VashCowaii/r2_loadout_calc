@@ -147,8 +147,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
-      "value": 8
+      "value": 8,
+      "variableName": "AIFlag"
     },
     "Trigger: Ability End"
   ],

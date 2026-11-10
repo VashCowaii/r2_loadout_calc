@@ -38,8 +38,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Rappa_00_Achievenment",
-      "value": 1
+      "value": 1,
+      "variableName": "Rappa_00_Achievenment"
     }
   ],
   "references": [],

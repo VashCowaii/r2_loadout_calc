@@ -36,7 +36,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S01_T_PTN",
       "value": {
         "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
         "displayLines": "_Partner_Count_Show",
@@ -44,12 +43,13 @@ const configAbility = {
         "variables": [
           "_Partner_Count_Show"
         ]
-      }
+      },
+      "variableName": "S01_T_PTN"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S01_HitCount",
-      "value": 0
+      "value": 0,
+      "variableName": "S01_HitCount"
     },
     {
       "name": "Looped Event",
@@ -69,7 +69,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "S01_T_PTN",
           "value": {
             "operator": "Variables[0] (S01_T_PTN) || Variables[1] (_Partner_CountThresHold) || SUB || RETURN",
             "displayLines": "(S01_T_PTN - _Partner_CountThresHold)",
@@ -78,11 +77,11 @@ const configAbility = {
               "S01_T_PTN",
               "_Partner_CountThresHold"
             ]
-          }
+          },
+          "variableName": "S01_T_PTN"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S01_HitCount",
           "value": {
             "operator": "Variables[0] (S01_HitCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(S01_HitCount + 1)",
@@ -92,7 +91,8 @@ const configAbility = {
             "variables": [
               "S01_HitCount"
             ]
-          }
+          },
+          "variableName": "S01_HitCount"
         }
       ]
     },
@@ -337,7 +337,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Count",
       "value": {
         "operator": "Variables[0] (_Partner_Count_Show) || Variables[1] (1) || ADD || Variables[2] (_Evernight_00_Extra_Energy) || ADD || RETURN",
         "displayLines": "((_Partner_Count_Show + 1) + _Evernight_00_Extra_Energy)",
@@ -347,7 +346,8 @@ const configAbility = {
           1,
           "_Evernight_00_Extra_Energy"
         ]
-      }
+      },
+      "variableName": "_Partner_Count"
     },
     {
       "name": "IF",

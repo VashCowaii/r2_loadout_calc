@@ -13,7 +13,7 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Count",
+      "scope": "ContextAbility",
       "value": {
         "operator": "Variables[0] (MIN) || Variables[1] (Skill22_Energy) || Variables[2] (4) || PARAM_2 || FUNCTION || RETURN",
         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(Skill22_Energy, 4)",
@@ -24,17 +24,17 @@ const configAbility = {
           4
         ]
       },
-      "scope": "ContextAbility"
+      "variableName": "Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_count",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "_count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_delta_frame",
+      "scope": "ContextAbility",
       "value": {
         "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (4) || Variables[3] (Count) || MUL || Constants[0] (1) || SUB || DIV || RETURN",
         "displayLines": "((PHAINON_OBJECT_UNUSED_1 - PHAINON_OBJECT_UNUSED_2) / ((4 * Count) - 1))",
@@ -48,11 +48,10 @@ const configAbility = {
           "Count"
         ]
       },
-      "scope": "ContextAbility"
+      "variableName": "_delta_frame"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_prev_energy",
       "value": {
         "operator": "Variables[0] (Skill22_Energy) || RETURN",
         "displayLines": "Skill22_Energy",
@@ -60,7 +59,8 @@ const configAbility = {
         "variables": [
           "Skill22_Energy"
         ]
-      }
+      },
+      "variableName": "_prev_energy"
     },
     {
       "name": "Adjust Variable Value",
@@ -139,7 +139,7 @@ const configAbility = {
           "paramSequence": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
+              "scope": "ContextAbility",
               "value": {
                 "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_count + 1)",
@@ -150,7 +150,7 @@ const configAbility = {
                   "_count"
                 ]
               },
-              "scope": "ContextAbility"
+              "variableName": "_count"
             },
             {
               "name": "Add Events/Bonuses",

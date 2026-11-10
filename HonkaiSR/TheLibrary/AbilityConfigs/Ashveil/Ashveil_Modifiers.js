@@ -62,7 +62,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalRatio",
               "value": {
                 "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(0.04 * MDF_Layer)",
@@ -71,7 +70,8 @@ const configAbility = {
                   0.04,
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_TotalRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -222,7 +222,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageTakenForShow",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
                     "displayLines": "MDF_DamageTakenAdd2",
@@ -230,7 +229,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DamageTakenAdd2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageTakenForShow"
                 }
               ],
               "failed": [
@@ -253,7 +253,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageTakenForShow",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
                     "displayLines": "MDF_DamageTakenAdd1",
@@ -261,7 +260,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DamageTakenAdd1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageTakenForShow"
                 }
               ]
             }
@@ -313,7 +313,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageTakenForShow",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
                     "displayLines": "MDF_DamageTakenAdd2",
@@ -321,7 +320,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DamageTakenAdd2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageTakenForShow"
                 }
               ],
               "failed": [
@@ -344,7 +344,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageTakenForShow",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
                     "displayLines": "MDF_DamageTakenAdd1",
@@ -352,7 +351,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DamageTakenAdd1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageTakenForShow"
                 }
               ]
             }
@@ -523,7 +523,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Cal1",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (SkillP01_EnhanceInsertBuffStack) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillP01_EnhanceInsertBuffStack / 1))",
@@ -533,11 +532,11 @@ const configAbility = {
                       "SkillP01_EnhanceInsertBuffStack",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Cal1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Cal2",
                   "value": {
                     "operator": "Variables[0] (0.8) || Variables[1] (0.1) || Variables[2] (MDF_Cal1) || MUL || ADD || RETURN",
                     "displayLines": "(0.8 + (0.1 * MDF_Cal1))",
@@ -547,7 +546,8 @@ const configAbility = {
                       0.1,
                       "MDF_Cal1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Cal2"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -577,8 +577,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EnemyCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_EnemyCount"
             }
           ]
         },
@@ -639,7 +639,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnemyCount",
                       "value": {
                         "operator": "Variables[0] (MDF_EnemyCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_EnemyCount + 1)",
@@ -649,7 +648,8 @@ const configAbility = {
                         "variables": [
                           "MDF_EnemyCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_EnemyCount"
                     }
                   ]
                 },
@@ -671,7 +671,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_EnhanceInsertBuffStack",
                       "value": {
                         "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
@@ -680,7 +679,8 @@ const configAbility = {
                           "SkillP01_EnhanceInsertBuffStack",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_EnhanceInsertBuffStack"
                     },
                     {
                       "name": "IF",
@@ -717,7 +717,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnemyCount",
                       "value": {
                         "operator": "Variables[0] (MDF_EnemyCount) || Variables[1] (1) || SUB || RETURN",
                         "displayLines": "(MDF_EnemyCount - 1)",
@@ -726,7 +725,8 @@ const configAbility = {
                           "MDF_EnemyCount",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_EnemyCount"
                     }
                   ]
                 }
@@ -752,7 +752,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ExtraInsertCountForShow",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_ExtraInsertCountForShow) || Variables[2] (4) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_ExtraInsertCountForShow / 4))",
@@ -762,7 +761,8 @@ const configAbility = {
                   "MDF_ExtraInsertCountForShow",
                   4
                 ]
-              }
+              },
+              "variableName": "MDF_ExtraInsertCountForShow"
             },
             {
               "name": "Define Modifier Variable",
@@ -815,7 +815,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_EnhanceInsertBuffStack",
                       "value": {
                         "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStackLimit) || RETURN",
                         "displayLines": "SkillP01_EnhanceInsertBuffStackLimit",
@@ -823,7 +822,8 @@ const configAbility = {
                         "variables": [
                           "SkillP01_EnhanceInsertBuffStackLimit"
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_EnhanceInsertBuffStack"
                     }
                   ]
                 },
@@ -908,7 +908,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_CurrentEnergy",
                       "value": {
                         "operator": "Variables[0] (SkillP01_MaxEnergy) || RETURN",
                         "displayLines": "SkillP01_MaxEnergy",
@@ -916,7 +915,8 @@ const configAbility = {
                         "variables": [
                           "SkillP01_MaxEnergy"
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_CurrentEnergy"
                     }
                   ]
                 },

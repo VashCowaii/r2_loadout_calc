@@ -203,9 +203,9 @@ const compositeAbilityObject = {
                           }
                         ]
                       },
-                      "variableName": "_LocalLegend_PreSelectFlag",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "_LocalLegend_PreSelectFlag"
                     }
                   ],
                   "failed": [
@@ -252,9 +252,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "variableName": "_LocalLegend_PreSelectFlag",
+                          "scope": "AITag",
                           "value": 1,
-                          "scope": "AITag"
+                          "variableName": "_LocalLegend_PreSelectFlag"
                         }
                       ],
                       "failed": [
@@ -287,9 +287,9 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "variableName": "_LocalLegend_PreSelectFlag",
+                          "scope": "AITag",
                           "value": 1,
-                          "scope": "AITag"
+                          "variableName": "_LocalLegend_PreSelectFlag"
                         }
                       ]
                     }
@@ -447,7 +447,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue1",
                   "value": {
                     "operator": "Variables[0] (_DamageAddedRatio) || RETURN",
                     "displayLines": "_DamageAddedRatio",
@@ -455,11 +454,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "_DamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue2",
                   "value": {
                     "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
                     "displayLines": "_DamageReduceRatio",
@@ -467,7 +466,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_DamageReduceRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue2"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1252,8 +1252,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EnterBattle",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_EnterBattle"
                     },
                     {
                       "name": "IF",
@@ -1854,7 +1854,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -1863,7 +1862,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1871,7 +1871,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Light Praetor: 3}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -1880,7 +1879,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1989,9 +1989,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_BattleTarget_LocalLegend_S4_1_Check"
                         }
                       ]
                     },
@@ -2095,7 +2095,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2104,7 +2103,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -2112,7 +2112,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Light Praetor: 3}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2121,7 +2120,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2287,8 +2287,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2409,7 +2409,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2418,7 +2417,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -2426,7 +2426,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2435,7 +2434,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2544,9 +2544,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_BattleTarget_LocalLegend_S4_1_Check"
                         }
                       ]
                     },
@@ -2646,7 +2646,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2655,7 +2654,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -2663,7 +2663,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                       },
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                         "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2672,7 +2671,8 @@ const compositeAbilityObject = {
                           "_DelayRatio",
                           "_DelayAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2934,8 +2934,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageLock",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DamageLock"
                 }
               ]
             },
@@ -2980,8 +2980,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageLock",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DamageLock"
                     }
                   ]
                 }
@@ -2992,8 +2992,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageLock",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DamageLock"
                 }
               ]
             },
@@ -3002,8 +3002,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageLock",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DamageLock"
                 }
               ]
             }
@@ -3039,7 +3039,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EntityScore",
                   "value": {
                     "operator": "Variables[0] (_EntityScore) || RETURN",
                     "displayLines": "_EntityScore",
@@ -3047,7 +3046,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_EntityScore"
                 }
               ]
             }
@@ -3115,8 +3115,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}.[[getSummoner]]"
                       },
-                      "variableName": "MDF_AddStore",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AddStore"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -3168,12 +3168,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TurnReset",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_TurnReset"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEntityScore",
                       "value": {
                         "operator": "Variables[0] (_EntityScore) || RETURN",
                         "displayLines": "_EntityScore",
@@ -3181,7 +3180,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_EntityScore"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_LastEntityScore"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3286,7 +3286,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxEntityScore",
                   "value": {
                     "operator": "Variables[0] (MDF_EntityScore) || RETURN",
                     "displayLines": "MDF_EntityScore",
@@ -3294,7 +3293,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxEntityScore"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3307,7 +3307,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEntityScore",
                   "value": {
                     "operator": "Variables[0] (_EntityScore) || RETURN",
                     "displayLines": "_EntityScore",
@@ -3315,7 +3314,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LastEntityScore"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -3356,8 +3356,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_AddStore",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AddStore"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -3471,8 +3471,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_EntityScore",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_EntityScore"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -3503,7 +3503,6 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EntityScore",
                   "value": {
                     "operator": "Variables[0] (_EntityScore) || RETURN",
                     "displayLines": "_EntityScore",
@@ -3511,7 +3510,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_EntityScore"
                 },
                 {
                   "name": "Update Hit-Count Energy Bar",
@@ -3534,7 +3534,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEntityScore",
                   "value": {
                     "operator": "Variables[0] (_EntityScore) || RETURN",
                     "displayLines": "_EntityScore",
@@ -3542,7 +3541,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_EntityScore"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LastEntityScore"
                 },
                 {
                   "name": "IF",
@@ -3595,7 +3595,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_MonsterChangeCnt",
+                          "scope": "TargetEntity",
                           "value": {
                             "operator": "Variables[0] (_EntityScore) || RETURN",
                             "displayLines": "_EntityScore",
@@ -3604,7 +3604,7 @@ const compositeAbilityObject = {
                               "_EntityScore"
                             ]
                           },
-                          "scope": "TargetEntity"
+                          "variableName": "_MonsterChangeCnt"
                         }
                       ]
                     }
@@ -3883,9 +3883,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_AddStore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "MDF_AddStore"
                     }
                   ]
                 }
@@ -4280,7 +4280,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_MonsterChangeCnt",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (_Avatar_LifeCount) || RETURN",
                     "displayLines": "_Avatar_LifeCount",
@@ -4289,7 +4289,7 @@ const compositeAbilityObject = {
                       "_Avatar_LifeCount"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "_MonsterChangeCnt"
                 },
                 {
                   "name": "Find New Target",
@@ -4606,9 +4606,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_BattleTarget_LocalLegend_S1_1_Check",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_BattleTarget_LocalLegend_S1_1_Check"
                         }
                       ]
                     },
@@ -4634,9 +4634,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "MDF_AddStore",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "MDF_AddStore"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -5099,7 +5099,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayAddedRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[15]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[15]]}",
@@ -5107,7 +5106,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[PassiveSkill03[15]]}"
             ]
-          }
+          },
+          "variableName": "_DelayAddedRatio"
         },
         {
           "name": "IF",
@@ -5119,7 +5119,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[0]]}",
@@ -5127,11 +5126,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[0]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[0]]}",
@@ -5139,11 +5138,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[0]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[2]]}",
@@ -5151,7 +5150,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[2]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5185,7 +5185,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[6]]}",
@@ -5193,11 +5192,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[6]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[13]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[13]]}",
@@ -5205,11 +5204,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[13]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[14]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[14]]}",
@@ -5217,7 +5216,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[14]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5241,7 +5241,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[5]]}",
@@ -5249,11 +5248,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[5]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[11]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[11]]}",
@@ -5261,11 +5260,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[11]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[12]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[12]]}",
@@ -5273,7 +5272,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[12]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5297,7 +5297,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[4]]}",
@@ -5305,11 +5304,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[4]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[9]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[9]]}",
@@ -5317,11 +5316,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[9]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[10]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[10]]}",
@@ -5329,7 +5328,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[10]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5353,7 +5353,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[3]]}",
@@ -5361,11 +5360,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[3]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[7]]}",
@@ -5373,11 +5372,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[7]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[8]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[8]]}",
@@ -5385,7 +5384,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[8]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5409,7 +5409,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[2]]}",
@@ -5417,11 +5416,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[2]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[5]]}",
@@ -5429,11 +5428,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[5]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[6]]}",
@@ -5441,7 +5440,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[6]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5465,7 +5465,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageReduceRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[1]]}",
@@ -5473,11 +5472,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[1]]}"
                 ]
-              }
+              },
+              "variableName": "_DamageReduceRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DelayRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[3]]}",
@@ -5485,11 +5484,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[3]]}"
                 ]
-              }
+              },
+              "variableName": "_DelayRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[4]]}",
@@ -5497,7 +5496,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[4]]}"
                 ]
-              }
+              },
+              "variableName": "_HealHPRatio"
             }
           ]
         },
@@ -5521,8 +5521,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertCheck",
-              "value": 0
+              "value": 0,
+              "variableName": "InsertCheck"
             }
           ]
         },
@@ -6434,8 +6434,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck03",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertCheck03"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -6489,8 +6489,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck04",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertCheck04"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -6585,8 +6585,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "variableName": "_BossUI",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_BossUI"
                 }
               ]
             },
@@ -6769,8 +6769,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "variableName": "_BossUI",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BossUI"
                 }
               ]
             },

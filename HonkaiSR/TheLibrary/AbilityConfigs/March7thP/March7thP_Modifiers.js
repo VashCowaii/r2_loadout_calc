@@ -277,7 +277,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FrozenCount",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (MDF_FrozenCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_FrozenCount + 1)",
@@ -288,7 +288,7 @@ const configAbility = {
                           "MDF_FrozenCount"
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "MDF_FrozenCount"
                     },
                     "Modifier Deletes Itself"
                   ]

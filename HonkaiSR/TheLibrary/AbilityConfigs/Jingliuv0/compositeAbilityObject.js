@@ -578,8 +578,8 @@ const compositeAbilityObject = {
                 "Modifier Deletes Itself",
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 }
               ]
             }
@@ -971,7 +971,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "HpConsumption",
                           "value": {
                             "operator": "Variables[0] (HpConsumption) || Variables[1] (TargetMaxHp) || Variables[2] (SkillP01_P2_HpConsumption) || MUL || ADD || RETURN",
                             "displayLines": "(HpConsumption + (TargetMaxHp * SkillP01_P2_HpConsumption))",
@@ -981,7 +980,8 @@ const compositeAbilityObject = {
                               "TargetMaxHp",
                               "SkillP01_P2_HpConsumption"
                             ]
-                          }
+                          },
+                          "variableName": "HpConsumption"
                         }
                       ],
                       "failed": [
@@ -1004,7 +1004,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "HpConsumption",
                           "value": {
                             "operator": "Variables[0] (HpConsumption) || Variables[1] (TargetCurrentHp) || ADD || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "((HpConsumption + TargetCurrentHp) - 1)",
@@ -1015,7 +1014,8 @@ const compositeAbilityObject = {
                               "HpConsumption",
                               "TargetCurrentHp"
                             ]
-                          }
+                          },
+                          "variableName": "HpConsumption"
                         }
                       ]
                     }
@@ -1039,7 +1039,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackDelta",
                       "value": {
                         "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] ([object Object]) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
                         "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + ([object Object] * HpConsumption))",
@@ -1049,7 +1048,8 @@ const compositeAbilityObject = {
                           "HpConsumption",
                           {}
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackDelta"
                     },
                     {
                       "name": "IF",
@@ -1071,7 +1071,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AttackDelta",
                           "value": {
                             "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
                             "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
@@ -1081,7 +1080,8 @@ const compositeAbilityObject = {
                               "MDF_BaseAttack",
                               {}
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AttackDelta"
                         }
                       ]
                     }
@@ -1089,7 +1089,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackDelta",
                       "value": {
                         "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || RETURN",
                         "displayLines": "(SkillP01_P3_ATKRatioUp * HpConsumption)",
@@ -1098,7 +1097,8 @@ const compositeAbilityObject = {
                           "SkillP01_P3_ATKRatioUp",
                           "HpConsumption"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackDelta"
                     },
                     {
                       "name": "IF",
@@ -1119,7 +1119,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AttackDelta",
                           "value": {
                             "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || RETURN",
                             "displayLines": "(SkillP01_P4_JingliuAttackBase * MDF_BaseAttack)",
@@ -1128,7 +1127,8 @@ const compositeAbilityObject = {
                               "SkillP01_P4_JingliuAttackBase",
                               "MDF_BaseAttack"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AttackDelta"
                         }
                       ]
                     }
@@ -1191,8 +1191,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "HpConsumption"
                     }
                   ]
                 }
@@ -1439,8 +1439,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "HpConsumption"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1513,8 +1513,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "HpConsumption"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1587,8 +1587,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "HpConsumption"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1674,8 +1674,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "HpConsumption"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2926,7 +2926,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Jingliu_FullMoonFlagMax",
               "value": {
                 "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
@@ -2936,14 +2935,15 @@ const compositeAbilityObject = {
                 "variables": [
                   "Jingliu_FullMoonFlagMax"
                 ]
-              }
+              },
+              "variableName": "Jingliu_FullMoonFlagMax"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "HpConsumption",
-          "value": 0
+          "value": 0,
+          "variableName": "HpConsumption"
         },
         {
           "name": "Read Variable Value",
@@ -2975,7 +2975,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Jingliu_MoonFlagMax",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -2983,7 +2982,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Jingliu_MoonFlagMax"
         },
         {
           "name": "Update Displayed Energy Bar",

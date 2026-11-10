@@ -88,7 +88,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageAdd",
                       "value": {
                         "operator": "Variables[0] (_CasterMaxSP) || Variables[1] (200) || SUB || Variables[2] (0.0019999999) || MUL || RETURN",
                         "displayLines": "((_CasterMaxSP - 200) * 0.0019999999)",
@@ -98,7 +97,8 @@ const configAbility = {
                           200,
                           0.0019999999
                         ]
-                      }
+                      },
+                      "variableName": "_DamageAdd"
                     },
                     {
                       "name": "IF",
@@ -118,7 +118,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DamageAdd",
                           "value": {
                             "operator": "Variables[0] (0.32) || RETURN",
                             "displayLines": "0.32",
@@ -126,7 +125,8 @@ const configAbility = {
                             "variables": [
                               0.32
                             ]
-                          }
+                          },
+                          "variableName": "_DamageAdd"
                         }
                       ]
                     },

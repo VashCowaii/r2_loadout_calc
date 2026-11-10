@@ -180,7 +180,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AggroAddedRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_AggroAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(MDF_AggroAddedRatio_PerLayer * ModifierLayers)",
@@ -189,7 +188,8 @@ const compositeAbilityObject = {
                       "MDF_AggroAddedRatio_PerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AggroAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1021,7 +1021,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffLastCount",
                   "value": {
                     "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
                     "displayLines": "DebuffCurrentCount",
@@ -1029,7 +1028,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "DebuffCurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "DebuffLastCount"
                 },
                 {
                   "name": "Define Custom Variable with Status Counter",
@@ -1217,7 +1217,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffLastCount",
                   "value": {
                     "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
                     "displayLines": "DebuffCurrentCount",
@@ -1225,7 +1224,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "DebuffCurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "DebuffLastCount"
                 },
                 {
                   "name": "Define Custom Variable with Status Counter",

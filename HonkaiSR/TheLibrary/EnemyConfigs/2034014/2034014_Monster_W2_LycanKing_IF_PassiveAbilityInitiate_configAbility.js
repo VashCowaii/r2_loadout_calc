@@ -243,7 +243,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Wolf_MaxAttackCount",
       "value": {
         "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
         "displayLines": "{[SkillP01[2]]}",
@@ -251,7 +250,8 @@ const configAbility = {
         "variables": [
           "{[SkillP01[2]]}"
         ]
-      }
+      },
+      "variableName": "Wolf_MaxAttackCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -585,8 +585,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -602,8 +602,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isCountDown",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isCountDown"
                 }
               ]
             }
@@ -636,7 +636,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxCount",
                   "value": {
                     "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
                     "displayLines": "{[SkillP02[0]]}",
@@ -644,13 +643,13 @@ const configAbility = {
                     "variables": [
                       "{[SkillP02[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxCount",
                   "value": {
                     "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
                     "displayLines": "{[SkillP02[1]]}",
@@ -658,13 +657,13 @@ const configAbility = {
                     "variables": [
                       "{[SkillP02[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxCount"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CountDown",
               "value": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                 "displayLines": "MDF_MaxCount",
@@ -672,7 +671,8 @@ const configAbility = {
                 "variables": [
                   "MDF_MaxCount"
                 ]
-              }
+              },
+              "variableName": "MDF_CountDown"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -854,8 +854,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isCountDown",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isCountDown"
                 },
                 {
                   "name": "IF",
@@ -930,8 +930,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1008,8 +1008,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1068,8 +1068,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isSetActionDelay",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isSetActionDelay"
                 }
               ]
             }
@@ -1080,8 +1080,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isSetActionDelay",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isSetActionDelay"
             }
           ]
         },
@@ -1195,8 +1195,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1255,8 +1255,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isSetActionDelay",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isSetActionDelay"
                 }
               ]
             }
@@ -1267,8 +1267,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isSetActionDelay",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isSetActionDelay"
             }
           ]
         },
@@ -1531,8 +1531,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         },

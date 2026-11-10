@@ -109,7 +109,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Bomb_Damage_Adjoin",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
                     "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)",
@@ -119,7 +118,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio",
                       "Bomb_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "Bomb_Damage_Adjoin"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -193,7 +193,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Bomb_Damage",
               "value": {
                 "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
                 "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio) * Bomb_Layer)",
@@ -203,7 +202,8 @@ const configAbility = {
                   "DV_FantasticStory_BaseAbility_2110_BeforeFever_P2_Ratio",
                   "Bomb_Layer"
                 ]
-              }
+              },
+              "variableName": "Bomb_Damage"
             },
             {
               "name": "Add Ability",
@@ -258,7 +258,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Bomb_Damage_Adjoin",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) || MUL || Variables[2] (Bomb_Layer) || MUL || RETURN",
                     "displayLines": "((BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio) * Bomb_Layer)",
@@ -268,7 +267,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_2110_EnterFever_P3_Ratio",
                       "Bomb_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "Bomb_Damage_Adjoin"
                 },
                 {
                   "name": "IF",
@@ -529,8 +529,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_BeingHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_BeingHitCount"
                 }
               ]
             }

@@ -109,7 +109,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EnemyCount",
                   "value": {
                     "operator": "Variables[0] (MDF_EnemyCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_EnemyCount + 1)",
@@ -119,7 +118,8 @@ const configAbility = {
                     "variables": [
                       "MDF_EnemyCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_EnemyCount"
                 }
               ]
             },
@@ -142,8 +142,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EnemyCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_EnemyCount"
             }
           ]
         },

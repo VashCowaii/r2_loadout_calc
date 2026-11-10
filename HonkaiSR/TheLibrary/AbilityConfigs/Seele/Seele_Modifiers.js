@@ -282,7 +282,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_FinalDamageRatio",
               "value": {
                 "operator": "Variables[0] (MDF_DamageRatio) || Variables[1] (MDF_ModifierLayers) || MUL || RETURN",
                 "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)",
@@ -291,7 +290,8 @@ const configAbility = {
                   "MDF_DamageRatio",
                   "MDF_ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_FinalDamageRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -675,7 +675,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FinalUltraDamage",
                   "value": {
                     "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (AddUltraDamage) || ADD || RETURN",
                     "displayLines": "(FinalUltraDamage + AddUltraDamage)",
@@ -684,7 +683,8 @@ const configAbility = {
                       "FinalUltraDamage",
                       "AddUltraDamage"
                     ]
-                  }
+                  },
+                  "variableName": "FinalUltraDamage"
                 }
               ]
             }

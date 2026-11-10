@@ -90,7 +90,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TV_01_EliteChance",
               "value": {
                 "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
                 "displayLines": "{[Skill01[0]]}",
@@ -98,13 +97,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill01[0]]}"
                 ]
-              }
+              },
+              "variableName": "TV_01_EliteChance"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TV_01_EliteChance",
               "value": {
                 "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
                 "displayLines": "(TV_01_EliteChance / 100)",
@@ -114,7 +113,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "TV_01_EliteChance"
                 ]
-              }
+              },
+              "variableName": "TV_01_EliteChance"
             }
           ]
         },
@@ -350,9 +350,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "TV_01_EliteFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "TV_01_EliteFlag"
             }
           ]
         },
@@ -401,9 +401,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "TV_01_EliteFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "TV_01_EliteFlag"
                     }
                   ]
                 },
@@ -437,9 +437,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "TV_01_EliteFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "TV_01_EliteFlag"
                     }
                   ]
                 },

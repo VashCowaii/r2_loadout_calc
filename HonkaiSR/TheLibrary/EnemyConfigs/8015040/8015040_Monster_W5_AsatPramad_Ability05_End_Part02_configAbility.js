@@ -83,8 +83,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentFace",
-          "value": 0
+          "value": 0,
+          "variableName": "CurrentFace"
         },
         {
           "name": "IF",

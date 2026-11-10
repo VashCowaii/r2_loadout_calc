@@ -127,7 +127,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DebuffLastCount",
               "value": {
                 "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
                 "displayLines": "DebuffCurrentCount",
@@ -135,7 +134,8 @@ const configAbility = {
                 "variables": [
                   "DebuffCurrentCount"
                 ]
-              }
+              },
+              "variableName": "DebuffLastCount"
             },
             {
               "name": "Define Custom Variable with Status Counter",
@@ -323,7 +323,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DebuffLastCount",
               "value": {
                 "operator": "Variables[0] (DebuffCurrentCount) || RETURN",
                 "displayLines": "DebuffCurrentCount",
@@ -331,7 +330,8 @@ const configAbility = {
                 "variables": [
                   "DebuffCurrentCount"
                 ]
-              }
+              },
+              "variableName": "DebuffLastCount"
             },
             {
               "name": "Define Custom Variable with Status Counter",

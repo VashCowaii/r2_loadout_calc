@@ -65,8 +65,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelectTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "_SelectTimes"
         }
       ],
       "failed": [

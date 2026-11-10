@@ -15,8 +15,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "TriggerOnce",
-          "value": 0
+          "value": 0,
+          "variableName": "TriggerOnce"
         },
         {
           "name": "Trigger Ability",
@@ -50,8 +50,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TriggerOnce",
-          "value": 1
+          "value": 1,
+          "variableName": "TriggerOnce"
         }
       ]
     }

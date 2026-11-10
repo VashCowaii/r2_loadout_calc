@@ -14,7 +14,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CritChanceBase",
       "value": {
         "operator": "Variables[0] (0.025) || RETURN",
         "displayLines": "0.025",
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           0.025
         ]
-      }
+      },
+      "variableName": "MDF_CritChanceBase"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -67,7 +67,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_MaxCount",
           "value": {
             "operator": "Variables[0] (10) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(10 + 2)",
@@ -76,7 +75,8 @@ const configAbility = {
               10,
               2
             ]
-          }
+          },
+          "variableName": "MDF_MaxCount"
         },
         {
           "name": "Looped Event",
@@ -111,7 +111,6 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_MaxCount",
           "value": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -119,7 +118,8 @@ const configAbility = {
             "variables": [
               10
             ]
-          }
+          },
+          "variableName": "MDF_MaxCount"
         }
       ]
     },

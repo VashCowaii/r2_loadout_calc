@@ -362,8 +362,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Location",
-              "value": 1
+              "value": 1,
+              "variableName": "_Location"
             }
           ],
           "failed": [
@@ -377,8 +377,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Location",
-              "value": 0
+              "value": 0,
+              "variableName": "_Location"
             }
           ]
         }

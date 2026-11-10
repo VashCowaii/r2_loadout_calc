@@ -152,8 +152,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability23040_CD",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Ability23040_CD"
                     }
                   ]
                 }
@@ -206,8 +206,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability23040_HealFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Ability23040_HealFlag"
                     }
                   ]
                 }
@@ -333,8 +333,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability23040_CD",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ability23040_CD"
                         }
                       ]
                     }
@@ -354,8 +354,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability23040_HealFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Ability23040_HealFlag"
                     }
                   ]
                 }

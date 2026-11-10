@@ -3395,7 +3395,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "variableName": "DamageUpRatio",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[0]]}",
@@ -3404,7 +3404,7 @@ const compositeAbilityObject = {
               "{[PassiveSkill01[0]]}"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "DamageUpRatio"
         },
         {
           "name": "IF",
@@ -3505,9 +3505,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MonsterNumDamageUpLayer",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "MonsterNumDamageUpLayer"
         },
         {
           "name": "IF",
@@ -3587,9 +3587,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MonsterNumDamageUpLayer",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "MonsterNumDamageUpLayer"
         },
         "Trigger: Ability End"
       ],
@@ -3650,9 +3650,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MonsterNumDamageUpLayer",
+              "scope": "TargetEntity",
               "value": 3,
-              "scope": "TargetEntity"
+              "variableName": "MonsterNumDamageUpLayer"
             }
           ],
           "failed": [
@@ -3671,9 +3671,9 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterNumDamageUpLayer",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "MonsterNumDamageUpLayer"
                 }
               ],
               "failed": [
@@ -3692,17 +3692,17 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MonsterNumDamageUpLayer",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "MonsterNumDamageUpLayer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MonsterNumDamageUpLayer",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "MonsterNumDamageUpLayer"
                     }
                   ]
                 }
@@ -3731,9 +3731,9 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Phase2FirstSummon",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Phase2FirstSummon"
                 },
                 {
                   "name": "IF",
@@ -4148,7 +4148,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "variableName": "DamageUpRatio",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[0]]}",
@@ -4157,7 +4157,7 @@ const compositeAbilityObject = {
               "{[PassiveSkill01[0]]}"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "DamageUpRatio"
         },
         {
           "name": "IF",
@@ -4289,9 +4289,9 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterNumDamageUpLayer",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "MonsterNumDamageUpLayer"
                 }
               ]
             },
@@ -4535,8 +4535,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02First",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill02First"
                 },
                 {
                   "name": "IF",
@@ -4634,8 +4634,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill02First",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill02First"
         },
         {
           "name": "IF",
@@ -5676,9 +5676,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SpecialSummon",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "SpecialSummon"
                       },
                       {
                         "name": "Use Ability Option",
@@ -7031,9 +7031,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SpecialSummon",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "SpecialSummon"
                       },
                       {
                         "name": "Use Ability Option",
@@ -8386,9 +8386,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SpecialSummon",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "SpecialSummon"
                       },
                       {
                         "name": "Use Ability Option",

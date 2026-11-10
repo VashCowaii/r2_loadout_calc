@@ -33,8 +33,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "First_Break_Effect",
-          "value": 0
+          "value": 0,
+          "variableName": "First_Break_Effect"
         },
         {
           "name": "Update Ability Enhance Button",
@@ -67,8 +67,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "First_Break_Effect",
-          "value": 1
+          "value": 1,
+          "variableName": "First_Break_Effect"
         },
         {
           "name": "Update Ability Enhance Button",

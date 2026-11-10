@@ -79,7 +79,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue3",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -87,7 +86,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_PropertyValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue3"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -149,7 +149,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue4",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_PropertyValue3) || ADD || Variables[2] (MDF_Count) || MUL || RETURN",
                         "displayLines": "((MDF_PropertyValue2 + MDF_PropertyValue3) * MDF_Count)",
@@ -159,7 +158,8 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue3",
                           "MDF_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue4"
                     },
                     {
                       "name": "Adjust Target Stats",
@@ -175,7 +175,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue4",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
                         "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
@@ -184,7 +183,8 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue2",
                           "MDF_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue4"
                     },
                     {
                       "name": "Adjust Target Stats",
@@ -313,7 +313,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
                         "displayLines": "MDF_PassiveMaxLayer",
@@ -321,13 +320,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_PassiveMaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Count) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue2 * MDF_Count)",
@@ -336,7 +335,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue2",
                       "MDF_Count"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -393,7 +393,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DefenceAddedRatio2",
                       "value": {
                         "operator": "Variables[0] (MDF_DefenceAddedRatio2) || Variables[1] (MDF_Count) || MUL || RETURN",
                         "displayLines": "(MDF_DefenceAddedRatio2 * MDF_Count)",
@@ -402,7 +401,8 @@ const compositeAbilityObject = {
                           "MDF_DefenceAddedRatio2",
                           "MDF_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DefenceAddedRatio2"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -494,7 +494,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
                     "displayLines": "MDF_PropertyValueConvert",
@@ -502,7 +501,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_PropertyValueConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -535,7 +535,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueConvert2) || Variables[1] (MDF_PropertyValueBase2) || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValueConvert2 + MDF_PropertyValueBase2)",
@@ -544,7 +543,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValueConvert2",
                       "MDF_PropertyValueBase2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -591,7 +591,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValueConvert + MDF_PropertyValueBase)",
@@ -600,7 +599,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValueConvert",
                       "MDF_PropertyValueBase"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -841,7 +841,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPGap1",
                       "value": {
                         "operator": "Variables[0] (MDF_BPMax) || Variables[1] (MDF_CurrentBP) || SUB || Variables[2] (MDF_BPDirty) || SUB || RETURN",
                         "displayLines": "((MDF_BPMax - MDF_CurrentBP) - MDF_BPDirty)",
@@ -851,7 +850,8 @@ const compositeAbilityObject = {
                           "MDF_CurrentBP",
                           "MDF_BPDirty"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BPGap1"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -1376,7 +1376,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
             "displayLines": "MDF_Sparkle_CritDmgValue",
@@ -1384,11 +1383,11 @@ const compositeAbilityObject = {
             "variables": [
               "MDF_Sparkle_CritDmgValue"
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
             "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
@@ -1397,7 +1396,8 @@ const compositeAbilityObject = {
               "MDF_CriticalDamageBase_change",
               0.24
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1506,7 +1506,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_PassiveMaxLayer",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1514,7 +1513,8 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "MDF_PassiveMaxLayer"
         }
       ],
       "references": [
@@ -1617,13 +1617,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_BPCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPCountAll",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_BPCountAll"
                     }
                   ]
                 }
@@ -1669,13 +1669,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPCountAll",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPCountAll"
                 }
               ]
             },
@@ -1743,7 +1743,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPCount",
                   "value": {
                     "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
                     "displayLines": "-MDF_BPCount",
@@ -1751,7 +1750,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_BPCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BPCount"
                 },
                 {
                   "name": "IF",
@@ -1792,7 +1792,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BPCountAll",
                           "value": {
                             "operator": "Variables[0] (MDF_BPCountAll) || Variables[1] (MDF_BPCount) || ADD || RETURN",
                             "displayLines": "(MDF_BPCountAll + MDF_BPCount)",
@@ -1801,7 +1800,8 @@ const compositeAbilityObject = {
                               "MDF_BPCountAll",
                               "MDF_BPCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BPCountAll"
                         }
                       ]
                     },
@@ -2057,7 +2057,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_BPGap",
           "value": {
             "operator": "Variables[0] (TeamBpMax) || Variables[1] (MDF_PassiveLayer01) || SUB || Variables[2] (MDF_PassiveLayerDirty) || SUB || RETURN",
             "displayLines": "((TeamBpMax - MDF_PassiveLayer01) - MDF_PassiveLayerDirty)",
@@ -2067,7 +2066,8 @@ const compositeAbilityObject = {
               "MDF_PassiveLayer01",
               "MDF_PassiveLayerDirty"
             ]
-          }
+          },
+          "variableName": "MDF_BPGap"
         },
         {
           "name": "IF",
@@ -2097,7 +2097,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BPAdd",
               "value": {
                 "operator": "Variables[0] (6) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(6 + 1)",
@@ -2107,7 +2106,8 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "BPAdd"
             },
             {
               "name": "Define Custom Variable with Skill Points",
@@ -2129,7 +2129,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BPAdd",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -2137,7 +2136,8 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "BPAdd"
             },
             {
               "name": "Define Custom Variable with Skill Points",
@@ -2240,7 +2240,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "NDF_Sparkle_Rank06_CritDmg",
               "value": {
                 "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
                 "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -2249,7 +2248,8 @@ const compositeAbilityObject = {
                   "MDF_Sparkle_CritDmgValue",
                   0.3
                 ]
-              }
+              },
+              "variableName": "NDF_Sparkle_Rank06_CritDmg"
             },
             {
               "name": "Find New Target",
@@ -2510,7 +2510,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
             "displayLines": "MDF_Sparkle_CritDmgValue",
@@ -2518,11 +2517,11 @@ const compositeAbilityObject = {
             "variables": [
               "MDF_Sparkle_CritDmgValue"
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
             "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
@@ -2531,7 +2530,8 @@ const compositeAbilityObject = {
               "MDF_CriticalDamageBase_change",
               0.24
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "IF",
@@ -2542,7 +2542,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "NDF_Sparkle_Rank06_CritDmg",
               "value": {
                 "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
                 "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -2551,7 +2550,8 @@ const compositeAbilityObject = {
                   "MDF_Sparkle_CritDmgValue",
                   0.3
                 ]
-              }
+              },
+              "variableName": "NDF_Sparkle_Rank06_CritDmg"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2753,7 +2753,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
             "displayLines": "MDF_Sparkle_CritDmgValue",
@@ -2761,11 +2760,11 @@ const compositeAbilityObject = {
             "variables": [
               "MDF_Sparkle_CritDmgValue"
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
             "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
@@ -2774,7 +2773,8 @@ const compositeAbilityObject = {
               "MDF_CriticalDamageBase_change",
               0.24
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "IF",
@@ -2785,7 +2785,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "NDF_Sparkle_Rank06_CritDmg",
               "value": {
                 "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
                 "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -2794,7 +2793,8 @@ const compositeAbilityObject = {
                   "MDF_Sparkle_CritDmgValue",
                   0.3
                 ]
-              }
+              },
+              "variableName": "NDF_Sparkle_Rank06_CritDmg"
             },
             {
               "name": "Add Events/Bonuses",

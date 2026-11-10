@@ -52,7 +52,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonDelayRatio1Random1",
       "value": {
         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
         "displayLines": "{[SkillP01[0]]}",
@@ -60,11 +59,11 @@ const configAbility = {
         "variables": [
           "{[SkillP01[0]]}"
         ]
-      }
+      },
+      "variableName": "SummonDelayRatio1Random1"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonDelayRatio1Random2",
       "value": {
         "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
         "displayLines": "{[SkillP01[1]]}",
@@ -72,11 +71,11 @@ const configAbility = {
         "variables": [
           "{[SkillP01[1]]}"
         ]
-      }
+      },
+      "variableName": "SummonDelayRatio1Random2"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonDelayRatio1Random3",
       "value": {
         "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
         "displayLines": "{[SkillP01[2]]}",
@@ -84,11 +83,11 @@ const configAbility = {
         "variables": [
           "{[SkillP01[2]]}"
         ]
-      }
+      },
+      "variableName": "SummonDelayRatio1Random3"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonDelayRatio2",
       "value": {
         "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
         "displayLines": "{[SkillP01[3]]}",
@@ -96,7 +95,8 @@ const configAbility = {
         "variables": [
           "{[SkillP01[3]]}"
         ]
-      }
+      },
+      "variableName": "SummonDelayRatio2"
     },
     {
       "name": "IF",
@@ -200,7 +200,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonCount",
           "value": {
             "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
             "displayLines": "{[SkillEX03[0]]}",
@@ -208,7 +207,8 @@ const configAbility = {
             "variables": [
               "{[SkillEX03[0]]}"
             ]
-          }
+          },
+          "variableName": "SummonCount"
         },
         {
           "name": "Add Events/Bonuses",

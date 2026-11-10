@@ -272,7 +272,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "S02_ExtraRatio",
           "value": {
             "operator": "Variables[0] (0.12) || RETURN",
             "displayLines": "0.12",
@@ -280,7 +279,8 @@ const configAbility = {
             "variables": [
               0.12
             ]
-          }
+          },
+          "variableName": "S02_ExtraRatio"
         },
         {
           "name": "Add Events/Bonuses",

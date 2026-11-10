@@ -2358,7 +2358,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_CurrentCount - 1)",
@@ -2368,7 +2367,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2524,18 +2524,18 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxMinions",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "MaxMinions"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxMinions_Left",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "MaxMinions_Left"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxMinions_Right",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "MaxMinions_Right"
                 },
                 {
                   "name": "IF",
@@ -2623,7 +2623,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LoopCount",
               "value": {
                 "operator": "Variables[0] (MaxMinions) || Variables[1] (MDF_PosL) || SUB || Variables[2] (MDF_PosR ) || SUB || RETURN",
                 "displayLines": "((MaxMinions - MDF_PosL) - MDF_PosR )",
@@ -2633,7 +2632,8 @@ const configAbility = {
                   "MDF_PosL",
                   "MDF_PosR "
                 ]
-              }
+              },
+              "variableName": "MDF_LoopCount"
             },
             {
               "name": "IF",
@@ -2692,7 +2692,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PosL",
                           "value": {
                             "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_PosL + 1)",
@@ -2702,7 +2701,8 @@ const configAbility = {
                             "variables": [
                               "MDF_PosL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PosL"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2734,7 +2734,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PosR",
                           "value": {
                             "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_PosR  + 1)",
@@ -2744,7 +2743,8 @@ const configAbility = {
                             "variables": [
                               "MDF_PosR "
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PosR"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2796,7 +2796,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PosL",
                   "value": {
                     "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_PosL - 1)",
@@ -2806,13 +2805,13 @@ const configAbility = {
                     "variables": [
                       "MDF_PosL"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PosL"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PosR",
                   "value": {
                     "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_PosR  - 1)",
@@ -2822,7 +2821,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PosR "
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PosR"
                 }
               ]
             }

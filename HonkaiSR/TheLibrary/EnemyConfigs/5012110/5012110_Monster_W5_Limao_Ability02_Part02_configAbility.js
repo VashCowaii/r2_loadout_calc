@@ -19,7 +19,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_RankRatio",
       "value": {
         "operator": "Variables[0] (_FinalDamage) || Variables[1] (_MaxHp) || DIV || RETURN",
         "displayLines": "(_FinalDamage / _MaxHp)",
@@ -28,7 +27,8 @@ const configAbility = {
           "_FinalDamage",
           "_MaxHp"
         ]
-      }
+      },
+      "variableName": "_RankRatio"
     },
     {
       "name": "IF",

@@ -46,15 +46,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_Rank6_Listen",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Seele_Rank6_Listen"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_Rank6_Listen",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "Seele_Rank6_Listen"
                 }
               ]
             }

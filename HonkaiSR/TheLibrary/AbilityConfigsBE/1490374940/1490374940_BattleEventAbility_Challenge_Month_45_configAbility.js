@@ -272,8 +272,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -314,8 +314,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Count"
             }
           ]
         },

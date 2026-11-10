@@ -137,8 +137,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonCount",
-      "value": 0
+      "value": 0,
+      "variableName": "SummonCount"
     },
     "Trigger: Ability End"
   ],

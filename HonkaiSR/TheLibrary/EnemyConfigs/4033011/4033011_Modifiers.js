@@ -73,9 +73,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_IsLose",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "_IsLose"
                 }
               ]
             }
@@ -334,9 +334,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_BattleTarget_LocalLegend_S3_2_Check",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_BattleTarget_LocalLegend_S3_2_Check"
                 }
               ]
             },
@@ -389,9 +389,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_BattleTarget_LocalLegend_S3_3_Check",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_BattleTarget_LocalLegend_S3_3_Check"
                 }
               ]
             },
@@ -439,9 +439,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_BattleTarget_LocalLegend_S3_6_Check",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_BattleTarget_LocalLegend_S3_6_Check"
                 }
               ]
             },
@@ -489,9 +489,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_BattleTarget_LocalLegend_S3_7_Check",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_BattleTarget_LocalLegend_S3_7_Check"
                 }
               ]
             },
@@ -594,7 +594,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S3_1_ProgressInfo",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
@@ -604,7 +604,7 @@ const configAbility = {
                           "MDF_NegativeHP"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S3_1_ProgressInfo"
                     }
                   ]
                 },
@@ -622,7 +622,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S3_5_ProgressInfo",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeHP) || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeHP)",
@@ -632,7 +632,7 @@ const configAbility = {
                           "MDF_NegativeHP"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S3_5_ProgressInfo"
                     }
                   ]
                 },
@@ -642,7 +642,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_MonsterChangeCnt",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_NegativeHP) || RETURN",
                     "displayLines": "MDF_NegativeHP",
@@ -651,7 +651,7 @@ const configAbility = {
                       "MDF_NegativeHP"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "_MonsterChangeCnt"
                 }
               ]
             }
@@ -840,9 +840,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S3_1_Check",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S3_1_Check"
                     }
                   ]
                 },
@@ -963,15 +963,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_OriginCharacterCount",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "_OriginCharacterCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_OriginCharacterCount",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "_OriginCharacterCount"
                 }
               ]
             }

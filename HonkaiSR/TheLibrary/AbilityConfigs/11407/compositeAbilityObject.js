@@ -37,7 +37,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LifeTime",
                   "value": {
                     "operator": "Variables[0] (MDF_LifeTime) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_LifeTime + 1)",
@@ -47,7 +46,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_LifeTime"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LifeTime"
                 },
                 {
                   "name": "IF",

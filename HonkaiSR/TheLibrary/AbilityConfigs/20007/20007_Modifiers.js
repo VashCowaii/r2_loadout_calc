@@ -38,13 +38,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Charge",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Charge"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Feixiao_BattleScore2_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Feixiao_BattleScore2_Flag"
                 }
               ]
             },
@@ -57,8 +57,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Charge",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Charge"
                 }
               ]
             }
@@ -91,7 +91,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Feixiao_BattleScore2_Flag",
                   "value": {
                     "operator": "Variables[0] (Feixiao_BattleScore2_Flag) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Feixiao_BattleScore2_Flag + 1)",
@@ -101,7 +100,8 @@ const configAbility = {
                     "variables": [
                       "Feixiao_BattleScore2_Flag"
                     ]
-                  }
+                  },
+                  "variableName": "Feixiao_BattleScore2_Flag"
                 },
                 {
                   "name": "IF",
@@ -485,8 +485,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AlreadyConnect",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AlreadyConnect"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1165,8 +1165,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceHead_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceHead_Flag"
                 }
               ],
               "failed": [
@@ -1185,8 +1185,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceLimb_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceLimb_Flag"
                     }
                   ],
                   "failed": [
@@ -1205,8 +1205,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceTail_Flag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "EnhanceTail_Flag"
                         }
                       ]
                     }
@@ -1234,8 +1234,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LostConnect",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_LostConnect"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -1824,8 +1824,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_Step"
                     }
                   ]
                 },
@@ -1855,8 +1855,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Step"
                     }
                   ]
                 }
@@ -1878,8 +1878,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainTrigger",
-              "value": 1
+              "value": 1,
+              "variableName": "MainTrigger"
             },
             {
               "name": "Action Advance/Delay",
@@ -1962,13 +1962,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "MDF_Step"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionTalkStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionTalkStart"
                     }
                   ]
                 },
@@ -1994,13 +1994,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "MDF_Step"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionTalkStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionTalkStart"
                     }
                   ]
                 },
@@ -2026,13 +2026,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_Step"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionTalkStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionTalkStart"
                     }
                   ]
                 }
@@ -2054,8 +2054,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Weapon",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Weapon"
                 }
               ]
             },
@@ -2119,13 +2119,13 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Step",
-                          "value": 6
+                          "value": 6,
+                          "variableName": "MDF_Step"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MissionTalkStart",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MissionTalkStart"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -2133,8 +2133,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "SpecialTalkFinish",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "SpecialTalkFinish"
                         }
                       ]
                     },
@@ -2160,13 +2160,13 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Step",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "MDF_Step"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MissionTalkStart",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MissionTalkStart"
                         }
                       ]
                     },
@@ -2181,8 +2181,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Step2",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Step2"
                         }
                       ]
                     }
@@ -2260,13 +2260,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step3",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_Step3"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionTalkStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionTalkStart"
                     }
                   ]
                 },
@@ -2302,13 +2302,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Step3",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Step3"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionTalkStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionTalkStart"
                     }
                   ]
                 }
@@ -2366,8 +2366,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Step",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Step"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2569,8 +2569,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPLock",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_HPLock"
                 },
                 {
                   "name": "Add Events/Bonuses",

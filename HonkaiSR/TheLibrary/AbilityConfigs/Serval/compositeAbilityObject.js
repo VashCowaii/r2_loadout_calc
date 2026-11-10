@@ -166,7 +166,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MAvatar_Serval_00_Rank06_ShowRatio",
                       "value": {
                         "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
                         "displayLines": "SERVAL_OBJECT_UNUSED_2",
@@ -174,7 +173,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SERVAL_OBJECT_UNUSED_2"
                         ]
-                      }
+                      },
+                      "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                     },
                     {
                       "name": "Adjust Target Stats",
@@ -195,7 +195,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MAvatar_Serval_00_Rank06_ShowRatio",
                   "value": {
                     "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
                     "displayLines": "SERVAL_OBJECT_UNUSED_2",
@@ -203,7 +202,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "SERVAL_OBJECT_UNUSED_2"
                     ]
-                  }
+                  },
+                  "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                 }
               ]
             }
@@ -1217,7 +1217,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree01_ThunderChanceAdd",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
                 "displayLines": "0.2",
@@ -1225,14 +1224,15 @@ const compositeAbilityObject = {
                 "variables": [
                   0.2
                 ]
-              }
+              },
+              "variableName": "SkillTree01_ThunderChanceAdd"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree01_ThunderChanceAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "SkillTree01_ThunderChanceAdd"
             }
           ]
         },

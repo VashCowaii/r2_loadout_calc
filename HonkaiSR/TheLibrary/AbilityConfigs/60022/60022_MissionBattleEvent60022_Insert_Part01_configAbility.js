@@ -26,7 +26,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_TalkNum",
       "value": {
         "operator": "Variables[0] (_TalkNum) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(_TalkNum + 1)",
@@ -36,7 +35,8 @@ const configAbility = {
         "variables": [
           "_TalkNum"
         ]
-      }
+      },
+      "variableName": "_TalkNum"
     },
     "Deleted bullshit",
     {

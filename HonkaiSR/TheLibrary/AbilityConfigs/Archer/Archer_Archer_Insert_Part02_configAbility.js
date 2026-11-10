@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_RestEnergy",
       "value": {
         "operator": "Variables[0] (MDF_RestEnergy) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(MDF_RestEnergy - 1)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           "MDF_RestEnergy"
         ]
-      }
+      },
+      "variableName": "MDF_RestEnergy"
     },
     {
       "name": "ATK Scaling DMG",
@@ -56,8 +56,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 0
+      "value": 0,
+      "variableName": "OnInsertAbort_Flg"
     }
   ],
   "references": [],

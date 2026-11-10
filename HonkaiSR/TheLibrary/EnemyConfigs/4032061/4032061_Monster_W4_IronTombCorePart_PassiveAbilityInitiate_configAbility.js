@@ -174,8 +174,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 99
+                  "value": 99,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",

@@ -1734,7 +1734,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Dot_Layer_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || RETURN",
                 "displayLines": "MDF_Layer",
@@ -1742,7 +1741,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "Dot_Layer_Count"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2280,7 +2280,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Dot_Layer_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || RETURN",
                 "displayLines": "MDF_Layer",
@@ -2288,7 +2287,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "Dot_Layer_Count"
             },
             {
               "name": "ATK Scaling DMG",

@@ -176,8 +176,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Feixiao: Self}}"
       },
-      "variableName": "BattleEventPartFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "BattleEventPartFlag"
     },
     {
       "name": "IF",

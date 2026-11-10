@@ -732,8 +732,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "variableName": "SummonDeathInsertCheck",
-      "value": 0
+      "value": 0,
+      "variableName": "SummonDeathInsertCheck"
     }
   ],
   "targetObjectData": {

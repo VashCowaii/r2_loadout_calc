@@ -131,7 +131,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackUpRatio",
               "value": {
                 "operator": "Variables[0] (MDF_AttackUpRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_AttackUpRatio * MDF_Layer)",
@@ -140,7 +139,8 @@ const configAbility = {
                   "MDF_AttackUpRatio",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackUpRatio"
             },
             {
               "name": "Stack Target Stat Value",

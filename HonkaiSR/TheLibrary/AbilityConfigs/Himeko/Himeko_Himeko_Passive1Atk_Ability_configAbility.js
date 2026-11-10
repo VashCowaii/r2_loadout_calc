@@ -35,8 +35,8 @@ const configAbility = {
   "onAbort": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Himeko_Attack",
-      "value": 1
+      "value": 1,
+      "variableName": "_Himeko_Attack"
     }
   ],
   "references": [],

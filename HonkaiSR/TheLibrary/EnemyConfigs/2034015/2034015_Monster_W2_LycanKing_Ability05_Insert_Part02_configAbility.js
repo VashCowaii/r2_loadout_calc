@@ -18,8 +18,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "WolfBoss_BloodRageCount",
-      "value": 0
+      "value": 0,
+      "variableName": "WolfBoss_BloodRageCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -232,8 +232,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "WolfBoss_BloodRageCount",
-          "value": 0
+          "value": 0,
+          "variableName": "WolfBoss_BloodRageCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -328,8 +328,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Mark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Mark"
                     }
                   ]
                 }

@@ -184,7 +184,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_Value) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || Constants[0] (100) || DIV || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_Value * 100)) / 100)",
@@ -195,7 +194,8 @@ const compositeAbilityObject = {
                       "CEIL",
                       "MDF_Value"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -238,7 +238,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue1",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_AddedDamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_Layer * MDF_AddedDamageRatio)",
@@ -247,7 +246,8 @@ const compositeAbilityObject = {
                       "MDF_Layer",
                       "MDF_AddedDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue1"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -363,8 +363,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertCheck02",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertCheck02"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -615,9 +615,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_BattleTarget_LocalLegend_S2_1_Check",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_BattleTarget_LocalLegend_S2_1_Check"
                         }
                       ]
                     },
@@ -655,23 +655,23 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BonusCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_BonusCheck"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SummonCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_SummonCheck"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieSums",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_DieSums"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieSumsCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_DieSumsCheck"
                     },
                     {
                       "name": "Set Enemy Phase",
@@ -1671,8 +1671,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
+          "value": 0,
+          "variableName": "InsertCheck02"
         },
         {
           "name": "Change Entity Turn-State",
@@ -1737,7 +1737,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DieSumsCheck",
           "value": {
             "operator": "Variables[0] (_DieSums) || RETURN",
             "displayLines": "_DieSums",
@@ -1745,17 +1744,18 @@ const compositeAbilityObject = {
             "variables": [
               "_DieSums"
             ]
-          }
+          },
+          "variableName": "_DieSumsCheck"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
+          "value": 0,
+          "variableName": "InsertCheck02"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SummonCounts",
-          "value": 0
+          "value": 0,
+          "variableName": "_SummonCounts"
         }
       ],
       "targetObjectData": {
@@ -1844,7 +1844,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_MaxDamageReduce",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[5]]}",
@@ -1852,7 +1851,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[PassiveSkill02[5]]}"
             ]
-          }
+          },
+          "variableName": "_MaxDamageReduce"
         },
         {
           "name": "IF",
@@ -1864,7 +1864,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_FactorK",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[7]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[7]]}",
@@ -1872,11 +1871,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[7]]}"
                 ]
-              }
+              },
+              "variableName": "_FactorK"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Phase1Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[1]]}",
@@ -1884,11 +1883,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[1]]}"
                 ]
-              }
+              },
+              "variableName": "_Phase1Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Phase2Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[2]]}",
@@ -1896,11 +1895,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[2]]}"
                 ]
-              }
+              },
+              "variableName": "_Phase2Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusInit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[3]]}",
@@ -1908,11 +1907,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[3]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusInit"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusSums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[4]]}",
@@ -1920,11 +1919,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[4]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusSums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Init",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[8]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[8]]}",
@@ -1932,11 +1931,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[8]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Init"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[9]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[9]]}",
@@ -1944,11 +1943,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[9]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusLimit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[10]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[10]]}",
@@ -1956,11 +1955,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[10]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusLimit"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Limit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[11]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[11]]}",
@@ -1968,13 +1967,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[11]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Limit"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_FactorK",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[6]]}",
@@ -1982,11 +1981,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill02[6]]}"
                 ]
-              }
+              },
+              "variableName": "_FactorK"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Phase1Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[0]]}",
@@ -1994,11 +1993,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[0]]}"
                 ]
-              }
+              },
+              "variableName": "_Phase1Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Phase2Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[1]]}",
@@ -2006,11 +2005,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[1]]}"
                 ]
-              }
+              },
+              "variableName": "_Phase2Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusInit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[2]]}",
@@ -2018,11 +2017,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[2]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusInit"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusSums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[3]]}",
@@ -2030,11 +2029,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[3]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusSums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Init",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[4]]}",
@@ -2042,11 +2041,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[4]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Init"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Sums",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[5]]}",
@@ -2054,11 +2053,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[5]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Sums"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusLimit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[6]]}",
@@ -2066,11 +2065,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[6]]}"
                 ]
-              }
+              },
+              "variableName": "_BonusLimit"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Bonus2Limit",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[7]]}",
@@ -2078,7 +2077,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[PassiveSkill03[7]]}"
                 ]
-              }
+              },
+              "variableName": "_Bonus2Limit"
             }
           ]
         },
@@ -2231,8 +2231,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -4135,7 +4135,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BonusCheck",
                       "value": {
                         "operator": "Variables[0] (_SummonCheck) || Variables[1] (_Bonus2Init) || SUB || Variables[2] (_Bonus2Sums) || DIV || RETURN",
                         "displayLines": "((_SummonCheck - _Bonus2Init) / _Bonus2Sums)",
@@ -4145,7 +4144,8 @@ const compositeAbilityObject = {
                           "_Bonus2Init",
                           "_Bonus2Sums"
                         ]
-                      }
+                      },
+                      "variableName": "_BonusCheck"
                     }
                   ]
                 }
@@ -4162,7 +4162,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BonusCheck",
                   "value": {
                     "operator": "Variables[0] (_SummonCheck) || Variables[1] (_BonusInit) || SUB || Variables[2] (_BonusSums) || DIV || RETURN",
                     "displayLines": "((_SummonCheck - _BonusInit) / _BonusSums)",
@@ -4172,7 +4171,8 @@ const compositeAbilityObject = {
                       "_BonusInit",
                       "_BonusSums"
                     ]
-                  }
+                  },
+                  "variableName": "_BonusCheck"
                 }
               ]
             },
@@ -4342,7 +4342,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DelayRatio",
                           "value": {
                             "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
                             "displayLines": "{[Skill02[1]]}",
@@ -4350,7 +4349,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[Skill02[1]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_DelayRatio"
                         }
                       ]
                     },
@@ -4360,7 +4360,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DelayRatio",
                           "value": {
                             "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
                             "displayLines": "{[Skill02[2]]}",
@@ -4368,7 +4367,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[Skill02[2]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_DelayRatio"
                         }
                       ]
                     },
@@ -4378,7 +4378,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DelayRatio",
                           "value": {
                             "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
                             "displayLines": "{[Skill02[3]]}",
@@ -4386,7 +4385,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[Skill02[3]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_DelayRatio"
                         }
                       ]
                     },
@@ -4396,7 +4396,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DelayRatio",
                           "value": {
                             "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
                             "displayLines": "{[Skill02[4]]}",
@@ -4404,7 +4403,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[Skill02[4]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_DelayRatio"
                         }
                       ]
                     }
@@ -4422,8 +4422,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayCase",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_DelayCase"
                     }
                   ],
                   "failed": [

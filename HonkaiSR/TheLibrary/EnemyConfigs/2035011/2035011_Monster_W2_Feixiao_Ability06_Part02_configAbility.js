@@ -40,13 +40,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkTail",
-          "value": 2
+          "value": 2,
+          "variableName": "SpecialTalkTail"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MissionTalkStart",
-          "value": 1
+          "value": 1,
+          "variableName": "MissionTalkStart"
         }
       ]
     },
@@ -80,8 +80,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkTail",
-          "value": 1
+          "value": 1,
+          "variableName": "SpecialTalkTail"
         }
       ]
     },

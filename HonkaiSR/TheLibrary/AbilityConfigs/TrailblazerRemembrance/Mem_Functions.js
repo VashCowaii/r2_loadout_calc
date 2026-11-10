@@ -15,7 +15,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_DamagePercentage",
           "value": {
             "operator": "Variables[0] (MDF_BasicDamagePercentage) || RETURN",
             "displayLines": "MDF_BasicDamagePercentage",
@@ -23,7 +22,8 @@ const configAbility = {
             "variables": [
               "MDF_BasicDamagePercentage"
             ]
-          }
+          },
+          "variableName": "MDF_DamagePercentage"
         },
         {
           "name": "IF",
@@ -43,7 +43,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_maxSP",
               "value": {
                 "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (FLOOR) || Variables[2] (_maxSP) || Variables[3] (MDF_PointB3_P1_Basic) || SUB || Variables[4] (MDF_PointB3_P2_Delta) || DIV || PARAM_1 || FUNCTION || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((_maxSP - MDF_PointB3_P1_Basic) / MDF_PointB3_P2_Delta)))",
@@ -57,7 +56,8 @@ const configAbility = {
                   "MDF_PointB3_P1_Basic",
                   "MDF_PointB3_P2_Delta"
                 ]
-              }
+              },
+              "variableName": "_maxSP"
             },
             {
               "name": "Define Custom Variable with Added Value",

@@ -7,7 +7,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Wolf_MaxAttackCount",
       "value": {
         "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
         "displayLines": "{[Skill02[3]]}",
@@ -15,7 +14,8 @@ const configAbility = {
         "variables": [
           "{[Skill02[3]]}"
         ]
-      }
+      },
+      "variableName": "Wolf_MaxAttackCount"
     },
     {
       "name": "Add Events/Bonuses",

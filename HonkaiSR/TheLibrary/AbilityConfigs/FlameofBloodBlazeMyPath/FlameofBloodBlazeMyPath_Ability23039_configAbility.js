@@ -67,7 +67,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HPChangeValue",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (_HPChangeValue) || SUB || RETURN",
                     "displayLines": "(0 - _HPChangeValue)",
@@ -77,7 +76,8 @@ const configAbility = {
                     "variables": [
                       "_HPChangeValue"
                     ]
-                  }
+                  },
+                  "variableName": "_HPChangeValue"
                 },
                 {
                   "name": "IF",
@@ -101,7 +101,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DmgAddedRatio",
                       "value": {
                         "operator": "Variables[0] (0.3) || Variables[1] (0.3) || ADD || RETURN",
                         "displayLines": "(0.3 + 0.3)",
@@ -110,13 +109,13 @@ const configAbility = {
                           0.3,
                           0.3
                         ]
-                      }
+                      },
+                      "variableName": "_DmgAddedRatio"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DmgAddedRatio",
                       "value": {
                         "operator": "Variables[0] (0.3) || RETURN",
                         "displayLines": "0.3",
@@ -124,7 +123,8 @@ const configAbility = {
                         "variables": [
                           0.3
                         ]
-                      }
+                      },
+                      "variableName": "_DmgAddedRatio"
                     }
                   ]
                 }
@@ -193,7 +193,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DmgAddedRatio",
               "value": {
                 "operator": "Variables[0] (0.3) || RETURN",
                 "displayLines": "0.3",
@@ -201,7 +200,8 @@ const configAbility = {
                 "variables": [
                   0.3
                 ]
-              }
+              },
+              "variableName": "_DmgAddedRatio"
             }
           ]
         },

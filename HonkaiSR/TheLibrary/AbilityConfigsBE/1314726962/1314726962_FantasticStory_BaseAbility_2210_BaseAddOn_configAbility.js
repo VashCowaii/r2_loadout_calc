@@ -86,7 +86,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio))",
@@ -96,7 +95,8 @@ const configAbility = {
                       "DV_EnterFeverValue",
                       "DV_FantasticStory_BaseAbility_2210_BaseAddOn_P1_Ratio"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",

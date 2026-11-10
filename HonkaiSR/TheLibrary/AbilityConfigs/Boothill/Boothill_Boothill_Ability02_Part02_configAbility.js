@@ -207,9 +207,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_is_active",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "_is_active"
                 }
               ]
             }

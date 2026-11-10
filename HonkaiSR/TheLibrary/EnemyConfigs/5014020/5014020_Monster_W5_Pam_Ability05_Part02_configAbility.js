@@ -26,8 +26,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_FirstUltraSkill",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_FirstUltraSkill"
             },
             {
               "name": "IF",

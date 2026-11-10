@@ -203,8 +203,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DV_RuanMei_PassiveArea_Count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "DV_RuanMei_PassiveArea_Count"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -263,8 +263,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DV_RuanMei_PassiveArea_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_RuanMei_PassiveArea_Count"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -277,7 +277,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BreakAttackToDelay",
                   "value": {
                     "operator": "Variables[0] (MDF_BreakAttackToDelay) || Variables[1] (0.2) || MUL || Variables[2] (0.1) || ADD || RETURN",
                     "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)",
@@ -287,7 +286,8 @@ const compositeAbilityObject = {
                       0.2,
                       0.1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BreakAttackToDelay"
                 },
                 {
                   "name": "Assign Advance/Delay to Current Ability Use",
@@ -377,9 +377,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DV_NeedDettachEffect",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "DV_NeedDettachEffect"
                     }
                   ]
                 }
@@ -992,7 +992,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
@@ -1004,7 +1003,8 @@ const compositeAbilityObject = {
                           0.1,
                           0.06
                         ]
-                      }
+                      },
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     },
                     {
                       "name": "IF",
@@ -1018,8 +1018,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
                       ],
                       "failed": [
@@ -1042,7 +1042,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                               "value": {
                                 "operator": "Variables[0] (0.36) || RETURN",
                                 "displayLines": "0.36",
@@ -1050,7 +1049,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   0.36
                                 ]
-                              }
+                              },
+                              "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                             }
                           ]
                         }
@@ -1058,7 +1058,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_P1_DamageAddedRatioFinal",
                       "value": {
                         "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
                         "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
@@ -1067,7 +1066,8 @@ const compositeAbilityObject = {
                           "SkillTree_PointB3_BreakDamageAddedValue",
                           0.32
                         ]
-                      }
+                      },
+                      "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     },
                     {
                       "name": "Find New Target",
@@ -1152,7 +1152,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
@@ -1164,7 +1163,8 @@ const compositeAbilityObject = {
                           0.1,
                           0.06
                         ]
-                      }
+                      },
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     },
                     {
                       "name": "IF",
@@ -1178,8 +1178,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
                       ],
                       "failed": [
@@ -1202,7 +1202,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                               "value": {
                                 "operator": "Variables[0] (0.36) || RETURN",
                                 "displayLines": "0.36",
@@ -1210,7 +1209,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   0.36
                                 ]
-                              }
+                              },
+                              "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                             }
                           ]
                         }
@@ -1218,7 +1218,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_P1_DamageAddedRatioFinal",
                       "value": {
                         "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
                         "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
@@ -1227,7 +1226,8 @@ const compositeAbilityObject = {
                           "SkillTree_PointB3_BreakDamageAddedValue",
                           0.32
                         ]
-                      }
+                      },
+                      "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     },
                     {
                       "name": "Find New Target",
@@ -1866,7 +1866,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillP01_FinalBreakDamagePercentage_set",
                   "value": {
                     "operator": "Variables[0] (DV_Passive_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (SkillP01_FinalBreakDamagePercentage_set) || MUL || RETURN",
                     "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)",
@@ -1879,7 +1878,8 @@ const compositeAbilityObject = {
                       "DV_Passive_Damage_MaxStance",
                       "SkillP01_FinalBreakDamagePercentage_set"
                     ]
-                  }
+                  },
+                  "variableName": "SkillP01_FinalBreakDamagePercentage_set"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1961,7 +1961,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_SkillP01_FinalBreakDamagePercentage",
                           "value": {
                             "operator": "Variables[0] (1.2) || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "(1.2 + 2)",
@@ -1970,13 +1969,13 @@ const compositeAbilityObject = {
                               1.2,
                               2
                             ]
-                          }
+                          },
+                          "variableName": "_SkillP01_FinalBreakDamagePercentage"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_SkillP01_FinalBreakDamagePercentage",
                           "value": {
                             "operator": "Variables[0] (1.2) || RETURN",
                             "displayLines": "1.2",
@@ -1984,7 +1983,8 @@ const compositeAbilityObject = {
                             "variables": [
                               1.2
                             ]
-                          }
+                          },
+                          "variableName": "_SkillP01_FinalBreakDamagePercentage"
                         }
                       ]
                     },
@@ -2070,8 +2070,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_EnergyBarCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Skill02_EnergyBarCount"
                     }
                   ]
                 },
@@ -2384,7 +2384,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_P1_DamageAddedRatioFinal",
                       "value": {
                         "operator": "Variables[0] (0.32) || RETURN",
                         "displayLines": "0.32",
@@ -2392,7 +2391,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.32
                         ]
-                      }
+                      },
+                      "variableName": "Skill02_P1_DamageAddedRatioFinal"
                     }
                   ]
                 },
@@ -2450,7 +2450,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_FinalBreakDamagePercentage",
           "value": {
             "operator": "Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (0.5) || MUL || RETURN",
             "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)",
@@ -2463,7 +2462,8 @@ const compositeAbilityObject = {
               "DV_Ultra_Damage_MaxStance",
               0.5
             ]
-          }
+          },
+          "variableName": "Skill03_FinalBreakDamagePercentage"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2504,9 +2504,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "variableName": "DV_NeedDettachEffect",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "DV_NeedDettachEffect"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3351,7 +3351,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BreakDamageRatio",
                       "value": {
                         "operator": "Variables[0] (MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || RETURN",
                         "displayLines": "(((MaxStance / 30) + 2) / 4)",
@@ -3363,7 +3362,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MaxStance"
                         ]
-                      }
+                      },
+                      "variableName": "BreakDamageRatio"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -3376,7 +3376,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "RuanMei_BreakDamage",
                       "value": {
                         "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
                         "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
@@ -3388,7 +3387,8 @@ const compositeAbilityObject = {
                           "BreakDamageRatio",
                           "BreakDamageAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "RuanMei_BreakDamage"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -3504,7 +3504,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BuffNumber",
                           "value": {
                             "operator": "Variables[0] (FinishRoomNum) || Constants[0] (2) || MUL || RETURN",
                             "displayLines": "(FinishRoomNum * 2)",
@@ -3514,7 +3513,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "FinishRoomNum"
                             ]
-                          }
+                          },
+                          "variableName": "BuffNumber"
                         }
                       ]
                     },

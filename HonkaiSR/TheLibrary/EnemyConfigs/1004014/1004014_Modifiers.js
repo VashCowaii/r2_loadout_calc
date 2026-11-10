@@ -138,8 +138,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -204,8 +204,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -263,8 +263,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         }
@@ -371,7 +371,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_StanceDMGCount",
               "value": {
                 "operator": "Variables[0] (MDF_MaxStance) || Variables[1] (MDF_CurrentStance) || SUB || RETURN",
                 "displayLines": "(MDF_MaxStance - MDF_CurrentStance)",
@@ -380,7 +379,8 @@ const configAbility = {
                   "MDF_MaxStance",
                   "MDF_CurrentStance"
                 ]
-              }
+              },
+              "variableName": "MDF_StanceDMGCount"
             },
             {
               "name": "Deal Toughness DMG",
@@ -672,8 +672,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon04Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon04Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -728,8 +728,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon04Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon04Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -984,8 +984,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon03Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon03Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1040,8 +1040,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon03Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon03Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1296,8 +1296,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1352,8 +1352,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1608,8 +1608,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1664,8 +1664,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2152,8 +2152,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2176,8 +2176,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2456,8 +2456,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2480,8 +2480,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -3791,8 +3791,8 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_WeaknessCount",
-              "value": 0
+              "value": 0,
+              "variableName": "_WeaknessCount"
             },
             {
               "name": "IF",
@@ -3807,7 +3807,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3817,7 +3816,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3834,7 +3834,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3844,7 +3843,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3861,7 +3861,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3871,7 +3870,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3888,7 +3888,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3898,7 +3897,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3915,7 +3915,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3925,7 +3924,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3942,7 +3942,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3952,7 +3951,8 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
@@ -3969,7 +3969,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeaknessCount",
                   "value": {
                     "operator": "Variables[0] (_WeaknessCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_WeaknessCount + 1)",
@@ -3979,13 +3978,13 @@ const configAbility = {
                     "variables": [
                       "_WeaknessCount"
                     ]
-                  }
+                  },
+                  "variableName": "_WeaknessCount"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_TotalRatioCount",
               "value": {
                 "operator": "Variables[0] (MDF_TokenDamageReduceRatio) || Variables[1] (MDF_TokenDamageAddRatioPerlayer) || Variables[2] (_WeaknessCount) || MUL || SUB || RETURN",
                 "displayLines": "(MDF_TokenDamageReduceRatio - (MDF_TokenDamageAddRatioPerlayer * _WeaknessCount))",
@@ -3995,7 +3994,8 @@ const configAbility = {
                   "MDF_TokenDamageAddRatioPerlayer",
                   "_WeaknessCount"
                 ]
-              }
+              },
+              "variableName": "_TotalRatioCount"
             },
             {
               "name": "IF",
@@ -4031,7 +4031,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PreTotalRatioCount",
                   "value": {
                     "operator": "Variables[0] (_TotalRatioCount) || RETURN",
                     "displayLines": "_TotalRatioCount",
@@ -4039,7 +4038,8 @@ const configAbility = {
                     "variables": [
                       "_TotalRatioCount"
                     ]
-                  }
+                  },
+                  "variableName": "_PreTotalRatioCount"
                 },
                 {
                   "name": "IF",
@@ -5011,7 +5011,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#Skill04_P4_FrozenDamagePerTurn",
                   "value": {
                     "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                     "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5019,11 +5018,11 @@ const configAbility = {
                     "variables": [
                       "MDF_ExtraFrozenDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "#Skill04_P4_FrozenDamagePerTurn"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#Skill07_P1_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                     "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5031,7 +5030,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ExtraFrozenDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "#Skill07_P1_DamagePercentage"
                 }
               ]
             },
@@ -5048,7 +5048,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#SkillP02_P2_Frozen_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (MDF_ExtraFrozenDamageRatio) || RETURN",
                     "displayLines": "MDF_ExtraFrozenDamageRatio",
@@ -5056,7 +5055,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ExtraFrozenDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "#SkillP02_P2_Frozen_DamagePercentage"
                 }
               ]
             }

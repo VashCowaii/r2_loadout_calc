@@ -12,7 +12,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CurEnhance",
       "value": {
         "operator": "Variables[0] (CurEnhance) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(CurEnhance - 1)",
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           "CurEnhance"
         ]
-      }
+      },
+      "variableName": "CurEnhance"
     },
     {
       "name": "IF",

@@ -121,7 +121,6 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -131,7 +130,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -175,7 +175,6 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -185,7 +184,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -271,7 +271,6 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -281,7 +280,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -325,7 +325,6 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -335,7 +334,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -421,7 +421,6 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -431,7 +430,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -475,7 +475,6 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PartAliveNumber",
                   "value": {
                     "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                     "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -485,7 +484,8 @@ const configAbility = {
                       "_Part2_Alive",
                       "_Part3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "PartAliveNumber"
                 },
                 {
                   "name": "IF",
@@ -783,8 +783,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BeHitFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_BeHitFlag"
             }
           ]
         },
@@ -815,8 +815,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "MDF_BeingHitDamageValue"
                     }
                   ],
                   "failed": [
@@ -826,7 +826,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -836,7 +835,8 @@ const configAbility = {
                         "variables": [
                           "MDF_BeingHitDamageValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BeingHitDamageValue"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -905,8 +905,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_BeingHitDamageValue",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "MDF_BeingHitDamageValue"
                 }
               ],
               "failed": [
@@ -916,7 +916,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_BeingHitDamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -926,7 +925,8 @@ const configAbility = {
                     "variables": [
                       "MDF_BeingHitDamageValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BeingHitDamageValue"
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -1251,8 +1251,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ReleaseFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "ReleaseFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1353,8 +1353,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ReleaseFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "ReleaseFlag"
                 }
               ]
             }
@@ -1456,8 +1456,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ReleaseFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "ReleaseFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1558,8 +1558,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ReleaseFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "ReleaseFlag"
                 }
               ]
             }

@@ -140,8 +140,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}}"
                   },
-                  "variableName": "_Break05Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break05Odds"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -149,8 +149,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 2}}"
                   },
-                  "variableName": "_Break05Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break05Odds"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -170,8 +170,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}}"
                   },
-                  "variableName": "_Break04Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break04Odds"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -179,8 +179,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 2}}"
                   },
-                  "variableName": "_Break04Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break04Odds"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -200,8 +200,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}}"
                   },
-                  "variableName": "_Break03Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break03Odds"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -209,8 +209,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 2}}"
                   },
-                  "variableName": "_Break03Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break03Odds"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -230,8 +230,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}}"
                   },
-                  "variableName": "_Break02Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break02Odds"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -239,8 +239,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 2}}"
                   },
-                  "variableName": "_Break02Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break02Odds"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -260,8 +260,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}}"
                   },
-                  "variableName": "_Break01Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break01Odds"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -269,8 +269,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 2}}"
                   },
-                  "variableName": "_Break01Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Break01Odds"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -332,7 +332,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
               "value": {
                 "operator": "Variables[0] (_TempAIFlag) || RETURN",
                 "displayLines": "_TempAIFlag",
@@ -340,7 +339,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_TempAIFlag"
                 ]
-              }
+              },
+              "variableName": "AIFlag"
             },
             {
               "name": "Use Custom Character Function",
@@ -855,8 +855,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 99
+                      "value": 99,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",

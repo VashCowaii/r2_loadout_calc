@@ -154,8 +154,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "UINotice",
-      "value": 0
+      "value": 0,
+      "variableName": "UINotice"
     },
     {
       "name": "Trigger Multiple Functions",
@@ -264,8 +264,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UINotice",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "UINotice"
                     }
                   ]
                 },
@@ -368,8 +368,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "UINotice",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "UINotice"
                             }
                           ]
                         }
@@ -465,8 +465,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UINotice",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "UINotice"
                     }
                   ]
                 },
@@ -628,8 +628,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }
@@ -693,8 +693,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }
@@ -792,8 +792,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UINotice",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "UINotice"
                     }
                   ]
                 },
@@ -955,8 +955,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }
@@ -1020,8 +1020,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }
@@ -1119,8 +1119,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UINotice",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "UINotice"
                     }
                   ]
                 },
@@ -1280,8 +1280,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }
@@ -1345,8 +1345,8 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "UINotice",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "UINotice"
                                 }
                               ]
                             }

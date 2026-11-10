@@ -21,7 +21,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}.[[getMemosprite]]"
       },
-      "variableName": "Skill11_Stance",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (AOE Toughness Value) || Constants[0] (2) || DIV || RETURN",
         "displayLines": "(AOE Toughness Value / 2)",
@@ -32,7 +32,7 @@ const configAbility = {
           "AOE Toughness Value"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "Skill11_Stance"
     },
     {
       "name": "Trigger Joint-Attack Ability",

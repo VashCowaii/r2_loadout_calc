@@ -40,13 +40,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkLimb",
-          "value": 1
+          "value": 1,
+          "variableName": "SpecialTalkLimb"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MissionTalkStart",
-          "value": 1
+          "value": 1,
+          "variableName": "MissionTalkStart"
         }
       ]
     },

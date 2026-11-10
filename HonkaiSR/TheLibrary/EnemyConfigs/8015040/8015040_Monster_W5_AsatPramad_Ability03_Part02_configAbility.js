@@ -58,8 +58,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isTrigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isTrigger"
                 }
               ]
             }

@@ -55,8 +55,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "G_ExSkill21_Allowed",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "G_ExSkill21_Allowed"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -79,8 +79,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "G_ExSkill21_Allowed",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "G_ExSkill21_Allowed"
                     },
                     {
                       "name": "Update Energy",
@@ -268,8 +268,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "G_ExSkill21_Allowed",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "G_ExSkill21_Allowed"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3396,7 +3396,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "G_EPMax",
               "value": {
                 "operator": "Variables[0] (7) || RETURN",
                 "displayLines": "7",
@@ -3404,13 +3403,13 @@ const compositeAbilityObject = {
                 "variables": [
                   7
                 ]
-              }
+              },
+              "variableName": "G_EPMax"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "G_EPMax",
               "value": {
                 "operator": "Variables[0] (9) || RETURN",
                 "displayLines": "9",
@@ -3418,7 +3417,8 @@ const compositeAbilityObject = {
                 "variables": [
                   9
                 ]
-              }
+              },
+              "variableName": "G_EPMax"
             }
           ]
         },
@@ -3547,7 +3547,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Temp_Return_SP",
                       "value": {
                         "operator": "Variables[0] (MortenaxBlade_00_EntityStockSP) || RETURN",
                         "displayLines": "MortenaxBlade_00_EntityStockSP",
@@ -3555,12 +3554,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "MortenaxBlade_00_EntityStockSP"
                         ]
-                      }
+                      },
+                      "variableName": "_Temp_Return_SP"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MortenaxBlade_00_EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MortenaxBlade_00_EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3750,7 +3750,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "_PointB1_EntityCurrentSP",
                           "value": {
                             "operator": "Variables[0] (_PointB1_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
                             "displayLines": "((_PointB1_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
@@ -3760,7 +3759,8 @@ const compositeAbilityObject = {
                               "_SPChangeValue",
                               "_SPChangeValueRaw"
                             ]
-                          }
+                          },
+                          "variableName": "_PointB1_EntityCurrentSP"
                         },
                         {
                           "name": "Define Custom Variable with Stat",
@@ -3797,7 +3797,6 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "MortenaxBlade_00_EntityStockSP",
                               "value": {
                                 "operator": "Variables[0] (MortenaxBlade_00_EntityStockSP) || Variables[1] (_PointB1_EntityCurrentSP) || ADD || Variables[2] (MortenaxBlade_00_EntityMaxSP) || SUB || RETURN",
                                 "displayLines": "((MortenaxBlade_00_EntityStockSP + _PointB1_EntityCurrentSP) - MortenaxBlade_00_EntityMaxSP)",
@@ -3807,7 +3806,8 @@ const compositeAbilityObject = {
                                   "_PointB1_EntityCurrentSP",
                                   "MortenaxBlade_00_EntityMaxSP"
                                 ]
-                              }
+                              },
+                              "variableName": "MortenaxBlade_00_EntityStockSP"
                             },
                             {
                               "name": "IF",
@@ -3831,7 +3831,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "MortenaxBlade_00_EntityStockSP",
                                   "value": {
                                     "operator": "Variables[0] (_PointB1_StockSpValue) || RETURN",
                                     "displayLines": "_PointB1_StockSpValue",
@@ -3839,7 +3838,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "_PointB1_StockSpValue"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MortenaxBlade_00_EntityStockSP"
                                 }
                               ]
                             },
@@ -4279,8 +4279,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "G_ExSkill21_Allowed",
-          "value": 1
+          "value": 1,
+          "variableName": "G_ExSkill21_Allowed"
         },
         {
           "name": "Consume",
@@ -4388,8 +4388,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "G_ExSkill21_Allowed",
-          "value": 0
+          "value": 0,
+          "variableName": "G_ExSkill21_Allowed"
         },
         {
           "name": "Consume",
@@ -4564,9 +4564,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_State",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "#CL_State"
         },
         {
           "name": "Consume",
@@ -4671,9 +4671,9 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_State",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "#CL_State"
         },
         "Trigger: Ability End"
       ],

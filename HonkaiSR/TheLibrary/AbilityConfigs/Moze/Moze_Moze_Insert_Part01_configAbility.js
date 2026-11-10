@@ -86,7 +86,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_EnergyCost",
       "value": {
         "operator": "Variables[0] (MDF_EnergyCost) || Variables[1] (3) || SUB || RETURN",
         "displayLines": "(MDF_EnergyCost - 3)",
@@ -95,7 +94,8 @@ const configAbility = {
           "MDF_EnergyCost",
           3
         ]
-      }
+      },
+      "variableName": "MDF_EnergyCost"
     },
     {
       "name": "IF",

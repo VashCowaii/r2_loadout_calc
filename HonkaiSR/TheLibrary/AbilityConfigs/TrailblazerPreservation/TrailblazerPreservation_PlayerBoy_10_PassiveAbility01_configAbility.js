@@ -23,7 +23,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Rank06_Max_Layer",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -31,7 +30,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "Rank06_Max_Layer"
     },
     {
       "name": "Add Events/Bonuses",
@@ -66,7 +66,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_Ratio",
           "value": {
             "operator": "Variables[0] (0.25) || RETURN",
             "displayLines": "0.25",
@@ -74,11 +73,11 @@ const configAbility = {
             "variables": [
               0.25
             ]
-          }
+          },
+          "variableName": "Rank01_Ratio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_ExtraRatio",
           "value": {
             "operator": "Variables[0] (0.5) || RETURN",
             "displayLines": "0.5",
@@ -86,19 +85,20 @@ const configAbility = {
             "variables": [
               0.5
             ]
-          }
+          },
+          "variableName": "Rank01_ExtraRatio"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_Ratio",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank01_Ratio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_ExtraRatio",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank01_ExtraRatio"
         }
       ]
     },
@@ -111,7 +111,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank02_Ratio",
           "value": {
             "operator": "Variables[0] (0.02) || RETURN",
             "displayLines": "0.02",
@@ -119,11 +118,11 @@ const configAbility = {
             "variables": [
               0.02
             ]
-          }
+          },
+          "variableName": "Rank02_Ratio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank02_Value",
           "value": {
             "operator": "Variables[0] (27) || RETURN",
             "displayLines": "27",
@@ -131,19 +130,20 @@ const configAbility = {
             "variables": [
               27
             ]
-          }
+          },
+          "variableName": "Rank02_Value"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank02_Ratio",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank02_Ratio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank02_Value",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank02_Value"
         }
       ]
     },

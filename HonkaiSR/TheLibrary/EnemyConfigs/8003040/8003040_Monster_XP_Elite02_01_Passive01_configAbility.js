@@ -229,7 +229,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyLayer",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(EnergyLayer - 1)",
@@ -239,7 +238,8 @@ const configAbility = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayer"
                     }
                   ]
                 }
@@ -337,7 +337,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EnergyLayerLast",
               "value": {
                 "operator": "Variables[0] (EnergyLayer) || RETURN",
                 "displayLines": "EnergyLayer",
@@ -345,12 +344,13 @@ const configAbility = {
                 "variables": [
                   "EnergyLayer"
                 ]
-              }
+              },
+              "variableName": "EnergyLayerLast"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "EnergyLayer",
-              "value": -2
+              "value": -2,
+              "variableName": "EnergyLayer"
             }
           ]
         },

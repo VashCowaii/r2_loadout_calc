@@ -47,8 +47,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_AttackCount"
                 },
                 {
                   "name": "Looped Event",
@@ -63,7 +63,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackCount",
                       "value": {
                         "operator": "Variables[0] (MDF_AttackCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_AttackCount + 1)",
@@ -73,7 +72,8 @@ const configAbility = {
                         "variables": [
                           "MDF_AttackCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackCount"
                     },
                     {
                       "name": "Find New Target",
@@ -161,7 +161,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_MaxLayer",
                               "value": {
                                 "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
                                 "displayLines": "(3 + 1)",
@@ -170,13 +169,13 @@ const configAbility = {
                                   3,
                                   1
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_MaxLayer"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_MaxLayer",
                               "value": {
                                 "operator": "Variables[0] (3) || RETURN",
                                 "displayLines": "3",
@@ -184,7 +183,8 @@ const configAbility = {
                                 "variables": [
                                   3
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_MaxLayer"
                             }
                           ]
                         },

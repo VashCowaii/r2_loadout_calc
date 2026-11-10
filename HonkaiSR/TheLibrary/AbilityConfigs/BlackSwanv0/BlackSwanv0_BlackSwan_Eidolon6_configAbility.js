@@ -26,8 +26,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
-              "value": 0
+              "value": 0,
+              "variableName": "_count"
             }
           ]
         },
@@ -62,8 +62,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_count"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -83,8 +83,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
-              "value": 0
+              "value": 0,
+              "variableName": "_count"
             }
           ]
         }
@@ -139,7 +139,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank06_Weighted_Stack_Layer",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                         "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -149,13 +148,13 @@ const configAbility = {
                         "variables": [
                           "Rank06_Extra_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "Rank06_Weighted_Stack_Layer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank06_Weighted_Stack_Layer",
                       "value": {
                         "operator": "Constants[0] (1) || RETURN",
                         "displayLines": "1",
@@ -163,7 +162,8 @@ const configAbility = {
                           1
                         ],
                         "variables": []
-                      }
+                      },
+                      "variableName": "Rank06_Weighted_Stack_Layer"
                     }
                   ]
                 },

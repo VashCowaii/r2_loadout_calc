@@ -79,7 +79,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEvent_BaseHP",
       "value": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
         "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -89,7 +88,8 @@ const configAbility = {
         "variables": [
           "BattleEvent_BaseHP"
         ]
-      }
+      },
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Declare Custom Variable",
@@ -281,7 +281,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount",
                           "value": {
                             "operator": "Constants[0] (1) || Variables[0] (DV_FantasticStory_PlusAbility_0034_InsertAtkCount) || ADD || RETURN",
                             "displayLines": "(1 + DV_FantasticStory_PlusAbility_0034_InsertAtkCount)",
@@ -291,7 +290,8 @@ const configAbility = {
                             "variables": [
                               "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
                             ]
-                          }
+                          },
+                          "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
                         }
                       ]
                     }
@@ -308,7 +308,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
                       "value": {
                         "operator": "Variables[0] (_DamageSum) || Variables[1] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
                         "displayLines": "(_DamageSum + DV_FantasticStory_BaseAbility_0030_DamageSum)",
@@ -317,7 +316,8 @@ const configAbility = {
                           "_DamageSum",
                           "DV_FantasticStory_BaseAbility_0030_DamageSum"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                     },
                     {
                       "name": "IF",
@@ -362,8 +362,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_InsertDamageFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_InsertDamageFlag"
                 }
               ]
             }
@@ -403,8 +403,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_InsertDamageFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "_InsertDamageFlag"
             }
           ]
         }
@@ -1203,8 +1203,8 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -1267,8 +1267,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_FantasticStory_PlusAbility_0031_TriggerDamageFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -1351,13 +1351,13 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag"
                 },
                 {
                   "name": "Find New Target",

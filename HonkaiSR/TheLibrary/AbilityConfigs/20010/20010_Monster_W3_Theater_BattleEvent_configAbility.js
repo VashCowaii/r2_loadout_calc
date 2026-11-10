@@ -174,8 +174,8 @@ const configAbility = {
                     "name": "Add Target by Unique Identifier",
                     "identifier": "TheaterCore"
                   },
-                  "variableName": "W3_Theater_00_BattleScore1_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "W3_Theater_00_BattleScore1_Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",

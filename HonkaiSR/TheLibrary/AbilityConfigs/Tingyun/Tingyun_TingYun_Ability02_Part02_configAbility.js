@@ -52,7 +52,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Target_CurrentAttack",
       "value": {
         "operator": "Variables[0] (MDF_Target_CurrentAttack) || Variables[1] (0.5) || MUL || RETURN",
         "displayLines": "(MDF_Target_CurrentAttack * 0.5)",
@@ -61,11 +60,11 @@ const configAbility = {
           "MDF_Target_CurrentAttack",
           0.5
         ]
-      }
+      },
+      "variableName": "MDF_Target_CurrentAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Tingyun_Attack",
       "value": {
         "operator": "Variables[0] (MDF_Tingyun_Attack) || Variables[1] (0.25) || MUL || RETURN",
         "displayLines": "(MDF_Tingyun_Attack * 0.25)",
@@ -74,7 +73,8 @@ const configAbility = {
           "MDF_Tingyun_Attack",
           0.25
         ]
-      }
+      },
+      "variableName": "MDF_Tingyun_Attack"
     },
     {
       "name": "IF",
@@ -94,7 +94,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill02_Attack",
           "value": {
             "operator": "Variables[0] (MDF_Tingyun_Attack) || RETURN",
             "displayLines": "MDF_Tingyun_Attack",
@@ -102,13 +101,13 @@ const configAbility = {
             "variables": [
               "MDF_Tingyun_Attack"
             ]
-          }
+          },
+          "variableName": "MDF_Skill02_Attack"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill02_Attack",
           "value": {
             "operator": "Variables[0] (MDF_Target_CurrentAttack) || RETURN",
             "displayLines": "MDF_Target_CurrentAttack",
@@ -116,7 +115,8 @@ const configAbility = {
             "variables": [
               "MDF_Target_CurrentAttack"
             ]
-          }
+          },
+          "variableName": "MDF_Skill02_Attack"
         }
       ]
     },
@@ -139,8 +139,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TingYun_EnergyBarLayer",
-      "value": 3
+      "value": 3,
+      "variableName": "TingYun_EnergyBarLayer"
     },
     {
       "name": "IF",

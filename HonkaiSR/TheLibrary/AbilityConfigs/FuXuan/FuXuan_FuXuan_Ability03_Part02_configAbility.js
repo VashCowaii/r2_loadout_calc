@@ -22,7 +22,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "HealHPValue",
           "value": {
             "operator": "Variables[0] (MaxHP) || Variables[1] (0.05) || MUL || Variables[2] (133) || ADD || RETURN",
             "displayLines": "((MaxHP * 0.05) + 133)",
@@ -32,7 +31,8 @@ const configAbility = {
               0.05,
               133
             ]
-          }
+          },
+          "variableName": "HealHPValue"
         },
         {
           "name": "Heal",
@@ -86,7 +86,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "GDF_AllTeamMemberLoseHPValue",
               "value": {
                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                 "displayLines": "(CasterMaxHP * 1.2)",
@@ -95,7 +94,8 @@ const configAbility = {
                   "CasterMaxHP",
                   1.2
                 ]
-              }
+              },
+              "variableName": "GDF_AllTeamMemberLoseHPValue"
             }
           ]
         },
@@ -183,12 +183,11 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "GDF_AllTeamMemberLoseHPValue",
-      "value": 0
+      "value": 0,
+      "variableName": "GDF_AllTeamMemberLoseHPValue"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "GDF_ExChangeHPCount",
       "value": {
         "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(GDF_ExChangeHPCount + 1)",
@@ -198,7 +197,8 @@ const configAbility = {
         "variables": [
           "GDF_ExChangeHPCount"
         ]
-      }
+      },
+      "variableName": "GDF_ExChangeHPCount"
     },
     {
       "name": "Update Displayed Energy Bar",

@@ -43,9 +43,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_CurrentDamageNumber",
+      "scope": "ContextAbility",
       "value": 1,
-      "scope": "ContextAbility"
+      "variableName": "_CurrentDamageNumber"
     },
     {
       "name": "Define Custom Variable with Modifier Values",

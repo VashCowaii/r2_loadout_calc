@@ -187,8 +187,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTrigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTrigger"
                 }
               ]
             }
@@ -206,8 +206,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTrigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTrigger"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -226,8 +226,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTrigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTrigger"
                 }
               ]
             }
@@ -245,8 +245,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTrigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTrigger"
                 },
                 "Modifier Deletes Itself"
               ]

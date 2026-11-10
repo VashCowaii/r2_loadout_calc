@@ -208,7 +208,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue1",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue1) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue1 * (MDF_Layer - 1))",
@@ -219,7 +218,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue1",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue1"
                 }
               ]
             },
@@ -235,8 +235,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_PropertyValue1"
                     },
                     {
                       "name": "IF",

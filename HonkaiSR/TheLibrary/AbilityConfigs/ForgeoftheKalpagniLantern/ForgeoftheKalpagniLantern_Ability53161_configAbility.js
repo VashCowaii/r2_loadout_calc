@@ -91,8 +91,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Flag"
                     }
                   ]
                 }
@@ -105,8 +105,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Flag"
             }
           ]
         }

@@ -220,8 +220,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -277,7 +277,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P3_ADF) || ADD || RETURN",
                         "displayLines": "(MDF_Count + BattleEvent_P3_ADF)",
@@ -286,7 +285,8 @@ const configAbility = {
                           "MDF_Count",
                           "BattleEvent_P3_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
@@ -299,7 +299,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P4_ADF) || ADD || RETURN",
                         "displayLines": "(MDF_Count + BattleEvent_P4_ADF)",
@@ -308,7 +307,8 @@ const configAbility = {
                           "MDF_Count",
                           "BattleEvent_P4_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
@@ -364,7 +364,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (BattleEvent_P1_ADF) || RETURN",
                         "displayLines": "BattleEvent_P1_ADF",
@@ -372,7 +371,8 @@ const configAbility = {
                         "variables": [
                           "BattleEvent_P1_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }

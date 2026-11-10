@@ -102,7 +102,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DebuffCountForRank04",
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -110,7 +109,8 @@ const configAbility = {
                 "variables": [
                   5
                 ]
-              }
+              },
+              "variableName": "_DebuffCountForRank04"
             }
           ]
         },
@@ -187,7 +187,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DebuffCountForRank01",
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -195,7 +194,8 @@ const configAbility = {
                 "variables": [
                   5
                 ]
-              }
+              },
+              "variableName": "_DebuffCountForRank01"
             }
           ]
         },

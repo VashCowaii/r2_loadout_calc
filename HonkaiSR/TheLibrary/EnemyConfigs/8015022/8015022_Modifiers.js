@@ -27,7 +27,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Level) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
                 "displayLines": "(MDF_Level * MDF_PropertyValue)",
@@ -36,7 +35,8 @@ const configAbility = {
                   "MDF_Level",
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -77,7 +77,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Level) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
                 "displayLines": "(MDF_Level * MDF_PropertyValue)",
@@ -86,7 +85,8 @@ const configAbility = {
                   "MDF_Level",
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -204,7 +204,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FlowerLevel",
                       "value": {
                         "operator": "Variables[0] (FlowerLevel) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(FlowerLevel - 1)",
@@ -214,7 +213,8 @@ const configAbility = {
                         "variables": [
                           "FlowerLevel"
                         ]
-                      }
+                      },
+                      "variableName": "FlowerLevel"
                     },
                     {
                       "name": "IF",
@@ -384,7 +384,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FlowerLevel",
                       "value": {
                         "operator": "Variables[0] (FlowerLevel) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(FlowerLevel + 1)",
@@ -394,7 +393,8 @@ const configAbility = {
                         "variables": [
                           "FlowerLevel"
                         ]
-                      }
+                      },
+                      "variableName": "FlowerLevel"
                     },
                     {
                       "name": "IF",
@@ -1825,9 +1825,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "PartDecisionFlag",
+                  "scope": "TargetEntity",
                   "value": 3,
-                  "scope": "TargetEntity"
+                  "variableName": "PartDecisionFlag"
                 }
               ]
             },
@@ -1879,8 +1879,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Phase1End_BreakFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Phase1End_BreakFlag"
                     }
                   ]
                 }
@@ -1935,9 +1935,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Phase2_BattlePerform",
+                  "scope": "TargetEntity",
                   "value": 4,
-                  "scope": "TargetEntity"
+                  "variableName": "Phase2_BattlePerform"
                 }
               ]
             }
@@ -2141,8 +2141,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160107",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160107"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -2403,8 +2403,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160332",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "TalkSentence_102160332"
                 }
               ]
             }
@@ -2435,8 +2435,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160303",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkSentence_102160303"
                 }
               ]
             },
@@ -2462,8 +2462,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160332",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkSentence_102160332"
                 }
               ]
             }
@@ -2529,8 +2529,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160336",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160336"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2635,8 +2635,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160320",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160320"
                 }
               ]
             }
@@ -2671,8 +2671,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160303",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160303"
                 }
               ]
             },
@@ -2710,8 +2710,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160308",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160308"
                 }
               ]
             },
@@ -2741,8 +2741,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160310",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160310"
                 }
               ]
             },
@@ -2804,8 +2804,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160315",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160315"
                 }
               ]
             },
@@ -2831,8 +2831,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160331",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160331"
                 }
               ]
             },
@@ -2862,8 +2862,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160332",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkSentence_102160332"
                 }
               ]
             },
@@ -2893,8 +2893,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160336",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkSentence_102160336"
                 }
               ]
             },
@@ -2924,8 +2924,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160336",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "TalkSentence_102160336"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -2981,8 +2981,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160336",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "TalkSentence_102160336"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -3150,8 +3150,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkSentence_102160315",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkSentence_102160315"
                 }
               ]
             }
@@ -3257,8 +3257,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Phase3Start",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Phase3Start"
                 }
               ]
             }
@@ -3304,8 +3304,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MainEnd",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MainEnd"
                 }
               ]
             }

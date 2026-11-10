@@ -15,8 +15,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_StorySimulationSpeed",
-          "value": 0
+          "value": 0,
+          "variableName": "_StorySimulationSpeed"
         }
       ]
     },
@@ -113,8 +113,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_EnergyValue",
-      "value": 0
+      "value": 0,
+      "variableName": "_EnergyValue"
     },
     {
       "name": "Update Displayed Energy Bar",

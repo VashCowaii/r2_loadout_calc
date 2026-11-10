@@ -96,7 +96,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SkillUseCount",
       "value": {
         "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(_SkillUseCount + 1)",
@@ -106,7 +105,8 @@ const configAbility = {
         "variables": [
           "_SkillUseCount"
         ]
-      }
+      },
+      "variableName": "_SkillUseCount"
     },
     {
       "name": "Sparxie Test Data",
@@ -125,7 +125,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_PKLineProgress",
       "value": {
         "operator": "Variables[0] (_PKLineProgress) || Constants[0] (0.8) || Variables[0] (_PKLineProgress) || SUB || Constants[1] (4) || DIV || ADD || RETURN",
         "displayLines": "(_PKLineProgress + ((0.8 - _PKLineProgress) / 4))",
@@ -136,7 +135,8 @@ const configAbility = {
         "variables": [
           "_PKLineProgress"
         ]
-      }
+      },
+      "variableName": "_PKLineProgress"
     },
     {
       "name": "Update Energy",

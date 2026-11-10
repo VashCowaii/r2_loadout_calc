@@ -32,8 +32,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Charged",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Charged"
                 }
               ]
             },
@@ -67,8 +67,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Charged",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Charged"
                     }
                   ]
                 }
@@ -104,8 +104,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Charged",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Charged"
                     }
                   ]
                 }

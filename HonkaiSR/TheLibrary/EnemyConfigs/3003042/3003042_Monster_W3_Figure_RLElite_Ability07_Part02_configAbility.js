@@ -92,7 +92,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SleepCount",
               "value": {
                 "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(SleepCount + 1)",
@@ -102,7 +101,8 @@ const configAbility = {
                 "variables": [
                   "SleepCount"
                 ]
-              }
+              },
+              "variableName": "SleepCount"
             }
           ]
         }
@@ -110,8 +110,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SleepCount",
-      "value": 0
+      "value": 0,
+      "variableName": "SleepCount"
     }
   ],
   "targetObjectData": {

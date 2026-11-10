@@ -23,7 +23,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_Chance",
               "value": {
                 "operator": "Variables[0] (0.65) || RETURN",
                 "displayLines": "0.65",
@@ -31,7 +30,8 @@ const configAbility = {
                 "variables": [
                   0.65
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_Chance"
             },
             {
               "name": "Trigger Ability",

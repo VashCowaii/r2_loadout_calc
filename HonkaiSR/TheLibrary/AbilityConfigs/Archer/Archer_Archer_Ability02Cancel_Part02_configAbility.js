@@ -14,8 +14,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_InBonus",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_InBonus"
     },
     "Trigger: Ability End"
   ],

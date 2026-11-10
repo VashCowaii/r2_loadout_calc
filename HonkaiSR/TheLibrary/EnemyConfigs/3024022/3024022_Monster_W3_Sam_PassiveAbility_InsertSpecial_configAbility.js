@@ -27,8 +27,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck"
     },
     {
       "name": "Remove Events/Bonuses",

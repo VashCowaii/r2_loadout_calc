@@ -128,7 +128,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TurnCount",
                       "value": {
                         "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_TurnCount - 1)",
@@ -138,7 +137,8 @@ const configAbility = {
                         "variables": [
                           "MDF_TurnCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TurnCount"
                     }
                   ]
                 },
@@ -183,8 +183,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TurnCount",
-              "value": 3
+              "value": 3,
+              "variableName": "MDF_TurnCount"
             },
             {
               "name": "Update Displayed Energy Bar",

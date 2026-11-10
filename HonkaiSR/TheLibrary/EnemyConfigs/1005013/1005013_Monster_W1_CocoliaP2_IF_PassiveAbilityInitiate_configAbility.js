@@ -327,8 +327,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Monster_W1_CocoliaP2_00_SummonRecord",
-              "value": 0
+              "value": 0,
+              "variableName": "Monster_W1_CocoliaP2_00_SummonRecord"
             }
           ]
         }

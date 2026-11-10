@@ -51,7 +51,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CriticalDamageBase_change",
       "value": {
         "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
         "displayLines": "MDF_Sparkle_CritDmgValue",
@@ -59,11 +58,11 @@ const configAbility = {
         "variables": [
           "MDF_Sparkle_CritDmgValue"
         ]
-      }
+      },
+      "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CriticalDamageBase_change",
       "value": {
         "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
         "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
@@ -72,7 +71,8 @@ const configAbility = {
           "MDF_CriticalDamageBase_change",
           0.24
         ]
-      }
+      },
+      "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "IF",
@@ -83,7 +83,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "NDF_Sparkle_Rank06_CritDmg",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
             "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -92,7 +91,8 @@ const configAbility = {
               "MDF_Sparkle_CritDmgValue",
               0.3
             ]
-          }
+          },
+          "variableName": "NDF_Sparkle_Rank06_CritDmg"
         },
         {
           "name": "Add Events/Bonuses",

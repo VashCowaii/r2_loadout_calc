@@ -95,13 +95,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SoundStartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_SoundStartFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SoundEndFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_SoundEndFlag"
                     }
                   ]
                 }
@@ -129,13 +129,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SoundStartFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_SoundStartFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SoundEndFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_SoundEndFlag"
                     }
                   ]
                 }
@@ -203,7 +203,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SamActionDelay",
                   "value": {
                     "operator": "Constants[0] (1000) || Variables[0] (_SamSpeed) || DIV || RETURN",
                     "displayLines": "(1000 / _SamSpeed)",
@@ -213,7 +212,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_SamSpeed"
                     ]
-                  }
+                  },
+                  "variableName": "_SamActionDelay"
                 },
                 {
                   "name": "Find New Target",
@@ -376,8 +376,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
-                      "value": -1
+                      "value": -1,
+                      "variableName": "MDF_PropertyValue"
                     }
                   ]
                 }
@@ -758,8 +758,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -772,8 +772,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_RedModeResRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_RedModeResRatio"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -824,7 +824,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PassiveResRatio",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                         "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -836,7 +835,8 @@ const compositeAbilityObject = {
                           0.2,
                           "_RedModeResRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_PassiveResRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -873,7 +873,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Rank02_CD - 1)",
@@ -883,7 +882,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Rank02_CD"
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "IF",
@@ -1024,8 +1024,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_RedModeResRatio",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_RedModeResRatio"
                 },
                 {
                   "name": "Define Custom Variable with HP%",
@@ -1037,7 +1037,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PassiveResRatio",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                     "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -1049,7 +1048,8 @@ const compositeAbilityObject = {
                       0.2,
                       "_RedModeResRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_PassiveResRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1088,7 +1088,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamageUP",
                       "value": {
                         "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
                         "displayLines": "(0.5 + 0.5)",
@@ -1097,13 +1096,13 @@ const compositeAbilityObject = {
                           0.5,
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamageUP"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamageUP",
                       "value": {
                         "operator": "Variables[0] (0.5) || RETURN",
                         "displayLines": "0.5",
@@ -1111,7 +1110,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamageUP"
                     }
                   ]
                 },
@@ -1140,7 +1140,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_StatusResistance",
                       "value": {
                         "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (0.5) || ADD || RETURN",
                         "displayLines": "(MDF_StatusResistance + 0.5)",
@@ -1149,7 +1148,8 @@ const compositeAbilityObject = {
                           "MDF_StatusResistance",
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_StatusResistance"
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -1250,7 +1250,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || ADD || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "((Rank02_CD + 1) + 1)",
@@ -1261,12 +1260,13 @@ const compositeAbilityObject = {
                           "Rank02_CD",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -1276,7 +1276,6 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank02_CD",
                           "value": {
                             "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || SUB || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "((Rank02_CD - 1) - 1)",
@@ -1287,12 +1286,13 @@ const compositeAbilityObject = {
                               "Rank02_CD",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Rank02_CD"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank02_SamSelfInsertActionFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Rank02_SamSelfInsertActionFlag"
                         }
                       ]
                     }
@@ -1334,7 +1334,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || ADD || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "((Rank02_CD + 1) + 1)",
@@ -1345,12 +1344,13 @@ const compositeAbilityObject = {
                           "Rank02_CD",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -1360,7 +1360,6 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank02_CD",
                           "value": {
                             "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || SUB || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "((Rank02_CD - 1) - 1)",
@@ -1371,12 +1370,13 @@ const compositeAbilityObject = {
                               "Rank02_CD",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Rank02_CD"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank02_SamSelfInsertActionFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Rank02_SamSelfInsertActionFlag"
                         }
                       ]
                     }
@@ -1418,7 +1418,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || ADD || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "((Rank02_CD + 1) + 1)",
@@ -1429,12 +1428,13 @@ const compositeAbilityObject = {
                           "Rank02_CD",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -1444,7 +1444,6 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank02_CD",
                           "value": {
                             "operator": "Variables[0] (Rank02_CD) || Variables[1] (1) || SUB || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "((Rank02_CD - 1) - 1)",
@@ -1455,12 +1454,13 @@ const compositeAbilityObject = {
                               "Rank02_CD",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Rank02_CD"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Rank02_SamSelfInsertActionFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Rank02_SamSelfInsertActionFlag"
                         }
                       ]
                     }
@@ -1495,8 +1495,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1653,7 +1653,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Multipler",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 10))",
@@ -1663,11 +1662,11 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       10
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Multipler"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.007999999) || MUL || RETURN",
                     "displayLines": "(MDF_Multipler * 0.007999999)",
@@ -1676,7 +1675,8 @@ const compositeAbilityObject = {
                       "MDF_Multipler",
                       0.007999999
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1738,7 +1738,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentAttack2",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentAttack) || Variables[1] (MDF_CurrentAttackConvert) || SUB || RETURN",
                     "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)",
@@ -1747,7 +1746,8 @@ const compositeAbilityObject = {
                       "MDF_CurrentAttack",
                       "MDF_CurrentAttackConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentAttack2"
                 },
                 {
                   "name": "IF",
@@ -1917,7 +1917,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank06_StanceBreakAddedRatio",
           "value": {
             "operator": "Variables[0] (0.5) || RETURN",
             "displayLines": "0.5",
@@ -1925,7 +1924,8 @@ const compositeAbilityObject = {
             "variables": [
               0.5
             ]
-          }
+          },
+          "variableName": "Rank06_StanceBreakAddedRatio"
         }
       ],
       "references": [],
@@ -3480,7 +3480,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PassiveResRatio",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                     "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -3492,7 +3491,8 @@ const compositeAbilityObject = {
                       0.2,
                       "_RedModeResRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_PassiveResRatio"
                 },
                 {
                   "name": "IF",
@@ -3551,7 +3551,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BreakDamageAddedRatio",
                       "value": {
                         "operator": "Variables[0] (3.6) || RETURN",
                         "displayLines": "3.6",
@@ -3559,13 +3558,13 @@ const compositeAbilityObject = {
                         "variables": [
                           3.6
                         ]
-                      }
+                      },
+                      "variableName": "_BreakDamageAddedRatio"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill21_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                     "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
@@ -3575,11 +3574,11 @@ const compositeAbilityObject = {
                       0.2,
                       "_BreakDamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "Skill21_DamagePercentage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill21_DamagePercentageAD",
                   "value": {
                     "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                     "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
@@ -3589,7 +3588,8 @@ const compositeAbilityObject = {
                       0.1,
                       "_BreakDamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "Skill21_DamagePercentageAD"
                 }
               ]
             },
@@ -3643,7 +3643,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PassiveResRatio",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                         "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -3655,7 +3654,8 @@ const compositeAbilityObject = {
                           0.2,
                           "_RedModeResRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_PassiveResRatio"
                     },
                     {
                       "name": "IF",
@@ -3705,7 +3705,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HPChange",
                   "value": {
                     "operator": "Variables[0] (_HPChange) || INVERT || RETURN",
                     "displayLines": "-_HPChange",
@@ -3713,7 +3712,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_HPChange"
                     ]
-                  }
+                  },
+                  "variableName": "_HPChange"
                 }
               ]
             },
@@ -3854,7 +3854,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_BreakDamageAddedRatio",
                           "value": {
                             "operator": "Variables[0] (3.6) || RETURN",
                             "displayLines": "3.6",
@@ -3862,13 +3861,13 @@ const compositeAbilityObject = {
                             "variables": [
                               3.6
                             ]
-                          }
+                          },
+                          "variableName": "_BreakDamageAddedRatio"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill21_DamagePercentage",
                       "value": {
                         "operator": "Variables[0] (2) || Variables[1] (0.2) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                         "displayLines": "(2 + (0.2 * _BreakDamageAddedRatio))",
@@ -3878,11 +3877,11 @@ const compositeAbilityObject = {
                           0.2,
                           "_BreakDamageAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "Skill21_DamagePercentage"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill21_DamagePercentageAD",
                       "value": {
                         "operator": "Variables[0] (1) || Variables[1] (0.1) || Variables[2] (_BreakDamageAddedRatio) || MUL || ADD || RETURN",
                         "displayLines": "(1 + (0.1 * _BreakDamageAddedRatio))",
@@ -3892,7 +3891,8 @@ const compositeAbilityObject = {
                           0.1,
                           "_BreakDamageAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "Skill21_DamagePercentageAD"
                     }
                   ]
                 }

@@ -2393,7 +2393,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentCount",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_CurrentCount - 1)",
@@ -2403,7 +2402,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_CurrentCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentCount"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2559,18 +2559,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MaxMinions",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "MaxMinions"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MaxMinions_Left",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MaxMinions_Left"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MaxMinions_Right",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MaxMinions_Right"
                     },
                     {
                       "name": "IF",
@@ -2658,7 +2658,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LoopCount",
                   "value": {
                     "operator": "Variables[0] (MaxMinions) || Variables[1] (MDF_PosL) || SUB || Variables[2] (MDF_PosR ) || SUB || RETURN",
                     "displayLines": "((MaxMinions - MDF_PosL) - MDF_PosR )",
@@ -2668,7 +2667,8 @@ const compositeAbilityObject = {
                       "MDF_PosL",
                       "MDF_PosR "
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LoopCount"
                 },
                 {
                   "name": "IF",
@@ -2727,7 +2727,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_PosL",
                               "value": {
                                 "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_PosL + 1)",
@@ -2737,7 +2736,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_PosL"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_PosL"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -2769,7 +2769,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_PosR",
                               "value": {
                                 "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_PosR  + 1)",
@@ -2779,7 +2778,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_PosR "
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_PosR"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -2831,7 +2831,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PosL",
                       "value": {
                         "operator": "Variables[0] (MDF_PosL) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_PosL - 1)",
@@ -2841,13 +2840,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_PosL"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PosL"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PosR",
                       "value": {
                         "operator": "Variables[0] (MDF_PosR ) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_PosR  - 1)",
@@ -2857,7 +2856,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_PosR "
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PosR"
                     }
                   ]
                 }
@@ -3772,9 +3772,9 @@ const compositeAbilityObject = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MindControlSuccess",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "MindControlSuccess"
                 }
               ]
             },
@@ -3801,9 +3801,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MindControlSuccess",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "MindControlSuccess"
             }
           ]
         },
@@ -3817,9 +3817,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEventFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "BattleEventFlag"
         }
       ],
       "targetObjectData": {
@@ -4166,8 +4166,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HasTarget",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_HasTarget"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4208,8 +4208,8 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HasTarget",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_HasTarget"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4259,15 +4259,15 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_HasTarget",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_HasTarget"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "JustinBreak",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "JustinBreak"
                         }
                       ]
                     }
@@ -4381,8 +4381,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "JustinBreak",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "JustinBreak"
                 }
               ]
             }
@@ -4422,7 +4422,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_StackCount",
               "value": {
                 "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_StackCount + 1)",
@@ -4432,7 +4431,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "MDF_StackCount"
                 ]
-              }
+              },
+              "variableName": "MDF_StackCount"
             }
           ]
         },
@@ -4645,8 +4645,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_StackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_StackCount"
         }
       ],
       "targetObjectData": {
@@ -4698,9 +4698,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEventFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "BattleEventFlag"
         },
         {
           "name": "Declare Custom Variable",
@@ -6082,7 +6082,6 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_StackCount",
                   "value": {
                     "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_StackCount + 1)",
@@ -6092,7 +6091,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_StackCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_StackCount"
                 }
               ]
             },
@@ -6150,8 +6150,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Left",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Left"
                         }
                       ],
                       "failed": [
@@ -6178,8 +6178,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Right",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Right"
                         }
                       ],
                       "failed": [
@@ -6361,18 +6361,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_StackCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_StackCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Left",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Left"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Right",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Right"
             }
           ]
         },

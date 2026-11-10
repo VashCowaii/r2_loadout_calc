@@ -54,7 +54,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (0.4) || RETURN",
                 "displayLines": "0.4",
@@ -62,7 +61,8 @@ const configAbility = {
                 "variables": [
                   0.4
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -154,8 +154,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_First",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_First"
                     }
                   ]
                 },
@@ -202,8 +202,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_First",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_First"
                     }
                   ]
                 }

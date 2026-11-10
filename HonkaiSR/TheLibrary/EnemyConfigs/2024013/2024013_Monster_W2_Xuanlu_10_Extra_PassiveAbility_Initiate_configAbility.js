@@ -91,8 +91,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonMinion04Only",
-              "value": 0
+              "value": 0,
+              "variableName": "SummonMinion04Only"
             },
             {
               "name": "Force Entity Death",
@@ -159,9 +159,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "#Skill01_P1_AttackAddedRatio",
+                  "scope": "TargetEntity",
                   "value": 0.15,
-                  "scope": "TargetEntity"
+                  "variableName": "#Skill01_P1_AttackAddedRatio"
                 }
               ]
             }

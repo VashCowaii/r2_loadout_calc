@@ -107,8 +107,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Tutorial",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Tutorial"
                 }
               ]
             }

@@ -243,7 +243,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentDeBuffCount",
                       "value": {
                         "operator": "Variables[0] (MDF_DeBonusMaxCount) || RETURN",
                         "displayLines": "MDF_DeBonusMaxCount",
@@ -251,13 +250,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DeBonusMaxCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentDeBuffCount"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDotDamageAddRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DotDamageAddRatio) || Variables[1] (MDF_CurrentDeBuffCount) || MUL || RETURN",
                     "displayLines": "(MDF_DotDamageAddRatio * MDF_CurrentDeBuffCount)",
@@ -266,7 +265,8 @@ const compositeAbilityObject = {
                       "MDF_DotDamageAddRatio",
                       "MDF_CurrentDeBuffCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalDotDamageAddRatio"
                 }
               ]
             }

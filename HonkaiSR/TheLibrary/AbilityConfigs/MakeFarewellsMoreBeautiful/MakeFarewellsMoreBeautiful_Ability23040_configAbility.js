@@ -127,8 +127,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ability23040_CD",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Ability23040_CD"
                 }
               ]
             }
@@ -181,8 +181,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ability23040_HealFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Ability23040_HealFlag"
                 }
               ]
             }
@@ -308,8 +308,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability23040_CD",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Ability23040_CD"
                     }
                   ]
                 }
@@ -329,8 +329,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ability23040_HealFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Ability23040_HealFlag"
                 }
               ]
             }

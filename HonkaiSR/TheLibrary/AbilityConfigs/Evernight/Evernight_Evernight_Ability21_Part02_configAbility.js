@@ -65,8 +65,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_S02_Buff_Value",
-      "value": 0
+      "value": 0,
+      "variableName": "_S02_Buff_Value"
     },
     {
       "name": "IF",
@@ -118,7 +118,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_S02_Buff_Value",
               "value": {
                 "operator": "Variables[0] (0.65) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                 "displayLines": "(0.65 + _S02_Buff_Value)",
@@ -127,7 +126,8 @@ const configAbility = {
                   0.65,
                   "_S02_Buff_Value"
                 ]
-              }
+              },
+              "variableName": "_S02_Buff_Value"
             }
           ],
           "failed": [
@@ -142,7 +142,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_S02_Buff_Value",
                   "value": {
                     "operator": "Variables[0] (0.5) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                     "displayLines": "(0.5 + _S02_Buff_Value)",
@@ -151,7 +150,8 @@ const configAbility = {
                       0.5,
                       "_S02_Buff_Value"
                     ]
-                  }
+                  },
+                  "variableName": "_S02_Buff_Value"
                 }
               ],
               "failed": [
@@ -166,7 +166,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_S02_Buff_Value",
                       "value": {
                         "operator": "Variables[0] (0.15) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                         "displayLines": "(0.15 + _S02_Buff_Value)",
@@ -175,7 +174,8 @@ const configAbility = {
                           0.15,
                           "_S02_Buff_Value"
                         ]
-                      }
+                      },
+                      "variableName": "_S02_Buff_Value"
                     }
                   ],
                   "failed": [
@@ -190,7 +190,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_S02_Buff_Value",
                           "value": {
                             "operator": "Variables[0] (0.05) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                             "displayLines": "(0.05 + _S02_Buff_Value)",
@@ -199,7 +198,8 @@ const configAbility = {
                               0.05,
                               "_S02_Buff_Value"
                             ]
-                          }
+                          },
+                          "variableName": "_S02_Buff_Value"
                         }
                       ]
                     }

@@ -62,8 +62,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertCheck03",
-              "value": 0
+              "value": 0,
+              "variableName": "InsertCheck03"
             },
             {
               "name": "Inject Ability Use",
@@ -117,8 +117,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertCheck04",
-              "value": 0
+              "value": 0,
+              "variableName": "InsertCheck04"
             },
             {
               "name": "Inject Ability Use",
@@ -213,8 +213,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{EVENT[RoT] Dark Praetor: Self}}"
               },
-              "variableName": "_BossUI",
-              "value": 1
+              "value": 1,
+              "variableName": "_BossUI"
             }
           ]
         },
@@ -397,8 +397,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{EVENT[RoT] Dark Praetor: Self}}"
               },
-              "variableName": "_BossUI",
-              "value": 0
+              "value": 0,
+              "variableName": "_BossUI"
             }
           ]
         },

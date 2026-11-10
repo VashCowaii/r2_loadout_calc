@@ -85,8 +85,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TheFirstOne",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TheFirstOne"
                     }
                   ]
                 }

@@ -155,7 +155,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HealCount",
                   "value": {
                     "operator": "Variables[0] (_HealCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_HealCount + 1)",
@@ -165,7 +164,8 @@ const configAbility = {
                     "variables": [
                       "_HealCount"
                     ]
-                  }
+                  },
+                  "variableName": "_HealCount"
                 }
               ]
             },
@@ -180,7 +180,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealValue",
               "value": {
                 "operator": "Variables[0] (_HealValue) || Constants[0] (1) || Variables[1] (ExtraHealRatio) || ADD || MUL || RETURN",
                 "displayLines": "(_HealValue * (1 + ExtraHealRatio))",
@@ -191,11 +190,11 @@ const configAbility = {
                   "_HealValue",
                   "ExtraHealRatio"
                 ]
-              }
+              },
+              "variableName": "_HealValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_HealValueTotal",
               "value": {
                 "operator": "Variables[0] (_HealValueTotal) || Variables[1] (_HealValue) || ADD || RETURN",
                 "displayLines": "(_HealValueTotal + _HealValue)",
@@ -204,7 +203,8 @@ const configAbility = {
                   "_HealValueTotal",
                   "_HealValue"
                 ]
-              }
+              },
+              "variableName": "_HealValueTotal"
             },
             {
               "name": "Define Custom Variable",
@@ -212,7 +212,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "variableName": "_SummonerHealValueTotal",
               "value": {
                 "operator": "Variables[0] (_HealValueTotal) || RETURN",
                 "displayLines": "_HealValueTotal",
@@ -220,7 +219,8 @@ const configAbility = {
                 "variables": [
                   "_HealValueTotal"
                 ]
-              }
+              },
+              "variableName": "_SummonerHealValueTotal"
             },
             {
               "name": "Add Events/Bonuses",
@@ -328,7 +328,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "variableName": "_SummonerHealCount",
                   "value": {
                     "operator": "Variables[0] (_HealCount) || RETURN",
                     "displayLines": "_HealCount",
@@ -336,7 +335,8 @@ const configAbility = {
                     "variables": [
                       "_HealCount"
                     ]
-                  }
+                  },
+                  "variableName": "_SummonerHealCount"
                 }
               ]
             }

@@ -970,7 +970,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank01_P1_Chance",
               "value": {
                 "operator": "Variables[0] (0.35) || RETURN",
                 "displayLines": "0.35",
@@ -978,7 +977,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.35
                 ]
-              }
+              },
+              "variableName": "MDF_Rank01_P1_Chance"
             }
           ]
         },
@@ -1040,7 +1040,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Modifier_Gepard_00_Ratio",
                   "value": {
                     "operator": "Variables[0] (0.5) || RETURN",
                     "displayLines": "0.5",
@@ -1048,7 +1047,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "Modifier_Gepard_00_Ratio"
                 }
               ]
             },

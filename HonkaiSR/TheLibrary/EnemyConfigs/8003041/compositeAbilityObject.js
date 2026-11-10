@@ -291,7 +291,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayer",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(EnergyLayer - 1)",
@@ -301,7 +300,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayer"
                     }
                   ]
                 }
@@ -472,7 +472,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -480,7 +479,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -504,7 +504,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -512,7 +511,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -536,7 +536,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -544,7 +543,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -588,7 +588,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -596,7 +595,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -649,7 +649,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -657,7 +656,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -710,7 +710,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -718,7 +717,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -771,7 +771,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -779,7 +778,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -832,7 +832,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -840,7 +839,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -893,7 +893,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -901,7 +900,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -954,7 +954,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -962,7 +961,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1015,7 +1015,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -1023,7 +1022,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1069,7 +1069,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EnergyLayerLast",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || RETURN",
                         "displayLines": "EnergyLayer",
@@ -1077,7 +1076,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayerLast"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1430,7 +1430,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -1440,7 +1439,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -1538,7 +1538,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EnergyLayerLast",
                   "value": {
                     "operator": "Variables[0] (EnergyLayer) || RETURN",
                     "displayLines": "EnergyLayer",
@@ -1546,12 +1545,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "EnergyLayer"
                     ]
-                  }
+                  },
+                  "variableName": "EnergyLayerLast"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyLayer",
-                  "value": -2
+                  "value": -2,
+                  "variableName": "EnergyLayer"
                 }
               ]
             },
@@ -1734,7 +1734,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyLayer",
                       "value": {
                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(EnergyLayer - 1)",
@@ -1744,7 +1743,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EnergyLayer"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyLayer"
                     }
                   ]
                 }
@@ -1800,7 +1800,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AccelerateLayer",
           "value": {
             "operator": "Variables[0] (EnergyLayer) || RETURN",
             "displayLines": "EnergyLayer",
@@ -1808,7 +1807,8 @@ const compositeAbilityObject = {
             "variables": [
               "EnergyLayer"
             ]
-          }
+          },
+          "variableName": "AccelerateLayer"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1820,8 +1820,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": -1
+          "value": -1,
+          "variableName": "EnergyLayer"
         },
         {
           "name": "IF",
@@ -1940,7 +1940,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -1950,7 +1949,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -2145,7 +2145,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -2155,7 +2154,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -2370,7 +2370,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -2380,7 +2379,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -2414,7 +2414,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -2424,7 +2423,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -2619,7 +2619,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -2629,7 +2628,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -2844,7 +2844,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -2854,7 +2853,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -2888,7 +2888,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -2898,7 +2897,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -3093,7 +3093,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -3103,7 +3102,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -3318,7 +3318,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -3328,7 +3327,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -3362,7 +3362,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -3372,7 +3371,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -3567,7 +3567,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -3577,7 +3576,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -3792,7 +3792,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -3802,7 +3801,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -3836,7 +3836,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -3846,7 +3845,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -4041,7 +4041,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -4051,7 +4050,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -4266,7 +4266,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -4276,7 +4275,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -4310,7 +4310,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -4320,7 +4319,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -4515,7 +4515,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -4525,7 +4524,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -4740,7 +4740,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -4750,7 +4749,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -4784,7 +4784,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -4794,7 +4793,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -4989,7 +4989,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -4999,7 +4998,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -5214,7 +5214,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -5224,7 +5223,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -5258,7 +5258,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -5268,7 +5267,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -5463,7 +5463,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -5473,7 +5472,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -5688,7 +5688,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -5698,7 +5697,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -5732,7 +5732,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AccelerateLayer",
                   "value": {
                     "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AccelerateLayer - 1)",
@@ -5742,7 +5741,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AccelerateLayer"
                     ]
-                  }
+                  },
+                  "variableName": "AccelerateLayer"
                 }
               ]
             },
@@ -5937,7 +5937,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -5947,7 +5946,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -6162,7 +6162,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -6172,7 +6171,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -6196,8 +6196,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": -1
+          "value": -1,
+          "variableName": "EnergyLayer"
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -6298,7 +6298,6 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyLayer",
                   "value": {
                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(EnergyLayer - 1)",
@@ -6308,7 +6307,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "EnergyLayer"
                     ]
-                  }
+                  },
+                  "variableName": "EnergyLayer"
                 }
               ]
             }
@@ -6377,8 +6377,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": 9
+          "value": 9,
+          "variableName": "EnergyLayer"
         },
         "Trigger: Ability End"
       ],
@@ -6426,7 +6426,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AccelerateLayer",
           "value": {
             "operator": "Variables[0] (EnergyLayer) || RETURN",
             "displayLines": "EnergyLayer",
@@ -6434,7 +6433,8 @@ const compositeAbilityObject = {
             "variables": [
               "EnergyLayer"
             ]
-          }
+          },
+          "variableName": "AccelerateLayer"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -6446,8 +6446,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": -1
+          "value": -1,
+          "variableName": "EnergyLayer"
         },
         {
           "name": "IF",
@@ -6576,7 +6576,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -6586,7 +6585,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -6692,7 +6692,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -6702,7 +6701,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -6805,7 +6805,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -6815,7 +6814,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -6852,7 +6852,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -6862,7 +6861,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -6968,7 +6968,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -6978,7 +6977,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7081,7 +7081,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7091,7 +7090,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7128,7 +7128,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -7138,7 +7137,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -7244,7 +7244,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7254,7 +7253,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7357,7 +7357,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7367,7 +7366,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7404,7 +7404,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -7414,7 +7413,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -7520,7 +7520,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7530,7 +7529,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7633,7 +7633,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7643,7 +7642,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7680,7 +7680,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -7690,7 +7689,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -7796,7 +7796,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7806,7 +7805,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7909,7 +7909,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -7919,7 +7918,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -7956,7 +7956,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -7966,7 +7965,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -8072,7 +8072,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8082,7 +8081,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8185,7 +8185,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8195,7 +8194,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8232,7 +8232,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -8242,7 +8241,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -8348,7 +8348,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8358,7 +8357,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8461,7 +8461,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8471,7 +8470,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8508,7 +8508,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -8518,7 +8517,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -8624,7 +8624,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8634,7 +8633,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8737,7 +8737,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "EnergyLayer",
                                       "value": {
                                         "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(EnergyLayer - 1)",
@@ -8747,7 +8746,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "EnergyLayer"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "EnergyLayer"
                                     }
                                   ]
                                 }
@@ -8784,7 +8784,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AccelerateLayer",
                           "value": {
                             "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(AccelerateLayer - 1)",
@@ -8794,7 +8793,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AccelerateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "AccelerateLayer"
                         }
                       ]
                     },
@@ -8891,7 +8891,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "EnergyLayer",
                                   "value": {
                                     "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(EnergyLayer - 1)",
@@ -8901,7 +8900,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "EnergyLayer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "EnergyLayer"
                                 }
                               ]
                             }
@@ -8926,8 +8926,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": -1
+          "value": -1,
+          "variableName": "EnergyLayer"
         },
         "Trigger: Ability End"
       ],
@@ -9353,8 +9353,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": 7
+          "value": 7,
+          "variableName": "EnergyLayer"
         },
         {
           "name": "Add Events/Bonuses",
@@ -9425,8 +9425,8 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyLayer",
-          "value": 7
+          "value": 7,
+          "variableName": "EnergyLayer"
         },
         {
           "name": "Add Events/Bonuses",

@@ -78,7 +78,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_DotDamageRatio",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
         "displayLines": "{[PassiveSkill01[1]]}",
@@ -86,7 +85,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill01[1]]}"
         ]
-      }
+      },
+      "variableName": "_DotDamageRatio"
     },
     {
       "name": "Create Enemies",

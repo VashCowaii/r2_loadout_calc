@@ -143,8 +143,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ThunderKillCount",
-      "value": 0
+      "value": 0,
+      "variableName": "ThunderKillCount"
     }
   ],
   "targetObjectData": {

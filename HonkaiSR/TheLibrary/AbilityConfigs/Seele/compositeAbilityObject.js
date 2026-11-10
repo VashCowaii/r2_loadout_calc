@@ -306,7 +306,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDamageRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageRatio) || Variables[1] (MDF_ModifierLayers) || MUL || RETURN",
                     "displayLines": "(MDF_DamageRatio * MDF_ModifierLayers)",
@@ -315,7 +314,8 @@ const compositeAbilityObject = {
                       "MDF_DamageRatio",
                       "MDF_ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDamageRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -699,7 +699,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FinalUltraDamage",
                       "value": {
                         "operator": "Variables[0] (FinalUltraDamage) || Variables[1] (AddUltraDamage) || ADD || RETURN",
                         "displayLines": "(FinalUltraDamage + AddUltraDamage)",
@@ -708,7 +707,8 @@ const compositeAbilityObject = {
                           "FinalUltraDamage",
                           "AddUltraDamage"
                         ]
-                      }
+                      },
+                      "variableName": "FinalUltraDamage"
                     }
                   ]
                 }
@@ -1864,8 +1864,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertAction"
                 }
               ]
             },
@@ -1929,8 +1929,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1987,7 +1987,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertActionCount",
                       "value": {
                         "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Seele_BonusInsertActionCount + 1)",
@@ -1997,7 +1996,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Seele_BonusInsertActionCount"
                         ]
-                      }
+                      },
+                      "variableName": "Seele_BonusInsertActionCount"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -2008,12 +2008,11 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Seele_BonusInsertAction",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Seele_BonusInsertAction"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Seele_BonusInsertActionCount",
                           "value": {
                             "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -2023,7 +2022,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Seele_BonusInsertActionCount"
                             ]
-                          }
+                          },
+                          "variableName": "Seele_BonusInsertActionCount"
                         },
                         {
                           "name": "IF",
@@ -2127,8 +2127,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2173,8 +2173,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Seele_BonusInsertAction"
                 },
                 {
                   "name": "IF",
@@ -2187,8 +2187,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "IF",
@@ -2223,7 +2223,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertActionCount",
                       "value": {
                         "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Seele_BonusInsertActionCount + 1)",
@@ -2233,7 +2232,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Seele_BonusInsertActionCount"
                         ]
-                      }
+                      },
+                      "variableName": "Seele_BonusInsertActionCount"
                     },
                     {
                       "name": "Inject Extra-Turn",
@@ -2244,12 +2244,11 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Seele_BonusInsertAction",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Seele_BonusInsertAction"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Seele_BonusInsertActionCount",
                           "value": {
                             "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -2259,7 +2258,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Seele_BonusInsertActionCount"
                             ]
-                          }
+                          },
+                          "variableName": "Seele_BonusInsertActionCount"
                         },
                         {
                           "name": "IF",
@@ -2316,12 +2316,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Seele_BonusInsertAction"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertActionCount",
                       "value": {
                         "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -2331,14 +2330,15 @@ const compositeAbilityObject = {
                         "variables": [
                           "Seele_BonusInsertActionCount"
                         ]
-                      }
+                      },
+                      "variableName": "Seele_BonusInsertActionCount"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     }
                   ]
                 }
@@ -2356,8 +2356,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2502,13 +2502,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AddUltraDamage",
-          "value": 0
+          "value": 0,
+          "variableName": "AddUltraDamage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "FinalUltraDamage",
-          "value": 0
+          "value": 0,
+          "variableName": "FinalUltraDamage"
         },
         {
           "name": "Add Events/Bonuses",

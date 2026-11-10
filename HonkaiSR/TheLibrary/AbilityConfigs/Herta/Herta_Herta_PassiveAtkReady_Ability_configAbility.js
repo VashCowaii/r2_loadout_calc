@@ -14,8 +14,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Count_Insert",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Count_Insert"
     },
     {
       "name": "UI Display Event",
@@ -46,7 +46,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Count",
           "value": {
             "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(Herta_Count - 1)",
@@ -56,11 +55,11 @@ const configAbility = {
             "variables": [
               "Herta_Count"
             ]
-          }
+          },
+          "variableName": "Herta_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Scoring_Herta_Count",
           "value": {
             "operator": "Variables[0] (Scoring_Herta_Count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Scoring_Herta_Count + 1)",
@@ -70,7 +69,8 @@ const configAbility = {
             "variables": [
               "Scoring_Herta_Count"
             ]
-          }
+          },
+          "variableName": "Scoring_Herta_Count"
         },
         {
           "name": "IF",
@@ -198,8 +198,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Scoring_Herta_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Scoring_Herta_Count"
             },
             {
               "name": "Declare Custom Variable",
@@ -271,8 +271,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_Herta_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Scoring_Herta_Count"
                 },
                 "Trigger: Skip Death Handling",
                 {

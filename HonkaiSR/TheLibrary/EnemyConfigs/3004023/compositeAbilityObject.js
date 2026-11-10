@@ -1063,9 +1063,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -1187,7 +1187,6 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
                   "value": {
                     "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
                     "displayLines": "{[Skill04[0]]}",
@@ -1195,7 +1194,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill04[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MainStoryDamage"
                 }
               ]
             }
@@ -1228,7 +1228,6 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
                   "value": {
                     "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
                     "displayLines": "{[Skill04[1]]}",
@@ -1236,7 +1235,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill04[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MainStoryDamage"
                 }
               ]
             }
@@ -1269,7 +1269,6 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MainStoryDamage",
                   "value": {
                     "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
                     "displayLines": "{[Skill04[2]]}",
@@ -1277,7 +1276,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill04[2]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MainStoryDamage"
                 }
               ]
             }
@@ -1445,9 +1445,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             },
             {
               "name": "Define Custom Variable",
@@ -1455,9 +1455,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "FlopSide",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "FlopSide"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1743,9 +1743,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             },
             {
               "name": "IF",
@@ -1764,9 +1764,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             },
             {
               "name": "Define Custom Variable",
@@ -1774,9 +1774,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "FlopSide",
+              "scope": "TargetEntity",
               "value": -1,
-              "scope": "TargetEntity"
+              "variableName": "FlopSide"
             },
             {
               "name": "IF",
@@ -2081,9 +2081,9 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "variableName": "AI_HeiShengBei_SpecialAI",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "AI_HeiShengBei_SpecialAI"
             },
             {
               "name": "Define Custom Variable",
@@ -2107,9 +2107,9 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "variableName": "AI_HeiShengBei_Need",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "AI_HeiShengBei_Need"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2159,8 +2159,8 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "variableName": "LockCount",
-              "value": 3
+              "value": 3,
+              "variableName": "LockCount"
             }
           ]
         },
@@ -2245,9 +2245,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "FlopSide",
+              "scope": "TargetEntity",
               "value": -1,
-              "scope": "TargetEntity"
+              "variableName": "FlopSide"
             },
             {
               "name": "IF",
@@ -3283,8 +3283,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_MainStroyDialog",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_MainStroyDialog"
                     }
                   ]
                 }
@@ -3442,9 +3442,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -3463,9 +3463,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": -1,
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 },
                 {
                   "name": "IF",
@@ -3538,8 +3538,8 @@ const compositeAbilityObject = {
                 "name": "Add Target by Unique Identifier",
                 "identifier": "TheaterCore"
               },
-              "variableName": "W3_Theater_00_BattleScore1_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "W3_Theater_00_BattleScore1_Flag"
             },
             "Wait for Pending Ability Completions",
             {

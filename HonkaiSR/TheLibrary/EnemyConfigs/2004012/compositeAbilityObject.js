@@ -1869,9 +1869,9 @@ const compositeAbilityObject = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MindControlSuccess",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "MindControlSuccess"
                 }
               ]
             },
@@ -1898,9 +1898,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MindControlSuccess",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "MindControlSuccess"
             }
           ]
         },
@@ -1914,9 +1914,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEventFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "BattleEventFlag"
         }
       ],
       "targetObjectData": {
@@ -1987,9 +1987,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEventFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "BattleEventFlag"
         },
         {
           "name": "Find New Target",
@@ -2289,9 +2289,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEventFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "BattleEventFlag"
         },
         {
           "name": "Declare Custom Variable",

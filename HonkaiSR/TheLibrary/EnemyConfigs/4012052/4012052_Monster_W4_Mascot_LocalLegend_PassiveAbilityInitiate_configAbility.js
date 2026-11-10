@@ -54,8 +54,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AISequence",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "AISequence"
                 }
               ]
             },
@@ -70,8 +70,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AISequence",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "AISequence"
                 }
               ]
             }
@@ -87,8 +87,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AISequence",
-          "value": 2
+          "value": 2,
+          "variableName": "AISequence"
         }
       ]
     }

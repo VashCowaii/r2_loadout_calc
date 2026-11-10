@@ -248,8 +248,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
-      "value": -1
+      "value": -1,
+      "variableName": "AIFlag"
     }
   ],
   "targetObjectData": {

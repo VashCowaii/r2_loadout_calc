@@ -413,8 +413,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_ExtraShieldUPRatio",
-          "value": 1
+          "value": 1,
+          "variableName": "DanHengPT_ExtraShieldUPRatio"
         }
       ]
     }

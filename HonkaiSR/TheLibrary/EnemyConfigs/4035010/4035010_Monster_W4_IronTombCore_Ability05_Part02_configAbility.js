@@ -506,8 +506,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Main_Skill05",
-          "value": 1
+          "value": 1,
+          "variableName": "_Main_Skill05"
         }
       ]
     },

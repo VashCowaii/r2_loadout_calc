@@ -26,8 +26,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 3
+              "value": 3,
+              "variableName": "MainCount"
             }
           ]
         }
@@ -699,8 +699,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 4
+              "value": 4,
+              "variableName": "MainCount"
             }
           ]
         }

@@ -147,7 +147,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBlackBloodValue",
               "value": {
                 "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_12236) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
                 "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_12236) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
@@ -158,7 +157,8 @@ const configAbility = {
                   "UnusedUnderThisBase_12236",
                   "CurrentEnhanceBlackBloodValue"
                 ]
-              }
+              },
+              "variableName": "CurrentBlackBloodValue"
             },
             {
               "name": "IF",
@@ -178,7 +178,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentBlackBloodValue",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_12235) || RETURN",
                     "displayLines": "UnusedUnderThisBase_12235",
@@ -186,7 +185,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_12235"
                     ]
-                  }
+                  },
+                  "variableName": "CurrentBlackBloodValue"
                 }
               ]
             },
@@ -690,7 +690,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "SoulHPRatio",
           "value": {
             "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
             "displayLines": "{[Skill01[0]]}",
@@ -698,7 +697,8 @@ const configAbility = {
             "variables": [
               "{[Skill01[0]]}"
             ]
-          }
+          },
+          "variableName": "SoulHPRatio"
         },
         {
           "name": "IF",
@@ -1069,8 +1069,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Tutorial_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Tutorial_Flag"
         },
         {
           "name": "Find New Target",

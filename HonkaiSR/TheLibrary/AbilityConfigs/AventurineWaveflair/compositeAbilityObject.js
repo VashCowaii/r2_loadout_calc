@@ -182,9 +182,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ElationCharacterCount",
+                      "scope": "ContextCaster",
                       "value": 0,
-                      "scope": "ContextCaster"
+                      "variableName": "ElationCharacterCount"
                     },
                     {
                       "name": "Find New Target",
@@ -352,9 +352,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SpecialAttackTriggerFlag",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_SpecialAttackTriggerFlag"
                     }
                   ]
                 }
@@ -365,9 +365,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SpecialAttackTriggerFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_SpecialAttackTriggerFlag"
                 }
               ]
             },
@@ -392,9 +392,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SpecialAttackTriggerFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_SpecialAttackTriggerFlag"
                 }
               ]
             },
@@ -685,7 +685,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioBase",
                       "value": {
                         "operator": "Variables[0] (0.3) || RETURN",
                         "displayLines": "0.3",
@@ -693,7 +692,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.3
                         ]
-                      }
+                      },
+                      "variableName": "_EPRatioBase"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -706,7 +706,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentSpeed",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -715,11 +714,11 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           "_CurrentSpeedConvert"
                         ]
-                      }
+                      },
+                      "variableName": "_CurrentSpeed"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (140) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - 140)",
@@ -728,7 +727,8 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           140
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     },
                     {
                       "name": "IF",
@@ -748,7 +748,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_OverCountSpeedValue",
                           "value": {
                             "operator": "Variables[0] (200) || RETURN",
                             "displayLines": "200",
@@ -756,7 +755,8 @@ const compositeAbilityObject = {
                             "variables": [
                               200
                             ]
-                          }
+                          },
+                          "variableName": "_OverCountSpeedValue"
                         }
                       ]
                     },
@@ -778,7 +778,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_EPRatioAdd",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                             "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -789,14 +788,15 @@ const compositeAbilityObject = {
                               1,
                               0.01
                             ]
-                          }
+                          },
+                          "variableName": "_EPRatioAdd"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_EPRatioAdd",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_EPRatioAdd"
                         }
                       ]
                     },
@@ -1049,7 +1049,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (6) || Variables[1] (MDF_CastNum) || SUB || RETURN",
                     "displayLines": "(6 - MDF_CastNum)",
@@ -1058,7 +1057,8 @@ const compositeAbilityObject = {
                       6,
                       "MDF_CastNum"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 }
               ]
             }
@@ -1084,7 +1084,6 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (6) || Variables[1] (MDF_CastNum) || SUB || RETURN",
                         "displayLines": "(6 - MDF_CastNum)",
@@ -1093,7 +1092,8 @@ const compositeAbilityObject = {
                           6,
                           "MDF_CastNum"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }
@@ -1292,15 +1292,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AlreadyTriggerElationSkill",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "_AlreadyTriggerElationSkill"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LayerMod",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_Layer) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_Layer / 10))",
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
                       10
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_LayerMod"
                 },
                 {
                   "name": "IF",
@@ -1397,7 +1397,7 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_LayerModTriggerLayer",
+                          "scope": "ContextModifier",
                           "value": {
                             "operator": "Variables[0] (MDF_LayerMod) || RETURN",
                             "displayLines": "MDF_LayerMod",
@@ -1406,7 +1406,7 @@ const compositeAbilityObject = {
                               "MDF_LayerMod"
                             ]
                           },
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_LayerModTriggerLayer"
                         }
                       ]
                     }
@@ -1618,9 +1618,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_IsEnergyTrigger",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_IsEnergyTrigger"
                 }
               ]
             },
@@ -1640,9 +1640,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_IsEnergyTrigger",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_IsEnergyTrigger"
                     },
                     "Unknown EventType2 (Not always an error)[2 true][3_NAME AventurineW]"
                   ]
@@ -2546,7 +2546,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_MaxEnergyPoint",
           "value": {
             "operator": "Variables[0] (30) || RETURN",
             "displayLines": "30",
@@ -2554,7 +2553,8 @@ const compositeAbilityObject = {
             "variables": [
               30
             ]
-          }
+          },
+          "variableName": "_MaxEnergyPoint"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2650,7 +2650,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_MaxEnergyPoint",
               "value": {
                 "operator": "Variables[0] (50) || RETURN",
                 "displayLines": "50",
@@ -2658,7 +2657,8 @@ const compositeAbilityObject = {
                 "variables": [
                   50
                 ]
-              }
+              },
+              "variableName": "_MaxEnergyPoint"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2792,9 +2792,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_CurrentDamageNumber",
+          "scope": "ContextAbility",
           "value": 1,
-          "scope": "ContextAbility"
+          "variableName": "_CurrentDamageNumber"
         },
         {
           "name": "Define Custom Variable with Modifier Values",
@@ -3664,9 +3664,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SpecialAttackEnergyPointTriggerCount",
+          "scope": "ContextCaster",
           "value": 0,
-          "scope": "ContextCaster"
+          "variableName": "_SpecialAttackEnergyPointTriggerCount"
         },
         {
           "name": "ATK Scaling DMG",

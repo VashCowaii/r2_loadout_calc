@@ -247,7 +247,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BPNeed",
               "value": {
                 "operator": "Variables[0] (EXSkill01) || RETURN",
                 "displayLines": "EXSkill01",
@@ -255,7 +254,8 @@ const configAbility = {
                 "variables": [
                   "EXSkill01"
                 ]
-              }
+              },
+              "variableName": "BPNeed"
             },
             {
               "name": "IF",
@@ -283,7 +283,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BPNeed",
               "value": {
                 "operator": "Variables[0] (EXSkill01) || RETURN",
                 "displayLines": "EXSkill01",
@@ -291,7 +290,8 @@ const configAbility = {
                 "variables": [
                   "EXSkill01"
                 ]
-              }
+              },
+              "variableName": "BPNeed"
             },
             {
               "name": "IF",

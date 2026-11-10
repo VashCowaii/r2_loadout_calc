@@ -300,8 +300,8 @@ const compositeAbilityObject = {
                         "name": "Add Target by Unique Identifier",
                         "identifier": "TheaterCore"
                       },
-                      "variableName": "W3_Theater_00_BattleScore1_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_Theater_00_BattleScore1_Flag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -597,9 +597,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1114,9 +1114,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1124,9 +1124,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "FlopSide",
+                      "scope": "TargetEntity",
                       "value": -1,
-                      "scope": "TargetEntity"
+                      "variableName": "FlopSide"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1666,16 +1666,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DoingFlop",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "DoingFlop"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "FaceChangeFlag"
                 }
               ]
             },
@@ -1688,9 +1688,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DoingFlop",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DoingFlop"
                 }
               ]
             },
@@ -1847,9 +1847,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1929,16 +1929,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DoingFlop",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "DoingFlop"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "FaceChangeFlag"
                 }
               ]
             },
@@ -1951,9 +1951,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DoingFlop",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DoingFlop"
                 }
               ]
             },
@@ -2110,9 +2110,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2198,16 +2198,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DoingFlop",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "DoingFlop"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "FaceChangeFlag"
                 }
               ]
             },
@@ -2220,9 +2220,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DoingFlop",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DoingFlop"
                 }
               ]
             },
@@ -2379,9 +2379,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2464,16 +2464,16 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DoingFlop",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "DoingFlop"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "FaceChangeFlag"
                 }
               ]
             },
@@ -2486,9 +2486,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DoingFlop",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DoingFlop"
                 }
               ]
             },
@@ -2645,9 +2645,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2702,9 +2702,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -2803,9 +2803,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Negative_Count",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Negative_Count"
                 },
                 {
                   "name": "IF",
@@ -2922,8 +2922,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ForbidFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "ForbidFlag"
                 }
               ]
             },
@@ -2993,8 +2993,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ForbidFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ForbidFlag"
                 }
               ]
             },
@@ -3007,9 +3007,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Negative_Count",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Negative_Count"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -3029,9 +3029,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_Negative_Count",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_Negative_Count"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3039,9 +3039,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Negative_Count",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Negative_Count"
                 },
                 {
                   "name": "IF",
@@ -3069,7 +3069,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Negative_Count_Max",
                           "value": {
                             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                             "displayLines": "{[SkillP01[0]]}",
@@ -3077,7 +3076,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[SkillP01[0]]}"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Negative_Count_Max"
                         }
                       ],
                       "failed": [
@@ -3096,7 +3096,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Negative_Count_Max",
                               "value": {
                                 "operator": "Variables[0] (UnusedUnderThisBase_11057) || RETURN",
                                 "displayLines": "UnusedUnderThisBase_11057",
@@ -3104,7 +3103,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "UnusedUnderThisBase_11057"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Negative_Count_Max"
                             }
                           ],
                           "failed": [
@@ -3123,7 +3123,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_Negative_Count_Max",
                                   "value": {
                                     "operator": "Variables[0] (UnusedUnderThisBase_11049) || RETURN",
                                     "displayLines": "UnusedUnderThisBase_11049",
@@ -3131,7 +3130,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "UnusedUnderThisBase_11049"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_Negative_Count_Max"
                                 }
                               ]
                             }
@@ -3143,7 +3143,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Negative_Count_Max",
                       "value": {
                         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                         "displayLines": "{[SkillP01[0]]}",
@@ -3151,7 +3150,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "{[SkillP01[0]]}"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Negative_Count_Max"
                     }
                   ]
                 },
@@ -3218,9 +3218,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ReadytoFlop",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ReadytoFlop"
                 }
               ]
             },
@@ -3264,7 +3264,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Negative_Count",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
                         "displayLines": "MDF_Negative_Count",
@@ -3273,7 +3273,7 @@ const compositeAbilityObject = {
                           "MDF_Negative_Count"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Negative_Count"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -3307,9 +3307,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ReadytoFlop",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ReadytoFlop"
                     }
                   ]
                 }
@@ -3324,7 +3324,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_Negative_Count",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_Negative_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Negative_Count + 1)",
@@ -3335,7 +3335,7 @@ const compositeAbilityObject = {
                       "MDF_Negative_Count"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_Negative_Count"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3343,7 +3343,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Negative_Count",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_Negative_Count) || RETURN",
                     "displayLines": "MDF_Negative_Count",
@@ -3352,7 +3352,7 @@ const compositeAbilityObject = {
                       "MDF_Negative_Count"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Negative_Count"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -3386,7 +3386,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_Negative_Count_Diff",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_Negative_Count_Max) || Variables[1] (MDF_Negative_Count) || SUB || RETURN",
                     "displayLines": "(MDF_Negative_Count_Max - MDF_Negative_Count)",
@@ -3396,7 +3396,7 @@ const compositeAbilityObject = {
                       "MDF_Negative_Count"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_Negative_Count_Diff"
                 },
                 {
                   "name": "IF",
@@ -3418,9 +3418,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ReadytoFlop",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "ReadytoFlop"
                     }
                   ]
                 },
@@ -3451,14 +3451,14 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FaceChangeFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "FaceChangeFlag"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -3660,9 +3660,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Negative_Count",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Negative_Count"
                 },
                 {
                   "name": "Update Override Controller",
@@ -4093,15 +4093,15 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "FlopSide",
+          "scope": "TargetEntity",
           "value": -1,
-          "scope": "TargetEntity"
+          "variableName": "FlopSide"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4450,9 +4450,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4534,9 +4534,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",

@@ -261,7 +261,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Tree01_LifeTimeAdd",
                               "value": {
                                 "operator": "Variables[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -269,14 +268,15 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1
                                 ]
-                              }
+                              },
+                              "variableName": "_Tree01_LifeTimeAdd"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Tree01_LifeTimeAdd",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "_Tree01_LifeTimeAdd"
                             }
                           ]
                         },
@@ -289,7 +289,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank06_DamagePercentageAdd",
                               "value": {
                                 "operator": "Variables[0] (0.15) || RETURN",
                                 "displayLines": "0.15",
@@ -297,14 +296,15 @@ const compositeAbilityObject = {
                                 "variables": [
                                   0.15
                                 ]
-                              }
+                              },
+                              "variableName": "_Rank06_DamagePercentageAdd"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank06_DamagePercentageAdd",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "_Rank06_DamagePercentageAdd"
                             }
                           ]
                         },
@@ -837,7 +837,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Tree01_LifeTimeAdd",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -845,14 +844,15 @@ const compositeAbilityObject = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "_Tree01_LifeTimeAdd"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Tree01_LifeTimeAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Tree01_LifeTimeAdd"
                     }
                   ]
                 },
@@ -865,7 +865,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank06_DamagePercentageAdd",
                       "value": {
                         "operator": "Variables[0] (0.15) || RETURN",
                         "displayLines": "0.15",
@@ -873,14 +872,15 @@ const compositeAbilityObject = {
                         "variables": [
                           0.15
                         ]
-                      }
+                      },
+                      "variableName": "_Rank06_DamagePercentageAdd"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank06_DamagePercentageAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Rank06_DamagePercentageAdd"
                     }
                   ]
                 },
@@ -1111,7 +1111,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_LoopTimeAdd",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1119,14 +1118,15 @@ const compositeAbilityObject = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "_Rank01_LoopTimeAdd"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_LoopTimeAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "_Rank01_LoopTimeAdd"
             }
           ]
         },
@@ -1163,8 +1163,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_has_poison_layer_greaterequal_5",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_has_poison_layer_greaterequal_5"
                         },
                         {
                           "name": "Reconstruct Modifier",
@@ -1196,8 +1196,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "_has_poison_layer_greaterequal_5",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "_has_poison_layer_greaterequal_5"
                                 }
                               ]
                             }
@@ -1301,8 +1301,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_has_poison_layer_greaterequal_5",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_has_poison_layer_greaterequal_5"
                 },
                 {
                   "name": "Reconstruct Modifier",
@@ -1334,8 +1334,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_has_poison_layer_greaterequal_5",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_has_poison_layer_greaterequal_5"
                         }
                       ]
                     }

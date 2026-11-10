@@ -308,8 +308,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "NewStartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "NewStartFlag"
                     }
                   ]
                 },
@@ -392,7 +392,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_StartActionDelay",
                       "value": {
                         "operator": "Variables[0] (MDF_FrenzyStartDelay) || RETURN",
                         "displayLines": "MDF_FrenzyStartDelay",
@@ -400,7 +399,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_FrenzyStartDelay"
                         ]
-                      }
+                      },
+                      "variableName": "_StartActionDelay"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -424,8 +424,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "NewStartFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "NewStartFlag"
                     },
                     {
                       "name": "Define Custom Variable with Varying Data",
@@ -480,7 +480,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_ThresholdActionDelay",
                           "value": {
                             "operator": "Variables[0] (MDF_FrenzyIntervalDelay) || Variables[1] (_CurrentActionDelay) || ADD || RETURN",
                             "displayLines": "(MDF_FrenzyIntervalDelay + _CurrentActionDelay)",
@@ -489,11 +488,11 @@ const compositeAbilityObject = {
                               "MDF_FrenzyIntervalDelay",
                               "_CurrentActionDelay"
                             ]
-                          }
+                          },
+                          "variableName": "_ThresholdActionDelay"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Layer",
                           "value": {
                             "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_Layer + 1)",
@@ -503,7 +502,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "_Layer"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -587,7 +587,6 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ThresholdActionDelay",
                   "value": {
                     "operator": "Variables[0] (_ThresholdActionDelay) || Variables[1] (_StartActionDelay) || ADD || RETURN",
                     "displayLines": "(_ThresholdActionDelay + _StartActionDelay)",
@@ -596,12 +595,13 @@ const compositeAbilityObject = {
                       "_ThresholdActionDelay",
                       "_StartActionDelay"
                     ]
-                  }
+                  },
+                  "variableName": "_ThresholdActionDelay"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Layer"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1899,7 +1899,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PushDelay",
                       "value": {
                         "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
                         "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
@@ -1910,7 +1909,8 @@ const compositeAbilityObject = {
                           "MDF_IF_BOSS_BreakDelay",
                           "_ActionDelay"
                         ]
-                      }
+                      },
+                      "variableName": "PushDelay"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2174,7 +2174,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PushDelay",
                       "value": {
                         "operator": "Constants[0] (10) || Variables[0] (MDF_IF_BOSS_BreakDelay) || MUL || Variables[1] (_ActionDelay) || SUB || Constants[0] (10) || DIV || RETURN",
                         "displayLines": "(((10 * MDF_IF_BOSS_BreakDelay) - _ActionDelay) / 10)",
@@ -2185,7 +2184,8 @@ const compositeAbilityObject = {
                           "MDF_IF_BOSS_BreakDelay",
                           "_ActionDelay"
                         ]
-                      }
+                      },
+                      "variableName": "PushDelay"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4238,15 +4238,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ODCountDown",
+          "scope": "TargetEntity",
           "value": 8,
-          "scope": "TargetEntity"
+          "variableName": "ODCountDown"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -4331,8 +4331,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertFlag_ODout",
-          "value": 0
+          "value": 0,
+          "variableName": "InsertFlag_ODout"
         },
         {
           "name": "IF",

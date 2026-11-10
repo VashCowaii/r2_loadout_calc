@@ -28,7 +28,6 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_CountTotal",
       "value": {
         "operator": "Variables[0] (Thunder_CountLight) || RETURN",
         "displayLines": "Thunder_CountLight",
@@ -36,7 +35,8 @@ const configAbility = {
         "variables": [
           "Thunder_CountLight"
         ]
-      }
+      },
+      "variableName": "Thunder_CountTotal"
     },
     {
       "name": "Change Entity Turn-State",
@@ -166,8 +166,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_CountLight",
-      "value": 0
+      "value": 0,
+      "variableName": "Thunder_CountLight"
     },
     {
       "name": "Remove Events/Bonuses",

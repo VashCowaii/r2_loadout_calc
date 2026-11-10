@@ -23,7 +23,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Result_Stack_Layer",
               "value": {
                 "operator": "Variables[0] (parameter[0]_AddLayer) || RETURN",
                 "displayLines": "parameter[0]_AddLayer",
@@ -31,7 +30,8 @@ const configAbility = {
                 "variables": [
                   "parameter[0]_AddLayer"
                 ]
-              }
+              },
+              "variableName": "Result_Stack_Layer"
             },
             {
               "name": "Looped Event",
@@ -73,7 +73,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Result_Stack_Layer",
                       "value": {
                         "operator": "Variables[0] (Result_Stack_Layer) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Result_Stack_Layer + 1)",
@@ -83,7 +82,8 @@ const configAbility = {
                         "variables": [
                           "Result_Stack_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "Result_Stack_Layer"
                     }
                   ]
                 },
@@ -96,7 +96,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Result_Stack_Layer",
                       "value": {
                         "operator": "Variables[0] (Result_Stack_Layer) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(Result_Stack_Layer + 1)",
@@ -105,7 +104,8 @@ const configAbility = {
                           "Result_Stack_Layer",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Result_Stack_Layer"
                     }
                   ]
                 }

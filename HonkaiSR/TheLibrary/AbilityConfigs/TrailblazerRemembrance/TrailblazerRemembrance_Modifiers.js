@@ -383,7 +383,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_tmpTeamAddSP",
                       "value": {
                         "operator": "Variables[0] (TeamAddSP) || RETURN",
                         "displayLines": "TeamAddSP",
@@ -391,7 +390,8 @@ const configAbility = {
                         "variables": [
                           "TeamAddSP"
                         ]
-                      }
+                      },
+                      "variableName": "_tmpTeamAddSP"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -418,7 +418,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TeamAddSP",
                       "value": {
                         "operator": "Variables[0] (_tmpTeamAddSP) || RETURN",
                         "displayLines": "_tmpTeamAddSP",
@@ -426,7 +425,8 @@ const configAbility = {
                         "variables": [
                           "_tmpTeamAddSP"
                         ]
-                      }
+                      },
+                      "variableName": "TeamAddSP"
                     }
                   ]
                 }

@@ -26,8 +26,8 @@ const configAbility = {
   "onAbortReg": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_OnBattle_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "Castorice_OnBattle_Flag"
     }
   ],
   "references": [],

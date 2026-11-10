@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_StorySimulationSpeed",
-      "value": 1
+      "value": 1,
+      "variableName": "_StorySimulationSpeed"
     }
   ],
   "targetObjectData": {

@@ -644,7 +644,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_RateLayer",
                       "value": {
                         "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
                         "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
@@ -653,7 +652,8 @@ const configAbility = {
                           "_RateLayer",
                           "MDF_Eidolon1_AddRateLayer"
                         ]
-                      }
+                      },
+                      "variableName": "_RateLayer"
                     }
                   ],
                   "failed": [
@@ -668,7 +668,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
                             "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
@@ -677,7 +676,8 @@ const configAbility = {
                               "_RateLayer",
                               "MDF_Eidolon1_AddRateLayer02"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ]
                     }
@@ -687,8 +687,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank01_HitNumb",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Rank01_HitNumb"
             }
           ]
         }
@@ -934,7 +934,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_RateLayer",
                       "value": {
                         "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
                         "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
@@ -943,7 +942,8 @@ const configAbility = {
                           "_RateLayer",
                           "MDF_Eidolon1_AddRateLayer"
                         ]
-                      }
+                      },
+                      "variableName": "_RateLayer"
                     }
                   ],
                   "failed": [
@@ -958,7 +958,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
                             "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
@@ -967,7 +966,8 @@ const configAbility = {
                               "_RateLayer",
                               "MDF_Eidolon1_AddRateLayer02"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ]
                     }
@@ -977,8 +977,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank01_HitNumb",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Rank01_HitNumb"
             }
           ]
         }

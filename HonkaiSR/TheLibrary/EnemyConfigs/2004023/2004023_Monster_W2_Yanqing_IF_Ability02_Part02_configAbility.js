@@ -7,8 +7,8 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "W2_Yanqing_00_SwordStep",
-      "value": 1
+      "value": 1,
+      "variableName": "W2_Yanqing_00_SwordStep"
     },
     {
       "name": "WAIT FOR",
@@ -183,9 +183,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SwordNumber",
+          "scope": "ContextAbility",
           "value": 1,
-          "scope": "ContextAbility"
+          "variableName": "SwordNumber"
         },
         {
           "name": "Create Enemies",

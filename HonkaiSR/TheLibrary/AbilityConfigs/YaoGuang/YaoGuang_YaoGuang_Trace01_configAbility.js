@@ -81,7 +81,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EPRatioBase",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
                     "displayLines": "0.3",
@@ -89,7 +88,8 @@ const configAbility = {
                     "variables": [
                       0.3
                     ]
-                  }
+                  },
+                  "variableName": "_EPRatioBase"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -102,7 +102,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentSpeed",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -111,11 +110,11 @@ const configAbility = {
                       "_CurrentSpeed",
                       "_CurrentSpeedConvert"
                     ]
-                  }
+                  },
+                  "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_OverCountSpeedValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (120) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - 120)",
@@ -124,7 +123,8 @@ const configAbility = {
                       "_CurrentSpeed",
                       120
                     ]
-                  }
+                  },
+                  "variableName": "_OverCountSpeedValue"
                 },
                 {
                   "name": "IF",
@@ -144,7 +144,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (200) || RETURN",
                         "displayLines": "200",
@@ -152,7 +151,8 @@ const configAbility = {
                         "variables": [
                           200
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     }
                   ]
                 },
@@ -174,7 +174,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioAdd",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -185,14 +184,15 @@ const configAbility = {
                           1,
                           0.01
                         ]
-                      }
+                      },
+                      "variableName": "_EPRatioAdd"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_EPRatioAdd"
                     }
                   ]
                 },

@@ -81,8 +81,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isChange",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isChange"
                 },
                 {
                   "name": "Adjust Team Punchline Value",
@@ -129,8 +129,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isChange",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isChange"
                 }
               ]
             }

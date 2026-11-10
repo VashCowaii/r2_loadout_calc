@@ -71,7 +71,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillTree01_ThunderChanceAdd",
           "value": {
             "operator": "Variables[0] (0.2) || RETURN",
             "displayLines": "0.2",
@@ -79,14 +78,15 @@ const configAbility = {
             "variables": [
               0.2
             ]
-          }
+          },
+          "variableName": "SkillTree01_ThunderChanceAdd"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillTree01_ThunderChanceAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillTree01_ThunderChanceAdd"
         }
       ]
     },

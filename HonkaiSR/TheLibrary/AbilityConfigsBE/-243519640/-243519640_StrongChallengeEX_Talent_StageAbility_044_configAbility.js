@@ -43,7 +43,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_PropertyValue",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalDamage) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_CriticalDamage * MDF_Layer)",
@@ -53,7 +53,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -85,8 +85,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TARGET_COUNT",
-              "value": 0
+              "value": 0,
+              "variableName": "TARGET_COUNT"
             },
             {
               "name": "IF",
@@ -162,7 +162,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TARGET_COUNT",
                       "value": {
                         "operator": "Variables[0] (TARGET_COUNT) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(TARGET_COUNT + 1)",
@@ -172,7 +171,8 @@ const configAbility = {
                         "variables": [
                           "TARGET_COUNT"
                         ]
-                      }
+                      },
+                      "variableName": "TARGET_COUNT"
                     }
                   ]
                 }

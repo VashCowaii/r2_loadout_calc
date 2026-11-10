@@ -24,7 +24,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Skill03_Speed",
       "value": {
         "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
         "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
@@ -33,7 +32,8 @@ const configAbility = {
           "MDF_Skill03_Speed",
           "MDF_Skill03_Speed_Convert"
         ]
-      }
+      },
+      "variableName": "MDF_Skill03_Speed"
     },
     {
       "name": "IF",
@@ -44,7 +44,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill03_LifeTime",
           "value": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -53,13 +52,13 @@ const configAbility = {
               2,
               1
             ]
-          }
+          },
+          "variableName": "MDF_Skill03_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill03_LifeTime",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -67,7 +66,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "MDF_Skill03_LifeTime"
         }
       ]
     },

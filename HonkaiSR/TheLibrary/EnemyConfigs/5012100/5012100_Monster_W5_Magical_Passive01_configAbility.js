@@ -82,8 +82,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Weather",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Weather"
                 },
                 {
                   "name": "Adjust Team Punchline Value",

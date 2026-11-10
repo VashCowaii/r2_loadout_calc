@@ -69,7 +69,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillTree02_HealCountExtra",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -77,14 +76,15 @@ const configAbility = {
                     "variables": [
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SkillTree02_HealCountExtra"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillTree02_HealCountExtra",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillTree02_HealCountExtra"
                 }
               ]
             },
@@ -97,7 +97,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillTree03_DamageResistance",
                   "value": {
                     "operator": "Variables[0] (0.1) || RETURN",
                     "displayLines": "0.1",
@@ -105,14 +104,15 @@ const configAbility = {
                     "variables": [
                       0.1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SkillTree03_DamageResistance"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillTree03_DamageResistance",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillTree03_DamageResistance"
                 }
               ]
             },
@@ -125,7 +125,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_AddSP",
                   "value": {
                     "operator": "Variables[0] (8) || RETURN",
                     "displayLines": "8",
@@ -133,14 +132,15 @@ const configAbility = {
                     "variables": [
                       8
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Rank01_AddSP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_AddSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Rank01_AddSP"
                 }
               ]
             },

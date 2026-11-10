@@ -383,7 +383,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CharacterCount",
               "value": {
                 "operator": "Variables[0] (_CharacterCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_CharacterCount - 1)",
@@ -393,7 +392,8 @@ const configAbility = {
                 "variables": [
                   "_CharacterCount"
                 ]
-              }
+              },
+              "variableName": "_CharacterCount"
             }
           ]
         },
@@ -722,8 +722,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Main_Skill06",
-          "value": 1
+          "value": 1,
+          "variableName": "_Main_Skill06"
         }
       ]
     },

@@ -146,7 +146,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || Variables[2] (1) || SUB || SUB || RETURN",
                         "displayLines": "(MDF_Count - (MDF_CostLayer - 1))",
@@ -156,13 +155,13 @@ const configAbility = {
                           "MDF_CostLayer",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || SUB || RETURN",
                         "displayLines": "(MDF_Count - MDF_CostLayer)",
@@ -171,7 +170,8 @@ const configAbility = {
                           "MDF_Count",
                           "MDF_CostLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
@@ -326,7 +326,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Constants[0] (2) || ADD || RETURN",
                         "displayLines": "(MDF_Count + 2)",
@@ -336,7 +335,8 @@ const configAbility = {
                         "variables": [
                           "MDF_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     },
                     {
                       "name": "IF",
@@ -356,7 +356,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                             "displayLines": "MDF_MaxCount",
@@ -364,7 +363,8 @@ const configAbility = {
                             "variables": [
                               "MDF_MaxCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         }
                       ]
                     },
@@ -422,7 +422,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Count + 1)",
@@ -432,7 +431,8 @@ const configAbility = {
                         "variables": [
                           "MDF_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     },
                     {
                       "name": "IF",
@@ -452,7 +452,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                             "displayLines": "MDF_MaxCount",
@@ -460,7 +459,8 @@ const configAbility = {
                             "variables": [
                               "MDF_MaxCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         }
                       ]
                     },

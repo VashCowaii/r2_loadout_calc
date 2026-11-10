@@ -182,9 +182,9 @@ const configAbility = {
                       }
                     ]
                   },
-                  "variableName": "_LocalLegend_PreSelectFlag",
+                  "scope": "AITag",
                   "value": 1,
-                  "scope": "AITag"
+                  "variableName": "_LocalLegend_PreSelectFlag"
                 }
               ],
               "failed": [
@@ -231,9 +231,9 @@ const configAbility = {
                           }
                         ]
                       },
-                      "variableName": "_LocalLegend_PreSelectFlag",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "_LocalLegend_PreSelectFlag"
                     }
                   ],
                   "failed": [
@@ -266,9 +266,9 @@ const configAbility = {
                           }
                         ]
                       },
-                      "variableName": "_LocalLegend_PreSelectFlag",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "_LocalLegend_PreSelectFlag"
                     }
                   ]
                 }
@@ -426,7 +426,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] (_DamageAddedRatio) || RETURN",
                 "displayLines": "_DamageAddedRatio",
@@ -434,11 +433,11 @@ const configAbility = {
                 "variables": [
                   "_DamageAddedRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue2",
               "value": {
                 "operator": "Variables[0] (_DamageReduceRatio) || RETURN",
                 "displayLines": "_DamageReduceRatio",
@@ -446,7 +445,8 @@ const configAbility = {
                 "variables": [
                   "_DamageReduceRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue2"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1231,8 +1231,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EnterBattle",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_EnterBattle"
                 },
                 {
                   "name": "IF",
@@ -1833,7 +1833,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -1842,7 +1841,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1850,7 +1850,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Light Praetor: 3}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -1859,7 +1858,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1968,9 +1968,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S4_1_Check",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S4_1_Check"
                     }
                   ]
                 },
@@ -2074,7 +2074,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2083,7 +2082,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2091,7 +2091,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Light Praetor: 3}}"
                   },
-                  "variableName": "_DelayRatio",
                   "value": {
                     "operator": "Variables[0] (_DelayRatio) || Variables[1] (_DelayAddedRatio) || ADD || RETURN",
                     "displayLines": "(_DelayRatio + _DelayAddedRatio)",
@@ -2100,7 +2099,8 @@ const configAbility = {
                       "_DelayRatio",
                       "_DelayAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_DelayRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",

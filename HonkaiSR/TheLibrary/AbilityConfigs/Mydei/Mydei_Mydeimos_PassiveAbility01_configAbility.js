@@ -90,7 +90,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_Tree01_ReviveCount",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -98,7 +97,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "DV_Tree01_ReviveCount"
     },
     {
       "name": "IF",
@@ -109,7 +109,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill22_Cost",
           "value": {
             "operator": "Variables[0] (100) || RETURN",
             "displayLines": "100",
@@ -117,13 +116,13 @@ const configAbility = {
             "variables": [
               100
             ]
-          }
+          },
+          "variableName": "Skill22_Cost"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill22_Cost",
           "value": {
             "operator": "Variables[0] (150) || RETURN",
             "displayLines": "150",
@@ -131,7 +130,8 @@ const configAbility = {
             "variables": [
               150
             ]
-          }
+          },
+          "variableName": "Skill22_Cost"
         }
       ]
     }
@@ -306,7 +306,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Passive_HPChangeValue",
                           "value": {
                             "operator": "Variables[0] (_Passive_HPChangeValue) || Constants[0] (1) || Variables[1] (_Tree03_BeingHitRatio) || ADD || MUL || RETURN",
                             "displayLines": "(_Passive_HPChangeValue * (1 + _Tree03_BeingHitRatio))",
@@ -317,7 +316,8 @@ const configAbility = {
                               "_Passive_HPChangeValue",
                               "_Tree03_BeingHitRatio"
                             ]
-                          }
+                          },
+                          "variableName": "_Passive_HPChangeValue"
                         }
                       ]
                     },
@@ -452,8 +452,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ForceEnergyBarChange",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_ForceEnergyBarChange"
                 }
               ]
             }
@@ -471,8 +471,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ForceEnergyBarChange",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_ForceEnergyBarChange"
                 }
               ]
             }
@@ -730,8 +730,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_CanTransfer",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DV_CanTransfer"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -888,8 +888,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_CanTransfer",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DV_CanTransfer"
                         },
                         {
                           "name": "Inject Ability Use",

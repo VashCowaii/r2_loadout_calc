@@ -74,8 +74,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01"
                 }
               ]
             }
@@ -121,8 +121,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01"
                 }
               ]
             }

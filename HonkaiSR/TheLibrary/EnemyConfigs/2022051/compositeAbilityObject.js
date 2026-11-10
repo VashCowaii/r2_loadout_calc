@@ -117,8 +117,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EffectCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_EffectCheck"
                     }
                   ]
                 }
@@ -155,8 +155,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EffectCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_EffectCheck"
                     }
                   ]
                 }
@@ -207,8 +207,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EffectCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_EffectCheck"
                     }
                   ]
                 }

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "IsInserAbilityTrigger",
-      "value": 1
+      "value": 1,
+      "variableName": "IsInserAbilityTrigger"
     },
     {
       "name": "Find New Target",
@@ -182,8 +182,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "IsInserAbilityTrigger",
-              "value": 0
+              "value": 0,
+              "variableName": "IsInserAbilityTrigger"
             }
           ]
         }
@@ -209,8 +209,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "IsInserAbilityTrigger",
-      "value": 0
+      "value": 0,
+      "variableName": "IsInserAbilityTrigger"
     },
     {
       "name": "IF",

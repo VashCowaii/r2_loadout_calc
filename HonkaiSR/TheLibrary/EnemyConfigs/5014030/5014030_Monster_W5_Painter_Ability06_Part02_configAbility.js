@@ -15,14 +15,14 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialSkill06",
-          "value": 0
+          "value": 0,
+          "variableName": "SpecialSkill06"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TutorialFlag",
+          "scope": "TargetEntity",
           "value": 3,
-          "scope": "TargetEntity"
+          "variableName": "TutorialFlag"
         },
         {
           "name": "Skill Points Modification",

@@ -1539,8 +1539,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BonusAttackCounter",
-              "value": 0
+              "value": 0,
+              "variableName": "BonusAttackCounter"
             },
             {
               "name": "Remove Events/Bonuses",

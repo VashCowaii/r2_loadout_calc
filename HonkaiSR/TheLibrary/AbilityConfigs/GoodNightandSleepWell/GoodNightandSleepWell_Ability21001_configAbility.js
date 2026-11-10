@@ -50,7 +50,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCount",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -58,7 +57,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxCount"
                     ]
-                  }
+                  },
+                  "variableName": "_DebuffCount"
                 }
               ]
             },

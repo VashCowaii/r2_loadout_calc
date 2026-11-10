@@ -2438,7 +2438,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
                     "displayLines": "{[PassiveSkillInitiate[0]]}",
@@ -2446,7 +2445,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[PassiveSkillInitiate[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             }
@@ -2870,8 +2870,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "Vibrate_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Vibrate_Count"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3044,8 +3044,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "Vibrate_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Vibrate_Count"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3828,8 +3828,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
-          "value": 8
+          "value": 8,
+          "variableName": "AIFlag"
         },
         "Trigger: Ability End"
       ],
@@ -3955,8 +3955,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "Vibrate_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Vibrate_Count"
         },
         {
           "name": "Remove Events/Bonuses",

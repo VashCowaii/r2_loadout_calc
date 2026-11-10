@@ -55,13 +55,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "WeakEnemyCount",
-              "value": 0
+              "value": 0,
+              "variableName": "WeakEnemyCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Flag_21040",
-              "value": 0
+              "value": 0,
+              "variableName": "Flag_21040"
             },
             {
               "name": "Find New Target",
@@ -226,7 +226,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "WeakEnemyCount",
                   "value": {
                     "operator": "Variables[0] (WeakEnemyCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(WeakEnemyCount + 1)",
@@ -236,7 +235,8 @@ const configAbility = {
                     "variables": [
                       "WeakEnemyCount"
                     ]
-                  }
+                  },
+                  "variableName": "WeakEnemyCount"
                 },
                 {
                   "name": "IF",
@@ -274,8 +274,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Flag_21040",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Flag_21040"
                         }
                       ]
                     }

@@ -205,7 +205,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AddLayer",
                   "value": {
                     "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                     "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -214,13 +213,13 @@ const configAbility = {
                       10,
                       "EnergyBar_ATKCount"
                     ]
-                  }
+                  },
+                  "variableName": "_AddLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AddLayer",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -228,7 +227,8 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "_AddLayer"
                 }
               ]
             }
@@ -263,7 +263,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                         "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -272,13 +271,13 @@ const configAbility = {
                           10,
                           "EnergyBar_ATKCount"
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -286,7 +285,8 @@ const configAbility = {
                         "variables": [
                           3
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ]
                 }
@@ -344,7 +344,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AddLayer",
                   "value": {
                     "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                     "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -353,13 +352,13 @@ const configAbility = {
                       10,
                       "EnergyBar_ATKCount"
                     ]
-                  }
+                  },
+                  "variableName": "_AddLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AddLayer",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -367,7 +366,8 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "variableName": "_AddLayer"
                 }
               ]
             }
@@ -402,7 +402,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                         "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -411,13 +410,13 @@ const configAbility = {
                           10,
                           "EnergyBar_ATKCount"
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -425,7 +424,8 @@ const configAbility = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ]
                 }

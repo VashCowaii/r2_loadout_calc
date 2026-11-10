@@ -88,7 +88,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RevertFlag",
               "value": {
                 "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                 "displayLines": "-RevertFlag",
@@ -96,7 +95,8 @@ const configAbility = {
                 "variables": [
                   "RevertFlag"
                 ]
-              }
+              },
+              "variableName": "RevertFlag"
             },
             {
               "name": "IF",
@@ -191,7 +191,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RevertFlag",
               "value": {
                 "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                 "displayLines": "-RevertFlag",
@@ -199,7 +198,8 @@ const configAbility = {
                 "variables": [
                   "RevertFlag"
                 ]
-              }
+              },
+              "variableName": "RevertFlag"
             },
             {
               "name": "IF",
@@ -294,7 +294,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RevertFlag",
               "value": {
                 "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                 "displayLines": "-RevertFlag",
@@ -302,7 +301,8 @@ const configAbility = {
                 "variables": [
                   "RevertFlag"
                 ]
-              }
+              },
+              "variableName": "RevertFlag"
             },
             {
               "name": "IF",
@@ -397,7 +397,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RevertFlag",
               "value": {
                 "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                 "displayLines": "-RevertFlag",
@@ -405,7 +404,8 @@ const configAbility = {
                 "variables": [
                   "RevertFlag"
                 ]
-              }
+              },
+              "variableName": "RevertFlag"
             },
             {
               "name": "IF",
@@ -500,7 +500,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RevertFlag",
               "value": {
                 "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                 "displayLines": "-RevertFlag",
@@ -508,7 +507,8 @@ const configAbility = {
                 "variables": [
                   "RevertFlag"
                 ]
-              }
+              },
+              "variableName": "RevertFlag"
             },
             {
               "name": "IF",

@@ -54,7 +54,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_GlobalDelay",
               "value": {
                 "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                 "displayLines": "{[Skill02[0]]}",
@@ -62,13 +61,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill02[0]]}"
                 ]
-              }
+              },
+              "variableName": "_GlobalDelay"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_GlobalDelay",
               "value": {
                 "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
                 "displayLines": "{[Skill02[1]]}",
@@ -76,7 +75,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill02[1]]}"
                 ]
-              }
+              },
+              "variableName": "_GlobalDelay"
             }
           ]
         }

@@ -17,7 +17,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
           "value": {
             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -26,7 +25,8 @@ const configAbility = {
               "SkillP01_EnhanceInsertBuffStack",
               2
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",
@@ -190,7 +190,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_CurrentEnergy",
       "value": {
         "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (3) || ADD || RETURN",
         "displayLines": "(SkillP01_CurrentEnergy + 3)",
@@ -199,7 +198,8 @@ const configAbility = {
           "SkillP01_CurrentEnergy",
           3
         ]
-      }
+      },
+      "variableName": "SkillP01_CurrentEnergy"
     },
     "Trigger: Attack End",
     {

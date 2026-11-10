@@ -35,7 +35,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TDF_NeedSPForCharge",
           "value": {
             "operator": "Variables[0] (TDF_MaxSP) || Variables[1] (TDF_CurSP) || SUB || RETURN",
             "displayLines": "(TDF_MaxSP - TDF_CurSP)",
@@ -44,7 +43,8 @@ const configAbility = {
               "TDF_MaxSP",
               "TDF_CurSP"
             ]
-          }
+          },
+          "variableName": "TDF_NeedSPForCharge"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -290,8 +290,8 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay1",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay1"
                 }
               ]
             },
@@ -301,13 +301,13 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay2",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay2"
                 }
               ]
             },
@@ -317,18 +317,18 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay2",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay3",
-                  "value": 0.6
+                  "value": 0.6,
+                  "variableName": "#CL_TDF_Delay3"
                 }
               ]
             },
@@ -338,23 +338,23 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay2",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay3",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay3"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay4",
-                  "value": 0.6
+                  "value": 0.6,
+                  "variableName": "#CL_TDF_Delay4"
                 }
               ]
             },
@@ -364,28 +364,28 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay3",
-                  "value": 0.4
+                  "value": 0.4,
+                  "variableName": "#CL_TDF_Delay3"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay4",
-                  "value": 0.6
+                  "value": 0.6,
+                  "variableName": "#CL_TDF_Delay4"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay5",
-                  "value": 0.6
+                  "value": 0.6,
+                  "variableName": "#CL_TDF_Delay5"
                 }
               ]
             }
@@ -393,35 +393,35 @@ const configAbility = {
           "defaultEvents": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_Delay1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Delay2",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_Delay2"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Delay3",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_Delay3"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Delay4",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_Delay4"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Delay5",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_Delay5"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_TDF_Index",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_TDF_Index"
         },
         {
           "name": "Find New Target",
@@ -433,7 +433,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_Index",
               "value": {
                 "operator": "Variables[0] (#CL_TDF_Index) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(#CL_TDF_Index + 1)",
@@ -443,7 +442,8 @@ const configAbility = {
                 "variables": [
                   "#CL_TDF_Index"
                 ]
-              }
+              },
+              "variableName": "#CL_TDF_Index"
             },
             {
               "name": "SWITCH",
@@ -463,7 +463,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_TDF_Delay",
                       "value": {
                         "operator": "Variables[0] (#CL_TDF_Delay1) || RETURN",
                         "displayLines": "#CL_TDF_Delay1",
@@ -471,7 +470,8 @@ const configAbility = {
                         "variables": [
                           "#CL_TDF_Delay1"
                         ]
-                      }
+                      },
+                      "variableName": "#CL_TDF_Delay"
                     }
                   ]
                 },
@@ -481,7 +481,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_TDF_Delay",
                       "value": {
                         "operator": "Variables[0] (#CL_TDF_Delay2) || RETURN",
                         "displayLines": "#CL_TDF_Delay2",
@@ -489,7 +488,8 @@ const configAbility = {
                         "variables": [
                           "#CL_TDF_Delay2"
                         ]
-                      }
+                      },
+                      "variableName": "#CL_TDF_Delay"
                     }
                   ]
                 },
@@ -499,7 +499,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_TDF_Delay",
                       "value": {
                         "operator": "Variables[0] (#CL_TDF_Delay3) || RETURN",
                         "displayLines": "#CL_TDF_Delay3",
@@ -507,7 +506,8 @@ const configAbility = {
                         "variables": [
                           "#CL_TDF_Delay3"
                         ]
-                      }
+                      },
+                      "variableName": "#CL_TDF_Delay"
                     }
                   ]
                 },
@@ -517,7 +517,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_TDF_Delay",
                       "value": {
                         "operator": "Variables[0] (#CL_TDF_Delay4) || RETURN",
                         "displayLines": "#CL_TDF_Delay4",
@@ -525,7 +524,8 @@ const configAbility = {
                         "variables": [
                           "#CL_TDF_Delay4"
                         ]
-                      }
+                      },
+                      "variableName": "#CL_TDF_Delay"
                     }
                   ]
                 },
@@ -535,7 +535,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_TDF_Delay",
                       "value": {
                         "operator": "Variables[0] (#CL_TDF_Delay5) || RETURN",
                         "displayLines": "#CL_TDF_Delay5",
@@ -543,7 +542,8 @@ const configAbility = {
                         "variables": [
                           "#CL_TDF_Delay5"
                         ]
-                      }
+                      },
+                      "variableName": "#CL_TDF_Delay"
                     }
                   ]
                 }
@@ -551,8 +551,8 @@ const configAbility = {
               "defaultEvents": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_Delay",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_TDF_Delay"
                 }
               ]
             },
@@ -712,7 +712,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Item2Chance",
                   "value": {
                     "operator": "Variables[0] (Item2Chance) || Constants[0] (10) || MUL || RETURN",
                     "displayLines": "(Item2Chance * 10)",
@@ -722,7 +721,8 @@ const configAbility = {
                     "variables": [
                       "Item2Chance"
                     ]
-                  }
+                  },
+                  "variableName": "Item2Chance"
                 }
               ]
             }
@@ -747,7 +747,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Item2Chance",
                   "value": {
                     "operator": "Variables[0] (Item2Chance) || Constants[0] (0.0009999999) || MUL || RETURN",
                     "displayLines": "(Item2Chance * 0.0009999999)",
@@ -757,7 +756,8 @@ const configAbility = {
                     "variables": [
                       "Item2Chance"
                     ]
-                  }
+                  },
+                  "variableName": "Item2Chance"
                 }
               ],
               "failed": [
@@ -773,7 +773,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Item2Chance",
                       "value": {
                         "operator": "Variables[0] (Item2Chance) || Constants[0] (0.1) || MUL || RETURN",
                         "displayLines": "(Item2Chance * 0.1)",
@@ -783,7 +782,8 @@ const configAbility = {
                         "variables": [
                           "Item2Chance"
                         ]
-                      }
+                      },
+                      "variableName": "Item2Chance"
                     }
                   ]
                 }
@@ -816,7 +816,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Item3Chance",
                   "value": {
                     "operator": "Variables[0] (Item3Chance) || Constants[0] (10) || MUL || RETURN",
                     "displayLines": "(Item3Chance * 10)",
@@ -826,7 +825,8 @@ const configAbility = {
                     "variables": [
                       "Item3Chance"
                     ]
-                  }
+                  },
+                  "variableName": "Item3Chance"
                 }
               ]
             }
@@ -852,7 +852,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Item3Chance",
                   "value": {
                     "operator": "Variables[0] (Item3Chance) || Constants[0] (0.0009999999) || MUL || RETURN",
                     "displayLines": "(Item3Chance * 0.0009999999)",
@@ -862,7 +861,8 @@ const configAbility = {
                     "variables": [
                       "Item3Chance"
                     ]
-                  }
+                  },
+                  "variableName": "Item3Chance"
                 }
               ],
               "failed": [
@@ -887,7 +887,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Item3Chance",
                       "value": {
                         "operator": "Variables[0] (Item3Chance) || Constants[0] (0.1) || MUL || RETURN",
                         "displayLines": "(Item3Chance * 0.1)",
@@ -897,7 +896,8 @@ const configAbility = {
                         "variables": [
                           "Item3Chance"
                         ]
-                      }
+                      },
+                      "variableName": "Item3Chance"
                     }
                   ]
                 }
@@ -936,24 +936,23 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentItem",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentItem"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentItem",
-              "value": 2
+              "value": 2,
+              "variableName": "CurrentItem"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentItem",
-              "value": 3
+              "value": 3,
+              "variableName": "CurrentItem"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Item1Chance",
           "value": {
             "operator": "Variables[0] (CurrentItem) || Constants[0] (1) || EQUAL || Variables[1] (Item1Chance) || Constants[1] (0.01) || MUL || Constants[0] (1) || CHECK || RETURN",
             "displayLines": "check(value:(CurrentItem === 1), then:(Item1Chance * 0.01), else:1)",
@@ -965,11 +964,11 @@ const configAbility = {
               "CurrentItem",
               "Item1Chance"
             ]
-          }
+          },
+          "variableName": "Item1Chance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Item2Chance",
           "value": {
             "operator": "Variables[0] (CurrentItem) || Constants[0] (2) || EQUAL || Variables[1] (Item2Chance) || Constants[1] (0.01) || MUL || Constants[2] (1) || CHECK || RETURN",
             "displayLines": "check(value:(CurrentItem === 2), then:(Item2Chance * 0.01), else:1)",
@@ -982,11 +981,11 @@ const configAbility = {
               "CurrentItem",
               "Item2Chance"
             ]
-          }
+          },
+          "variableName": "Item2Chance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Item3Chance",
           "value": {
             "operator": "Variables[0] (CurrentItem) || Constants[0] (3) || EQUAL || Variables[1] (Item3Chance) || Constants[1] (0.01) || MUL || Constants[2] (1) || CHECK || RETURN",
             "displayLines": "check(value:(CurrentItem === 3), then:(Item3Chance * 0.01), else:1)",
@@ -999,7 +998,8 @@ const configAbility = {
               "CurrentItem",
               "Item3Chance"
             ]
-          }
+          },
+          "variableName": "Item3Chance"
         }
       ]
     },
@@ -1047,7 +1047,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_MaxShootCount",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (Skill11_Shoot_TotalCount) || Variables[2] (Skill11_Item_TotalCount) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((Skill11_Shoot_TotalCount / Skill11_Item_TotalCount))",
@@ -1057,7 +1056,8 @@ const configAbility = {
                   "Skill11_Shoot_TotalCount",
                   "Skill11_Item_TotalCount"
                 ]
-              }
+              },
+              "variableName": "TDF_MaxShootCount"
             },
             {
               "name": "IF",
@@ -1083,8 +1083,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_MaxShootCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TDF_MaxShootCount"
                 }
               ]
             }
@@ -1092,7 +1092,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_MaxShootCount",
               "value": {
                 "operator": "Variables[0] (Skill11_Shoot_LeftCount) || RETURN",
                 "displayLines": "Skill11_Shoot_LeftCount",
@@ -1100,7 +1099,8 @@ const configAbility = {
                 "variables": [
                   "Skill11_Shoot_LeftCount"
                 ]
-              }
+              },
+              "variableName": "TDF_MaxShootCount"
             }
           ]
         },
@@ -1134,7 +1134,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_DeltaFrame",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__299) || Variables[1] (ENEMIES_OBJECT_UNUSED__300) || SUB || Variables[2] (TDF_MaxShootCount) || DIV || RETURN",
                     "displayLines": "((ENEMIES_OBJECT_UNUSED__299 - ENEMIES_OBJECT_UNUSED__300) / TDF_MaxShootCount)",
@@ -1144,7 +1143,8 @@ const configAbility = {
                       "ENEMIES_OBJECT_UNUSED__300",
                       "TDF_MaxShootCount"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_DeltaFrame"
                 }
               ]
             },
@@ -1159,7 +1159,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_DeltaFrame",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__301) || Variables[1] (ENEMIES_OBJECT_UNUSED__302) || SUB || Variables[2] (TDF_MaxShootCount) || DIV || RETURN",
                     "displayLines": "((ENEMIES_OBJECT_UNUSED__301 - ENEMIES_OBJECT_UNUSED__302) / TDF_MaxShootCount)",
@@ -1169,7 +1168,8 @@ const configAbility = {
                       "ENEMIES_OBJECT_UNUSED__302",
                       "TDF_MaxShootCount"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_DeltaFrame"
                 }
               ]
             },
@@ -1184,7 +1184,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_DeltaFrame",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__303) || Variables[1] (ENEMIES_OBJECT_UNUSED__304) || SUB || Variables[2] (TDF_MaxShootCount) || DIV || RETURN",
                     "displayLines": "((ENEMIES_OBJECT_UNUSED__303 - ENEMIES_OBJECT_UNUSED__304) / TDF_MaxShootCount)",
@@ -1194,7 +1193,8 @@ const configAbility = {
                       "ENEMIES_OBJECT_UNUSED__304",
                       "TDF_MaxShootCount"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_DeltaFrame"
                 }
               ]
             },
@@ -1209,7 +1209,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TDF_DeltaFrame",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__305) || Variables[1] (ENEMIES_OBJECT_UNUSED__306) || SUB || Variables[2] (TDF_MaxShootCount) || DIV || RETURN",
                     "displayLines": "((ENEMIES_OBJECT_UNUSED__305 - ENEMIES_OBJECT_UNUSED__306) / TDF_MaxShootCount)",
@@ -1219,14 +1218,15 @@ const configAbility = {
                       "ENEMIES_OBJECT_UNUSED__306",
                       "TDF_MaxShootCount"
                     ]
-                  }
+                  },
+                  "variableName": "TDF_DeltaFrame"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_TDF_CurIndex",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_TDF_CurIndex"
             },
             {
               "name": "Looped Event",
@@ -1334,7 +1334,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_TDF_CurIndex",
                   "value": {
                     "operator": "Variables[0] (Arg0_AddValue) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Arg0_AddValue + 1)",
@@ -1344,11 +1343,11 @@ const configAbility = {
                     "variables": [
                       "Arg0_AddValue"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_TDF_CurIndex"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill11_Shoot_LeftCount",
                   "value": {
                     "operator": "Variables[0] (Skill11_Shoot_LeftCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Skill11_Shoot_LeftCount - 1)",
@@ -1358,7 +1357,8 @@ const configAbility = {
                     "variables": [
                       "Skill11_Shoot_LeftCount"
                     ]
-                  }
+                  },
+                  "variableName": "Skill11_Shoot_LeftCount"
                 }
               ]
             }
@@ -1563,7 +1563,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Item_LeftCount",
           "value": {
             "operator": "Variables[0] (Skill11_Item_LeftCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(Skill11_Item_LeftCount - 1)",
@@ -1573,11 +1572,11 @@ const configAbility = {
             "variables": [
               "Skill11_Item_LeftCount"
             ]
-          }
+          },
+          "variableName": "Skill11_Item_LeftCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_UI_Skill11_ItemIndex",
           "value": {
             "operator": "Variables[0] (#CL_UI_Skill11_ItemIndex) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(#CL_UI_Skill11_ItemIndex + 1)",
@@ -1587,7 +1586,8 @@ const configAbility = {
             "variables": [
               "#CL_UI_Skill11_ItemIndex"
             ]
-          }
+          },
+          "variableName": "#CL_UI_Skill11_ItemIndex"
         },
         {
           "name": "Remove Events/Bonuses",

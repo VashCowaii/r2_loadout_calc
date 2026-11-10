@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_FantasticStory_BaseAbility_0050_TriggerDamageFlag"
     },
     "Deleted bullshit",
     {
@@ -30,7 +30,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
           "value": {
             "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(DV_RangeGap_3 - 1)",
@@ -40,13 +39,13 @@ const configAbility = {
             "variables": [
               "DV_RangeGap_3"
             ]
-          }
+          },
+          "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
           "value": {
             "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
             "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum - DV_RangeGap_3)",
@@ -55,7 +54,8 @@ const configAbility = {
               "DV_FantasticStory_BaseAbility_0050_CountSum",
               "DV_RangeGap_3"
             ]
-          }
+          },
+          "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
         }
       ]
     },

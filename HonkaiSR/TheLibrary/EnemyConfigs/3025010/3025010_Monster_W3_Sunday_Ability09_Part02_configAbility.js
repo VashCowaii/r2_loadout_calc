@@ -245,8 +245,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "W3_Sunday_00_Skill09_Round",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "W3_Sunday_00_Skill09_Round"
                 }
               ]
             }
@@ -275,8 +275,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "W3_Sunday_00_Skill09_Round",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "W3_Sunday_00_Skill09_Round"
                 }
               ]
             }

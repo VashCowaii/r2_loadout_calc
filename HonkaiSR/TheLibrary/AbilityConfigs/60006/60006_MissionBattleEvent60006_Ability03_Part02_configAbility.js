@@ -15,8 +15,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MissionOrWeekly",
-          "value": 3
+          "value": 3,
+          "variableName": "MissionOrWeekly"
         },
         "Trigger: Ability End"
       ],

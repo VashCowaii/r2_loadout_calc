@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "G_ExSkill21_Allowed",
-      "value": 0
+      "value": 0,
+      "variableName": "G_ExSkill21_Allowed"
     },
     {
       "name": "Consume",

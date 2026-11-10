@@ -334,8 +334,8 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                        "value": 3
+                        "value": 3,
+                        "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                       }
                     ]
                   },
@@ -351,8 +351,8 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                        "value": 4
+                        "value": 4,
+                        "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                       }
                     ]
                   },
@@ -415,8 +415,8 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                    "value": 0
+                    "value": 0,
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                   },
                   {
                     "name": "Use Ability Option",
@@ -458,8 +458,8 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                   },
                   {
                     "name": "Use Ability Option",
@@ -501,8 +501,8 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                    "value": 5
+                    "value": 5,
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                   },
                   {
                     "name": "Use Ability Option",
@@ -544,8 +544,8 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                    "value": 6
+                    "value": 6,
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01"
                   },
                   {
                     "name": "Use Ability Option",

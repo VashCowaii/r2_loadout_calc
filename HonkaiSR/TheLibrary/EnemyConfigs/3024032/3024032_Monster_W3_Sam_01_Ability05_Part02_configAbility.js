@@ -154,8 +154,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ChargeCount",
-      "value": 0
+      "value": 0,
+      "variableName": "ChargeCount"
     },
     {
       "name": "Remove Events/Bonuses",

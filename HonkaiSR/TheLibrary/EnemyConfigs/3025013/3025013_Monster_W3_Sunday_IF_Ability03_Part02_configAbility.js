@@ -34,8 +34,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Weakness_CountDown",
-      "value": 1
+      "value": 1,
+      "variableName": "Weakness_CountDown"
     },
     "Trigger: Ability End"
   ],

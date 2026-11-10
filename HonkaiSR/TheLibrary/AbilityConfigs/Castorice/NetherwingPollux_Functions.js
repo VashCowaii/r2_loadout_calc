@@ -128,8 +128,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_Rank01_DamageRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "Castorice_Rank01_DamageRatio"
             }
           ],
           "failed": [
@@ -177,7 +177,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_Rank01_DamageRatio",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio01) || RETURN",
                     "displayLines": "CastoriceServant_Eidolon1_DamageRatio01",
@@ -185,7 +184,8 @@ const configAbility = {
                     "variables": [
                       "CastoriceServant_Eidolon1_DamageRatio01"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_Rank01_DamageRatio"
                 }
               ],
               "failed": [
@@ -211,7 +211,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_Rank01_DamageRatio",
                       "value": {
                         "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio02) || RETURN",
                         "displayLines": "CastoriceServant_Eidolon1_DamageRatio02",
@@ -219,7 +218,8 @@ const configAbility = {
                         "variables": [
                           "CastoriceServant_Eidolon1_DamageRatio02"
                         ]
-                      }
+                      },
+                      "variableName": "Castorice_Rank01_DamageRatio"
                     }
                   ]
                 }
@@ -268,8 +268,8 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_BPSkill_Level3_Loop"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -900,8 +900,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CastoriceServant_ReadyAnimStateFlag"
                 }
               ]
             }
@@ -947,8 +947,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "CastoriceServant_ReadyAnimStateFlag"
                     }
                   ]
                 }
@@ -994,8 +994,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "CastoriceServant_ReadyAnimStateFlag"
                         }
                       ]
                     }
@@ -1016,14 +1016,13 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_BattleViewModeLevel",
-              "value": 1
+              "value": 1,
+              "variableName": "CastoriceServant_BattleViewModeLevel"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_BattleViewModeLevel",
               "value": {
                 "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
@@ -1033,14 +1032,15 @@ const configAbility = {
                 "variables": [
                   "CastoriceServant_BattleViewModeLevel"
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_BattleViewModeLevel"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_BPSkill_Level3_Loop"
         }
       ]
     },

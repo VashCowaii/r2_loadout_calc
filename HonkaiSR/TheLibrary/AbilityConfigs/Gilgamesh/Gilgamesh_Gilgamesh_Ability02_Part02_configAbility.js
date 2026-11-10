@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded",
-      "value": 0
+      "value": 0,
+      "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded",
-      "value": 0
+      "value": 0,
+      "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
     },
     {
       "name": "IF",
@@ -23,7 +23,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -31,11 +30,11 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Gilgamesh_00_Rank02_MainTargetDamageAdded"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded",
           "value": {
             "operator": "Variables[0] (0.5) || RETURN",
             "displayLines": "0.5",
@@ -43,7 +42,8 @@ const configAbility = {
             "variables": [
               0.5
             ]
-          }
+          },
+          "variableName": "Gilgamesh_00_Rank02_AdjacentTargetDamageAdded"
         }
       ]
     },

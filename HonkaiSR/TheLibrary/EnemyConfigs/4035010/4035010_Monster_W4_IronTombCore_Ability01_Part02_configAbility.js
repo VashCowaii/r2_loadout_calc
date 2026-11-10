@@ -76,8 +76,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsTriggerTutorialHate",
-          "value": 1
+          "value": 1,
+          "variableName": "_IsTriggerTutorialHate"
         },
         {
           "name": "Assign Advance/Delay to Current Ability Use",
@@ -119,8 +119,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsTriggerTutorialHate",
-          "value": 1
+          "value": 1,
+          "variableName": "_IsTriggerTutorialHate"
         },
         {
           "name": "Update Energy",

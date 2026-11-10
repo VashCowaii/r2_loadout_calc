@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "CurEnergy",
-      "value": 0
+      "value": 0,
+      "variableName": "CurEnergy"
     },
     {
       "name": "Remove Events/Bonuses",

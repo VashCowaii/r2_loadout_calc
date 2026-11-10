@@ -1006,7 +1006,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "EnergyBar_ATKCount",
               "value": {
                 "operator": "Variables[0] (EnergyBar_ATKCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(EnergyBar_ATKCount - 1)",
@@ -1016,7 +1015,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "EnergyBar_ATKCount"
                 ]
-              }
+              },
+              "variableName": "EnergyBar_ATKCount"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1415,7 +1415,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ATKCount",
           "value": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -1424,7 +1423,8 @@ const compositeAbilityObject = {
               2,
               1
             ]
-          }
+          },
+          "variableName": "EnergyBar_ATKCount"
         },
         {
           "name": "Update Displayed Energy Bar",

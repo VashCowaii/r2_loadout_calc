@@ -135,8 +135,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Skill01_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Skill01_Count"
     },
     "Trigger: Ability End"
   ],
@@ -180,8 +180,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Herta_Skill01_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Herta_Skill01_Count"
                 }
               ]
             }

@@ -140,8 +140,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02Num",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Skill02Num"
                 }
               ],
               "failed": [
@@ -168,8 +168,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02Num",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill02Num"
                 }
               ]
             },

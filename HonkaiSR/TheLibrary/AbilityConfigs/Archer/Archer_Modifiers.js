@@ -567,7 +567,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalPropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -576,13 +575,13 @@ const configAbility = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalPropertyValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalPropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -590,7 +589,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PropertyValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalPropertyValue"
                 }
               ]
             },
@@ -903,8 +903,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Layer"
             }
           ]
         }
@@ -939,8 +939,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Skill02UseCountInCaps",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Skill02UseCountInCaps"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -952,8 +952,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InBonus",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_InBonus"
             }
           ]
         },
@@ -983,15 +983,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Flag_HaveOtherAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Flag_HaveOtherAction"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Flag_HaveOtherAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Flag_HaveOtherAction"
                 }
               ]
             },
@@ -1067,8 +1067,8 @@ const configAbility = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_InBonus",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_InBonus"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -1077,13 +1077,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InBonus",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InBonus"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AlreadyInBonusAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AlreadyInBonusAction"
                 }
               ],
               "failed": [
@@ -1277,8 +1277,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Skill02ExtraCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Skill02ExtraCount"
             }
           ]
         },

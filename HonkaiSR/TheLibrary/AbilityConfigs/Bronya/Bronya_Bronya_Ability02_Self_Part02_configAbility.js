@@ -79,7 +79,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Bronya_SpeedUP_Ratio_01",
           "value": {
             "operator": "Variables[0] (0.3) || RETURN",
             "displayLines": "0.3",
@@ -87,7 +86,8 @@ const configAbility = {
             "variables": [
               0.3
             ]
-          }
+          },
+          "variableName": "Bronya_SpeedUP_Ratio_01"
         },
         {
           "name": "Add Events/Bonuses",

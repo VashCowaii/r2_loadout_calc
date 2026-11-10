@@ -794,7 +794,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -804,7 +803,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }
@@ -897,7 +897,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IceTakenRatio",
               "value": {
                 "operator": "Variables[0] (IceTakenRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)",
@@ -906,7 +905,8 @@ const configAbility = {
                   "IceTakenRatioPerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_IceTakenRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -949,7 +949,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AllDamageTypeAddedRatio",
               "value": {
                 "operator": "Variables[0] (AllDamageTypeAddedRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)",
@@ -958,7 +957,8 @@ const configAbility = {
                   "AllDamageTypeAddedRatioPerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_AllDamageTypeAddedRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1689,9 +1689,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 3,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -1771,9 +1771,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -1860,9 +1860,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -3195,7 +3195,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -3205,7 +3204,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }
@@ -3372,7 +3372,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -3382,7 +3381,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }

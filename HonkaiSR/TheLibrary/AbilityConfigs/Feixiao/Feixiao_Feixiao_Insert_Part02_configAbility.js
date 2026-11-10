@@ -49,8 +49,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "IsUnCountedInsert",
-          "value": 0
+          "value": 0,
+          "variableName": "IsUnCountedInsert"
         }
       ]
     },

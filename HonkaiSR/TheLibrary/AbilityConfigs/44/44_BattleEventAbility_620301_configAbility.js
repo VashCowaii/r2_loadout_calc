@@ -285,7 +285,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_PercentageMuti_620301",
                   "value": {
                     "operator": "Variables[0] (ADF_7) || RETURN",
                     "displayLines": "ADF_7",
@@ -293,7 +292,8 @@ const configAbility = {
                     "variables": [
                       "ADF_7"
                     ]
-                  }
+                  },
+                  "variableName": "Skill_PercentageMuti_620301"
                 }
               ]
             },
@@ -308,7 +308,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IceResistanceAdd_620301",
                   "value": {
                     "operator": "Variables[0] (ADF_8) || RETURN",
                     "displayLines": "ADF_8",
@@ -316,7 +315,8 @@ const configAbility = {
                     "variables": [
                       "ADF_8"
                     ]
-                  }
+                  },
+                  "variableName": "IceResistanceAdd_620301"
                 }
               ]
             }

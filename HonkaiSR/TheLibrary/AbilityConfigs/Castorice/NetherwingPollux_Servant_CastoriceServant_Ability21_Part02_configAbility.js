@@ -23,18 +23,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CL_PlayTimes",
-      "value": 1
+      "value": 1,
+      "variableName": "CL_PlayTimes"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_BattleViewModeLevel",
-      "value": 2
+      "value": 2,
+      "variableName": "CastoriceServant_BattleViewModeLevel"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CL_EnterBattlePlayTimes",
-      "value": 0
+      "value": 0,
+      "variableName": "CL_EnterBattlePlayTimes"
     },
     {
       "name": "IF",
@@ -113,13 +113,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_BPSkill_Level",
-      "value": 2
+      "value": 2,
+      "variableName": "CastoriceServant_BPSkill_Level"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_UseSkill02_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "CastoriceServant_UseSkill02_Flag"
     },
     {
       "name": "IF",
@@ -180,7 +180,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(CastoriceServant_Rank02_Count - 1)",
@@ -190,7 +189,8 @@ const configAbility = {
                 "variables": [
                   "CastoriceServant_Rank02_Count"
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_Rank02_Count"
             },
             {
               "name": "Define Custom Variable",
@@ -198,7 +198,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "Castorice_Rank02_Count",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                 "displayLines": "CastoriceServant_Rank02_Count",
@@ -207,7 +207,7 @@ const configAbility = {
                   "CastoriceServant_Rank02_Count"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "Castorice_Rank02_Count"
             },
             {
               "name": "Set Netherwing's Ardent Will Stacks",
@@ -267,8 +267,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceBPLoopMax",
-      "value": 10
+      "value": 10,
+      "variableName": "CastoriceBPLoopMax"
     },
     {
       "name": "Looped Event",
@@ -283,7 +283,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoop",
           "value": {
             "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(CastoriceBPLoop + 1)",
@@ -293,7 +292,8 @@ const configAbility = {
             "variables": [
               "CastoriceBPLoop"
             ]
-          }
+          },
+          "variableName": "CastoriceBPLoop"
         },
         {
           "name": "IF",
@@ -407,12 +407,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceBPLoop",
-      "value": 0
+      "value": 0,
+      "variableName": "CastoriceBPLoop"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_ReadyFlag",
       "value": {
         "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
         "displayLines": "CastoriceServant_BattleViewModeLevel",
@@ -420,12 +419,13 @@ const configAbility = {
         "variables": [
           "CastoriceServant_BattleViewModeLevel"
         ]
-      }
+      },
+      "variableName": "CastoriceServant_ReadyFlag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_UseSkill02_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "CastoriceServant_UseSkill02_Flag"
     },
     {
       "name": "Use Custom Character Function",

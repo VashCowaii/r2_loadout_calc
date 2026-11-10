@@ -24,8 +24,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_CheckTimes",
-              "value": 0
+              "value": 0,
+              "variableName": "_CheckTimes"
             }
           ]
         },
@@ -88,7 +88,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CheckTimes",
                   "value": {
                     "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_CheckTimes + 1)",
@@ -98,7 +97,8 @@ const configAbility = {
                     "variables": [
                       "_CheckTimes"
                     ]
-                  }
+                  },
+                  "variableName": "_CheckTimes"
                 }
               ]
             }

@@ -38,7 +38,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "EnergyLayer",
               "value": {
                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(EnergyLayer - 1)",
@@ -48,7 +47,8 @@ const configAbility = {
                 "variables": [
                   "EnergyLayer"
                 ]
-              }
+              },
+              "variableName": "EnergyLayer"
             }
           ]
         }

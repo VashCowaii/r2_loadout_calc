@@ -518,8 +518,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FromUltraMark",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_FromUltraMark"
                 }
               ]
             }

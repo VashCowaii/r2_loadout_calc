@@ -85,9 +85,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W3_Sunday_00_BattleScore2_Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "W3_Sunday_00_BattleScore2_Flag"
                 }
               ]
             }
@@ -371,7 +371,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AddShield",
               "value": {
                 "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                 "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
@@ -380,11 +379,11 @@ const configAbility = {
                   "MDF_ShieldPercentage_Add",
                   "CasterBaseAttack"
                 ]
-              }
+              },
+              "variableName": "AddShield"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MaxShield",
               "value": {
                 "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
                 "displayLines": "(CurShield + AddShield)",
@@ -393,7 +392,8 @@ const configAbility = {
                   "CurShield",
                   "AddShield"
                 ]
-              }
+              },
+              "variableName": "MaxShield"
             },
             {
               "name": "Adjust Shield",
@@ -474,7 +474,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AddShield",
               "value": {
                 "operator": "Variables[0] (MDF_ShieldPercentage) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                 "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)",
@@ -483,7 +482,8 @@ const configAbility = {
                   "MDF_ShieldPercentage",
                   "CasterBaseAttack"
                 ]
-              }
+              },
+              "variableName": "AddShield"
             },
             {
               "name": "Create Shield",
@@ -557,8 +557,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TutorialFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "TutorialFlag"
             }
           ]
         },
@@ -598,8 +598,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TutorialFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TutorialFlag"
                 },
                 {
                   "name": "IF",
@@ -659,8 +659,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TutorialFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "TutorialFlag"
             }
           ]
         },
@@ -700,8 +700,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TutorialFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TutorialFlag"
                 },
                 {
                   "name": "IF",
@@ -2417,7 +2417,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_AllDamageTypeAddedRatio",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (ENEMIES_OBJECT_UNUSED__130) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * ENEMIES_OBJECT_UNUSED__130)",
@@ -2426,7 +2425,8 @@ const configAbility = {
                   "MDF_Layer",
                   "ENEMIES_OBJECT_UNUSED__130"
                 ]
-              }
+              },
+              "variableName": "MDF_AllDamageTypeAddedRatio"
             }
           ]
         }
@@ -2782,7 +2782,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Skill10_TurnCount",
               "value": {
                 "operator": "Variables[0] (MDF_Skill10_TurnCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_Skill10_TurnCount + 1)",
@@ -2792,7 +2791,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Skill10_TurnCount"
                 ]
-              }
+              },
+              "variableName": "MDF_Skill10_TurnCount"
             }
           ]
         },
@@ -3730,8 +3730,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "W3_Sunday_00_StanceCountDown_Counter",
-              "value": 0
+              "value": 0,
+              "variableName": "W3_Sunday_00_StanceCountDown_Counter"
             },
             {
               "name": "Define Custom Variable",
@@ -3739,8 +3739,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "W3_Sunday_00_StanceCountDown_Flag"
             }
           ]
         },
@@ -3776,8 +3776,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "W3_Sunday_00_StanceCountDown_Flag"
                 },
                 {
                   "name": "Inject Ability Use",

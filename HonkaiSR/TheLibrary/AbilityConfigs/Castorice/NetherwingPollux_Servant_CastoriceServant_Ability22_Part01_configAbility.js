@@ -99,8 +99,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_BPSkill_Level3_Loop"
         }
       ]
     }

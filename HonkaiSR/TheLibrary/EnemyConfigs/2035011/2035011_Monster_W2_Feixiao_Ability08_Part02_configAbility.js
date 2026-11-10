@@ -28,8 +28,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkUltraSkill",
-          "value": 2
+          "value": 2,
+          "variableName": "SpecialTalkUltraSkill"
         }
       ]
     },
@@ -57,8 +57,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkUltraSkill",
-          "value": 1
+          "value": 1,
+          "variableName": "SpecialTalkUltraSkill"
         }
       ]
     },
@@ -130,8 +130,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill08DamagePercentage",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill08DamagePercentage"
     },
     {
       "name": "IF",
@@ -144,7 +144,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08DamagePercentage",
           "value": {
             "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
             "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
@@ -153,7 +152,8 @@ const configAbility = {
               "Skill08DamagePercentage",
               "{[Skill08[2]]}"
             ]
-          }
+          },
+          "variableName": "Skill08DamagePercentage"
         }
       ]
     },
@@ -168,7 +168,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08DamagePercentage",
           "value": {
             "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[2]]}) || ADD || RETURN",
             "displayLines": "(Skill08DamagePercentage + {[Skill08[2]]})",
@@ -177,7 +176,8 @@ const configAbility = {
               "Skill08DamagePercentage",
               "{[Skill08[2]]}"
             ]
-          }
+          },
+          "variableName": "Skill08DamagePercentage"
         }
       ]
     },
@@ -192,7 +192,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08DamagePercentage",
           "value": {
             "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[1]]}) || ADD || Variables[2] ({[Skill08[0]]}) || ADD || RETURN",
             "displayLines": "((Skill08DamagePercentage + {[Skill08[1]]}) + {[Skill08[0]]})",
@@ -202,13 +201,13 @@ const configAbility = {
               "{[Skill08[1]]}",
               "{[Skill08[0]]}"
             ]
-          }
+          },
+          "variableName": "Skill08DamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08DamagePercentage",
           "value": {
             "operator": "Variables[0] (Skill08DamagePercentage) || Variables[1] ({[Skill08[0]]}) || ADD || RETURN",
             "displayLines": "(Skill08DamagePercentage + {[Skill08[0]]})",
@@ -217,7 +216,8 @@ const configAbility = {
               "Skill08DamagePercentage",
               "{[Skill08[0]]}"
             ]
-          }
+          },
+          "variableName": "Skill08DamagePercentage"
         }
       ]
     },
@@ -532,18 +532,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceHead_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "EnhanceHead_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceLimb_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "EnhanceLimb_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceTail_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "EnhanceTail_Flag"
     },
     {
       "name": "Add Events/Bonuses",

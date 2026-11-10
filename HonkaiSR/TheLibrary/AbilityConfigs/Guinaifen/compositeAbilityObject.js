@@ -238,7 +238,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue2 * MDF_Layer)",
@@ -247,7 +246,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue2",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -301,7 +301,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_MaxLayer",
                           "value": {
                             "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
                             "displayLines": "(3 + 1)",
@@ -310,13 +309,13 @@ const compositeAbilityObject = {
                               3,
                               1
                             ]
-                          }
+                          },
+                          "variableName": "MDF_MaxLayer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_MaxLayer",
                           "value": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -324,7 +323,8 @@ const compositeAbilityObject = {
                             "variables": [
                               3
                             ]
-                          }
+                          },
+                          "variableName": "MDF_MaxLayer"
                         }
                       ]
                     },
@@ -373,8 +373,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsAttack",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_IsAttack"
                     }
                   ]
                 }
@@ -385,8 +385,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsAttack"
                 }
               ]
             }
@@ -991,8 +991,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackCount"
                     },
                     {
                       "name": "Looped Event",
@@ -1007,7 +1007,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AttackCount",
                           "value": {
                             "operator": "Variables[0] (MDF_AttackCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_AttackCount + 1)",
@@ -1017,7 +1016,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_AttackCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AttackCount"
                         },
                         {
                           "name": "Find New Target",
@@ -1105,7 +1105,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_MaxLayer",
                                   "value": {
                                     "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
                                     "displayLines": "(3 + 1)",
@@ -1114,13 +1113,13 @@ const compositeAbilityObject = {
                                       3,
                                       1
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_MaxLayer"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_MaxLayer",
                                   "value": {
                                     "operator": "Variables[0] (3) || RETURN",
                                     "displayLines": "3",
@@ -1128,7 +1127,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       3
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_MaxLayer"
                                 }
                               ]
                             },

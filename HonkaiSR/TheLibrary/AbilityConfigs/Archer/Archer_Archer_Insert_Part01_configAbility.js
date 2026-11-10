@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_HasTarget",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_HasTarget"
     },
     {
       "name": "Find New Target",
@@ -27,8 +27,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_HasTarget",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_HasTarget"
         }
       ]
     },
@@ -190,8 +190,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OnInsertAbort_Flg",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "OnInsertAbort_Flg"
                 },
                 {
                   "name": "Find New Target",
@@ -204,8 +204,8 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertUsed",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InsertUsed"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -246,8 +246,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "OnInsertAbort_Flg",
-              "value": 0
+              "value": 0,
+              "variableName": "OnInsertAbort_Flg"
             }
           ]
         }

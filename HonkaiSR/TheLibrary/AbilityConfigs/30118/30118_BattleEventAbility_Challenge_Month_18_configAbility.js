@@ -148,7 +148,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentLayerAddSP",
                   "value": {
                     "operator": "Variables[0] (CurrentLayerAddSP) || Variables[1] (BattleEvent_P3_ADF_Get) || MUL || RETURN",
                     "displayLines": "(CurrentLayerAddSP * BattleEvent_P3_ADF_Get)",
@@ -157,7 +156,8 @@ const configAbility = {
                       "CurrentLayerAddSP",
                       "BattleEvent_P3_ADF_Get"
                     ]
-                  }
+                  },
+                  "variableName": "CurrentLayerAddSP"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -174,7 +174,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EntityCurrentSP",
                   "value": {
                     "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (CurrentLayerAddSP) || ADD || RETURN",
                     "displayLines": "(EntityCurrentSP + CurrentLayerAddSP)",
@@ -183,7 +182,8 @@ const configAbility = {
                       "EntityCurrentSP",
                       "CurrentLayerAddSP"
                     ]
-                  }
+                  },
+                  "variableName": "EntityCurrentSP"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -247,7 +247,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                         "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -257,7 +256,8 @@ const configAbility = {
                           "EntityCurrentSP",
                           "EntityMaxSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -281,8 +281,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EntityCurrentSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EntityCurrentSP"
                 }
               ]
             }
@@ -349,8 +349,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -382,7 +382,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -392,7 +391,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",

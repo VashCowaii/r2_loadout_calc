@@ -572,9 +572,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ],
                   "failed": [
@@ -584,9 +584,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 5,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 }

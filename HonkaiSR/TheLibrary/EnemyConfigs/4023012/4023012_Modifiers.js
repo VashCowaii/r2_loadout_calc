@@ -162,7 +162,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (MDF_Value) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || Constants[0] (100) || DIV || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_Value * 100)) / 100)",
@@ -173,7 +172,8 @@ const configAbility = {
                   "CEIL",
                   "MDF_Value"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -216,7 +216,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_AddedDamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * MDF_AddedDamageRatio)",
@@ -225,7 +224,8 @@ const configAbility = {
                   "MDF_Layer",
                   "MDF_AddedDamageRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Stack Target Stat Value",
@@ -341,8 +341,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck02",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertCheck02"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -593,9 +593,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_BattleTarget_LocalLegend_S2_1_Check",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BattleTarget_LocalLegend_S2_1_Check"
                     }
                   ]
                 },
@@ -633,23 +633,23 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BonusCheck",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BonusCheck"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SummonCheck",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SummonCheck"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DieSums",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DieSums"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DieSumsCheck",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DieSumsCheck"
                 },
                 {
                   "name": "Set Enemy Phase",

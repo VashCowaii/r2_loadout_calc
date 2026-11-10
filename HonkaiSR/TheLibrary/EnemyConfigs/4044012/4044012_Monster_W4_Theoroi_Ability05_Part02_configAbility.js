@@ -62,8 +62,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 1
+              "value": 1,
+              "variableName": "MainCount"
             }
           ]
         }
@@ -122,8 +122,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InSkill05",
-      "value": 1
+      "value": 1,
+      "variableName": "InSkill05"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -345,8 +345,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
-      "value": 1
+      "value": 1,
+      "variableName": "AIFlag"
     },
     {
       "name": "Add Events/Bonuses",
@@ -387,8 +387,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InSkill05",
-      "value": 0
+      "value": 0,
+      "variableName": "InSkill05"
     },
     {
       "name": "Add Events/Bonuses",

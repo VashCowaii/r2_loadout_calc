@@ -96,8 +96,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleScore_Damage",
-              "value": 1
+              "value": 1,
+              "variableName": "BattleScore_Damage"
             },
             {
               "name": "IF",
@@ -385,8 +385,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleScore_Damage",
-              "value": 1
+              "value": 1,
+              "variableName": "BattleScore_Damage"
             },
             {
               "name": "IF",
@@ -700,7 +700,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
                     "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
@@ -709,7 +708,8 @@ const configAbility = {
                       "MDF_TotalDamageValue",
                       "MDF_AddDamageValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalDamageValue"
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -811,8 +811,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleScore_Damage",
-              "value": 1
+              "value": 1,
+              "variableName": "BattleScore_Damage"
             },
             {
               "name": "IF",
@@ -1251,8 +1251,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleScore_Damage",
-              "value": 1
+              "value": 1,
+              "variableName": "BattleScore_Damage"
             },
             {
               "name": "IF",
@@ -1566,7 +1566,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
                     "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
@@ -1575,7 +1574,8 @@ const configAbility = {
                       "MDF_TotalDamageValue",
                       "MDF_AddDamageValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalDamageValue"
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -1739,7 +1739,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TransferDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[2] (MDF_TransferRatio) || SUB || DIV || Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || SUB || RETURN",
                         "displayLines": "(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
@@ -1751,13 +1750,13 @@ const configAbility = {
                           "MDF_ShieldDamage",
                           "MDF_TransferRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TransferDamage"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TransferDamage",
                       "value": {
                         "operator": "Variables[0] (MIN) || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[3] (MDF_TransferRatio) || SUB || DIV || Variables[4] (MDF_FinalDamageMax) || PARAM_2 || FUNCTION || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || SUB || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)), MDF_FinalDamageMax) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
@@ -1771,7 +1770,8 @@ const configAbility = {
                           "MDF_TransferRatio",
                           "MDF_FinalDamageMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TransferDamage"
                     }
                   ]
                 },
@@ -2007,8 +2007,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2025,8 +2025,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 5
+              "value": 5,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2584,8 +2584,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Trigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Trigger"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2772,8 +2772,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Trigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Trigger"
                 },
                 {
                   "name": "IF",
@@ -2855,7 +2855,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NewMaxLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_NewMaxLayer) || SUB || RETURN",
                     "displayLines": "(MDF_MaxLayer - MDF_NewMaxLayer)",
@@ -2864,7 +2863,8 @@ const configAbility = {
                       "MDF_MaxLayer",
                       "MDF_NewMaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NewMaxLayer"
                 },
                 {
                   "name": "IF",

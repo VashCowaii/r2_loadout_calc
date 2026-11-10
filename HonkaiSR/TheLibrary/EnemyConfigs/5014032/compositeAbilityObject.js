@@ -78,8 +78,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_07",
-                  "value": -1
+                  "value": -1,
+                  "variableName": "TalkTriggerFlag_07"
                 }
               ]
             },
@@ -122,8 +122,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_04",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "TalkTriggerFlag_04"
                     }
                   ]
                 }
@@ -147,8 +147,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_03",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_03"
                     }
                   ]
                 },
@@ -167,8 +167,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_07",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_07"
                     }
                   ]
                 }
@@ -201,8 +201,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_04",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_04"
                     }
                   ]
                 }
@@ -237,13 +237,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TalkTriggerFlag_06",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "TalkTriggerFlag_06"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TalkTriggerFlag_07",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "TalkTriggerFlag_07"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -251,9 +251,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "TutorialFlag",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "TutorialFlag"
                         }
                       ]
                     }
@@ -1628,7 +1628,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_SuccessChance",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
                     "displayLines": "Inferno_Skill02_SuccessChance",
@@ -1637,7 +1637,7 @@ const compositeAbilityObject = {
                       "Inferno_Skill02_SuccessChance"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_SuccessChance"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1654,7 +1654,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_LoseHPPreshow",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
                     "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)",
@@ -1664,7 +1664,7 @@ const compositeAbilityObject = {
                       "Inferno_Skill02_DamagePercentage"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_LoseHPPreshow"
                 }
               ]
             },
@@ -1768,9 +1768,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Painter: Self}}"
                       },
-                      "variableName": "TutorialFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "TutorialFlag"
                     }
                   ]
                 }
@@ -2181,8 +2181,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "PhaseInsertCheck",
-          "value": 1
+          "value": 1,
+          "variableName": "PhaseInsertCheck"
         },
         {
           "name": "Action Advance/Delay",
@@ -2256,8 +2256,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "PhaseInsertCheck",
-          "value": 0
+          "value": 0,
+          "variableName": "PhaseInsertCheck"
         },
         {
           "name": "IF",
@@ -2495,14 +2495,14 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SpecialSkill06",
-              "value": 0
+              "value": 0,
+              "variableName": "SpecialSkill06"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TutorialFlag",
+              "scope": "TargetEntity",
               "value": 3,
-              "scope": "TargetEntity"
+              "variableName": "TutorialFlag"
             },
             {
               "name": "Skill Points Modification",
@@ -3922,9 +3922,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TutorialFlag",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "TutorialFlag"
             },
             {
               "name": "Add Events/Bonuses",

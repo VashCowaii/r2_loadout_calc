@@ -68,8 +68,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck03",
-      "value": 1
+      "value": 1,
+      "variableName": "InsertCheck03"
     },
     {
       "name": "Remove from Team Target Grouping",
@@ -135,8 +135,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{BattleEvent20034}}"
           },
-          "variableName": "_SelectTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "_SelectTimes"
         }
       ],
       "failed": [
@@ -146,8 +146,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{BattleEvent20034}}"
           },
-          "variableName": "_SelectTimes",
-          "value": 0
+          "value": 0,
+          "variableName": "_SelectTimes"
         }
       ]
     },
@@ -233,8 +233,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_IsTriggerEffect",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "#CL_IsTriggerEffect"
                     }
                   ]
                 }

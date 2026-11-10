@@ -163,7 +163,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Count",
                       "value": {
                         "operator": "Variables[0] (Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Count + 1)",
@@ -173,7 +172,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Count"
                         ]
-                      }
+                      },
+                      "variableName": "Count"
                     }
                   ]
                 },
@@ -198,7 +198,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Count",
                       "value": {
                         "operator": "Variables[0] (Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Count + 1)",
@@ -208,7 +207,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Count"
                         ]
-                      }
+                      },
+                      "variableName": "Count"
                     }
                   ]
                 },

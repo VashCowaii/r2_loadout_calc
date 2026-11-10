@@ -61,7 +61,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_HealPercentage",
       "value": {
         "operator": "Variables[0] (0.117) || RETURN",
         "displayLines": "0.117",
@@ -69,11 +68,11 @@ const configAbility = {
         "variables": [
           0.117
         ]
-      }
+      },
+      "variableName": "MDF_HealPercentage"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_HealValue",
       "value": {
         "operator": "Variables[0] (312) || RETURN",
         "displayLines": "312",
@@ -81,7 +80,8 @@ const configAbility = {
         "variables": [
           312
         ]
-      }
+      },
+      "variableName": "MDF_HealValue"
     },
     {
       "name": "Find New Target",
@@ -94,7 +94,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_HealPercentage",
           "value": {
             "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
             "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
@@ -105,11 +104,11 @@ const configAbility = {
               "MDF_HealPercentage",
               0.15
             ]
-          }
+          },
+          "variableName": "MDF_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_HealValue",
           "value": {
             "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
             "displayLines": "(MDF_HealValue * (1 - 0.15))",
@@ -120,7 +119,8 @@ const configAbility = {
               "MDF_HealValue",
               0.15
             ]
-          }
+          },
+          "variableName": "MDF_HealValue"
         },
         {
           "name": "Shot Fired",
@@ -186,7 +186,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HealPercentage",
               "value": {
                 "operator": "Variables[0] (MDF_HealPercentage) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
                 "displayLines": "(MDF_HealPercentage * (1 - 0.15))",
@@ -197,11 +196,11 @@ const configAbility = {
                   "MDF_HealPercentage",
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_HealPercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HealValue",
               "value": {
                 "operator": "Variables[0] (MDF_HealValue) || Constants[0] (1) || Variables[1] (0.15) || SUB || MUL || RETURN",
                 "displayLines": "(MDF_HealValue * (1 - 0.15))",
@@ -212,7 +211,8 @@ const configAbility = {
                   "MDF_HealValue",
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_HealValue"
             },
             {
               "name": "Shot Fired",

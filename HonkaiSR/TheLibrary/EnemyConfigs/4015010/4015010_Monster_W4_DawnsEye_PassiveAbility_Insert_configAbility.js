@@ -719,7 +719,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "PartEntity1_MonsterID",
           "value": {
             "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__160) || RETURN",
             "displayLines": "ENEMIES_OBJECT_UNUSED__160",
@@ -727,11 +726,11 @@ const configAbility = {
             "variables": [
               "ENEMIES_OBJECT_UNUSED__160"
             ]
-          }
+          },
+          "variableName": "PartEntity1_MonsterID"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "PartEntity3_MonsterID",
           "value": {
             "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__159) || RETURN",
             "displayLines": "ENEMIES_OBJECT_UNUSED__159",
@@ -739,7 +738,8 @@ const configAbility = {
             "variables": [
               "ENEMIES_OBJECT_UNUSED__159"
             ]
-          }
+          },
+          "variableName": "PartEntity3_MonsterID"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1250,9 +1250,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ChangePhase_InsertController",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "ChangePhase_InsertController"
     },
     {
       "name": "IF",

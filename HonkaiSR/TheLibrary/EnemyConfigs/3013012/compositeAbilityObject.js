@@ -87,8 +87,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Dinosaur_BreakCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Dinosaur_BreakCount"
                 }
               ]
             }
@@ -184,8 +184,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -217,8 +217,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -346,12 +346,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i",
-          "value": 0
+          "value": 0,
+          "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Monster_W3_Dinosaur_01_Skill07_HitCount",
           "value": {
             "operator": "Variables[0] (MDF_Growth_Layer) || Variables[1] ({[Skill07[1]]}) || ADD || RETURN",
             "displayLines": "(MDF_Growth_Layer + {[Skill07[1]]})",
@@ -360,16 +359,16 @@ const compositeAbilityObject = {
               "MDF_Growth_Layer",
               "{[Skill07[1]]}"
             ]
-          }
+          },
+          "variableName": "Monster_W3_Dinosaur_01_Skill07_HitCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Monster_W3_Dinosaur_01_Skill07_SumTime",
-          "value": 0.3
+          "value": 0.3,
+          "variableName": "Monster_W3_Dinosaur_01_Skill07_SumTime"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Monster_W3_Dinosaur_01_Skill07_DeltaTime",
           "value": {
             "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_HitCount) || Variables[1] (Monster_W3_Dinosaur_01_Skill07_SumTime) || Constants[0] (1) || SUB || DIV || RETURN",
             "displayLines": "(Monster_W3_Dinosaur_01_Skill07_HitCount / (Monster_W3_Dinosaur_01_Skill07_SumTime - 1))",
@@ -380,7 +379,8 @@ const compositeAbilityObject = {
               "Monster_W3_Dinosaur_01_Skill07_HitCount",
               "Monster_W3_Dinosaur_01_Skill07_SumTime"
             ]
-          }
+          },
+          "variableName": "Monster_W3_Dinosaur_01_Skill07_DeltaTime"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -537,7 +537,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i_Eff_Loop",
               "value": {
                 "operator": "Variables[0] (Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i) || Constants[0] (3) || MOD || RETURN",
                 "displayLines": "(Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i % 3)",
@@ -547,7 +546,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i"
                 ]
-              }
+              },
+              "variableName": "Monster_W3_Dinosaur_01_Skill07_CurrentHitCount_i_Eff_Loop"
             },
             {
               "name": "IF",

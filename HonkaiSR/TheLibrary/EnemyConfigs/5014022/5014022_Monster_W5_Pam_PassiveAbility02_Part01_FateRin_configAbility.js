@@ -269,8 +269,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsAngry",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsAngry"
                 },
                 {
                   "name": "Remove Events/Bonuses",

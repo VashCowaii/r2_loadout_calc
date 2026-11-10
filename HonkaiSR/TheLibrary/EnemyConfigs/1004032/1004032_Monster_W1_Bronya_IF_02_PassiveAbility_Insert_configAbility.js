@@ -27,8 +27,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Gepard_LimboFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "Gepard_LimboFlag"
         },
         {
           "name": "Define Custom Variable",
@@ -36,8 +36,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Bronya_LimboFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "Bronya_LimboFlag"
         },
         {
           "name": "Lock HP",
@@ -76,8 +76,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "isMainAttack",
-          "value": -1
+          "value": -1,
+          "variableName": "isMainAttack"
         },
         {
           "name": "Remove Events/Bonuses",

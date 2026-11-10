@@ -741,7 +741,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_StanceLock",
                   "value": {
                     "operator": "Variables[0] (_StanceLock) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_StanceLock + 1)",
@@ -751,7 +750,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_StanceLock"
                     ]
-                  }
+                  },
+                  "variableName": "_StanceLock"
                 }
               ]
             },
@@ -764,7 +764,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_StanceLock",
                   "value": {
                     "operator": "Variables[0] (_StanceLock) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_StanceLock - 1)",
@@ -774,7 +773,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_StanceLock"
                     ]
-                  }
+                  },
+                  "variableName": "_StanceLock"
                 }
               ]
             },

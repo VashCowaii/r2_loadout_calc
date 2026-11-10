@@ -484,9 +484,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "FlopSide",
+          "scope": "TargetEntity",
           "value": -1,
-          "scope": "TargetEntity"
+          "variableName": "FlopSide"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -528,9 +528,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         }
       ]
     },

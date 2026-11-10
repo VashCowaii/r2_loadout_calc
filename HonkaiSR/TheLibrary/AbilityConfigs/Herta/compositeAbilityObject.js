@@ -101,13 +101,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Herta_Count_ATK",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Herta_Count_ATK"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Herta_Count_Insert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Herta_Count_Insert"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -634,8 +634,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Count_Insert",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Count_Insert"
         },
         {
           "name": "UI Display Event",
@@ -666,7 +666,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Herta_Count",
               "value": {
                 "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Herta_Count - 1)",
@@ -676,11 +675,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "Herta_Count"
                 ]
-              }
+              },
+              "variableName": "Herta_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Scoring_Herta_Count",
               "value": {
                 "operator": "Variables[0] (Scoring_Herta_Count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Scoring_Herta_Count + 1)",
@@ -690,7 +689,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Scoring_Herta_Count"
                 ]
-              }
+              },
+              "variableName": "Scoring_Herta_Count"
             },
             {
               "name": "IF",
@@ -818,8 +818,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_Herta_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Scoring_Herta_Count"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -891,8 +891,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_Herta_Count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_Herta_Count"
                     },
                     "Trigger: Skip Death Handling",
                     {
@@ -1038,28 +1038,28 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Scoring_Herta_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Scoring_Herta_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Skill01_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Skill01_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Count_ATK",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Count_ATK"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Count_Insert",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Count_Insert"
         }
       ],
       "references": [
@@ -1090,13 +1090,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Herta_Count_ATK",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Herta_Count_ATK"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Herta_Count_Insert",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Herta_Count_Insert"
                     }
                   ]
                 },
@@ -1206,7 +1206,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Herta_Count",
                               "value": {
                                 "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(Herta_Count + 1)",
@@ -1216,19 +1215,20 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Herta_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "Herta_Count"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Herta_Count",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Herta_Count"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Scoring_Herta_Count",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Scoring_Herta_Count"
                             }
                           ]
                         }
@@ -1292,18 +1292,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Herta_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Herta_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_Herta_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Scoring_Herta_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Herta_Count_ATK",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Herta_Count_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1909,8 +1909,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Herta_Skill01_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Herta_Skill01_Count"
         },
         "Trigger: Ability End"
       ],
@@ -1954,8 +1954,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Herta_Skill01_Count",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Herta_Skill01_Count"
                     }
                   ]
                 }

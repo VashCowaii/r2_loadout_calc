@@ -29,7 +29,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(3 + 1)",
@@ -38,13 +37,13 @@ const configAbility = {
               3,
               1
             ]
-          }
+          },
+          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -52,7 +51,8 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
         }
       ]
     },
@@ -116,9 +116,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageCarry",
+          "scope": "AITag",
           "value": 1,
-          "scope": "AITag"
+          "variableName": "DamageCarry"
         }
       ]
     }
@@ -172,7 +172,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DebuffCountForRank04",
                           "value": {
                             "operator": "Variables[0] (5) || RETURN",
                             "displayLines": "5",
@@ -180,7 +179,8 @@ const configAbility = {
                             "variables": [
                               5
                             ]
-                          }
+                          },
+                          "variableName": "_DebuffCountForRank04"
                         }
                       ]
                     },
@@ -271,7 +271,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DebuffCountForRank01",
                       "value": {
                         "operator": "Variables[0] (_DebuffCountForRank01) || Variables[1] (_DebuffCountForRank01_sub) || ADD || RETURN",
                         "displayLines": "(_DebuffCountForRank01 + _DebuffCountForRank01_sub)",
@@ -280,7 +279,8 @@ const configAbility = {
                           "_DebuffCountForRank01",
                           "_DebuffCountForRank01_sub"
                         ]
-                      }
+                      },
+                      "variableName": "_DebuffCountForRank01"
                     }
                   ]
                 },
@@ -302,7 +302,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DebuffCountForRank01",
                       "value": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",
@@ -310,7 +309,8 @@ const configAbility = {
                         "variables": [
                           5
                         ]
-                      }
+                      },
+                      "variableName": "_DebuffCountForRank01"
                     }
                   ]
                 },
@@ -333,8 +333,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCountForRank01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DebuffCountForRank01"
                 }
               ]
             }
@@ -382,7 +382,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_Chance",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -390,7 +389,8 @@ const configAbility = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_Chance"
             },
             {
               "name": "Find New Target",
@@ -482,8 +482,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -493,8 +493,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -504,8 +504,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -515,8 +515,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 8
+                          "value": 8,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -526,8 +526,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 16
+                          "value": 16,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -537,8 +537,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 32
+                          "value": 32,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     },
@@ -548,8 +548,8 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TheFirstAvatarWeakType",
-                          "value": 64
+                          "value": 64,
+                          "variableName": "_TheFirstAvatarWeakType"
                         }
                       ]
                     }

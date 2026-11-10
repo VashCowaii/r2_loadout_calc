@@ -67,7 +67,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Lingsha_AttackTime",
                   "value": {
                     "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
                     "displayLines": "(Lingsha_AttackTime + 3)",
@@ -76,7 +75,8 @@ const configAbility = {
                       "Lingsha_AttackTime",
                       3
                     ]
-                  }
+                  },
+                  "variableName": "Lingsha_AttackTime"
                 },
                 {
                   "name": "Add Battle Event",
@@ -187,7 +187,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Lingsha_BENum",
                   "value": {
                     "operator": "Variables[0] (Lingsha_BENum) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Lingsha_BENum + 1)",
@@ -197,7 +196,8 @@ const configAbility = {
                     "variables": [
                       "Lingsha_BENum"
                     ]
-                  }
+                  },
+                  "variableName": "Lingsha_BENum"
                 }
               ]
             }

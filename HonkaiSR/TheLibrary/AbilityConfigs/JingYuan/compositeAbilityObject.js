@@ -655,7 +655,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_ATKCountSum",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
                         "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
@@ -664,7 +663,8 @@ const compositeAbilityObject = {
                           "EnergyBar_ATKCount",
                           "EnergyBar_UltraATKCount"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyBar_ATKCountSum"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -835,7 +835,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ATKCountSum",
               "value": {
                 "operator": "Variables[0] (ATKCount) || Variables[1] (UltraATKCount) || ADD || RETURN",
                 "displayLines": "(ATKCount + UltraATKCount)",
@@ -844,7 +843,8 @@ const compositeAbilityObject = {
                   "ATKCount",
                   "UltraATKCount"
                 ]
-              }
+              },
+              "variableName": "ATKCountSum"
             },
             {
               "name": "IF",
@@ -1326,17 +1326,16 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ATKCount",
-          "value": 0
+          "value": 0,
+          "variableName": "ATKCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "UltraATKCount",
-          "value": 0
+          "value": 0,
+          "variableName": "UltraATKCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ATKCount",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -1344,12 +1343,13 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "EnergyBar_ATKCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_UltraATKCount",
-          "value": 0
+          "value": 0,
+          "variableName": "EnergyBar_UltraATKCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1687,7 +1687,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                         "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -1696,13 +1695,13 @@ const compositeAbilityObject = {
                           10,
                           "EnergyBar_ATKCount"
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -1710,7 +1709,8 @@ const compositeAbilityObject = {
                         "variables": [
                           3
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ]
                 }
@@ -1745,7 +1745,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_AddLayer",
                           "value": {
                             "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                             "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -1754,13 +1753,13 @@ const compositeAbilityObject = {
                               10,
                               "EnergyBar_ATKCount"
                             ]
-                          }
+                          },
+                          "variableName": "_AddLayer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_AddLayer",
                           "value": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -1768,7 +1767,8 @@ const compositeAbilityObject = {
                             "variables": [
                               3
                             ]
-                          }
+                          },
+                          "variableName": "_AddLayer"
                         }
                       ]
                     }
@@ -1826,7 +1826,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                         "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -1835,13 +1834,13 @@ const compositeAbilityObject = {
                           10,
                           "EnergyBar_ATKCount"
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AddLayer",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1849,7 +1848,8 @@ const compositeAbilityObject = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "variableName": "_AddLayer"
                     }
                   ]
                 }
@@ -1884,7 +1884,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_AddLayer",
                           "value": {
                             "operator": "Variables[0] (10) || Variables[1] (EnergyBar_ATKCount) || SUB || RETURN",
                             "displayLines": "(10 - EnergyBar_ATKCount)",
@@ -1893,13 +1892,13 @@ const compositeAbilityObject = {
                               10,
                               "EnergyBar_ATKCount"
                             ]
-                          }
+                          },
+                          "variableName": "_AddLayer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_AddLayer",
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1907,7 +1906,8 @@ const compositeAbilityObject = {
                             "variables": [
                               2
                             ]
-                          }
+                          },
+                          "variableName": "_AddLayer"
                         }
                       ]
                     }
@@ -2054,7 +2054,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ATKCountSum",
           "value": {
             "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
             "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
@@ -2063,7 +2062,8 @@ const compositeAbilityObject = {
               "EnergyBar_ATKCount",
               "EnergyBar_UltraATKCount"
             ]
-          }
+          },
+          "variableName": "EnergyBar_ATKCountSum"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -2259,7 +2259,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ATKCountSum",
           "value": {
             "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
             "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
@@ -2268,7 +2267,8 @@ const compositeAbilityObject = {
               "EnergyBar_ATKCount",
               "EnergyBar_UltraATKCount"
             ]
-          }
+          },
+          "variableName": "EnergyBar_ATKCountSum"
         },
         {
           "name": "Update Displayed Energy Bar",

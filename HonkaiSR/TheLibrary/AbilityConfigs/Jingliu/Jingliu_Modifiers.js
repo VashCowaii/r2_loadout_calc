@@ -226,7 +226,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.44) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * 0.44)",
@@ -235,7 +234,8 @@ const configAbility = {
                   "MDF_Layer",
                   0.44
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "IF",
@@ -246,7 +246,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Variables[2] (0.2) || MUL || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))",
@@ -256,7 +255,8 @@ const configAbility = {
                       "MDF_Layer",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             },
@@ -546,8 +546,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Switch",
-              "value": 1
+              "value": 1,
+              "variableName": "_Switch"
             }
           ]
         },
@@ -1575,7 +1575,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Jingliu_LoseHPCount",
                       "value": {
                         "operator": "Variables[0] (Jingliu_LoseHPCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_LoseHPCount + 1)",
@@ -1585,7 +1584,8 @@ const configAbility = {
                         "variables": [
                           "Jingliu_LoseHPCount"
                         ]
-                      }
+                      },
+                      "variableName": "Jingliu_LoseHPCount"
                     },
                     {
                       "name": "IF",
@@ -1606,8 +1606,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "LoseHPTrigger",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "LoseHPTrigger"
                         }
                       ]
                     },
@@ -1629,7 +1629,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Jingliu_LoseHPCount",
                           "value": {
                             "operator": "Variables[0] (Jingliu_LoseHPCount) || Variables[1] (20) || SUB || RETURN",
                             "displayLines": "(Jingliu_LoseHPCount - 20)",
@@ -1638,7 +1637,8 @@ const configAbility = {
                               "Jingliu_LoseHPCount",
                               20
                             ]
-                          }
+                          },
+                          "variableName": "Jingliu_LoseHPCount"
                         },
                         {
                           "name": "IF",

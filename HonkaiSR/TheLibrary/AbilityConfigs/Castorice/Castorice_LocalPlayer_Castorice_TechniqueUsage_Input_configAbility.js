@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_OnInput_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "Castorice_OnInput_Flag"
     },
     "Deleted bullshit",
     {
@@ -15,8 +15,8 @@ const configAbility = {
       "onBattle": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnBattle_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Castorice_OnBattle_Flag"
         },
         {
           "name": "Add Events/Bonuses",
@@ -41,8 +41,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnBattle_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "Castorice_OnBattle_Flag"
         }
       ]
     },
@@ -57,8 +57,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_OnInput_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "Castorice_OnInput_Flag"
     },
     {
       "name": "Remove Overworld Entity",

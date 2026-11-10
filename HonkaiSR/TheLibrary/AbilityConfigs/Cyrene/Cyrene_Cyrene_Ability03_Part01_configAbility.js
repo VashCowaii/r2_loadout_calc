@@ -57,16 +57,16 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "RingTrigger",
-          "value": 0
+          "value": 0,
+          "variableName": "RingTrigger"
         },
         "Quick-Time-Event"
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "RingTrigger",
-      "value": 1
+      "value": 1,
+      "variableName": "RingTrigger"
     },
     "Deleted bullshit"
   ],

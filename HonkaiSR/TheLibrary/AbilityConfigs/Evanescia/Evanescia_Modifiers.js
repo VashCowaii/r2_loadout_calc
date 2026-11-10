@@ -496,7 +496,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AllDamageTypeTakenRatio",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                 "displayLines": "MDF_PropertyValue",
@@ -504,7 +503,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_AllDamageTypeTakenRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -549,7 +549,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
                 "displayLines": "(CasterCriticalDamage * 0.2)",
@@ -558,7 +557,8 @@ const configAbility = {
                   "CasterCriticalDamage",
                   0.2
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -616,7 +616,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
                     "displayLines": "(CasterCriticalDamage * 0.2)",
@@ -625,7 +624,8 @@ const configAbility = {
                       "CasterCriticalDamage",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -688,7 +688,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (CasterCriticalDamage) || Variables[1] (0.2) || MUL || RETURN",
                         "displayLines": "(CasterCriticalDamage * 0.2)",
@@ -697,7 +696,8 @@ const configAbility = {
                           "CasterCriticalDamage",
                           0.2
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -796,7 +796,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_UltraCountdown",
                       "value": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -804,7 +803,8 @@ const configAbility = {
                         "variables": [
                           4
                         ]
-                      }
+                      },
+                      "variableName": "DV_UltraCountdown"
                     }
                   ],
                   "failed": [
@@ -857,7 +857,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
                     "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
@@ -872,7 +871,8 @@ const configAbility = {
                       0.02,
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -902,7 +902,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
                 "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
@@ -917,7 +916,8 @@ const configAbility = {
                   0.02,
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             }
           ]
         }
@@ -944,7 +944,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (_EchoPoint) || Constants[0] (1000) || PARAM_2 || FUNCTION || Constants[1] (100) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || Variables[4] (0.15) || ADD || RETURN",
                     "displayLines": "((&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_EchoPoint, 1000) / 100)) * 0.02) + 0.15)",
@@ -959,7 +958,8 @@ const configAbility = {
                       0.02,
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             }

@@ -148,9 +148,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_AttackFlag",
+              "scope": "ContextModifier",
               "value": 1,
-              "scope": "ContextModifier"
+              "variableName": "_AttackFlag"
             }
           ]
         },
@@ -163,9 +163,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_AttackFlag",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "_AttackFlag"
             },
             {
               "name": "Remove Events/Bonuses",

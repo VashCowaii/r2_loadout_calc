@@ -25,7 +25,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_MaxEnergy",
       "value": {
         "operator": "Variables[0] (7) || RETURN",
         "displayLines": "7",
@@ -33,7 +32,8 @@ const configAbility = {
         "variables": [
           7
         ]
-      }
+      },
+      "variableName": "EnergyBar_MaxEnergy"
     },
     {
       "name": "Read Variable Value",
@@ -56,7 +56,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_BasicCount",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -64,11 +63,11 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "Skill11_BasicCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_FixedChance",
       "value": {
         "operator": "Variables[0] (0.6) || RETURN",
         "displayLines": "0.6",
@@ -76,11 +75,12 @@ const configAbility = {
         "variables": [
           0.6
         ]
-      }
+      },
+      "variableName": "Skill11_FixedChance"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_DamagePercatage",
+      "scope": "ContextCaster",
       "value": {
         "operator": "Variables[0] (0.8) || RETURN",
         "displayLines": "0.8",
@@ -89,7 +89,7 @@ const configAbility = {
           0.8
         ]
       },
-      "scope": "ContextCaster"
+      "variableName": "Skill11_DamagePercatage"
     },
     {
       "name": "Add Events/Bonuses",

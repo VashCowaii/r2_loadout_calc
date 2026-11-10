@@ -283,9 +283,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CurrentXuanluPartSummonIndex",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "CurrentXuanluPartSummonIndex"
     }
   ],
   "targetObjectData": {

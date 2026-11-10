@@ -209,8 +209,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "isRefreshFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "isRefreshFlag"
         }
       ]
     },
@@ -295,8 +295,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "isRefreshFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "isRefreshFlag"
     },
     "Trigger: Ability End"
   ],

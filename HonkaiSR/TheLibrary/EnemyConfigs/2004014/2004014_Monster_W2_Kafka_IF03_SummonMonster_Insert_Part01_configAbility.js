@@ -370,8 +370,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Summoner of Modifier Holder}}"
                   },
-                  "variableName": "SummonDeathInsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "SummonDeathInsertCheck"
                 }
               ],
               "failed": [

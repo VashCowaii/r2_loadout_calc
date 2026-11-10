@@ -7,8 +7,8 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "IsNeedFade",
-      "value": 1
+      "value": 1,
+      "variableName": "IsNeedFade"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -48,7 +48,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_TargetNegativeHp",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (_TargetNegativeHp) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(_TargetNegativeHp)",
@@ -57,7 +56,8 @@ const configAbility = {
                   "CEIL",
                   "_TargetNegativeHp"
                 ]
-              }
+              },
+              "variableName": "_TargetNegativeHp"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -380,8 +380,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "IsNeedFade",
-      "value": 0
+      "value": 0,
+      "variableName": "IsNeedFade"
     },
     "Trigger: Ability End"
   ],

@@ -29,8 +29,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Insert",
-      "value": 1
+      "value": 1,
+      "variableName": "Is_Insert"
     },
     {
       "name": "IF",
@@ -232,8 +232,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Xueyi_PassiveLayer",
-      "value": 0
+      "value": 0,
+      "variableName": "_Xueyi_PassiveLayer"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -318,18 +318,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Insert",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_Insert"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Change_Stance",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_Change_Stance"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Difference",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_Difference"
     },
     "Trigger: Skip Death Handling"
   ],

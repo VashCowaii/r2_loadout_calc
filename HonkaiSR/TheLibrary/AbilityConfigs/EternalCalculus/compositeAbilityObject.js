@@ -123,8 +123,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackNum_24004",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AttackNum_24004"
                 },
                 {
                   "name": "Define Custom Variable with Attack Targets",

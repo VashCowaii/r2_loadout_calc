@@ -385,7 +385,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_RedStance_First",
                   "value": {
                     "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
                     "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
@@ -394,7 +393,8 @@ const compositeAbilityObject = {
                       "MDF_CurMaxStance2",
                       "MDF_RedStanceRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_RedStance_First"
                 },
                 {
                   "name": "IF",
@@ -1392,7 +1392,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
                     "displayLines": "(MDF_PropertyRatio * (MDF_Layer - 1))",
@@ -1403,7 +1402,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyRatio",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1435,8 +1435,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_PropertyRatio"
                     },
                     {
                       "name": "IF",
@@ -2908,8 +2908,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Fugue_Skill11_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Fugue_Skill11_Flag"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -2982,8 +2982,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Fugue_Skill11_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Fugue_Skill11_Flag"
                 }
               ]
             }

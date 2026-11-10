@@ -63,7 +63,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyRatioFinal",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyRatio * MDF_Layer)",
@@ -72,7 +71,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyRatio",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyRatioFinal"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -313,7 +313,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_WeightlessTriggerCount",
                   "value": {
                     "operator": "Variables[0] (8) || RETURN",
                     "displayLines": "8",
@@ -321,7 +320,8 @@ const compositeAbilityObject = {
                     "variables": [
                       8
                     ]
-                  }
+                  },
+                  "variableName": "MDF_WeightlessTriggerCount"
                 }
               ]
             },
@@ -436,7 +436,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_WeightlessTriggerCount",
                       "value": {
                         "operator": "Variables[0] (MDF_WeightlessTriggerCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_WeightlessTriggerCount - 1)",
@@ -446,7 +445,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_WeightlessTriggerCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_WeightlessTriggerCount"
                     }
                   ]
                 }
@@ -477,7 +477,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackConvertValue",
                   "value": {
                     "operator": "Variables[0] (MDF_BaseAttack) || Variables[1] (MDF_AttackAddRatio) || MUL || RETURN",
                     "displayLines": "(MDF_BaseAttack * MDF_AttackAddRatio)",
@@ -486,7 +485,8 @@ const compositeAbilityObject = {
                       "MDF_BaseAttack",
                       "MDF_AttackAddRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AttackConvertValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -527,7 +527,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackConvertValue",
                       "value": {
                         "operator": "Variables[0] (MDF_BaseAttack) || Variables[1] (MDF_AttackAddRatio) || MUL || RETURN",
                         "displayLines": "(MDF_BaseAttack * MDF_AttackAddRatio)",
@@ -536,7 +535,8 @@ const compositeAbilityObject = {
                           "MDF_BaseAttack",
                           "MDF_AttackAddRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackConvertValue"
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -592,7 +592,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.4) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.2) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((SkillTree_PointB3_StatusProbabilityValue - 0.4) / 0.1)) * 0.2)",
@@ -604,7 +603,8 @@ const compositeAbilityObject = {
                       0.1,
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "IF",
@@ -618,8 +618,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -650,7 +650,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                           "value": {
                             "operator": "Variables[0] (0.8) || RETURN",
                             "displayLines": "0.8",
@@ -658,7 +657,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.8
                             ]
-                          }
+                          },
+                          "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       ]
                     },

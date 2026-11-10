@@ -22,7 +22,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "variableName": "_PairStance",
       "value": {
         "operator": "Variables[0] (AOE Toughness Value) || RETURN",
         "displayLines": "AOE Toughness Value",
@@ -30,7 +29,8 @@ const configAbility = {
         "variables": [
           "AOE Toughness Value"
         ]
-      }
+      },
+      "variableName": "_PairStance"
     },
     {
       "name": "Trigger Joint-Attack Ability",

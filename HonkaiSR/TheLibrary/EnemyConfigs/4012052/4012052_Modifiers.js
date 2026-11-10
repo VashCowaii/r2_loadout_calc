@@ -305,8 +305,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ListenCorrectInteract",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_ListenCorrectInteract"
                 },
                 {
                   "name": "IF",
@@ -373,9 +373,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "InsertFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertFlag"
                     },
                     {
                       "name": "IF",
@@ -562,9 +562,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ForwardReverseFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ForwardReverseFlag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -572,9 +572,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ForwardReverseFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "ForwardReverseFlag"
                     }
                   ]
                 },
@@ -988,9 +988,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "InsertFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertFlag"
                     },
                     {
                       "name": "ATK Scaling DMG",

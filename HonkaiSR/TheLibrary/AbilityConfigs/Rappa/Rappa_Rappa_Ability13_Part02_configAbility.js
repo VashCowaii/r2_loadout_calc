@@ -6,12 +6,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_PassiveBreakCount",
-      "value": 0
+      "value": 0,
+      "variableName": "_PassiveBreakCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO",
       "value": {
         "operator": "Variables[0] (_AMMO) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(_AMMO - 1)",
@@ -21,7 +20,8 @@ const configAbility = {
         "variables": [
           "_AMMO"
         ]
-      }
+      },
+      "variableName": "_AMMO"
     },
     {
       "name": "Find New Target",
@@ -147,7 +147,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FinalBreakDamagePercentage",
           "value": {
             "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (0.6) || Variables[2] (_PassiveBreakCountBase) || Variables[3] (DV_TempCount) || ADD || Variables[4] (0.5) || MUL || ADD || MUL || RETURN",
             "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * (0.6 + ((_PassiveBreakCountBase + DV_TempCount) * 0.5)))",
@@ -164,7 +163,8 @@ const configAbility = {
               "DV_TempCount",
               0.5
             ]
-          }
+          },
+          "variableName": "DV_FinalBreakDamagePercentage"
         },
         {
           "name": "Add Events/Bonuses",

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_AlreadyInBonusAction",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_AlreadyInBonusAction"
     },
     {
       "name": "Add Events/Bonuses",
@@ -20,7 +20,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Skill02UseCount",
       "value": {
         "operator": "Variables[0] (MDF_Skill02UseCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(MDF_Skill02UseCount + 1)",
@@ -30,7 +29,8 @@ const configAbility = {
         "variables": [
           "MDF_Skill02UseCount"
         ]
-      }
+      },
+      "variableName": "MDF_Skill02UseCount"
     },
     {
       "name": "IF",
@@ -43,7 +43,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Skill02UseCountInCaps",
           "value": {
             "operator": "Variables[0] (MDF_Skill02UseCountInCaps) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(MDF_Skill02UseCountInCaps + 1)",
@@ -53,7 +52,8 @@ const configAbility = {
             "variables": [
               "MDF_Skill02UseCountInCaps"
             ]
-          }
+          },
+          "variableName": "MDF_Skill02UseCountInCaps"
         }
       ]
     },
@@ -274,15 +274,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_InBonus",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_InBonus"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_InBonus",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_InBonus"
         }
       ]
     },

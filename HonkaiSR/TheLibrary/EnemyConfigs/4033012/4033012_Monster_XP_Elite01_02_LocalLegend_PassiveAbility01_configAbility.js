@@ -195,7 +195,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
             "displayLines": "{[Skill06[4]]}",
@@ -203,11 +202,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[4]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[3]]}",
@@ -215,7 +214,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[3]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -249,7 +249,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[10]]}) || RETURN",
             "displayLines": "{[Skill06[10]]}",
@@ -257,11 +256,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[10]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[5]]}",
@@ -269,7 +268,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[5]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -293,7 +293,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[9]]}) || RETURN",
             "displayLines": "{[Skill06[9]]}",
@@ -301,11 +300,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[9]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[4]]}",
@@ -313,7 +312,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[4]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -337,7 +337,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[8]]}) || RETURN",
             "displayLines": "{[Skill06[8]]}",
@@ -345,11 +344,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[8]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[3]]}",
@@ -357,7 +356,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[3]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -381,7 +381,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[7]]}) || RETURN",
             "displayLines": "{[Skill06[7]]}",
@@ -389,11 +388,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[7]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[2]]}",
@@ -401,7 +400,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[2]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -425,7 +425,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[6]]}) || RETURN",
             "displayLines": "{[Skill06[6]]}",
@@ -433,11 +432,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[6]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[1]]}",
@@ -445,7 +444,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[1]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -469,7 +469,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ModifyActionDelay",
           "value": {
             "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
             "displayLines": "{[Skill06[5]]}",
@@ -477,11 +476,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[5]]}"
             ]
-          }
+          },
+          "variableName": "_ModifyActionDelay"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Basic_AllDamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[0]]}",
@@ -489,7 +488,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[0]]}"
             ]
-          }
+          },
+          "variableName": "_Basic_AllDamageReduceRatio"
         }
       ]
     },
@@ -578,15 +578,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsNegative",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsNegative"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsNegative",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsNegative"
                 }
               ]
             }

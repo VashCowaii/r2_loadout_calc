@@ -35,7 +35,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_PassiveMaxLayer",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -43,7 +42,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "MDF_PassiveMaxLayer"
     }
   ],
   "references": [
@@ -177,7 +177,7 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_QuantumCount",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_QuantumCount + 1)",
@@ -188,7 +188,7 @@ const configAbility = {
                           "MDF_QuantumCount"
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "MDF_QuantumCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -330,7 +330,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPCount",
               "value": {
                 "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
                 "displayLines": "-MDF_BPCount",
@@ -338,7 +337,8 @@ const configAbility = {
                 "variables": [
                   "MDF_BPCount"
                 ]
-              }
+              },
+              "variableName": "MDF_BPCount"
             },
             {
               "name": "IF",
@@ -471,7 +471,7 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_QuantumCount",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_QuantumCount + 1)",
@@ -482,7 +482,7 @@ const configAbility = {
                           "MDF_QuantumCount"
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "MDF_QuantumCount"
                     },
                     {
                       "name": "Add Events/Bonuses",

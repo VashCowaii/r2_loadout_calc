@@ -451,7 +451,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IF_BOSS_AllPowerFlag",
                   "value": {
                     "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 1)",
@@ -461,12 +460,13 @@ const configAbility = {
                     "variables": [
                       "MDF_IF_BOSS_AllPowerFlag"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_IF_BOSS_AllPowerFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IF_BOSS_PowerFlag01",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IF_BOSS_PowerFlag01"
                 }
               ]
             }
@@ -516,7 +516,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_AllPowerFlag",
                       "value": {
                         "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || RETURN",
                         "displayLines": "MDF_IF_BOSS_AllPowerFlag",
@@ -524,12 +523,13 @@ const configAbility = {
                         "variables": [
                           "MDF_IF_BOSS_AllPowerFlag"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_PowerFlag02",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IF_BOSS_PowerFlag02"
                     }
                   ]
                 },
@@ -563,7 +563,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_AllPowerFlag",
                       "value": {
                         "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || Constants[0] (3) || ADD || RETURN",
                         "displayLines": "(MDF_IF_BOSS_AllPowerFlag + 3)",
@@ -573,12 +572,13 @@ const configAbility = {
                         "variables": [
                           "MDF_IF_BOSS_AllPowerFlag"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_PowerFlag03",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IF_BOSS_PowerFlag03"
                     }
                   ]
                 },
@@ -622,7 +622,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_AllPowerFlag",
                       "value": {
                         "operator": "Variables[0] (MDF_IF_BOSS_AllPowerFlag) || RETURN",
                         "displayLines": "MDF_IF_BOSS_AllPowerFlag",
@@ -630,12 +629,13 @@ const configAbility = {
                         "variables": [
                           "MDF_IF_BOSS_AllPowerFlag"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_IF_BOSS_AllPowerFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IF_BOSS_PowerFlag04",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IF_BOSS_PowerFlag04"
                     }
                   ]
                 }
@@ -836,7 +836,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] (MDF_LightPowerUp) || RETURN",
                 "displayLines": "MDF_LightPowerUp",
@@ -844,7 +843,8 @@ const configAbility = {
                 "variables": [
                   "MDF_LightPowerUp"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             }
           ]
         }
@@ -894,7 +894,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] ({[Skill16[0]]}) || RETURN",
                 "displayLines": "{[Skill16[0]]}",
@@ -902,7 +901,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill16[0]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             }
           ]
         }
@@ -1956,9 +1956,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "FlowerPower",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "FlowerPower"
             }
           ]
         },
@@ -1983,9 +1983,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "FlowerPower",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "FlowerPower"
             }
           ]
         }
@@ -2034,8 +2034,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BreakMark",
-              "value": 0
+              "value": 0,
+              "variableName": "BreakMark"
             }
           ]
         },
@@ -2066,8 +2066,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakMark",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BreakMark"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -2082,8 +2082,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BreakMark",
-              "value": 1
+              "value": 1,
+              "variableName": "BreakMark"
             }
           ]
         }

@@ -18,8 +18,8 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Ashveil_NeedContinueInsert",
-          "value": 0
+          "value": 0,
+          "variableName": "Ashveil_NeedContinueInsert"
         },
         {
           "name": "Find New Target",
@@ -89,8 +89,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ashveil_NeedContinueInsert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Ashveil_NeedContinueInsert"
                 }
               ]
             }

@@ -116,8 +116,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WaveConut",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_WaveConut"
                 }
               ]
             }
@@ -177,8 +177,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_WaveConut",
-              "value": 0
+              "value": 0,
+              "variableName": "_WaveConut"
             }
           ]
         }

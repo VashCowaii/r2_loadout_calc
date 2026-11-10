@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "EXSkill01",
-      "value": 0
+      "value": 0,
+      "variableName": "EXSkill01"
     },
     {
       "name": "Remove Events/Bonuses",

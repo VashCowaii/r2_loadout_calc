@@ -91,8 +91,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_EnergyValue",
-          "value": 1
+          "value": 1,
+          "variableName": "_EnergyValue"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -106,8 +106,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_EnergyValue",
-          "value": 0
+          "value": 0,
+          "variableName": "_EnergyValue"
         }
       ]
     },

@@ -17,8 +17,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_LightCharge",
-              "value": 99
+              "value": 99,
+              "variableName": "_LightCharge"
             }
           ]
         }
@@ -64,7 +64,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_LightCharge",
               "value": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__254) || RETURN",
                 "displayLines": "ENEMIES_OBJECT_UNUSED__254",
@@ -72,7 +71,8 @@ const configAbility = {
                 "variables": [
                   "ENEMIES_OBJECT_UNUSED__254"
                 ]
-              }
+              },
+              "variableName": "_LightCharge"
             },
             {
               "name": "Update Ability Enhance Button",

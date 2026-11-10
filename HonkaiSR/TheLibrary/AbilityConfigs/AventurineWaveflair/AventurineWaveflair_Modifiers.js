@@ -157,9 +157,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ElationCharacterCount",
+                  "scope": "ContextCaster",
                   "value": 0,
-                  "scope": "ContextCaster"
+                  "variableName": "ElationCharacterCount"
                 },
                 {
                   "name": "Find New Target",
@@ -327,9 +327,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SpecialAttackTriggerFlag",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "_SpecialAttackTriggerFlag"
                 }
               ]
             }
@@ -340,9 +340,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_SpecialAttackTriggerFlag",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "_SpecialAttackTriggerFlag"
             }
           ]
         },
@@ -367,9 +367,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SpecialAttackTriggerFlag",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "_SpecialAttackTriggerFlag"
             }
           ]
         },
@@ -660,7 +660,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EPRatioBase",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
                     "displayLines": "0.3",
@@ -668,7 +667,8 @@ const configAbility = {
                     "variables": [
                       0.3
                     ]
-                  }
+                  },
+                  "variableName": "_EPRatioBase"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -681,7 +681,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentSpeed",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -690,11 +689,11 @@ const configAbility = {
                       "_CurrentSpeed",
                       "_CurrentSpeedConvert"
                     ]
-                  }
+                  },
+                  "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_OverCountSpeedValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (140) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - 140)",
@@ -703,7 +702,8 @@ const configAbility = {
                       "_CurrentSpeed",
                       140
                     ]
-                  }
+                  },
+                  "variableName": "_OverCountSpeedValue"
                 },
                 {
                   "name": "IF",
@@ -723,7 +723,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (200) || RETURN",
                         "displayLines": "200",
@@ -731,7 +730,8 @@ const configAbility = {
                         "variables": [
                           200
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     }
                   ]
                 },
@@ -753,7 +753,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioAdd",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -764,14 +763,15 @@ const configAbility = {
                           1,
                           0.01
                         ]
-                      }
+                      },
+                      "variableName": "_EPRatioAdd"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_EPRatioAdd"
                     }
                   ]
                 },
@@ -1024,7 +1024,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
               "value": {
                 "operator": "Variables[0] (6) || Variables[1] (MDF_CastNum) || SUB || RETURN",
                 "displayLines": "(6 - MDF_CastNum)",
@@ -1033,7 +1032,8 @@ const configAbility = {
                   6,
                   "MDF_CastNum"
                 ]
-              }
+              },
+              "variableName": "MDF_Count"
             }
           ]
         }
@@ -1059,7 +1059,6 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (6) || Variables[1] (MDF_CastNum) || SUB || RETURN",
                     "displayLines": "(6 - MDF_CastNum)",
@@ -1068,7 +1067,8 @@ const configAbility = {
                       6,
                       "MDF_CastNum"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 }
               ]
             }
@@ -1267,15 +1267,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AlreadyTriggerElationSkill",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_AlreadyTriggerElationSkill"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LayerMod",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_Layer) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_Layer / 10))",
@@ -1286,7 +1286,7 @@ const configAbility = {
                   10
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_LayerMod"
             },
             {
               "name": "IF",
@@ -1372,7 +1372,7 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LayerModTriggerLayer",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (MDF_LayerMod) || RETURN",
                         "displayLines": "MDF_LayerMod",
@@ -1381,7 +1381,7 @@ const configAbility = {
                           "MDF_LayerMod"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_LayerModTriggerLayer"
                     }
                   ]
                 }
@@ -1593,9 +1593,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_IsEnergyTrigger",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "_IsEnergyTrigger"
             }
           ]
         },
@@ -1615,9 +1615,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_IsEnergyTrigger",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "_IsEnergyTrigger"
                 },
                 "Unknown EventType2 (Not always an error)[2 true][3_NAME AventurineW]"
               ]

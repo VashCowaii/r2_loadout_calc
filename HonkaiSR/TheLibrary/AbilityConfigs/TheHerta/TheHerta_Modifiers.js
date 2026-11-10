@@ -178,7 +178,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityCurrentSP",
                       "value": {
                         "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
                         "displayLines": "((EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
@@ -188,7 +187,8 @@ const configAbility = {
                           "_SPChangeValue",
                           "_SPChangeValueRaw"
                         ]
-                      }
+                      },
+                      "variableName": "EntityCurrentSP"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -225,7 +225,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "EntityStockSP",
                           "value": {
                             "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                             "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -235,7 +234,8 @@ const configAbility = {
                               "EntityCurrentSP",
                               "EntityMaxSP"
                             ]
-                          }
+                          },
+                          "variableName": "EntityStockSP"
                         },
                         {
                           "name": "IF",
@@ -260,7 +260,6 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "EntityStockSP",
                               "value": {
                                 "operator": "Variables[0] (EntityMaxSP) || Variables[1] (T_HERTA_OBJECT_UNUSED_9) || MUL || RETURN",
                                 "displayLines": "(EntityMaxSP * T_HERTA_OBJECT_UNUSED_9)",
@@ -269,7 +268,8 @@ const configAbility = {
                                   "EntityMaxSP",
                                   "T_HERTA_OBJECT_UNUSED_9"
                                 ]
-                              }
+                              },
+                              "variableName": "EntityStockSP"
                             }
                           ]
                         },
@@ -444,8 +444,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -476,7 +476,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -486,7 +485,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -717,9 +717,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DV_HitCount",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "DV_HitCount"
             }
           ]
         }
@@ -879,8 +879,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_TMP_VAL",
-              "value": 0
+              "value": 0,
+              "variableName": "_TMP_VAL"
             },
             {
               "name": "Looped Event",
@@ -901,7 +901,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_VAL",
                   "value": {
                     "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_TMP_VAL + 1)",
@@ -911,7 +910,8 @@ const configAbility = {
                     "variables": [
                       "_TMP_VAL"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_VAL"
                 }
               ]
             },
@@ -1274,8 +1274,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_TMP_VAL",
-              "value": 0
+              "value": 0,
+              "variableName": "_TMP_VAL"
             },
             {
               "name": "Looped Event",
@@ -1296,7 +1296,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_VAL",
                   "value": {
                     "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_TMP_VAL + 1)",
@@ -1306,7 +1305,8 @@ const configAbility = {
                     "variables": [
                       "_TMP_VAL"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_VAL"
                 }
               ]
             },
@@ -2107,8 +2107,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_TMP_VAL",
-              "value": 0
+              "value": 0,
+              "variableName": "_TMP_VAL"
             },
             {
               "name": "Looped Event",
@@ -2129,7 +2129,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_VAL",
                   "value": {
                     "operator": "Variables[0] (_TMP_VAL) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_TMP_VAL + 1)",
@@ -2139,7 +2138,8 @@ const configAbility = {
                     "variables": [
                       "_TMP_VAL"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_VAL"
                 }
               ]
             },

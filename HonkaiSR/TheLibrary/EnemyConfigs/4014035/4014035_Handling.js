@@ -35,9 +35,9 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": -1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   }
                 ],
                 "failed": [
@@ -52,9 +52,9 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 7,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       }
                     ]
                   }
@@ -62,9 +62,9 @@ const configAbility = {
               },
               {
                 "name": "Define Custom Variable",
-                "variableName": "AI_HeiShengBei_SpecialAI",
+                "scope": "TargetEntity",
                 "value": 1,
-                "scope": "TargetEntity"
+                "variableName": "AI_HeiShengBei_SpecialAI"
               },
               {
                 "name": "Use Ability Option",

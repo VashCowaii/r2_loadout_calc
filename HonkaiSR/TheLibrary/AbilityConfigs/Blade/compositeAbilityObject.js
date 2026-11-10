@@ -187,7 +187,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CriticalIncrease",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
                     "displayLines": "0.15",
@@ -195,7 +194,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CriticalIncrease"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -242,8 +242,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isNeedHpAdded",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isNeedHpAdded"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -276,7 +276,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPIncrease",
                   "value": {
                     "operator": "Variables[0] (0.2) || Variables[1] (MDF_Rank04_Layer) || MUL || RETURN",
                     "displayLines": "(0.2 * MDF_Rank04_Layer)",
@@ -285,7 +284,8 @@ const compositeAbilityObject = {
                       0.2,
                       "MDF_Rank04_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPIncrease"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -361,8 +361,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Breaked",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Breaked"
                     }
                   ]
                 }
@@ -938,7 +938,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CriticalIncrease",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
                     "displayLines": "0.15",
@@ -946,7 +945,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CriticalIncrease"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -993,8 +993,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isNeedHpAdded",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isNeedHpAdded"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1027,7 +1027,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPIncrease",
                   "value": {
                     "operator": "Variables[0] (0.2) || Variables[1] (MDF_Rank04_Layer) || MUL || RETURN",
                     "displayLines": "(0.2 * MDF_Rank04_Layer)",
@@ -1036,7 +1035,8 @@ const compositeAbilityObject = {
                       0.2,
                       "MDF_Rank04_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPIncrease"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1113,7 +1113,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterLostHP2) || Variables[1] (0.25) || MUL || Variables[2] (CasterLostHP) || ADD || RETURN",
                     "displayLines": "((CasterLostHP2 * 0.25) + CasterLostHP)",
@@ -1123,7 +1122,8 @@ const compositeAbilityObject = {
                       0.25,
                       "CasterLostHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterLostHP"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -1894,8 +1894,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_MazeOverHalf",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_MazeOverHalf"
                         }
                       ]
                     },
@@ -1964,8 +1964,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_isAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "MwRen_isAttack"
         },
         {
           "name": "IF",
@@ -1993,7 +1993,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterHPPercentage",
               "value": {
                 "operator": "Variables[0] (1.3) || Variables[1] (0.5) || ADD || RETURN",
                 "displayLines": "(1.3 + 0.5)",
@@ -2002,13 +2001,13 @@ const compositeAbilityObject = {
                   1.3,
                   0.5
                 ]
-              }
+              },
+              "variableName": "CasterHPPercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterHPPercentage",
               "value": {
                 "operator": "Variables[0] (1.3) || RETURN",
                 "displayLines": "1.3",
@@ -2016,7 +2015,8 @@ const compositeAbilityObject = {
                 "variables": [
                   1.3
                 ]
-              }
+              },
+              "variableName": "CasterHPPercentage"
             }
           ]
         },
@@ -2201,8 +2201,8 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isAttack",
-              "value": 1
+              "value": 1,
+              "variableName": "MwRen_isAttack"
             },
             {
               "name": "Trigger Ability",
@@ -2260,13 +2260,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_isAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "MwRen_isAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_AttackStart",
-          "value": 0
+          "value": 0,
+          "variableName": "MwRen_AttackStart"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -2300,15 +2300,15 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MWRen_Qi_MaxLayer",
-              "value": 4
+              "value": 4,
+              "variableName": "MWRen_Qi_MaxLayer"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MWRen_Qi_MaxLayer",
-              "value": 5
+              "value": 5,
+              "variableName": "MWRen_Qi_MaxLayer"
             }
           ]
         },
@@ -2359,8 +2359,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isOverHalf",
-              "value": 1
+              "value": 1,
+              "variableName": "MwRen_isOverHalf"
             }
           ]
         }
@@ -2388,15 +2388,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isCharmAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_isCharmAttack"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_isAttack"
                     }
                   ]
                 }
@@ -2407,13 +2407,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isCharmAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isCharmAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isAttack"
                 }
               ]
             },
@@ -2422,13 +2422,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_AttackStart"
                 }
               ]
             },
@@ -2470,20 +2470,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_isAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MwRen_isAttack"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_AttackStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_AttackStart"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MwRen_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MwRen_isAttack"
                     }
                   ],
                   "failed": [
@@ -2512,8 +2512,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MwRen_isAttack",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MwRen_isAttack"
                             }
                           ]
                         }
@@ -2556,7 +2556,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CasterLostHP",
                       "value": {
                         "operator": "Variables[0] (CasterLostHP2) || INVERT || Variables[1] (CasterLostHP) || ADD || RETURN",
                         "displayLines": "(-CasterLostHP2 + CasterLostHP)",
@@ -2565,7 +2564,8 @@ const compositeAbilityObject = {
                           "CasterLostHP2",
                           "CasterLostHP"
                         ]
-                      }
+                      },
+                      "variableName": "CasterLostHP"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -2582,8 +2582,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_AttackStart",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MwRen_AttackStart"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2705,8 +2705,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_isOverHalf",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MwRen_isOverHalf"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2729,8 +2729,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MwRen_isOverHalf",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MwRen_isOverHalf"
                         }
                       ]
                     }
@@ -2752,8 +2752,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_AttackStart",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MwRen_AttackStart"
                 }
               ]
             },
@@ -2762,13 +2762,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_AttackStart"
                 }
               ]
             },
@@ -2778,8 +2778,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MwRen_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MwRen_isAttack"
                 },
                 {
                   "name": "IF",
@@ -3157,8 +3157,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageExtra_HPRatio",
-              "value": 0
+              "value": 0,
+              "variableName": "DamageExtra_HPRatio"
             }
           ]
         },
@@ -3208,7 +3208,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                 "displayLines": "(CasterMaxHP * 0.9)",
@@ -3217,13 +3216,13 @@ const compositeAbilityObject = {
                   "CasterMaxHP",
                   0.9
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterLostHP) || RETURN",
                 "displayLines": "CasterLostHP",
@@ -3231,7 +3230,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CasterLostHP"
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ]
         },
@@ -3380,7 +3380,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterFinalLostHP) || Constants[0] (1) || Variables[1] (0.5) || SUB || MUL || RETURN",
                     "displayLines": "(CasterFinalLostHP * (1 - 0.5))",
@@ -3391,11 +3390,11 @@ const compositeAbilityObject = {
                       "CasterFinalLostHP",
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "CasterLostHP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterFinalLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterFinalLostHP) || Constants[0] (1) || Variables[1] (0.5) || SUB || MUL || RETURN",
                     "displayLines": "(CasterFinalLostHP * (1 - 0.5))",
@@ -3406,7 +3405,8 @@ const compositeAbilityObject = {
                       "CasterFinalLostHP",
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "CasterFinalLostHP"
                 }
               ]
             },
@@ -3436,13 +3436,13 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterLostHP",
-              "value": 0
+              "value": 0,
+              "variableName": "CasterLostHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
-              "value": 0
+              "value": 0,
+              "variableName": "CasterFinalLostHP"
             },
             {
               "name": "Use Custom Character Function",
@@ -3706,7 +3706,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                 "displayLines": "(CasterMaxHP * 0.9)",
@@ -3715,13 +3714,13 @@ const compositeAbilityObject = {
                   "CasterMaxHP",
                   0.9
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterLostHP) || RETURN",
                 "displayLines": "CasterLostHP",
@@ -3729,7 +3728,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CasterLostHP"
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ]
         },
@@ -3834,7 +3834,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                 "displayLines": "(CasterMaxHP * 0.9)",
@@ -3843,13 +3842,13 @@ const compositeAbilityObject = {
                   "CasterMaxHP",
                   0.9
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterLostHP) || RETURN",
                 "displayLines": "CasterLostHP",
@@ -3857,7 +3856,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CasterLostHP"
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ]
         },
@@ -4182,7 +4182,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterLostHPPercentage",
                   "value": {
                     "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
                     "displayLines": "(CasterLostHP / CasterMaxHP)",
@@ -4191,7 +4190,8 @@ const compositeAbilityObject = {
                       "CasterLostHP",
                       "CasterMaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterLostHPPercentage"
                 }
               ]
             },
@@ -4214,7 +4214,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterFinalLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                     "displayLines": "(CasterMaxHP * 0.9)",
@@ -4223,13 +4222,13 @@ const compositeAbilityObject = {
                       "CasterMaxHP",
                       0.9
                     ]
-                  }
+                  },
+                  "variableName": "CasterFinalLostHP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterFinalLostHP",
                   "value": {
                     "operator": "Variables[0] (CasterLostHP) || RETURN",
                     "displayLines": "CasterLostHP",
@@ -4237,7 +4236,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CasterLostHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterFinalLostHP"
                 }
               ]
             },

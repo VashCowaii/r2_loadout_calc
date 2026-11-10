@@ -113,12 +113,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TP_DynamicValue_Origin_ActiveLevel",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "TP_DynamicValue_Origin_ActiveLevel"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TP_DynamicValue_Origin",
                       "value": {
                         "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0201) || RETURN",
                         "displayLines": "GP_Chess_Origin_MemberCount_0201",
@@ -126,7 +125,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "GP_Chess_Origin_MemberCount_0201"
                         ]
-                      }
+                      },
+                      "variableName": "TP_DynamicValue_Origin"
                     }
                   ],
                   "failed": [
@@ -152,12 +152,11 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TP_DynamicValue_Origin_ActiveLevel",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "TP_DynamicValue_Origin_ActiveLevel"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TP_DynamicValue_Origin",
                           "value": {
                             "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0107) || RETURN",
                             "displayLines": "GP_Chess_Origin_MemberCount_0107",
@@ -165,7 +164,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "GP_Chess_Origin_MemberCount_0107"
                             ]
-                          }
+                          },
+                          "variableName": "TP_DynamicValue_Origin"
                         }
                       ],
                       "failed": [
@@ -191,12 +191,11 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "TP_DynamicValue_Origin_ActiveLevel",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "TP_DynamicValue_Origin_ActiveLevel"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "TP_DynamicValue_Origin",
                               "value": {
                                 "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0106) || RETURN",
                                 "displayLines": "GP_Chess_Origin_MemberCount_0106",
@@ -204,7 +203,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "GP_Chess_Origin_MemberCount_0106"
                                 ]
-                              }
+                              },
+                              "variableName": "TP_DynamicValue_Origin"
                             }
                           ],
                           "failed": [
@@ -230,12 +230,11 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "TP_DynamicValue_Origin_ActiveLevel",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "TP_DynamicValue_Origin_ActiveLevel"
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "TP_DynamicValue_Origin",
                                   "value": {
                                     "operator": "Variables[0] (GP_Chess_Origin_MemberCount_0105) || RETURN",
                                     "displayLines": "GP_Chess_Origin_MemberCount_0105",
@@ -243,7 +242,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "GP_Chess_Origin_MemberCount_0105"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "TP_DynamicValue_Origin"
                                 }
                               ]
                             }

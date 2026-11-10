@@ -51,8 +51,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WeakCount",
-                  "value": 7
+                  "value": 7,
+                  "variableName": "_WeakCount"
                 }
               ]
             },

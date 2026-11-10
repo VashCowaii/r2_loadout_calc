@@ -833,8 +833,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isBeingAttacked",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isBeingAttacked"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -862,7 +862,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentCharge",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
                         "displayLines": "MDF_CurrentCharge",
@@ -870,7 +869,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_CurrentCharge"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentCharge"
                     },
                     {
                       "name": "SWITCH",
@@ -1032,8 +1032,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 5
+                          "value": 5,
+                          "variableName": "AIFlag"
                         },
                         {
                           "name": "IF",
@@ -1280,8 +1280,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_isBeingAttackedSpecial",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_isBeingAttackedSpecial"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1365,8 +1365,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 6
+                          "value": 6,
+                          "variableName": "AIFlag"
                         },
                         {
                           "name": "IF",
@@ -1429,8 +1429,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentChargeValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CurrentChargeValue"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -1624,13 +1624,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingAttacked",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isBeingAttacked"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingAttackedSpecial",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isBeingAttackedSpecial"
                 }
               ]
             },

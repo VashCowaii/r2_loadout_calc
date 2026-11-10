@@ -42,7 +42,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentHPRatio",
               "value": {
                 "operator": "Variables[0] (_CurrentHP) || Variables[1] (_MaxHP) || DIV || RETURN",
                 "displayLines": "(_CurrentHP / _MaxHP)",
@@ -51,7 +50,8 @@ const configAbility = {
                   "_CurrentHP",
                   "_MaxHP"
                 ]
-              }
+              },
+              "variableName": "_CurrentHPRatio"
             },
             {
               "name": "IF",

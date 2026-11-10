@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "AIFlag"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -115,8 +115,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck"
     }
   ],
   "targetObjectData": {

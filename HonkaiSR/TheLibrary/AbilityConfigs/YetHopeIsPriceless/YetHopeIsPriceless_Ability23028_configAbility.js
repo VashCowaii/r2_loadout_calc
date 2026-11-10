@@ -61,8 +61,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "_Layer"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -92,7 +92,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CasteCriticalDamage",
                   "value": {
                     "operator": "Variables[0] (_CasteCriticalDamage) || Variables[1] (1.2) || SUB || RETURN",
                     "displayLines": "(_CasteCriticalDamage - 1.2)",
@@ -101,7 +100,8 @@ const configAbility = {
                       "_CasteCriticalDamage",
                       1.2
                     ]
-                  }
+                  },
+                  "variableName": "_CasteCriticalDamage"
                 },
                 {
                   "name": "Looped Event",
@@ -132,7 +132,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_CasteCriticalDamage",
                           "value": {
                             "operator": "Variables[0] (_CasteCriticalDamage) || Variables[1] (0.2) || SUB || RETURN",
                             "displayLines": "(_CasteCriticalDamage - 0.2)",
@@ -141,11 +140,11 @@ const configAbility = {
                               "_CasteCriticalDamage",
                               0.2
                             ]
-                          }
+                          },
+                          "variableName": "_CasteCriticalDamage"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Layer",
                           "value": {
                             "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_Layer + 1)",
@@ -155,7 +154,8 @@ const configAbility = {
                             "variables": [
                               "_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "_Layer"
                         }
                       ]
                     }

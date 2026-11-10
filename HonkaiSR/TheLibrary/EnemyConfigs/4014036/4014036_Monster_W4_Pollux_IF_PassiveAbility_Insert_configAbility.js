@@ -116,8 +116,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_EnergyValue",
-      "value": 0
+      "value": 0,
+      "variableName": "_EnergyValue"
     },
     {
       "name": "Update Displayed Energy Bar",

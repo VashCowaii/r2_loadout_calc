@@ -247,8 +247,8 @@ const configAbility = {
                           "noTargetFound": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "OnInsertAbort_Flg",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "OnInsertAbort_Flg"
                             }
                           ]
                         }
@@ -356,8 +356,8 @@ const configAbility = {
                           "noTargetFound": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "OnInsertAbort_Flg",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "OnInsertAbort_Flg"
                             }
                           ]
                         }
@@ -378,8 +378,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TurnEndSwitch_Blocking",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_TurnEndSwitch_Blocking"
                     }
                   ]
                 },
@@ -435,8 +435,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TurnEndSwitch_Blocking",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TurnEndSwitch_Blocking"
             },
             {
               "name": "Change Entity Turn-State",
@@ -1133,8 +1133,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsHitBack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsHitBack"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -1155,12 +1155,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IsHitBack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_IsHitBack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalDamage",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1168,7 +1167,8 @@ const configAbility = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalDamage"
             }
           ]
         },
@@ -1335,7 +1335,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyRatio",
               "value": {
                 "operator": "Variables[0] (1.2) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(1.2 * MDF_Layer)",
@@ -1344,7 +1343,8 @@ const configAbility = {
                   1.2,
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyRatio"
             },
             {
               "name": "Stack Target Stat Value",

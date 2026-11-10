@@ -828,7 +828,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Limbo_Count",
                           "value": {
                             "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Limbo_Count + 1)",
@@ -838,7 +837,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Limbo_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Limbo_Count"
                         }
                       ]
                     }
@@ -925,7 +925,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Limbo_Count",
                               "value": {
                                 "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(Limbo_Count + 1)",
@@ -935,7 +934,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Limbo_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "Limbo_Count"
                             }
                           ]
                         }
@@ -1223,8 +1223,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Passive_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Passive_Count"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1367,8 +1367,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SkillUseDubuff",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_SkillUseDubuff"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1495,15 +1495,15 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnterBattleFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnterBattleFlag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnterBattleFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnterBattleFlag"
                     }
                   ]
                 }
@@ -1584,12 +1584,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -1599,7 +1598,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -1626,8 +1626,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -1645,8 +1645,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -1709,12 +1709,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -1724,7 +1723,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -1751,8 +1751,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -1770,8 +1770,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -1857,12 +1857,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -1872,7 +1871,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -1899,8 +1899,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -1918,8 +1918,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -1982,12 +1982,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -1997,7 +1996,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -2024,8 +2024,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -2043,8 +2043,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -2339,12 +2339,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -2354,7 +2353,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -2381,8 +2381,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -2400,8 +2400,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -2464,12 +2464,11 @@ const compositeAbilityObject = {
               "onKill": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Acheron_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
                   "value": {
                     "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -2479,7 +2478,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Scoring_KillCount_4083009"
                     ]
-                  }
+                  },
+                  "variableName": "Scoring_KillCount_4083009"
                 },
                 {
                   "name": "IF",
@@ -2506,8 +2506,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_KillCount_4083009",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Scoring_KillCount_4083009"
                     }
                   ]
                 }
@@ -2525,8 +2525,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_Count"
                 }
               ]
             }
@@ -3192,13 +3192,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseDubuff",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseDubuff"
                     }
                   ]
                 }
@@ -3229,13 +3229,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseDubuff",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseDubuff"
                     }
                   ]
                 }
@@ -3263,7 +3263,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Acheron_PointB2_Count",
                       "value": {
                         "operator": "Variables[0] (Acheron_BaseTypeCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Acheron_BaseTypeCount - 1)",
@@ -3273,7 +3272,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Acheron_BaseTypeCount"
                         ]
-                      }
+                      },
+                      "variableName": "Acheron_PointB2_Count"
                     },
                     {
                       "name": "IF",
@@ -3293,7 +3293,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Acheron_PointB2_Count",
                               "value": {
                                 "operator": "Variables[0] (Acheron_PointB2_Count) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(Acheron_PointB2_Count + 1)",
@@ -3303,7 +3302,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Acheron_PointB2_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "Acheron_PointB2_Count"
                             }
                           ]
                         }
@@ -3320,7 +3320,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB2_DamageRatio",
                           "value": {
                             "operator": "Variables[0] (1.6) || RETURN",
                             "displayLines": "1.6",
@@ -3328,7 +3327,8 @@ const compositeAbilityObject = {
                             "variables": [
                               1.6
                             ]
-                          }
+                          },
+                          "variableName": "Acheron_PointB2_DamageRatio"
                         }
                       ],
                       "failed": [
@@ -3343,7 +3343,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Acheron_PointB2_DamageRatio",
                               "value": {
                                 "operator": "Variables[0] (1.15) || RETURN",
                                 "displayLines": "1.15",
@@ -3351,14 +3350,15 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1.15
                                 ]
-                              }
+                              },
+                              "variableName": "Acheron_PointB2_DamageRatio"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Acheron_PointB2_DamageRatio",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Acheron_PointB2_DamageRatio"
                             }
                           ]
                         }
@@ -3571,8 +3571,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseDubuff",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SkillUseDubuff"
                     }
                   ]
                 }
@@ -3635,8 +3635,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SkillUseFlag",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_SkillUseFlag"
                             },
                             {
                               "name": "Compare: Variable",
@@ -3675,8 +3675,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OnEnterBattleFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "OnEnterBattleFlag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3697,8 +3697,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OnEnterBattleFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "OnEnterBattleFlag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3727,8 +3727,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SkillUseFlag"
                     },
                     {
                       "name": "IF",
@@ -3771,8 +3771,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "OnCharacterCreateFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "OnCharacterCreateFlag"
                         }
                       ]
                     }
@@ -3795,8 +3795,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SkillUseFlag"
                     },
                     {
                       "name": "IF",
@@ -3897,8 +3897,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OnCharacterCreateFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "OnCharacterCreateFlag"
                     },
                     {
                       "name": "IF",
@@ -3945,13 +3945,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseDubuff",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SkillUseDubuff"
                     },
                     {
                       "name": "IF",
@@ -4022,7 +4022,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Acheron_FlowerCountBySp",
                       "value": {
                         "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                         "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)",
@@ -4031,7 +4030,8 @@ const compositeAbilityObject = {
                           "Acheron_FlowerCountBySp",
                           "Acheron_ChangeValue"
                         ]
-                      }
+                      },
+                      "variableName": "Acheron_FlowerCountBySp"
                     },
                     {
                       "name": "IF",
@@ -4051,7 +4051,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_FlowerCountBySp",
                           "value": {
                             "operator": "Variables[0] (9) || RETURN",
                             "displayLines": "9",
@@ -4059,7 +4058,8 @@ const compositeAbilityObject = {
                             "variables": [
                               9
                             ]
-                          }
+                          },
+                          "variableName": "Acheron_FlowerCountBySp"
                         }
                       ]
                     }
@@ -4067,8 +4067,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Acheron_ChangeValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Acheron_ChangeValue"
                     }
                   ]
                 },
@@ -4122,7 +4122,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Passive_Count",
                               "value": {
                                 "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                                 "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
@@ -4131,7 +4130,8 @@ const compositeAbilityObject = {
                                   "MDF_Passive_Count",
                                   "Acheron_ChangeValue"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Passive_Count"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -4141,7 +4141,6 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Passive_Count",
                               "value": {
                                 "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                                 "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
@@ -4150,7 +4149,8 @@ const compositeAbilityObject = {
                                   "MDF_Passive_Count",
                                   "Acheron_ChangeValue"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Passive_Count"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -4245,8 +4245,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_ChangeValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_ChangeValue"
                 }
               ]
             }
@@ -4337,8 +4337,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Acheron_PointB1_ClampedAdd",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Acheron_PointB1_ClampedAdd"
                             }
                           ]
                         }
@@ -4616,13 +4616,13 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "UltraFlagCount",
-          "value": 0
+          "value": 0,
+          "variableName": "UltraFlagCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TargetEntity_CurrentFlagCount",
-          "value": 0
+          "value": 0,
+          "variableName": "TargetEntity_CurrentFlagCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4634,18 +4634,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TargetEntity_UltraFlagCount",
-          "value": 0
+          "value": 0,
+          "variableName": "TargetEntity_UltraFlagCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TargetEntity_LoopFlagCount",
-          "value": 0
+          "value": 0,
+          "variableName": "TargetEntity_LoopFlagCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Limbo_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Limbo_Count"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5920,8 +5920,8 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_CurrentCountFlag01",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_CurrentCountFlag01"
                         },
                         {
                           "name": "Define Custom Variable with Modifier Values",
@@ -5935,7 +5935,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill02_FlowerTotalCount",
                           "value": {
                             "operator": "Variables[0] (Skill02_FlowerTotalCount) || Variables[1] (MDF_CurrentCountFlag01) || ADD || RETURN",
                             "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)",
@@ -5944,7 +5943,8 @@ const compositeAbilityObject = {
                               "Skill02_FlowerTotalCount",
                               "MDF_CurrentCountFlag01"
                             ]
-                          }
+                          },
+                          "variableName": "Skill02_FlowerTotalCount"
                         }
                       ]
                     },
@@ -5972,13 +5972,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_FlowerTotalCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Skill02_FlowerTotalCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentCountFlag01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentCountFlag01"
                     }
                   ]
                 }
@@ -6886,7 +6886,6 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp_Snapshot",
               "value": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
                 "displayLines": "Acheron_FlowerCountBySp",
@@ -6894,7 +6893,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Acheron_FlowerCountBySp"
                 ]
-              }
+              },
+              "variableName": "Acheron_FlowerCountBySp_Snapshot"
             },
             {
               "name": "IF",
@@ -6909,8 +6909,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountFlag01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CurrentCountFlag01"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -6924,7 +6924,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountFlag01",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
@@ -6933,7 +6932,8 @@ const compositeAbilityObject = {
                       "MDF_CurrentCountFlag01",
                       "Acheron_FlowerCountBySp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCountFlag01"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -7009,7 +7009,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp",
               "value": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
                 "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -7018,7 +7017,8 @@ const compositeAbilityObject = {
                   "Acheron_FlowerCountBySp",
                   "Acheron_FlowerCountBySp_Snapshot"
                 ]
-              }
+              },
+              "variableName": "Acheron_FlowerCountBySp"
             }
           ]
         },
@@ -7028,7 +7028,6 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp_Snapshot",
               "value": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
                 "displayLines": "Acheron_FlowerCountBySp",
@@ -7036,7 +7035,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Acheron_FlowerCountBySp"
                 ]
-              }
+              },
+              "variableName": "Acheron_FlowerCountBySp_Snapshot"
             },
             {
               "name": "IF",
@@ -7051,8 +7051,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountFlag01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CurrentCountFlag01"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -7066,7 +7066,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountFlag01",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
@@ -7075,7 +7074,8 @@ const compositeAbilityObject = {
                       "MDF_CurrentCountFlag01",
                       "Acheron_FlowerCountBySp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCountFlag01"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -7113,7 +7113,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_FlowerCountBySp",
                   "value": {
                     "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
                     "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -7122,7 +7121,8 @@ const compositeAbilityObject = {
                       "Acheron_FlowerCountBySp",
                       "Acheron_FlowerCountBySp_Snapshot"
                     ]
-                  }
+                  },
+                  "variableName": "Acheron_FlowerCountBySp"
                 }
               ],
               "failed": [
@@ -7162,7 +7162,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_FlowerCountBySp",
                   "value": {
                     "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
                     "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -7171,7 +7170,8 @@ const compositeAbilityObject = {
                       "Acheron_FlowerCountBySp",
                       "Acheron_FlowerCountBySp_Snapshot"
                     ]
-                  }
+                  },
+                  "variableName": "Acheron_FlowerCountBySp"
                 }
               ]
             }
@@ -7206,7 +7206,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_Count",
                   "value": {
                     "operator": "Variables[0] (Limbo_Count) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                     "displayLines": "(Limbo_Count + Acheron_FlowerCountBySp)",
@@ -7215,12 +7214,13 @@ const compositeAbilityObject = {
                       "Limbo_Count",
                       "Acheron_FlowerCountBySp"
                     ]
-                  }
+                  },
+                  "variableName": "Limbo_Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_FlowerCountBySp",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_FlowerCountBySp"
                 }
               ]
             },
@@ -7255,8 +7255,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Acheron_FlagCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Acheron_FlagCount"
                         },
                         {
                           "name": "Define Custom Variable with Modifier Values",
@@ -7270,7 +7270,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Acheron_FlagCount",
                           "value": {
                             "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_Count) || ADD || RETURN",
                             "displayLines": "(MDF_Acheron_FlagCount + Limbo_Count)",
@@ -7279,7 +7278,8 @@ const compositeAbilityObject = {
                               "MDF_Acheron_FlagCount",
                               "Limbo_Count"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Acheron_FlagCount"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -7355,8 +7355,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Limbo_Count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Limbo_Count"
                     }
                   ]
                 }
@@ -7451,7 +7451,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetEntity_UltraFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
                     "displayLines": "TargetEntity_CurrentFlagCount",
@@ -7459,11 +7458,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "TargetEntity_CurrentFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "TargetEntity_UltraFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetEntity_UltraFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_UltraFlagCount) || Constants[0] (3) || SUB || RETURN",
                     "displayLines": "(TargetEntity_UltraFlagCount - 3)",
@@ -7473,7 +7472,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "TargetEntity_UltraFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "TargetEntity_UltraFlagCount"
                 },
                 {
                   "name": "IF",
@@ -7486,12 +7486,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TargetEntity_LoopFlagCount",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "TargetEntity_LoopFlagCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UltraFlagCount",
                       "value": {
                         "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
                         "displayLines": "(TargetEntity_LoopFlagCount + 3)",
@@ -7501,7 +7500,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TargetEntity_LoopFlagCount"
                         ]
-                      }
+                      },
+                      "variableName": "UltraFlagCount"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -7515,12 +7515,11 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TargetEntity_LoopFlagCount",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "TargetEntity_LoopFlagCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "UltraFlagCount",
                       "value": {
                         "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
                         "displayLines": "(TargetEntity_LoopFlagCount + 3)",
@@ -7530,7 +7529,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TargetEntity_LoopFlagCount"
                         ]
-                      }
+                      },
+                      "variableName": "UltraFlagCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -7572,7 +7572,6 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetEntity_LoopFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
                     "displayLines": "TargetEntity_CurrentFlagCount",
@@ -7580,11 +7579,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "TargetEntity_CurrentFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "TargetEntity_LoopFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UltraFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Variables[1] (TargetEntity_CurrentFlagCount) || ADD || RETURN",
                     "displayLines": "(TargetEntity_LoopFlagCount + TargetEntity_CurrentFlagCount)",
@@ -7593,7 +7592,8 @@ const compositeAbilityObject = {
                       "TargetEntity_LoopFlagCount",
                       "TargetEntity_CurrentFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "UltraFlagCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -7730,7 +7730,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_FlowerTotalCount",
                   "value": {
                     "operator": "Variables[0] (Limbo_FlowerTotalCount) || Variables[1] (Limbo_FlowerCurrentCount) || ADD || RETURN",
                     "displayLines": "(Limbo_FlowerTotalCount + Limbo_FlowerCurrentCount)",
@@ -7739,12 +7738,13 @@ const compositeAbilityObject = {
                       "Limbo_FlowerTotalCount",
                       "Limbo_FlowerCurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "Limbo_FlowerTotalCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_FlowerCurrentCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Limbo_FlowerCurrentCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -7845,8 +7845,8 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_FlowerTotalCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Limbo_FlowerTotalCount"
                 }
               ]
             }
@@ -7869,8 +7869,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_FlowerTotalCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Limbo_FlowerTotalCount"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -7884,7 +7884,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Acheron_FlagCount",
                   "value": {
                     "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_FlowerCount) || ADD || RETURN",
                     "displayLines": "(MDF_Acheron_FlagCount + Limbo_FlowerCount)",
@@ -7893,7 +7892,8 @@ const compositeAbilityObject = {
                       "MDF_Acheron_FlagCount",
                       "Limbo_FlowerCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Acheron_FlagCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -7933,8 +7933,8 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_FlowerTotalCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Limbo_FlowerTotalCount"
                 },
                 {
                   "name": "Add Events/Bonuses",

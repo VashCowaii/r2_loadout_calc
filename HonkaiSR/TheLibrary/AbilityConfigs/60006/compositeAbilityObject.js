@@ -194,8 +194,8 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MissionOrWeekly",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MissionOrWeekly"
                     }
                   ]
                 }
@@ -381,8 +381,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MissionOrWeekly",
-              "value": 3
+              "value": 3,
+              "variableName": "MissionOrWeekly"
             },
             "Trigger: Ability End"
           ],

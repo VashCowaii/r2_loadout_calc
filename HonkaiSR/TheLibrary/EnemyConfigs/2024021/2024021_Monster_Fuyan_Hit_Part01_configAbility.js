@@ -23,7 +23,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_HPDamageRatioValue",
       "value": {
         "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
         "displayLines": "((1 / MonsterCount) + 0.000010000076)",
@@ -34,7 +33,8 @@ const configAbility = {
         "variables": [
           "MonsterCount"
         ]
-      }
+      },
+      "variableName": "ADF_HPDamageRatioValue"
     },
     {
       "name": "Looped Event",
@@ -145,8 +145,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "DeathCount",
-      "value": 0
+      "value": 0,
+      "variableName": "DeathCount"
     }
   ],
   "targetObjectData": {

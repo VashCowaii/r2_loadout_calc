@@ -676,7 +676,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_ExtraUltraAttack",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "(EnergyBar_ExtraUltraAttack + 2)",
@@ -685,7 +684,8 @@ const compositeAbilityObject = {
                           "EnergyBar_ExtraUltraAttack",
                           2
                         ]
-                      }
+                      },
+                      "variableName": "EnergyBar_ExtraUltraAttack"
                     }
                   ]
                 }
@@ -725,7 +725,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_BasicUltraAttack",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -733,11 +732,11 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "EnergyBar_BasicUltraAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_MaxUltraAttack",
           "value": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -745,12 +744,13 @@ const compositeAbilityObject = {
             "variables": [
               10
             ]
-          }
+          },
+          "variableName": "EnergyBar_MaxUltraAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ExtraUltraAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "EnergyBar_ExtraUltraAttack"
         },
         {
           "name": "Add Events/Bonuses",
@@ -812,7 +812,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || Variables[1] (0.06) || ADD || RETURN",
                 "displayLines": "(0.6 + 0.06)",
@@ -821,13 +820,13 @@ const compositeAbilityObject = {
                   0.6,
                   0.06
                 ]
-              }
+              },
+              "variableName": "Skill03_DamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
                 "displayLines": "0.6",
@@ -835,7 +834,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.6
                 ]
-              }
+              },
+              "variableName": "Skill03_DamagePercentage"
             }
           ]
         }
@@ -917,7 +917,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BPAddValue",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
                         "displayLines": "-_BPAddValue",
@@ -926,7 +926,7 @@ const compositeAbilityObject = {
                           "_BPAddValue"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "_BPAddValue"
                     },
                     {
                       "name": "Looped Event",
@@ -959,7 +959,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_ExtraUltraAttack",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (_BPAddValue) || Variables[2] (1) || MUL || ADD || RETURN",
                         "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))",
@@ -969,7 +968,8 @@ const compositeAbilityObject = {
                           "_BPAddValue",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "EnergyBar_ExtraUltraAttack"
                     }
                   ]
                 }
@@ -1131,8 +1131,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_current_hit_count",
-          "value": 0
+          "value": 0,
+          "variableName": "_current_hit_count"
         },
         {
           "name": "IF",
@@ -1153,7 +1153,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_Hit_Count",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (1) || Variables[2] (Skill03_Hit_Count) || MUL || Variables[3] (5) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((1 * Skill03_Hit_Count), 5)",
@@ -1164,20 +1163,20 @@ const compositeAbilityObject = {
                   "Skill03_Hit_Count",
                   5
                 ]
-              }
+              },
+              "variableName": "Skill03_Hit_Count"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_Hit_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Skill03_Hit_Count"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_Hit_Count",
           "value": {
             "operator": "Variables[0] (Skill03_Hit_Count) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || Variables[2] (EnergyBar_ExtraUltraAttack) || ADD || RETURN",
             "displayLines": "((Skill03_Hit_Count + EnergyBar_BasicUltraAttack) + EnergyBar_ExtraUltraAttack)",
@@ -1187,11 +1186,11 @@ const compositeAbilityObject = {
               "EnergyBar_BasicUltraAttack",
               "EnergyBar_ExtraUltraAttack"
             ]
-          }
+          },
+          "variableName": "Skill03_Hit_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_delta_ntime",
           "value": {
             "operator": "Variables[0] (MISHA_OBJECT_UNUSED_2) || Variables[1] (MISHA_OBJECT_UNUSED_1) || SUB || Variables[2] (MAX) || Constants[0] (1) || Variables[3] (Skill03_Hit_Count) || Constants[1] (2) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
             "displayLines": "((MISHA_OBJECT_UNUSED_2 - MISHA_OBJECT_UNUSED_1) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (Skill03_Hit_Count - 2)))",
@@ -1205,7 +1204,8 @@ const compositeAbilityObject = {
               "MAX",
               "Skill03_Hit_Count"
             ]
-          }
+          },
+          "variableName": "_delta_ntime"
         },
         {
           "name": "IF",
@@ -1288,7 +1288,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_current_hit_count",
               "value": {
                 "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_current_hit_count + 1)",
@@ -1298,7 +1297,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_current_hit_count"
                 ]
-              }
+              },
+              "variableName": "_current_hit_count"
             },
             {
               "name": "Use Custom Character Function",
@@ -1329,7 +1329,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_current_hit_count",
           "value": {
             "operator": "Variables[0] (_current_hit_count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_current_hit_count + 1)",
@@ -1339,7 +1338,8 @@ const compositeAbilityObject = {
             "variables": [
               "_current_hit_count"
             ]
-          }
+          },
+          "variableName": "_current_hit_count"
         },
         {
           "name": "Use Custom Character Function",
@@ -1379,8 +1379,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ExtraUltraAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "EnergyBar_ExtraUltraAttack"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1645,7 +1645,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ExtraUltraAttack",
           "value": {
             "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(EnergyBar_ExtraUltraAttack + 1)",
@@ -1654,7 +1653,8 @@ const compositeAbilityObject = {
               "EnergyBar_ExtraUltraAttack",
               1
             ]
-          }
+          },
+          "variableName": "EnergyBar_ExtraUltraAttack"
         },
         {
           "name": "ATK Scaling DMG",

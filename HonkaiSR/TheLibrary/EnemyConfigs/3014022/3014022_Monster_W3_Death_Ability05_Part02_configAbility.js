@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "BonusAttackCounter",
       "value": {
         "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(BonusAttackCounter + 1)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           "BonusAttackCounter"
         ]
-      }
+      },
+      "variableName": "BonusAttackCounter"
     },
     {
       "name": "Add Events/Bonuses",

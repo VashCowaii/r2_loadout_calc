@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_AbilityEnd",
-      "value": 1
+      "value": 1,
+      "variableName": "DV_AbilityEnd"
     }
   ],
   "references": [],

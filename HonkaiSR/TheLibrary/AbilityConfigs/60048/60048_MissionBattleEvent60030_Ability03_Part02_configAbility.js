@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_ViewMode",
-      "value": 0
+      "value": 0,
+      "variableName": "#CL_ViewMode"
     },
     {
       "name": "IF",
@@ -130,8 +130,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_FirstBE",
-          "value": 0
+          "value": 0,
+          "variableName": "_FirstBE"
         }
       ]
     },

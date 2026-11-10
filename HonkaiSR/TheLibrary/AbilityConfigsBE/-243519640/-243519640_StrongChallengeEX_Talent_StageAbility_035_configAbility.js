@@ -51,8 +51,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "PermissionFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "PermissionFlag"
             }
           ]
         },
@@ -128,8 +128,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PermissionFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "PermissionFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -153,8 +153,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PermissionFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "PermissionFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -193,8 +193,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PermissionFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "PermissionFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",

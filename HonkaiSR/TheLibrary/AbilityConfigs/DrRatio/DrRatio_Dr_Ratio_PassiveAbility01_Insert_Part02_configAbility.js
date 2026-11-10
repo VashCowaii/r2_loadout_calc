@@ -15,7 +15,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_00_EnergyBar",
           "value": {
             "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)",
@@ -25,7 +24,8 @@ const configAbility = {
             "variables": [
               "_Dr_Ratio_00_EnergyBar"
             ]
-          }
+          },
+          "variableName": "_Dr_Ratio_00_EnergyBar"
         },
         {
           "name": "IF",
@@ -38,8 +38,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_00_EnergyBar",
-              "value": 0
+              "value": 0,
+              "variableName": "_Dr_Ratio_00_EnergyBar"
             }
           ]
         },
@@ -90,8 +90,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
         }
       ]
     },
@@ -124,8 +124,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Dr_RatioAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "_Dr_RatioAttack"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -239,7 +239,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DebuffCount",
               "value": {
                 "operator": "Variables[0] (4) || RETURN",
                 "displayLines": "4",
@@ -247,7 +246,8 @@ const configAbility = {
                 "variables": [
                   4
                 ]
-              }
+              },
+              "variableName": "_DebuffCount"
             }
           ]
         },
@@ -291,8 +291,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "_DebuffCount",
-      "value": 0
+      "value": 0,
+      "variableName": "_DebuffCount"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -312,8 +312,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 1
+      "value": 1,
+      "variableName": "OnInsertAbort_Flg"
     }
   ],
   "references": [],

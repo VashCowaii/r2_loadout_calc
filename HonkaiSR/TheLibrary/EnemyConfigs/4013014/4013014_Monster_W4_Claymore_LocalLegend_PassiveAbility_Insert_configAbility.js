@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "FirstRound",
-      "value": 1
+      "value": 1,
+      "variableName": "FirstRound"
     },
     {
       "name": "Force Entity Death",

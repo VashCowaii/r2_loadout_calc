@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_insertCheck_",
-      "value": 0
+      "value": 0,
+      "variableName": "_insertCheck_"
     },
     {
       "name": "Update Displayed Energy Bar",

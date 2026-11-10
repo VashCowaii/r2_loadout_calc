@@ -832,7 +832,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -842,7 +841,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -935,7 +935,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IceTakenRatio",
                   "value": {
                     "operator": "Variables[0] (IceTakenRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)",
@@ -944,7 +943,8 @@ const compositeAbilityObject = {
                       "IceTakenRatioPerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_IceTakenRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -987,7 +987,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (AllDamageTypeAddedRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)",
@@ -996,7 +995,8 @@ const compositeAbilityObject = {
                       "AllDamageTypeAddedRatioPerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1242,8 +1242,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 101
+                      "value": 101,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "IF",
@@ -1398,8 +1398,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "W2_Yanqing_00_SwordStep",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "W2_Yanqing_00_SwordStep"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -1758,7 +1758,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(CurrentWeakPoint + 1)",
@@ -1769,7 +1769,7 @@ const compositeAbilityObject = {
                           "CurrentWeakPoint"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     },
                     {
                       "name": "IF",
@@ -1791,9 +1791,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "CurrentWeakPoint",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "CurrentWeakPoint"
                         }
                       ]
                     },
@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(CurrentWeakPoint + 1)",
@@ -2022,7 +2022,7 @@ const compositeAbilityObject = {
                           "CurrentWeakPoint"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     },
                     {
                       "name": "IF",
@@ -2044,9 +2044,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "CurrentWeakPoint",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "CurrentWeakPoint"
                         }
                       ]
                     },
@@ -2191,7 +2191,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(CurrentWeakPoint + 1)",
@@ -2202,7 +2202,7 @@ const compositeAbilityObject = {
                           "CurrentWeakPoint"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     },
                     {
                       "name": "IF",
@@ -2224,9 +2224,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "CurrentWeakPoint",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "CurrentWeakPoint"
                         }
                       ]
                     },
@@ -2739,9 +2739,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChangeWeakPointFlag",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "ChangeWeakPointFlag"
                 },
                 {
                   "name": "IF",
@@ -2763,8 +2763,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "W2_Yanqing_00_SwordStep",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "W2_Yanqing_00_SwordStep"
                     },
                     {
                       "name": "Find New Target",
@@ -2895,9 +2895,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ChangeWeakPointFlag",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "ChangeWeakPointFlag"
                     },
                     {
                       "name": "Clear Weaknesses",
@@ -3653,9 +3653,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChangeWeakPointFlag",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "ChangeWeakPointFlag"
                 },
                 {
                   "name": "IF",
@@ -3677,8 +3677,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "W2_Yanqing_00_SwordStep",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "W2_Yanqing_00_SwordStep"
                     },
                     {
                       "name": "Find New Target",
@@ -3825,9 +3825,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ChangeWeakPointFlag",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "ChangeWeakPointFlag"
                     },
                     {
                       "name": "Clear Weaknesses",
@@ -5064,9 +5064,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 3,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -5146,9 +5146,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -5235,9 +5235,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -6570,7 +6570,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -6580,7 +6579,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -6747,7 +6747,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -6757,7 +6756,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -7105,17 +7105,17 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterPhase",
+                  "scope": "ContextAbility",
                   "value": 1,
-                  "scope": "ContextAbility"
+                  "variableName": "MonsterPhase"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterPhase",
+                  "scope": "ContextAbility",
                   "value": 2,
-                  "scope": "ContextAbility"
+                  "variableName": "MonsterPhase"
                 }
               ]
             }
@@ -8224,8 +8224,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W2_Yanqing_00_SwordStep",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "W2_Yanqing_00_SwordStep"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8233,8 +8233,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -8282,8 +8282,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W2_Yanqing_00_SwordStep",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W2_Yanqing_00_SwordStep"
                 }
               ]
             },
@@ -8424,7 +8424,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -8434,7 +8433,8 @@ const compositeAbilityObject = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -8460,7 +8460,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -8470,7 +8469,8 @@ const compositeAbilityObject = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -8496,7 +8496,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -8506,7 +8505,8 @@ const compositeAbilityObject = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -9550,8 +9550,8 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_SwordStep",
-          "value": 1
+          "value": 1,
+          "variableName": "W2_Yanqing_00_SwordStep"
         },
         {
           "name": "WAIT FOR",
@@ -9726,9 +9726,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SwordNumber",
+              "scope": "ContextAbility",
               "value": 1,
-              "scope": "ContextAbility"
+              "variableName": "SwordNumber"
             },
             {
               "name": "Create Enemies",

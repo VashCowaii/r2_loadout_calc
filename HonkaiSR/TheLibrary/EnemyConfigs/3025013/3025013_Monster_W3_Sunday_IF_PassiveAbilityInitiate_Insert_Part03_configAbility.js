@@ -122,8 +122,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "W3_Sunday_00_StanceCountDown_Counter",
-      "value": 0
+      "value": 0,
+      "variableName": "W3_Sunday_00_StanceCountDown_Counter"
     },
     {
       "name": "Define Custom Variable",
@@ -131,8 +131,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "W3_Sunday_00_StanceCountDown_Flag"
     }
   ],
   "targetObjectData": {

@@ -772,7 +772,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08_BonusCount",
           "value": {
             "operator": "Variables[0] (MinionCount) || RETURN",
             "displayLines": "MinionCount",
@@ -780,7 +779,8 @@ const compositeAbilityObject = {
             "variables": [
               "MinionCount"
             ]
-          }
+          },
+          "variableName": "Skill08_BonusCount"
         },
         {
           "name": "ATK Scaling DMG",

@@ -161,8 +161,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Unlock_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Unlock_Flag"
                 },
                 {
                   "name": "IF",
@@ -516,8 +516,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Unlock_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Unlock_Flag"
             }
           ]
         },

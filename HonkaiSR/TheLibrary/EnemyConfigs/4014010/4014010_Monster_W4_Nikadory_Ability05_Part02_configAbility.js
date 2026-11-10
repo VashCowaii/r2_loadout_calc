@@ -512,8 +512,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Tutorial_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Tutorial_Flag"
         },
         {
           "name": "Remove Events/Bonuses",

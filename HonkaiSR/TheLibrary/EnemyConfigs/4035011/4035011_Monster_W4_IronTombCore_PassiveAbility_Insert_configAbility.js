@@ -51,7 +51,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_WorldErosion",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
             "displayLines": "({[PassiveSkill01[0]]} * 100)",
@@ -61,7 +60,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[0]]}"
             ]
-          }
+          },
+          "variableName": "_WorldErosion"
         }
       ]
     },
@@ -185,8 +185,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
-      "value": 1
+      "value": 1,
+      "variableName": "InsertCheck"
     },
     {
       "name": "Declare Custom Variable",
@@ -321,8 +321,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ChangePhaseEnd",
-          "value": 1
+          "value": 1,
+          "variableName": "_ChangePhaseEnd"
         },
         {
           "name": "Add Events/Bonuses",

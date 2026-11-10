@@ -15,7 +15,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_SurgePointShow",
           "value": {
             "operator": "Variables[0] (DV_SurgePoint) || RETURN",
             "displayLines": "DV_SurgePoint",
@@ -23,7 +22,8 @@ const configAbility = {
             "variables": [
               "DV_SurgePoint"
             ]
-          }
+          },
+          "variableName": "DV_SurgePointShow"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -246,7 +246,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Avatar_Gilgamesh_00_KingCount",
           "value": {
             "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (KingCountAdd) || ADD || RETURN",
             "displayLines": "(Avatar_Gilgamesh_00_KingCount + KingCountAdd)",
@@ -255,7 +254,8 @@ const configAbility = {
               "Avatar_Gilgamesh_00_KingCount",
               "KingCountAdd"
             ]
-          }
+          },
+          "variableName": "Avatar_Gilgamesh_00_KingCount"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -313,13 +313,13 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Avatar_Gilgamesh_00_IsFirstTime",
-              "value": 1
+              "value": 1,
+              "variableName": "Avatar_Gilgamesh_00_IsFirstTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Avatar_Gilgamesh_00_FirstHappyTurn",
-              "value": 1
+              "value": 1,
+              "variableName": "Avatar_Gilgamesh_00_FirstHappyTurn"
             },
             {
               "name": "Remove Events/Bonuses",

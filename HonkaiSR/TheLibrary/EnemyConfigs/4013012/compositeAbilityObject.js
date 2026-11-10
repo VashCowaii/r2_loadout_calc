@@ -253,7 +253,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_CountBreak",
                       "value": {
                         "operator": "Variables[0] (MDF_CountBefore) || Variables[1] (MDF_CountAfter) || SUB || RETURN",
                         "displayLines": "(MDF_CountBefore - MDF_CountAfter)",
@@ -262,7 +261,8 @@ const compositeAbilityObject = {
                           "MDF_CountBefore",
                           "MDF_CountAfter"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CountBreak"
                     },
                     {
                       "name": "IF",
@@ -308,8 +308,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CountBefore",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CountBefore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -317,8 +317,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CountAfter",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CountAfter"
                 }
               ]
             }
@@ -570,8 +570,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
                         }
                       ]
                     }
@@ -588,8 +588,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W4_Claymore_00_BattleScore1_StoneShieldBreak"
                 }
               ]
             }
@@ -667,8 +667,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Key",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Key"
                         }
                       ]
                     },
@@ -729,8 +729,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Key",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Key"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -808,8 +808,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Key",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Key"
                     }
                   ]
                 }
@@ -855,8 +855,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 5
+                          "value": 5,
+                          "variableName": "AIFlag"
                         }
                       ]
                     }
@@ -903,8 +903,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -950,8 +950,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -1929,7 +1929,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_MaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_OriginalMaxLayer) || RETURN",
                         "displayLines": "MDF_OriginalMaxLayer",
@@ -1937,7 +1936,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OriginalMaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_MaxLayer"
                     },
                     {
                       "name": "IF",
@@ -2163,7 +2163,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OriginalMaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                         "displayLines": "MDF_MaxLayer",
@@ -2171,7 +2170,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_MaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OriginalMaxLayer"
                     },
                     {
                       "name": "Define Custom Variable with Copy",
@@ -2189,7 +2189,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_MaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
                         "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
@@ -2198,7 +2197,8 @@ const compositeAbilityObject = {
                           "MDF_MaxLayer",
                           "MDF_AddMaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_MaxLayer"
                     },
                     {
                       "name": "IF",
@@ -2316,7 +2316,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OriginalMaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                         "displayLines": "MDF_MaxLayer",
@@ -2324,7 +2323,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_MaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OriginalMaxLayer"
                     },
                     {
                       "name": "Define Custom Variable with Copy",
@@ -2342,7 +2342,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_MaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_AddMaxLayer) || ADD || RETURN",
                         "displayLines": "(MDF_MaxLayer + MDF_AddMaxLayer)",
@@ -2351,7 +2350,8 @@ const compositeAbilityObject = {
                           "MDF_MaxLayer",
                           "MDF_AddMaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_MaxLayer"
                     },
                     {
                       "name": "IF",
@@ -2844,8 +2844,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3423,8 +3423,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonCount",
-          "value": 0
+          "value": 0,
+          "variableName": "SummonCount"
         },
         {
           "name": "Find New Target",

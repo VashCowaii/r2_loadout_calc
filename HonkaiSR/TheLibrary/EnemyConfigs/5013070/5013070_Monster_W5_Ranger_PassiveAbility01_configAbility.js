@@ -31,7 +31,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MaxChargeValue",
       "value": {
         "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
         "displayLines": "{[Skill03[0]]}",
@@ -39,7 +38,8 @@ const configAbility = {
         "variables": [
           "{[Skill03[0]]}"
         ]
-      }
+      },
+      "variableName": "MaxChargeValue"
     },
     {
       "name": "SWITCH",
@@ -151,8 +151,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -207,8 +207,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -248,8 +248,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -304,8 +304,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -345,8 +345,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -401,8 +401,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -442,8 +442,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -498,8 +498,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }

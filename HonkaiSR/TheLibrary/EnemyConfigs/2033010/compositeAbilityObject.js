@@ -399,8 +399,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AddByLycanMecha",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AddByLycanMecha"
                     }
                   ]
                 },
@@ -575,7 +575,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Wolf_MaxAttackCount",
           "value": {
             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
             "displayLines": "{[SkillP01[0]]}",
@@ -583,7 +582,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[0]]}"
             ]
-          }
+          },
+          "variableName": "Wolf_MaxAttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -686,9 +686,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -696,9 +696,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Phase_Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Phase_Flag"
                 }
               ]
             },
@@ -747,13 +747,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Phase_Flag",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "Phase_Flag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -1821,7 +1821,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "Wolf_AttackCount",
               "value": {
                 "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
                 "displayLines": "Wolf_MaxAttackCount",
@@ -1829,7 +1828,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Wolf_MaxAttackCount"
                 ]
-              }
+              },
+              "variableName": "Wolf_AttackCount"
             },
             {
               "name": "Define Custom Variable with Copy",
@@ -1874,7 +1874,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Wolf_MaxAttackCount",
                   "value": {
                     "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
                     "displayLines": "Wolf_MaxAttackCount",
@@ -1882,7 +1881,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Wolf_MaxAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "Wolf_MaxAttackCount"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1890,7 +1890,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Wolf_AttackCount",
                   "value": {
                     "operator": "Variables[0] (Wolf_AttackCount) || RETURN",
                     "displayLines": "Wolf_AttackCount",
@@ -1898,7 +1897,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Wolf_AttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "Wolf_AttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1943,8 +1943,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "Wolf_AttackCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Wolf_AttackCount"
             },
             {
               "name": "Find New Target",
@@ -2312,7 +2312,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Wolf_MaxAttackCount",
                   "value": {
                     "operator": "Variables[0] (Wolf_MaxAttackCount) || RETURN",
                     "displayLines": "Wolf_MaxAttackCount",
@@ -2320,7 +2319,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Wolf_MaxAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "Wolf_MaxAttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

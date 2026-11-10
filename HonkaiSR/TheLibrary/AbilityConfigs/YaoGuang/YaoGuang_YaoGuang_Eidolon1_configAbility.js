@@ -14,7 +14,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "G_Rank01_AddedElationPoint",
       "value": {
         "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
         "displayLines": "(40 - 20)",
@@ -23,7 +22,8 @@ const configAbility = {
           40,
           20
         ]
-      }
+      },
+      "variableName": "G_Rank01_AddedElationPoint"
     }
   ],
   "references": [

@@ -342,8 +342,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "TutorialSwitch",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TutorialSwitch"
                 }
               ]
             },
@@ -534,8 +534,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_HasBeenInVeiwMode",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "#CL_HasBeenInVeiwMode"
                     }
                   ]
                 }
@@ -562,8 +562,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_HasBeenInVeiwMode",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "#CL_HasBeenInVeiwMode"
                 }
               ],
               "failed": [
@@ -592,8 +592,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_HasBeenInVeiwMode",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "#CL_HasBeenInVeiwMode"
                     }
                   ]
                 }

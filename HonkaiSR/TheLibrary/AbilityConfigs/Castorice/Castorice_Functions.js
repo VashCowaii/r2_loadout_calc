@@ -35,8 +35,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Avatar_Castorice_Rank01_DamageRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "Avatar_Castorice_Rank01_DamageRatio"
             }
           ],
           "failed": [
@@ -84,7 +84,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Avatar_Castorice_Rank01_DamageRatio",
                   "value": {
                     "operator": "Variables[0] (1.2) || RETURN",
                     "displayLines": "1.2",
@@ -92,7 +91,8 @@ const configAbility = {
                     "variables": [
                       1.2
                     ]
-                  }
+                  },
+                  "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                 }
               ],
               "failed": [
@@ -118,7 +118,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Avatar_Castorice_Rank01_DamageRatio",
                       "value": {
                         "operator": "Variables[0] (1.4) || RETURN",
                         "displayLines": "1.4",
@@ -126,7 +125,8 @@ const configAbility = {
                         "variables": [
                           1.4
                         ]
-                      }
+                      },
+                      "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                     }
                   ]
                 }
@@ -160,7 +160,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ExtraSpecialSP",
+          "scope": "ContextTaskTemplate",
           "value": {
             "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (_FixedAddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)",
@@ -174,7 +174,7 @@ const configAbility = {
               "_MaxSpecialSP"
             ]
           },
-          "scope": "ContextTaskTemplate"
+          "variableName": "_ExtraSpecialSP"
         },
         {
           "name": "IF",

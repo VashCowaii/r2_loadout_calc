@@ -378,8 +378,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         }
@@ -512,8 +512,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AttackFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AttackFlag"
             },
             {
               "name": "Stack Target Stat Value",
@@ -546,8 +546,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AttackFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "AttackFlag"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -592,15 +592,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AttackFlag",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "AttackFlag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AttackFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AttackFlag"
                     }
                   ]
                 }
@@ -988,8 +988,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "variableName": "Deathrattle",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Deathrattle"
                     },
                     {
                       "name": "IF",

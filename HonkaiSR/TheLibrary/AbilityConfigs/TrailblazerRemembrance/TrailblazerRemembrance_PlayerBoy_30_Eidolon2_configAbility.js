@@ -30,7 +30,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "mInit_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Count) || RETURN",
                 "displayLines": "MDF_Count",
@@ -38,7 +37,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Count"
                 ]
-              }
+              },
+              "variableName": "mInit_Count"
             }
           ]
         },

@@ -346,13 +346,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseDubuff",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseDubuff"
                 }
               ]
             }
@@ -383,13 +383,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseDubuff",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseDubuff"
                 }
               ]
             }
@@ -417,7 +417,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_PointB2_Count",
                   "value": {
                     "operator": "Variables[0] (Acheron_BaseTypeCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Acheron_BaseTypeCount - 1)",
@@ -427,7 +426,8 @@ const configAbility = {
                     "variables": [
                       "Acheron_BaseTypeCount"
                     ]
-                  }
+                  },
+                  "variableName": "Acheron_PointB2_Count"
                 },
                 {
                   "name": "IF",
@@ -447,7 +447,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB2_Count",
                           "value": {
                             "operator": "Variables[0] (Acheron_PointB2_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Acheron_PointB2_Count + 1)",
@@ -457,7 +456,8 @@ const configAbility = {
                             "variables": [
                               "Acheron_PointB2_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Acheron_PointB2_Count"
                         }
                       ]
                     }
@@ -474,7 +474,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Acheron_PointB2_DamageRatio",
                       "value": {
                         "operator": "Variables[0] (1.6) || RETURN",
                         "displayLines": "1.6",
@@ -482,7 +481,8 @@ const configAbility = {
                         "variables": [
                           1.6
                         ]
-                      }
+                      },
+                      "variableName": "Acheron_PointB2_DamageRatio"
                     }
                   ],
                   "failed": [
@@ -497,7 +497,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB2_DamageRatio",
                           "value": {
                             "operator": "Variables[0] (1.15) || RETURN",
                             "displayLines": "1.15",
@@ -505,14 +504,15 @@ const configAbility = {
                             "variables": [
                               1.15
                             ]
-                          }
+                          },
+                          "variableName": "Acheron_PointB2_DamageRatio"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB2_DamageRatio",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Acheron_PointB2_DamageRatio"
                         }
                       ]
                     }
@@ -725,8 +725,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseDubuff",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_SkillUseDubuff"
                 }
               ]
             }
@@ -789,8 +789,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SkillUseFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SkillUseFlag"
                         },
                         {
                           "name": "Compare: Variable",
@@ -829,8 +829,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OnEnterBattleFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "OnEnterBattleFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -851,8 +851,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OnEnterBattleFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OnEnterBattleFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -881,8 +881,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_SkillUseFlag"
                 },
                 {
                   "name": "IF",
@@ -925,8 +925,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OnCharacterCreateFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "OnCharacterCreateFlag"
                     }
                   ]
                 }
@@ -949,8 +949,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_SkillUseFlag"
                 },
                 {
                   "name": "IF",
@@ -1051,8 +1051,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OnCharacterCreateFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OnCharacterCreateFlag"
                 },
                 {
                   "name": "IF",
@@ -1099,13 +1099,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillUseDubuff",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillUseDubuff"
                 },
                 {
                   "name": "IF",
@@ -1176,7 +1176,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_FlowerCountBySp",
                   "value": {
                     "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                     "displayLines": "(Acheron_FlowerCountBySp + Acheron_ChangeValue)",
@@ -1185,7 +1184,8 @@ const configAbility = {
                       "Acheron_FlowerCountBySp",
                       "Acheron_ChangeValue"
                     ]
-                  }
+                  },
+                  "variableName": "Acheron_FlowerCountBySp"
                 },
                 {
                   "name": "IF",
@@ -1205,7 +1205,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Acheron_FlowerCountBySp",
                       "value": {
                         "operator": "Variables[0] (9) || RETURN",
                         "displayLines": "9",
@@ -1213,7 +1212,8 @@ const configAbility = {
                         "variables": [
                           9
                         ]
-                      }
+                      },
+                      "variableName": "Acheron_FlowerCountBySp"
                     }
                   ]
                 }
@@ -1221,8 +1221,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Acheron_ChangeValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Acheron_ChangeValue"
                 }
               ]
             },
@@ -1276,7 +1276,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Passive_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                             "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
@@ -1285,7 +1284,8 @@ const configAbility = {
                               "MDF_Passive_Count",
                               "Acheron_ChangeValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Passive_Count"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -1295,7 +1295,6 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Passive_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Passive_Count) || Variables[1] (Acheron_ChangeValue) || ADD || RETURN",
                             "displayLines": "(MDF_Passive_Count + Acheron_ChangeValue)",
@@ -1304,7 +1303,8 @@ const configAbility = {
                               "MDF_Passive_Count",
                               "Acheron_ChangeValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Passive_Count"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -1399,8 +1399,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_ChangeValue",
-              "value": 0
+              "value": 0,
+              "variableName": "Acheron_ChangeValue"
             }
           ]
         }
@@ -1491,8 +1491,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Acheron_PointB1_ClampedAdd",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Acheron_PointB1_ClampedAdd"
                         }
                       ]
                     }

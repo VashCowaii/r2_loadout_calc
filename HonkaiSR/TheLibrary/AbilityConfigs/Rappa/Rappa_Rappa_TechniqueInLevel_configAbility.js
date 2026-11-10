@@ -117,7 +117,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_Ratio",
                       "value": {
                         "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (2) || MUL || RETURN",
                         "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 2)",
@@ -131,7 +130,8 @@ const configAbility = {
                           "DV_Ultra_Damage_MaxStance",
                           2
                         ]
-                      }
+                      },
+                      "variableName": "DV_Ratio"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -177,7 +177,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_Ratio2",
                           "value": {
                             "operator": "Constants[0] (0.5) || Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[1] (30) || DIV || Constants[2] (2) || ADD || MUL || Constants[3] (4) || DIV || Variables[1] (1.8) || MUL || RETURN",
                             "displayLines": "(((0.5 * ((DV_Ultra_Damage_MaxStance / 30) + 2)) / 4) * 1.8)",
@@ -191,7 +190,8 @@ const configAbility = {
                               "DV_Ultra_Damage_MaxStance",
                               1.8
                             ]
-                          }
+                          },
+                          "variableName": "DV_Ratio2"
                         },
                         {
                           "name": "ATK Scaling DMG",

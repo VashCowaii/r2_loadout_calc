@@ -330,7 +330,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ServantNumLast",
                   "value": {
                     "operator": "Variables[0] (ServantNumCurrent) || RETURN",
                     "displayLines": "ServantNumCurrent",
@@ -338,7 +337,8 @@ const configAbility = {
                     "variables": [
                       "ServantNumCurrent"
                     ]
-                  }
+                  },
+                  "variableName": "ServantNumLast"
                 }
               ]
             }

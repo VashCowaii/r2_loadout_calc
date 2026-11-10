@@ -170,9 +170,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 100,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -220,9 +220,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -278,9 +278,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 100,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -312,8 +312,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_count"
                     },
                     {
                       "name": "Find New Target",
@@ -334,7 +334,6 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_count",
                           "value": {
                             "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_count + 1)",
@@ -344,7 +343,8 @@ const configAbility = {
                             "variables": [
                               "_count"
                             ]
-                          }
+                          },
+                          "variableName": "_count"
                         }
                       ]
                     },
@@ -377,9 +377,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DamageCarry",
+                          "scope": "AITag",
                           "value": 100,
-                          "scope": "AITag"
+                          "variableName": "DamageCarry"
                         }
                       ],
                       "failed": [
@@ -411,9 +411,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DamageCarry",
+                          "scope": "AITag",
                           "value": 1,
-                          "scope": "AITag"
+                          "variableName": "DamageCarry"
                         }
                       ]
                     }

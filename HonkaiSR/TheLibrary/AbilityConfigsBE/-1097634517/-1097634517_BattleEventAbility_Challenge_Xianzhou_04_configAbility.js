@@ -33,8 +33,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Insert_Flag"
                 }
               ]
             }
@@ -45,8 +45,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Insert_Flag"
             }
           ]
         },

@@ -72,8 +72,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -105,7 +105,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -115,7 +114,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -199,7 +199,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EntityCurrentSP",
                   "value": {
                     "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (EntityMaxSP) || Variables[2] (BattleEvent_P1_ADF_Get) || MUL || ADD || RETURN",
                     "displayLines": "(EntityCurrentSP + (EntityMaxSP * BattleEvent_P1_ADF_Get))",
@@ -209,7 +208,8 @@ const configAbility = {
                       "EntityMaxSP",
                       "BattleEvent_P1_ADF_Get"
                     ]
-                  }
+                  },
+                  "variableName": "EntityCurrentSP"
                 },
                 {
                   "name": "IF",
@@ -265,7 +265,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                         "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -275,7 +274,8 @@ const configAbility = {
                           "EntityCurrentSP",
                           "EntityMaxSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -299,8 +299,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EntityCurrentSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EntityCurrentSP"
                 }
               ]
             }
@@ -385,7 +385,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2215_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2215_ADF_3 * DV_TargetCount))",
@@ -395,7 +394,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2215_ADF_3",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -464,8 +464,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             },
@@ -587,7 +587,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2214_ADF_2) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2214_ADF_2)",
@@ -596,7 +595,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_PlusAbility_2214_ADF_2"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -735,8 +735,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -781,7 +781,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2213_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2213_ADF_3 * DV_TargetCount))",
@@ -791,7 +790,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2213_ADF_3",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -860,8 +860,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -886,7 +886,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
                   "value": {
                     "operator": "Variables[0] (DV_TargetCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DV_TargetCount + 1)",
@@ -896,7 +895,8 @@ const configAbility = {
                     "variables": [
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -907,8 +907,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_TargetCount",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_TargetCount"
             }
           ]
         }
@@ -1018,7 +1018,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2212_ADF_3 ) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2212_ADF_3  * DV_TargetCount))",
@@ -1028,7 +1027,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2212_ADF_3 ",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -1097,8 +1097,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -1191,7 +1191,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2211_ADF_3) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2211_ADF_3)",
@@ -1200,7 +1199,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_PlusAbility_2211_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -1365,8 +1365,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_BreakFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_BreakFlag"
                 }
               ]
             }
@@ -1407,8 +1407,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_BreakFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_BreakFlag"
                 }
               ]
             }
@@ -1718,7 +1718,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
               "value": {
                 "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
                 "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
@@ -1726,7 +1725,8 @@ const configAbility = {
                 "variables": [
                   "DV_FantasticStory_BaseAbility_CountSumTemp"
                 ]
-              }
+              },
+              "variableName": "DV_FantasticStory_BaseAbility_CountSum"
             },
             {
               "name": "Update Surging Grit[PF]",
@@ -1758,8 +1758,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
             }
           ]
         }

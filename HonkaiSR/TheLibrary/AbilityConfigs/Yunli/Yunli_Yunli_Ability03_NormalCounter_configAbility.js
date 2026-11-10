@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Energy_Count",
       "value": {
         "operator": "Variables[0] (MDF_Energy_Count) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(MDF_Energy_Count + 1)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           "MDF_Energy_Count"
         ]
-      }
+      },
+      "variableName": "MDF_Energy_Count"
     },
     "Deleted bullshit",
     {
@@ -117,7 +117,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_LoopDamage",
       "value": {
         "operator": "Variables[0] (0.72) || RETURN",
         "displayLines": "0.72",
@@ -125,7 +124,8 @@ const configAbility = {
         "variables": [
           0.72
         ]
-      }
+      },
+      "variableName": "MDF_LoopDamage"
     },
     {
       "name": "IF",
@@ -164,8 +164,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 1
+      "value": 1,
+      "variableName": "OnInsertAbort_Flg"
     },
     {
       "name": "IF",

@@ -23,13 +23,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ashveil_NeedContinueInsert",
-      "value": 1
+      "value": 1,
+      "variableName": "Ashveil_NeedContinueInsert"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ability_CountForSound",
-      "value": 1
+      "value": 1,
+      "variableName": "Ability_CountForSound"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -70,18 +70,18 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "Ashveil_IsFirstTimeInsert",
-      "value": 1
+      "value": 1,
+      "variableName": "Ashveil_IsFirstTimeInsert"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ashveil_ContinueInsertSameTarget",
-      "value": 0
+      "value": 0,
+      "variableName": "Ashveil_ContinueInsertSameTarget"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ability_SPAddAlready",
-      "value": 0
+      "value": 0,
+      "variableName": "Ability_SPAddAlready"
     },
     {
       "name": "Looped Event",
@@ -94,8 +94,8 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Ashveil_NeedContinueInsert",
-          "value": 0
+          "value": 0,
+          "variableName": "Ashveil_NeedContinueInsert"
         },
         {
           "name": "IF",
@@ -185,8 +185,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability_SPAddAlready",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Ability_SPAddAlready"
                     }
                   ]
                 },
@@ -219,30 +219,30 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability_EndWaitTime",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ability_EndWaitTime"
                         }
                       ]
                     }
@@ -278,25 +278,25 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability_EndWaitTime",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ability_EndWaitTime"
                         }
                       ]
                     }
@@ -304,8 +304,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ashveil_IsFirstTimeInsert",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Ashveil_IsFirstTimeInsert"
                 }
               ]
             }
@@ -349,7 +349,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ability_CountForSound",
                   "value": {
                     "operator": "Variables[0] (Ability_CountForSound) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Ability_CountForSound + 1)",
@@ -359,7 +358,8 @@ const configAbility = {
                     "variables": [
                       "Ability_CountForSound"
                     ]
-                  }
+                  },
+                  "variableName": "Ability_CountForSound"
                 }
               ]
             },
@@ -430,7 +430,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_EnhanceInsertBuffStack",
                       "value": {
                         "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (4) || SUB || RETURN",
                         "displayLines": "(SkillP01_EnhanceInsertBuffStack - 4)",
@@ -439,11 +438,11 @@ const configAbility = {
                           "SkillP01_EnhanceInsertBuffStack",
                           4
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_EnhanceInsertBuffStack"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
                       "value": {
                         "operator": "Variables[0] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[1] (4) || ADD || RETURN",
                         "displayLines": "(SkillRank_Rank02_EnhanceInsertBuffStackReturn + 4)",
@@ -452,7 +451,8 @@ const configAbility = {
                           "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
                           4
                         ]
-                      }
+                      },
+                      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
                     },
                     {
                       "name": "Looped Event",
@@ -513,30 +513,30 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability_EndWaitTime",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "Ability_EndWaitTime"
                         }
                       ]
                     }
@@ -572,25 +572,25 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_ContinueInsertSameTarget",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_ContinueInsertSameTarget"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ashveil_NeedContinueInsert",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Ashveil_NeedContinueInsert"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability_EndWaitTime",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "Ability_EndWaitTime"
                         }
                       ]
                     }
@@ -605,7 +605,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_EnhanceInsertBuffStack",
       "value": {
         "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
         "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -614,7 +613,8 @@ const configAbility = {
           "SkillP01_EnhanceInsertBuffStack",
           2
         ]
-      }
+      },
+      "variableName": "SkillP01_EnhanceInsertBuffStack"
     },
     {
       "name": "IF",
@@ -625,7 +625,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
           "value": {
             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (FLOOR) || Variables[2] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[3] (0.35) || MUL || PARAM_1 || FUNCTION || ADD || RETURN",
             "displayLines": "(SkillP01_EnhanceInsertBuffStack + &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35)))",
@@ -636,7 +635,8 @@ const configAbility = {
               "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
               0.35
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",
@@ -701,8 +701,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-      "value": 0
+      "value": 0,
+      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
     },
     {
       "name": "IF",

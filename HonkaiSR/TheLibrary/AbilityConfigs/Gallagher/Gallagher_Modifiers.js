@@ -76,7 +76,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HealRatioAddedRatio",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentBreakDamageAddedRatio) || Variables[1] (0.5) || MUL || RETURN",
                 "displayLines": "(MDF_CurrentBreakDamageAddedRatio * 0.5)",
@@ -85,7 +84,8 @@ const configAbility = {
                   "MDF_CurrentBreakDamageAddedRatio",
                   0.5
                 ]
-              }
+              },
+              "variableName": "MDF_HealRatioAddedRatio"
             },
             {
               "name": "IF",
@@ -105,7 +105,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HealRatioAddedRatio",
                   "value": {
                     "operator": "Variables[0] (0.75) || RETURN",
                     "displayLines": "0.75",
@@ -113,7 +112,8 @@ const configAbility = {
                     "variables": [
                       0.75
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HealRatioAddedRatio"
                 }
               ]
             },
@@ -311,7 +311,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BreakDamagTaken",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
                 "displayLines": "0.12",
@@ -319,7 +318,8 @@ const configAbility = {
                 "variables": [
                   0.12
                 ]
-              }
+              },
+              "variableName": "MDF_BreakDamagTaken"
             }
           ]
         },

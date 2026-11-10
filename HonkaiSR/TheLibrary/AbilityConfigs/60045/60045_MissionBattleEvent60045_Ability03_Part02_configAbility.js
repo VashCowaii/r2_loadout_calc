@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_State",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "#CL_State"
     },
     {
       "name": "ATK Scaling DMG",
@@ -44,9 +44,9 @@ const configAbility = {
     "Trigger: Skip Death Handling",
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_State",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "#CL_State"
     },
     "Trigger: Ability End"
   ],

@@ -36,8 +36,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Energy_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_Energy_Count"
     },
     {
       "name": "IF",
@@ -165,15 +165,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsBattleEvent",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsBattleEvent"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsBattleEvent",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsBattleEvent"
                 }
               ]
             }

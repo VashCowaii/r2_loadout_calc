@@ -775,8 +775,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Passive_Trigger_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Passive_Trigger_Count"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -1018,7 +1018,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_Damage",
                       "value": {
                         "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
                         "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
@@ -1027,11 +1026,11 @@ const compositeAbilityObject = {
                           "_TMP_Damage",
                           "_TMP_OverflowDamage"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_Damage"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_Rate",
                       "value": {
                         "operator": "Variables[0] (0.12) || RETURN",
                         "displayLines": "0.12",
@@ -1039,7 +1038,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.12
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_Rate"
                     },
                     {
                       "name": "IF",
@@ -1072,7 +1072,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TMP_Rate",
                           "value": {
                             "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
                             "displayLines": "(_TMP_Rate + 0.16)",
@@ -1081,7 +1080,8 @@ const compositeAbilityObject = {
                               "_TMP_Rate",
                               0.16
                             ]
-                          }
+                          },
+                          "variableName": "_TMP_Rate"
                         }
                       ]
                     },
@@ -1096,7 +1096,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_CurrentDamge",
                           "value": {
                             "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
                             "displayLines": "(0 - _TMP_Damage)",
@@ -1106,11 +1105,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "_TMP_Damage"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_CurrentDamge"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                             "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1122,7 +1121,8 @@ const compositeAbilityObject = {
                               0.12,
                               "Rank01_FinalRatio"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_FinalDamage"
                         },
                         {
                           "name": "IF",
@@ -1163,7 +1163,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB1_Ratio",
                                   "value": {
                                     "operator": "Variables[0] (PointB1_Add_2) || RETURN",
                                     "displayLines": "PointB1_Add_2",
@@ -1171,7 +1170,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "PointB1_Add_2"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "PointB1_Ratio"
                                 }
                               ],
                               "failed": [
@@ -1193,7 +1193,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
                                       "value": {
                                         "operator": "Variables[0] (PointB1_Add_1) || RETURN",
                                         "displayLines": "PointB1_Add_1",
@@ -1201,14 +1200,15 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "PointB1_Add_1"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "PointB1_Ratio"
                                     }
                                   ],
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "PointB1_Ratio"
                                     }
                                   ]
                                 }
@@ -1216,7 +1216,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (PointB1_Ratio) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                                 "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1229,7 +1228,8 @@ const compositeAbilityObject = {
                                   0.12,
                                   "Rank01_FinalRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "SkillP01_FinalDamage"
                             }
                           ]
                         },
@@ -1264,7 +1264,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (2) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                                 "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1277,7 +1276,8 @@ const compositeAbilityObject = {
                                   0.12,
                                   "Rank01_FinalRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "SkillP01_FinalDamage"
                             }
                           ]
                         }
@@ -2191,9 +2191,9 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MazeSkill_Triggered",
+          "scope": "ContextCaster",
           "value": 1,
-          "scope": "ContextCaster"
+          "variableName": "MazeSkill_Triggered"
         },
         {
           "name": "Find New Target",
@@ -2509,8 +2509,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_Exec",
-          "value": 1
+          "value": 1,
+          "variableName": "Insert_Exec"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2644,8 +2644,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_Exec",
-          "value": 0
+          "value": 0,
+          "variableName": "Insert_Exec"
         },
         "Trigger: Skip Death Handling"
       ],
@@ -2722,7 +2722,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Passive_Trigger_Count",
               "value": {
                 "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Passive_Trigger_Count + 1)",
@@ -2732,7 +2731,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Passive_Trigger_Count"
                 ]
-              }
+              },
+              "variableName": "Passive_Trigger_Count"
             },
             {
               "name": "IF",
@@ -2822,7 +2822,6 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Passive_Trigger_Count",
                   "value": {
                     "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Passive_Trigger_Count + 1)",
@@ -2832,7 +2831,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Passive_Trigger_Count"
                     ]
-                  }
+                  },
+                  "variableName": "Passive_Trigger_Count"
                 },
                 {
                   "name": "IF",
@@ -2923,12 +2923,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_Trigger_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Passive_Trigger_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_Max_Count",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -2936,7 +2935,8 @@ const compositeAbilityObject = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Passive_Max_Count"
         },
         {
           "name": "IF",
@@ -2964,7 +2964,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank01_FinalRatio",
               "value": {
                 "operator": "Variables[0] (1.5) || RETURN",
                 "displayLines": "1.5",
@@ -2972,14 +2971,15 @@ const compositeAbilityObject = {
                 "variables": [
                   1.5
                 ]
-              }
+              },
+              "variableName": "Rank01_FinalRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank01_FinalRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "Rank01_FinalRatio"
             }
           ]
         },
@@ -2992,7 +2992,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank04_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
                 "displayLines": "0.5",
@@ -3000,7 +2999,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.5
                 ]
-              }
+              },
+              "variableName": "Rank04_DamagePercentage"
             }
           ]
         },
@@ -3041,8 +3041,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_Count",
-          "value": 1
+          "value": 1,
+          "variableName": "Insert_Count"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3063,7 +3063,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_FinalDamage",
           "value": {
             "operator": "Constants[0] (0) || RETURN",
             "displayLines": "0",
@@ -3071,7 +3070,8 @@ const compositeAbilityObject = {
               0
             ],
             "variables": []
-          }
+          },
+          "variableName": "SkillP01_FinalDamage"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -3107,7 +3107,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "PointB1_Add_2",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -3115,11 +3114,11 @@ const compositeAbilityObject = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "PointB1_Add_2"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PointB1_Add_1",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
                 "displayLines": "0.5",
@@ -3127,7 +3126,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.5
                 ]
-              }
+              },
+              "variableName": "PointB1_Add_1"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3563,7 +3563,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_Damage",
                       "value": {
                         "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
                         "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
@@ -3572,11 +3571,11 @@ const compositeAbilityObject = {
                           "_TMP_Damage",
                           "_TMP_OverflowDamage"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_Damage"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_Rate",
                       "value": {
                         "operator": "Variables[0] (0.08) || RETURN",
                         "displayLines": "0.08",
@@ -3584,7 +3583,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.08
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_Rate"
                     },
                     {
                       "name": "IF",
@@ -3617,7 +3617,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_TMP_Rate",
                           "value": {
                             "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
                             "displayLines": "(_TMP_Rate + 0.16)",
@@ -3626,7 +3625,8 @@ const compositeAbilityObject = {
                               "_TMP_Rate",
                               0.16
                             ]
-                          }
+                          },
+                          "variableName": "_TMP_Rate"
                         }
                       ]
                     },
@@ -3641,7 +3641,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_CurrentDamge",
                           "value": {
                             "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
                             "displayLines": "(0 - _TMP_Damage)",
@@ -3651,11 +3650,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "_TMP_Damage"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_CurrentDamge"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                             "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -3667,7 +3666,8 @@ const compositeAbilityObject = {
                               0.12,
                               "Rank01_FinalRatio"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_FinalDamage"
                         },
                         {
                           "name": "IF",
@@ -3708,7 +3708,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB1_Ratio",
                                   "value": {
                                     "operator": "Variables[0] (PointB1_Add_2) || RETURN",
                                     "displayLines": "PointB1_Add_2",
@@ -3716,7 +3715,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "PointB1_Add_2"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "PointB1_Ratio"
                                 }
                               ],
                               "failed": [
@@ -3738,7 +3738,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
                                       "value": {
                                         "operator": "Variables[0] (PointB1_Add_1) || RETURN",
                                         "displayLines": "PointB1_Add_1",
@@ -3746,14 +3745,15 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "PointB1_Add_1"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "PointB1_Ratio"
                                     }
                                   ],
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "PointB1_Ratio",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "PointB1_Ratio"
                                     }
                                   ]
                                 }
@@ -3761,7 +3761,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[4] (PointB1_Ratio) || MUL || Variables[3] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                                 "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * PointB1_Ratio) * (0.12 * Rank01_FinalRatio)))",
@@ -3774,7 +3773,8 @@ const compositeAbilityObject = {
                                   "PointB1_Ratio",
                                   "Rank01_FinalRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "SkillP01_FinalDamage"
                             }
                           ]
                         },
@@ -3809,7 +3809,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "SkillP01_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[4] (2) || MUL || Variables[3] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                                 "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * 2) * (0.12 * Rank01_FinalRatio)))",
@@ -3822,7 +3821,8 @@ const compositeAbilityObject = {
                                   2,
                                   "Rank01_FinalRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "SkillP01_FinalDamage"
                             }
                           ]
                         }
@@ -3868,8 +3868,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Insert_Flag"
                 },
                 {
                   "name": "IF",
@@ -4400,8 +4400,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_First",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_First"
                         }
                       ]
                     },
@@ -4448,8 +4448,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_First",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_First"
                         }
                       ]
                     }
@@ -4797,8 +4797,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_Count",
-          "value": 1
+          "value": 1,
+          "variableName": "Insert_Count"
         },
         {
           "name": "IF",
@@ -4809,7 +4809,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_RecordedTotal",
               "value": {
                 "operator": "Variables[0] (SkillP01_TotalDamage) || RETURN",
                 "displayLines": "SkillP01_TotalDamage",
@@ -4817,11 +4816,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "SkillP01_TotalDamage"
                 ]
-              }
+              },
+              "variableName": "Rank06_RecordedTotal"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_RecordedFinal",
               "value": {
                 "operator": "Variables[0] (SkillP01_FinalDamage) || RETURN",
                 "displayLines": "SkillP01_FinalDamage",
@@ -4829,19 +4828,20 @@ const compositeAbilityObject = {
                 "variables": [
                   "SkillP01_FinalDamage"
                 ]
-              }
+              },
+              "variableName": "Rank06_RecordedFinal"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_TotalDamage",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillP01_TotalDamage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_FinalDamage",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillP01_FinalDamage"
         },
         {
           "name": "IF",
@@ -4852,7 +4852,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_TotalDamage",
               "value": {
                 "operator": "Variables[0] (Rank06_RecordedTotal) || Variables[1] (0.2) || MUL || RETURN",
                 "displayLines": "(Rank06_RecordedTotal * 0.2)",
@@ -4861,11 +4860,11 @@ const compositeAbilityObject = {
                   "Rank06_RecordedTotal",
                   0.2
                 ]
-              }
+              },
+              "variableName": "SkillP01_TotalDamage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_FinalDamage",
               "value": {
                 "operator": "Variables[0] (Rank06_RecordedFinal) || Variables[1] (0.2) || MUL || RETURN",
                 "displayLines": "(Rank06_RecordedFinal * 0.2)",
@@ -4874,7 +4873,8 @@ const compositeAbilityObject = {
                   "Rank06_RecordedFinal",
                   0.2
                 ]
-              }
+              },
+              "variableName": "SkillP01_FinalDamage"
             }
           ]
         },

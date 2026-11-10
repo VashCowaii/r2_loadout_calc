@@ -136,7 +136,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PromotionRank_CleanAttack",
               "value": {
                 "operator": "Variables[0] (PromotionRank_BaseAttack) || Variables[1] (PromotionRank_AttackConvert) || SUB || RETURN",
                 "displayLines": "(PromotionRank_BaseAttack - PromotionRank_AttackConvert)",
@@ -145,7 +144,8 @@ const configAbility = {
                   "PromotionRank_BaseAttack",
                   "PromotionRank_AttackConvert"
                 ]
-              }
+              },
+              "variableName": "PromotionRank_CleanAttack"
             },
             {
               "name": "IF",
@@ -158,14 +158,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PromotionRank_CleanAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "PromotionRank_CleanAttack"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PromotionRank_AttackAddedValue",
               "value": {
                 "operator": "Variables[0] (PromotionRank_CleanAttack) || Variables[1] (0.24) || MUL || RETURN",
                 "displayLines": "(PromotionRank_CleanAttack * 0.24)",
@@ -174,7 +173,8 @@ const configAbility = {
                   "PromotionRank_CleanAttack",
                   0.24
                 ]
-              }
+              },
+              "variableName": "PromotionRank_AttackAddedValue"
             },
             {
               "name": "IF",
@@ -293,9 +293,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_RemoveFlag",
+              "scope": "ContextModifier",
               "value": 1,
-              "scope": "ContextModifier"
+              "variableName": "_RemoveFlag"
             },
             {
               "name": "IF",
@@ -333,9 +333,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "#CL_HaveBuff",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "#CL_HaveBuff"
             }
           ]
         },
@@ -421,9 +421,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "#CL_HaveBuff",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "#CL_HaveBuff"
             }
           ]
         },
@@ -459,7 +459,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CurrentPoint",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (DV_CurrentPoint) || Variables[1] (6) || SUB || Variables[2] (_WindfuryCostFixValue) || ADD || RETURN",
                     "displayLines": "((DV_CurrentPoint - 6) + _WindfuryCostFixValue)",
@@ -470,13 +470,13 @@ const configAbility = {
                       "_WindfuryCostFixValue"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "DV_CurrentPoint"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank01toRank00",
+                  "scope": "ContextCaster",
                   "value": 1,
-                  "scope": "ContextCaster"
+                  "variableName": "Rank01toRank00"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -610,14 +610,14 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "#CL_HaveBuff",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "#CL_HaveBuff"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertActionCount",
-              "value": -99
+              "value": -99,
+              "variableName": "InsertActionCount"
             }
           ]
         }
@@ -730,8 +730,8 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank01toRank00",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Rank01toRank00"
                 }
               ]
             }
@@ -1002,9 +1002,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CurrentPoint",
+              "scope": "ContextCaster",
               "value": 0,
-              "scope": "ContextCaster"
+              "variableName": "DV_CurrentPoint"
             }
           ]
         },
@@ -1013,13 +1013,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Windfury_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Windfury_Flag"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Windfury_Flag_Sum",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Windfury_Flag_Sum"
             },
             {
               "name": "Reconstruct Modifier",
@@ -1046,7 +1046,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Windfury_Flag_Sum",
                   "value": {
                     "operator": "Variables[0] (MDF_Windfury_Flag_Sum) || Variables[1] (MDF_Windfury_Flag) || ADD || RETURN",
                     "displayLines": "(MDF_Windfury_Flag_Sum + MDF_Windfury_Flag)",
@@ -1055,7 +1054,8 @@ const configAbility = {
                       "MDF_Windfury_Flag_Sum",
                       "MDF_Windfury_Flag"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Windfury_Flag_Sum"
                 }
               ]
             },
@@ -1334,7 +1334,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
                 "displayLines": "0.2",
@@ -1342,7 +1341,8 @@ const configAbility = {
                 "variables": [
                   0.2
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1381,7 +1381,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_AllDamageTypePenetrate",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
                 "displayLines": "0.2",
@@ -1389,7 +1388,8 @@ const configAbility = {
                 "variables": [
                   0.2
                 ]
-              }
+              },
+              "variableName": "DV_AllDamageTypePenetrate"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1485,7 +1485,7 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_PursuedDamage_LimitCount",
+                          "scope": "ContextCaster",
                           "value": {
                             "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(DV_PursuedDamage_LimitCount - 1)",
@@ -1496,7 +1496,7 @@ const configAbility = {
                               "DV_PursuedDamage_LimitCount"
                             ]
                           },
-                          "scope": "ContextCaster"
+                          "variableName": "DV_PursuedDamage_LimitCount"
                         }
                       ]
                     }
@@ -1536,7 +1536,7 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_PursuedDamage_LimitCount",
+                          "scope": "ContextCaster",
                           "value": {
                             "operator": "Variables[0] (DV_PursuedDamage_LimitCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(DV_PursuedDamage_LimitCount - 1)",
@@ -1547,7 +1547,7 @@ const configAbility = {
                               "DV_PursuedDamage_LimitCount"
                             ]
                           },
-                          "scope": "ContextCaster"
+                          "variableName": "DV_PursuedDamage_LimitCount"
                         }
                       ]
                     }
@@ -1748,9 +1748,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_Rank02_Effcet",
+                      "scope": "ContextCaster",
                       "value": 0,
-                      "scope": "ContextCaster"
+                      "variableName": "DV_Rank02_Effcet"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -1774,7 +1774,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Multipler",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 100))",
@@ -1784,11 +1783,11 @@ const configAbility = {
                   "MDF_PropertyValue",
                   100
                 ]
-              }
+              },
+              "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.18) || MUL || RETURN",
                 "displayLines": "(MDF_Multipler * 0.18)",
@@ -1797,7 +1796,8 @@ const configAbility = {
                   "MDF_Multipler",
                   0.18
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue2"
             },
             {
               "name": "IF",
@@ -1822,7 +1822,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2_Max) || RETURN",
                     "displayLines": "MDF_PropertyValue2_Max",
@@ -1830,7 +1829,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PropertyValue2_Max"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             },
@@ -1894,7 +1894,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentAttack2",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentAttack) || Variables[1] (MDF_CurrentAttackConvert) || SUB || RETURN",
                 "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)",
@@ -1903,7 +1902,8 @@ const configAbility = {
                   "MDF_CurrentAttack",
                   "MDF_CurrentAttackConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentAttack2"
             },
             {
               "name": "IF",

@@ -150,7 +150,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_CurrenMaxtHP",
       "value": {
         "operator": "Variables[0] (_CurrenMaxtHP) || Variables[1] (_CurrentHPConvert) || SUB || RETURN",
         "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)",
@@ -159,7 +158,8 @@ const configAbility = {
           "_CurrenMaxtHP",
           "_CurrentHPConvert"
         ]
-      }
+      },
+      "variableName": "_CurrenMaxtHP"
     },
     {
       "name": "Add Events/Bonuses",

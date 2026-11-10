@@ -47,7 +47,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_BirdAttackCount",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_BirdAttackCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_BirdAttackCount + 1)",
@@ -57,7 +56,8 @@ const configAbility = {
                     "variables": [
                       "DV_FantasticStory_BaseAbility_BirdAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_BirdAttackCount"
                 },
                 {
                   "name": "Add Events/Bonuses",

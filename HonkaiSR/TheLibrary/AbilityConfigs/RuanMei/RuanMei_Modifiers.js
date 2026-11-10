@@ -180,8 +180,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DV_RuanMei_PassiveArea_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_RuanMei_PassiveArea_Count"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -240,8 +240,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DV_RuanMei_PassiveArea_Count",
-              "value": 1
+              "value": 1,
+              "variableName": "DV_RuanMei_PassiveArea_Count"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -254,7 +254,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BreakAttackToDelay",
               "value": {
                 "operator": "Variables[0] (MDF_BreakAttackToDelay) || Variables[1] (0.2) || MUL || Variables[2] (0.1) || ADD || RETURN",
                 "displayLines": "((MDF_BreakAttackToDelay * 0.2) + 0.1)",
@@ -264,7 +263,8 @@ const configAbility = {
                   0.2,
                   0.1
                 ]
-              }
+              },
+              "variableName": "MDF_BreakAttackToDelay"
             },
             {
               "name": "Assign Advance/Delay to Current Ability Use",
@@ -354,9 +354,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DV_NeedDettachEffect",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DV_NeedDettachEffect"
                 }
               ]
             }
@@ -969,7 +969,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
@@ -981,7 +980,8 @@ const configAbility = {
                       0.1,
                       0.06
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                 },
                 {
                   "name": "IF",
@@ -995,8 +995,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     }
                   ],
                   "failed": [
@@ -1019,7 +1019,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                           "value": {
                             "operator": "Variables[0] (0.36) || RETURN",
                             "displayLines": "0.36",
@@ -1027,7 +1026,8 @@ const configAbility = {
                             "variables": [
                               0.36
                             ]
-                          }
+                          },
+                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
                       ]
                     }
@@ -1035,7 +1035,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_P1_DamageAddedRatioFinal",
                   "value": {
                     "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
                     "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
@@ -1044,7 +1043,8 @@ const configAbility = {
                       "SkillTree_PointB3_BreakDamageAddedValue",
                       0.32
                     ]
-                  }
+                  },
+                  "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 },
                 {
                   "name": "Find New Target",
@@ -1129,7 +1129,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[2] (1.2) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.06) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_BreakDamageAddedValue - 1.2) / 0.1)) * 0.06)",
@@ -1141,7 +1140,8 @@ const configAbility = {
                       0.1,
                       0.06
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                 },
                 {
                   "name": "IF",
@@ -1155,8 +1155,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                     }
                   ],
                   "failed": [
@@ -1179,7 +1179,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                           "value": {
                             "operator": "Variables[0] (0.36) || RETURN",
                             "displayLines": "0.36",
@@ -1187,7 +1186,8 @@ const configAbility = {
                             "variables": [
                               0.36
                             ]
-                          }
+                          },
+                          "variableName": "SkillTree_PointB3_BreakDamageAddedValue"
                         }
                       ]
                     }
@@ -1195,7 +1195,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_P1_DamageAddedRatioFinal",
                   "value": {
                     "operator": "Variables[0] (SkillTree_PointB3_BreakDamageAddedValue) || Variables[1] (0.32) || ADD || RETURN",
                     "displayLines": "(SkillTree_PointB3_BreakDamageAddedValue + 0.32)",
@@ -1204,7 +1203,8 @@ const configAbility = {
                       "SkillTree_PointB3_BreakDamageAddedValue",
                       0.32
                     ]
-                  }
+                  },
+                  "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 },
                 {
                   "name": "Find New Target",

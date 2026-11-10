@@ -401,13 +401,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -424,13 +424,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -447,13 +447,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -470,13 +470,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -493,13 +493,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -516,13 +516,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -539,13 +539,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -562,13 +562,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -585,13 +585,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -608,13 +608,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -631,13 +631,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -654,13 +654,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -677,13 +677,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },
@@ -700,13 +700,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "FirstPuman"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SecondPuman",
-                  "value": 800205060
+                  "value": 800205060,
+                  "variableName": "SecondPuman"
                 }
               ]
             },

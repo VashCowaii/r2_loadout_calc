@@ -277,7 +277,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPNeed",
                   "value": {
                     "operator": "Variables[0] (EXSkill01) || RETURN",
                     "displayLines": "EXSkill01",
@@ -285,7 +284,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "EXSkill01"
                     ]
-                  }
+                  },
+                  "variableName": "BPNeed"
                 },
                 {
                   "name": "IF",
@@ -313,7 +313,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPNeed",
                   "value": {
                     "operator": "Variables[0] (EXSkill01) || RETURN",
                     "displayLines": "EXSkill01",
@@ -321,7 +320,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "EXSkill01"
                     ]
-                  }
+                  },
+                  "variableName": "BPNeed"
                 },
                 {
                   "name": "IF",
@@ -731,8 +731,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_First_Sprint",
-          "value": 1
+          "value": 1,
+          "variableName": "Is_First_Sprint"
         }
       ],
       "references": [],
@@ -772,12 +772,11 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Is_First_Sprint",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_First_Sprint"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SprintModifiedSteerSpeed",
               "value": {
                 "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
                 "displayLines": "SprintModifiedSteerSpeed",
@@ -785,11 +784,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "SprintModifiedSteerSpeed"
                 ]
-              }
+              },
+              "variableName": "SprintModifiedSteerSpeed"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SprintModifiedSpeed",
               "value": {
                 "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
                 "displayLines": "SprintModifiedSpeed",
@@ -797,7 +796,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "SprintModifiedSpeed"
                 ]
-              }
+              },
+              "variableName": "SprintModifiedSpeed"
             },
             {
               "name": "IF",
@@ -874,8 +874,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SprintModifiedSteerSpeed",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "SprintModifiedSteerSpeed"
                     },
                     {
                       "name": "IF",
@@ -896,15 +896,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SprintModifiedSpeed",
-                          "value": 14
+                          "value": 14,
+                          "variableName": "SprintModifiedSpeed"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SprintModifiedSpeed",
-                          "value": 20
+                          "value": 20,
+                          "variableName": "SprintModifiedSpeed"
                         }
                       ]
                     }
@@ -1311,15 +1311,15 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillRank_Rank04_LifeTime",
-              "value": 2
+              "value": 2,
+              "variableName": "SkillRank_Rank04_LifeTime"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillRank_Rank04_LifeTime",
-              "value": 1
+              "value": 1,
+              "variableName": "SkillRank_Rank04_LifeTime"
             }
           ]
         },
@@ -1409,7 +1409,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "BPNeed",
                   "value": {
                     "operator": "Variables[0] (EXSkill01) || RETURN",
                     "displayLines": "EXSkill01",
@@ -1417,7 +1416,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "EXSkill01"
                     ]
-                  }
+                  },
+                  "variableName": "BPNeed"
                 },
                 {
                   "name": "IF",
@@ -1472,7 +1472,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AddMaxLayer",
                       "value": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -1480,12 +1479,13 @@ const compositeAbilityObject = {
                         "variables": [
                           4
                         ]
-                      }
+                      },
+                      "variableName": "AddMaxLayer"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AddLayer",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "AddLayer"
                     }
                   ]
                 }
@@ -1590,8 +1590,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EXSkill01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EXSkill01"
                     }
                   ]
                 }
@@ -1674,7 +1674,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "BPNeed",
                       "value": {
                         "operator": "Variables[0] (EXSkill01) || RETURN",
                         "displayLines": "EXSkill01",
@@ -1682,7 +1681,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "EXSkill01"
                         ]
-                      }
+                      },
+                      "variableName": "BPNeed"
                     },
                     {
                       "name": "IF",
@@ -1991,8 +1991,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -2088,7 +2088,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -2098,7 +2097,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2202,7 +2202,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -2212,7 +2211,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2284,7 +2284,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -2294,7 +2293,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2429,8 +2429,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EXSkill01",
-          "value": 0
+          "value": 0,
+          "variableName": "EXSkill01"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2521,7 +2521,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EXSkill01",
           "value": {
             "operator": "Variables[0] (EXSkill01) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(EXSkill01 + 1)",
@@ -2531,7 +2530,8 @@ const compositeAbilityObject = {
             "variables": [
               "EXSkill01"
             ]
-          }
+          },
+          "variableName": "EXSkill01"
         },
         {
           "name": "IF",
@@ -2604,7 +2604,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BPNeed",
           "value": {
             "operator": "Variables[0] (EXSkill01) || RETURN",
             "displayLines": "EXSkill01",
@@ -2612,7 +2611,8 @@ const compositeAbilityObject = {
             "variables": [
               "EXSkill01"
             ]
-          }
+          },
+          "variableName": "BPNeed"
         },
         {
           "name": "IF",
@@ -3020,8 +3020,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3057,7 +3057,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3067,7 +3066,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3103,7 +3103,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3113,7 +3112,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3149,7 +3149,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3159,7 +3158,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3266,7 +3266,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3276,7 +3275,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3383,7 +3383,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3393,7 +3392,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3500,7 +3500,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3510,7 +3509,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3620,7 +3620,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3630,7 +3629,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3658,8 +3658,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EXSkill01",
-          "value": 0
+          "value": 0,
+          "variableName": "EXSkill01"
         },
         "Trigger: Ability End"
       ],
@@ -3712,8 +3712,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3749,7 +3749,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3759,7 +3758,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3795,7 +3795,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3805,7 +3804,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -3841,7 +3841,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -3851,7 +3850,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3993,7 +3993,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4003,7 +4002,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4201,7 +4201,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4211,7 +4210,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4247,8 +4247,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EXSkill01",
-          "value": 0
+          "value": 0,
+          "variableName": "EXSkill01"
         },
         "Trigger: Ability End"
       ],
@@ -4306,8 +4306,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4340,7 +4340,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4350,7 +4349,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4383,7 +4383,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4393,7 +4392,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4427,7 +4427,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4437,7 +4436,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4465,8 +4465,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EXSkill01",
-          "value": 0
+          "value": 0,
+          "variableName": "EXSkill01"
         },
         "Trigger: Ability End"
       ],
@@ -4518,8 +4518,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "Shot Fired",
@@ -4557,7 +4557,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4567,7 +4566,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -4602,7 +4602,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Flag_AttackCount",
           "value": {
             "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Flag_AttackCount + 1)",
@@ -4612,7 +4611,8 @@ const compositeAbilityObject = {
             "variables": [
               "Flag_AttackCount"
             ]
-          }
+          },
+          "variableName": "Flag_AttackCount"
         },
         "Trigger: Ability End"
       ],

@@ -47,7 +47,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_DieSumsCheck",
       "value": {
         "operator": "Variables[0] (_DieSums) || RETURN",
         "displayLines": "_DieSums",
@@ -55,17 +54,18 @@ const configAbility = {
         "variables": [
           "_DieSums"
         ]
-      }
+      },
+      "variableName": "_DieSumsCheck"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck02",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck02"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SummonCounts",
-      "value": 0
+      "value": 0,
+      "variableName": "_SummonCounts"
     }
   ],
   "targetObjectData": {

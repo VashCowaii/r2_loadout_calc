@@ -322,8 +322,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AIFlag",
-              "value": 2
+              "value": 2,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -502,8 +502,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Insert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Insert"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -543,8 +543,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Insert",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Insert"
                 }
               ]
             }
@@ -555,13 +555,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Trigger",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_Trigger"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Insert",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_Insert"
             },
             {
               "name": "Inject Ability Use",
@@ -634,8 +634,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Wig",
-              "value": 1
+              "value": 1,
+              "variableName": "Wig"
             }
           ]
         },

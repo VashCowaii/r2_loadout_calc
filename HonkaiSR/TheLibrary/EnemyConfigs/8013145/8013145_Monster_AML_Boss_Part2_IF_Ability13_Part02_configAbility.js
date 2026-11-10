@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill13DamagePerformFinishFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill13DamagePerformFinishFlag"
     },
     "Ability Start",
     {
@@ -303,8 +303,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill13DamagePerformFinishFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill13DamagePerformFinishFlag"
         },
         {
           "name": "ATK Scaling DMG",
@@ -434,8 +434,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill13DamagePerformFinishFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill13DamagePerformFinishFlag"
         },
         {
           "name": "ATK Scaling DMG",

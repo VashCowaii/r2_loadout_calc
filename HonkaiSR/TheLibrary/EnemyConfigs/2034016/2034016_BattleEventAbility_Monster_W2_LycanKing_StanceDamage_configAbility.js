@@ -27,7 +27,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "WolfBoss_BloodRageCount",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
             "displayLines": "ResetBloodRageCount",
@@ -36,7 +36,7 @@ const configAbility = {
               "ResetBloodRageCount"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "WolfBoss_BloodRageCount"
         },
         {
           "name": "Action Advance/Delay",

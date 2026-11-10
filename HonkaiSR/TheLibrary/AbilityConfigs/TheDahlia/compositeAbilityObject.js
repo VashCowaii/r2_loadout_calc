@@ -725,9 +725,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPSkillPriority",
+                  "scope": "AITag",
                   "value": 0,
-                  "scope": "AITag"
+                  "variableName": "BPSkillPriority"
                 }
               ]
             },
@@ -741,9 +741,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPSkillPriority",
+                  "scope": "AITag",
                   "value": 1,
-                  "scope": "AITag"
+                  "variableName": "BPSkillPriority"
                 }
               ]
             },
@@ -1233,7 +1233,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_maxAddSP",
                       "value": {
                         "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (_maxSP) || Variables[2] (0.5) || MUL || Variables[3] (_curSP) || SUB || PARAM_2 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, ((_maxSP * 0.5) - _curSP))",
@@ -1246,7 +1245,8 @@ const compositeAbilityObject = {
                           0.5,
                           "_curSP"
                         ]
-                      }
+                      },
+                      "variableName": "_maxAddSP"
                     },
                     {
                       "name": "IF",
@@ -2442,7 +2442,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_AttackGap",
+          "scope": "ContextAbility",
           "value": {
             "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
             "displayLines": "(0.1 / 5)",
@@ -2453,12 +2453,12 @@ const compositeAbilityObject = {
               5
             ]
           },
-          "scope": "ContextAbility"
+          "variableName": "ADF_AttackGap"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_FirstHit",
-          "value": 1
+          "value": 1,
+          "variableName": "ADF_FirstHit"
         },
         {
           "name": "IF",
@@ -2469,7 +2469,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ADF_BounceCount",
               "value": {
                 "operator": "Variables[0] (5) || Variables[1] (5) || ADD || RETURN",
                 "displayLines": "(5 + 5)",
@@ -2478,13 +2477,13 @@ const compositeAbilityObject = {
                   5,
                   5
                 ]
-              }
+              },
+              "variableName": "ADF_BounceCount"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ADF_BounceCount",
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -2492,7 +2491,8 @@ const compositeAbilityObject = {
                 "variables": [
                   5
                 ]
-              }
+              },
+              "variableName": "ADF_BounceCount"
             }
           ]
         },
@@ -2553,8 +2553,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ADF_FirstHit",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ADF_FirstHit"
                     }
                   ]
                 },
@@ -2720,7 +2720,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalStanceDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
                         "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
@@ -2729,7 +2728,8 @@ const compositeAbilityObject = {
                           "MDF_TotalStanceDamage",
                           "MDF_HitStanceDamage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalStanceDamage"
                     }
                   ]
                 }
@@ -2930,15 +2930,15 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank01_Activated",
-              "value": 1
+              "value": 1,
+              "variableName": "Rank01_Activated"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank01_Activated",
-              "value": 0
+              "value": 0,
+              "variableName": "Rank01_Activated"
             }
           ]
         }
@@ -3090,7 +3090,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_StanceValue",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceRatio)",
@@ -3100,7 +3100,7 @@ const compositeAbilityObject = {
                           "MDF_StanceRatio"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_StanceValue"
                     },
                     {
                       "name": "Deal Toughness DMG",
@@ -4220,7 +4220,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PropertyValue",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueCaster) || Variables[1] (0.24) || MUL || Variables[2] (0.5) || ADD || RETURN",
                     "displayLines": "((MDF_PropertyValueCaster * 0.24) + 0.5)",
@@ -4231,7 +4231,7 @@ const compositeAbilityObject = {
                       0.5
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",

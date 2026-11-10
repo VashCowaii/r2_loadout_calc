@@ -86,7 +86,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (ModifierDamageUpValue) || Variables[1] (Buff_ModifierLayers) || MUL || RETURN",
                     "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)",
@@ -95,7 +94,8 @@ const compositeAbilityObject = {
                       "ModifierDamageUpValue",
                       "Buff_ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1052,8 +1052,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_ResetValue"
                     }
                   ]
                 }
@@ -1071,8 +1071,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 10
+                      "value": 10,
+                      "variableName": "MDF_ResetValue"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -1095,8 +1095,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "MDF_ResetValue"
                     },
                     {
                       "name": "Declare Custom Variable",

@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Item2_AchievementFlag",
+      "scope": "ContextCaster",
       "value": 1,
-      "scope": "ContextCaster"
+      "variableName": "_Item2_AchievementFlag"
     },
     {
       "name": "UI Display Event",

@@ -149,7 +149,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Layer",
               "value": {
                 "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                 "displayLines": "MDF_MaxLayer",
@@ -157,7 +156,8 @@ const configAbility = {
                 "variables": [
                   "MDF_MaxLayer"
                 ]
-              }
+              },
+              "variableName": "MDF_Layer"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -545,8 +545,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Layer"
                     }
                   ]
                 }
@@ -861,8 +861,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Layer"
                 }
               ]
             },

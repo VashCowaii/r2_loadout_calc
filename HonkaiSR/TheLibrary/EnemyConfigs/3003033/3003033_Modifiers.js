@@ -230,7 +230,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DangerLevel",
               "value": {
                 "operator": "Constants[0] (5) || Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || SUB || RETURN",
                 "displayLines": "(5 - Monster_W3_Figure_02_RLElite_AimTargetCount)",
@@ -240,7 +239,8 @@ const configAbility = {
                 "variables": [
                   "Monster_W3_Figure_02_RLElite_AimTargetCount"
                 ]
-              }
+              },
+              "variableName": "MDF_DangerLevel"
             }
           ]
         },
@@ -263,8 +263,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "End_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "End_Flag"
                 }
               ]
             }
@@ -379,7 +379,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Monster_W3_Figure_02_AimTargetCount",
                   "value": {
                     "operator": "Variables[0] (Monster_W3_Figure_02_RLElite_AimTargetCount) || RETURN",
                     "displayLines": "Monster_W3_Figure_02_RLElite_AimTargetCount",
@@ -387,7 +386,8 @@ const configAbility = {
                     "variables": [
                       "Monster_W3_Figure_02_RLElite_AimTargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "Monster_W3_Figure_02_AimTargetCount"
                 }
               ],
               "failed": [
@@ -454,8 +454,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "End_Flag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "End_Flag"
                         }
                       ]
                     }
@@ -463,8 +463,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ModifierLayers",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ModifierLayers"
                 }
               ]
             }
@@ -475,8 +475,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 7
+              "value": 7,
+              "variableName": "AIFlag"
             },
             {
               "name": "IF",

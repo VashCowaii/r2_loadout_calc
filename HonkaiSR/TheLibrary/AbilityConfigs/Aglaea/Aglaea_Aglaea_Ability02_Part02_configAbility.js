@@ -67,7 +67,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "_CasterEnergy",
           "value": {
             "operator": "Variables[0] (_Energy) || RETURN",
             "displayLines": "_Energy",
@@ -75,7 +74,8 @@ const configAbility = {
             "variables": [
               "_Energy"
             ]
-          }
+          },
+          "variableName": "_CasterEnergy"
         },
         {
           "name": "Add Events/Bonuses",

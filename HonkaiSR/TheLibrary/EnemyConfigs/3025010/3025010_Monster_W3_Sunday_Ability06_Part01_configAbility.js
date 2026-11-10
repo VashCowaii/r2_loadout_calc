@@ -22,8 +22,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06PerformFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill06PerformFlag"
         },
         {
           "name": "Find New Target",

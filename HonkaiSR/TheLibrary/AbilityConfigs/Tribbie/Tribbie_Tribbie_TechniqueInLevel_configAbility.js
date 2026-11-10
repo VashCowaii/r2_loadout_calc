@@ -67,7 +67,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Energy_Layer",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -75,7 +74,8 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "Energy_Layer"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

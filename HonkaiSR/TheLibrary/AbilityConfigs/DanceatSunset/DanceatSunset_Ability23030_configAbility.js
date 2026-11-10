@@ -60,7 +60,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageAddedRatio",
               "value": {
                 "operator": "Variables[0] (0.36) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(0.36 * MDF_Layer)",
@@ -69,7 +68,8 @@ const configAbility = {
                   0.36,
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageAddedRatio"
             }
           ]
         }

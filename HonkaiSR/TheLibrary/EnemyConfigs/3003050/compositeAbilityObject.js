@@ -389,8 +389,8 @@ const compositeAbilityObject = {
                       "noTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 7
+                          "value": 7,
+                          "variableName": "AIFlag"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -577,8 +577,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 7
+                  "value": 7,
+                  "variableName": "AIFlag"
                 }
               ]
             }

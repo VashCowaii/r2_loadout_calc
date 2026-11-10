@@ -102,7 +102,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_Refund_Count",
           "value": {
             "operator": "Variables[0] (FLOOR) || Variables[1] (_Partner_Count_Show) || Variables[2] (AbilityRank_Eidolon6_P1_Ratio) || MUL || PARAM_1 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_Partner_Count_Show * AbilityRank_Eidolon6_P1_Ratio))",
@@ -112,14 +111,15 @@ const configAbility = {
               "_Partner_Count_Show",
               "AbilityRank_Eidolon6_P1_Ratio"
             ]
-          }
+          },
+          "variableName": "_Rank06_Refund_Count"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S11_PointB1_Rat",
-      "value": 1
+      "value": 1,
+      "variableName": "S11_PointB1_Rat"
     },
     {
       "name": "ATK Scaling DMG",
@@ -219,7 +219,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_Evernight_00_DeathRattle_Layer",
           "value": {
             "operator": "Variables[0] (40) || RETURN",
             "displayLines": "40",
@@ -227,7 +226,8 @@ const configAbility = {
             "variables": [
               40
             ]
-          }
+          },
+          "variableName": "_Evernight_00_DeathRattle_Layer"
         }
       ],
       "failed": [
@@ -237,7 +237,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_Evernight_00_DeathRattle_Layer",
           "value": {
             "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
             "displayLines": "_Partner_Count_Show",
@@ -245,14 +244,15 @@ const configAbility = {
             "variables": [
               "_Partner_Count_Show"
             ]
-          }
+          },
+          "variableName": "_Evernight_00_DeathRattle_Layer"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "_Partner_Count"
     },
     {
       "name": "IF",

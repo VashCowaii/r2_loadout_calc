@@ -36,7 +36,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_Trigger_Count",
           "value": {
             "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Passive_Trigger_Count + 1)",
@@ -46,7 +45,8 @@ const configAbility = {
             "variables": [
               "Passive_Trigger_Count"
             ]
-          }
+          },
+          "variableName": "Passive_Trigger_Count"
         },
         {
           "name": "IF",
@@ -136,7 +136,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Passive_Trigger_Count",
               "value": {
                 "operator": "Variables[0] (Passive_Trigger_Count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Passive_Trigger_Count + 1)",
@@ -146,7 +145,8 @@ const configAbility = {
                 "variables": [
                   "Passive_Trigger_Count"
                 ]
-              }
+              },
+              "variableName": "Passive_Trigger_Count"
             },
             {
               "name": "IF",

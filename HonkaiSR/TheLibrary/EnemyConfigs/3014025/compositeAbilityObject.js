@@ -247,7 +247,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DeathPartMaxHPCount",
                   "value": {
                     "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
                     "displayLines": "{[Skill03[3]]}",
@@ -255,7 +254,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill03[3]]}"
                     ]
-                  }
+                  },
+                  "variableName": "DeathPartMaxHPCount"
                 }
               ]
             },
@@ -1895,8 +1895,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BonusAttackCounter",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BonusAttackCounter"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2246,8 +2246,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
-          "value": 0
+          "value": 0,
+          "variableName": "BonusAttackCounter"
         },
         {
           "name": "Declare Custom Variable",
@@ -2867,7 +2867,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "variableName": "Owner_MaxHPCount",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
                         "displayLines": "DeathPartMaxHPCount",
@@ -2876,7 +2876,7 @@ const compositeAbilityObject = {
                           "DeathPartMaxHPCount"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Owner_MaxHPCount"
                     }
                   ]
                 }
@@ -3226,7 +3226,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
           "value": {
             "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(BonusAttackCounter + 1)",
@@ -3236,7 +3235,8 @@ const compositeAbilityObject = {
             "variables": [
               "BonusAttackCounter"
             ]
-          }
+          },
+          "variableName": "BonusAttackCounter"
         },
         {
           "name": "IF",
@@ -3481,7 +3481,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "variableName": "Owner_MaxHPCount",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
                         "displayLines": "DeathPartMaxHPCount",
@@ -3490,7 +3490,7 @@ const compositeAbilityObject = {
                           "DeathPartMaxHPCount"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Owner_MaxHPCount"
                     }
                   ]
                 }
@@ -4073,7 +4073,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
           "value": {
             "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(BonusAttackCounter + 1)",
@@ -4083,7 +4082,8 @@ const compositeAbilityObject = {
             "variables": [
               "BonusAttackCounter"
             ]
-          }
+          },
+          "variableName": "BonusAttackCounter"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4483,7 +4483,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DeathPartMaxHPCount",
               "value": {
                 "operator": "Variables[0] (DeathPartMaxHPCount) || Variables[1] ({[Skill03[4]]}) || ADD || RETURN",
                 "displayLines": "(DeathPartMaxHPCount + {[Skill03[4]]})",
@@ -4492,7 +4491,8 @@ const compositeAbilityObject = {
                   "DeathPartMaxHPCount",
                   "{[Skill03[4]]}"
                 ]
-              }
+              },
+              "variableName": "DeathPartMaxHPCount"
             }
           ]
         },
@@ -5091,9 +5091,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "IF",
@@ -5155,9 +5155,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Remove Events/Bonuses",
@@ -5356,15 +5356,15 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 3,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "True_Count",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "True_Count"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5374,9 +5374,9 @@ const compositeAbilityObject = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 2,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Remove Events/Bonuses",
@@ -5388,9 +5388,9 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "True_Count",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "True_Count"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5435,9 +5435,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",

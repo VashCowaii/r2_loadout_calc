@@ -178,8 +178,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DieWithBonus",
-      "value": 1
+      "value": 1,
+      "variableName": "DieWithBonus"
     },
     {
       "name": "Define Custom Variable with Added Value",

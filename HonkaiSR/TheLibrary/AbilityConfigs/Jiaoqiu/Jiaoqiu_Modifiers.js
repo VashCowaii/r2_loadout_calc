@@ -261,7 +261,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Layer_Min",
                               "value": {
                                 "operator": "Variables[0] (_TempLayer) || RETURN",
                                 "displayLines": "_TempLayer",
@@ -269,7 +268,8 @@ const configAbility = {
                                 "variables": [
                                   "_TempLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "_Layer_Min"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -393,8 +393,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Layer_Min",
-                      "value": 99
+                      "value": 99,
+                      "variableName": "_Layer_Min"
                     }
                   ]
                 }
@@ -519,8 +519,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillRank_Rank04_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "SkillRank_Rank04_Flag"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -535,7 +535,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Max_Count_Left",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -543,7 +542,8 @@ const configAbility = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "_Max_Count_Left"
             }
           ]
         },
@@ -579,7 +579,6 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Layer_Total",
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -587,7 +586,8 @@ const configAbility = {
                             "variables": [
                               1
                             ]
-                          }
+                          },
+                          "variableName": "_Layer_Total"
                         }
                       ]
                     },
@@ -636,7 +636,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Layer_Total",
                               "value": {
                                 "operator": "Variables[0] (_Temp_Val) || RETURN",
                                 "displayLines": "_Temp_Val",
@@ -644,7 +643,8 @@ const configAbility = {
                                 "variables": [
                                   "_Temp_Val"
                                 ]
-                              }
+                              },
+                              "variableName": "_Layer_Total"
                             }
                           ]
                         }
@@ -904,7 +904,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || Variables[2] (MDF_PropertyValue_2) || MUL || ADD || RETURN",
                 "displayLines": "(MDF_PropertyValue + ((MDF_Layer - 1) * MDF_PropertyValue_2))",
@@ -916,7 +915,8 @@ const configAbility = {
                   "MDF_Layer",
                   "MDF_PropertyValue_2"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -960,7 +960,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Snapshot Target's Source Owner}}"
                   },
-                  "variableName": "_Layer_Total",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || RETURN",
                     "displayLines": "MDF_Layer",
@@ -968,7 +967,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "_Layer_Total"
                 }
               ]
             },
@@ -985,7 +985,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Ratio",
                   "value": {
                     "operator": "Variables[0] (DOT_Ratio) || Variables[1] (SkillRank_Rank02_P1_Ratio) || ADD || RETURN",
                     "displayLines": "(DOT_Ratio + SkillRank_Rank02_P1_Ratio)",
@@ -994,7 +993,8 @@ const configAbility = {
                       "DOT_Ratio",
                       "SkillRank_Rank02_P1_Ratio"
                     ]
-                  }
+                  },
+                  "variableName": "DOT_Ratio"
                 }
               ]
             },
@@ -1113,8 +1113,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TurnCD",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TurnCD"
                 }
               ]
             }
@@ -1254,12 +1254,11 @@ const configAbility = {
                   "success": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_TurnCD",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_TurnCD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Max_Count_Left",
                       "value": {
                         "operator": "Variables[0] (_Max_Count_Left) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(_Max_Count_Left - 1)",
@@ -1269,7 +1268,8 @@ const configAbility = {
                         "variables": [
                           "_Max_Count_Left"
                         ]
-                      }
+                      },
+                      "variableName": "_Max_Count_Left"
                     }
                   ]
                 }
@@ -1381,12 +1381,11 @@ const configAbility = {
                   "success": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_TurnCD",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_TurnCD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Max_Count_Left",
                       "value": {
                         "operator": "Variables[0] (_Max_Count_Left) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(_Max_Count_Left - 1)",
@@ -1396,7 +1395,8 @@ const configAbility = {
                         "variables": [
                           "_Max_Count_Left"
                         ]
-                      }
+                      },
+                      "variableName": "_Max_Count_Left"
                     }
                   ]
                 }
@@ -1430,7 +1430,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB2_StatusProbabilityValue",
               "value": {
                 "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB2_StatusProbabilityValue) || Variables[2] (0.8) || SUB || Variables[3] (0.15) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.6) || MUL || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB2_StatusProbabilityValue - 0.8) / 0.15)) * 0.6)",
@@ -1442,7 +1441,8 @@ const configAbility = {
                   0.15,
                   0.6
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB2_StatusProbabilityValue"
             },
             {
               "name": "IF",
@@ -1456,8 +1456,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB2_StatusProbabilityValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SkillTree_PointB2_StatusProbabilityValue"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1488,7 +1488,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB2_StatusProbabilityValue",
                       "value": {
                         "operator": "Variables[0] (2.4) || RETURN",
                         "displayLines": "2.4",
@@ -1496,7 +1495,8 @@ const configAbility = {
                         "variables": [
                           2.4
                         ]
-                      }
+                      },
+                      "variableName": "SkillTree_PointB2_StatusProbabilityValue"
                     }
                   ]
                 },

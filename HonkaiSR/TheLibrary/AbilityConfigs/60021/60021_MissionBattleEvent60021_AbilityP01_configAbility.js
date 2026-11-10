@@ -109,8 +109,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Triggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_Triggered"
                 }
               ]
             }
@@ -169,8 +169,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Triggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_Triggered"
                 }
               ]
             }
@@ -229,8 +229,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Triggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_Triggered"
                 }
               ]
             }
@@ -289,8 +289,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Triggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_Triggered"
                 }
               ]
             }

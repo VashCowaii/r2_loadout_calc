@@ -377,7 +377,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "UseTimes",
           "value": {
             "operator": "Variables[0] (UseTimes) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(UseTimes + 1)",
@@ -387,7 +386,8 @@ const compositeAbilityObject = {
             "variables": [
               "UseTimes"
             ]
-          }
+          },
+          "variableName": "UseTimes"
         },
         {
           "name": "IF",
@@ -453,8 +453,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BGMChangeFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "BGMChangeFlag"
             }
           ]
         },

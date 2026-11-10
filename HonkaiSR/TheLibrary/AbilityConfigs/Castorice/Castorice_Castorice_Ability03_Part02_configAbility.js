@@ -164,7 +164,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_Rank02_Count",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -172,7 +171,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Castorice_Rank02_Count"
         },
         {
           "name": "Define Custom Variable",
@@ -180,7 +180,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "CastoriceServant_Rank02_Count",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -188,7 +187,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "CastoriceServant_Rank02_Count"
         }
       ]
     },

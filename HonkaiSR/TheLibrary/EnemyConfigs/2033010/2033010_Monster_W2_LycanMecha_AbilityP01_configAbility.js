@@ -52,7 +52,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Wolf_MaxAttackCount",
       "value": {
         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
         "displayLines": "{[SkillP01[0]]}",
@@ -60,7 +59,8 @@ const configAbility = {
         "variables": [
           "{[SkillP01[0]]}"
         ]
-      }
+      },
+      "variableName": "Wolf_MaxAttackCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -163,9 +163,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             },
             {
               "name": "Define Custom Variable",
@@ -173,9 +173,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Phase_Flag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "Phase_Flag"
             }
           ]
         },
@@ -224,13 +224,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Phase_Flag",
-              "value": 2
+              "value": 2,
+              "variableName": "Phase_Flag"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 4
+              "value": 4,
+              "variableName": "AIFlag"
             }
           ]
         },

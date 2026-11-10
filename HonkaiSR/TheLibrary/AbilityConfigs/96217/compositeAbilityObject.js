@@ -28,8 +28,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "G_ExSkill21_Allowed",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "G_ExSkill21_Allowed"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -52,8 +52,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "G_ExSkill21_Allowed",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "G_ExSkill21_Allowed"
                     },
                     {
                       "name": "Update Energy",
@@ -241,8 +241,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "G_ExSkill21_Allowed",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "G_ExSkill21_Allowed"
                         },
                         {
                           "name": "Use Custom Character Function",

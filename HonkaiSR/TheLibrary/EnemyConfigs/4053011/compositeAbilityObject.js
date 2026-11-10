@@ -95,8 +95,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -105,8 +105,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -962,8 +962,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "InsertCheck02",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "InsertCheck02"
                         },
                         {
                           "name": "Update Displayed Energy Bar",
@@ -1118,9 +1118,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_BattleTarget_LocalLegend_S5_1_Check",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_BattleTarget_LocalLegend_S5_1_Check"
                         }
                       ]
                     },
@@ -1130,9 +1130,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Manta: Event Target 02}}"
                       },
-                      "variableName": "_ChangePhaseKill",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_ChangePhaseKill"
                     },
                     {
                       "name": "Force Entity Death",
@@ -1266,8 +1266,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleScore_Damage",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BattleScore_Damage"
                 },
                 {
                   "name": "IF",
@@ -1555,8 +1555,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleScore_Damage",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BattleScore_Damage"
                 },
                 {
                   "name": "IF",
@@ -1870,7 +1870,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
                         "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
@@ -1879,7 +1878,8 @@ const compositeAbilityObject = {
                           "MDF_TotalDamageValue",
                           "MDF_AddDamageValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalDamageValue"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -1981,8 +1981,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleScore_Damage",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BattleScore_Damage"
                 },
                 {
                   "name": "IF",
@@ -2421,8 +2421,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleScore_Damage",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BattleScore_Damage"
                 },
                 {
                   "name": "IF",
@@ -2736,7 +2736,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalDamageValue) || Variables[1] (MDF_AddDamageValue) || ADD || RETURN",
                         "displayLines": "(MDF_TotalDamageValue + MDF_AddDamageValue)",
@@ -2745,7 +2744,8 @@ const compositeAbilityObject = {
                           "MDF_TotalDamageValue",
                           "MDF_AddDamageValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalDamageValue"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -2909,7 +2909,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TransferDamage",
                           "value": {
                             "operator": "Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[2] (MDF_TransferRatio) || SUB || DIV || Variables[0] (MDF_ConstFinalDamage) || Variables[1] (MDF_ShieldDamage) || ADD || SUB || RETURN",
                             "displayLines": "(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
@@ -2921,13 +2920,13 @@ const compositeAbilityObject = {
                               "MDF_ShieldDamage",
                               "MDF_TransferRatio"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_TransferDamage"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TransferDamage",
                           "value": {
                             "operator": "Variables[0] (MIN) || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || Constants[0] (1) || Variables[3] (MDF_TransferRatio) || SUB || DIV || Variables[4] (MDF_FinalDamageMax) || PARAM_2 || FUNCTION || Variables[1] (MDF_ConstFinalDamage) || Variables[2] (MDF_ShieldDamage) || ADD || SUB || RETURN",
                             "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(((MDF_ConstFinalDamage + MDF_ShieldDamage) / (1 - MDF_TransferRatio)), MDF_FinalDamageMax) - (MDF_ConstFinalDamage + MDF_ShieldDamage))",
@@ -2941,7 +2940,8 @@ const compositeAbilityObject = {
                               "MDF_TransferRatio",
                               "MDF_FinalDamageMax"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_TransferDamage"
                         }
                       ]
                     },
@@ -3177,8 +3177,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3195,8 +3195,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3754,8 +3754,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Trigger",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Trigger"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -3942,8 +3942,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Trigger",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Trigger"
                     },
                     {
                       "name": "IF",
@@ -4025,7 +4025,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_NewMaxLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLayer) || Variables[1] (MDF_NewMaxLayer) || SUB || RETURN",
                         "displayLines": "(MDF_MaxLayer - MDF_NewMaxLayer)",
@@ -4034,7 +4033,8 @@ const compositeAbilityObject = {
                           "MDF_MaxLayer",
                           "MDF_NewMaxLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_NewMaxLayer"
                     },
                     {
                       "name": "IF",
@@ -4459,7 +4459,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DotDamageRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[1]]}",
@@ -4467,7 +4466,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[PassiveSkill01[1]]}"
             ]
-          }
+          },
+          "variableName": "_DotDamageRatio"
         },
         {
           "name": "Create Enemies",
@@ -4936,13 +4936,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_Count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck02",
-          "value": 0
+          "value": 0,
+          "variableName": "InsertCheck02"
         },
         {
           "name": "Update Displayed Energy Bar",

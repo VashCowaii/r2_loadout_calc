@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Gilgamesh_00_MazeSkill_AchievementCount",
+      "scope": "ContextCaster",
       "value": 0,
-      "scope": "ContextCaster"
+      "variableName": "Gilgamesh_00_MazeSkill_AchievementCount"
     },
     {
       "name": "IF",

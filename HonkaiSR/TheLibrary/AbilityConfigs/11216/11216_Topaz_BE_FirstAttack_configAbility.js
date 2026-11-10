@@ -22,9 +22,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Battle Event's Caster}}"
           },
-          "variableName": "_damageStart",
+          "scope": "ContextCaster",
           "value": 1,
-          "scope": "ContextCaster"
+          "variableName": "_damageStart"
         }
       ],
       "failed": [
@@ -35,9 +35,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Battle Event's Caster}}"
           },
-          "variableName": "_damageStart",
+          "scope": "ContextCaster",
           "value": 1,
-          "scope": "ContextCaster"
+          "variableName": "_damageStart"
         }
       ]
     }

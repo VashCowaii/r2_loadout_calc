@@ -376,8 +376,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AddByLycanMecha",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AddByLycanMecha"
                 }
               ]
             },

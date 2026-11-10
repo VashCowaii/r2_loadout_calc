@@ -187,7 +187,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Lifetime",
                   "value": {
                     "operator": "Variables[0] (MDF_Lifetime) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_Lifetime - 1)",
@@ -197,7 +196,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Lifetime"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Lifetime"
                 }
               ]
             }

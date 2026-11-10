@@ -138,8 +138,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -204,8 +204,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -263,8 +263,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         }
@@ -371,7 +371,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_StanceDMGCount",
               "value": {
                 "operator": "Variables[0] (MDF_MaxStance) || Variables[1] (MDF_CurrentStance) || SUB || RETURN",
                 "displayLines": "(MDF_MaxStance - MDF_CurrentStance)",
@@ -380,7 +379,8 @@ const configAbility = {
                   "MDF_MaxStance",
                   "MDF_CurrentStance"
                 ]
-              }
+              },
+              "variableName": "MDF_StanceDMGCount"
             },
             {
               "name": "Deal Toughness DMG",
@@ -672,8 +672,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon04Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon04Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -728,8 +728,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon04Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon04Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -984,8 +984,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon03Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon03Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1040,8 +1040,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon03Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon03Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1296,8 +1296,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1352,8 +1352,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1608,8 +1608,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1664,8 +1664,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2152,8 +2152,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2176,8 +2176,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon02Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon02Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2456,8 +2456,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -2480,8 +2480,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               },
-              "variableName": "Summon01Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Summon01Flag"
             },
             {
               "name": "Define Custom Variable with Added Value",

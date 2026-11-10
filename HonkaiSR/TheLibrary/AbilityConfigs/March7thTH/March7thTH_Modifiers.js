@@ -538,8 +538,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_has_enhanced_this_turn",
-              "value": 0
+              "value": 0,
+              "variableName": "_has_enhanced_this_turn"
             },
             {
               "name": "Update Ability Binding",
@@ -860,13 +860,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Normal_StanceRatio",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Normal_StanceRatio"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Gain_Energy_Value",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Gain_Energy_Value"
                 }
               ],
               "failed": [
@@ -891,7 +891,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Normal_StanceRatio",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
                         "displayLines": "(1 + 1)",
@@ -901,12 +900,13 @@ const configAbility = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Normal_StanceRatio"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Gain_Energy_Value",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Gain_Energy_Value"
                     }
                   ]
                 }
@@ -933,8 +933,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_attack_flag",
-              "value": 1
+              "value": 1,
+              "variableName": "_attack_flag"
             }
           ]
         },
@@ -943,8 +943,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_attack_flag",
-              "value": 0
+              "value": 0,
+              "variableName": "_attack_flag"
             }
           ]
         },
@@ -988,8 +988,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_attack_flag",
-              "value": 0
+              "value": 0,
+              "variableName": "_attack_flag"
             }
           ]
         }

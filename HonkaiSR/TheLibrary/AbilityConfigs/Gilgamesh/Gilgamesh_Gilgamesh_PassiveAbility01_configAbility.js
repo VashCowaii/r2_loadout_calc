@@ -49,8 +49,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Avatar_Gilgamesh_00_KingCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Avatar_Gilgamesh_00_KingCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -86,8 +86,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Gilgamesh_00_Rank06_GoldenRule",
-          "value": 0
+          "value": 0,
+          "variableName": "Gilgamesh_00_Rank06_GoldenRule"
         },
         {
           "name": "Add Events/Bonuses",

@@ -78,7 +78,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyBar_ATKCountSum",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_ATKCount) || Variables[1] (EnergyBar_UltraATKCount) || ADD || RETURN",
                     "displayLines": "(EnergyBar_ATKCount + EnergyBar_UltraATKCount)",
@@ -87,7 +86,8 @@ const configAbility = {
                       "EnergyBar_ATKCount",
                       "EnergyBar_UltraATKCount"
                     ]
-                  }
+                  },
+                  "variableName": "EnergyBar_ATKCountSum"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

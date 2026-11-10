@@ -7,18 +7,18 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Charge",
-      "value": 1
+      "value": 1,
+      "variableName": "Is_Charge"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_BeingAttacked",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_BeingAttacked"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Passive_AttackTime",
-      "value": 0
+      "value": 0,
+      "variableName": "Passive_AttackTime"
     },
     {
       "name": "Add Events/Bonuses",
@@ -72,8 +72,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Is_Charge",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_Charge"
             },
             {
               "name": "Define Custom Variable",
@@ -81,8 +81,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Is_BeingAttacked",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_BeingAttacked"
             },
             {
               "name": "Define Custom Variable",
@@ -90,8 +90,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Is_Traitor",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_Traitor"
             },
             {
               "name": "Define Custom Variable",
@@ -99,8 +99,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",

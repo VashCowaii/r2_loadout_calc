@@ -26,8 +26,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 1
+              "value": 1,
+              "variableName": "MainCount"
             }
           ]
         }
@@ -646,8 +646,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ParasitismLayer",
-          "value": 0
+          "value": 0,
+          "variableName": "ParasitismLayer"
         },
         {
           "name": "Define Custom Variable with Modifier Values",
@@ -931,8 +931,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 2
+              "value": 2,
+              "variableName": "MainCount"
             }
           ]
         }

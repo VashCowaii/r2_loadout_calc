@@ -73,7 +73,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_DelayAddedRatio",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill03[15]]}) || RETURN",
         "displayLines": "{[PassiveSkill03[15]]}",
@@ -81,7 +80,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill03[15]]}"
         ]
-      }
+      },
+      "variableName": "_DelayAddedRatio"
     },
     {
       "name": "IF",
@@ -93,7 +93,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[0]]}",
@@ -101,11 +100,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[0]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[0]]}",
@@ -113,11 +112,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[0]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[2]]}",
@@ -125,7 +124,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[2]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -159,7 +159,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[6]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[6]]}",
@@ -167,11 +166,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[6]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[13]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[13]]}",
@@ -179,11 +178,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[13]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[14]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[14]]}",
@@ -191,7 +190,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[14]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -215,7 +215,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[5]]}",
@@ -223,11 +222,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[5]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[11]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[11]]}",
@@ -235,11 +234,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[11]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[12]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[12]]}",
@@ -247,7 +246,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[12]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -271,7 +271,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[4]]}",
@@ -279,11 +278,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[4]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[9]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[9]]}",
@@ -291,11 +290,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[9]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[10]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[10]]}",
@@ -303,7 +302,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[10]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -327,7 +327,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[3]]}",
@@ -335,11 +334,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[3]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[7]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[7]]}",
@@ -347,11 +346,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[7]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[8]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[8]]}",
@@ -359,7 +358,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[8]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -383,7 +383,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[2]]}",
@@ -391,11 +390,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[2]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[5]]}",
@@ -403,11 +402,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[5]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[6]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[6]]}",
@@ -415,7 +414,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[6]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -439,7 +439,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageReduceRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[1]]}",
@@ -447,11 +446,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[1]]}"
             ]
-          }
+          },
+          "variableName": "_DamageReduceRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DelayRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[3]]}",
@@ -459,11 +458,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[3]]}"
             ]
-          }
+          },
+          "variableName": "_DelayRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_HealHPRatio",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[4]]}",
@@ -471,7 +470,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[4]]}"
             ]
-          }
+          },
+          "variableName": "_HealHPRatio"
         }
       ]
     },
@@ -495,8 +495,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck",
-          "value": 0
+          "value": 0,
+          "variableName": "InsertCheck"
         }
       ]
     },

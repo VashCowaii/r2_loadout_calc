@@ -1345,7 +1345,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase) || RETURN",
             "displayLines": "MDF_CriticalDamageBase",
@@ -1353,11 +1352,11 @@ const compositeAbilityObject = {
             "variables": [
               "MDF_CriticalDamageBase"
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_change",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.16) || MUL || RETURN",
             "displayLines": "(MDF_CriticalDamageBase_change * 0.16)",
@@ -1366,11 +1365,11 @@ const compositeAbilityObject = {
               "MDF_CriticalDamageBase_change",
               0.16
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_change"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CriticalDamageBase_Total",
           "value": {
             "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.2) || ADD || RETURN",
             "displayLines": "(MDF_CriticalDamageBase_change + 0.2)",
@@ -1379,7 +1378,8 @@ const compositeAbilityObject = {
               "MDF_CriticalDamageBase_change",
               0.2
             ]
-          }
+          },
+          "variableName": "MDF_CriticalDamageBase_Total"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1560,7 +1560,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Bronya_SpeedUP_Ratio_01",
               "value": {
                 "operator": "Variables[0] (0.3) || RETURN",
                 "displayLines": "0.3",
@@ -1568,7 +1567,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.3
                 ]
-              }
+              },
+              "variableName": "Bronya_SpeedUP_Ratio_01"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1752,7 +1752,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Bronya_SpeedUP_Ratio_01",
               "value": {
                 "operator": "Variables[0] (0.3) || RETURN",
                 "displayLines": "0.3",
@@ -1760,7 +1759,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.3
                 ]
-              }
+              },
+              "variableName": "Bronya_SpeedUP_Ratio_01"
             },
             {
               "name": "Add Events/Bonuses",

@@ -201,8 +201,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Skill_Flag"
                 },
                 {
                   "name": "IF",
@@ -246,8 +246,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Skill_Flag"
             }
           ]
         }

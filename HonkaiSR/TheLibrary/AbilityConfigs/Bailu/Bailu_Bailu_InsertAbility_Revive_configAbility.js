@@ -113,7 +113,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ReviveTime2",
               "value": {
                 "operator": "Constants[0] (0) || RETURN",
                 "displayLines": "0",
@@ -121,7 +120,8 @@ const configAbility = {
                   0
                 ],
                 "variables": []
-              }
+              },
+              "variableName": "MDF_ReviveTime2"
             },
             {
               "name": "Update Displayed Energy Bar",

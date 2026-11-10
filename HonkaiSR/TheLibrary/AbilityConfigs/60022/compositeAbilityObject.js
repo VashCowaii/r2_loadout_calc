@@ -28,8 +28,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TalkCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_TalkCount"
                 },
                 {
                   "name": "Add Ability",
@@ -75,7 +75,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TalkCount",
                       "value": {
                         "operator": "Variables[0] (_TalkCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_TalkCount + 1)",
@@ -85,12 +84,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "_TalkCount"
                         ]
-                      }
+                      },
+                      "variableName": "_TalkCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_FirstSkillTalk",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_FirstSkillTalk"
                     }
                   ]
                 }
@@ -108,8 +108,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_FirstSkillTalk",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_FirstSkillTalk"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -146,7 +146,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DamageRatio",
                   "value": {
                     "operator": "Variables[0] (_Layer) || Constants[0] (0.5) || MUL || RETURN",
                     "displayLines": "(_Layer * 0.5)",
@@ -156,7 +155,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "_DamageRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -294,7 +294,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TalkNum",
           "value": {
             "operator": "Variables[0] (_TalkNum) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_TalkNum + 1)",
@@ -304,7 +303,8 @@ const compositeAbilityObject = {
             "variables": [
               "_TalkNum"
             ]
-          }
+          },
+          "variableName": "_TalkNum"
         },
         "Deleted bullshit",
         {

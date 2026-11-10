@@ -128,7 +128,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummmonMinionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -137,13 +137,13 @@ const configAbility = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SummmonMinionDelayRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummmonMinionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillP01[12]]}) || RETURN",
                 "displayLines": "{[SkillP01[12]]}",
@@ -152,7 +152,7 @@ const configAbility = {
                   "{[SkillP01[12]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SummmonMinionDelayRatio"
             }
           ]
         },
@@ -216,9 +216,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentXuanluPartSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentXuanluPartSummonIndex"
                         }
                       ]
                     },
@@ -253,9 +253,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentXuanluPartSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 3,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentXuanluPartSummonIndex"
                         }
                       ]
                     },
@@ -290,9 +290,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentXuanluPartSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentXuanluPartSummonIndex"
                         }
                       ]
                     }
@@ -301,9 +301,9 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BonusSummonIndex",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "BonusSummonIndex"
                 }
               ],
               "failed": [
@@ -349,9 +349,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentLV2MonsterSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentLV2MonsterSummonIndex"
                         }
                       ]
                     },
@@ -386,9 +386,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentLV2MonsterSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 3,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentLV2MonsterSummonIndex"
                         }
                       ]
                     },
@@ -423,9 +423,9 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentLV2MonsterSummonIndex",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "CurrentLV2MonsterSummonIndex"
                         }
                       ]
                     }
@@ -489,9 +489,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentXuanluPartSummonIndex",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentXuanluPartSummonIndex"
                     }
                   ]
                 },
@@ -526,9 +526,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentXuanluPartSummonIndex",
+                      "scope": "TargetEntity",
                       "value": 3,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentXuanluPartSummonIndex"
                     }
                   ]
                 },
@@ -563,9 +563,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentXuanluPartSummonIndex",
+                      "scope": "TargetEntity",
                       "value": 4,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentXuanluPartSummonIndex"
                     }
                   ]
                 },
@@ -600,9 +600,9 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentXuanluPartSummonIndex",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentXuanluPartSummonIndex"
                     }
                   ]
                 }

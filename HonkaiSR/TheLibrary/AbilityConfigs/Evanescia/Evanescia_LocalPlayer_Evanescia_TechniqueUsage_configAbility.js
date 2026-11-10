@@ -11,8 +11,8 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "MazeSkill_HitTarget",
-          "value": 1
+          "value": 1,
+          "variableName": "MazeSkill_HitTarget"
         }
       ],
       "failed": [
@@ -100,7 +100,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_DeltaTime",
           "value": {
             "operator": "Variables[0] (#CL_DeltaTime) || Variables[1] (MAX) || Variables[2] (EnemyCount) || Constants[0] (3) || PARAM_2 || FUNCTION || DIV || RETURN",
             "displayLines": "(#CL_DeltaTime / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(EnemyCount, 3))",
@@ -112,7 +111,8 @@ const configAbility = {
               "MAX",
               "EnemyCount"
             ]
-          }
+          },
+          "variableName": "#CL_DeltaTime"
         },
         {
           "name": "Add Events/Bonuses",
@@ -247,8 +247,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_Distance",
-          "value": 3
+          "value": 3,
+          "variableName": "#CL_Distance"
         }
       ]
     },

@@ -160,9 +160,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ChangePhaseFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ChangePhaseFlag"
                     }
                   ]
                 }
@@ -177,9 +177,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert1Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert1Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -187,9 +187,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert2Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert2Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -197,9 +197,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert3Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert3Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -207,9 +207,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -217,9 +217,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertFlagFirst",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertFlagFirst"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -227,9 +227,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TeammateInsertFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TeammateInsertFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -237,9 +237,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TeammateInsertFlag2",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TeammateInsertFlag2"
                 }
               ]
             },
@@ -287,9 +287,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ChangePhaseFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ChangePhaseFlag"
                     }
                   ]
                 }
@@ -304,9 +304,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert1Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert1Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -314,9 +314,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert2Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert2Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -324,9 +324,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert3Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert3Flag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -334,9 +334,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -344,9 +344,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertFlagFirst",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertFlagFirst"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -354,9 +354,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TeammateInsertFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TeammateInsertFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -364,9 +364,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "TeammateInsertFlag2",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TeammateInsertFlag2"
                 }
               ]
             },
@@ -413,9 +413,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ChangePhaseFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "ChangePhaseFlag"
                         }
                       ]
                     },
@@ -425,9 +425,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Insert1Flag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Insert1Flag"
                     },
                     {
                       "name": "Find New Target",
@@ -508,9 +508,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "InsertFlagFirst",
+                                  "scope": "TargetEntity",
                                   "value": 1,
-                                  "scope": "TargetEntity"
+                                  "variableName": "InsertFlagFirst"
                                 },
                                 {
                                   "name": "IF",
@@ -546,9 +546,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "InsertFlagFirst",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "InsertFlagFirst"
                             },
                             {
                               "name": "IF",
@@ -1009,9 +1009,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ChangePhaseFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "ChangePhaseFlag"
                         }
                       ]
                     }
@@ -1023,9 +1023,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert1Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert1Flag"
                 },
                 {
                   "name": "Find New Target",
@@ -1106,9 +1106,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "InsertFlagFirst",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "InsertFlagFirst"
                             },
                             {
                               "name": "IF",
@@ -1144,9 +1144,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "InsertFlagFirst",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "InsertFlagFirst"
                         },
                         {
                           "name": "IF",
@@ -1198,9 +1198,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Insert3Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Insert3Flag"
                 },
                 {
                   "name": "IF",
@@ -1292,9 +1292,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "InsertFlagFirst",
+                                  "scope": "TargetEntity",
                                   "value": 1,
-                                  "scope": "TargetEntity"
+                                  "variableName": "InsertFlagFirst"
                                 },
                                 {
                                   "name": "IF",
@@ -1330,9 +1330,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "InsertFlagFirst",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "InsertFlagFirst"
                             },
                             {
                               "name": "IF",
@@ -1610,9 +1610,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Insert2Flag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Insert2Flag"
                     },
                     {
                       "name": "Find New Target",
@@ -1693,9 +1693,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "InsertFlagFirst",
+                                  "scope": "TargetEntity",
                                   "value": 1,
-                                  "scope": "TargetEntity"
+                                  "variableName": "InsertFlagFirst"
                                 },
                                 {
                                   "name": "IF",
@@ -1749,9 +1749,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "InsertFlagFirst",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "InsertFlagFirst"
                             },
                             {
                               "name": "IF",
@@ -1894,9 +1894,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ChangePhaseFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ChangePhaseFlag"
                 }
               ]
             }
@@ -1931,9 +1931,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "InsertFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "InsertFlag"
             },
             {
               "name": "IF",
@@ -2019,9 +2019,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "TeammateInsertFlag",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "TeammateInsertFlag"
                             }
                           ]
                         }
@@ -2114,9 +2114,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "TeammateInsertFlag2",
+                                  "scope": "TargetEntity",
                                   "value": 1,
-                                  "scope": "TargetEntity"
+                                  "variableName": "TeammateInsertFlag2"
                                 }
                               ]
                             }
@@ -2299,9 +2299,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "TeammateInsertFlag",
+                                  "scope": "TargetEntity",
                                   "value": 1,
-                                  "scope": "TargetEntity"
+                                  "variableName": "TeammateInsertFlag"
                                 }
                               ]
                             }
@@ -2405,9 +2405,9 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "TeammateInsertFlag2",
+                                      "scope": "TargetEntity",
                                       "value": 1,
-                                      "scope": "TargetEntity"
+                                      "variableName": "TeammateInsertFlag2"
                                     }
                                   ]
                                 }
@@ -2574,9 +2574,9 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "TeammateInsertFlag",
+                                      "scope": "TargetEntity",
                                       "value": 1,
-                                      "scope": "TargetEntity"
+                                      "variableName": "TeammateInsertFlag"
                                     }
                                   ]
                                 }
@@ -2669,9 +2669,9 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Modifier Holder}}"
                                           },
-                                          "variableName": "TeammateInsertFlag2",
+                                          "scope": "TargetEntity",
                                           "value": 1,
-                                          "scope": "TargetEntity"
+                                          "variableName": "TeammateInsertFlag2"
                                         }
                                       ]
                                     }
@@ -3555,9 +3555,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3586,9 +3586,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "BreakFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "BreakFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3850,9 +3850,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3884,9 +3884,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "BreakFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "BreakFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",

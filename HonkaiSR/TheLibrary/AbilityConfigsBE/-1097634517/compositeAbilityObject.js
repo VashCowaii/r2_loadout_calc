@@ -134,7 +134,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "count",
                   "value": {
                     "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(count + 1)",
@@ -144,7 +143,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "count"
                     ]
-                  }
+                  },
+                  "variableName": "count"
                 },
                 {
                   "name": "IF",
@@ -3329,7 +3329,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Value_SummonCount",
           "value": {
             "operator": "Variables[0] (Value_SummonCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(Value_SummonCount - 1)",
@@ -3339,7 +3338,8 @@ const compositeAbilityObject = {
             "variables": [
               "Value_SummonCount"
             ]
-          }
+          },
+          "variableName": "Value_SummonCount"
         },
         {
           "name": "Looped Event",
@@ -3487,7 +3487,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonCount",
                       "value": {
                         "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(SummonCount + 1)",
@@ -3497,7 +3496,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "SummonCount"
                     },
                     {
                       "name": "IF",
@@ -3589,7 +3589,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Value_SummonCount",
           "value": {
             "operator": "Variables[0] (Value_SummonCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(Value_SummonCount - 1)",
@@ -3599,7 +3598,8 @@ const compositeAbilityObject = {
             "variables": [
               "Value_SummonCount"
             ]
-          }
+          },
+          "variableName": "Value_SummonCount"
         },
         {
           "name": "Looped Event",
@@ -3725,7 +3725,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonCount",
                       "value": {
                         "operator": "Variables[0] (SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(SummonCount + 1)",
@@ -3735,7 +3734,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "SummonCount"
                     },
                     {
                       "name": "IF",
@@ -4012,7 +4012,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageUpTimes",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_DamageUpTimes + 1)",
@@ -4022,7 +4021,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_DamageUpTimes"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageUpTimes"
                 },
                 {
                   "name": "Find New Target",
@@ -4284,7 +4284,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageUpTimes",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_DamageUpTimes + 1)",
@@ -4294,7 +4293,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_DamageUpTimes"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageUpTimes"
                 },
                 {
                   "name": "Find New Target",
@@ -6025,8 +6025,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Insert_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Insert_Flag"
                     }
                   ]
                 }
@@ -6037,8 +6037,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Insert_Flag"
                 }
               ]
             },
@@ -6056,8 +6056,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Insert_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Insert_Flag"
                     },
                     {
                       "name": "Find New Target",
@@ -6338,7 +6338,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Layer",
                           "value": {
                             "operator": "Variables[0] (Temp_MDF_Layer) || RETURN",
                             "displayLines": "Temp_MDF_Layer",
@@ -6346,7 +6345,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Temp_MDF_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Layer"
                         }
                       ]
                     }
@@ -6411,13 +6411,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Layer"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Temp_MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Temp_MDF_Layer"
                 }
               ]
             },
@@ -11526,8 +11526,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Insert_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Insert_Flag"
                     }
                   ]
                 }
@@ -11538,8 +11538,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Insert_Flag"
                 }
               ]
             },

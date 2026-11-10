@@ -38,7 +38,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_CostGemNum",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -46,11 +45,11 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "EnergyBar_CostGemNum"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ActiveGemNum",
       "value": {
         "operator": "Variables[0] (15) || RETURN",
         "displayLines": "15",
@@ -58,12 +57,13 @@ const configAbility = {
         "variables": [
           15
         ]
-      }
+      },
+      "variableName": "EnergyBar_ActiveGemNum"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_MaxGemNum",
-      "value": 999
+      "value": 999,
+      "variableName": "EnergyBar_MaxGemNum"
     },
     {
       "name": "Read Variable Value",
@@ -457,7 +457,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -465,14 +464,15 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxLayer",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_MaxLayer"
                 }
               ]
             }
@@ -615,7 +615,7 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BPAddValue",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
                         "displayLines": "-_BPAddValue",
@@ -624,7 +624,7 @@ const configAbility = {
                           "_BPAddValue"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "_BPAddValue"
                     },
                     {
                       "name": "Looped Event",
@@ -1065,8 +1065,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Archer_in_Team",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Archer_in_Team"
                 },
                 "Deleted bullshit"
               ]
@@ -1101,8 +1101,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Archer_in_Team",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Archer_in_Team"
                 },
                 "Deleted bullshit"
               ]
@@ -1375,7 +1375,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_CostGemNum_Real",
                       "value": {
                         "operator": "Variables[0] (TMP_CUR_BP) || Variables[1] (2) || SUB || Variables[2] (2) || MUL || Variables[3] (EnergyBar_GemNum) || ADD || RETURN",
                         "displayLines": "(((TMP_CUR_BP - 2) * 2) + EnergyBar_GemNum)",
@@ -1386,13 +1385,13 @@ const configAbility = {
                           2,
                           "EnergyBar_GemNum"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyBar_CostGemNum_Real"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnergyBar_CostGemNum_Real",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
                         "displayLines": "EnergyBar_GemNum",
@@ -1400,7 +1399,8 @@ const configAbility = {
                         "variables": [
                           "EnergyBar_GemNum"
                         ]
-                      }
+                      },
+                      "variableName": "EnergyBar_CostGemNum_Real"
                     }
                   ]
                 },
@@ -1434,7 +1434,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyBar_CostGemNum_Real",
                           "value": {
                             "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
                             "displayLines": "EnergyBar_GemNum",
@@ -1442,7 +1441,8 @@ const configAbility = {
                             "variables": [
                               "EnergyBar_GemNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyBar_CostGemNum_Real"
                         }
                       ]
                     }
@@ -1466,15 +1466,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AI_UseSkill21",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AI_UseSkill21"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AI_UseSkill21",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "AI_UseSkill21"
                     }
                   ]
                 },
@@ -1489,8 +1489,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AI_UseSkill21",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AI_UseSkill21"
                     }
                   ]
                 }
@@ -1498,8 +1498,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AI_UseSkill21",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AI_UseSkill21"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1608,14 +1608,14 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 10,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Tohsakarin_00_DamageCarry",
-                      "value": 10
+                      "value": 10,
+                      "variableName": "Tohsakarin_00_DamageCarry"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1623,22 +1623,22 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Rin: Archer}}"
                       },
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 100,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 100,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Tohsakarin_00_DamageCarry",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "Tohsakarin_00_DamageCarry"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1646,9 +1646,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Rin: Archer}}"
                       },
-                      "variableName": "DamageCarry",
+                      "scope": "AITag",
                       "value": 10,
-                      "scope": "AITag"
+                      "variableName": "DamageCarry"
                     }
                   ]
                 }
@@ -1775,14 +1775,14 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 100,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Tohsakarin_00_DamageCarry",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "Tohsakarin_00_DamageCarry"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1790,9 +1790,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Rin: Archer}}"
                   },
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 10,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 }
               ],
               "onChange": [

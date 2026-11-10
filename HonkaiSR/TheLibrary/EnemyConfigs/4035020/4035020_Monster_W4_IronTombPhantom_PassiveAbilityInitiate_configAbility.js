@@ -84,8 +84,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PhaseLock",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_PhaseLock"
                 }
               ]
             }
@@ -126,8 +126,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PhaseLock",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_PhaseLock"
                 },
                 {
                   "name": "IF",

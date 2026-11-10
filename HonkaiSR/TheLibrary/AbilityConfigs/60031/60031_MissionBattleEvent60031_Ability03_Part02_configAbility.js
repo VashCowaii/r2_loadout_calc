@@ -71,7 +71,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CommonTalkType",
               "value": {
                 "operator": "Variables[0] (_CommonTalkType) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_CommonTalkType + 1)",
@@ -81,7 +80,8 @@ const configAbility = {
                 "variables": [
                   "_CommonTalkType"
                 ]
-              }
+              },
+              "variableName": "_CommonTalkType"
             }
           ]
         }

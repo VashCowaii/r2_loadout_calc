@@ -80,7 +80,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY",
           "value": {
             "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
             "displayLines": "((_DeltaY / 1000) + 1.15)",
@@ -91,7 +90,8 @@ const configAbility = {
             "variables": [
               "_DeltaY"
             ]
-          }
+          },
+          "variableName": "_DeltaY"
         },
         {
           "name": "Define Variable in Range",
@@ -101,7 +101,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY_R",
           "value": {
             "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
             "displayLines": "((_DeltaY_R / 1000) + 1.3)",
@@ -112,7 +111,8 @@ const configAbility = {
             "variables": [
               "_DeltaY_R"
             ]
-          }
+          },
+          "variableName": "_DeltaY_R"
         },
         {
           "name": "Define Variable in Range",
@@ -122,7 +122,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY_L",
           "value": {
             "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
             "displayLines": "((_DeltaY_L / 1000) + 1.1)",
@@ -133,7 +132,8 @@ const configAbility = {
             "variables": [
               "_DeltaY_L"
             ]
-          }
+          },
+          "variableName": "_DeltaY_L"
         }
       ]
     },
@@ -208,7 +208,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY",
           "value": {
             "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
             "displayLines": "((_DeltaY / 1000) + 1.15)",
@@ -219,7 +218,8 @@ const configAbility = {
             "variables": [
               "_DeltaY"
             ]
-          }
+          },
+          "variableName": "_DeltaY"
         },
         {
           "name": "Define Variable in Range",
@@ -229,7 +229,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY_R",
           "value": {
             "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
             "displayLines": "((_DeltaY_R / 1000) + 1.3)",
@@ -240,7 +239,8 @@ const configAbility = {
             "variables": [
               "_DeltaY_R"
             ]
-          }
+          },
+          "variableName": "_DeltaY_R"
         },
         {
           "name": "Define Variable in Range",
@@ -250,7 +250,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DeltaY_L",
           "value": {
             "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
             "displayLines": "((_DeltaY_L / 1000) + 1.1)",
@@ -261,7 +260,8 @@ const configAbility = {
             "variables": [
               "_DeltaY_L"
             ]
-          }
+          },
+          "variableName": "_DeltaY_L"
         }
       ]
     }

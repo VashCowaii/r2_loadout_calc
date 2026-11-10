@@ -210,7 +210,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "UltraAttackCount",
       "value": {
         "operator": "Variables[0] (UltraAttackCount) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(UltraAttackCount - 1)",
@@ -220,7 +219,8 @@ const configAbility = {
         "variables": [
           "UltraAttackCount"
         ]
-      }
+      },
+      "variableName": "UltraAttackCount"
     },
     "Trigger: Ability End"
   ],

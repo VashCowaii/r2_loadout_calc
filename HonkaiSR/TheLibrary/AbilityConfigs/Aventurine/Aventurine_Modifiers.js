@@ -545,8 +545,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TeammateCount1",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_TeammateCount1"
                         }
                       ],
                       "failed": [
@@ -560,18 +560,18 @@ const configAbility = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TeammateCount1",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "MDF_TeammateCount1"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TeammateCount1",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "MDF_TeammateCount1"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TeammateCount1",
-                              "value": 4
+                              "value": 4,
+                              "variableName": "MDF_TeammateCount1"
                             }
                           ]
                         }
@@ -795,7 +795,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InsertLeftValue",
               "value": {
                 "operator": "Variables[0] (MDF_InsertLeftValue) || Variables[1] (MDF_InsertAttackCount) || SUB || RETURN",
                 "displayLines": "(MDF_InsertLeftValue - MDF_InsertAttackCount)",
@@ -804,7 +803,8 @@ const configAbility = {
                   "MDF_InsertLeftValue",
                   "MDF_InsertAttackCount"
                 ]
-              }
+              },
+              "variableName": "MDF_InsertLeftValue"
             },
             {
               "name": "IF",
@@ -962,8 +962,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShieldCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ShieldCount"
                 },
                 {
                   "name": "Find New Target",
@@ -986,7 +986,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_ShieldCount",
                           "value": {
                             "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_ShieldCount + 1)",
@@ -996,7 +995,8 @@ const configAbility = {
                             "variables": [
                               "MDF_ShieldCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_ShieldCount"
                         }
                       ]
                     }
@@ -1121,8 +1121,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShieldCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ShieldCount"
                 },
                 {
                   "name": "Find New Target",
@@ -1145,7 +1145,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_ShieldCount",
                           "value": {
                             "operator": "Variables[0] (MDF_ShieldCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_ShieldCount + 1)",
@@ -1155,7 +1154,8 @@ const configAbility = {
                             "variables": [
                               "MDF_ShieldCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_ShieldCount"
                         }
                       ]
                     }
@@ -1337,7 +1337,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Multipler",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
@@ -1348,11 +1347,11 @@ const configAbility = {
                   "FLOOR",
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.02) || MUL || RETURN",
                 "displayLines": "(MDF_Multipler * 0.02)",
@@ -1361,7 +1360,8 @@ const configAbility = {
                   "MDF_Multipler",
                   0.02
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue2"
             },
             {
               "name": "IF",
@@ -1381,7 +1381,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (0.48) || RETURN",
                     "displayLines": "0.48",
@@ -1389,7 +1388,8 @@ const configAbility = {
                     "variables": [
                       0.48
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             },
@@ -1453,7 +1453,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentDefence2",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentDefence) || Variables[1] (MDF_CurrentDefenceConvert) || SUB || RETURN",
                 "displayLines": "(MDF_CurrentDefence - MDF_CurrentDefenceConvert)",
@@ -1462,7 +1461,8 @@ const configAbility = {
                   "MDF_CurrentDefence",
                   "MDF_CurrentDefenceConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentDefence2"
             },
             {
               "name": "IF",
@@ -1591,7 +1591,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DefencePercentage",
               "value": {
                 "operator": "Variables[0] (0.4) || RETURN",
                 "displayLines": "0.4",
@@ -1599,7 +1598,8 @@ const configAbility = {
                 "variables": [
                   0.4
                 ]
-              }
+              },
+              "variableName": "MDF_DefencePercentage"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2516,8 +2516,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_IsInsert",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_IsInsert"
                         }
                       ]
                     }
@@ -2605,8 +2605,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IsInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_IsInsert"
             }
           ]
         },
@@ -2646,7 +2646,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertAttackCount",
                   "value": {
                     "operator": "Variables[0] (MDF_InsertAttackCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_InsertAttackCount + 1)",
@@ -2656,7 +2655,8 @@ const configAbility = {
                     "variables": [
                       "MDF_InsertAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_InsertAttackCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2785,8 +2785,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InsertAttackCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_InsertAttackCount"
             },
             {
               "name": "IF",
@@ -2840,7 +2840,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InsertAttackLimit",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -2848,7 +2847,8 @@ const configAbility = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "variableName": "MDF_InsertAttackLimit"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3041,8 +3041,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TeammateCount1",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_TeammateCount1"
                             }
                           ],
                           "failed": [
@@ -3056,18 +3056,18 @@ const configAbility = {
                               "execute": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 2
+                                  "value": 2,
+                                  "variableName": "MDF_TeammateCount1"
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 3
+                                  "value": 3,
+                                  "variableName": "MDF_TeammateCount1"
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_TeammateCount1",
-                                  "value": 4
+                                  "value": 4,
+                                  "variableName": "MDF_TeammateCount1"
                                 }
                               ]
                             }

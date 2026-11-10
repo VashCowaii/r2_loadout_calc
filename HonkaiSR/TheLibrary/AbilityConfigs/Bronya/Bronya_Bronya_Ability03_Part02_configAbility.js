@@ -15,7 +15,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CriticalDamageBase_change",
       "value": {
         "operator": "Variables[0] (MDF_CriticalDamageBase) || RETURN",
         "displayLines": "MDF_CriticalDamageBase",
@@ -23,11 +22,11 @@ const configAbility = {
         "variables": [
           "MDF_CriticalDamageBase"
         ]
-      }
+      },
+      "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CriticalDamageBase_change",
       "value": {
         "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.16) || MUL || RETURN",
         "displayLines": "(MDF_CriticalDamageBase_change * 0.16)",
@@ -36,11 +35,11 @@ const configAbility = {
           "MDF_CriticalDamageBase_change",
           0.16
         ]
-      }
+      },
+      "variableName": "MDF_CriticalDamageBase_change"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_CriticalDamageBase_Total",
       "value": {
         "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.2) || ADD || RETURN",
         "displayLines": "(MDF_CriticalDamageBase_change + 0.2)",
@@ -49,7 +48,8 @@ const configAbility = {
           "MDF_CriticalDamageBase_change",
           0.2
         ]
-      }
+      },
+      "variableName": "MDF_CriticalDamageBase_Total"
     },
     {
       "name": "Add Events/Bonuses",

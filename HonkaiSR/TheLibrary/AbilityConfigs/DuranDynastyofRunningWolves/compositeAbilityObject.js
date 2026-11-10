@@ -156,8 +156,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CasterLayer",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CasterLayer"
                         }
                       ]
                     },

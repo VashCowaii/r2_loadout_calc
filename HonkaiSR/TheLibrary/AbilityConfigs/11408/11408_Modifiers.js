@@ -234,7 +234,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageAddRatio",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_OverHeal) || Variables[2] (_MaxHP) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_OverflowHealToDamageAddRatio) || MUL || ADD || RETURN",
                 "displayLines": "(MDF_DamageAddRatio + (((MDF_OverHeal / _MaxHP) * 100) * MDF_OverflowHealToDamageAddRatio))",
@@ -247,7 +246,8 @@ const configAbility = {
                   "_MaxHP",
                   "MDF_OverflowHealToDamageAddRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageAddRatio"
             },
             {
               "name": "IF",
@@ -267,7 +267,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
                     "displayLines": "MDF_MaxDamageAddRatio",
@@ -275,7 +274,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxDamageAddRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddRatio"
                 }
               ]
             }
@@ -305,7 +305,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HealCount",
               "value": {
                 "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_OverHeal) || ADD || RETURN",
                 "displayLines": "(MDF_HealCount + MDF_OverHeal)",
@@ -314,7 +313,8 @@ const configAbility = {
                   "MDF_HealCount",
                   "MDF_OverHeal"
                 ]
-              }
+              },
+              "variableName": "MDF_HealCount"
             },
             {
               "name": "IF",
@@ -335,7 +335,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HealCount",
                   "value": {
                     "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
                     "displayLines": "(MDF_HealHPRatio * _MaxHP)",
@@ -344,7 +343,8 @@ const configAbility = {
                       "MDF_HealHPRatio",
                       "_MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HealCount"
                 }
               ]
             }
@@ -685,8 +685,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurOverflowSpecialSP",
-              "value": 0
+              "value": 0,
+              "variableName": "CurOverflowSpecialSP"
             },
             {
               "name": "Use Custom Character Function",
@@ -888,8 +888,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ActionOrderIndex",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_ActionOrderIndex"
             },
             {
               "name": "Find New Target",
@@ -917,7 +917,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionOrderIndex",
                   "value": {
                     "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_ActionOrderIndex + 1)",
@@ -927,7 +926,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ActionOrderIndex"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ActionOrderIndex"
                 }
               ]
             },

@@ -44,7 +44,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "EnergyBar_ATKCount",
           "value": {
             "operator": "Variables[0] (EnergyBar_ATKCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(EnergyBar_ATKCount - 1)",
@@ -54,7 +53,8 @@ const configAbility = {
             "variables": [
               "EnergyBar_ATKCount"
             ]
-          }
+          },
+          "variableName": "EnergyBar_ATKCount"
         },
         {
           "name": "Update Displayed Energy Bar",

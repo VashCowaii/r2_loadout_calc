@@ -16,9 +16,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DamageCarry",
+      "scope": "AITag",
       "value": 1,
-      "scope": "AITag"
+      "variableName": "DamageCarry"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -120,8 +120,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Energy",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Energy"
                 }
               ]
             }
@@ -177,7 +177,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SPRatio",
               "value": {
                 "operator": "Variables[0] (_SPvalue) || Variables[1] (_MaxSp) || DIV || RETURN",
                 "displayLines": "(_SPvalue / _MaxSp)",
@@ -186,7 +185,8 @@ const configAbility = {
                   "_SPvalue",
                   "_MaxSp"
                 ]
-              }
+              },
+              "variableName": "_SPRatio"
             },
             {
               "name": "IF",

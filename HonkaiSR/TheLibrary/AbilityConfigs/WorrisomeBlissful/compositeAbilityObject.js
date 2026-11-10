@@ -123,8 +123,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertFlag"
                     }
                   ]
                 }
@@ -170,8 +170,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "InsertFlag"
                     }
                   ]
                 }

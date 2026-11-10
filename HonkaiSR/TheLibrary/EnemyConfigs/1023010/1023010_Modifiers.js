@@ -121,7 +121,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ModifierCriticalChanceRatio",
               "value": {
                 "operator": "Variables[0] (ModifierCriticalChanceRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(ModifierCriticalChanceRatio_PerLayer * ModifierLayers)",
@@ -130,7 +129,8 @@ const configAbility = {
                   "ModifierCriticalChanceRatio_PerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "ModifierCriticalChanceRatio"
             },
             {
               "name": "Stack Target Stat Value",

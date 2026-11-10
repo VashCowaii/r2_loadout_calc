@@ -39,7 +39,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_PursuedDamage",
           "value": {
             "operator": "Variables[0] (0.12) || Variables[1] (1.2) || MUL || RETURN",
             "displayLines": "(0.12 * 1.2)",
@@ -48,13 +47,13 @@ const configAbility = {
               0.12,
               1.2
             ]
-          }
+          },
+          "variableName": "MDF_PursuedDamage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_PursuedDamage",
           "value": {
             "operator": "Variables[0] (0.12) || RETURN",
             "displayLines": "0.12",
@@ -62,7 +61,8 @@ const configAbility = {
             "variables": [
               0.12
             ]
-          }
+          },
+          "variableName": "MDF_PursuedDamage"
         }
       ]
     },
@@ -103,8 +103,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Energy_Layer",
-      "value": 0
+      "value": 0,
+      "variableName": "Energy_Layer"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -156,8 +156,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_EnergyBarCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill02_EnergyBarCount"
                 }
               ]
             },
@@ -333,8 +333,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OnInsertAbort_Flg",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "OnInsertAbort_Flg"
                     },
                     {
                       "name": "IF",

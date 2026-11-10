@@ -155,7 +155,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill05_LoseHpRatio",
       "value": {
         "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
         "displayLines": "{[Skill05[1]]}",
@@ -163,11 +162,11 @@ const configAbility = {
         "variables": [
           "{[Skill05[1]]}"
         ]
-      }
+      },
+      "variableName": "_Skill05_LoseHpRatio"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill05_ActionDelay",
       "value": {
         "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
         "displayLines": "{[Skill05[2]]}",
@@ -175,11 +174,11 @@ const configAbility = {
         "variables": [
           "{[Skill05[2]]}"
         ]
-      }
+      },
+      "variableName": "_Skill05_ActionDelay"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill05_Part_ActionDelay",
       "value": {
         "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
         "displayLines": "{[Skill05[3]]}",
@@ -187,7 +186,8 @@ const configAbility = {
         "variables": [
           "{[Skill05[3]]}"
         ]
-      }
+      },
+      "variableName": "_Skill05_Part_ActionDelay"
     }
   ],
   "whenAdded": [
@@ -227,8 +227,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_EnergyValue",
-              "value": 0
+              "value": 0,
+              "variableName": "_EnergyValue"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -268,7 +268,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TempAIFlag",
                   "value": {
                     "operator": "Variables[0] (_ReadyToCharge) || RETURN",
                     "displayLines": "_ReadyToCharge",
@@ -276,12 +275,13 @@ const configAbility = {
                     "variables": [
                       "_ReadyToCharge"
                     ]
-                  }
+                  },
+                  "variableName": "_TempAIFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -331,8 +331,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_ReadyToCharge",
-              "value": 0
+              "value": 0,
+              "variableName": "_ReadyToCharge"
             }
           ]
         },
@@ -349,8 +349,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_EnergyValue",
-              "value": 0
+              "value": 0,
+              "variableName": "_EnergyValue"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -448,7 +448,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HPChangeRatio",
                   "value": {
                     "operator": "Variables[0] (_HPChangeValue) || INVERT || Variables[1] (_TargetMaxHP) || DIV || RETURN",
                     "displayLines": "(-_HPChangeValue / _TargetMaxHP)",
@@ -457,7 +456,8 @@ const configAbility = {
                       "_HPChangeValue",
                       "_TargetMaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "_HPChangeRatio"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -656,8 +656,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -717,8 +717,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ReadyToCharge",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_ReadyToCharge"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -734,8 +734,8 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ReadyToCharge",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_ReadyToCharge"
                 },
                 {
                   "name": "Add Events/Bonuses",

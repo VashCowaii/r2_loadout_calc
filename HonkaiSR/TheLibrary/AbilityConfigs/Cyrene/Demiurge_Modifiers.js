@@ -325,9 +325,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "S02_ExtraRatio",
+              "scope": "ContextOwner",
               "value": 0,
-              "scope": "ContextOwner"
+              "variableName": "S02_ExtraRatio"
             }
           ]
         },
@@ -531,8 +531,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Switch",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Switch"
                 }
               ]
             }
@@ -543,8 +543,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Switch",
-              "value": 0
+              "value": 0,
+              "variableName": "_Switch"
             }
           ]
         }
@@ -774,7 +774,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_CurSpecialSP) || Variables[2] (MDF_CurOverflowSpecialSP) || ADD || Variables[3] (MDF_EnergyNeed) || SUB || MUL || RETURN",
                     "displayLines": "(MDF_PropertyRatio * ((MDF_CurSpecialSP + MDF_CurOverflowSpecialSP) - MDF_EnergyNeed))",
@@ -785,7 +784,8 @@ const configAbility = {
                       "MDF_CurOverflowSpecialSP",
                       "MDF_EnergyNeed"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalRatio"
                 },
                 {
                   "name": "IF",
@@ -805,7 +805,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyRatioMax) || RETURN",
                         "displayLines": "MDF_PropertyRatioMax",
@@ -813,7 +812,8 @@ const configAbility = {
                         "variables": [
                           "MDF_PropertyRatioMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalRatio"
                     }
                   ]
                 },
@@ -945,7 +945,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDefDown",
                   "value": {
                     "operator": "Variables[0] (MDF_DefDown) || RETURN",
                     "displayLines": "MDF_DefDown",
@@ -953,13 +952,13 @@ const configAbility = {
                     "variables": [
                       "MDF_DefDown"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDefDown"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDefDown",
                   "value": {
                     "operator": "Variables[0] (MDF_DefDown2) || RETURN",
                     "displayLines": "MDF_DefDown2",
@@ -967,7 +966,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DefDown2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDefDown"
                 }
               ]
             },
@@ -1004,7 +1004,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDefDown",
                   "value": {
                     "operator": "Variables[0] (MDF_DefDown) || RETURN",
                     "displayLines": "MDF_DefDown",
@@ -1012,7 +1011,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DefDown"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDefDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1049,7 +1049,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDefDown",
                   "value": {
                     "operator": "Variables[0] (MDF_DefDown2) || RETURN",
                     "displayLines": "MDF_DefDown2",
@@ -1057,7 +1056,8 @@ const configAbility = {
                     "variables": [
                       "MDF_DefDown2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDefDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -2226,8 +2226,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsWindfurySkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_IsWindfurySkill"
                 }
               ]
             }
@@ -2245,8 +2245,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsWindfurySkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsWindfurySkill"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -2460,8 +2460,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Layer"
                 }
               ],
               "failed": [
@@ -2609,9 +2609,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_BPSkill21_Plus",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_BPSkill21_Plus"
                     }
                   ]
                 }
@@ -2712,8 +2712,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_NoTransferFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_NoTransferFlag"
                 }
               ]
             }
@@ -2752,8 +2752,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_NoTransferFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_NoTransferFlag"
                 }
               ]
             }
@@ -2850,9 +2850,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_ExtraLoopCount",
+              "scope": "ContextOwner",
               "value": 0,
-              "scope": "ContextOwner"
+              "variableName": "MDF_ExtraLoopCount"
             }
           ]
         },
@@ -2905,7 +2905,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_ExtraLoopCount",
+                  "scope": "ContextOwner",
                   "value": {
                     "operator": "Variables[0] (MDF_TribbieLoopCount) || RETURN",
                     "displayLines": "MDF_TribbieLoopCount",
@@ -2914,7 +2914,7 @@ const configAbility = {
                       "MDF_TribbieLoopCount"
                     ]
                   },
-                  "scope": "ContextOwner"
+                  "variableName": "MDF_ExtraLoopCount"
                 }
               ],
               "failed": [
@@ -2924,9 +2924,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_ExtraLoopCount",
+                  "scope": "ContextOwner",
                   "value": 0,
-                  "scope": "ContextOwner"
+                  "variableName": "MDF_ExtraLoopCount"
                 }
               ]
             }
@@ -3158,8 +3158,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsInPlayerAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsInPlayerAction"
                 }
               ]
             }
@@ -3374,7 +3374,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAddRatio",
               "value": {
                 "operator": "Variables[0] (MDF_HPTransferRatio) || Variables[1] (CasterHP) || Variables[2] (CasterHPConvert) || SUB || MUL || RETURN",
                 "displayLines": "(MDF_HPTransferRatio * (CasterHP - CasterHPConvert))",
@@ -3384,7 +3383,8 @@ const configAbility = {
                   "CasterHP",
                   "CasterHPConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackAddRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -3414,7 +3414,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CritAddRatio",
               "value": {
                 "operator": "Variables[0] (MDF_CritTranferRatio) || Variables[1] (CasterCritRatio) || MUL || RETURN",
                 "displayLines": "(MDF_CritTranferRatio * CasterCritRatio)",
@@ -3423,7 +3422,8 @@ const configAbility = {
                   "MDF_CritTranferRatio",
                   "CasterCritRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_CritAddRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -3591,7 +3591,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAddRatio",
               "value": {
                 "operator": "Variables[0] (MDF_HPTransferRatio) || Variables[1] (CasterHP) || Variables[2] (CasterHPConvert) || SUB || MUL || RETURN",
                 "displayLines": "(MDF_HPTransferRatio * (CasterHP - CasterHPConvert))",
@@ -3601,7 +3600,8 @@ const configAbility = {
                   "CasterHP",
                   "CasterHPConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackAddRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -3631,7 +3631,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CritAddRatio",
               "value": {
                 "operator": "Variables[0] (MDF_CritTranferRatio) || Variables[1] (CasterCritRatio) || MUL || RETURN",
                 "displayLines": "(MDF_CritTranferRatio * CasterCritRatio)",
@@ -3640,7 +3639,8 @@ const configAbility = {
                   "MDF_CritTranferRatio",
                   "CasterCritRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_CritAddRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -3869,7 +3869,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_FinalSuicideRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_SuicideRatioBase) || Variables[1] (MDF_SuicideRatioBase2) || ADD || Variables[2] (MDF_ExtraSP_PercentCount) || MUL || RETURN",
                     "displayLines": "((MDF_SuicideRatioBase + MDF_SuicideRatioBase2) * MDF_ExtraSP_PercentCount)",
@@ -3879,13 +3878,13 @@ const configAbility = {
                       "MDF_SuicideRatioBase2",
                       "MDF_ExtraSP_PercentCount"
                     ]
-                  }
+                  },
+                  "variableName": "_FinalSuicideRatio"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_FinalSuicideRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_SuicideRatioBase) || Variables[1] (MDF_ExtraSP_PercentCount) || MUL || RETURN",
                     "displayLines": "(MDF_SuicideRatioBase * MDF_ExtraSP_PercentCount)",
@@ -3894,7 +3893,8 @@ const configAbility = {
                       "MDF_SuicideRatioBase",
                       "MDF_ExtraSP_PercentCount"
                     ]
-                  }
+                  },
+                  "variableName": "_FinalSuicideRatio"
                 }
               ]
             },
@@ -4190,7 +4190,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ExtraSP_PercentCount",
                   "value": {
                     "operator": "Variables[0] (_CurExtraSpecialSP) || Variables[1] (_MaxSpecialSP) || DIV || Constants[0] (100) || MUL || RETURN",
                     "displayLines": "((_CurExtraSpecialSP / _MaxSpecialSP) * 100)",
@@ -4201,7 +4200,8 @@ const configAbility = {
                       "_CurExtraSpecialSP",
                       "_MaxSpecialSP"
                     ]
-                  }
+                  },
+                  "variableName": "_ExtraSP_PercentCount"
                 },
                 {
                   "name": "Define Custom Variable with Clamp Configuration",
@@ -4637,7 +4637,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CyreneHP) || Variables[1] (MDF_Damage) || MUL || RETURN",
                     "displayLines": "(MDF_CyreneHP * MDF_Damage)",
@@ -4646,7 +4645,8 @@ const configAbility = {
                       "MDF_CyreneHP",
                       "MDF_Damage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 },
                 {
                   "name": "Looped Event",
@@ -4774,8 +4774,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsInRank01Action",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsInRank01Action"
                 }
               ]
             }

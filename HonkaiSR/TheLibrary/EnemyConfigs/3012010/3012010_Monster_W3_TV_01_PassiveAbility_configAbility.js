@@ -77,7 +77,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "TV_01_EliteChance",
           "value": {
             "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
             "displayLines": "{[Skill01[0]]}",
@@ -85,13 +84,13 @@ const configAbility = {
             "variables": [
               "{[Skill01[0]]}"
             ]
-          }
+          },
+          "variableName": "TV_01_EliteChance"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "TV_01_EliteChance",
           "value": {
             "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
             "displayLines": "(TV_01_EliteChance / 100)",
@@ -101,7 +100,8 @@ const configAbility = {
             "variables": [
               "TV_01_EliteChance"
             ]
-          }
+          },
+          "variableName": "TV_01_EliteChance"
         }
       ]
     },

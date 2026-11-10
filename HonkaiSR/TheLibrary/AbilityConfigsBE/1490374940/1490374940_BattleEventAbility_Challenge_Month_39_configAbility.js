@@ -235,8 +235,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -307,7 +307,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (DV_Count2) || ADD || RETURN",
                     "displayLines": "(MDF_Count + DV_Count2)",
@@ -316,7 +315,8 @@ const configAbility = {
                       "MDF_Count",
                       "DV_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -370,7 +370,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (DV_CountMax) || RETURN",
                         "displayLines": "DV_CountMax",
@@ -378,7 +377,8 @@ const configAbility = {
                         "variables": [
                           "DV_CountMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }

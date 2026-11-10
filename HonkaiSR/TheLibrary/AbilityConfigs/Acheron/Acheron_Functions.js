@@ -149,7 +149,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Acheron_FlowerCountBySp_Snapshot",
           "value": {
             "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
             "displayLines": "Acheron_FlowerCountBySp",
@@ -157,7 +156,8 @@ const configAbility = {
             "variables": [
               "Acheron_FlowerCountBySp"
             ]
-          }
+          },
+          "variableName": "Acheron_FlowerCountBySp_Snapshot"
         },
         {
           "name": "IF",
@@ -172,8 +172,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCountFlag01",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentCountFlag01"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -187,7 +187,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCountFlag01",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                 "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
@@ -196,7 +195,8 @@ const configAbility = {
                   "MDF_CurrentCountFlag01",
                   "Acheron_FlowerCountBySp"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentCountFlag01"
             },
             {
               "name": "Add Events/Bonuses",
@@ -272,7 +272,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Acheron_FlowerCountBySp",
           "value": {
             "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
             "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -281,7 +280,8 @@ const configAbility = {
               "Acheron_FlowerCountBySp",
               "Acheron_FlowerCountBySp_Snapshot"
             ]
-          }
+          },
+          "variableName": "Acheron_FlowerCountBySp"
         }
       ]
     },
@@ -291,7 +291,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Acheron_FlowerCountBySp_Snapshot",
           "value": {
             "operator": "Variables[0] (Acheron_FlowerCountBySp) || RETURN",
             "displayLines": "Acheron_FlowerCountBySp",
@@ -299,7 +298,8 @@ const configAbility = {
             "variables": [
               "Acheron_FlowerCountBySp"
             ]
-          }
+          },
+          "variableName": "Acheron_FlowerCountBySp_Snapshot"
         },
         {
           "name": "IF",
@@ -314,8 +314,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCountFlag01",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentCountFlag01"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -329,7 +329,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCountFlag01",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentCountFlag01) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                 "displayLines": "(MDF_CurrentCountFlag01 + Acheron_FlowerCountBySp)",
@@ -338,7 +337,8 @@ const configAbility = {
                   "MDF_CurrentCountFlag01",
                   "Acheron_FlowerCountBySp"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentCountFlag01"
             },
             {
               "name": "Add Events/Bonuses",
@@ -376,7 +376,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp",
               "value": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
                 "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -385,7 +384,8 @@ const configAbility = {
                   "Acheron_FlowerCountBySp",
                   "Acheron_FlowerCountBySp_Snapshot"
                 ]
-              }
+              },
+              "variableName": "Acheron_FlowerCountBySp"
             }
           ],
           "failed": [
@@ -425,7 +425,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp",
               "value": {
                 "operator": "Variables[0] (Acheron_FlowerCountBySp) || Variables[1] (Acheron_FlowerCountBySp_Snapshot) || SUB || RETURN",
                 "displayLines": "(Acheron_FlowerCountBySp - Acheron_FlowerCountBySp_Snapshot)",
@@ -434,7 +433,8 @@ const configAbility = {
                   "Acheron_FlowerCountBySp",
                   "Acheron_FlowerCountBySp_Snapshot"
                 ]
-              }
+              },
+              "variableName": "Acheron_FlowerCountBySp"
             }
           ]
         }
@@ -469,7 +469,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_Count",
               "value": {
                 "operator": "Variables[0] (Limbo_Count) || Variables[1] (Acheron_FlowerCountBySp) || ADD || RETURN",
                 "displayLines": "(Limbo_Count + Acheron_FlowerCountBySp)",
@@ -478,12 +477,13 @@ const configAbility = {
                   "Limbo_Count",
                   "Acheron_FlowerCountBySp"
                 ]
-              }
+              },
+              "variableName": "Limbo_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_FlowerCountBySp",
-              "value": 0
+              "value": 0,
+              "variableName": "Acheron_FlowerCountBySp"
             }
           ]
         },
@@ -518,8 +518,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Acheron_FlagCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Acheron_FlagCount"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -533,7 +533,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Acheron_FlagCount",
                       "value": {
                         "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_Count) || ADD || RETURN",
                         "displayLines": "(MDF_Acheron_FlagCount + Limbo_Count)",
@@ -542,7 +541,8 @@ const configAbility = {
                           "MDF_Acheron_FlagCount",
                           "Limbo_Count"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Acheron_FlagCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -618,8 +618,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Limbo_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Limbo_Count"
                 }
               ]
             }
@@ -714,7 +714,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TargetEntity_UltraFlagCount",
               "value": {
                 "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
                 "displayLines": "TargetEntity_CurrentFlagCount",
@@ -722,11 +721,11 @@ const configAbility = {
                 "variables": [
                   "TargetEntity_CurrentFlagCount"
                 ]
-              }
+              },
+              "variableName": "TargetEntity_UltraFlagCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TargetEntity_UltraFlagCount",
               "value": {
                 "operator": "Variables[0] (TargetEntity_UltraFlagCount) || Constants[0] (3) || SUB || RETURN",
                 "displayLines": "(TargetEntity_UltraFlagCount - 3)",
@@ -736,7 +735,8 @@ const configAbility = {
                 "variables": [
                   "TargetEntity_UltraFlagCount"
                 ]
-              }
+              },
+              "variableName": "TargetEntity_UltraFlagCount"
             },
             {
               "name": "IF",
@@ -749,12 +749,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetEntity_LoopFlagCount",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "TargetEntity_LoopFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UltraFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
                     "displayLines": "(TargetEntity_LoopFlagCount + 3)",
@@ -764,7 +763,8 @@ const configAbility = {
                     "variables": [
                       "TargetEntity_LoopFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "UltraFlagCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -778,12 +778,11 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetEntity_LoopFlagCount",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "TargetEntity_LoopFlagCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UltraFlagCount",
                   "value": {
                     "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Constants[0] (3) || ADD || RETURN",
                     "displayLines": "(TargetEntity_LoopFlagCount + 3)",
@@ -793,7 +792,8 @@ const configAbility = {
                     "variables": [
                       "TargetEntity_LoopFlagCount"
                     ]
-                  }
+                  },
+                  "variableName": "UltraFlagCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -835,7 +835,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TargetEntity_LoopFlagCount",
               "value": {
                 "operator": "Variables[0] (TargetEntity_CurrentFlagCount) || RETURN",
                 "displayLines": "TargetEntity_CurrentFlagCount",
@@ -843,11 +842,11 @@ const configAbility = {
                 "variables": [
                   "TargetEntity_CurrentFlagCount"
                 ]
-              }
+              },
+              "variableName": "TargetEntity_LoopFlagCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "UltraFlagCount",
               "value": {
                 "operator": "Variables[0] (TargetEntity_LoopFlagCount) || Variables[1] (TargetEntity_CurrentFlagCount) || ADD || RETURN",
                 "displayLines": "(TargetEntity_LoopFlagCount + TargetEntity_CurrentFlagCount)",
@@ -856,7 +855,8 @@ const configAbility = {
                   "TargetEntity_LoopFlagCount",
                   "TargetEntity_CurrentFlagCount"
                 ]
-              }
+              },
+              "variableName": "UltraFlagCount"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -993,7 +993,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_FlowerTotalCount",
               "value": {
                 "operator": "Variables[0] (Limbo_FlowerTotalCount) || Variables[1] (Limbo_FlowerCurrentCount) || ADD || RETURN",
                 "displayLines": "(Limbo_FlowerTotalCount + Limbo_FlowerCurrentCount)",
@@ -1002,12 +1001,13 @@ const configAbility = {
                   "Limbo_FlowerTotalCount",
                   "Limbo_FlowerCurrentCount"
                 ]
-              }
+              },
+              "variableName": "Limbo_FlowerTotalCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_FlowerCurrentCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Limbo_FlowerCurrentCount"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1108,8 +1108,8 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_FlowerTotalCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Limbo_FlowerTotalCount"
             }
           ]
         }
@@ -1132,8 +1132,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_FlowerTotalCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Limbo_FlowerTotalCount"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -1147,7 +1147,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Acheron_FlagCount",
               "value": {
                 "operator": "Variables[0] (MDF_Acheron_FlagCount) || Variables[1] (Limbo_FlowerCount) || ADD || RETURN",
                 "displayLines": "(MDF_Acheron_FlagCount + Limbo_FlowerCount)",
@@ -1156,7 +1155,8 @@ const configAbility = {
                   "MDF_Acheron_FlagCount",
                   "Limbo_FlowerCount"
                 ]
-              }
+              },
+              "variableName": "MDF_Acheron_FlagCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1196,8 +1196,8 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Limbo_FlowerTotalCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Limbo_FlowerTotalCount"
             },
             {
               "name": "Add Events/Bonuses",

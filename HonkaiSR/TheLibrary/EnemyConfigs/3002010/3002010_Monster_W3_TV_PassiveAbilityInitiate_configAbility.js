@@ -176,15 +176,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": -1,
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
                     "displayLines": "-FlopSide",
@@ -193,14 +193,14 @@ const configAbility = {
                       "FlopSide"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "FaceChangeFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "FaceChangeFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -241,8 +241,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "FaceChangeFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "FaceChangeFlag"
             }
           ]
         },
@@ -330,9 +330,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": -1,
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 },
                 {
                   "name": "Add Events/Bonuses",

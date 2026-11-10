@@ -41,7 +41,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyBar_ExtraUltraAttack",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (2) || ADD || RETURN",
                     "displayLines": "(EnergyBar_ExtraUltraAttack + 2)",
@@ -50,7 +49,8 @@ const configAbility = {
                       "EnergyBar_ExtraUltraAttack",
                       2
                     ]
-                  }
+                  },
+                  "variableName": "EnergyBar_ExtraUltraAttack"
                 }
               ]
             }

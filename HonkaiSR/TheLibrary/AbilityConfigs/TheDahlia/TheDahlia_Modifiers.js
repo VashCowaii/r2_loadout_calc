@@ -699,9 +699,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BPSkillPriority",
+              "scope": "AITag",
               "value": 0,
-              "scope": "AITag"
+              "variableName": "BPSkillPriority"
             }
           ]
         },
@@ -715,9 +715,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BPSkillPriority",
+              "scope": "AITag",
               "value": 1,
-              "scope": "AITag"
+              "variableName": "BPSkillPriority"
             }
           ]
         },

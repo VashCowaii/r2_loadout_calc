@@ -245,8 +245,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -282,13 +282,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Trigger_Flag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UseBP_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "UseBP_Flag"
                 }
               ]
             }
@@ -367,13 +367,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UseBP_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "UseBP_Flag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             },
@@ -458,8 +458,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Trigger_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Trigger_Flag"
                     },
                     {
                       "name": "Show Attack Count",
@@ -483,13 +483,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Trigger_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Trigger_Flag"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "UseBP_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "UseBP_Flag"
             }
           ]
         },
@@ -563,7 +563,6 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
                     "displayLines": "BattleEvent_P3_ADF",
@@ -571,7 +570,8 @@ const configAbility = {
                     "variables": [
                       "BattleEvent_P3_ADF"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 }
               ],
               "onChange": [

@@ -23,8 +23,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_CanTransfer",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_CanTransfer"
     },
     "Deleted bullshit",
     {

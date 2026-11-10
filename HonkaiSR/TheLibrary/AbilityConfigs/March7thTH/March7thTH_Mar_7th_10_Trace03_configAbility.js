@@ -107,15 +107,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Skill11",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_Skill11"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Skill11",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Skill11"
                 }
               ]
             }

@@ -71,8 +71,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LightTeam",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_LightTeam"
                 },
                 {
                   "name": "Find New Target",
@@ -92,8 +92,8 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LightTeam",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LightTeam"
                     }
                   ]
                 },

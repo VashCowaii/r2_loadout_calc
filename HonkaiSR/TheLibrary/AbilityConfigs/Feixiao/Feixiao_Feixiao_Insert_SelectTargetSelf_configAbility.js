@@ -48,8 +48,8 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "IsUnCountedInsert",
-              "value": 1
+              "value": 1,
+              "variableName": "IsUnCountedInsert"
             },
             {
               "name": "Trigger Ability",
@@ -85,8 +85,8 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsUnCountedInsert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsUnCountedInsert"
                 },
                 {
                   "name": "Trigger Ability",

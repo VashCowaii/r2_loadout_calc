@@ -60,8 +60,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "Vibrate_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Vibrate_Count"
     },
     {
       "name": "Remove Events/Bonuses",

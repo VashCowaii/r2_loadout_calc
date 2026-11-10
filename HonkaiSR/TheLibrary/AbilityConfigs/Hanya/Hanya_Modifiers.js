@@ -384,8 +384,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank01_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Rank01_Count"
             }
           ]
         }
@@ -436,13 +436,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ZhanYinCount",
-              "value": 0
+              "value": 0,
+              "variableName": "ZhanYinCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ZhanYinCount_01",
-              "value": 0
+              "value": 0,
+              "variableName": "ZhanYinCount_01"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -727,8 +727,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_AttackCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1078,7 +1078,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackCount",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_AttackCount + 1)",
@@ -1088,7 +1087,8 @@ const configAbility = {
                     "variables": [
                       "MDF_AttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AttackCount"
                 },
                 {
                   "name": "IF",
@@ -1156,12 +1156,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ZhanYinCount",
                       "value": {
                         "operator": "Variables[0] (ZhanYinCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(ZhanYinCount - 1)",
@@ -1171,11 +1170,11 @@ const configAbility = {
                         "variables": [
                           "ZhanYinCount"
                         ]
-                      }
+                      },
+                      "variableName": "ZhanYinCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ZhanYinCount_01",
                       "value": {
                         "operator": "Variables[0] (ZhanYinCount_01) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(ZhanYinCount_01 + 1)",
@@ -1185,7 +1184,8 @@ const configAbility = {
                         "variables": [
                           "ZhanYinCount_01"
                         ]
-                      }
+                      },
+                      "variableName": "ZhanYinCount_01"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1462,7 +1462,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank01_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Rank01_Count + 1)",
@@ -1472,7 +1471,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Rank01_Count"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Rank01_Count"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -1518,7 +1518,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank01_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Rank01_Count + 1)",
@@ -1528,7 +1527,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Rank01_Count"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Rank01_Count"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -1578,7 +1578,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackDelta",
               "value": {
                 "operator": "Variables[0] (Ability03_P1_ATKRatio) || RETURN",
                 "displayLines": "Ability03_P1_ATKRatio",
@@ -1586,7 +1585,8 @@ const configAbility = {
                 "variables": [
                   "Ability03_P1_ATKRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackDelta"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1607,7 +1607,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Speed",
               "value": {
                 "operator": "Variables[0] (Ability03_P3_Speed) || Variables[1] (MDF_Skill03_Speed) || MUL || RETURN",
                 "displayLines": "(Ability03_P3_Speed * MDF_Skill03_Speed)",
@@ -1616,7 +1615,8 @@ const configAbility = {
                   "Ability03_P3_Speed",
                   "MDF_Skill03_Speed"
                 ]
-              }
+              },
+              "variableName": "MDF_Speed"
             }
           ]
         }

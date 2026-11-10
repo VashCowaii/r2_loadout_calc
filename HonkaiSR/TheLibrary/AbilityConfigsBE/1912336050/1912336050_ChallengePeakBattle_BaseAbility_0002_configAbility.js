@@ -52,7 +52,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "LoseHPPercentage",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (LoseHPPercentage) || SUB || RETURN",
                 "displayLines": "(1 - LoseHPPercentage)",
@@ -62,7 +61,8 @@ const configAbility = {
                 "variables": [
                   "LoseHPPercentage"
                 ]
-              }
+              },
+              "variableName": "LoseHPPercentage"
             },
             {
               "name": "Define Custom Variable",
@@ -70,7 +70,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "LoseHPPercentage",
               "value": {
                 "operator": "Variables[0] (LoseHPPercentage) || Constants[0] (100) || MUL || RETURN",
                 "displayLines": "(LoseHPPercentage * 100)",
@@ -80,7 +79,8 @@ const configAbility = {
                 "variables": [
                   "LoseHPPercentage"
                 ]
-              }
+              },
+              "variableName": "LoseHPPercentage"
             }
           ]
         }

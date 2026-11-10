@@ -621,7 +621,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPDelta",
                   "value": {
                     "operator": "Variables[0] (MDF_HPDeltaPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)",
@@ -630,7 +629,8 @@ const compositeAbilityObject = {
                       "MDF_HPDeltaPerLayer",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPDelta"
                 }
               ]
             }
@@ -830,7 +830,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValueTotal",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValueTotal) || Variables[1] (MDF_DamageValue) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValueTotal + MDF_DamageValue)",
@@ -839,7 +838,8 @@ const compositeAbilityObject = {
                       "MDF_DamageValueTotal",
                       "MDF_DamageValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValueTotal"
                 },
                 {
                   "name": "IF",
@@ -856,8 +856,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValueTotal",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DamageValueTotal"
                     }
                   ]
                 },
@@ -880,7 +880,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValueFinal",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValueTotal) || Variables[1] (MDF_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_DamageValueTotal * MDF_DamageRatio)",
@@ -889,7 +888,8 @@ const compositeAbilityObject = {
                       "MDF_DamageValueTotal",
                       "MDF_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValueFinal"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -915,7 +915,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentDirtyHPRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageValueFinal) || Variables[1] (MDF_MaxHP) || DIV || RETURN",
                         "displayLines": "(MDF_DamageValueFinal / MDF_MaxHP)",
@@ -924,14 +923,15 @@ const compositeAbilityObject = {
                           "MDF_DamageValueFinal",
                           "MDF_MaxHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentDirtyHPRatio"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentDirtyHPRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentDirtyHPRatio"
                     }
                   ]
                 },
@@ -1284,7 +1284,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_BaseAttack) || Variables[1] (MDF_TotalDamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_BaseAttack * MDF_TotalDamageRatio)",
@@ -1293,11 +1292,11 @@ const compositeAbilityObject = {
                       "MDF_BaseAttack",
                       "MDF_TotalDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "CurrentDamage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TotalDamageRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalDamageRatio) || RETURN",
                     "displayLines": "MDF_TotalDamageRatio",
@@ -1305,11 +1304,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_TotalDamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "TotalDamageRatio"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ChargePercentage",
                   "value": {
                     "operator": "Variables[0] (TotalDamageRatio) || Variables[1] (MDF_TotalDamageRatioMax) || DIV || RETURN",
                     "displayLines": "(TotalDamageRatio / MDF_TotalDamageRatioMax)",
@@ -1318,7 +1317,8 @@ const compositeAbilityObject = {
                       "TotalDamageRatio",
                       "MDF_TotalDamageRatioMax"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ChargePercentage"
                 },
                 {
                   "name": "Set Aquila UI Data"

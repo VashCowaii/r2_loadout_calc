@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_PursuedDamage_LimitCount",
+      "scope": "ContextCaster",
       "value": {
         "operator": "Variables[0] (20) || RETURN",
         "displayLines": "20",
@@ -15,7 +15,7 @@ const configAbility = {
           20
         ]
       },
-      "scope": "ContextCaster"
+      "variableName": "DV_PursuedDamage_LimitCount"
     },
     {
       "name": "Find New Target",

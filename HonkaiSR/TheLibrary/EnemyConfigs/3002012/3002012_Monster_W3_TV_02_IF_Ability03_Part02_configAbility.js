@@ -7,13 +7,13 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "AIFlag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "FlopSide",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (FlopSide) || INVERT || RETURN",
         "displayLines": "-FlopSide",
@@ -22,7 +22,7 @@ const configAbility = {
           "FlopSide"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "FlopSide"
     },
     {
       "name": "IF",

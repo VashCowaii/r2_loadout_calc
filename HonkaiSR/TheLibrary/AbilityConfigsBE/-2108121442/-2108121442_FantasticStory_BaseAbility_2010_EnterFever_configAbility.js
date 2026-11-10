@@ -221,8 +221,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -232,8 +232,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.2
+                              "value": 0.2,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ]
                         }
@@ -252,8 +252,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.5
+                              "value": 0.5,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -263,8 +263,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ]
                         }

@@ -25,7 +25,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
           "value": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -34,7 +33,8 @@ const configAbility = {
               2,
               1
             ]
-          }
+          },
+          "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -242,14 +242,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SpecialMark_DebuffChance",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "MDF_SpecialMark_DebuffChance"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SpecialMark_DebuffChance",
                   "value": {
                     "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                     "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -261,7 +260,8 @@ const configAbility = {
                       "MDF_SpecialMark_DebuffNumber",
                       "MDF_DebuffAddChance"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SpecialMark_DebuffChance"
                 },
                 {
                   "name": "IF",
@@ -279,8 +279,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     }
                   ]
                 }
@@ -330,14 +330,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
                       "value": {
                         "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                         "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -349,7 +348,8 @@ const configAbility = {
                           "MDF_SpecialMark_DebuffNumber",
                           "MDF_DebuffAddChance"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     },
                     {
                       "name": "IF",
@@ -367,8 +367,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
-                          "value": 100
+                          "value": 100,
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         }
                       ]
                     }
@@ -412,14 +412,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
                       "value": {
                         "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                         "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -431,7 +430,8 @@ const configAbility = {
                           "MDF_SpecialMark_DebuffNumber",
                           "MDF_DebuffAddChance"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     },
                     {
                       "name": "IF",
@@ -449,8 +449,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
-                          "value": 100
+                          "value": 100,
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         }
                       ]
                     }

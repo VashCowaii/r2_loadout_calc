@@ -530,7 +530,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tiao",
                       "value": {
                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(QingQue_Tiao + 1)",
@@ -540,7 +539,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Tiao"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Tiao"
                     }
                   ]
                 }
@@ -569,7 +569,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tong",
                       "value": {
                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(QingQue_Tong + 1)",
@@ -579,7 +578,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Tong"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Tong"
                     }
                   ]
                 }
@@ -608,7 +608,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Wan",
                       "value": {
                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(QingQue_Wan + 1)",
@@ -618,7 +617,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Wan"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Wan"
                     }
                   ]
                 }
@@ -739,13 +739,13 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_Wan"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_CardCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_CardCount"
                         }
                       ],
                       "failed": [
@@ -818,13 +818,13 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tong"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_CardCount",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_CardCount"
                             }
                           ],
                           "failed": [
@@ -897,13 +897,13 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tiao"
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_CardCount",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_CardCount"
                                 }
                               ]
                             }
@@ -1182,7 +1182,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_CardCount",
                       "value": {
                         "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(QingQue_CardCount + 1)",
@@ -1192,7 +1191,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_CardCount"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_CardCount"
                     }
                   ],
                   "failed": [
@@ -1234,7 +1234,6 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_CardCount",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || ADD || RETURN",
                                         "displayLines": "(QingQue_CardCount + 1)",
@@ -1244,7 +1243,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_CardCount"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_CardCount"
                                     },
                                     {
                                       "name": "IF",
@@ -1314,7 +1314,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_CardCount",
                                           "value": {
                                             "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                                             "displayLines": "(QingQue_CardCount - 1)",
@@ -1324,7 +1323,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "QingQue_CardCount"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "QingQue_CardCount"
                                         },
                                         {
                                           "name": "IF",
@@ -1361,7 +1361,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tiao",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -1371,7 +1370,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tiao"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tiao"
                                                 }
                                               ],
                                               "failed": [
@@ -1385,7 +1385,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Wan",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Wan - 1)",
@@ -1395,7 +1394,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Wan"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Wan"
                                                 }
                                               ]
                                             }
@@ -1436,7 +1436,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Tong",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Tong - 1)",
@@ -1446,7 +1445,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Tong"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Tong"
                                                     }
                                                   ],
                                                   "failed": [
@@ -1460,7 +1460,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Wan",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Wan - 1)",
@@ -1470,7 +1469,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Wan"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Wan"
                                                     }
                                                   ]
                                                 }
@@ -1524,7 +1524,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tiao",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -1534,7 +1533,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tiao"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tiao"
                                                 }
                                               ],
                                               "failed": [
@@ -1564,7 +1564,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Tong",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Tong - 1)",
@@ -1574,7 +1573,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Tong"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Tong"
                                                     }
                                                   ],
                                                   "failed": [
@@ -1595,7 +1595,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Tong",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Tong - 1)",
@@ -1605,7 +1604,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Tong"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Tong"
                                                         }
                                                       ],
                                                       "failed": [
@@ -1619,7 +1619,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Tiao",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Tiao - 1)",
@@ -1629,7 +1628,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Tiao"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Tiao"
                                                         }
                                                       ]
                                                     }
@@ -1663,7 +1663,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_CardCount",
                                           "value": {
                                             "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                                             "displayLines": "(QingQue_CardCount - 1)",
@@ -1673,7 +1672,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "QingQue_CardCount"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "QingQue_CardCount"
                                         },
                                         {
                                           "name": "IF",
@@ -1710,7 +1710,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tiao",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -1720,7 +1719,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tiao"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tiao"
                                                 }
                                               ],
                                               "failed": [
@@ -1734,7 +1734,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tong",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tong - 1)",
@@ -1744,7 +1743,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tong"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tong"
                                                 }
                                               ]
                                             }
@@ -1785,7 +1785,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Tong",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Tong - 1)",
@@ -1795,7 +1794,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Tong"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Tong"
                                                     }
                                                   ],
                                                   "failed": [
@@ -1809,7 +1809,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Wan",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Wan - 1)",
@@ -1819,7 +1818,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Wan"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Wan"
                                                     }
                                                   ]
                                                 }
@@ -1873,7 +1873,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tiao",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -1883,7 +1882,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tiao"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tiao"
                                                 }
                                               ],
                                               "failed": [
@@ -1913,7 +1913,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Wan",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Wan - 1)",
@@ -1923,7 +1922,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Wan"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Wan"
                                                     }
                                                   ],
                                                   "failed": [
@@ -1944,7 +1944,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Wan",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Wan - 1)",
@@ -1954,7 +1953,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Wan"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Wan"
                                                         }
                                                       ],
                                                       "failed": [
@@ -1968,7 +1968,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Tiao",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Tiao - 1)",
@@ -1978,7 +1977,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Tiao"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Tiao"
                                                         }
                                                       ]
                                                     }
@@ -2012,7 +2012,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_CardCount",
                                           "value": {
                                             "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                                             "displayLines": "(QingQue_CardCount - 1)",
@@ -2022,7 +2021,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "QingQue_CardCount"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "QingQue_CardCount"
                                         },
                                         {
                                           "name": "IF",
@@ -2059,7 +2059,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tiao",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -2069,7 +2068,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tiao"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tiao"
                                                 }
                                               ],
                                               "failed": [
@@ -2083,7 +2083,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tong",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tong - 1)",
@@ -2093,7 +2092,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tong"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tong"
                                                 }
                                               ]
                                             }
@@ -2134,7 +2134,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Tiao",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Tiao - 1)",
@@ -2144,7 +2143,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Tiao"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Tiao"
                                                     }
                                                   ],
                                                   "failed": [
@@ -2158,7 +2158,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Wan",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Wan - 1)",
@@ -2168,7 +2167,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Wan"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Wan"
                                                     }
                                                   ]
                                                 }
@@ -2222,7 +2222,6 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "QingQue_Tong",
                                                   "value": {
                                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                     "displayLines": "(QingQue_Tong - 1)",
@@ -2232,7 +2231,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "QingQue_Tong"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "QingQue_Tong"
                                                 }
                                               ],
                                               "failed": [
@@ -2262,7 +2262,6 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "QingQue_Wan",
                                                       "value": {
                                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                         "displayLines": "(QingQue_Wan - 1)",
@@ -2272,7 +2271,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "QingQue_Wan"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "QingQue_Wan"
                                                     }
                                                   ],
                                                   "failed": [
@@ -2293,7 +2293,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Wan",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Wan - 1)",
@@ -2303,7 +2302,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Wan"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Wan"
                                                         }
                                                       ],
                                                       "failed": [
@@ -2317,7 +2317,6 @@ const compositeAbilityObject = {
                                                         },
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "QingQue_Tong",
                                                           "value": {
                                                             "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                                             "displayLines": "(QingQue_Tong - 1)",
@@ -2327,7 +2326,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "QingQue_Tong"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "QingQue_Tong"
                                                         }
                                                       ]
                                                     }
@@ -2393,8 +2393,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_BPCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_BPCount"
                 }
               ]
             }
@@ -2931,22 +2931,21 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_BPCoolDown",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_BPCoolDown"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_BPCount",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_BPCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_CardCount",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_CardCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_PropertyValue01",
           "value": {
             "operator": "Variables[0] (0.72) || RETURN",
             "displayLines": "0.72",
@@ -2954,11 +2953,11 @@ const compositeAbilityObject = {
             "variables": [
               0.72
             ]
-          }
+          },
+          "variableName": "MDF_PropertyValue01"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_PropertyValue",
           "value": {
             "operator": "Variables[0] (0.72) || RETURN",
             "displayLines": "0.72",
@@ -2966,22 +2965,23 @@ const compositeAbilityObject = {
             "variables": [
               0.72
             ]
-          }
+          },
+          "variableName": "MDF_PropertyValue"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Wan",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Wan"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tong",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tong"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tiao",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tiao"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3113,23 +3113,23 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tong",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tong"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tiao",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tiao"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Wan",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Wan"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_CardCount",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_CardCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3409,7 +3409,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_BPCount",
           "value": {
             "operator": "Variables[0] (QingQue_BPCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(QingQue_BPCount + 1)",
@@ -3419,7 +3418,8 @@ const compositeAbilityObject = {
             "variables": [
               "QingQue_BPCount"
             ]
-          }
+          },
+          "variableName": "QingQue_BPCount"
         },
         {
           "name": "IF",
@@ -3446,8 +3446,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_BPCoolDown",
-              "value": 1
+              "value": 1,
+              "variableName": "QingQue_BPCoolDown"
             }
           ]
         },
@@ -3661,23 +3661,23 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tong",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tong"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tiao",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tiao"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Wan",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Wan"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_CardCount",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_CardCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3772,23 +3772,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tong",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Tong"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tiao",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Tiao"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Wan",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Wan"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_CardCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_CardCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3883,23 +3883,23 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tong",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "QingQue_Tong"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tiao",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "QingQue_Tiao"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Wan",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "QingQue_Wan"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_CardCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "QingQue_CardCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4432,23 +4432,23 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tiao",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tiao"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tong",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tong"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Wan",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Wan"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_CardCount",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_CardCount"
             }
           ],
           "failed": [
@@ -4496,7 +4496,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Wan - 1)",
@@ -4506,7 +4505,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Wan"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Wan"
                             }
                           ],
                           "failed": [
@@ -4520,7 +4520,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Tong - 1)",
@@ -4530,7 +4529,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Tong"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Tong"
                             }
                           ]
                         }
@@ -4573,8 +4573,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Wan"
                             }
                           ],
                           "failed": [
@@ -4588,8 +4588,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tiao",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tiao"
                             }
                           ]
                         }
@@ -4621,8 +4621,8 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tong"
                                 }
                               ],
                               "failed": [
@@ -4636,8 +4636,8 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             }
@@ -4666,7 +4666,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Wan",
                       "value": {
                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(QingQue_Wan - 1)",
@@ -4676,7 +4675,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Wan"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Wan"
                     }
                   ]
                 },
@@ -4699,7 +4699,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tong",
                       "value": {
                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(QingQue_Tong - 1)",
@@ -4709,7 +4708,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Tong"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Tong"
                     }
                   ]
                 },
@@ -4732,7 +4732,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_Tiao",
                       "value": {
                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(QingQue_Tiao - 1)",
@@ -4742,13 +4741,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_Tiao"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_Tiao"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_CardCount",
                   "value": {
                     "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(QingQue_CardCount - 1)",
@@ -4758,7 +4757,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "QingQue_CardCount"
                     ]
-                  }
+                  },
+                  "variableName": "QingQue_CardCount"
                 }
               ],
               "failed": [
@@ -4799,7 +4799,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tiao",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Tiao - 1)",
@@ -4809,7 +4808,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Tiao"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Tiao"
                             }
                           ]
                         },
@@ -4832,7 +4832,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Wan - 1)",
@@ -4842,7 +4841,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Wan"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Wan"
                             }
                           ]
                         },
@@ -4865,7 +4865,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tiao",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Tiao - 1)",
@@ -4875,7 +4874,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Tiao"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Tiao"
                             }
                           ]
                         },
@@ -4898,7 +4898,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Wan - 1)",
@@ -4908,7 +4907,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "QingQue_Wan"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Wan"
                             }
                           ]
                         }
@@ -4942,7 +4942,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tong - 1)",
@@ -4952,7 +4951,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "QingQue_Tong"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             },
@@ -4975,7 +4975,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Wan - 1)",
@@ -4985,7 +4984,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "QingQue_Wan"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Wan"
                                 }
                               ]
                             },
@@ -5008,7 +5008,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tong - 1)",
@@ -5018,7 +5017,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "QingQue_Tong"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             },
@@ -5041,7 +5041,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Wan - 1)",
@@ -5051,7 +5050,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "QingQue_Wan"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Wan"
                                 }
                               ]
                             }
@@ -5085,7 +5085,6 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tong - 1)",
@@ -5095,7 +5094,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_Tong"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 },
@@ -5118,7 +5118,6 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tiao - 1)",
@@ -5128,7 +5127,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_Tiao"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 },
@@ -5151,7 +5151,6 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tong - 1)",
@@ -5161,7 +5160,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_Tong"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 },
@@ -5184,7 +5184,6 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tiao - 1)",
@@ -5194,7 +5193,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_Tiao"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 }
@@ -5248,7 +5248,6 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Wan",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Wan - 1)",
@@ -5258,7 +5257,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "QingQue_Wan"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Wan"
                                     }
                                   ],
                                   "failed": [
@@ -5279,7 +5279,6 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Tiao",
                                           "value": {
                                             "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                             "displayLines": "(QingQue_Tiao - 1)",
@@ -5289,7 +5288,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "QingQue_Tiao"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "QingQue_Tiao"
                                         }
                                       ],
                                       "failed": [
@@ -5303,7 +5303,6 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Tong",
                                           "value": {
                                             "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                             "displayLines": "(QingQue_Tong - 1)",
@@ -5313,7 +5312,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "QingQue_Tong"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "QingQue_Tong"
                                         }
                                       ]
                                     }
@@ -5327,7 +5327,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_CardCount",
                       "value": {
                         "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(QingQue_CardCount - 1)",
@@ -5337,7 +5336,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "QingQue_CardCount"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_CardCount"
                     }
                   ],
                   "failed": [
@@ -5369,8 +5369,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Wan"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -5382,8 +5382,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tiao",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tiao"
                             }
                           ],
                           "failed": [
@@ -5406,8 +5406,8 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Wan"
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
@@ -5419,8 +5419,8 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tong"
                                 }
                               ],
                               "failed": [
@@ -5443,8 +5443,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tiao"
                                     },
                                     {
                                       "name": "Remove Events/Bonuses",
@@ -5456,8 +5456,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 }
@@ -5500,8 +5500,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Wan",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Wan"
                                     }
                                   ],
                                   "failed": [
@@ -5515,8 +5515,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 }
@@ -5548,8 +5548,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ],
                                   "failed": [
@@ -5563,8 +5563,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 }
@@ -5596,8 +5596,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Wan",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Wan"
                                     }
                                   ],
                                   "failed": [
@@ -5611,8 +5611,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 }
@@ -5664,8 +5664,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Wan",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "QingQue_Wan"
                                         }
                                       ],
                                       "failed": [
@@ -5679,8 +5679,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Tong",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "QingQue_Tong"
                                         }
                                       ]
                                     }
@@ -5714,8 +5714,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Wan",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Wan"
                                     }
                                   ],
                                   "failed": [
@@ -5729,8 +5729,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
-                                      "value": 1
+                                      "value": 1,
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 }
@@ -5782,8 +5782,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Tong",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "QingQue_Tong"
                                         }
                                       ],
                                       "failed": [
@@ -5797,8 +5797,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "QingQue_Tiao",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "QingQue_Tiao"
                                         }
                                       ]
                                     }
@@ -5810,7 +5810,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_CardCount",
                           "value": {
                             "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_CardCount - 1)",
@@ -5820,7 +5819,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "QingQue_CardCount"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_CardCount"
                         }
                       ]
                     }

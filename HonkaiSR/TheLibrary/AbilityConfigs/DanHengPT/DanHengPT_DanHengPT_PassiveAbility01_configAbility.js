@@ -15,7 +15,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DanHengPT_Stance_All",
       "value": {
         "operator": "Variables[0] (AOE Toughness Value) || RETURN",
         "displayLines": "AOE Toughness Value",
@@ -23,7 +22,8 @@ const configAbility = {
         "variables": [
           "AOE Toughness Value"
         ]
-      }
+      },
+      "variableName": "DanHengPT_Stance_All"
     },
     {
       "name": "Preload Battle Event(s)",
@@ -49,13 +49,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DanHengPT_ExtraShieldUPRatio",
-      "value": 1
+      "value": 1,
+      "variableName": "DanHengPT_ExtraShieldUPRatio"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DanHengPT_IsFreeAction",
-      "value": 0
+      "value": 0,
+      "variableName": "DanHengPT_IsFreeAction"
     },
     {
       "name": "Add Events/Bonuses",
@@ -101,8 +101,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DanHengPT_Passive_MaxCount",
-      "value": 99
+      "value": 99,
+      "variableName": "DanHengPT_Passive_MaxCount"
     },
     {
       "name": "IF",
@@ -113,9 +113,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageCarry",
+          "scope": "AITag",
           "value": 0.0009999999,
-          "scope": "AITag"
+          "variableName": "DamageCarry"
         }
       ]
     },
@@ -143,7 +143,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_InsertDanHengPTDamagePercentage",
       "value": {
         "operator": "Variables[0] (0.8) || RETURN",
         "displayLines": "0.8",
@@ -151,7 +150,8 @@ const configAbility = {
         "variables": [
           0.8
         ]
-      }
+      },
+      "variableName": "Skill03_InsertDanHengPTDamagePercentage"
     },
     {
       "name": "IF",
@@ -162,7 +162,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_InsertOwnerDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
             "displayLines": "(0.8 * 2)",
@@ -171,11 +170,11 @@ const configAbility = {
               0.8,
               2
             ]
-          }
+          },
+          "variableName": "Skill03_InsertOwnerDamagePercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
             "displayLines": "(0.4 * 2)",
@@ -184,13 +183,13 @@ const configAbility = {
               0.4,
               2
             ]
-          }
+          },
+          "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_InsertOwnerDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.8) || RETURN",
             "displayLines": "0.8",
@@ -198,11 +197,11 @@ const configAbility = {
             "variables": [
               0.8
             ]
-          }
+          },
+          "variableName": "Skill03_InsertOwnerDamagePercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.4) || RETURN",
             "displayLines": "0.4",
@@ -210,7 +209,8 @@ const configAbility = {
             "variables": [
               0.4
             ]
-          }
+          },
+          "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
         }
       ]
     }
@@ -249,7 +249,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraShieldUPRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
                     "displayLines": "MDF_ShieldUPRatioTemp",
@@ -257,7 +256,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ShieldUPRatioTemp"
                     ]
-                  }
+                  },
+                  "variableName": "DanHengPT_ExtraShieldUPRatio"
                 }
               ]
             }
@@ -302,8 +302,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraDamageCount",
-              "value": 0
+              "value": 0,
+              "variableName": "DanHengPT_ExtraDamageCount"
             }
           ]
         },
@@ -327,7 +327,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraDamageRatio",
               "value": {
                 "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
                 "displayLines": "MDF_DamageRatioTemp",
@@ -335,7 +334,8 @@ const configAbility = {
                 "variables": [
                   "MDF_DamageRatioTemp"
                 ]
-              }
+              },
+              "variableName": "DanHengPT_ExtraDamageRatio"
             },
             {
               "name": "Define Custom Variable with Copy",
@@ -354,7 +354,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraDamageCount",
               "value": {
                 "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
                 "displayLines": "MDF_DamageCountTemp",
@@ -362,7 +361,8 @@ const configAbility = {
                 "variables": [
                   "MDF_DamageCountTemp"
                 ]
-              }
+              },
+              "variableName": "DanHengPT_ExtraDamageCount"
             }
           ]
         }

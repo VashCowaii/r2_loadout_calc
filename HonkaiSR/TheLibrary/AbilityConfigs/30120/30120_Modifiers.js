@@ -643,7 +643,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Count + 1)",
@@ -653,7 +652,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Count"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -673,8 +673,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Count"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1241,7 +1241,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TargetStance",
               "value": {
                 "operator": "Variables[0] (TargetStance) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
                 "displayLines": "(TargetStance * MDF_RedStanceRatio)",
@@ -1250,7 +1249,8 @@ const configAbility = {
                   "TargetStance",
                   "MDF_RedStanceRatio"
                 ]
-              }
+              },
+              "variableName": "TargetStance"
             },
             {
               "name": "IF",
@@ -1318,7 +1318,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DmgUp_Ratio_get",
               "value": {
                 "operator": "Variables[0] (_DmgUp_Ratio_get) || Variables[1] (_Current_Layer) || MUL || RETURN",
                 "displayLines": "(_DmgUp_Ratio_get * _Current_Layer)",
@@ -1327,7 +1326,8 @@ const configAbility = {
                   "_DmgUp_Ratio_get",
                   "_Current_Layer"
                 ]
-              }
+              },
+              "variableName": "_DmgUp_Ratio_get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1422,8 +1422,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1455,7 +1455,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -1465,7 +1464,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1549,7 +1549,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EntityCurrentSP",
                   "value": {
                     "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (EntityMaxSP) || Variables[2] (_SP_Ratio_get) || MUL || ADD || RETURN",
                     "displayLines": "(EntityCurrentSP + (EntityMaxSP * _SP_Ratio_get))",
@@ -1559,7 +1558,8 @@ const configAbility = {
                       "EntityMaxSP",
                       "_SP_Ratio_get"
                     ]
-                  }
+                  },
+                  "variableName": "EntityCurrentSP"
                 },
                 {
                   "name": "IF",
@@ -1615,7 +1615,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                         "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -1625,7 +1624,8 @@ const configAbility = {
                           "EntityCurrentSP",
                           "EntityMaxSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "IF",
@@ -1662,8 +1662,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EntityCurrentSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EntityCurrentSP"
                 }
               ]
             }
@@ -1685,7 +1685,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DmgUp_Ratio_get",
               "value": {
                 "operator": "Variables[0] (_DmgUp_Ratio_get) || Variables[1] (_Current_Layer) || MUL || RETURN",
                 "displayLines": "(_DmgUp_Ratio_get * _Current_Layer)",
@@ -1694,7 +1693,8 @@ const configAbility = {
                   "_DmgUp_Ratio_get",
                   "_Current_Layer"
                 ]
-              }
+              },
+              "variableName": "_DmgUp_Ratio_get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1736,7 +1736,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_DmgUpRatio_Get",
               "value": {
                 "operator": "Variables[0] (_CurrentLayer) || Variables[1] (DV_DmgUpRatio_Get) || MUL || RETURN",
                 "displayLines": "(_CurrentLayer * DV_DmgUpRatio_Get)",
@@ -1745,11 +1744,11 @@ const configAbility = {
                   "_CurrentLayer",
                   "DV_DmgUpRatio_Get"
                 ]
-              }
+              },
+              "variableName": "DV_DmgUpRatio_Get"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_AtkUpRatio_Get",
               "value": {
                 "operator": "Variables[0] (_CurrentLayer) || Variables[1] (DV_AtkUpRatio_Get) || MUL || RETURN",
                 "displayLines": "(_CurrentLayer * DV_AtkUpRatio_Get)",
@@ -1758,7 +1757,8 @@ const configAbility = {
                   "_CurrentLayer",
                   "DV_AtkUpRatio_Get"
                 ]
-              }
+              },
+              "variableName": "DV_AtkUpRatio_Get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1923,8 +1923,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Boss_ChangePhase_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Boss_ChangePhase_Flag"
                 },
                 {
                   "name": "Find New Target",
@@ -1998,8 +1998,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Boss_ChangePhase_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Boss_ChangePhase_Flag"
                 }
               ]
             }
@@ -2041,8 +2041,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Boss_ChangePhase_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Boss_ChangePhase_Flag"
                 },
                 {
                   "name": "Find New Target",
@@ -2116,8 +2116,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Boss_ChangePhase_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Boss_ChangePhase_Flag"
                 }
               ]
             }
@@ -2154,7 +2154,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageUp_Ratio_Sum",
               "value": {
                 "operator": "Variables[0] (_Current_Layer) || Variables[1] (_DamageUp_Ratio) || MUL || RETURN",
                 "displayLines": "(_Current_Layer * _DamageUp_Ratio)",
@@ -2163,7 +2162,8 @@ const configAbility = {
                   "_Current_Layer",
                   "_DamageUp_Ratio"
                 ]
-              }
+              },
+              "variableName": "_DamageUp_Ratio_Sum"
             }
           ]
         }
@@ -2584,7 +2584,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleEvent_P5_ADF_Get",
               "value": {
                 "operator": "Variables[0] (BattleEvent_P5_ADF_Layer) || Variables[1] (BattleEvent_P5_ADF_Get) || MUL || RETURN",
                 "displayLines": "(BattleEvent_P5_ADF_Layer * BattleEvent_P5_ADF_Get)",
@@ -2593,7 +2592,8 @@ const configAbility = {
                   "BattleEvent_P5_ADF_Layer",
                   "BattleEvent_P5_ADF_Get"
                 ]
-              }
+              },
+              "variableName": "BattleEvent_P5_ADF_Get"
             }
           ]
         }
@@ -2623,7 +2623,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleEvent_P2_ADF_Get",
               "value": {
                 "operator": "Variables[0] (BattleEvent_P2_ADF_Layer) || Variables[1] (BattleEvent_P2_ADF_Get) || MUL || RETURN",
                 "displayLines": "(BattleEvent_P2_ADF_Layer * BattleEvent_P2_ADF_Get)",
@@ -2632,7 +2631,8 @@ const configAbility = {
                   "BattleEvent_P2_ADF_Layer",
                   "BattleEvent_P2_ADF_Get"
                 ]
-              }
+              },
+              "variableName": "BattleEvent_P2_ADF_Get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2683,7 +2683,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleEvent_P2_ADF_Get",
               "value": {
                 "operator": "Variables[0] (BattleEvent_P2_ADF_Layer) || Variables[1] (BattleEvent_P2_ADF_Get) || MUL || RETURN",
                 "displayLines": "(BattleEvent_P2_ADF_Layer * BattleEvent_P2_ADF_Get)",
@@ -2692,7 +2691,8 @@ const configAbility = {
                   "BattleEvent_P2_ADF_Layer",
                   "BattleEvent_P2_ADF_Get"
                 ]
-              }
+              },
+              "variableName": "BattleEvent_P2_ADF_Get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2743,7 +2743,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleEvent_P2_ADF_Get",
               "value": {
                 "operator": "Variables[0] (BattleEvent_P2_ADF_Layer) || Variables[1] (BattleEvent_P2_ADF_Get) || MUL || RETURN",
                 "displayLines": "(BattleEvent_P2_ADF_Layer * BattleEvent_P2_ADF_Get)",
@@ -2752,7 +2751,8 @@ const configAbility = {
                   "BattleEvent_P2_ADF_Layer",
                   "BattleEvent_P2_ADF_Get"
                 ]
-              }
+              },
+              "variableName": "BattleEvent_P2_ADF_Get"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2803,7 +2803,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BattleEvent_P2_ADF_Get",
               "value": {
                 "operator": "Variables[0] (BattleEvent_P2_ADF_Layer) || Variables[1] (BattleEvent_P2_ADF_Get) || MUL || RETURN",
                 "displayLines": "(BattleEvent_P2_ADF_Layer * BattleEvent_P2_ADF_Get)",
@@ -2812,7 +2811,8 @@ const configAbility = {
                   "BattleEvent_P2_ADF_Layer",
                   "BattleEvent_P2_ADF_Get"
                 ]
-              }
+              },
+              "variableName": "BattleEvent_P2_ADF_Get"
             },
             {
               "name": "Stack Target Stat Value",

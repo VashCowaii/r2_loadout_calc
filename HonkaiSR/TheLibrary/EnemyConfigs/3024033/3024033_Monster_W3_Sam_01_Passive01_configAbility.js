@@ -315,15 +315,15 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "AIFlag"
                 }
               ],
               "noTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }

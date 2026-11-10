@@ -104,8 +104,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "XP_Elite02_03_BattleScore1_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "XP_Elite02_03_BattleScore1_Flag"
             }
           ]
         },
@@ -114,8 +114,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "XP_Elite02_03_BattleScore1_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "XP_Elite02_03_BattleScore1_Flag"
             }
           ]
         }
@@ -173,9 +173,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 7,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             }
           ]
         }
@@ -229,9 +229,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 7,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             }
           ]
         }

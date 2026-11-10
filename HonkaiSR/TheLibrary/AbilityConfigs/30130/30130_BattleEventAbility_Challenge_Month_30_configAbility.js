@@ -148,8 +148,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Trigger_Effect_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Trigger_Effect_Flag"
                 },
                 "Deleted bullshit",
                 {
@@ -253,8 +253,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Current_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Current_Layer"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -282,8 +282,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Current_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Current_Layer"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -371,7 +371,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Current_Layer",
                   "value": {
                     "operator": "Variables[0] (_Current_Layer) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_Current_Layer + 1)",
@@ -381,7 +380,8 @@ const configAbility = {
                     "variables": [
                       "_Current_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "_Current_Layer"
                 },
                 {
                   "name": "IF",
@@ -401,8 +401,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Trigger_Effect_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Trigger_Effect_Flag"
                     },
                     {
                       "name": "Find New Target",
@@ -487,8 +487,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Trigger_Effect_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Trigger_Effect_Flag"
                 },
                 "Deleted bullshit",
                 {
@@ -592,8 +592,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Current_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Current_Layer"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -630,8 +630,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Current_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Current_Layer"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -652,8 +652,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Current_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "_Current_Layer"
             },
             {
               "name": "Remove Events/Bonuses",

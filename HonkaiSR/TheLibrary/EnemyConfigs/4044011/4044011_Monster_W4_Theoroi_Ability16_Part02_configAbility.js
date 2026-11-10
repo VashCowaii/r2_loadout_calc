@@ -124,8 +124,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 2
+              "value": 2,
+              "variableName": "MainCount"
             }
           ]
         }
@@ -133,8 +133,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill16Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill16Count"
     },
     {
       "name": "Find New Target",
@@ -253,7 +253,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill16Count",
           "value": {
             "operator": "Variables[0] (Skill16Count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Skill16Count + 1)",
@@ -263,7 +262,8 @@ const configAbility = {
             "variables": [
               "Skill16Count"
             ]
-          }
+          },
+          "variableName": "Skill16Count"
         }
       ]
     },
@@ -278,14 +278,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill16Count",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill16Count"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill16Damage",
       "value": {
         "operator": "Variables[0] ({[Skill16[0]]}) || Variables[1] (Skill16Count) || DIV || Constants[0] (5) || DIV || RETURN",
         "displayLines": "(({[Skill16[0]]} / Skill16Count) / 5)",
@@ -296,7 +295,8 @@ const configAbility = {
           "{[Skill16[0]]}",
           "Skill16Count"
         ]
-      }
+      },
+      "variableName": "Skill16Damage"
     },
     {
       "name": "ATK Scaling DMG",
@@ -754,8 +754,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
-      "value": 1
+      "value": 1,
+      "variableName": "AIFlag"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -803,8 +803,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainCount",
-              "value": 3
+              "value": 3,
+              "variableName": "MainCount"
             }
           ]
         }

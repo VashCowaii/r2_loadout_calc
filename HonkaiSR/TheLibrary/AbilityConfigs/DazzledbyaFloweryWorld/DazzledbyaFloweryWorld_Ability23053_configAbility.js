@@ -136,7 +136,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Elation_PreviousCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (_Elation_PreviousCount) || Variables[2] (AbilityEquip_P3_BPMaxAddValueMax) || Variables[3] (AbilityEquip_P2_BPMaxAddValue) || DIV || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_Elation_PreviousCount, (AbilityEquip_P3_BPMaxAddValueMax / AbilityEquip_P2_BPMaxAddValue))",
@@ -147,7 +146,8 @@ const configAbility = {
                   "AbilityEquip_P3_BPMaxAddValueMax",
                   "AbilityEquip_P2_BPMaxAddValue"
                 ]
-              }
+              },
+              "variableName": "_Elation_PreviousCount"
             },
             {
               "name": "Change Skill Point Max",
@@ -215,7 +215,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Elation_CurrentCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (_Elation_CurrentCount) || Variables[2] (AbilityEquip_P3_BPMaxAddValueMax) || Variables[3] (AbilityEquip_P2_BPMaxAddValue) || DIV || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_Elation_CurrentCount, (AbilityEquip_P3_BPMaxAddValueMax / AbilityEquip_P2_BPMaxAddValue))",
@@ -226,11 +225,11 @@ const configAbility = {
                   "AbilityEquip_P3_BPMaxAddValueMax",
                   "AbilityEquip_P2_BPMaxAddValue"
                 ]
-              }
+              },
+              "variableName": "_Elation_CurrentCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Elation_DeltaCount",
               "value": {
                 "operator": "Variables[0] (_Elation_CurrentCount) || Variables[1] (_Elation_PreviousCount) || SUB || RETURN",
                 "displayLines": "(_Elation_CurrentCount - _Elation_PreviousCount)",
@@ -239,11 +238,11 @@ const configAbility = {
                   "_Elation_CurrentCount",
                   "_Elation_PreviousCount"
                 ]
-              }
+              },
+              "variableName": "_Elation_DeltaCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Elation_PreviousCount",
               "value": {
                 "operator": "Variables[0] (_Elation_CurrentCount) || RETURN",
                 "displayLines": "_Elation_CurrentCount",
@@ -251,7 +250,8 @@ const configAbility = {
                 "variables": [
                   "_Elation_CurrentCount"
                 ]
-              }
+              },
+              "variableName": "_Elation_PreviousCount"
             },
             {
               "name": "Change Skill Point Max",
@@ -294,8 +294,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_BPCount_Sum",
-              "value": 0
+              "value": 0,
+              "variableName": "_BPCount_Sum"
             }
           ]
         },
@@ -366,7 +366,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPCount_Sum",
                   "value": {
                     "operator": "Variables[0] (_BPCount_Sum) || Variables[1] (ABS) || Variables[2] (_BPChange) || PARAM_1 || FUNCTION || ADD || RETURN",
                     "displayLines": "(_BPCount_Sum + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_BPChange))",
@@ -376,7 +375,8 @@ const configAbility = {
                       "ABS",
                       "_BPChange"
                     ]
-                  }
+                  },
+                  "variableName": "_BPCount_Sum"
                 },
                 {
                   "name": "IF",

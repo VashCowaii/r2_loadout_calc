@@ -15,8 +15,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyLayer",
-      "value": 9
+      "value": 9,
+      "variableName": "EnergyLayer"
     },
     "Trigger: Ability End"
   ],

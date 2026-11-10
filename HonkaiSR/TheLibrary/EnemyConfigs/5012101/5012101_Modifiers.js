@@ -106,8 +106,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weather",
-              "value": 1
+              "value": 1,
+              "variableName": "Weather"
             }
           ]
         }
@@ -129,8 +129,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weather",
-              "value": 0
+              "value": 0,
+              "variableName": "Weather"
             },
             {
               "name": "Define Custom Variable",
@@ -138,8 +138,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Trigger",
-              "value": 0
+              "value": 0,
+              "variableName": "Trigger"
             }
           ]
         }
@@ -224,8 +224,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Trigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger"
                 }
               ]
             }
@@ -341,8 +341,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Trigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Trigger"
                     }
                   ]
                 }

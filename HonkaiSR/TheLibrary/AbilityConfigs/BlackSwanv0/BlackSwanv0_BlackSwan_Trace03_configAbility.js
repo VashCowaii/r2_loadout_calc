@@ -40,7 +40,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyRatio",
                   "value": {
                     "operator": "Variables[0] (0.72) || RETURN",
                     "displayLines": "0.72",
@@ -48,7 +47,8 @@ const configAbility = {
                     "variables": [
                       0.72
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyRatio"
                 }
               ]
             },

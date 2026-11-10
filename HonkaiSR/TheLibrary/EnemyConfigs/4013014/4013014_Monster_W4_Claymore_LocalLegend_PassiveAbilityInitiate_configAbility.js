@@ -51,7 +51,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[0]]}",
@@ -59,11 +58,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[1]]}",
@@ -71,11 +70,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[2]]}",
@@ -83,11 +82,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[3]]}",
@@ -95,11 +94,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[4]]}",
@@ -107,11 +106,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill06[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill06[5]]}",
@@ -119,11 +118,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill06[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Avatar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill07[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill07[0]]}",
@@ -131,13 +130,13 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill07[0]]}"
             ]
-          }
+          },
+          "variableName": "_Avatar_LifeCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Avatar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill05[4]]}) || RETURN",
             "displayLines": "{[Skill05[4]]}",
@@ -145,7 +144,8 @@ const configAbility = {
             "variables": [
               "{[Skill05[4]]}"
             ]
-          }
+          },
+          "variableName": "_Avatar_LifeCount"
         }
       ]
     },
@@ -179,7 +179,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[0]]}",
@@ -187,11 +186,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[1]]}",
@@ -199,11 +198,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[2]]}",
@@ -211,11 +210,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[3]]}",
@@ -223,11 +222,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[4]]}",
@@ -235,11 +234,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill01[5]]}",
@@ -247,7 +246,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },
@@ -271,7 +271,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[0]]}",
@@ -279,11 +278,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[1]]}",
@@ -291,11 +290,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[2]]}",
@@ -303,11 +302,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[3]]}",
@@ -315,11 +314,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[4]]}",
@@ -327,11 +326,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill02[5]]}",
@@ -339,7 +338,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill02[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },
@@ -363,7 +363,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[0]]}",
@@ -371,11 +370,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[1]]}",
@@ -383,11 +382,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[2]]}",
@@ -395,11 +394,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[3]]}",
@@ -407,11 +406,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[4]]}",
@@ -419,11 +418,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[5]]}",
@@ -431,7 +430,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill03[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },
@@ -455,7 +455,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[0]]}",
@@ -463,11 +462,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[1]]}",
@@ -475,11 +474,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[2]]}",
@@ -487,11 +486,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[3]]}",
@@ -499,11 +498,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[4]]}",
@@ -511,11 +510,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill04[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill04[5]]}",
@@ -523,7 +522,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill04[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },
@@ -547,7 +547,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[0]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[0]]}",
@@ -555,11 +554,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[1]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[1]]}",
@@ -567,11 +566,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[2]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[2]]}",
@@ -579,11 +578,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[3]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[3]]}",
@@ -591,11 +590,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[4]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[4]]}",
@@ -603,11 +602,11 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill05[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill05[5]]}",
@@ -615,7 +614,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill05[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },
@@ -639,7 +639,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Strongman_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
             "displayLines": "{[Skill06[0]]}",
@@ -647,11 +646,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[0]]}"
             ]
-          }
+          },
+          "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Scholar_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[1]]}) || RETURN",
             "displayLines": "{[Skill06[1]]}",
@@ -659,11 +658,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[1]]}"
             ]
-          }
+          },
+          "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Minion03_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
             "displayLines": "{[Skill06[2]]}",
@@ -671,11 +670,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[2]]}"
             ]
-          }
+          },
+          "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP1_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
             "displayLines": "{[Skill06[3]]}",
@@ -683,11 +682,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[3]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SelfP2_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
             "displayLines": "{[Skill06[4]]}",
@@ -695,11 +694,11 @@ const configAbility = {
             "variables": [
               "{[Skill06[4]]}"
             ]
-          }
+          },
+          "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Shooter_LifeCount",
           "value": {
             "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
             "displayLines": "{[Skill06[5]]}",
@@ -707,7 +706,8 @@ const configAbility = {
             "variables": [
               "{[Skill06[5]]}"
             ]
-          }
+          },
+          "variableName": "_Shooter_LifeCount"
         }
       ]
     },

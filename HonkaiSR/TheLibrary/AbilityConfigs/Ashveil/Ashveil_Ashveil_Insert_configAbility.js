@@ -15,7 +15,6 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_CurrentEnergy",
       "value": {
         "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || SUB || RETURN",
         "displayLines": "(SkillP01_CurrentEnergy - 1)",
@@ -24,7 +23,8 @@ const configAbility = {
           "SkillP01_CurrentEnergy",
           1
         ]
-      }
+      },
+      "variableName": "SkillP01_CurrentEnergy"
     },
     {
       "name": "Add Events/Bonuses",
@@ -73,8 +73,8 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "Ability_SPAddAlready",
-      "value": 0
+      "value": 0,
+      "variableName": "Ability_SPAddAlready"
     },
     {
       "name": "Find New Target",
@@ -155,8 +155,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Ability_SPAddAlready",
-              "value": 1
+              "value": 1,
+              "variableName": "Ability_SPAddAlready"
             }
           ]
         }
@@ -165,7 +165,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_EnhanceInsertBuffStack",
       "value": {
         "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
         "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -174,7 +173,8 @@ const configAbility = {
           "SkillP01_EnhanceInsertBuffStack",
           2
         ]
-      }
+      },
+      "variableName": "SkillP01_EnhanceInsertBuffStack"
     },
     {
       "name": "IF",

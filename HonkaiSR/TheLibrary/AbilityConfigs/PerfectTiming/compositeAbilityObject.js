@@ -65,7 +65,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HealRatio",
                       "value": {
                         "operator": "Variables[0] (0.15) || RETURN",
                         "displayLines": "0.15",
@@ -73,7 +72,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.15
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HealRatio"
                     }
                   ]
                 },

@@ -40,8 +40,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "G_ExSkill21_Allowed",
-      "value": 1
+      "value": 1,
+      "variableName": "G_ExSkill21_Allowed"
     },
     {
       "name": "Consume",

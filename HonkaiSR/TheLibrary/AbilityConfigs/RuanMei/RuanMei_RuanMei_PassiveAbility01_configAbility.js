@@ -119,7 +119,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_FinalBreakDamagePercentage_set",
               "value": {
                 "operator": "Variables[0] (DV_Passive_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (SkillP01_FinalBreakDamagePercentage_set) || MUL || RETURN",
                 "displayLines": "((((DV_Passive_Damage_MaxStance / 30) + 2) / 4) * SkillP01_FinalBreakDamagePercentage_set)",
@@ -132,7 +131,8 @@ const configAbility = {
                   "DV_Passive_Damage_MaxStance",
                   "SkillP01_FinalBreakDamagePercentage_set"
                 ]
-              }
+              },
+              "variableName": "SkillP01_FinalBreakDamagePercentage_set"
             },
             {
               "name": "ATK Scaling DMG",
@@ -214,7 +214,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SkillP01_FinalBreakDamagePercentage",
                       "value": {
                         "operator": "Variables[0] (1.2) || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "(1.2 + 2)",
@@ -223,13 +222,13 @@ const configAbility = {
                           1.2,
                           2
                         ]
-                      }
+                      },
+                      "variableName": "_SkillP01_FinalBreakDamagePercentage"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SkillP01_FinalBreakDamagePercentage",
                       "value": {
                         "operator": "Variables[0] (1.2) || RETURN",
                         "displayLines": "1.2",
@@ -237,7 +236,8 @@ const configAbility = {
                         "variables": [
                           1.2
                         ]
-                      }
+                      },
+                      "variableName": "_SkillP01_FinalBreakDamagePercentage"
                     }
                   ]
                 },
@@ -323,8 +323,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_EnergyBarCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill02_EnergyBarCount"
                 }
               ]
             },
@@ -637,7 +637,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_P1_DamageAddedRatioFinal",
                   "value": {
                     "operator": "Variables[0] (0.32) || RETURN",
                     "displayLines": "0.32",
@@ -645,7 +644,8 @@ const configAbility = {
                     "variables": [
                       0.32
                     ]
-                  }
+                  },
+                  "variableName": "Skill02_P1_DamageAddedRatioFinal"
                 }
               ]
             },

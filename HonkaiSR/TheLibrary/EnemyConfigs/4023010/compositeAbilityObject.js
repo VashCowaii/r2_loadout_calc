@@ -879,8 +879,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 },
@@ -2082,8 +2082,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Location",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Location"
                 }
               ],
               "failed": [
@@ -2097,8 +2097,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Location",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Location"
                 }
               ]
             }

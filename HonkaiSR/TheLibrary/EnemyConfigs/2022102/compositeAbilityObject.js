@@ -543,8 +543,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentChargeCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_CurrentChargeCount"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -667,9 +667,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "CanUseUltra_IF",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "CanUseUltra_IF"
                         },
                         {
                           "name": "Action Advance/Delay",
@@ -691,8 +691,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentChargeCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_CurrentChargeCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -722,8 +722,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CanUseUltra_IF",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CanUseUltra_IF"
                 }
               ]
             }
@@ -998,8 +998,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -1395,7 +1395,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageReduce",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
@@ -1404,7 +1403,8 @@ const compositeAbilityObject = {
                       "MDF_AllDamageTypeAddedRatio_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageReduce"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -3485,9 +3485,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Set Enemy Phase",

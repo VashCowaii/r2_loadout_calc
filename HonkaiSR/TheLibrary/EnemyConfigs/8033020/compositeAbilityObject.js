@@ -170,7 +170,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
                     "displayLines": "MDF_MaxLayer",
@@ -178,7 +177,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_MaxLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Layer"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -566,8 +566,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Layer",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Layer"
                         }
                       ]
                     }
@@ -882,8 +882,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Layer"
                     }
                   ]
                 },
@@ -1169,17 +1169,17 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 5,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -1469,8 +1469,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W4_Claymore_04_Skill04Mark",
-          "value": 1
+          "value": 1,
+          "variableName": "W4_Claymore_04_Skill04Mark"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1671,8 +1671,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W4_Claymore_04_Skill04Mark",
-          "value": 0
+          "value": 0,
+          "variableName": "W4_Claymore_04_Skill04Mark"
         },
         "Trigger: Ability End"
       ],
@@ -2973,8 +2973,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AppearMark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AppearMark"
                     }
                   ]
                 }
@@ -3015,8 +3015,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AppearMark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AppearMark"
                     }
                   ]
                 }

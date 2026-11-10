@@ -54,9 +54,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "isRaging",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "isRaging"
                 }
               ]
             },
@@ -69,9 +69,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "isRaging",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "isRaging"
                 }
               ]
             },
@@ -189,8 +189,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Wolf_AttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Wolf_AttackCount"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -198,8 +198,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Wolf_MaxAttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Wolf_MaxAttackCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -826,8 +826,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "Wolf_AttackCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Wolf_AttackCount"
                         },
                         {
                           "name": "Find New Target",
@@ -1281,8 +1281,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Wolf_AttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Wolf_AttackCount"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1290,8 +1290,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Wolf_MaxAttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Wolf_MaxAttackCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",

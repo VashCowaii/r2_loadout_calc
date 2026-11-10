@@ -181,7 +181,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03TotalDamage",
       "value": {
         "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] (Skill03ExtraCount) || Variables[2] ({[Skill03[1]]}) || MUL || ADD || RETURN",
         "displayLines": "({[Skill03[0]]} + (Skill03ExtraCount * {[Skill03[1]]}))",
@@ -191,7 +190,8 @@ const configAbility = {
           "Skill03ExtraCount",
           "{[Skill03[1]]}"
         ]
-      }
+      },
+      "variableName": "Skill03TotalDamage"
     },
     {
       "name": "ATK Scaling DMG",

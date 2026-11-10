@@ -27,8 +27,8 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "_index",
-      "value": 0
+      "value": 0,
+      "variableName": "_index"
     },
     {
       "name": "IF",
@@ -36,7 +36,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_runtime_hitcount",
           "value": {
             "operator": "Variables[0] (CEIL) || Variables[1] (HitCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((HitCount / 2))",
@@ -47,13 +46,13 @@ const configAbility = {
               "CEIL",
               "HitCount"
             ]
-          }
+          },
+          "variableName": "_runtime_hitcount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_runtime_hitcount",
           "value": {
             "operator": "Variables[0] (HitCount) || RETURN",
             "displayLines": "HitCount",
@@ -61,13 +60,13 @@ const configAbility = {
             "variables": [
               "HitCount"
             ]
-          }
+          },
+          "variableName": "_runtime_hitcount"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_deltaFrame",
       "value": {
         "operator": "Variables[0] (_deltaFrame) || Variables[1] (_runtime_hitcount) || SUB || Variables[2] (ENEMIES_OBJECT_UNUSED__249) || Constants[0] (1) || SUB || DIV || RETURN",
         "displayLines": "((_deltaFrame - _runtime_hitcount) / (ENEMIES_OBJECT_UNUSED__249 - 1))",
@@ -79,7 +78,8 @@ const configAbility = {
           "_runtime_hitcount",
           "ENEMIES_OBJECT_UNUSED__249"
         ]
-      }
+      },
+      "variableName": "_deltaFrame"
     },
     {
       "name": "Looped Event",
@@ -94,7 +94,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_index",
           "value": {
             "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_index + 1)",
@@ -104,7 +103,8 @@ const configAbility = {
             "variables": [
               "_index"
             ]
-          }
+          },
+          "variableName": "_index"
         }
       ]
     }

@@ -10,13 +10,12 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "variableName": "_HealCount",
+      "scope": "SummonerEntity",
       "value": 0,
-      "scope": "SummonerEntity"
+      "variableName": "_HealCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_ServantHealValueTotal",
       "value": {
         "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
         "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
@@ -25,11 +24,11 @@ const configAbility = {
           "_ServantHealValueTotal",
           "_SummonerHealValueTotal"
         ]
-      }
+      },
+      "variableName": "_ServantHealValueTotal"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_ServantHealValueTotalNew",
       "value": {
         "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
         "displayLines": "_ServantHealValueTotal",
@@ -37,7 +36,8 @@ const configAbility = {
         "variables": [
           "_ServantHealValueTotal"
         ]
-      }
+      },
+      "variableName": "_ServantHealValueTotalNew"
     },
     {
       "name": "IF",
@@ -53,7 +53,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotal",
           "value": {
             "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
             "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
@@ -62,13 +61,13 @@ const configAbility = {
               "_ServantHealValueTotal",
               0.5
             ]
-          }
+          },
+          "variableName": "_ServantHealValueTotal"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotal",
           "value": {
             "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
             "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
@@ -77,7 +76,8 @@ const configAbility = {
               "_ServantHealValueTotal",
               0.12
             ]
-          }
+          },
+          "variableName": "_ServantHealValueTotal"
         }
       ]
     },
@@ -92,8 +92,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SummonerHealValueTotal",
-      "value": 0
+      "value": 0,
+      "variableName": "_SummonerHealValueTotal"
     },
     {
       "name": "Define Custom Variable",
@@ -101,8 +101,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "variableName": "_HealValueTotal",
-      "value": 0
+      "value": 0,
+      "variableName": "_HealValueTotal"
     },
     {
       "name": "Add Events/Bonuses",

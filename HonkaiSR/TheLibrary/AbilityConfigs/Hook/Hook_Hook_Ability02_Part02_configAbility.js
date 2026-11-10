@@ -71,7 +71,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank_LifeTime",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -79,14 +78,15 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Rank_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank_LifeTime",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank_LifeTime"
         }
       ]
     },

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag"
     },
     {
       "name": "IF",
@@ -20,7 +20,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_2_get",
           "value": {
             "operator": "Variables[0] (ADF_2_get) || Constants[0] (1) || Variables[1] (DV_FantasticStory_PlusAbility_0034_ADF_2) || ADD || MUL || RETURN",
             "displayLines": "(ADF_2_get * (1 + DV_FantasticStory_PlusAbility_0034_ADF_2))",
@@ -31,7 +30,8 @@ const configAbility = {
               "ADF_2_get",
               "DV_FantasticStory_PlusAbility_0034_ADF_2"
             ]
-          }
+          },
+          "variableName": "ADF_2_get"
         }
       ]
     },
@@ -132,7 +132,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
           "value": {
             "operator": "Variables[0] (DV_RangeGap_3) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(DV_RangeGap_3 - 1)",
@@ -142,7 +141,8 @@ const configAbility = {
             "variables": [
               "DV_RangeGap_3"
             ]
-          }
+          },
+          "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
         }
       ],
       "failed": [
@@ -157,7 +157,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
               "value": {
                 "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0030_DamageSum) || Variables[1] (DV_RangeGap_3) || SUB || RETURN",
                 "displayLines": "(DV_FantasticStory_BaseAbility_0030_DamageSum - DV_RangeGap_3)",
@@ -166,7 +165,8 @@ const configAbility = {
                   "DV_FantasticStory_BaseAbility_0030_DamageSum",
                   "DV_RangeGap_3"
                 ]
-              }
+              },
+              "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
             }
           ]
         }

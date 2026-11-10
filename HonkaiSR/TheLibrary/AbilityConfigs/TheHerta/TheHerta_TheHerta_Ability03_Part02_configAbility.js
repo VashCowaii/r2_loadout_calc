@@ -22,8 +22,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "__i",
-      "value": 0
+      "value": 0,
+      "variableName": "__i"
     },
     {
       "name": "Find New Target",
@@ -56,7 +56,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "__i",
           "value": {
             "operator": "Variables[0] (__i) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(__i + 1)",
@@ -66,12 +65,13 @@ const configAbility = {
             "variables": [
               "__i"
             ]
-          }
+          },
+          "variableName": "__i"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "__j",
-          "value": 0
+          "value": 0,
+          "variableName": "__j"
         },
         {
           "name": "Define Custom Variable with Modifier Values",
@@ -118,7 +118,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "__j",
               "value": {
                 "operator": "Variables[0] (__j) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(__j + 1)",
@@ -128,7 +127,8 @@ const configAbility = {
                 "variables": [
                   "__j"
                 ]
-              }
+              },
+              "variableName": "__j"
             },
             {
               "name": "IF",
@@ -264,13 +264,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Hat",
-      "value": 0
+      "value": 0,
+      "variableName": "_Hat"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SKL03_EXTRADAMAGE",
-      "value": 0
+      "value": 0,
+      "variableName": "_SKL03_EXTRADAMAGE"
     },
     {
       "name": "IF",
@@ -301,7 +301,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SKL03_EXTRADAMAGE",
           "value": {
             "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (_PointB3_Ratio) || MUL || RETURN",
             "displayLines": "(_SKL03_EXTRADAMAGE * _PointB3_Ratio)",
@@ -310,7 +309,8 @@ const configAbility = {
               "_SKL03_EXTRADAMAGE",
               "_PointB3_Ratio"
             ]
-          }
+          },
+          "variableName": "_SKL03_EXTRADAMAGE"
         }
       ]
     },
@@ -336,7 +336,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_SKL03_EXTRADAMAGE",
               "value": {
                 "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (1.4) || ADD || RETURN",
                 "displayLines": "(_SKL03_EXTRADAMAGE + 1.4)",
@@ -345,7 +344,8 @@ const configAbility = {
                   "_SKL03_EXTRADAMAGE",
                   1.4
                 ]
-              }
+              },
+              "variableName": "_SKL03_EXTRADAMAGE"
             }
           ],
           "failed": [
@@ -364,7 +364,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SKL03_EXTRADAMAGE",
                   "value": {
                     "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (2.5) || ADD || RETURN",
                     "displayLines": "(_SKL03_EXTRADAMAGE + 2.5)",
@@ -373,13 +372,13 @@ const configAbility = {
                       "_SKL03_EXTRADAMAGE",
                       2.5
                     ]
-                  }
+                  },
+                  "variableName": "_SKL03_EXTRADAMAGE"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SKL03_EXTRADAMAGE",
                   "value": {
                     "operator": "Variables[0] (_SKL03_EXTRADAMAGE) || Variables[1] (4) || ADD || RETURN",
                     "displayLines": "(_SKL03_EXTRADAMAGE + 4)",
@@ -388,7 +387,8 @@ const configAbility = {
                       "_SKL03_EXTRADAMAGE",
                       4
                     ]
-                  }
+                  },
+                  "variableName": "_SKL03_EXTRADAMAGE"
                 }
               ]
             }

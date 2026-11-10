@@ -20,7 +20,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_4_Alive",
               "value": {
                 "operator": "Variables[0] (Minion_4_Alive) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Minion_4_Alive - 1)",
@@ -30,7 +29,8 @@ const configAbility = {
                 "variables": [
                   "Minion_4_Alive"
                 ]
-              }
+              },
+              "variableName": "Minion_4_Alive"
             },
             {
               "name": "Declare Custom Variable",
@@ -58,7 +58,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_3_Alive",
               "value": {
                 "operator": "Variables[0] (Minion_3_Alive) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Minion_3_Alive - 1)",
@@ -68,7 +67,8 @@ const configAbility = {
                 "variables": [
                   "Minion_3_Alive"
                 ]
-              }
+              },
+              "variableName": "Minion_3_Alive"
             },
             {
               "name": "Declare Custom Variable",
@@ -96,7 +96,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_2_Alive",
               "value": {
                 "operator": "Variables[0] (Minion_2_Alive) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Minion_2_Alive - 1)",
@@ -106,7 +105,8 @@ const configAbility = {
                 "variables": [
                   "Minion_2_Alive"
                 ]
-              }
+              },
+              "variableName": "Minion_2_Alive"
             },
             {
               "name": "Declare Custom Variable",
@@ -134,7 +134,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_1_Alive",
               "value": {
                 "operator": "Variables[0] (Minion_1_Alive) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Minion_1_Alive - 1)",
@@ -144,7 +143,8 @@ const configAbility = {
                 "variables": [
                   "Minion_1_Alive"
                 ]
-              }
+              },
+              "variableName": "Minion_1_Alive"
             },
             {
               "name": "Declare Custom Variable",
@@ -257,8 +257,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion02Only",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Minion02Only"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -294,9 +294,9 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -312,13 +312,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_3_Num",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Minion_3_Num"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_4_Num",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Minion_4_Num"
                 },
                 {
                   "name": "IF",
@@ -868,9 +868,9 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Remove Events/Bonuses",

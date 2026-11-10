@@ -709,7 +709,6 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "StealthCondition",
                     "value": {
                       "operator": "Variables[0] (WHOLE) || Variables[1] (DarkTeamCount) || Constants[0] (2) || DIV || PARAM_1 || FUNCTION || Variables[2] (StealthCondition) || SUB || RETURN",
                       "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((DarkTeamCount / 2)) - StealthCondition)",
@@ -721,7 +720,8 @@ const compositeAbilityObject = {
                         "DarkTeamCount",
                         "StealthCondition"
                       ]
-                    }
+                    },
+                    "variableName": "StealthCondition"
                   },
                   {
                     "name": "IF",
@@ -734,9 +734,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 2,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -786,9 +786,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 1,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -798,9 +798,9 @@ const compositeAbilityObject = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 1,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",

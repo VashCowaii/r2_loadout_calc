@@ -321,7 +321,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TempValue",
               "value": {
                 "operator": "Variables[0] (TempValue) || Variables[1] (MDF_2) || MUL || Variables[1] (MDF_2) || SUB || RETURN",
                 "displayLines": "((TempValue * MDF_2) - MDF_2)",
@@ -330,7 +329,8 @@ const configAbility = {
                   "TempValue",
                   "MDF_2"
                 ]
-              }
+              },
+              "variableName": "TempValue"
             },
             {
               "name": "IF",
@@ -693,7 +693,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DMGUpValue",
               "value": {
                 "operator": "Variables[0] (MDF_Speed1) || Variables[1] (MDF_Speed2) || SUB || RETURN",
                 "displayLines": "(MDF_Speed1 - MDF_Speed2)",
@@ -702,7 +701,8 @@ const configAbility = {
                   "MDF_Speed1",
                   "MDF_Speed2"
                 ]
-              }
+              },
+              "variableName": "MDF_DMGUpValue"
             },
             {
               "name": "IF",
@@ -715,7 +715,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DMGUpValue",
                   "value": {
                     "operator": "Variables[0] (MDF_DMGUpValue) || Variables[1] (MDF_1) || MUL || RETURN",
                     "displayLines": "(MDF_DMGUpValue * MDF_1)",
@@ -724,7 +723,8 @@ const configAbility = {
                       "MDF_DMGUpValue",
                       "MDF_1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DMGUpValue"
                 },
                 {
                   "name": "IF",
@@ -825,7 +825,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TempValue",
               "value": {
                 "operator": "Variables[0] (TempValue) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(TempValue + 1)",
@@ -835,7 +834,8 @@ const configAbility = {
                 "variables": [
                   "TempValue"
                 ]
-              }
+              },
+              "variableName": "TempValue"
             },
             {
               "name": "IF",
@@ -855,8 +855,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TempValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TempValue"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1636,7 +1636,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AccumulateDMGRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_AccumulateDMGRatio) || Variables[1] (MDF_LastHPRatio) || ADD || Variables[2] (MDF_CurrentHPRatio) || SUB || RETURN",
                     "displayLines": "((MDF_AccumulateDMGRatio + MDF_LastHPRatio) - MDF_CurrentHPRatio)",
@@ -1646,7 +1645,8 @@ const configAbility = {
                       "MDF_LastHPRatio",
                       "MDF_CurrentHPRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AccumulateDMGRatio"
                 },
                 {
                   "name": "IF",
@@ -1666,7 +1666,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AccumulateDMGRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_AccumulateDMGRatio) || Variables[1] (MDF_1) || SUB || RETURN",
                         "displayLines": "(MDF_AccumulateDMGRatio - MDF_1)",
@@ -1675,7 +1674,8 @@ const configAbility = {
                           "MDF_AccumulateDMGRatio",
                           "MDF_1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AccumulateDMGRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1702,7 +1702,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastHPRatio",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentHPRatio) || RETURN",
                 "displayLines": "MDF_CurrentHPRatio",
@@ -1710,7 +1709,8 @@ const configAbility = {
                 "variables": [
                   "MDF_CurrentHPRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_LastHPRatio"
             }
           ]
         }
@@ -3364,8 +3364,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag1",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BuffFlag1"
                 }
               ]
             }
@@ -3376,8 +3376,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BuffFlag1",
-              "value": 0
+              "value": 0,
+              "variableName": "BuffFlag1"
             }
           ]
         }
@@ -3869,8 +3869,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag2",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BuffFlag2"
                 }
               ]
             }
@@ -3881,13 +3881,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BuffFlag1",
-              "value": 0
+              "value": 0,
+              "variableName": "BuffFlag1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BuffFlag2",
-              "value": 0
+              "value": 0,
+              "variableName": "BuffFlag2"
             }
           ]
         },
@@ -3922,8 +3922,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BuffFlag1",
-              "value": 1
+              "value": 1,
+              "variableName": "BuffFlag1"
             }
           ]
         }
@@ -3972,8 +3972,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag2",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BuffFlag2"
                 }
               ]
             }
@@ -3993,13 +3993,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BuffFlag1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BuffFlag2"
                 }
               ]
             }
@@ -4038,8 +4038,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BuffFlag1",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BuffFlag1"
                 }
               ]
             }

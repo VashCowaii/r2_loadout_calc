@@ -809,8 +809,8 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SummonCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SummonCount"
                 },
                 {
                   "name": "Find New Target",
@@ -845,7 +845,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SummonCount",
                           "value": {
                             "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_SummonCount + 1)",
@@ -855,7 +854,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_SummonCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SummonCount"
                         }
                       ]
                     }
@@ -1447,8 +1447,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DOT_Layer",
-                          "value": 5
+                          "value": 5,
+                          "variableName": "DOT_Layer"
                         }
                       ]
                     },
@@ -1478,8 +1478,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_Layer",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Modifier_Layer"
                         }
                       ]
                     },
@@ -1539,8 +1539,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DOT_Layer",
-                          "value": 5
+                          "value": 5,
+                          "variableName": "DOT_Layer"
                         }
                       ]
                     },
@@ -1570,8 +1570,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_Layer",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Modifier_Layer"
                         }
                       ]
                     },

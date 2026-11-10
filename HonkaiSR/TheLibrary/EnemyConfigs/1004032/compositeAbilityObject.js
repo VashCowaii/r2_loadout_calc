@@ -104,8 +104,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "Bronya_LimboFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Bronya_LimboFlag"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -323,8 +323,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "Bronya_LimboFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Bronya_LimboFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -1132,8 +1132,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
-          "value": 12
+          "value": 12,
+          "variableName": "AIFlag"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1263,9 +1263,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "isMainAttack",
+          "scope": "TargetEntity",
           "value": -1,
-          "scope": "TargetEntity"
+          "variableName": "isMainAttack"
         },
         {
           "name": "Find New Target",
@@ -1340,8 +1340,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": -1
+                  "value": -1,
+                  "variableName": "AIFlag"
                 }
               ],
               "failed": [
@@ -1351,8 +1351,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -1498,8 +1498,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
-          "value": 2
+          "value": 2,
+          "variableName": "AIFlag"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1849,8 +1849,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 12
+                      "value": 12,
+                      "variableName": "AIFlag"
                     }
                   ],
                   "failed": [
@@ -2012,8 +2012,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "Gepard_LimboFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "Gepard_LimboFlag"
             },
             {
               "name": "Define Custom Variable",
@@ -2021,8 +2021,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "Bronya_LimboFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "Bronya_LimboFlag"
             },
             {
               "name": "Lock HP",
@@ -2061,8 +2061,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "isMainAttack",
-              "value": -1
+              "value": -1,
+              "variableName": "isMainAttack"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2407,8 +2407,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 12
+              "value": 12,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -2430,8 +2430,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 2
+              "value": 2,
+              "variableName": "AIFlag"
             }
           ]
         },

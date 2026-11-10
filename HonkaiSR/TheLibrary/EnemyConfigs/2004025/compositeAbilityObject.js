@@ -739,9 +739,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 3,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -821,9 +821,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -910,9 +910,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -2245,7 +2245,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -2255,7 +2254,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -2422,7 +2422,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -2432,7 +2431,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -3521,7 +3521,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -3531,7 +3530,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -3624,7 +3624,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IceTakenRatio",
                   "value": {
                     "operator": "Variables[0] (IceTakenRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)",
@@ -3633,7 +3632,8 @@ const compositeAbilityObject = {
                       "IceTakenRatioPerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_IceTakenRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -3676,7 +3676,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (AllDamageTypeAddedRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)",
@@ -3685,7 +3684,8 @@ const compositeAbilityObject = {
                       "AllDamageTypeAddedRatioPerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -5227,7 +5227,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
               "value": {
                 "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -5237,7 +5236,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
                 ]
-              }
+              },
+              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             },
             {
               "name": "ATK Scaling DMG",
@@ -5278,7 +5278,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
               "value": {
                 "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -5288,7 +5287,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
                 ]
-              }
+              },
+              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             },
             {
               "name": "ATK Scaling DMG",
@@ -5325,7 +5325,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
               "value": {
                 "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -5335,7 +5334,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
                 ]
-              }
+              },
+              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             },
             {
               "name": "ATK Scaling DMG",
@@ -5372,7 +5372,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
               "value": {
                 "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -5382,7 +5381,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
                 ]
-              }
+              },
+              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             },
             {
               "name": "ATK Scaling DMG",
@@ -5419,7 +5419,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
               "value": {
                 "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -5429,7 +5428,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
                 ]
-              }
+              },
+              "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             },
             {
               "name": "ATK Scaling DMG",
@@ -7033,8 +7033,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
-          "value": 0
+          "value": 0,
+          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
         },
         {
           "name": "Add Events/Bonuses",
@@ -7664,9 +7664,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7708,9 +7708,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7752,9 +7752,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7796,9 +7796,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 3,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7840,9 +7840,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 4,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7894,9 +7894,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 4,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7948,9 +7948,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 5,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -7992,9 +7992,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 6,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8036,9 +8036,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8080,9 +8080,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 92,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8124,9 +8124,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 93,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8168,9 +8168,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 94,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8222,9 +8222,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 94,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8276,9 +8276,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 95,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8320,9 +8320,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 96,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8364,9 +8364,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 97,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8408,9 +8408,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8452,9 +8452,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8496,9 +8496,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 3,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8540,9 +8540,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 4,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8594,9 +8594,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 4,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8648,9 +8648,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 5,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8692,9 +8692,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 6,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8736,9 +8736,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8780,9 +8780,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 100,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8818,9 +8818,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 102,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",
@@ -8856,9 +8856,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "W2_Yanqing_00_AICounter",
+                    "scope": "TargetEntity",
                     "value": 101,
-                    "scope": "TargetEntity"
+                    "variableName": "W2_Yanqing_00_AICounter"
                   },
                   {
                     "name": "Use Ability Option",

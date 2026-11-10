@@ -59,13 +59,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SoundStartFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_SoundStartFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SoundEndFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SoundEndFlag"
                 }
               ]
             }
@@ -93,13 +93,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SoundStartFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SoundStartFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SoundEndFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_SoundEndFlag"
                 }
               ]
             }
@@ -167,7 +167,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SamActionDelay",
               "value": {
                 "operator": "Constants[0] (1000) || Variables[0] (_SamSpeed) || DIV || RETURN",
                 "displayLines": "(1000 / _SamSpeed)",
@@ -177,7 +176,8 @@ const configAbility = {
                 "variables": [
                   "_SamSpeed"
                 ]
-              }
+              },
+              "variableName": "_SamActionDelay"
             },
             {
               "name": "Find New Target",
@@ -338,8 +338,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
-                  "value": -1
+                  "value": -1,
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             }
@@ -720,8 +720,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank02_CD",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Rank02_CD"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -734,8 +734,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_RedModeResRatio",
-              "value": 0
+              "value": 0,
+              "variableName": "_RedModeResRatio"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -794,7 +794,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PassiveResRatio",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                     "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -806,7 +805,8 @@ const configAbility = {
                       0.2,
                       "_RedModeResRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_PassiveResRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -843,7 +843,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank02_CD",
                   "value": {
                     "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Rank02_CD - 1)",
@@ -853,7 +852,8 @@ const configAbility = {
                     "variables": [
                       "Rank02_CD"
                     ]
-                  }
+                  },
+                  "variableName": "Rank02_CD"
                 },
                 {
                   "name": "IF",
@@ -994,8 +994,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_RedModeResRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "_RedModeResRatio"
             },
             {
               "name": "Define Custom Variable with HP%",
@@ -1007,7 +1007,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_PassiveResRatio",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (0.2) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
                 "displayLines": "(((1 - _HPRatioCurrent) / (1 - 0.2)) + _RedModeResRatio)",
@@ -1019,7 +1018,8 @@ const configAbility = {
                   0.2,
                   "_RedModeResRatio"
                 ]
-              }
+              },
+              "variableName": "_PassiveResRatio"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1058,7 +1058,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDamageUP",
                   "value": {
                     "operator": "Variables[0] (0.5) || Variables[1] (0.5) || ADD || RETURN",
                     "displayLines": "(0.5 + 0.5)",
@@ -1067,13 +1066,13 @@ const configAbility = {
                       0.5,
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDamageUP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDamageUP",
                   "value": {
                     "operator": "Variables[0] (0.5) || RETURN",
                     "displayLines": "0.5",
@@ -1081,7 +1080,8 @@ const configAbility = {
                     "variables": [
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDamageUP"
                 }
               ]
             },
@@ -1110,7 +1110,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_StatusResistance",
                   "value": {
                     "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (0.5) || ADD || RETURN",
                     "displayLines": "(MDF_StatusResistance + 0.5)",
@@ -1119,7 +1118,8 @@ const configAbility = {
                       "MDF_StatusResistance",
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "MDF_StatusResistance"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1184,7 +1184,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PointB1_Times",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1192,11 +1191,11 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "_PointB1_Times"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PointB1_Times",
                   "value": {
                     "operator": "Variables[0] (_PointB1_Times) || RETURN",
                     "displayLines": "_PointB1_Times",
@@ -1204,7 +1203,8 @@ const configAbility = {
                     "variables": [
                       "_PointB1_Times"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PointB1_Times"
                 },
                 {
                   "name": "Update Modifier Description",
@@ -1275,7 +1275,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank02_CD",
                   "value": {
                     "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Rank02_CD + 1)",
@@ -1285,12 +1284,13 @@ const configAbility = {
                     "variables": [
                       "Rank02_CD"
                     ]
-                  }
+                  },
+                  "variableName": "Rank02_CD"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank02_SamSelfInsertActionFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Rank02_SamSelfInsertActionFlag"
                 },
                 {
                   "name": "Inject Extra-Turn",
@@ -1300,7 +1300,6 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Rank02_CD - 1)",
@@ -1310,12 +1309,13 @@ const configAbility = {
                         "variables": [
                           "Rank02_CD"
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     }
                   ]
                 }
@@ -1357,7 +1357,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank02_CD",
                   "value": {
                     "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Rank02_CD + 1)",
@@ -1367,12 +1366,13 @@ const configAbility = {
                     "variables": [
                       "Rank02_CD"
                     ]
-                  }
+                  },
+                  "variableName": "Rank02_CD"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank02_SamSelfInsertActionFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Rank02_SamSelfInsertActionFlag"
                 },
                 {
                   "name": "Inject Extra-Turn",
@@ -1382,7 +1382,6 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Rank02_CD - 1)",
@@ -1392,12 +1391,13 @@ const configAbility = {
                         "variables": [
                           "Rank02_CD"
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     }
                   ]
                 }
@@ -1439,7 +1439,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PointB1_Times",
                   "value": {
                     "operator": "Variables[0] (_PointB1_Times) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_PointB1_Times - 1)",
@@ -1449,11 +1448,11 @@ const configAbility = {
                     "variables": [
                       "_PointB1_Times"
                     ]
-                  }
+                  },
+                  "variableName": "_PointB1_Times"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PointB1_Times",
                   "value": {
                     "operator": "Variables[0] (_PointB1_Times) || RETURN",
                     "displayLines": "_PointB1_Times",
@@ -1461,7 +1460,8 @@ const configAbility = {
                     "variables": [
                       "_PointB1_Times"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PointB1_Times"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -1521,7 +1521,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank02_CD",
                   "value": {
                     "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Rank02_CD + 1)",
@@ -1531,12 +1530,13 @@ const configAbility = {
                     "variables": [
                       "Rank02_CD"
                     ]
-                  }
+                  },
+                  "variableName": "Rank02_CD"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank02_SamSelfInsertActionFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Rank02_SamSelfInsertActionFlag"
                 },
                 {
                   "name": "Inject Extra-Turn",
@@ -1546,7 +1546,6 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank02_CD",
                       "value": {
                         "operator": "Variables[0] (Rank02_CD) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Rank02_CD - 1)",
@@ -1556,12 +1555,13 @@ const configAbility = {
                         "variables": [
                           "Rank02_CD"
                         ]
-                      }
+                      },
+                      "variableName": "Rank02_CD"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank02_SamSelfInsertActionFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Rank02_SamSelfInsertActionFlag"
                     }
                   ]
                 }
@@ -1596,8 +1596,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank02_SamSelfInsertActionFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Rank02_SamSelfInsertActionFlag"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

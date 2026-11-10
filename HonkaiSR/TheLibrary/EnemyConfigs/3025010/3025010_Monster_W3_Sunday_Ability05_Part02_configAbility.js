@@ -346,7 +346,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill05ErrorNumber",
       "value": {
         "operator": "Constants[0] (4) || Variables[0] (Skill05AssistNumber) || SUB || RETURN",
         "displayLines": "(4 - Skill05AssistNumber)",
@@ -356,7 +355,8 @@ const configAbility = {
         "variables": [
           "Skill05AssistNumber"
         ]
-      }
+      },
+      "variableName": "Skill05ErrorNumber"
     },
     {
       "name": "IF",

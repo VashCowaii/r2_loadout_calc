@@ -134,7 +134,6 @@ const configAbility = {
     "Trigger: Ability End",
     {
       "name": "Define Custom Variable",
-      "variableName": "CastoriceServant_ReadyFlag",
       "value": {
         "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
@@ -144,7 +143,8 @@ const configAbility = {
         "variables": [
           "CastoriceServant_BattleViewModeLevel"
         ]
-      }
+      },
+      "variableName": "CastoriceServant_ReadyFlag"
     },
     {
       "name": "WAIT FOR",

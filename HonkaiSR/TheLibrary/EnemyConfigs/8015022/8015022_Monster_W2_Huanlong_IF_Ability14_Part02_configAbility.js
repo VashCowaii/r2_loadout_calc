@@ -108,9 +108,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "BreakFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "BreakFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -779,9 +779,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "BreakFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "BreakFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -827,7 +827,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
                     "displayLines": "{[Skill14[0]]}",
@@ -835,7 +834,8 @@ const configAbility = {
                     "variables": [
                       "{[Skill14[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -854,7 +854,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] ({[Skill14[1]]}) || RETURN",
                     "displayLines": "{[Skill14[1]]}",
@@ -862,7 +861,8 @@ const configAbility = {
                     "variables": [
                       "{[Skill14[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -881,7 +881,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] ({[Skill14[2]]}) || RETURN",
                     "displayLines": "{[Skill14[2]]}",
@@ -889,7 +888,8 @@ const configAbility = {
                     "variables": [
                       "{[Skill14[2]]}"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -908,7 +908,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] ({[Skill14[3]]}) || RETURN",
                     "displayLines": "{[Skill14[3]]}",
@@ -916,7 +915,8 @@ const configAbility = {
                     "variables": [
                       "{[Skill14[3]]}"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },

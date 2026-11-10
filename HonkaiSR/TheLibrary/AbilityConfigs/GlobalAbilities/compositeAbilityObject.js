@@ -946,7 +946,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TurnCount",
                   "value": {
                     "operator": "Variables[0] (TurnCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(TurnCount + 1)",
@@ -956,7 +955,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "TurnCount"
                     ]
-                  }
+                  },
+                  "variableName": "TurnCount"
                 },
                 {
                   "name": "Skill Points Modification",

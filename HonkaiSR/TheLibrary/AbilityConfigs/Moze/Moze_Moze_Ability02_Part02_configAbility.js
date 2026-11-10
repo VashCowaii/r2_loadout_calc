@@ -148,8 +148,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_EnergyCost",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_EnergyCost"
         }
       ]
     },

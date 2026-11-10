@@ -97,7 +97,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEvent_BaseHP",
       "value": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
         "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -107,7 +106,8 @@ const configAbility = {
         "variables": [
           "BattleEvent_BaseHP"
         ]
-      }
+      },
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Add Events/Bonuses",
@@ -2401,7 +2401,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_Plus6_WarlockCount",
                       "value": {
                         "operator": "Variables[0] (DV_Plus6_WarlockCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(DV_Plus6_WarlockCount + 1)",
@@ -2411,7 +2410,8 @@ const configAbility = {
                         "variables": [
                           "DV_Plus6_WarlockCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_Plus6_WarlockCount"
                     }
                   ]
                 },

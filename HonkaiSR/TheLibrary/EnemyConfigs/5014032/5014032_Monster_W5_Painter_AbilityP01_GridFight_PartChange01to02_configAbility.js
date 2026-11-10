@@ -14,8 +14,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "PhaseInsertCheck",
-      "value": 1
+      "value": 1,
+      "variableName": "PhaseInsertCheck"
     },
     {
       "name": "Action Advance/Delay",

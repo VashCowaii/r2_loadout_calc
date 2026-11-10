@@ -199,7 +199,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
               "value": {
                 "operator": "Variables[0] (_TempAIFlag) || RETURN",
                 "displayLines": "_TempAIFlag",
@@ -207,7 +206,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_TempAIFlag"
                 ]
-              }
+              },
+              "variableName": "AIFlag"
             },
             {
               "name": "Use Custom Character Function",
@@ -705,8 +705,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 99
+                      "value": 99,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -782,8 +782,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsCorePartCharge",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsCorePartCharge"
             }
           ]
         },
@@ -857,8 +857,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsCorePartCharge",
-              "value": 0
+              "value": 0,
+              "variableName": "_IsCorePartCharge"
             }
           ]
         },
@@ -928,8 +928,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsCorePartCharge",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsCorePartCharge"
             }
           ]
         },
@@ -1011,8 +1011,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsCorePartCharge",
-              "value": 0
+              "value": 0,
+              "variableName": "_IsCorePartCharge"
             }
           ]
         },

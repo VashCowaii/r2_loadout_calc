@@ -515,15 +515,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_Rank6_Listen",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_Rank6_Listen"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_Rank6_Listen",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "Seele_Rank6_Listen"
                     }
                   ]
                 }
@@ -1205,8 +1205,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertAction"
                 }
               ]
             },
@@ -1260,8 +1260,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1334,8 +1334,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1400,8 +1400,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "InsertAction"
                     },
                     {
                       "name": "IF",
@@ -1451,8 +1451,8 @@ const compositeAbilityObject = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Seele_BonusInsertAction",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Seele_BonusInsertAction"
                         }
                       ]
                     }
@@ -1501,15 +1501,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Seele_BonusInsertAction"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     }
                   ]
                 }

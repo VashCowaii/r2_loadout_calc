@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_damageStart",
-      "value": 0
+      "value": 0,
+      "variableName": "_damageStart"
     },
     {
       "name": "Add Events/Bonuses",
@@ -123,7 +123,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurEnhance",
           "value": {
             "operator": "Variables[0] (CurEnhance) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(CurEnhance - 1)",
@@ -133,7 +132,8 @@ const configAbility = {
             "variables": [
               "CurEnhance"
             ]
-          }
+          },
+          "variableName": "CurEnhance"
         },
         {
           "name": "IF",

@@ -47,12 +47,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CurEnhance",
-          "value": 0
+          "value": 0,
+          "variableName": "CurEnhance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxEnhance",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -60,7 +59,8 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "MaxEnhance"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -306,9 +306,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_show_badge_01",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_show_badge_01"
                     }
                   ]
                 },
@@ -336,9 +336,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_show_badge_02",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_show_badge_02"
                     }
                   ]
                 },
@@ -366,9 +366,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_show_badge_03",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_show_badge_03"
                     }
                   ]
                 }

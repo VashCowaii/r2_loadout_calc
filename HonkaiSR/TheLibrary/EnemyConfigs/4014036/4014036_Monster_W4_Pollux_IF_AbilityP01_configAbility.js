@@ -189,7 +189,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill05_ActionDelay",
       "value": {
         "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
         "displayLines": "{[Skill05[2]]}",
@@ -197,11 +196,11 @@ const configAbility = {
         "variables": [
           "{[Skill05[2]]}"
         ]
-      }
+      },
+      "variableName": "_Skill05_ActionDelay"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill05_Part_ActionDelay",
       "value": {
         "operator": "Variables[0] ({[Skill05[3]]}) || RETURN",
         "displayLines": "{[Skill05[3]]}",
@@ -209,7 +208,8 @@ const configAbility = {
         "variables": [
           "{[Skill05[3]]}"
         ]
-      }
+      },
+      "variableName": "_Skill05_Part_ActionDelay"
     },
     {
       "name": "Add Events/Bonuses",

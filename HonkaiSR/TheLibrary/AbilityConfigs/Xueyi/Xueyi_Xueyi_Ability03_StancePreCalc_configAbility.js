@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Skill03_StancePreCalc",
-      "value": 1
+      "value": 1,
+      "variableName": "MDF_Skill03_StancePreCalc"
     },
     {
       "name": "Add Events/Bonuses",

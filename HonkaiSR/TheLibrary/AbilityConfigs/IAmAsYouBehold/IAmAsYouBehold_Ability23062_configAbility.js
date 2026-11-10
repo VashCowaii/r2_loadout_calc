@@ -230,8 +230,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_UltraSkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_UltraSkill"
                 }
               ]
             }
@@ -272,13 +272,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_UltraSkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_UltraSkill"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NeedSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_NeedSP"
                 }
               ]
             }
@@ -344,7 +344,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_NeedSP",
                       "value": {
                         "operator": "Variables[0] (MDF_TempSPChange) || INVERT || RETURN",
                         "displayLines": "-MDF_TempSPChange",
@@ -352,7 +351,8 @@ const configAbility = {
                         "variables": [
                           "MDF_TempSPChange"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_NeedSP"
                     }
                   ]
                 }

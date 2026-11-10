@@ -128,8 +128,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TalkCount",
-              "value": 1
+              "value": 1,
+              "variableName": "TalkCount"
             }
           ],
           "failed": [
@@ -144,8 +144,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkCount",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkCount"
                 }
               ],
               "failed": [
@@ -160,8 +160,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TalkCount"
                     }
                   ]
                 }

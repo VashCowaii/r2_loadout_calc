@@ -25,9 +25,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "Flag_RevengeTrigger",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "Flag_RevengeTrigger"
         }
       ]
     },

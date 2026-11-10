@@ -25,7 +25,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_Count",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -33,13 +32,13 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "_Xueyi_Count"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Xueyi_Count",
           "value": {
             "operator": "Variables[0] (8) || RETURN",
             "displayLines": "8",
@@ -47,7 +46,8 @@ const configAbility = {
             "variables": [
               8
             ]
-          }
+          },
+          "variableName": "_Xueyi_Count"
         }
       ]
     },
@@ -170,13 +170,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Xueyi_OnEnterBattle_Attack",
-              "value": 0
+              "value": 0,
+              "variableName": "_Xueyi_OnEnterBattle_Attack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Xueyi_OnEnterBattle_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "_Xueyi_OnEnterBattle_Flag"
             }
           ]
         },
@@ -185,8 +185,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Xueyi_OnEnterBattle_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "_Xueyi_OnEnterBattle_Flag"
             }
           ]
         }
@@ -334,13 +334,13 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Difference",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Difference"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Change_Stance",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Change_Stance"
                         }
                       ]
                     }

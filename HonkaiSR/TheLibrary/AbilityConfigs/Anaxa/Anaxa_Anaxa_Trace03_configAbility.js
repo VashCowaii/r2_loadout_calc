@@ -37,7 +37,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_WeakCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (_WeakCount) || Constants[0] (7) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_WeakCount, 7)",
@@ -48,7 +47,8 @@ const configAbility = {
                   "MIN",
                   "_WeakCount"
                 ]
-              }
+              },
+              "variableName": "_WeakCount"
             },
             {
               "name": "Adjust Target Stats",

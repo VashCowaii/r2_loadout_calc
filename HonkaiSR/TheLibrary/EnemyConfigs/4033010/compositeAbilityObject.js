@@ -189,8 +189,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_CurrentCount"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -233,7 +233,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentCount",
                       "value": {
                         "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_CurrentCount + 1)",
@@ -243,7 +242,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_CurrentCount"
                         ]
-                      }
+                      },
+                      "variableName": "_CurrentCount"
                     },
                     {
                       "name": "IF",
@@ -263,7 +263,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_CurrentCount",
                           "value": {
                             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                             "displayLines": "{[SkillP01[0]]}",
@@ -271,7 +270,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "{[SkillP01[0]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_CurrentCount"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -757,7 +757,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(RallyCount + 1)",
@@ -767,7 +766,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -793,7 +793,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(RallyCount - 1)",
@@ -803,7 +802,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -824,7 +824,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(RallyCount + 1)",
@@ -834,7 +833,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -852,7 +852,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(RallyCount - 1)",
@@ -862,7 +861,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -883,7 +883,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(RallyCount + 1)",
@@ -893,7 +892,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -911,7 +911,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(RallyCount - 1)",
@@ -921,7 +920,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -942,7 +942,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(RallyCount + 1)",
@@ -952,7 +951,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -1014,7 +1014,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RallyCount",
               "value": {
                 "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(RallyCount - 1)",
@@ -1024,7 +1023,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "RallyCount"
                 ]
-              }
+              },
+              "variableName": "RallyCount"
             }
           ]
         },
@@ -1043,7 +1043,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(RallyCount - 1)",
@@ -1053,7 +1052,8 @@ const compositeAbilityObject = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         },
         "Trigger: Ability End"
       ],
@@ -1098,9 +1098,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "FireBallNum",
+          "scope": "ContextAbility",
           "value": 1,
-          "scope": "ContextAbility"
+          "variableName": "FireBallNum"
         },
         {
           "name": "Trigger Multiple Functions",

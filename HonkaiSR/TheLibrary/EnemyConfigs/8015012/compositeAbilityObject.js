@@ -147,7 +147,6 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -157,7 +156,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -201,7 +201,6 @@ const compositeAbilityObject = {
                   "leavingRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -211,7 +210,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -297,7 +297,6 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -307,7 +306,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -351,7 +351,6 @@ const compositeAbilityObject = {
                   "leavingRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -361,7 +360,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -447,7 +447,6 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -457,7 +456,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -501,7 +501,6 @@ const compositeAbilityObject = {
                   "leavingRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "PartAliveNumber",
                       "value": {
                         "operator": "Variables[0] (_Part1_Alive) || Variables[1] (_Part2_Alive) || ADD || Variables[2] (_Part3_Alive) || ADD || RETURN",
                         "displayLines": "((_Part1_Alive + _Part2_Alive) + _Part3_Alive)",
@@ -511,7 +510,8 @@ const compositeAbilityObject = {
                           "_Part2_Alive",
                           "_Part3_Alive"
                         ]
-                      }
+                      },
+                      "variableName": "PartAliveNumber"
                     },
                     {
                       "name": "IF",
@@ -809,8 +809,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeHitFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_BeHitFlag"
                 }
               ]
             },
@@ -841,8 +841,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_BeingHitDamageValue",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "MDF_BeingHitDamageValue"
                         }
                       ],
                       "failed": [
@@ -852,7 +852,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_BeingHitDamageValue",
                           "value": {
                             "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -862,7 +861,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_BeingHitDamageValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BeingHitDamageValue"
                         },
                         {
                           "name": "Define Modifier Variable",
@@ -931,8 +931,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "MDF_BeingHitDamageValue"
                     }
                   ],
                   "failed": [
@@ -942,7 +942,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -952,7 +951,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_BeingHitDamageValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BeingHitDamageValue"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -1277,8 +1277,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ReleaseFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ReleaseFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1379,8 +1379,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ReleaseFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "ReleaseFlag"
                     }
                   ]
                 }
@@ -1482,8 +1482,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ReleaseFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ReleaseFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1584,8 +1584,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ReleaseFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "ReleaseFlag"
                     }
                   ]
                 }
@@ -2921,7 +2921,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                 "displayLines": "{[SkillEX02[0]]}",
@@ -2930,7 +2930,7 @@ const compositeAbilityObject = {
                   "{[SkillEX02[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX02_P1_Core_StanceDamageValue"
             }
           ]
         },
@@ -2959,7 +2959,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -2968,7 +2968,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -2976,7 +2976,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -2985,7 +2985,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -2993,7 +2993,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -3002,7 +3002,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3010,7 +3010,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -3019,7 +3019,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             }
           ]
         },
@@ -3223,7 +3223,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -3232,7 +3232,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3240,7 +3240,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -3249,7 +3249,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3257,7 +3257,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -3266,7 +3266,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3274,7 +3274,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -3283,7 +3283,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             }
           ]
         },
@@ -3501,7 +3501,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                 "displayLines": "{[SkillEX02[0]]}",
@@ -3510,7 +3510,7 @@ const compositeAbilityObject = {
                   "{[SkillEX02[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX02_P1_Core_StanceDamageValue"
             }
           ]
         },
@@ -3539,7 +3539,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -3548,7 +3548,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3556,7 +3556,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -3565,7 +3565,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3573,7 +3573,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -3582,7 +3582,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -3590,7 +3590,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -3599,7 +3599,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             }
           ]
         },
@@ -4633,7 +4633,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                         "displayLines": "{[SkillEX02[0]]}",
@@ -4642,7 +4642,7 @@ const compositeAbilityObject = {
                           "{[SkillEX02[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX02_P1_Core_StanceDamageValue"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4650,7 +4650,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                         "displayLines": "{[SkillEX02[0]]}",
@@ -4659,7 +4659,7 @@ const compositeAbilityObject = {
                           "{[SkillEX02[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX02_P1_Core_StanceDamageValue"
                     }
                   ]
                 },
@@ -4704,7 +4704,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -4713,7 +4713,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4721,7 +4721,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -4730,7 +4730,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4738,7 +4738,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -4747,7 +4747,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4755,7 +4755,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -4764,7 +4764,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4772,7 +4772,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -4781,7 +4781,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4789,7 +4789,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -4798,7 +4798,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4806,7 +4806,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -4815,7 +4815,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4823,7 +4823,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -4832,7 +4832,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4840,7 +4840,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -4849,7 +4849,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4857,7 +4857,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -4866,7 +4866,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4874,7 +4874,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -4883,7 +4883,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4891,7 +4891,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -4900,7 +4900,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     }
                   ]
                 },
@@ -5435,7 +5435,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                         "displayLines": "{[SkillEX02[0]]}",
@@ -5444,7 +5444,7 @@ const compositeAbilityObject = {
                           "{[SkillEX02[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX02_P1_Core_StanceDamageValue"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5452,7 +5452,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                         "displayLines": "{[SkillEX02[0]]}",
@@ -5461,7 +5461,7 @@ const compositeAbilityObject = {
                           "{[SkillEX02[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX02_P1_Core_StanceDamageValue"
                     }
                   ]
                 },
@@ -5506,7 +5506,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -5515,7 +5515,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5523,7 +5523,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -5532,7 +5532,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5540,7 +5540,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                         "displayLines": "{[SkillEX03[0]]}",
@@ -5549,7 +5549,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[0]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P1_AttackAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5557,7 +5557,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -5566,7 +5566,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5574,7 +5574,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -5583,7 +5583,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5591,7 +5591,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P2_SpeedAddedRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                         "displayLines": "{[SkillEX03[1]]}",
@@ -5600,7 +5600,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[1]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P2_SpeedAddedRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5608,7 +5608,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -5617,7 +5617,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5625,7 +5625,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -5634,7 +5634,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5642,7 +5642,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P3_HealHPRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                         "displayLines": "{[SkillEX03[2]]}",
@@ -5651,7 +5651,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[2]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P3_HealHPRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5659,7 +5659,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 1}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -5668,7 +5668,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5676,7 +5676,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 2}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -5685,7 +5685,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -5693,7 +5693,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Target Part 3}}"
                       },
-                      "variableName": "SkillEX03_P4_ActionDelayRatio",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                         "displayLines": "{[SkillEX03[3]]}",
@@ -5702,7 +5702,7 @@ const compositeAbilityObject = {
                           "{[SkillEX03[3]]}"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "SkillEX03_P4_ActionDelayRatio"
                     }
                   ]
                 },
@@ -6270,7 +6270,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                 "displayLines": "{[SkillEX02[0]]}",
@@ -6279,7 +6279,7 @@ const compositeAbilityObject = {
                   "{[SkillEX02[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX02_P1_Core_StanceDamageValue"
             },
             {
               "name": "Define Custom Variable",
@@ -6287,7 +6287,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX02_P1_Core_StanceDamageValue",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                 "displayLines": "{[SkillEX02[0]]}",
@@ -6296,7 +6296,7 @@ const compositeAbilityObject = {
                   "{[SkillEX02[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX02_P1_Core_StanceDamageValue"
             }
           ]
         },
@@ -6341,7 +6341,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -6350,7 +6350,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6358,7 +6358,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -6367,7 +6367,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6375,7 +6375,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P1_AttackAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -6384,7 +6384,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[0]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P1_AttackAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6392,7 +6392,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -6401,7 +6401,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6409,7 +6409,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -6418,7 +6418,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6426,7 +6426,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P2_SpeedAddedRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[1]]}) || RETURN",
                 "displayLines": "{[SkillEX03[1]]}",
@@ -6435,7 +6435,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[1]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P2_SpeedAddedRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6443,7 +6443,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -6452,7 +6452,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6460,7 +6460,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -6469,7 +6469,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6477,7 +6477,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P3_HealHPRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[2]]}) || RETURN",
                 "displayLines": "{[SkillEX03[2]]}",
@@ -6486,7 +6486,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[2]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P3_HealHPRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6494,7 +6494,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -6503,7 +6503,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6511,7 +6511,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 2}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -6520,7 +6520,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             },
             {
               "name": "Define Custom Variable",
@@ -6528,7 +6528,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"
               },
-              "variableName": "SkillEX03_P4_ActionDelayRatio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[3]]}) || RETURN",
                 "displayLines": "{[SkillEX03[3]]}",
@@ -6537,7 +6537,7 @@ const compositeAbilityObject = {
                   "{[SkillEX03[3]]}"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SkillEX03_P4_ActionDelayRatio"
             }
           ]
         },

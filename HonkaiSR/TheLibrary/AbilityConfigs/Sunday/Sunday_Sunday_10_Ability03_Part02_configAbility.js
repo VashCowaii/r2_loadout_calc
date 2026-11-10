@@ -85,7 +85,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Skill03_AddSPAmount",
       "value": {
         "operator": "Variables[0] (_MAXSP) || Variables[1] (0.2) || MUL || RETURN",
         "displayLines": "(_MAXSP * 0.2)",
@@ -94,7 +93,8 @@ const configAbility = {
           "_MAXSP",
           0.2
         ]
-      }
+      },
+      "variableName": "_Skill03_AddSPAmount"
     },
     {
       "name": "IF",
@@ -121,7 +121,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Skill03_AddSPAmount",
               "value": {
                 "operator": "Variables[0] (40) || RETURN",
                 "displayLines": "40",
@@ -129,7 +128,8 @@ const configAbility = {
                 "variables": [
                   40
                 ]
-              }
+              },
+              "variableName": "_Skill03_AddSPAmount"
             }
           ]
         }
@@ -640,7 +640,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PropertyFinal",
                       "value": {
                         "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (0.3) || MUL || Variables[2] (0.12) || ADD || RETURN",
                         "displayLines": "((_ownerCritDamage * 0.3) + 0.12)",
@@ -650,7 +649,8 @@ const configAbility = {
                           0.3,
                           0.12
                         ]
-                      }
+                      },
+                      "variableName": "_PropertyFinal"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",

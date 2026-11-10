@@ -545,8 +545,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FromUltraMark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_FromUltraMark"
                     }
                   ]
                 }
@@ -1050,7 +1050,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank02Amount",
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1058,7 +1057,8 @@ const compositeAbilityObject = {
                     "variables": [
                       5
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Rank02Amount"
                 },
                 {
                   "name": "Add Events/Bonuses",

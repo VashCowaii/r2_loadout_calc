@@ -103,8 +103,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isBeingHit",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_isBeingHit"
             }
           ]
         },
@@ -113,8 +113,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isBeingHit",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isBeingHit"
             }
           ]
         },
@@ -188,7 +188,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_ALLCriticalDamage",
               "value": {
                 "operator": "Variables[0] (MDF_CriticaDamage) || Variables[1] (MDF_AddCriticalDamage) || ADD || RETURN",
                 "displayLines": "(MDF_CriticaDamage + MDF_AddCriticalDamage)",
@@ -197,7 +196,8 @@ const configAbility = {
                   "MDF_CriticaDamage",
                   "MDF_AddCriticalDamage"
                 ]
-              }
+              },
+              "variableName": "MDF_ALLCriticalDamage"
             },
             {
               "name": "Stack Target Stat Value",
@@ -221,8 +221,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_AddCriticalDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_AddCriticalDamage"
             },
             {
               "name": "IF",

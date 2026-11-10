@@ -95,8 +95,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "G_EnergyBar",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "G_EnergyBar"
                 }
               ]
             },

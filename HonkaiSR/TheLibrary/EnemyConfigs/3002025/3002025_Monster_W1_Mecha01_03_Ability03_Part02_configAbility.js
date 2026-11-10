@@ -7,15 +7,15 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "AIFlag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "FlopSide",
+      "scope": "TargetEntity",
       "value": -1,
-      "scope": "TargetEntity"
+      "variableName": "FlopSide"
     },
     {
       "name": "IF",

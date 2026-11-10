@@ -43,7 +43,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -53,7 +52,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -104,7 +104,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -114,7 +113,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -165,7 +165,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -175,7 +174,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -226,7 +226,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -236,7 +235,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -287,7 +287,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -297,7 +296,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -348,7 +348,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -358,7 +357,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -409,7 +409,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -419,7 +418,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",
@@ -468,7 +468,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_TargetCurrentHp",
           "value": {
             "operator": "Variables[0] (_TargetCurrentHp) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(_TargetCurrentHp - 1)",
@@ -478,7 +477,8 @@ const configAbility = {
             "variables": [
               "_TargetCurrentHp"
             ]
-          }
+          },
+          "variableName": "_TargetCurrentHp"
         },
         {
           "name": "ATK Scaling DMG",

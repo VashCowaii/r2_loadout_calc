@@ -255,12 +255,11 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HitFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_HitFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_RateLayer",
                       "value": {
                         "operator": "Variables[0] (_RateLayer) || Variables[1] (Jade_Passive_BPBuffAddLayer) || ADD || RETURN",
                         "displayLines": "(_RateLayer + Jade_Passive_BPBuffAddLayer)",
@@ -269,7 +268,8 @@ const configAbility = {
                           "_RateLayer",
                           "Jade_Passive_BPBuffAddLayer"
                         ]
-                      }
+                      },
+                      "variableName": "_RateLayer"
                     }
                   ]
                 }
@@ -282,8 +282,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_AttackFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "_AttackFlag"
             }
           ]
         },
@@ -316,13 +316,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_AttackFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HitFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_HitFlag"
                 }
               ]
             }

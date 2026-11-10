@@ -88,7 +88,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SP",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxSP) || Variables[1] (120) || SUB || RETURN",
                         "displayLines": "(MDF_MaxSP - 120)",
@@ -97,11 +96,11 @@ const compositeAbilityObject = {
                           "MDF_MaxSP",
                           120
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SP"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SPRatio",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (MIN) || Variables[2] (MDF_SP) || Variables[3] (360) || PARAM_2 || FUNCTION || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.0029999998) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SP, 360) / 10)) * 0.0029999998)",
@@ -115,20 +114,20 @@ const compositeAbilityObject = {
                           360,
                           0.0029999998
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SPRatio"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SPRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SPRatio"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_SPRatio) || Variables[1] (0.1) || ADD || RETURN",
                     "displayLines": "(MDF_SPRatio + 0.1)",
@@ -137,7 +136,8 @@ const compositeAbilityObject = {
                       "MDF_SPRatio",
                       0.1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",

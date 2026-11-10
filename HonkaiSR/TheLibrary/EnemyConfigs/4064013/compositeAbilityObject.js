@@ -411,8 +411,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -545,8 +545,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AttackFlag"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -579,8 +579,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AttackFlag"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -625,15 +625,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AttackFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "AttackFlag"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AttackFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "AttackFlag"
                         }
                       ]
                     }
@@ -1021,8 +1021,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "variableName": "Deathrattle",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Deathrattle"
                         },
                         {
                           "name": "IF",
@@ -1483,9 +1483,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "Deathrattle"
         }
       ],
       "targetObjectData": {

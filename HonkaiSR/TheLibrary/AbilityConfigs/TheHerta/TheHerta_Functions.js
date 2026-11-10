@@ -326,9 +326,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "DV_HitCount",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "DV_HitCount"
             }
           ]
         },
@@ -352,7 +352,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_MainTargetFinalDmgRatio",
               "value": {
                 "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
                 "displayLines": "DV_DamageRatio1",
@@ -360,11 +359,11 @@ const configAbility = {
                 "variables": [
                   "DV_DamageRatio1"
                 ]
-              }
+              },
+              "variableName": "DV_MainTargetFinalDmgRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_OtherTargetFinalDmgRatio",
               "value": {
                 "operator": "Variables[0] (DV_DamageRatio1) || RETURN",
                 "displayLines": "DV_DamageRatio1",
@@ -372,7 +371,8 @@ const configAbility = {
                 "variables": [
                   "DV_DamageRatio1"
                 ]
-              }
+              },
+              "variableName": "DV_OtherTargetFinalDmgRatio"
             },
             {
               "name": "Define Custom Variable with Copy",

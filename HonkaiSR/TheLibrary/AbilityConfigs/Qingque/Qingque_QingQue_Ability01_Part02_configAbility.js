@@ -39,23 +39,23 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tiao",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tiao"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tong",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tong"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Wan",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Wan"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_CardCount",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_CardCount"
         }
       ],
       "failed": [
@@ -103,7 +103,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
                           "value": {
                             "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Wan - 1)",
@@ -113,7 +112,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Wan"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Wan"
                         }
                       ],
                       "failed": [
@@ -127,7 +127,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Tong",
                           "value": {
                             "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Tong - 1)",
@@ -137,7 +136,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Tong"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Tong"
                         }
                       ]
                     }
@@ -180,8 +180,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_Wan"
                         }
                       ],
                       "failed": [
@@ -195,8 +195,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Tiao",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_Tiao"
                         }
                       ]
                     }
@@ -228,8 +228,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tong"
                             }
                           ],
                           "failed": [
@@ -243,8 +243,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tiao",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tiao"
                             }
                           ]
                         }
@@ -273,7 +273,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Wan",
                   "value": {
                     "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(QingQue_Wan - 1)",
@@ -283,7 +282,8 @@ const configAbility = {
                     "variables": [
                       "QingQue_Wan"
                     ]
-                  }
+                  },
+                  "variableName": "QingQue_Wan"
                 }
               ]
             },
@@ -306,7 +306,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tong",
                   "value": {
                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(QingQue_Tong - 1)",
@@ -316,7 +315,8 @@ const configAbility = {
                     "variables": [
                       "QingQue_Tong"
                     ]
-                  }
+                  },
+                  "variableName": "QingQue_Tong"
                 }
               ]
             },
@@ -339,7 +339,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tiao",
                   "value": {
                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(QingQue_Tiao - 1)",
@@ -349,13 +348,13 @@ const configAbility = {
                     "variables": [
                       "QingQue_Tiao"
                     ]
-                  }
+                  },
+                  "variableName": "QingQue_Tiao"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_CardCount",
               "value": {
                 "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(QingQue_CardCount - 1)",
@@ -365,7 +364,8 @@ const configAbility = {
                 "variables": [
                   "QingQue_CardCount"
                 ]
-              }
+              },
+              "variableName": "QingQue_CardCount"
             }
           ],
           "failed": [
@@ -406,7 +406,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Tiao",
                           "value": {
                             "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Tiao - 1)",
@@ -416,7 +415,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Tiao"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Tiao"
                         }
                       ]
                     },
@@ -439,7 +439,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
                           "value": {
                             "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Wan - 1)",
@@ -449,7 +448,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Wan"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Wan"
                         }
                       ]
                     },
@@ -472,7 +472,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Tiao",
                           "value": {
                             "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Tiao - 1)",
@@ -482,7 +481,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Tiao"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Tiao"
                         }
                       ]
                     },
@@ -505,7 +505,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
                           "value": {
                             "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(QingQue_Wan - 1)",
@@ -515,7 +514,8 @@ const configAbility = {
                             "variables": [
                               "QingQue_Wan"
                             ]
-                          }
+                          },
+                          "variableName": "QingQue_Wan"
                         }
                       ]
                     }
@@ -549,7 +549,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Tong - 1)",
@@ -559,7 +558,8 @@ const configAbility = {
                                 "variables": [
                                   "QingQue_Tong"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Tong"
                             }
                           ]
                         },
@@ -582,7 +582,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Wan - 1)",
@@ -592,7 +591,8 @@ const configAbility = {
                                 "variables": [
                                   "QingQue_Wan"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Wan"
                             }
                           ]
                         },
@@ -615,7 +615,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Tong - 1)",
@@ -625,7 +624,8 @@ const configAbility = {
                                 "variables": [
                                   "QingQue_Tong"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Tong"
                             }
                           ]
                         },
@@ -648,7 +648,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
                               "value": {
                                 "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(QingQue_Wan - 1)",
@@ -658,7 +657,8 @@ const configAbility = {
                                 "variables": [
                                   "QingQue_Wan"
                                 ]
-                              }
+                              },
+                              "variableName": "QingQue_Wan"
                             }
                           ]
                         }
@@ -692,7 +692,6 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tong - 1)",
@@ -702,7 +701,8 @@ const configAbility = {
                                     "variables": [
                                       "QingQue_Tong"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             },
@@ -725,7 +725,6 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -735,7 +734,8 @@ const configAbility = {
                                     "variables": [
                                       "QingQue_Tiao"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             },
@@ -758,7 +758,6 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tong - 1)",
@@ -768,7 +767,8 @@ const configAbility = {
                                     "variables": [
                                       "QingQue_Tong"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             },
@@ -791,7 +791,6 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Tiao - 1)",
@@ -801,7 +800,8 @@ const configAbility = {
                                     "variables": [
                                       "QingQue_Tiao"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             }
@@ -855,7 +855,6 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
                                   "value": {
                                     "operator": "Variables[0] (QingQue_Wan) || Constants[0] (1) || SUB || RETURN",
                                     "displayLines": "(QingQue_Wan - 1)",
@@ -865,7 +864,8 @@ const configAbility = {
                                     "variables": [
                                       "QingQue_Wan"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "QingQue_Wan"
                                 }
                               ],
                               "failed": [
@@ -886,7 +886,6 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tiao) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tiao - 1)",
@@ -896,7 +895,8 @@ const configAbility = {
                                         "variables": [
                                           "QingQue_Tiao"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ],
                                   "failed": [
@@ -910,7 +910,6 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
                                       "value": {
                                         "operator": "Variables[0] (QingQue_Tong) || Constants[0] (1) || SUB || RETURN",
                                         "displayLines": "(QingQue_Tong - 1)",
@@ -920,7 +919,8 @@ const configAbility = {
                                         "variables": [
                                           "QingQue_Tong"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 }
@@ -934,7 +934,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_CardCount",
                   "value": {
                     "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(QingQue_CardCount - 1)",
@@ -944,7 +943,8 @@ const configAbility = {
                     "variables": [
                       "QingQue_CardCount"
                     ]
-                  }
+                  },
+                  "variableName": "QingQue_CardCount"
                 }
               ],
               "failed": [
@@ -976,8 +976,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Wan",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_Wan"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -989,8 +989,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "QingQue_Tiao",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "QingQue_Tiao"
                         }
                       ],
                       "failed": [
@@ -1013,8 +1013,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Wan",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Wan"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -1026,8 +1026,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "QingQue_Tong",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "QingQue_Tong"
                             }
                           ],
                           "failed": [
@@ -1050,8 +1050,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tiao"
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
@@ -1063,8 +1063,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             }
@@ -1107,8 +1107,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Wan"
                                 }
                               ],
                               "failed": [
@@ -1122,8 +1122,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             }
@@ -1155,8 +1155,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Tong"
                                 }
                               ],
                               "failed": [
@@ -1170,8 +1170,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             }
@@ -1203,8 +1203,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Wan"
                                 }
                               ],
                               "failed": [
@@ -1218,8 +1218,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tong",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Tong"
                                 }
                               ]
                             }
@@ -1271,8 +1271,8 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Wan",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Wan"
                                     }
                                   ],
                                   "failed": [
@@ -1286,8 +1286,8 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ]
                                 }
@@ -1321,8 +1321,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Wan",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Wan"
                                 }
                               ],
                               "failed": [
@@ -1336,8 +1336,8 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "QingQue_Tiao",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "QingQue_Tiao"
                                 }
                               ]
                             }
@@ -1389,8 +1389,8 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tong",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tong"
                                     }
                                   ],
                                   "failed": [
@@ -1404,8 +1404,8 @@ const configAbility = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "QingQue_Tiao",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "QingQue_Tiao"
                                     }
                                   ]
                                 }
@@ -1417,7 +1417,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "QingQue_CardCount",
                       "value": {
                         "operator": "Variables[0] (QingQue_CardCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(QingQue_CardCount - 1)",
@@ -1427,7 +1426,8 @@ const configAbility = {
                         "variables": [
                           "QingQue_CardCount"
                         ]
-                      }
+                      },
+                      "variableName": "QingQue_CardCount"
                     }
                   ]
                 }

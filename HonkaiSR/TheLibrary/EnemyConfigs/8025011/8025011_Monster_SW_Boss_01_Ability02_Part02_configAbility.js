@@ -7,9 +7,9 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "AbilityFlag",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "AbilityFlag"
     },
     {
       "name": "Looped Event",

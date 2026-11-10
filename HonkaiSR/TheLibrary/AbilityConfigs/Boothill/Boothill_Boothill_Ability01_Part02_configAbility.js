@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_loop_count",
-      "value": 0
+      "value": 0,
+      "variableName": "_loop_count"
     },
     {
       "name": "ATK Scaling DMG",

@@ -17,8 +17,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "HasHitEffect",
-          "value": 1
+          "value": 1,
+          "variableName": "HasHitEffect"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -32,8 +32,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "HasHitEffect",
-          "value": 0
+          "value": 0,
+          "variableName": "HasHitEffect"
         }
       ]
     },

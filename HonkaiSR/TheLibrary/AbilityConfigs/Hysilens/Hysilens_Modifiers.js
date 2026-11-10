@@ -536,7 +536,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -545,13 +544,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -560,7 +559,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             }
@@ -607,7 +607,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -616,13 +615,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -631,7 +630,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -699,7 +699,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -708,13 +707,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -723,7 +722,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -1175,7 +1175,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1184,13 +1183,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1199,7 +1198,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             }
@@ -1246,7 +1246,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1255,13 +1254,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1270,7 +1269,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -1354,7 +1354,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1363,13 +1362,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1378,7 +1377,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -1452,7 +1452,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_Hars_Count",
                       "value": {
                         "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Scoring_Hars_Count + 1)",
@@ -1462,7 +1461,8 @@ const configAbility = {
                         "variables": [
                           "Scoring_Hars_Count"
                         ]
-                      }
+                      },
+                      "variableName": "Scoring_Hars_Count"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -1532,13 +1532,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TriggerEffectFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TriggerEffectFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 }
               ]
             }
@@ -1585,7 +1585,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
                   "value": {
                     "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_DotHitCount + 1)",
@@ -1595,12 +1594,13 @@ const configAbility = {
                     "variables": [
                       "MDF_DotHitCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DotHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TriggerEffectFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_TriggerEffectFlag"
                 }
               ]
             }
@@ -1629,18 +1629,18 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isPhase1",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isPhase1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DotHitCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DotHitCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CanTriggerDot",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_CanTriggerDot"
             }
           ]
         },
@@ -1658,18 +1658,18 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isPhase1",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_isPhase1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DotHitCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DotHitCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CanTriggerDot",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_CanTriggerDot"
             }
           ]
         },
@@ -1801,7 +1801,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
                       "value": {
                         "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_DotHitCount + 1)",
@@ -1811,7 +1810,8 @@ const configAbility = {
                         "variables": [
                           "MDF_DotHitCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DotHitCount"
                     }
                   ]
                 }
@@ -1864,7 +1864,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
                         "displayLines": "MDF_MaxLimit",
@@ -1872,7 +1871,8 @@ const configAbility = {
                         "variables": [
                           "MDF_MaxLimit"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DotHitCount"
                     }
                   ]
                 },
@@ -1901,7 +1901,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Scoring_Hars_Count",
                       "value": {
                         "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Scoring_Hars_Count + 1)",
@@ -1911,7 +1910,8 @@ const configAbility = {
                         "variables": [
                           "Scoring_Hars_Count"
                         ]
-                      }
+                      },
+                      "variableName": "Scoring_Hars_Count"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -1940,8 +1940,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DotHitCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DotHitCount"
             }
           ]
         },
@@ -1972,13 +1972,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             }
@@ -2027,18 +2027,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             }
@@ -2057,13 +2057,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isPhase1",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isPhase1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CanTriggerDot",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CanTriggerDot"
             }
           ]
         },
@@ -2110,18 +2110,18 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             }
@@ -2140,18 +2140,18 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isPhase1",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isPhase1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CanTriggerDot",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CanTriggerDot"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DotHitCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DotHitCount"
             }
           ]
         },
@@ -2168,13 +2168,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isPhase1",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isPhase1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CanTriggerDot",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CanTriggerDot"
             }
           ]
         }

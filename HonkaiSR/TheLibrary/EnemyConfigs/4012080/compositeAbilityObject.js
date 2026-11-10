@@ -347,8 +347,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "AIFlag"
                 },
                 "Modifier Deletes Itself"
               ]

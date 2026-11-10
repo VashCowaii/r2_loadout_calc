@@ -180,7 +180,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PropertyValueChange",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
@@ -190,7 +190,7 @@ const configAbility = {
                       "MDF_DebuffNumber"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_PropertyValueChange"
                 },
                 {
                   "name": "IF",
@@ -214,7 +214,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_PropertyValueChange",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
                         "displayLines": "MDF_PropertyValueMax",
@@ -223,7 +223,7 @@ const configAbility = {
                           "MDF_PropertyValueMax"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_PropertyValueChange"
                     }
                   ],
                   "failed": [
@@ -233,7 +233,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_PropertyValueChange",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
                         "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
@@ -243,7 +243,7 @@ const configAbility = {
                           "MDF_DebuffNumber"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_PropertyValueChange"
                     }
                   ]
                 }
@@ -255,9 +255,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PropertyValueChange",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_PropertyValueChange"
                 }
               ]
             },
@@ -282,9 +282,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_PropertyValueChange",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "MDF_PropertyValueChange"
             },
             {
               "name": "Define Custom Variable",
@@ -292,9 +292,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_DebuffNumber",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "MDF_DebuffNumber"
             }
           ]
         },
@@ -307,9 +307,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_PropertyValueChange",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "MDF_PropertyValueChange"
             },
             {
               "name": "Define Custom Variable",
@@ -317,9 +317,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_DebuffNumber",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "MDF_DebuffNumber"
             }
           ]
         }
@@ -347,8 +347,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_RatioAttack",
-              "value": 1
+              "value": 1,
+              "variableName": "_Dr_RatioAttack"
             },
             {
               "name": "IF",
@@ -361,8 +361,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
                 }
               ]
             },
@@ -377,8 +377,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Skill03_Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Skill03_Insert_Flag"
                 }
               ]
             }
@@ -416,8 +416,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Insert_Flag"
                 }
               ],
               "failed": [
@@ -491,8 +491,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SkillTree_SkillFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SkillTree_SkillFlag"
                 },
                 {
                   "name": "UI Display Event (On Entity)",
@@ -608,8 +608,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_00_EnergyBar",
-              "value": 0
+              "value": 0,
+              "variableName": "_Dr_Ratio_00_EnergyBar"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -618,8 +618,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Skill03_InsertMaxCount",
-              "value": 0
+              "value": 0,
+              "variableName": "_Skill03_InsertMaxCount"
             },
             {
               "name": "Toggle Skill Mark"
@@ -636,8 +636,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
-              "value": 100
+              "value": 100,
+              "variableName": "MDF_TheFoolSpecialMark_DebuffNumber"
             },
             {
               "name": "IF",
@@ -657,7 +657,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_Ratio_00_EnergyBar",
                   "value": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -666,7 +665,8 @@ const configAbility = {
                       2,
                       1
                     ]
-                  }
+                  },
+                  "variableName": "_Dr_Ratio_00_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -695,7 +695,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_Ratio_00_EnergyBar",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -703,7 +702,8 @@ const configAbility = {
                     "variables": [
                       2
                     ]
-                  }
+                  },
+                  "variableName": "_Dr_Ratio_00_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -926,8 +926,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
-              "value": 100
+              "value": 100,
+              "variableName": "MDF_TheFoolSpecialMark_DebuffNumber"
             }
           ]
         },

@@ -176,8 +176,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HasTarget",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_HasTarget"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -218,8 +218,8 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HasTarget",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_HasTarget"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -269,15 +269,15 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HasTarget",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_HasTarget"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "JustinBreak",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "JustinBreak"
                     }
                   ]
                 }
@@ -391,8 +391,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "JustinBreak",
-              "value": 1
+              "value": 1,
+              "variableName": "JustinBreak"
             }
           ]
         }

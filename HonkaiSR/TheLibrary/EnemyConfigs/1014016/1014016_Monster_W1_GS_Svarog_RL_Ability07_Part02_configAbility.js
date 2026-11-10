@@ -79,7 +79,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "LowHPRatio",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
                 "displayLines": "{[PassiveSkill02[1]]}",
@@ -87,7 +86,8 @@ const configAbility = {
                 "variables": [
                   "{[PassiveSkill02[1]]}"
                 ]
-              }
+              },
+              "variableName": "LowHPRatio"
             }
           ]
         },

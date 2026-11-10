@@ -96,8 +96,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HitFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "HitFlag"
             }
           ]
         },
@@ -165,8 +165,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HitFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "HitFlag"
             }
           ]
         }

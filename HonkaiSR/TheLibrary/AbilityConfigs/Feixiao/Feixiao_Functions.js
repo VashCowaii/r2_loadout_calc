@@ -15,7 +15,6 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_AttackCount",
           "value": {
             "operator": "Variables[0] (Passive_AttackCount) || Variables[1] (parameter[0]_AddValue) || ADD || RETURN",
             "displayLines": "(Passive_AttackCount + parameter[0]_AddValue)",
@@ -24,7 +23,8 @@ const configAbility = {
               "Passive_AttackCount",
               "parameter[0]_AddValue"
             ]
-          }
+          },
+          "variableName": "Passive_AttackCount"
         },
         {
           "name": "IF",
@@ -44,7 +44,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Passive_AttackCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (Passive_AttackCount) || Variables[2] (Passive_NeedAttackCount) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(Passive_AttackCount, Passive_NeedAttackCount)",
@@ -54,7 +53,8 @@ const configAbility = {
                   "Passive_AttackCount",
                   "Passive_NeedAttackCount"
                 ]
-              }
+              },
+              "variableName": "Passive_AttackCount"
             }
           ]
         },
@@ -142,8 +142,8 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ComboSpeed",
-          "value": 1
+          "value": 1,
+          "variableName": "ComboSpeed"
         }
       ]
     },
@@ -507,8 +507,8 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "First_Break_Effect",
-          "value": 0
+          "value": 0,
+          "variableName": "First_Break_Effect"
         },
         {
           "name": "IF",
@@ -800,8 +800,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Feixiao_AchievementPrecheck",
-              "value": 1
+              "value": 1,
+              "variableName": "Feixiao_AchievementPrecheck"
             }
           ]
         },

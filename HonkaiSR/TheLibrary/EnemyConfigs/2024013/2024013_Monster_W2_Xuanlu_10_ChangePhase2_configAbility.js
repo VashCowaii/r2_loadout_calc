@@ -61,8 +61,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MaxMinionCount",
-      "value": 4
+      "value": 4,
+      "variableName": "MaxMinionCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -74,9 +74,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "InsertCheck"
     }
   ],
   "targetObjectData": {

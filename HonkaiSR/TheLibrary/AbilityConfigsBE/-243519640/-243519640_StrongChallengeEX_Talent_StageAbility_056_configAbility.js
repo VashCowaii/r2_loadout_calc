@@ -82,7 +82,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_bpChangeTotal",
                   "value": {
                     "operator": "Variables[0] (ABS) || Variables[1] (_bpChange) || PARAM_1 || FUNCTION || Variables[2] (_bpChangeTotal) || ADD || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_bpChange) + _bpChangeTotal)",
@@ -92,7 +91,8 @@ const configAbility = {
                       "_bpChange",
                       "_bpChangeTotal"
                     ]
-                  }
+                  },
+                  "variableName": "_bpChangeTotal"
                 },
                 {
                   "name": "IF",
@@ -120,7 +120,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "BPRecoverValue",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (_bpChangeTotal) || Variables[2] (#ADF_2) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((_bpChangeTotal / #ADF_2))",
@@ -130,7 +129,8 @@ const configAbility = {
                           "_bpChangeTotal",
                           "#ADF_2"
                         ]
-                      }
+                      },
+                      "variableName": "BPRecoverValue"
                     },
                     {
                       "name": "Skill Points Modification",
@@ -150,7 +150,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_bpChangeTotal",
                       "value": {
                         "operator": "Variables[0] (_bpChangeTotal) || Variables[1] (#ADF_2) || MOD || RETURN",
                         "displayLines": "(_bpChangeTotal % #ADF_2)",
@@ -159,7 +158,8 @@ const configAbility = {
                           "_bpChangeTotal",
                           "#ADF_2"
                         ]
-                      }
+                      },
+                      "variableName": "_bpChangeTotal"
                     }
                   ]
                 }

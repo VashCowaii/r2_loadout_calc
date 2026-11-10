@@ -83,8 +83,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillEnhanced",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_SkillEnhanced"
                 }
               ]
             }
@@ -120,8 +120,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InUltra",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InUltra"
                 }
               ]
             },
@@ -163,8 +163,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillEnhanced",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillEnhanced"
                 }
               ]
             }
@@ -190,8 +190,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InUltra",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InUltra"
                 }
               ]
             },

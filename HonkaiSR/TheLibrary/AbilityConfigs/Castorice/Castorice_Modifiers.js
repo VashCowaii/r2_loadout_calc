@@ -353,7 +353,6 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_MaxSpecialSP",
               "value": {
                 "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
                 "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
@@ -362,12 +361,12 @@ const configAbility = {
                   "Castorice_MaxSpecialSP",
                   "Castorice_PointB1_HealRatioDown"
                 ]
-              }
+              },
+              "variableName": "Castorice_MaxSpecialSP"
             },
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "HealAmount_CasterAdd",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
@@ -379,7 +378,8 @@ const configAbility = {
                   "Castorice_MaxSpecialSP",
                   "Castorice_SumBeingHealValue"
                 ]
-              }
+              },
+              "variableName": "HealAmount_CasterAdd"
             },
             {
               "name": "IF",
@@ -393,7 +393,6 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_SumBeingHealValue",
                   "value": {
                     "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
                     "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
@@ -402,7 +401,8 @@ const configAbility = {
                       "Castorice_SumBeingHealValue",
                       "HealAmount_CasterAdd"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_SumBeingHealValue"
                 },
                 {
                   "name": "IF",
@@ -418,7 +418,6 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "skipWhenMindControlled": false,
-                      "variableName": "HealAmount_ServantAdd",
                       "value": {
                         "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
                         "displayLines": "HealAmount_CasterAdd",
@@ -426,7 +425,8 @@ const configAbility = {
                         "variables": [
                           "HealAmount_CasterAdd"
                         ]
-                      }
+                      },
+                      "variableName": "HealAmount_ServantAdd"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -507,14 +507,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_SumBeingHealValue",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_SumBeingHealValue"
             },
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_MaxFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_MaxFlag"
             }
           ]
         },
@@ -524,14 +524,14 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_SumBeingHealValue",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_SumBeingHealValue"
             },
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_MaxFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_MaxFlag"
             }
           ]
         }
@@ -860,9 +860,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 100,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             },
             {
               "name": "Update Ability Binding",
@@ -913,9 +913,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 10,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             },
             {
               "name": "Disable Abilities",

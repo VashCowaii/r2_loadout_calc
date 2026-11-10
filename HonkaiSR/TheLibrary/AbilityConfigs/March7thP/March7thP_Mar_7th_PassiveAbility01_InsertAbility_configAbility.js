@@ -30,7 +30,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_DefenceRatio",
               "value": {
                 "operator": "Variables[0] (0.3) || RETURN",
                 "displayLines": "0.3",
@@ -38,14 +37,15 @@ const configAbility = {
                 "variables": [
                   0.3
                 ]
-              }
+              },
+              "variableName": "_Rank01_DefenceRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_DefenceRatio",
-              "value": 0
+              "value": 0,
+              "variableName": "_Rank01_DefenceRatio"
             }
           ]
         },
@@ -124,9 +124,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Mar7th_00_Passive_CounterView",
+          "scope": "ContextCaster",
           "value": 0,
-          "scope": "ContextCaster"
+          "variableName": "Mar7th_00_Passive_CounterView"
         }
       ]
     },

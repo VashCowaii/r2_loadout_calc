@@ -108,7 +108,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EntityCurrentSP",
                   "value": {
                     "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (EntityMaxSP) || Variables[2] (BattleEvent_P1_ADF_Get) || MUL || ADD || RETURN",
                     "displayLines": "(EntityCurrentSP + (EntityMaxSP * BattleEvent_P1_ADF_Get))",
@@ -118,7 +117,8 @@ const configAbility = {
                       "EntityMaxSP",
                       "BattleEvent_P1_ADF_Get"
                     ]
-                  }
+                  },
+                  "variableName": "EntityCurrentSP"
                 },
                 {
                   "name": "IF",
@@ -174,7 +174,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                         "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -184,7 +183,8 @@ const configAbility = {
                           "EntityCurrentSP",
                           "EntityMaxSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -208,8 +208,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EntityCurrentSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EntityCurrentSP"
                 }
               ]
             }
@@ -276,8 +276,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -309,7 +309,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -319,7 +318,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",

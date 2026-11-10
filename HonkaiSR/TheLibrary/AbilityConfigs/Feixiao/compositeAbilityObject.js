@@ -273,8 +273,8 @@ const compositeAbilityObject = {
           "onCreation": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CDF_IsEnterBattle",
-              "value": 0
+              "value": 0,
+              "variableName": "CDF_IsEnterBattle"
             }
           ],
           "onRemoval": [
@@ -888,28 +888,28 @@ const compositeAbilityObject = {
                 "Toggle View Mode",
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ComboHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ComboHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Combo1_Loop_Index",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Combo1_Loop_Index"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Combo2_Loop_Index",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Combo2_Loop_Index"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ComboType",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ComboType"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Feixiao_AchievementPrecheck",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Feixiao_AchievementPrecheck"
                 }
               ]
             },
@@ -1731,8 +1731,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CDF_IsEnterBattle",
-              "value": 0
+              "value": 0,
+              "variableName": "CDF_IsEnterBattle"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1799,8 +1799,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CDF_IsEnterBattle",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CDF_IsEnterBattle"
                 }
               ],
               "entryTargetType": "AllHitTarget"
@@ -2139,8 +2139,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "IsUnCountedInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "IsUnCountedInsert"
             }
           ]
         },
@@ -2421,8 +2421,8 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsUnCountedInsert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsUnCountedInsert"
                 },
                 {
                   "name": "Trigger Ability",
@@ -2458,8 +2458,8 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "IsUnCountedInsert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "IsUnCountedInsert"
                     },
                     {
                       "name": "Trigger Ability",
@@ -2710,7 +2710,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_StanceRatio",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
                 "displayLines": "(1 + 1)",
@@ -2720,25 +2719,25 @@ const compositeAbilityObject = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "Insert_StanceRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_StanceRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "Insert_StanceRatio"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "IsUnCountedInsert",
-          "value": 0
+          "value": 0,
+          "variableName": "IsUnCountedInsert"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_NeedAttackCount",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -2746,7 +2745,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Passive_NeedAttackCount"
         },
         {
           "name": "IF",
@@ -2757,7 +2757,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (1.1) || Variables[1] (1.4) || ADD || RETURN",
                 "displayLines": "(1.1 + 1.4)",
@@ -2766,13 +2765,13 @@ const compositeAbilityObject = {
                   1.1,
                   1.4
                 ]
-              }
+              },
+              "variableName": "Insert_DamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (1.1) || RETURN",
                 "displayLines": "1.1",
@@ -2780,7 +2779,8 @@ const compositeAbilityObject = {
                 "variables": [
                   1.1
                 ]
-              }
+              },
+              "variableName": "Insert_DamagePercentage"
             }
           ]
         },
@@ -3820,7 +3820,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill21_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
                 "displayLines": "0.6",
@@ -3828,13 +3827,13 @@ const compositeAbilityObject = {
                 "variables": [
                   0.6
                 ]
-              }
+              },
+              "variableName": "Skill21_DamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill21_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || Variables[1] (0.3) || ADD || RETURN",
                 "displayLines": "(0.6 + 0.3)",
@@ -3843,7 +3842,8 @@ const compositeAbilityObject = {
                   0.6,
                   0.3
                 ]
-              }
+              },
+              "variableName": "Skill21_DamagePercentage"
             }
           ]
         },
@@ -3875,7 +3875,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo2_Loop_Index",
               "value": {
                 "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (ComboHitCount) || Constants[0] (1) || ADD || Constants[1] (2) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>((ComboHitCount + 1), 2)",
@@ -3887,13 +3886,13 @@ const compositeAbilityObject = {
                   "UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]",
                   "ComboHitCount"
                 ]
-              }
+              },
+              "variableName": "Combo2_Loop_Index"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Combo2_Loop_Index",
           "value": {
             "operator": "Variables[0] (Combo2_Loop_Index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Combo2_Loop_Index + 1)",
@@ -3903,7 +3902,8 @@ const compositeAbilityObject = {
             "variables": [
               "Combo2_Loop_Index"
             ]
-          }
+          },
+          "variableName": "Combo2_Loop_Index"
         },
         {
           "name": "Looped Event",
@@ -3917,7 +3917,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo2_Loop_Index",
               "value": {
                 "operator": "Variables[0] (Combo2_Loop_Index) || Constants[0] (2) || SUB || RETURN",
                 "displayLines": "(Combo2_Loop_Index - 2)",
@@ -3927,7 +3926,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Combo2_Loop_Index"
                 ]
-              }
+              },
+              "variableName": "Combo2_Loop_Index"
             }
           ]
         },
@@ -4120,8 +4120,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ComboType",
-          "value": 2
+          "value": 2,
+          "variableName": "ComboType"
         }
       ],
       "references": [],
@@ -4495,7 +4495,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill11_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || Variables[1] (0.3) || ADD || RETURN",
                 "displayLines": "(0.6 + 0.3)",
@@ -4504,13 +4503,13 @@ const compositeAbilityObject = {
                   0.6,
                   0.3
                 ]
-              }
+              },
+              "variableName": "Skill11_DamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill11_DamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
                 "displayLines": "0.6",
@@ -4518,7 +4517,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.6
                 ]
-              }
+              },
+              "variableName": "Skill11_DamagePercentage"
             }
           ]
         },
@@ -4550,7 +4550,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo1_Loop_Index",
               "value": {
                 "operator": "Variables[0] (UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]) || Variables[1] (ComboHitCount) || Constants[0] (3) || ADD || Constants[1] (4) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]</span>((ComboHitCount + 3), 4)",
@@ -4562,13 +4561,13 @@ const compositeAbilityObject = {
                   "UNKNOWN_OBJECT_FUNCTION_1[Vash is aware]",
                   "ComboHitCount"
                 ]
-              }
+              },
+              "variableName": "Combo1_Loop_Index"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Combo1_Loop_Index",
           "value": {
             "operator": "Variables[0] (Combo1_Loop_Index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Combo1_Loop_Index + 1)",
@@ -4578,7 +4577,8 @@ const compositeAbilityObject = {
             "variables": [
               "Combo1_Loop_Index"
             ]
-          }
+          },
+          "variableName": "Combo1_Loop_Index"
         },
         {
           "name": "Looped Event",
@@ -4592,7 +4592,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Combo1_Loop_Index",
               "value": {
                 "operator": "Variables[0] (Combo1_Loop_Index) || Constants[0] (4) || SUB || RETURN",
                 "displayLines": "(Combo1_Loop_Index - 4)",
@@ -4602,7 +4601,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Combo1_Loop_Index"
                 ]
-              }
+              },
+              "variableName": "Combo1_Loop_Index"
             }
           ]
         },
@@ -4818,8 +4818,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ComboType",
-          "value": 1
+          "value": 1,
+          "variableName": "ComboType"
         }
       ],
       "references": [],
@@ -5005,8 +5005,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "First_Break_Effect",
-              "value": 0
+              "value": 0,
+              "variableName": "First_Break_Effect"
             },
             {
               "name": "Update Ability Enhance Button",
@@ -5039,8 +5039,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "First_Break_Effect",
-              "value": 1
+              "value": 1,
+              "variableName": "First_Break_Effect"
             },
             {
               "name": "Update Ability Enhance Button",
@@ -6130,7 +6130,6 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Passive_AttackCount",
               "value": {
                 "operator": "Variables[0] (Passive_AttackCount) || Variables[1] (parameter[0]_AddValue) || ADD || RETURN",
                 "displayLines": "(Passive_AttackCount + parameter[0]_AddValue)",
@@ -6139,7 +6138,8 @@ const compositeAbilityObject = {
                   "Passive_AttackCount",
                   "parameter[0]_AddValue"
                 ]
-              }
+              },
+              "variableName": "Passive_AttackCount"
             },
             {
               "name": "IF",
@@ -6159,7 +6159,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Passive_AttackCount",
                   "value": {
                     "operator": "Variables[0] (MIN) || Variables[1] (Passive_AttackCount) || Variables[2] (Passive_NeedAttackCount) || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(Passive_AttackCount, Passive_NeedAttackCount)",
@@ -6169,7 +6168,8 @@ const compositeAbilityObject = {
                       "Passive_AttackCount",
                       "Passive_NeedAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "Passive_AttackCount"
                 }
               ]
             },
@@ -6257,8 +6257,8 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ComboSpeed",
-              "value": 1
+              "value": 1,
+              "variableName": "ComboSpeed"
             }
           ]
         },
@@ -6622,8 +6622,8 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "First_Break_Effect",
-              "value": 0
+              "value": 0,
+              "variableName": "First_Break_Effect"
             },
             {
               "name": "IF",
@@ -6915,8 +6915,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Feixiao_AchievementPrecheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Feixiao_AchievementPrecheck"
                 }
               ]
             },

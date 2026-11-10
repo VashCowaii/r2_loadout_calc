@@ -71,7 +71,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_TurnCount",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Modifier_TurnCount - 1)",
@@ -82,7 +82,7 @@ const compositeAbilityObject = {
                           "Modifier_TurnCount"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "Modifier_TurnCount"
                     }
                   ]
                 },
@@ -127,9 +127,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_TurnCount",
+                          "scope": "ContextModifier",
                           "value": 2,
-                          "scope": "ContextModifier"
+                          "variableName": "Modifier_TurnCount"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -151,9 +151,9 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_TurnCount",
+                          "scope": "ContextModifier",
                           "value": 1,
-                          "scope": "ContextModifier"
+                          "variableName": "Modifier_TurnCount"
                         }
                       ]
                     }
@@ -180,8 +180,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BreakRecover",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "BreakRecover"
                     }
                   ]
                 },
@@ -212,8 +212,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakRecover",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BreakRecover"
                 }
               ]
             },
@@ -809,9 +809,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BossCount",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "BossCount"
         },
         {
           "name": "Find New Target",
@@ -848,7 +848,7 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BossCount",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(BossCount + 1)",
@@ -859,7 +859,7 @@ const compositeAbilityObject = {
                   "BossCount"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "BossCount"
             }
           ]
         },
@@ -907,7 +907,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "variableName": "DamageUpRatio",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (DamageUpRatio) || RETURN",
             "displayLines": "DamageUpRatio",
@@ -916,7 +916,7 @@ const compositeAbilityObject = {
               "DamageUpRatio"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "DamageUpRatio"
         }
       ],
       "targetObjectData": {

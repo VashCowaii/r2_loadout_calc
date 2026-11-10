@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_IsAngry",
-      "value": 1
+      "value": 1,
+      "variableName": "MDF_IsAngry"
     },
     {
       "name": "Add Events/Bonuses",

@@ -85,9 +85,9 @@ const configAbility = {
             "name": "Add Target by Unique Identifier",
             "identifier": "W3_Aventurine_00"
           },
-          "variableName": "DiceDeathRattleInsertCheck",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "DiceDeathRattleInsertCheck"
         }
       ]
     },

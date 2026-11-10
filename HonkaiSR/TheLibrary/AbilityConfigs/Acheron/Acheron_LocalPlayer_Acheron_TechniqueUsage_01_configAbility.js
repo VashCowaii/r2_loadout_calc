@@ -59,12 +59,11 @@ const configAbility = {
           "onKill": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_Count",
-              "value": 1
+              "value": 1,
+              "variableName": "Acheron_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Scoring_KillCount_4083009",
               "value": {
                 "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -74,7 +73,8 @@ const configAbility = {
                 "variables": [
                   "Scoring_KillCount_4083009"
                 ]
-              }
+              },
+              "variableName": "Scoring_KillCount_4083009"
             },
             {
               "name": "IF",
@@ -101,8 +101,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Scoring_KillCount_4083009"
                 }
               ]
             }
@@ -120,8 +120,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Acheron_Count"
             }
           ]
         }
@@ -184,12 +184,11 @@ const configAbility = {
           "onKill": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_Count",
-              "value": 1
+              "value": 1,
+              "variableName": "Acheron_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Scoring_KillCount_4083009",
               "value": {
                 "operator": "Variables[0] (Scoring_KillCount_4083009) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Scoring_KillCount_4083009 + 1)",
@@ -199,7 +198,8 @@ const configAbility = {
                 "variables": [
                   "Scoring_KillCount_4083009"
                 ]
-              }
+              },
+              "variableName": "Scoring_KillCount_4083009"
             },
             {
               "name": "IF",
@@ -226,8 +226,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Scoring_KillCount_4083009",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Scoring_KillCount_4083009"
                 }
               ]
             }
@@ -245,8 +245,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acheron_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Acheron_Count"
             }
           ]
         }

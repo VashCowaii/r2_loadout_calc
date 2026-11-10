@@ -67,7 +67,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentSpeed",
               "value": {
                 "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                 "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -76,11 +75,11 @@ const configAbility = {
                   "_CurrentSpeed",
                   "_CurrentSpeedConvert"
                 ]
-              }
+              },
+              "variableName": "_CurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentSpeed",
               "value": {
                 "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (180) || SUB || RETURN",
                 "displayLines": "(_CurrentSpeed - 180)",
@@ -89,7 +88,8 @@ const configAbility = {
                   "_CurrentSpeed",
                   180
                 ]
-              }
+              },
+              "variableName": "_CurrentSpeed"
             },
             {
               "name": "IF",
@@ -109,7 +109,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentSpeed",
                   "value": {
                     "operator": "Variables[0] (60) || RETURN",
                     "displayLines": "60",
@@ -117,7 +116,8 @@ const configAbility = {
                     "variables": [
                       60
                     ]
-                  }
+                  },
+                  "variableName": "_CurrentSpeed"
                 }
               ]
             },
@@ -260,7 +260,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ExtraSpecialSP",
+          "scope": "ContextTaskTemplate",
           "value": {
             "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)",
@@ -274,7 +274,7 @@ const configAbility = {
               "_MaxSpecialSP"
             ]
           },
-          "scope": "ContextTaskTemplate"
+          "variableName": "_ExtraSpecialSP"
         },
         {
           "name": "IF",

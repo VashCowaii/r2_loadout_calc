@@ -33,7 +33,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ChallengePeakBattle_0025_ADF_3",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (ChallengePeakBattle_0025_ADF_1) || Variables[0] (MAX) || Variables[2] (LightTeamNumCurrent) || Constants[0] (4) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || Variables[3] (ChallengePeakBattle_0025_ADF_2) || MUL || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((ChallengePeakBattle_0025_ADF_1 - (&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((LightTeamNumCurrent - 4), 0) * ChallengePeakBattle_0025_ADF_2)), 0)",
@@ -47,7 +46,8 @@ const configAbility = {
                   "LightTeamNumCurrent",
                   "ChallengePeakBattle_0025_ADF_2"
                 ]
-              }
+              },
+              "variableName": "ChallengePeakBattle_0025_ADF_3"
             },
             {
               "name": "Stack Target Stat Value",
@@ -341,7 +341,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "LightTeamNumLast",
                   "value": {
                     "operator": "Variables[0] (LightTeamNumCurrent) || RETURN",
                     "displayLines": "LightTeamNumCurrent",
@@ -349,7 +348,8 @@ const configAbility = {
                     "variables": [
                       "LightTeamNumCurrent"
                     ]
-                  }
+                  },
+                  "variableName": "LightTeamNumLast"
                 }
               ]
             }

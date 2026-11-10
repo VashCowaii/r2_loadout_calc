@@ -245,7 +245,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_OverHeal) || Variables[2] (_MaxHP) || DIV || Constants[0] (100) || MUL || Variables[3] (MDF_OverflowHealToDamageAddRatio) || MUL || ADD || RETURN",
                     "displayLines": "(MDF_DamageAddRatio + (((MDF_OverHeal / _MaxHP) * 100) * MDF_OverflowHealToDamageAddRatio))",
@@ -258,7 +257,8 @@ const compositeAbilityObject = {
                       "_MaxHP",
                       "MDF_OverflowHealToDamageAddRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddRatio"
                 },
                 {
                   "name": "IF",
@@ -278,7 +278,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageAddRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxDamageAddRatio) || RETURN",
                         "displayLines": "MDF_MaxDamageAddRatio",
@@ -286,7 +285,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_MaxDamageAddRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageAddRatio"
                     }
                   ]
                 }
@@ -316,7 +316,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HealCount",
                   "value": {
                     "operator": "Variables[0] (MDF_HealCount) || Variables[1] (MDF_OverHeal) || ADD || RETURN",
                     "displayLines": "(MDF_HealCount + MDF_OverHeal)",
@@ -325,7 +324,8 @@ const compositeAbilityObject = {
                       "MDF_HealCount",
                       "MDF_OverHeal"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HealCount"
                 },
                 {
                   "name": "IF",
@@ -346,7 +346,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HealCount",
                       "value": {
                         "operator": "Variables[0] (MDF_HealHPRatio) || Variables[1] (_MaxHP) || MUL || RETURN",
                         "displayLines": "(MDF_HealHPRatio * _MaxHP)",
@@ -355,7 +354,8 @@ const compositeAbilityObject = {
                           "MDF_HealHPRatio",
                           "_MaxHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HealCount"
                     }
                   ]
                 }
@@ -696,8 +696,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurOverflowSpecialSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CurOverflowSpecialSP"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -899,8 +899,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionOrderIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_ActionOrderIndex"
                 },
                 {
                   "name": "Find New Target",
@@ -928,7 +928,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ActionOrderIndex",
                       "value": {
                         "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_ActionOrderIndex + 1)",
@@ -938,7 +937,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ActionOrderIndex"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ActionOrderIndex"
                     }
                   ]
                 },
@@ -2645,7 +2645,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Lifetime",
                       "value": {
                         "operator": "Variables[0] (MDF_Lifetime) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_Lifetime - 1)",
@@ -2655,7 +2654,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_Lifetime"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Lifetime"
                     }
                   ]
                 }

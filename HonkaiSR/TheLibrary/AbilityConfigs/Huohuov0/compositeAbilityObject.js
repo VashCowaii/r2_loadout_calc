@@ -156,7 +156,6 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ReviveCount",
                       "value": {
                         "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
                         "displayLines": "Huohuo_Rank02_ReviveCount",
@@ -164,7 +163,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Huohuo_Rank02_ReviveCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ReviveCount"
                     },
                     {
                       "name": "IF",
@@ -460,7 +460,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Huohuo_Passive_DispelCount",
                       "value": {
                         "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                         "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -469,7 +468,8 @@ const compositeAbilityObject = {
                           "Huohuo_Passive_DispelCount",
                           "_DispelNumSuccess"
                         ]
-                      }
+                      },
+                      "variableName": "Huohuo_Passive_DispelCount"
                     }
                   ]
                 },
@@ -590,7 +590,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Huohuo_Passive_DispelCount",
                           "value": {
                             "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                             "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -599,7 +598,8 @@ const compositeAbilityObject = {
                               "Huohuo_Passive_DispelCount",
                               "_DispelNumSuccess"
                             ]
-                          }
+                          },
+                          "variableName": "Huohuo_Passive_DispelCount"
                         }
                       ]
                     },
@@ -710,7 +710,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Huohuo_Passive_DispelCount",
                           "value": {
                             "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                             "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -719,7 +718,8 @@ const compositeAbilityObject = {
                               "Huohuo_Passive_DispelCount",
                               "_DispelNumSuccess"
                             ]
-                          }
+                          },
+                          "variableName": "Huohuo_Passive_DispelCount"
                         }
                       ]
                     },
@@ -840,7 +840,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Huohuo_Passive_DispelCount",
                               "value": {
                                 "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                                 "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -849,7 +848,8 @@ const compositeAbilityObject = {
                                   "Huohuo_Passive_DispelCount",
                                   "_DispelNumSuccess"
                                 ]
-                              }
+                              },
+                              "variableName": "Huohuo_Passive_DispelCount"
                             }
                           ]
                         },
@@ -976,8 +976,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Huohuo_Passive_HotCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Huohuo_Passive_HotCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1038,7 +1038,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Huohuo_Passive_DispelCount",
                   "value": {
                     "operator": "Variables[0] (6) || RETURN",
                     "displayLines": "6",
@@ -1046,11 +1045,11 @@ const compositeAbilityObject = {
                     "variables": [
                       6
                     ]
-                  }
+                  },
+                  "variableName": "Huohuo_Passive_DispelCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DispelCount",
                   "value": {
                     "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
                     "displayLines": "Huohuo_Passive_DispelCount",
@@ -1058,7 +1057,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Huohuo_Passive_DispelCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DispelCount"
                 },
                 {
                   "name": "IF",
@@ -1113,7 +1113,6 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DispelCount",
                       "value": {
                         "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
                         "displayLines": "Huohuo_Passive_DispelCount",
@@ -1121,7 +1120,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Huohuo_Passive_DispelCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DispelCount"
                     }
                   ]
                 }
@@ -1923,7 +1923,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Huohuo_Rank02_ReviveCount",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1931,7 +1930,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "Huohuo_Rank02_ReviveCount"
             },
             {
               "name": "Add Events/Bonuses",

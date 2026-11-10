@@ -31,8 +31,8 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "_MissionTalkType",
-      "value": 0
+      "value": 0,
+      "variableName": "_MissionTalkType"
     },
     {
       "name": "Add Events/Bonuses",

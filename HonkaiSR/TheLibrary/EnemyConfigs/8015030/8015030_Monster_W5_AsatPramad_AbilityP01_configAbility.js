@@ -440,8 +440,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 20
+              "value": 20,
+              "variableName": "AIFlag"
             },
             {
               "name": "IF",
@@ -501,8 +501,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 12
+                  "value": 12,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -537,8 +537,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Recently Summoned Enemies}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -888,8 +888,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentFace",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CurrentFace"
                 },
                 {
                   "name": "Change Character Model",
@@ -902,8 +902,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentFace",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CurrentFace"
                 },
                 {
                   "name": "Change Character Model",
@@ -936,8 +936,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -983,8 +983,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentFace",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "CurrentFace"
                     }
                   ]
                 }

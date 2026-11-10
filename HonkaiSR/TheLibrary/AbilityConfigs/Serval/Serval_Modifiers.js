@@ -143,7 +143,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MAvatar_Serval_00_Rank06_ShowRatio",
                   "value": {
                     "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
                     "displayLines": "SERVAL_OBJECT_UNUSED_2",
@@ -151,7 +150,8 @@ const configAbility = {
                     "variables": [
                       "SERVAL_OBJECT_UNUSED_2"
                     ]
-                  }
+                  },
+                  "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
                 },
                 {
                   "name": "Adjust Target Stats",
@@ -172,7 +172,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MAvatar_Serval_00_Rank06_ShowRatio",
               "value": {
                 "operator": "Variables[0] (SERVAL_OBJECT_UNUSED_2) || RETURN",
                 "displayLines": "SERVAL_OBJECT_UNUSED_2",
@@ -180,7 +179,8 @@ const configAbility = {
                 "variables": [
                   "SERVAL_OBJECT_UNUSED_2"
                 ]
-              }
+              },
+              "variableName": "MAvatar_Serval_00_Rank06_ShowRatio"
             }
           ]
         }

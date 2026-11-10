@@ -57,15 +57,15 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsSummon",
-          "value": 1
+          "value": 1,
+          "variableName": "_IsSummon"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsSummon",
-          "value": 0
+          "value": 0,
+          "variableName": "_IsSummon"
         }
       ]
     },

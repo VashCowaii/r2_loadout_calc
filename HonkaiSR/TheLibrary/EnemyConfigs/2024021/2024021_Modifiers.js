@@ -126,7 +126,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SummonValue",
                   "value": {
                     "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_SummonValue + 1)",
@@ -136,7 +135,8 @@ const configAbility = {
                     "variables": [
                       "MDF_SummonValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SummonValue"
                 },
                 {
                   "name": "IF",
@@ -172,7 +172,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_SummonValue",
               "value": {
                 "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_SummonValue + 1)",
@@ -182,7 +181,8 @@ const configAbility = {
                 "variables": [
                   "MDF_SummonValue"
                 ]
-              }
+              },
+              "variableName": "MDF_SummonValue"
             },
             {
               "name": "IF",
@@ -209,7 +209,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_SummonValue",
               "value": {
                 "operator": "Variables[0] (MDF_SummonValue) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_SummonValue + 1)",
@@ -219,7 +218,8 @@ const configAbility = {
                 "variables": [
                   "MDF_SummonValue"
                 ]
-              }
+              },
+              "variableName": "MDF_SummonValue"
             },
             {
               "name": "IF",
@@ -406,7 +406,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DeathCount",
                   "value": {
                     "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DeathCount + 1)",
@@ -416,7 +415,8 @@ const configAbility = {
                     "variables": [
                       "DeathCount"
                     ]
-                  }
+                  },
+                  "variableName": "DeathCount"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -429,7 +429,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ADF_HPDamageRatioValue",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                     "displayLines": "((1 / MonsterCount) + 0.0009999999)",
@@ -440,7 +439,8 @@ const configAbility = {
                     "variables": [
                       "MonsterCount"
                     ]
-                  }
+                  },
+                  "variableName": "ADF_HPDamageRatioValue"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -498,8 +498,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AchievementCount",
-              "value": 0
+              "value": 0,
+              "variableName": "AchievementCount"
             },
             {
               "name": "Find New Target",
@@ -523,7 +523,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AchievementCount",
                       "value": {
                         "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(AchievementCount + 1)",
@@ -533,7 +532,8 @@ const configAbility = {
                         "variables": [
                           "AchievementCount"
                         ]
-                      }
+                      },
+                      "variableName": "AchievementCount"
                     }
                   ]
                 }
@@ -1511,7 +1511,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DeathCount",
                   "value": {
                     "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DeathCount + 1)",
@@ -1521,7 +1520,8 @@ const configAbility = {
                     "variables": [
                       "DeathCount"
                     ]
-                  }
+                  },
+                  "variableName": "DeathCount"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1534,7 +1534,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ADF_HPDamageRatioValue",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                     "displayLines": "((1 / MonsterCount) + 0.0009999999)",
@@ -1545,7 +1544,8 @@ const configAbility = {
                     "variables": [
                       "MonsterCount"
                     ]
-                  }
+                  },
+                  "variableName": "ADF_HPDamageRatioValue"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1610,8 +1610,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AchievementCount",
-              "value": 0
+              "value": 0,
+              "variableName": "AchievementCount"
             },
             {
               "name": "Find New Target",
@@ -1635,7 +1635,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AchievementCount",
                       "value": {
                         "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(AchievementCount + 1)",
@@ -1645,7 +1644,8 @@ const configAbility = {
                         "variables": [
                           "AchievementCount"
                         ]
-                      }
+                      },
+                      "variableName": "AchievementCount"
                     }
                   ]
                 }

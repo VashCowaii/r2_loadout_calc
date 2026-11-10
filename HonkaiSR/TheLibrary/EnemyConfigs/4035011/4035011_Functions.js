@@ -72,8 +72,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_WorldErosionCtl",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "_WorldErosionCtl"
             },
             {
               "name": "Define Custom Variable",
@@ -81,8 +81,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
               },
-              "variableName": "_WorldErosionCtl",
-              "value": 1
+              "value": 1,
+              "variableName": "_WorldErosionCtl"
             }
           ],
           "failed": [
@@ -106,8 +106,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_WorldErosionCtl",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_WorldErosionCtl"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -115,8 +115,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                   },
-                  "variableName": "_WorldErosionCtl",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_WorldErosionCtl"
                 }
               ],
               "failed": [
@@ -131,7 +131,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WorldErosionCtl",
                       "value": {
                         "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
                         "displayLines": "{[Skill09[2]]}",
@@ -139,7 +138,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill09[2]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_WorldErosionCtl"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -147,7 +147,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                       },
-                      "variableName": "_WorldErosionCtl",
                       "value": {
                         "operator": "Variables[0] ({[Skill09[2]]}) || RETURN",
                         "displayLines": "{[Skill09[2]]}",
@@ -155,7 +154,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill09[2]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_WorldErosionCtl"
                     }
                   ],
                   "failed": [
@@ -170,7 +170,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WorldErosionCtl",
                           "value": {
                             "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
                             "displayLines": "{[Skill09[1]]}",
@@ -178,7 +177,8 @@ const configAbility = {
                             "variables": [
                               "{[Skill09[1]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_WorldErosionCtl"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -186,7 +186,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                           },
-                          "variableName": "_WorldErosionCtl",
                           "value": {
                             "operator": "Variables[0] ({[Skill09[1]]}) || RETURN",
                             "displayLines": "{[Skill09[1]]}",
@@ -194,13 +193,13 @@ const configAbility = {
                             "variables": [
                               "{[Skill09[1]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_WorldErosionCtl"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WorldErosionCtl",
                           "value": {
                             "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
                             "displayLines": "{[Skill09[0]]}",
@@ -208,7 +207,8 @@ const configAbility = {
                             "variables": [
                               "{[Skill09[0]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_WorldErosionCtl"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -216,7 +216,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
                           },
-                          "variableName": "_WorldErosionCtl",
                           "value": {
                             "operator": "Variables[0] ({[Skill09[0]]}) || RETURN",
                             "displayLines": "{[Skill09[0]]}",
@@ -224,7 +223,8 @@ const configAbility = {
                             "variables": [
                               "{[Skill09[0]]}"
                             ]
-                          }
+                          },
+                          "variableName": "_WorldErosionCtl"
                         }
                       ]
                     }

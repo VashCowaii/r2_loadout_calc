@@ -16,7 +16,7 @@ const configAbility = {
       "onCreation": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Gilgamesh_00_MazeSkill_AchievementCount",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (Gilgamesh_00_MazeSkill_AchievementCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Gilgamesh_00_MazeSkill_AchievementCount + 1)",
@@ -27,7 +27,7 @@ const configAbility = {
               "Gilgamesh_00_MazeSkill_AchievementCount"
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "Gilgamesh_00_MazeSkill_AchievementCount"
         },
         {
           "name": "IF",
@@ -535,7 +535,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Propertyvalue",
               "value": {
                 "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Variables[1] (1) || MUL || RETURN",
                 "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * 1)",
@@ -544,7 +543,8 @@ const configAbility = {
                   "Gilgamesh_00_Rank06_GoldenRule",
                   1
                 ]
-              }
+              },
+              "variableName": "MDF_Propertyvalue"
             }
           ]
         }
@@ -678,7 +678,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ExtraRatio",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (MAX) || Variables[2] (MDF_MaxSP) || Variables[3] (MDF_MaxSPThreshold) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || Variables[4] (MDF_ExtraRatioPerMaxSP) || MUL || Variables[5] (MDF_MaxExtraRatio) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((MDF_MaxSP - MDF_MaxSPThreshold), 0) * MDF_ExtraRatioPerMaxSP), MDF_MaxExtraRatio)",
@@ -693,11 +692,11 @@ const configAbility = {
                   "MDF_ExtraRatioPerMaxSP",
                   "MDF_MaxExtraRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ExtraRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAddedFinal",
               "value": {
                 "operator": "Variables[0] (MDF_BaseAttackAdded) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
                 "displayLines": "(MDF_BaseAttackAdded + MDF_ExtraRatio)",
@@ -706,11 +705,11 @@ const configAbility = {
                   "MDF_BaseAttackAdded",
                   "MDF_ExtraRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackAddedFinal"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalDamageBaseFinal",
               "value": {
                 "operator": "Variables[0] (MDF_BaseCriticalDamageBaseAdd) || Variables[1] (MDF_ExtraRatio) || ADD || RETURN",
                 "displayLines": "(MDF_BaseCriticalDamageBaseAdd + MDF_ExtraRatio)",
@@ -719,7 +718,8 @@ const configAbility = {
                   "MDF_BaseCriticalDamageBaseAdd",
                   "MDF_ExtraRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalDamageBaseFinal"
             },
             {
               "name": "Stack Target Stat Value",
@@ -850,7 +850,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_DamageAddedlayer",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || RETURN",
                 "displayLines": "MDF_Layer",
@@ -858,7 +857,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "SkillTree_DamageAddedlayer"
             },
             {
               "name": "Stack Target Stat Value",
@@ -968,8 +968,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsUltraSkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsUltraSkill"
                 }
               ]
             }
@@ -998,13 +998,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SPChange",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SPChange"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsUltraSkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "IsUltraSkill"
                 }
               ]
             }
@@ -1070,7 +1070,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SPChange",
                       "value": {
                         "operator": "Variables[0] (MDF_TempSPChange) || INVERT || RETURN",
                         "displayLines": "-MDF_TempSPChange",
@@ -1078,7 +1077,8 @@ const configAbility = {
                         "variables": [
                           "MDF_TempSPChange"
                         ]
-                      }
+                      },
+                      "variableName": "SPChange"
                     }
                   ]
                 }
@@ -1445,7 +1445,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_P1_DamageAdded",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
                 "displayLines": "MDF_DamageAddedRatio",
@@ -1453,7 +1452,8 @@ const configAbility = {
                 "variables": [
                   "MDF_DamageAddedRatio"
                 ]
-              }
+              },
+              "variableName": "SkillP01_P1_DamageAdded"
             }
           ]
         }
@@ -1581,17 +1581,17 @@ const configAbility = {
                 "Deleted bullshit",
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 10,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 100,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 }
               ]
             }
@@ -1626,17 +1626,17 @@ const configAbility = {
                 "Deleted bullshit",
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 10,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 100,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 }
               ]
             }
@@ -1698,7 +1698,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Saber_Chain",
                   "value": {
                     "operator": "Variables[0] (Saber_Chain) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Saber_Chain + 1)",
@@ -1708,7 +1707,8 @@ const configAbility = {
                     "variables": [
                       "Saber_Chain"
                     ]
-                  }
+                  },
+                  "variableName": "Saber_Chain"
                 }
               ]
             }
@@ -1759,7 +1759,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Gilgamesh_00_Rank06_GoldenRule",
                   "value": {
                     "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Gilgamesh_00_Rank06_GoldenRule + 1)",
@@ -1769,7 +1768,8 @@ const configAbility = {
                     "variables": [
                       "Gilgamesh_00_Rank06_GoldenRule"
                     ]
-                  }
+                  },
+                  "variableName": "Gilgamesh_00_Rank06_GoldenRule"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2148,7 +2148,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillRank_Rank01_DefenceDownRatio",
               "value": {
                 "operator": "Variables[0] (MDF_DefenceDownRatio) || RETURN",
                 "displayLines": "MDF_DefenceDownRatio",
@@ -2156,7 +2155,8 @@ const configAbility = {
                 "variables": [
                   "MDF_DefenceDownRatio"
                 ]
-              }
+              },
+              "variableName": "SkillRank_Rank01_DefenceDownRatio"
             }
           ]
         }
@@ -2284,8 +2284,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Avatar_Gilgamesh_00_FirstHappyTurn",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Avatar_Gilgamesh_00_FirstHappyTurn"
                 },
                 {
                   "name": "UI Display Event",
@@ -2318,7 +2318,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (0.1) || MUL || RETURN",
                 "displayLines": "(Avatar_Gilgamesh_00_KingCount * 0.1)",
@@ -2327,7 +2326,8 @@ const configAbility = {
                   "Avatar_Gilgamesh_00_KingCount",
                   0.1
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2359,8 +2359,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Avatar_Gilgamesh_00_KingCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Avatar_Gilgamesh_00_KingCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

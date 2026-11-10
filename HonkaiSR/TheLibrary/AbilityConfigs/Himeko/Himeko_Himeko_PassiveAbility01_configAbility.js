@@ -65,8 +65,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_CTRL",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_CTRL"
     }
   ],
   "references": [
@@ -89,8 +89,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_Pursuit_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Pursuit_Layer"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -334,8 +334,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Himeko_Attack",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Himeko_Attack"
                         },
                         {
                           "name": "IF",
@@ -363,8 +363,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Is_CTRL",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Is_CTRL"
                             }
                           ]
                         }
@@ -372,8 +372,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_CTRL",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_CTRL"
                         }
                       ]
                     }
@@ -479,8 +479,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Himeko_Attack",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Himeko_Attack"
                         }
                       ]
                     }
@@ -574,15 +574,15 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Himeko_Attack",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Himeko_Attack"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_CTRL",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_CTRL"
                         }
                       ]
                     }
@@ -809,13 +809,13 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Himeko_Attack",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Himeko_Attack"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_CTRL",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Is_CTRL"
                         }
                       ]
                     }
@@ -909,15 +909,15 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Himeko_Attack",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Himeko_Attack"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_CTRL",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_CTRL"
                         }
                       ]
                     }
@@ -932,8 +932,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Himeko_Attack",
-              "value": 1
+              "value": 1,
+              "variableName": "_Himeko_Attack"
             }
           ]
         }

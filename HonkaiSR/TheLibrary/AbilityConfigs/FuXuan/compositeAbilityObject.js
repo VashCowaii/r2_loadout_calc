@@ -468,7 +468,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "GDF_AllTeamMemberLoseHPValue",
                           "value": {
                             "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || Variables[1] (HPChangeValue) || SUB || RETURN",
                             "displayLines": "(GDF_AllTeamMemberLoseHPValue - HPChangeValue)",
@@ -477,7 +476,8 @@ const compositeAbilityObject = {
                               "GDF_AllTeamMemberLoseHPValue",
                               "HPChangeValue"
                             ]
-                          }
+                          },
+                          "variableName": "GDF_AllTeamMemberLoseHPValue"
                         },
                         {
                           "name": "Define Custom Variable with Stat",
@@ -507,7 +507,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || RETURN",
                                 "displayLines": "GDF_AllTeamMemberLoseHPValue",
@@ -515,13 +514,13 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "GDF_AllTeamMemberLoseHPValue"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_FinalDamage"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_FinalDamage",
                               "value": {
                                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                                 "displayLines": "(CasterMaxHP * 1.2)",
@@ -530,7 +529,8 @@ const compositeAbilityObject = {
                                   "CasterMaxHP",
                                   1.2
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_FinalDamage"
                             }
                           ]
                         }
@@ -552,8 +552,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_FinalDamage"
                     }
                   ]
                 }
@@ -598,7 +598,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || RETURN",
                             "displayLines": "GDF_AllTeamMemberLoseHPValue",
@@ -606,13 +605,13 @@ const compositeAbilityObject = {
                             "variables": [
                               "GDF_AllTeamMemberLoseHPValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_FinalDamage"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                             "displayLines": "(CasterMaxHP * 1.2)",
@@ -621,7 +620,8 @@ const compositeAbilityObject = {
                               "CasterMaxHP",
                               1.2
                             ]
-                          }
+                          },
+                          "variableName": "MDF_FinalDamage"
                         }
                       ]
                     }
@@ -747,14 +747,14 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "GDF_BPSkill_LifeTime",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "GDF_BPSkill_LifeTime"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AlwaysNeedBP",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "AlwaysNeedBP"
                     }
                   ]
                 }
@@ -765,14 +765,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "GDF_BPSkill_LifeTime",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "GDF_BPSkill_LifeTime"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AlwaysNeedBP",
+                  "scope": "AITag",
                   "value": 0,
-                  "scope": "AITag"
+                  "variableName": "AlwaysNeedBP"
                 },
                 {
                   "name": "IF",
@@ -845,8 +845,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AliveNum",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "AliveNum"
                     }
                   ]
                 },
@@ -1335,8 +1335,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FLAG_BanAction",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "FLAG_BanAction"
                     }
                   ]
                 }
@@ -1380,8 +1380,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FLAG_BanAction",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "FLAG_BanAction"
                         },
                         {
                           "name": "IF",
@@ -1510,7 +1510,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHPUpRatio",
                   "value": {
                     "operator": "Variables[0] (0.06) || Variables[1] (_MaxHP) || Variables[2] (_HPConvert) || SUB || MUL || RETURN",
                     "displayLines": "(0.06 * (_MaxHP - _HPConvert))",
@@ -1520,7 +1519,8 @@ const compositeAbilityObject = {
                       "_MaxHP",
                       "_HPConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxHPUpRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1613,7 +1613,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHPUpRatio",
                   "value": {
                     "operator": "Variables[0] (0.06) || Variables[1] (_MaxHP) || Variables[2] (_HPConvert) || SUB || MUL || RETURN",
                     "displayLines": "(0.06 * (_MaxHP - _HPConvert))",
@@ -1623,7 +1622,8 @@ const compositeAbilityObject = {
                       "_MaxHP",
                       "_HPConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxHPUpRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1793,8 +1793,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AliveNum",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "AliveNum"
                     }
                   ]
                 }
@@ -2283,7 +2283,6 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "GDF_ExChangeHPCount",
               "value": {
                 "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(GDF_ExChangeHPCount - 1)",
@@ -2293,12 +2292,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "GDF_ExChangeHPCount"
                 ]
-              }
+              },
+              "variableName": "GDF_ExChangeHPCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "GDF_LimboHPChangeFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "GDF_LimboHPChangeFlag"
             },
             {
               "name": "IF",
@@ -2470,8 +2470,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HitFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HitFlag"
                 }
               ]
             },
@@ -2539,8 +2539,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HitFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HitFlag"
                 }
               ]
             }
@@ -2589,7 +2589,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "HealHPValue",
               "value": {
                 "operator": "Variables[0] (MaxHP) || Variables[1] (0.05) || MUL || Variables[2] (133) || ADD || RETURN",
                 "displayLines": "((MaxHP * 0.05) + 133)",
@@ -2599,7 +2598,8 @@ const compositeAbilityObject = {
                   0.05,
                   133
                 ]
-              }
+              },
+              "variableName": "HealHPValue"
             },
             {
               "name": "Heal",
@@ -2653,7 +2653,6 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "GDF_AllTeamMemberLoseHPValue",
                   "value": {
                     "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                     "displayLines": "(CasterMaxHP * 1.2)",
@@ -2662,7 +2661,8 @@ const compositeAbilityObject = {
                       "CasterMaxHP",
                       1.2
                     ]
-                  }
+                  },
+                  "variableName": "GDF_AllTeamMemberLoseHPValue"
                 }
               ]
             },
@@ -2750,12 +2750,11 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "GDF_AllTeamMemberLoseHPValue",
-          "value": 0
+          "value": 0,
+          "variableName": "GDF_AllTeamMemberLoseHPValue"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "GDF_ExChangeHPCount",
           "value": {
             "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(GDF_ExChangeHPCount + 1)",
@@ -2765,7 +2764,8 @@ const compositeAbilityObject = {
             "variables": [
               "GDF_ExChangeHPCount"
             ]
-          }
+          },
+          "variableName": "GDF_ExChangeHPCount"
         },
         {
           "name": "Update Displayed Energy Bar",

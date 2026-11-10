@@ -63,7 +63,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_PassiveBreakCountBase",
           "value": {
             "operator": "Variables[0] (UnusedUnderThisBase_6495) || Variables[1] (5) || ADD || RETURN",
             "displayLines": "(UnusedUnderThisBase_6495 + 5)",
@@ -72,11 +71,11 @@ const configAbility = {
               "UnusedUnderThisBase_6495",
               5
             ]
-          }
+          },
+          "variableName": "_PassiveBreakCountBase"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PassiveBreakCountMax",
           "value": {
             "operator": "Variables[0] (10) || Variables[1] (5) || ADD || RETURN",
             "displayLines": "(10 + 5)",
@@ -85,13 +84,13 @@ const configAbility = {
               10,
               5
             ]
-          }
+          },
+          "variableName": "_PassiveBreakCountMax"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_PassiveBreakCountBase",
           "value": {
             "operator": "Variables[0] (UnusedUnderThisBase_6495) || RETURN",
             "displayLines": "UnusedUnderThisBase_6495",
@@ -99,11 +98,11 @@ const configAbility = {
             "variables": [
               "UnusedUnderThisBase_6495"
             ]
-          }
+          },
+          "variableName": "_PassiveBreakCountBase"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PassiveBreakCountMax",
           "value": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -111,7 +110,8 @@ const configAbility = {
             "variables": [
               10
             ]
-          }
+          },
+          "variableName": "_PassiveBreakCountMax"
         }
       ]
     },
@@ -316,7 +316,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "P6_Real_Ratio",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
                 "displayLines": "0.5",
@@ -324,7 +323,8 @@ const configAbility = {
                 "variables": [
                   0.5
                 ]
-              }
+              },
+              "variableName": "P6_Real_Ratio"
             }
           ]
         },

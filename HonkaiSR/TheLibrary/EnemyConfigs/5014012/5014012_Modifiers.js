@@ -694,8 +694,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SwitchField",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SwitchField"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -735,8 +735,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SwitchField",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SwitchField"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -893,8 +893,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SwitchField",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SwitchField"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -934,8 +934,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SwitchField",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_SwitchField"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -998,8 +998,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SwitchField",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SwitchField"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -1048,8 +1048,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SwitchField",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_SwitchField"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -1219,8 +1219,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SwitchField",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_SwitchField"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -1279,8 +1279,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SwitchField",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SwitchField"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -1464,8 +1464,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SwitchField",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SwitchField"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -1520,8 +1520,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SwitchField",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_SwitchField"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -2260,9 +2260,9 @@ const configAbility = {
                         "name": "Add Target by Unique Identifier",
                         "identifier": "W5_Vtuber_00"
                       },
-                      "variableName": "Win",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Win"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2737,8 +2737,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "RemainHP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "RemainHP"
                 },
                 {
                   "name": "Find New Target",
@@ -2784,7 +2784,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Ratio",
                   "value": {
                     "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
                     "displayLines": "(RemainHP / TotalHP)",
@@ -2793,7 +2792,8 @@ const configAbility = {
                       "RemainHP",
                       "TotalHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2888,8 +2888,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "RemainHP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "RemainHP"
                 },
                 {
                   "name": "Find New Target",
@@ -2935,7 +2935,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Ratio",
                   "value": {
                     "operator": "Variables[0] (RemainHP) || Variables[1] (TotalHP) || DIV || RETURN",
                     "displayLines": "(RemainHP / TotalHP)",
@@ -2944,7 +2943,8 @@ const configAbility = {
                       "RemainHP",
                       "TotalHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Ratio"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -3000,7 +3000,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AllDamageReduce",
               "value": {
                 "operator": "Variables[0] (MDF_AllDamageReduce) || Variables[1] (MDF_Ratio) || MUL || RETURN",
                 "displayLines": "(MDF_AllDamageReduce * MDF_Ratio)",
@@ -3009,7 +3008,8 @@ const configAbility = {
                   "MDF_AllDamageReduce",
                   "MDF_Ratio"
                 ]
-              }
+              },
+              "variableName": "MDF_AllDamageReduce"
             },
             {
               "name": "Stack Target Stat Value",
@@ -3101,23 +3101,23 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TotalHP",
-              "value": 0
+              "value": 0,
+              "variableName": "TotalHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RemainHP",
-              "value": 0
+              "value": 0,
+              "variableName": "RemainHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TotalHP_DownScale",
-              "value": 0
+              "value": 0,
+              "variableName": "TotalHP_DownScale"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "RemainHP_DownScale",
-              "value": 0
+              "value": 0,
+              "variableName": "RemainHP_DownScale"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -3151,8 +3151,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Win",
-              "value": 0
+              "value": 0,
+              "variableName": "Win"
             }
           ]
         },

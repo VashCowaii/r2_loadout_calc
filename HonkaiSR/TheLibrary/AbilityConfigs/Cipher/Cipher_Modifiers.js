@@ -750,8 +750,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Passive_Trigger_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Passive_Trigger_Count"
             },
             "Modifier Deletes Itself"
           ]
@@ -993,7 +993,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_Damage",
                   "value": {
                     "operator": "Variables[0] (_TMP_Damage) || Variables[1] (_TMP_OverflowDamage) || SUB || RETURN",
                     "displayLines": "(_TMP_Damage - _TMP_OverflowDamage)",
@@ -1002,11 +1001,11 @@ const configAbility = {
                       "_TMP_Damage",
                       "_TMP_OverflowDamage"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_Damage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_Rate",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
                     "displayLines": "0.12",
@@ -1014,7 +1013,8 @@ const configAbility = {
                     "variables": [
                       0.12
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_Rate"
                 },
                 {
                   "name": "IF",
@@ -1047,7 +1047,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_Rate",
                       "value": {
                         "operator": "Variables[0] (_TMP_Rate) || Variables[1] (0.16) || ADD || RETURN",
                         "displayLines": "(_TMP_Rate + 0.16)",
@@ -1056,7 +1055,8 @@ const configAbility = {
                           "_TMP_Rate",
                           0.16
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_Rate"
                     }
                   ]
                 },
@@ -1071,7 +1071,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_CurrentDamge",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (_TMP_Damage) || SUB || RETURN",
                         "displayLines": "(0 - _TMP_Damage)",
@@ -1081,11 +1080,11 @@ const configAbility = {
                         "variables": [
                           "_TMP_Damage"
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_CurrentDamge"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_FinalDamage",
                       "value": {
                         "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (_TMP_Rate) || MUL || Variables[3] (0.12) || DIV || Variables[3] (0.12) || Variables[4] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                         "displayLines": "(SkillP01_FinalDamage + (((-SkillP01_CurrentDamge * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1097,7 +1096,8 @@ const configAbility = {
                           0.12,
                           "Rank01_FinalRatio"
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_FinalDamage"
                     },
                     {
                       "name": "IF",
@@ -1138,7 +1138,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "PointB1_Ratio",
                               "value": {
                                 "operator": "Variables[0] (PointB1_Add_2) || RETURN",
                                 "displayLines": "PointB1_Add_2",
@@ -1146,7 +1145,8 @@ const configAbility = {
                                 "variables": [
                                   "PointB1_Add_2"
                                 ]
-                              }
+                              },
+                              "variableName": "PointB1_Ratio"
                             }
                           ],
                           "failed": [
@@ -1168,7 +1168,6 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB1_Ratio",
                                   "value": {
                                     "operator": "Variables[0] (PointB1_Add_1) || RETURN",
                                     "displayLines": "PointB1_Add_1",
@@ -1176,14 +1175,15 @@ const configAbility = {
                                     "variables": [
                                       "PointB1_Add_1"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "PointB1_Ratio"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "PointB1_Ratio",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "PointB1_Ratio"
                                 }
                               ]
                             }
@@ -1191,7 +1191,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (PointB1_Ratio) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                             "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * PointB1_Ratio) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1204,7 +1203,8 @@ const configAbility = {
                               0.12,
                               "Rank01_FinalRatio"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_FinalDamage"
                         }
                       ]
                     },
@@ -1239,7 +1239,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (SkillP01_FinalDamage) || Variables[1] (SkillP01_CurrentDamge) || INVERT || Variables[2] (2) || MUL || Variables[3] (_TMP_Rate) || MUL || Variables[4] (0.12) || DIV || Variables[4] (0.12) || Variables[5] (Rank01_FinalRatio) || MUL || MUL || ADD || RETURN",
                             "displayLines": "(SkillP01_FinalDamage + ((((-SkillP01_CurrentDamge * 2) * _TMP_Rate) / 0.12) * (0.12 * Rank01_FinalRatio)))",
@@ -1252,7 +1251,8 @@ const configAbility = {
                               0.12,
                               "Rank01_FinalRatio"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_FinalDamage"
                         }
                       ]
                     }

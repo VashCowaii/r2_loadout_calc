@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ATKCount",
       "value": {
         "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
         "displayLines": "(2 + 1)",
@@ -15,7 +14,8 @@ const configAbility = {
           2,
           1
         ]
-      }
+      },
+      "variableName": "EnergyBar_ATKCount"
     },
     {
       "name": "Update Displayed Energy Bar",

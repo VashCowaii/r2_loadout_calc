@@ -72,7 +72,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SunnyBreakColdFinal",
                       "value": {
                         "operator": "Variables[0] (Sunny_Temperature) || RETURN",
                         "displayLines": "Sunny_Temperature",
@@ -80,11 +79,11 @@ const configAbility = {
                         "variables": [
                           "Sunny_Temperature"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SunnyBreakColdFinal",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
@@ -94,7 +93,8 @@ const configAbility = {
                           "MDF_SunnyBreakColdFinal",
                           "MDF_SunnyBreakColdRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "IF",
@@ -185,7 +185,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_CountTotal",
                           "value": {
                             "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
                             "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -194,7 +193,8 @@ const configAbility = {
                               "Thunder_CountLight",
                               "Thunder_CountDark"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_CountTotal"
                         },
                         {
                           "name": "IF",
@@ -353,7 +353,6 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "ThunderKillCount",
                                   "value": {
                                     "operator": "Variables[0] (ThunderKillCount) || Constants[0] (1) || ADD || RETURN",
                                     "displayLines": "(ThunderKillCount + 1)",
@@ -363,7 +362,8 @@ const configAbility = {
                                     "variables": [
                                       "ThunderKillCount"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "ThunderKillCount"
                                 },
                                 {
                                   "name": "Inject Ability Use",
@@ -520,7 +520,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SunnyBreakColdFinal",
                       "value": {
                         "operator": "Variables[0] (Sunny_Temperature) || RETURN",
                         "displayLines": "Sunny_Temperature",
@@ -528,11 +527,11 @@ const configAbility = {
                         "variables": [
                           "Sunny_Temperature"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SunnyBreakColdFinal",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
@@ -542,7 +541,8 @@ const configAbility = {
                           "MDF_SunnyBreakColdFinal",
                           "MDF_SunnyBreakColdRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SunnyBreakColdFinal"
                     },
                     {
                       "name": "IF",
@@ -641,7 +641,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_CountTotal",
                           "value": {
                             "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
                             "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -650,7 +649,8 @@ const configAbility = {
                               "Thunder_CountLight",
                               "Thunder_CountDark"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_CountTotal"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -865,13 +865,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsStoryTri",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsStoryTri"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 5
+              "value": 5,
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -1525,7 +1525,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HPDelta",
               "value": {
                 "operator": "Variables[0] (MDF_HPDeltaPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)",
@@ -1534,7 +1533,8 @@ const configAbility = {
                   "MDF_HPDeltaPerLayer",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_HPDelta"
             }
           ]
         }
@@ -1734,7 +1734,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageValueTotal",
               "value": {
                 "operator": "Variables[0] (MDF_DamageValueTotal) || Variables[1] (MDF_DamageValue) || ADD || RETURN",
                 "displayLines": "(MDF_DamageValueTotal + MDF_DamageValue)",
@@ -1743,7 +1742,8 @@ const configAbility = {
                   "MDF_DamageValueTotal",
                   "MDF_DamageValue"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageValueTotal"
             },
             {
               "name": "IF",
@@ -1760,8 +1760,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValueTotal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DamageValueTotal"
                 }
               ]
             },
@@ -1784,7 +1784,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageValueFinal",
               "value": {
                 "operator": "Variables[0] (MDF_DamageValueTotal) || Variables[1] (MDF_DamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_DamageValueTotal * MDF_DamageRatio)",
@@ -1793,7 +1792,8 @@ const configAbility = {
                   "MDF_DamageValueTotal",
                   "MDF_DamageRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageValueFinal"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1819,7 +1819,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentDirtyHPRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValueFinal) || Variables[1] (MDF_MaxHP) || DIV || RETURN",
                     "displayLines": "(MDF_DamageValueFinal / MDF_MaxHP)",
@@ -1828,14 +1827,15 @@ const configAbility = {
                       "MDF_DamageValueFinal",
                       "MDF_MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentDirtyHPRatio"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentDirtyHPRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CurrentDirtyHPRatio"
                 }
               ]
             },
@@ -2188,7 +2188,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentDamage",
               "value": {
                 "operator": "Variables[0] (MDF_BaseAttack) || Variables[1] (MDF_TotalDamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_BaseAttack * MDF_TotalDamageRatio)",
@@ -2197,11 +2196,11 @@ const configAbility = {
                   "MDF_BaseAttack",
                   "MDF_TotalDamageRatio"
                 ]
-              }
+              },
+              "variableName": "CurrentDamage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TotalDamageRatio",
               "value": {
                 "operator": "Variables[0] (MDF_TotalDamageRatio) || RETURN",
                 "displayLines": "MDF_TotalDamageRatio",
@@ -2209,11 +2208,11 @@ const configAbility = {
                 "variables": [
                   "MDF_TotalDamageRatio"
                 ]
-              }
+              },
+              "variableName": "TotalDamageRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ChargePercentage",
               "value": {
                 "operator": "Variables[0] (TotalDamageRatio) || Variables[1] (MDF_TotalDamageRatioMax) || DIV || RETURN",
                 "displayLines": "(TotalDamageRatio / MDF_TotalDamageRatioMax)",
@@ -2222,7 +2221,8 @@ const configAbility = {
                   "TotalDamageRatio",
                   "MDF_TotalDamageRatioMax"
                 ]
-              }
+              },
+              "variableName": "MDF_ChargePercentage"
             },
             {
               "name": "Set Aquila UI Data"

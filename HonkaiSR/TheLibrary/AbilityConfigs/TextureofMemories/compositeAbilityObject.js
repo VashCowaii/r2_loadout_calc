@@ -184,7 +184,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ShieldValue",
                       "value": {
                         "operator": "Variables[0] (_MaxHP) || Variables[1] (0.16) || MUL || RETURN",
                         "displayLines": "(_MaxHP * 0.16)",
@@ -193,7 +192,8 @@ const compositeAbilityObject = {
                           "_MaxHP",
                           0.16
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ShieldValue"
                     },
                     {
                       "name": "Add Events/Bonuses",

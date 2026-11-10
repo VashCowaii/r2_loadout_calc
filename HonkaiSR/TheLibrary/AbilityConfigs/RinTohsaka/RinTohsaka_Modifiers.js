@@ -20,9 +20,9 @@ const configAbility = {
       "onStageExit": [
         {
           "name": "Define Custom Variable",
-          "variableName": "TohsakaRin_00_AchievementPassive_Money",
+          "scope": "ContextCaster",
           "value": 0,
-          "scope": "ContextCaster"
+          "variableName": "TohsakaRin_00_AchievementPassive_Money"
         }
       ],
       "Money Taken": [
@@ -32,7 +32,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TohsakaRin_00_AchievementPassive_Money",
+              "scope": "ContextCaster",
               "value": {
                 "operator": "Variables[0] (TohsakaRin_00_AchievementPassive_Money) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(TohsakaRin_00_AchievementPassive_Money + 1)",
@@ -43,7 +43,7 @@ const configAbility = {
                   "TohsakaRin_00_AchievementPassive_Money"
                 ]
               },
-              "scope": "ContextCaster"
+              "variableName": "TohsakaRin_00_AchievementPassive_Money"
             },
             {
               "name": "IF",
@@ -626,7 +626,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalPropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -635,13 +634,13 @@ const configAbility = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalPropertyValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalPropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -649,7 +648,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PropertyValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalPropertyValue"
                 }
               ]
             },
@@ -962,8 +962,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Layer"
             }
           ]
         }

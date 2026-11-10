@@ -40,7 +40,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageUpTimes",
               "value": {
                 "operator": "Variables[0] (MDF_DamageUpTimes) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_DamageUpTimes + 1)",
@@ -50,7 +49,8 @@ const configAbility = {
                 "variables": [
                   "MDF_DamageUpTimes"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageUpTimes"
             },
             {
               "name": "Find New Target",

@@ -64,7 +64,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillEquip_23032_BreakDamageRatioByCompare",
               "value": {
                 "operator": "Variables[0] (SkillEquip_23032_BreakDamageRatioByOwner) || Variables[1] (SkillEquip_23032_BreakDamageRatioConvertByOwner[*?]) || SUB || RETURN",
                 "displayLines": "(SkillEquip_23032_BreakDamageRatioByOwner - SkillEquip_23032_BreakDamageRatioConvertByOwner[*?])",
@@ -73,7 +72,8 @@ const configAbility = {
                   "SkillEquip_23032_BreakDamageRatioByOwner",
                   "SkillEquip_23032_BreakDamageRatioConvertByOwner[*?]"
                 ]
-              }
+              },
+              "variableName": "SkillEquip_23032_BreakDamageRatioByCompare"
             },
             {
               "name": "IF",

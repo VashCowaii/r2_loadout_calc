@@ -162,9 +162,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "TV_01_EliteFlag",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "TV_01_EliteFlag"
         }
       ]
     },
@@ -213,9 +213,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "TV_01_EliteFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TV_01_EliteFlag"
                 }
               ]
             },
@@ -249,9 +249,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "TV_01_EliteFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TV_01_EliteFlag"
                 }
               ]
             },

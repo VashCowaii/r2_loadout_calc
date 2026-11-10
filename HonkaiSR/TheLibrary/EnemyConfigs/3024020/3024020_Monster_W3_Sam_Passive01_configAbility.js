@@ -189,8 +189,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -248,13 +248,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "InsertCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertSpecial",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertSpecial"
                     }
                   ]
                 }

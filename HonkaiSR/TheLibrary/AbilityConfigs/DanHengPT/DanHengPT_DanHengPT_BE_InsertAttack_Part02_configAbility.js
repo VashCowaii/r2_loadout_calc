@@ -268,7 +268,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_ExtraDamageCount",
           "value": {
             "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
@@ -278,7 +277,8 @@ const configAbility = {
             "variables": [
               "DanHengPT_ExtraDamageCount"
             ]
-          }
+          },
+          "variableName": "DanHengPT_ExtraDamageCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -401,8 +401,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_IsFreeAction",
-          "value": 0
+          "value": 0,
+          "variableName": "DanHengPT_IsFreeAction"
         }
       ]
     },

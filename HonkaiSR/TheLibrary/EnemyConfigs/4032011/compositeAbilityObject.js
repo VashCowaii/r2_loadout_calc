@@ -45,7 +45,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NegativeBlood",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -54,7 +53,8 @@ const compositeAbilityObject = {
                       "CEIL",
                       "MDF_NegativeBlood_Temp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NegativeBlood"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -89,7 +89,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NegativeBlood",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -98,7 +97,8 @@ const compositeAbilityObject = {
                       "CEIL",
                       "MDF_NegativeBlood_Temp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NegativeBlood"
                 }
               ]
             }
@@ -308,15 +308,15 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsNegative"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsNegative"
                     },
                     {
                       "name": "Add Events/Bonuses",

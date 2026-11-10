@@ -21,8 +21,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill02First",
-              "value": 0
+              "value": 0,
+              "variableName": "Skill02First"
             },
             {
               "name": "IF",
@@ -120,8 +120,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill02First",
-      "value": 1
+      "value": 1,
+      "variableName": "Skill02First"
     },
     {
       "name": "IF",

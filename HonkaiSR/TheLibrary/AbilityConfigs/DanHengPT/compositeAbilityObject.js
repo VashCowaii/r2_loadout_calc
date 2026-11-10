@@ -150,9 +150,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DanHengPT_ExtraDamageCount",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DanHengPT_ExtraDamageCount"
                 }
               ]
             }
@@ -219,8 +219,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_IsFreeAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DanHengPT_IsFreeAction"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AchievementCount",
+                  "scope": "ContextCaster",
                   "value": {
                     "operator": "Variables[0] (MDF_DanHengPT_InitShieldValue) || RETURN",
                     "displayLines": "MDF_DanHengPT_InitShieldValue",
@@ -461,13 +461,13 @@ const compositeAbilityObject = {
                       "MDF_DanHengPT_InitShieldValue"
                     ]
                   },
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_AchievementCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AchievementCount",
+                  "scope": "ContextCaster",
                   "value": 0,
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_AchievementCount"
                 }
               ]
             }
@@ -672,8 +672,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_modifyAiTag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_modifyAiTag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -681,9 +681,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "HadServant",
+                      "scope": "AITag",
                       "value": 1,
-                      "scope": "AITag"
+                      "variableName": "HadServant"
                     }
                   ]
                 }
@@ -698,8 +698,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "variableName": "DanHengPT_LongLing_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DanHengPT_LongLing_Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -730,8 +730,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_modifyAiTag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_modifyAiTag"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -739,9 +739,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "HadServant",
+                      "scope": "AITag",
                       "value": 0,
-                      "scope": "AITag"
+                      "variableName": "HadServant"
                     }
                   ]
                 }
@@ -756,8 +756,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{DHPT}}"
                   },
-                  "variableName": "DanHengPT_LongLing_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DanHengPT_LongLing_Flag"
                 }
               ]
             },
@@ -853,7 +853,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DanHengPT_Passive_Count",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (DanHengPT_Passive_Count) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(DanHengPT_Passive_Count - 1)",
@@ -864,7 +864,7 @@ const compositeAbilityObject = {
                           "DanHengPT_Passive_Count"
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "DanHengPT_Passive_Count"
                     },
                     {
                       "name": "Show Attack Count",
@@ -1605,7 +1605,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraDamageCount",
               "value": {
                 "operator": "Variables[0] (DanHengPT_ExtraDamageCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(DanHengPT_ExtraDamageCount - 1)",
@@ -1615,7 +1614,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "DanHengPT_ExtraDamageCount"
                 ]
-              }
+              },
+              "variableName": "DanHengPT_ExtraDamageCount"
             },
             {
               "name": "ATK Scaling DMG",
@@ -1738,8 +1738,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_IsFreeAction",
-              "value": 0
+              "value": 0,
+              "variableName": "DanHengPT_IsFreeAction"
             }
           ]
         },
@@ -1770,7 +1770,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Stance_All",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
             "displayLines": "AOE Toughness Value",
@@ -1778,7 +1777,8 @@ const compositeAbilityObject = {
             "variables": [
               "AOE Toughness Value"
             ]
-          }
+          },
+          "variableName": "DanHengPT_Stance_All"
         },
         {
           "name": "Preload Battle Event(s)",
@@ -1804,13 +1804,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_ExtraShieldUPRatio",
-          "value": 1
+          "value": 1,
+          "variableName": "DanHengPT_ExtraShieldUPRatio"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_IsFreeAction",
-          "value": 0
+          "value": 0,
+          "variableName": "DanHengPT_IsFreeAction"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1856,8 +1856,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Passive_MaxCount",
-          "value": 99
+          "value": 99,
+          "variableName": "DanHengPT_Passive_MaxCount"
         },
         {
           "name": "IF",
@@ -1868,9 +1868,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 0.0009999999,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         },
@@ -1898,7 +1898,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_InsertDanHengPTDamagePercentage",
           "value": {
             "operator": "Variables[0] (0.8) || RETURN",
             "displayLines": "0.8",
@@ -1906,7 +1905,8 @@ const compositeAbilityObject = {
             "variables": [
               0.8
             ]
-          }
+          },
+          "variableName": "Skill03_InsertDanHengPTDamagePercentage"
         },
         {
           "name": "IF",
@@ -1917,7 +1917,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_InsertOwnerDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.8) || Variables[1] (2) || MUL || RETURN",
                 "displayLines": "(0.8 * 2)",
@@ -1926,11 +1925,11 @@ const compositeAbilityObject = {
                   0.8,
                   2
                 ]
-              }
+              },
+              "variableName": "Skill03_InsertOwnerDamagePercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.4) || Variables[1] (2) || MUL || RETURN",
                 "displayLines": "(0.4 * 2)",
@@ -1939,13 +1938,13 @@ const compositeAbilityObject = {
                   0.4,
                   2
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_InsertOwnerDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.8) || RETURN",
                 "displayLines": "0.8",
@@ -1953,11 +1952,11 @@ const compositeAbilityObject = {
                 "variables": [
                   0.8
                 ]
-              }
+              },
+              "variableName": "Skill03_InsertOwnerDamagePercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_OwnerDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.4) || RETURN",
                 "displayLines": "0.4",
@@ -1965,7 +1964,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.4
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_OwnerDamagePercentage"
             }
           ]
         }
@@ -2004,7 +2004,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DanHengPT_ExtraShieldUPRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_ShieldUPRatioTemp) || RETURN",
                         "displayLines": "MDF_ShieldUPRatioTemp",
@@ -2012,7 +2011,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ShieldUPRatioTemp"
                         ]
-                      }
+                      },
+                      "variableName": "DanHengPT_ExtraShieldUPRatio"
                     }
                   ]
                 }
@@ -2057,8 +2057,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DanHengPT_ExtraDamageCount"
                 }
               ]
             },
@@ -2082,7 +2082,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageRatioTemp) || RETURN",
                     "displayLines": "MDF_DamageRatioTemp",
@@ -2090,7 +2089,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_DamageRatioTemp"
                     ]
-                  }
+                  },
+                  "variableName": "DanHengPT_ExtraDamageRatio"
                 },
                 {
                   "name": "Define Custom Variable with Copy",
@@ -2109,7 +2109,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DanHengPT_ExtraDamageCount",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageCountTemp) || RETURN",
                     "displayLines": "MDF_DamageCountTemp",
@@ -2117,7 +2116,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_DamageCountTemp"
                     ]
-                  }
+                  },
+                  "variableName": "DanHengPT_ExtraDamageCount"
                 }
               ]
             }
@@ -2676,7 +2676,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_Passive_Count",
               "value": {
                 "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || Variables[2] (2) || ADD || RETURN",
                 "displayLines": "((DanHengPT_Passive_Count + 2) + 2)",
@@ -2686,13 +2685,13 @@ const compositeAbilityObject = {
                   2,
                   2
                 ]
-              }
+              },
+              "variableName": "DanHengPT_Passive_Count"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_Passive_Count",
               "value": {
                 "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || RETURN",
                 "displayLines": "(DanHengPT_Passive_Count + 2)",
@@ -2701,7 +2700,8 @@ const compositeAbilityObject = {
                   "DanHengPT_Passive_Count",
                   2
                 ]
-              }
+              },
+              "variableName": "DanHengPT_Passive_Count"
             }
           ]
         },
@@ -2863,8 +2863,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_Skill02_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "DanHengPT_Skill02_Flag"
             }
           ]
         },
@@ -3756,8 +3756,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_Skill02_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "DanHengPT_Skill02_Flag"
             }
           ]
         },
@@ -4377,8 +4377,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DanHengPT_ExtraShieldUPRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "DanHengPT_ExtraShieldUPRatio"
             }
           ]
         }

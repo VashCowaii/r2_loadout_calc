@@ -260,8 +260,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W2_Yanqing_00_SwordStep",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W2_Yanqing_00_SwordStep"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -269,8 +269,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -318,8 +318,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "W2_Yanqing_00_SwordStep",
-              "value": 0
+              "value": 0,
+              "variableName": "W2_Yanqing_00_SwordStep"
             }
           ]
         },

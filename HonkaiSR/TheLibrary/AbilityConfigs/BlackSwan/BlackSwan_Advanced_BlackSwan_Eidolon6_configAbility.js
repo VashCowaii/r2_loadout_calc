@@ -26,8 +26,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
-              "value": 0
+              "value": 0,
+              "variableName": "_count"
             }
           ]
         },
@@ -62,8 +62,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_count"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -83,8 +83,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
-              "value": 0
+              "value": 0,
+              "variableName": "_count"
             }
           ]
         }

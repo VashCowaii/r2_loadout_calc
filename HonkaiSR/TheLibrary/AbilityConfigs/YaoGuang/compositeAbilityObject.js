@@ -448,9 +448,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPSkillPriority",
+                  "scope": "AITag",
                   "value": 1,
-                  "scope": "AITag"
+                  "variableName": "BPSkillPriority"
                 }
               ]
             },
@@ -468,7 +468,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue3",
                   "value": {
                     "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
                     "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
@@ -477,7 +476,8 @@ const compositeAbilityObject = {
                       "_ElationDamageAddedRatioBase",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue3"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -503,7 +503,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "G_EnergyBar",
                   "value": {
                     "operator": "Variables[0] (_LifeTime) || RETURN",
                     "displayLines": "_LifeTime",
@@ -511,7 +510,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_LifeTime"
                     ]
-                  }
+                  },
+                  "variableName": "G_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -528,9 +528,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BPSkillPriority",
+                  "scope": "AITag",
                   "value": 0,
-                  "scope": "AITag"
+                  "variableName": "BPSkillPriority"
                 }
               ]
             },
@@ -589,7 +589,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue3",
                       "value": {
                         "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
                         "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
@@ -598,7 +597,8 @@ const compositeAbilityObject = {
                           "_ElationDamageAddedRatioBase",
                           0.2
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue3"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
@@ -783,8 +783,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BP_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_BP_Flag"
                     }
                   ]
                 }
@@ -863,7 +863,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "G_HongBao_Times",
                           "value": {
                             "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(G_HongBao_Times + 1)",
@@ -873,7 +872,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "G_HongBao_Times"
                             ]
-                          }
+                          },
+                          "variableName": "G_HongBao_Times"
                         }
                       ]
                     },
@@ -941,7 +941,6 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "G_HongBao_Times",
                               "value": {
                                 "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(G_HongBao_Times + 1)",
@@ -951,7 +950,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "G_HongBao_Times"
                                 ]
-                              }
+                              },
+                              "variableName": "G_HongBao_Times"
                             }
                           ]
                         }
@@ -963,8 +963,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BP_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_BP_Flag"
                     }
                   ]
                 }
@@ -975,8 +975,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BP_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BP_Flag"
                 }
               ]
             }
@@ -1198,7 +1198,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EPRatioBase",
                       "value": {
                         "operator": "Variables[0] (0.3) || RETURN",
                         "displayLines": "0.3",
@@ -1206,7 +1205,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.3
                         ]
-                      }
+                      },
+                      "variableName": "_EPRatioBase"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -1219,7 +1219,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentSpeed",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -1228,11 +1227,11 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           "_CurrentSpeedConvert"
                         ]
-                      }
+                      },
+                      "variableName": "_CurrentSpeed"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (120) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - 120)",
@@ -1241,7 +1240,8 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           120
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     },
                     {
                       "name": "IF",
@@ -1261,7 +1261,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_OverCountSpeedValue",
                           "value": {
                             "operator": "Variables[0] (200) || RETURN",
                             "displayLines": "200",
@@ -1269,7 +1268,8 @@ const compositeAbilityObject = {
                             "variables": [
                               200
                             ]
-                          }
+                          },
+                          "variableName": "_OverCountSpeedValue"
                         }
                       ]
                     },
@@ -1291,7 +1291,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_EPRatioAdd",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                             "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -1302,14 +1301,15 @@ const compositeAbilityObject = {
                               1,
                               0.01
                             ]
-                          }
+                          },
+                          "variableName": "_EPRatioAdd"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_EPRatioAdd",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_EPRatioAdd"
                         }
                       ]
                     },
@@ -1497,7 +1497,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "G_Rank01_AddedElationPoint",
           "value": {
             "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
             "displayLines": "(40 - 20)",
@@ -1506,7 +1505,8 @@ const compositeAbilityObject = {
               40,
               20
             ]
-          }
+          },
+          "variableName": "G_Rank01_AddedElationPoint"
         }
       ],
       "references": [
@@ -1986,8 +1986,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "G_EnergyBar",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "G_EnergyBar"
                     }
                   ]
                 },
@@ -2482,8 +2482,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTrigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CanTrigger"
                     }
                   ]
                 }
@@ -2501,8 +2501,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTrigger",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CanTrigger"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -2521,8 +2521,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTrigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CanTrigger"
                     }
                   ]
                 }
@@ -2540,8 +2540,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTrigger",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CanTrigger"
                     },
                     "Modifier Deletes Itself"
                   ]
@@ -2855,7 +2855,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY",
               "value": {
                 "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
                 "displayLines": "((_DeltaY / 1000) + 1.15)",
@@ -2866,7 +2865,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY"
                 ]
-              }
+              },
+              "variableName": "_DeltaY"
             },
             {
               "name": "Define Variable in Range",
@@ -2876,7 +2876,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY_R",
               "value": {
                 "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
                 "displayLines": "((_DeltaY_R / 1000) + 1.3)",
@@ -2887,7 +2886,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY_R"
                 ]
-              }
+              },
+              "variableName": "_DeltaY_R"
             },
             {
               "name": "Define Variable in Range",
@@ -2897,7 +2897,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY_L",
               "value": {
                 "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
                 "displayLines": "((_DeltaY_L / 1000) + 1.1)",
@@ -2908,7 +2907,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY_L"
                 ]
-              }
+              },
+              "variableName": "_DeltaY_L"
             }
           ]
         },
@@ -2983,7 +2983,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY",
               "value": {
                 "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
                 "displayLines": "((_DeltaY / 1000) + 1.15)",
@@ -2994,7 +2993,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY"
                 ]
-              }
+              },
+              "variableName": "_DeltaY"
             },
             {
               "name": "Define Variable in Range",
@@ -3004,7 +3004,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY_R",
               "value": {
                 "operator": "Variables[0] (_DeltaY_R) || Constants[0] (1000) || DIV || Constants[1] (1.3) || ADD || RETURN",
                 "displayLines": "((_DeltaY_R / 1000) + 1.3)",
@@ -3015,7 +3014,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY_R"
                 ]
-              }
+              },
+              "variableName": "_DeltaY_R"
             },
             {
               "name": "Define Variable in Range",
@@ -3025,7 +3025,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DeltaY_L",
               "value": {
                 "operator": "Variables[0] (_DeltaY_L) || Constants[0] (1000) || DIV || Constants[1] (1.1) || ADD || RETURN",
                 "displayLines": "((_DeltaY_L / 1000) + 1.1)",
@@ -3036,7 +3035,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_DeltaY_L"
                 ]
-              }
+              },
+              "variableName": "_DeltaY_L"
             }
           ]
         }

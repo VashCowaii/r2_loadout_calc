@@ -6,14 +6,14 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "SameMonsterNum",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "SameMonsterNum"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill02_AssistCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill02_AssistCount"
     },
     {
       "name": "Find New Target",

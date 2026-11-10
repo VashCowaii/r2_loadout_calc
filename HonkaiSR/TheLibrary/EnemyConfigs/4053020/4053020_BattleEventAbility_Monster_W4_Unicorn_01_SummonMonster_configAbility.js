@@ -38,7 +38,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonCountTemp",
           "value": {
             "operator": "Variables[0] (SummonCount) || RETURN",
             "displayLines": "SummonCount",
@@ -46,7 +45,8 @@ const configAbility = {
             "variables": [
               "SummonCount"
             ]
-          }
+          },
+          "variableName": "SummonCountTemp"
         },
         {
           "name": "Looped Event",
@@ -388,8 +388,8 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 6
+              "value": 6,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -403,8 +403,8 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -476,8 +476,8 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 6
+              "value": 6,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -491,8 +491,8 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Add Events/Bonuses",

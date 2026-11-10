@@ -23,7 +23,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_MaxLayer) || DIV || Variables[2] (MDF_PropertyValue) || MUL || RETURN",
                 "displayLines": "((MDF_Layer / MDF_MaxLayer) * MDF_PropertyValue)",
@@ -33,7 +32,8 @@ const configAbility = {
                   "MDF_MaxLayer",
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -333,8 +333,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_InsertTrigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InsertTrigger"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -474,15 +474,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertTrigger",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_InsertTrigger"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertTrigger",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_InsertTrigger"
                     }
                   ]
                 },

@@ -23,8 +23,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "G_ExSkill21_Allowed",
-              "value": 1
+              "value": 1,
+              "variableName": "G_ExSkill21_Allowed"
             },
             {
               "name": "Use Custom Character Function",
@@ -47,8 +47,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "G_ExSkill21_Allowed",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "G_ExSkill21_Allowed"
                 },
                 {
                   "name": "Update Energy",
@@ -236,8 +236,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "G_ExSkill21_Allowed",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "G_ExSkill21_Allowed"
                     },
                     {
                       "name": "Use Custom Character Function",

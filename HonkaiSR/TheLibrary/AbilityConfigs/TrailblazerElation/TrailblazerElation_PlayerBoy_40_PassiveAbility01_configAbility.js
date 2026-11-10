@@ -567,8 +567,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "player_SkillTree_PointB1_AddedValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "player_SkillTree_PointB1_AddedValue"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -599,7 +599,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "player_SkillTree_PointB1_AddedValue",
                       "value": {
                         "operator": "Variables[0] (0.6) || RETURN",
                         "displayLines": "0.6",
@@ -607,7 +606,8 @@ const configAbility = {
                         "variables": [
                           0.6
                         ]
-                      }
+                      },
+                      "variableName": "player_SkillTree_PointB1_AddedValue"
                     }
                   ]
                 },

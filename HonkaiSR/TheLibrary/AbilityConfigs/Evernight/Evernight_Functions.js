@@ -117,8 +117,8 @@ const configAbility = {
               "afterSummoning": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Evernight_00_DeathRattle_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Evernight_00_DeathRattle_Layer"
                 },
                 {
                   "name": "IF",

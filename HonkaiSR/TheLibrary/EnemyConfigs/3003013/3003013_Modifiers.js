@@ -2411,7 +2411,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
                 "displayLines": "{[PassiveSkillInitiate[0]]}",
@@ -2419,7 +2418,8 @@ const configAbility = {
                 "variables": [
                   "{[PassiveSkillInitiate[0]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             }
           ]
         }
@@ -2508,9 +2508,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "FlopSide",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "FlopSide"
             },
             {
               "name": "Remove Events/Bonuses",

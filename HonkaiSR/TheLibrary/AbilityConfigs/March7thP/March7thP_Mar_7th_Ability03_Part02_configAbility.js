@@ -373,7 +373,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Tree03_ChanceAdd",
           "value": {
             "operator": "Variables[0] (0.15) || RETURN",
             "displayLines": "0.15",
@@ -381,14 +380,15 @@ const configAbility = {
             "variables": [
               0.15
             ]
-          }
+          },
+          "variableName": "_Tree03_ChanceAdd"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Tree03_ChanceAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "_Tree03_ChanceAdd"
         }
       ]
     },
@@ -401,7 +401,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank01_SPAdd",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -409,14 +408,15 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "_Rank01_SPAdd"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank01_SPAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "_Rank01_SPAdd"
         }
       ]
     },
@@ -457,7 +457,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Fix_Rank01_SPAdd",
       "value": {
         "operator": "Variables[0] (_Rank01_SPAdd) || Variables[1] (MDF_FrozenCount) || MUL || RETURN",
         "displayLines": "(_Rank01_SPAdd * MDF_FrozenCount)",
@@ -466,7 +465,8 @@ const configAbility = {
           "_Rank01_SPAdd",
           "MDF_FrozenCount"
         ]
-      }
+      },
+      "variableName": "Fix_Rank01_SPAdd"
     },
     {
       "name": "IF",
@@ -479,8 +479,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Fix_Rank01_SPAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "Fix_Rank01_SPAdd"
         }
       ]
     },
@@ -519,8 +519,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_FrozenCount",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_FrozenCount"
     },
     "Trigger: Ability End"
   ],

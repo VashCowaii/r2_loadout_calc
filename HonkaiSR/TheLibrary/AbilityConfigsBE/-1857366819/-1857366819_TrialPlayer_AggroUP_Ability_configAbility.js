@@ -27,8 +27,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "isBeHit",
-              "value": 1
+              "value": 1,
+              "variableName": "isBeHit"
             }
           ]
         },
@@ -46,13 +46,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "isBeHit",
-              "value": 0
+              "value": 0,
+              "variableName": "isBeHit"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BeHitTime",
-              "value": 0
+              "value": 0,
+              "variableName": "BeHitTime"
             }
           ]
         },
@@ -90,7 +90,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "isBeHit",
                       "value": {
                         "operator": "Variables[0] (BeHitTime) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(BeHitTime + 1)",
@@ -100,12 +99,13 @@ const configAbility = {
                         "variables": [
                           "BeHitTime"
                         ]
-                      }
+                      },
+                      "variableName": "isBeHit"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "isBeHit",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "isBeHit"
                     }
                   ]
                 }

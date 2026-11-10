@@ -31,8 +31,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_BaseAbility_2010_TriggerFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_FantasticStory_BaseAbility_2010_TriggerFlag"
     },
     "Deleted bullshit",
     {
@@ -411,7 +411,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
       "value": {
         "operator": "Constants[0] (0) || RETURN",
         "displayLines": "0",
@@ -419,7 +418,8 @@ const configAbility = {
           0
         ],
         "variables": []
-      }
+      },
+      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
     }
   ],
   "references": [],

@@ -10,8 +10,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_CanStartElationTime",
-      "value": 0
+      "value": 0,
+      "variableName": "ElationTime_CanStartElationTime"
     },
     {
       "name": "Find New Target",
@@ -46,8 +46,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ElationTime_CanStartElationTime",
-          "value": 1
+          "value": 1,
+          "variableName": "ElationTime_CanStartElationTime"
         }
       ]
     },
@@ -94,15 +94,15 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ElationTime_CanStartElationTime",
-              "value": 1
+              "value": 1,
+              "variableName": "ElationTime_CanStartElationTime"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ElationTime_CanStartElationTimeTemp",
-              "value": 1
+              "value": 1,
+              "variableName": "ElationTime_CanStartElationTimeTemp"
             },
             {
               "name": "Reconstruct Modifier",
@@ -126,8 +126,8 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ElationTime_CanStartElationTimeTemp",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ElationTime_CanStartElationTimeTemp"
                 }
               ]
             },
@@ -142,8 +142,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ElationTime_CanStartElationTime",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "ElationTime_CanStartElationTime"
                 }
               ]
             }
@@ -260,7 +260,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ElationTime_IsNoConsume",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (ElationTime_IsNoConsumeTemp) || RETURN",
             "displayLines": "ElationTime_IsNoConsumeTemp",
@@ -269,21 +269,21 @@ const configAbility = {
               "ElationTime_IsNoConsumeTemp"
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "ElationTime_IsNoConsume"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_IsNoConsumeTemp",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "ElationTime_IsNoConsumeTemp"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_OverrideElationPointTemp",
+      "scope": "ContextAbility",
       "value": -1,
-      "scope": "ContextAbility"
+      "variableName": "ElationTime_OverrideElationPointTemp"
     },
     {
       "name": "Define Custom String with Value",

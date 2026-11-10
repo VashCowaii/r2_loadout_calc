@@ -101,8 +101,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "RoleTrialDetailPageShowed",
-              "value": 1
+              "value": 1,
+              "variableName": "RoleTrialDetailPageShowed"
             }
           ]
         }

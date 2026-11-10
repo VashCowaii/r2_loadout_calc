@@ -90,8 +90,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Attacked",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Attacked"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -110,18 +110,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Attacked",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Attacked"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PERF_CNT",
-              "value": 0
+              "value": 0,
+              "variableName": "PERF_CNT"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -170,7 +170,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Count + 1)",
@@ -179,13 +178,13 @@ const configAbility = {
                           "MDF_Count",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_ExtraLoopCount) || ADD || RETURN",
                     "displayLines": "(MDF_Count + MDF_ExtraLoopCount)",
@@ -194,7 +193,8 @@ const configAbility = {
                       "MDF_Count",
                       "MDF_ExtraLoopCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Find New Target",
@@ -415,7 +415,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01ExtraDamage",
+                  "scope": "ContextCaster",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
                     "displayLines": "(MDF_Rank01ExtraDamage + MDF_TempDamage)",
@@ -425,7 +425,7 @@ const configAbility = {
                       "MDF_TempDamage"
                     ]
                   },
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_Rank01ExtraDamage"
                 }
               ]
             }
@@ -461,15 +461,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01ExtraDamage",
+                  "scope": "ContextCaster",
                   "value": 0,
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_Rank01ExtraDamage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TempDamage",
+                  "scope": "ContextCaster",
                   "value": 0,
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_TempDamage"
                 }
               ]
             }
@@ -505,7 +505,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01ExtraDamage",
+                  "scope": "ContextCaster",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank01ExtraDamage) || Variables[1] (0.24) || MUL || RETURN",
                     "displayLines": "(MDF_Rank01ExtraDamage * 0.24)",
@@ -515,7 +515,7 @@ const configAbility = {
                       0.24
                     ]
                   },
-                  "scope": "ContextCaster"
+                  "variableName": "MDF_Rank01ExtraDamage"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -601,18 +601,18 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalBaseHP",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TotalBaseHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxHP",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_MaxHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HPConvert",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_HPConvert"
             },
             {
               "name": "Find New Target",
@@ -649,7 +649,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalBaseHP",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
                     "displayLines": "((MDF_TotalBaseHP + MDF_MaxHP) - MDF_HPConvert)",
@@ -659,13 +658,13 @@ const configAbility = {
                       "MDF_MaxHP",
                       "MDF_HPConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalBaseHP"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_TotalBaseHP) || Variables[1] (0.09) || MUL || RETURN",
                 "displayLines": "(MDF_TotalBaseHP * 0.09)",
@@ -674,7 +673,8 @@ const configAbility = {
                   "MDF_TotalBaseHP",
                   0.09
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -742,18 +742,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalHPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TotalHPChange"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxHP",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_MaxHP"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HPConvert",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_HPConvert"
             },
             {
               "name": "Find New Target",
@@ -790,7 +790,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalHPChange",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
                     "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
@@ -800,13 +799,13 @@ const configAbility = {
                       "MDF_MaxHP",
                       "MDF_HPConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalHPChange"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
                 "displayLines": "(MDF_TotalHPChange * 0.09)",
@@ -815,7 +814,8 @@ const configAbility = {
                   "MDF_TotalHPChange",
                   0.09
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Define Modifier-Specific Variable",
@@ -849,18 +849,18 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalHPChange",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalHPChange"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_MaxHP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPConvert",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_HPConvert"
                 },
                 {
                   "name": "Find New Target",
@@ -897,7 +897,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalHPChange",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
                         "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
@@ -907,13 +906,13 @@ const configAbility = {
                           "MDF_MaxHP",
                           "MDF_HPConvert"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalHPChange"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
                     "displayLines": "(MDF_TotalHPChange * 0.09)",
@@ -922,7 +921,8 @@ const configAbility = {
                       "MDF_TotalHPChange",
                       0.09
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
@@ -956,18 +956,18 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalHPChange",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalHPChange"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_MaxHP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPConvert",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_HPConvert"
                 },
                 {
                   "name": "Find New Target",
@@ -1004,7 +1004,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalHPChange",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (MDF_MaxHP) || ADD || Variables[2] (MDF_HPConvert) || SUB || RETURN",
                         "displayLines": "((MDF_TotalHPChange + MDF_MaxHP) - MDF_HPConvert)",
@@ -1014,13 +1013,13 @@ const configAbility = {
                           "MDF_MaxHP",
                           "MDF_HPConvert"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalHPChange"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalHPChange) || Variables[1] (0.09) || MUL || RETURN",
                     "displayLines": "(MDF_TotalHPChange * 0.09)",
@@ -1029,7 +1028,8 @@ const configAbility = {
                       "MDF_TotalHPChange",
                       0.09
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
@@ -1305,7 +1305,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (_Layer) || Variables[1] (0.72) || MUL || RETURN",
                 "displayLines": "(_Layer * 0.72)",
@@ -1314,7 +1313,8 @@ const configAbility = {
                   "_Layer",
                   0.72
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",

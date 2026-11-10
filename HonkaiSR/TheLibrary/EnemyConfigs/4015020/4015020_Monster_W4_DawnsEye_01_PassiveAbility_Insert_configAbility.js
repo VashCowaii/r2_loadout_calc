@@ -87,8 +87,8 @@ const configAbility = {
         "name": "Add Target by Unique Identifier",
         "identifier": "HealBattleEvent"
       },
-      "variableName": "W4_DawnsEye_01_HPRatio",
-      "value": 1
+      "value": 1,
+      "variableName": "W4_DawnsEye_01_HPRatio"
     },
     {
       "name": "IF",
@@ -493,9 +493,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ChangePhase_InsertController",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "ChangePhase_InsertController"
     }
   ],
   "targetObjectData": {

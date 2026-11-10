@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_have_gain_sp",
-      "value": 0
+      "value": 0,
+      "variableName": "_have_gain_sp"
     },
     {
       "name": "IF",

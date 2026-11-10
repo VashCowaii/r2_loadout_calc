@@ -15,8 +15,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "IsNeedFade",
-      "value": 1
+      "value": 1,
+      "variableName": "IsNeedFade"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -80,7 +80,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
       "value": {
         "operator": "Variables[0] (_TempAIFlag) || RETURN",
         "displayLines": "_TempAIFlag",
@@ -88,7 +87,8 @@ const configAbility = {
         "variables": [
           "_TempAIFlag"
         ]
-      }
+      },
+      "variableName": "AIFlag"
     },
     {
       "name": "Add Events/Bonuses",
@@ -108,8 +108,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "IsNeedFade",
-      "value": 0
+      "value": 0,
+      "variableName": "IsNeedFade"
     },
     "Trigger: Ability End"
   ],

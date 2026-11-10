@@ -27,7 +27,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Multipler",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Variables[2] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue / 10))",
@@ -37,11 +36,11 @@ const configAbility = {
                   "MDF_PropertyValue",
                   10
                 ]
-              }
+              },
+              "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.007999999) || MUL || RETURN",
                 "displayLines": "(MDF_Multipler * 0.007999999)",
@@ -50,7 +49,8 @@ const configAbility = {
                   "MDF_Multipler",
                   0.007999999
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue2"
             },
             {
               "name": "Stack Target Stat Value",
@@ -112,7 +112,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentAttack2",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentAttack) || Variables[1] (MDF_CurrentAttackConvert) || SUB || RETURN",
                 "displayLines": "(MDF_CurrentAttack - MDF_CurrentAttackConvert)",
@@ -121,7 +120,8 @@ const configAbility = {
                   "MDF_CurrentAttack",
                   "MDF_CurrentAttackConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentAttack2"
             },
             {
               "name": "IF",

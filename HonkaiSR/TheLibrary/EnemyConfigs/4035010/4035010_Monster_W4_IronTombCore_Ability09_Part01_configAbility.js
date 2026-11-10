@@ -47,8 +47,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_WorldErosion",
-          "value": 0
+          "value": 0,
+          "variableName": "_WorldErosion"
         }
       ]
     }

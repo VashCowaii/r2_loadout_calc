@@ -371,8 +371,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DialogFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DialogFlag"
             }
           ]
         },
@@ -428,8 +428,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DialogFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_DialogFlag"
                 }
               ],
               "failed": [
@@ -527,8 +527,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DialogFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_DialogFlag"
                         }
                       ],
                       "failed": [
@@ -576,8 +576,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DialogFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_DialogFlag"
             }
           ]
         }

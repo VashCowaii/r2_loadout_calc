@@ -11,7 +11,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Summoner}}"
       },
-      "variableName": "PartBreak_StanceValue",
       "value": {
         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
         "displayLines": "{[SkillP01[0]]}",
@@ -19,7 +18,8 @@ const configAbility = {
         "variables": [
           "{[SkillP01[0]]}"
         ]
-      }
+      },
+      "variableName": "PartBreak_StanceValue"
     },
     {
       "name": "Add Events/Bonuses",

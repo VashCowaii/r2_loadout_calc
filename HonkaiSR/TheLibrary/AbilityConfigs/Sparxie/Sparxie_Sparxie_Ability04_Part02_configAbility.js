@@ -59,7 +59,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_ExtraDamage",
           "value": {
             "operator": "Variables[0] (FLOOR) || Variables[1] (_CurrentEP) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))",
@@ -69,7 +68,8 @@ const configAbility = {
               "_CurrentEP",
               1
             ]
-          }
+          },
+          "variableName": "_Rank06_ExtraDamage"
         },
         {
           "name": "IF",
@@ -90,7 +90,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_ExtraDamage",
               "value": {
                 "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
                 "displayLines": "(40 - 20)",
@@ -99,7 +98,8 @@ const configAbility = {
                   40,
                   20
                 ]
-              }
+              },
+              "variableName": "_Rank06_ExtraDamage"
             }
           ]
         }

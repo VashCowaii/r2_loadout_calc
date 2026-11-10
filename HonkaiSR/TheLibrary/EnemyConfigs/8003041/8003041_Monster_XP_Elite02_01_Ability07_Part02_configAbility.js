@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "AccelerateLayer",
       "value": {
         "operator": "Variables[0] (EnergyLayer) || RETURN",
         "displayLines": "EnergyLayer",
@@ -14,7 +13,8 @@ const configAbility = {
         "variables": [
           "EnergyLayer"
         ]
-      }
+      },
+      "variableName": "AccelerateLayer"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -26,8 +26,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyLayer",
-      "value": -1
+      "value": -1,
+      "variableName": "EnergyLayer"
     },
     {
       "name": "IF",
@@ -146,7 +146,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -156,7 +155,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -351,7 +351,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -361,7 +360,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -576,7 +576,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -586,7 +585,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -620,7 +620,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -630,7 +629,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -825,7 +825,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -835,7 +834,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -1050,7 +1050,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -1060,7 +1059,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -1094,7 +1094,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -1104,7 +1103,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -1299,7 +1299,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -1309,7 +1308,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -1524,7 +1524,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -1534,7 +1533,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -1568,7 +1568,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -1578,7 +1577,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -1773,7 +1773,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -1783,7 +1782,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -1998,7 +1998,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -2008,7 +2007,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -2042,7 +2042,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -2052,7 +2051,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -2247,7 +2247,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -2257,7 +2256,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -2472,7 +2472,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -2482,7 +2481,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -2516,7 +2516,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -2526,7 +2525,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -2721,7 +2721,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -2731,7 +2730,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -2946,7 +2946,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -2956,7 +2955,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -2990,7 +2990,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -3000,7 +2999,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -3195,7 +3195,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -3205,7 +3204,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -3420,7 +3420,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -3430,7 +3429,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -3464,7 +3464,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -3474,7 +3473,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -3669,7 +3669,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -3679,7 +3678,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -3894,7 +3894,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -3904,7 +3903,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -3938,7 +3938,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AccelerateLayer",
               "value": {
                 "operator": "Variables[0] (AccelerateLayer) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(AccelerateLayer - 1)",
@@ -3948,7 +3947,8 @@ const configAbility = {
                 "variables": [
                   "AccelerateLayer"
                 ]
-              }
+              },
+              "variableName": "AccelerateLayer"
             }
           ]
         },
@@ -4143,7 +4143,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnergyLayer",
                           "value": {
                             "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnergyLayer - 1)",
@@ -4153,7 +4152,8 @@ const configAbility = {
                             "variables": [
                               "EnergyLayer"
                             ]
-                          }
+                          },
+                          "variableName": "EnergyLayer"
                         }
                       ]
                     }
@@ -4368,7 +4368,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnergyLayer",
                               "value": {
                                 "operator": "Variables[0] (EnergyLayer) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(EnergyLayer - 1)",
@@ -4378,7 +4377,8 @@ const configAbility = {
                                 "variables": [
                                   "EnergyLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "EnergyLayer"
                             }
                           ]
                         }
@@ -4402,8 +4402,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyLayer",
-      "value": -1
+      "value": -1,
+      "variableName": "EnergyLayer"
     },
     "Trigger: Attack End",
     "Trigger: Ability End"

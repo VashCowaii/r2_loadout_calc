@@ -52,7 +52,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_StackCount",
               "value": {
                 "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_StackCount + 1)",
@@ -62,7 +61,8 @@ const configAbility = {
                 "variables": [
                   "MDF_StackCount"
                 ]
-              }
+              },
+              "variableName": "MDF_StackCount"
             }
           ]
         },
@@ -120,8 +120,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Left",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Left"
                     }
                   ],
                   "failed": [
@@ -148,8 +148,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Right",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Right"
                     }
                   ],
                   "failed": [
@@ -331,18 +331,18 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_StackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_StackCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Left",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_Left"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Right",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_Right"
         }
       ]
     },

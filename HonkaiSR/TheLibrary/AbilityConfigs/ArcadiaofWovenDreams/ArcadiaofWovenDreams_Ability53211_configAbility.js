@@ -170,13 +170,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_TeamCount",
-          "value": 0
+          "value": 0,
+          "variableName": "_TeamCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageAddCount",
-          "value": 0
+          "value": 0,
+          "variableName": "_DamageAddCount"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -189,7 +189,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_DamageAddCount",
           "value": {
             "operator": "Variables[0] (_TeamCount) || Constants[0] (4) || SUB || RETURN",
             "displayLines": "(_TeamCount - 4)",
@@ -199,7 +198,8 @@ const configAbility = {
             "variables": [
               "_TeamCount"
             ]
-          }
+          },
+          "variableName": "_DamageAddCount"
         },
         {
           "name": "IF",
@@ -212,7 +212,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageAddCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (_DamageAddCount) || Variables[2] (4) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 4)",
@@ -222,7 +221,8 @@ const configAbility = {
                   "_DamageAddCount",
                   4
                 ]
-              }
+              },
+              "variableName": "_DamageAddCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -302,7 +302,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageAddCount",
               "value": {
                 "operator": "Variables[0] (ABS) || Variables[1] (_DamageAddCount) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_DamageAddCount)",
@@ -311,11 +310,11 @@ const configAbility = {
                   "ABS",
                   "_DamageAddCount"
                 ]
-              }
+              },
+              "variableName": "_DamageAddCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageAddCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (_DamageAddCount) || Variables[2] (3) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_DamageAddCount, 3)",
@@ -325,7 +324,8 @@ const configAbility = {
                   "_DamageAddCount",
                   3
                 ]
-              }
+              },
+              "variableName": "_DamageAddCount"
             },
             {
               "name": "Add Events/Bonuses",

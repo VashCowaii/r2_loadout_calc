@@ -418,8 +418,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AttackType"
                     }
                   ]
                 }
@@ -541,7 +541,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AddLayer",
                   "value": {
                     "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_AddLayer + 1)",
@@ -551,7 +550,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_AddLayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AddLayer"
                 }
               ]
             },
@@ -658,7 +658,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AddLayer",
                       "value": {
                         "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_AddLayer + 1)",
@@ -668,7 +667,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_AddLayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AddLayer"
                     }
                   ]
                 }
@@ -810,8 +810,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AttackType"
                     }
                   ]
                 }
@@ -822,8 +822,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OneAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_OneAttack"
                 },
                 {
                   "name": "IF",
@@ -836,8 +836,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
@@ -950,8 +950,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AlreadyAdd",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AlreadyAdd"
                     }
                   ]
                 }
@@ -1099,8 +1099,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OriginLayer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OriginLayer"
                 },
                 {
                   "name": "IF",
@@ -1148,15 +1148,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AttackType"
                     }
                   ]
                 }
@@ -1173,8 +1173,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OneAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OneAttack"
                 }
               ]
             },
@@ -1192,8 +1192,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
@@ -1309,8 +1309,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AlreadyAdd",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AlreadyAdd"
                     }
                   ]
                 },
@@ -1483,8 +1483,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AttackType"
                     }
                   ]
                 }
@@ -1495,8 +1495,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OneAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_OneAttack"
                 },
                 {
                   "name": "IF",
@@ -1509,8 +1509,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
@@ -1623,8 +1623,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AlreadyAdd",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AlreadyAdd"
                     }
                   ]
                 }
@@ -1666,8 +1666,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OriginLayer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OriginLayer"
                 },
                 {
                   "name": "IF",
@@ -1715,15 +1715,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AttackType"
                     }
                   ]
                 }
@@ -1740,8 +1740,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OneAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OneAttack"
                 }
               ]
             },
@@ -1759,8 +1759,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackType",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackType"
                     }
                   ],
                   "failed": [
@@ -1876,8 +1876,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AlreadyAdd",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AlreadyAdd"
                     }
                   ]
                 },
@@ -1952,8 +1952,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -1997,8 +1997,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2046,8 +2046,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2078,8 +2078,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2148,8 +2148,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2193,8 +2193,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2242,8 +2242,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2274,8 +2274,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2326,8 +2326,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2371,8 +2371,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2420,8 +2420,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2452,8 +2452,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SetValue",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SetValue"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -2517,9 +2517,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EndBreakFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "EndBreakFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2555,9 +2555,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EndBreakFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "EndBreakFlag"
                 }
               ]
             }

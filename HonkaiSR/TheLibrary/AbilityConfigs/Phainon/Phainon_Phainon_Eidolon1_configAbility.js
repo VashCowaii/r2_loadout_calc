@@ -105,7 +105,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CDF_SpeedConvertRatio",
                       "value": {
                         "operator": "Variables[0] (0.66) || Variables[1] (MDF_KillCount) || Variables[2] (0.015) || MUL || ADD || RETURN",
                         "displayLines": "(0.66 + (MDF_KillCount * 0.015))",
@@ -115,7 +114,8 @@ const configAbility = {
                           "MDF_KillCount",
                           0.015
                         ]
-                      }
+                      },
+                      "variableName": "CDF_SpeedConvertRatio"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",

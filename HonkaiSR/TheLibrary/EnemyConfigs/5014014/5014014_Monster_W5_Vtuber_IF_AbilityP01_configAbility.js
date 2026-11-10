@@ -237,7 +237,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_LoseHPRatio_ScreenBonus",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill01[6]]}) || RETURN",
         "displayLines": "{[PassiveSkill01[6]]}",
@@ -245,7 +244,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill01[6]]}"
         ]
-      }
+      },
+      "variableName": "ADF_LoseHPRatio_ScreenBonus"
     },
     {
       "name": "IF",

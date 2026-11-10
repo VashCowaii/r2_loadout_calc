@@ -42,8 +42,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_WorldErosionIndex",
-          "value": 2
+          "value": 2,
+          "variableName": "_WorldErosionIndex"
         },
         {
           "name": "Add Battle Event",
@@ -77,8 +77,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_IsWeek",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsWeek"
             }
           ]
         }
@@ -109,8 +109,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_WorldErosionIndex",
-          "value": 2
+          "value": 2,
+          "variableName": "_WorldErosionIndex"
         },
         {
           "name": "Add Battle Event",
@@ -144,8 +144,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "_IsWeek",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsWeek"
             }
           ]
         }
@@ -199,13 +199,13 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Trigger1",
-          "value": 1
+          "value": 1,
+          "variableName": "_Trigger1"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Trigger2",
-          "value": 1
+          "value": 1,
+          "variableName": "_Trigger2"
         },
         {
           "name": "Set IronTomb Progress",
@@ -223,7 +223,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_WorldErosion",
           "value": {
             "operator": "Variables[0] ({[PassiveSkill01[0]]}) || Constants[0] (100) || MUL || RETURN",
             "displayLines": "({[PassiveSkill01[0]]} * 100)",
@@ -233,7 +232,8 @@ const configAbility = {
             "variables": [
               "{[PassiveSkill01[0]]}"
             ]
-          }
+          },
+          "variableName": "_WorldErosion"
         }
       ]
     },

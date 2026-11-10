@@ -264,8 +264,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceHead_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhanceHead_Flag"
                     }
                   ],
                   "failed": [
@@ -284,8 +284,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceLimb_Flag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "EnhanceLimb_Flag"
                         }
                       ],
                       "failed": [
@@ -304,8 +304,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "EnhanceTail_Flag",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "EnhanceTail_Flag"
                             }
                           ]
                         }
@@ -333,8 +333,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LostConnect",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LostConnect"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -379,8 +379,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AlreadyConnect",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_AlreadyConnect"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -820,8 +820,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isReset",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_isReset"
                     }
                   ]
                 }
@@ -915,8 +915,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_WaveStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_WaveStart"
                     }
                   ]
                 },
@@ -949,8 +949,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DieCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DieCount"
                 }
               ]
             },
@@ -1008,8 +1008,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "_DieCount"
                     }
                   ]
                 },
@@ -1049,8 +1049,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "_DieCount"
                     }
                   ]
                 },
@@ -1090,8 +1090,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DieCount",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_DieCount"
                     }
                   ]
                 }
@@ -1398,8 +1398,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Feixiao: Self}}"
           },
-          "variableName": "BattleEventPartFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "BattleEventPartFlag"
         },
         {
           "name": "IF",

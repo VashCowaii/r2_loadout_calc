@@ -41,7 +41,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_AddCount",
           "value": {
             "operator": "Constants[0] (1) || Variables[0] (4) || ADD || RETURN",
             "displayLines": "(1 + 4)",
@@ -51,14 +50,15 @@ const configAbility = {
             "variables": [
               4
             ]
-          }
+          },
+          "variableName": "ADF_AddCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_AddCount",
-          "value": 1
+          "value": 1,
+          "variableName": "ADF_AddCount"
         }
       ]
     },
@@ -503,8 +503,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_haveNotGainCountFromEnemyAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_haveNotGainCountFromEnemyAction"
                 }
               ]
             },
@@ -557,8 +557,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_haveNotGainCountFromEnemyAction",
-              "value": 0
+              "value": 0,
+              "variableName": "_haveNotGainCountFromEnemyAction"
             },
             {
               "name": "Use Custom Character Function",
@@ -582,8 +582,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_haveNotGainCountFromEnemyAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_haveNotGainCountFromEnemyAction"
                 },
                 {
                   "name": "IF",

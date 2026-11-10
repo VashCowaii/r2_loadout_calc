@@ -120,8 +120,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_insertCheck_",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_insertCheck_"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -844,8 +844,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "IsInserAbilityTrigger",
-          "value": 1
+          "value": 1,
+          "variableName": "IsInserAbilityTrigger"
         },
         {
           "name": "Find New Target",
@@ -1020,8 +1020,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsInserAbilityTrigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "IsInserAbilityTrigger"
                 }
               ]
             }
@@ -1047,8 +1047,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "IsInserAbilityTrigger",
-          "value": 0
+          "value": 0,
+          "variableName": "IsInserAbilityTrigger"
         },
         {
           "name": "IF",
@@ -1119,8 +1119,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_insertCheck_",
-          "value": 0
+          "value": 0,
+          "variableName": "_insertCheck_"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -2034,8 +2034,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "IsInserAbilityTrigger",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "IsInserAbilityTrigger"
                     },
                     {
                       "name": "IF",
@@ -2219,8 +2219,8 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         {
           "name": "Define Custom Variable",
-          "variableName": "BuffNumber",
-          "value": 0
+          "value": 0,
+          "variableName": "BuffNumber"
         },
         "Trigger: Ability End"
       ],
@@ -2473,8 +2473,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "IsInserAbilityTrigger",
-              "value": 0
+              "value": 0,
+              "variableName": "IsInserAbilityTrigger"
             }
           ]
         }

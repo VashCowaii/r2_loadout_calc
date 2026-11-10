@@ -465,7 +465,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoPhysical",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoPhysical) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoPhysical - 1), 0)",
@@ -477,11 +476,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoPhysical"
                 ]
-              }
+              },
+              "variableName": "TDF_NoPhysical"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoWind",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoWind) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoWind - 1), 0)",
@@ -493,11 +492,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoWind"
                 ]
-              }
+              },
+              "variableName": "TDF_NoWind"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoFire",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoFire) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoFire - 1), 0)",
@@ -509,11 +508,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoFire"
                 ]
-              }
+              },
+              "variableName": "TDF_NoFire"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoThunder",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoThunder) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoThunder - 1), 0)",
@@ -525,11 +524,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoThunder"
                 ]
-              }
+              },
+              "variableName": "TDF_NoThunder"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoIce",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoIce) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoIce - 1), 0)",
@@ -541,11 +540,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoIce"
                 ]
-              }
+              },
+              "variableName": "TDF_NoIce"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoQuantum",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoQuantum) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoQuantum - 1), 0)",
@@ -557,11 +556,11 @@ const configAbility = {
                   "MAX",
                   "TDF_NoQuantum"
                 ]
-              }
+              },
+              "variableName": "TDF_NoQuantum"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TDF_NoImaginary",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (TDF_NoImaginary) || Constants[0] (1) || SUB || Constants[1] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((TDF_NoImaginary - 1), 0)",
@@ -573,7 +572,8 @@ const configAbility = {
                   "MAX",
                   "TDF_NoImaginary"
                 ]
-              }
+              },
+              "variableName": "TDF_NoImaginary"
             }
           ]
         },

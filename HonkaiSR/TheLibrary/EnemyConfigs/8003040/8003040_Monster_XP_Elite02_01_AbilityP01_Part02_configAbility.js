@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyLayer",
-      "value": 7
+      "value": 7,
+      "variableName": "EnergyLayer"
     },
     {
       "name": "Add Events/Bonuses",

@@ -95,9 +95,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "DormancyFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "DormancyFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -126,9 +126,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "BreakFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "BreakFlag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -390,9 +390,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "DormancyFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "DormancyFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -424,9 +424,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "BreakFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "BreakFlag"
             },
             {
               "name": "Add Events/Bonuses",

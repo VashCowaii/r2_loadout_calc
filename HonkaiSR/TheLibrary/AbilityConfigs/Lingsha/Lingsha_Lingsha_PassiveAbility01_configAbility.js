@@ -119,7 +119,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Lingsha_Rank06_StanceDamage",
           "value": {
             "operator": "Variables[0] (5) || Constants[0] (3) || MUL || RETURN",
             "displayLines": "(5 * 3)",
@@ -129,7 +128,8 @@ const configAbility = {
             "variables": [
               5
             ]
-          }
+          },
+          "variableName": "Lingsha_Rank06_StanceDamage"
         }
       ]
     }

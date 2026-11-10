@@ -34,7 +34,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxEnhance",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -42,7 +41,8 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "MaxEnhance"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

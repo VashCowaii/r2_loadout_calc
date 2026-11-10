@@ -496,7 +496,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                 "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -505,7 +504,8 @@ const configAbility = {
                   "MDF_Conv",
                   "MDF_CritBase"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -644,7 +644,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Conv",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_7830) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
                     "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)",
@@ -653,11 +652,11 @@ const configAbility = {
                       "UnusedUnderThisBase_7830",
                       "S02_ExtraRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Conv"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_NEW_VAL",
                   "value": {
                     "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                     "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -666,7 +665,8 @@ const configAbility = {
                       "MDF_Conv",
                       "MDF_CritBase"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_NEW_VAL"
                 },
                 {
                   "name": "Find New Target",
@@ -751,7 +751,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TMP_NEW_VAL",
                   "value": {
                     "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                     "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -760,7 +759,8 @@ const configAbility = {
                       "MDF_Conv",
                       "MDF_CritBase"
                     ]
-                  }
+                  },
+                  "variableName": "_TMP_NEW_VAL"
                 },
                 {
                   "name": "Find New Target",
@@ -985,7 +985,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue_1) || Variables[1] (MDF_PropertyValue_2) || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)",
@@ -994,13 +993,13 @@ const configAbility = {
                       "MDF_PropertyValue_1",
                       "MDF_PropertyValue_2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue_1) || RETURN",
                     "displayLines": "MDF_PropertyValue_1",
@@ -1008,7 +1007,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PropertyValue_1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             },
@@ -1078,8 +1078,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isHeal"
             }
           ]
         },
@@ -1098,15 +1098,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isCharmAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_isCharmAttack"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_isAttack"
                 }
               ]
             }
@@ -1117,13 +1117,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isCharmAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isCharmAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isAttack"
             }
           ]
         },
@@ -1132,13 +1132,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_AttackStart",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_AttackStart"
             }
           ]
         },
@@ -1147,8 +1147,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isHeal"
             }
           ]
         },
@@ -1176,20 +1176,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isAttack"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_AttackStart"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_isAttack"
                 }
               ],
               "failed": [
@@ -1218,8 +1218,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Check_isAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Check_isAttack"
                         }
                       ]
                     }
@@ -1252,8 +1252,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             }
@@ -1264,8 +1264,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isHeal",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isHeal"
             }
           ]
         },
@@ -1301,8 +1301,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Check_AttackStart",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Check_AttackStart"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -1376,8 +1376,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_AttackStart",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_Check_AttackStart"
             }
           ]
         },
@@ -1386,13 +1386,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Check_AttackStart",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Check_AttackStart"
             }
           ]
         }
@@ -2128,7 +2128,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Show",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue_2) || Variables[2] (_Evernight_00_DeathRattle_Layer) || MUL || ADD || RETURN",
                 "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))",
@@ -2138,7 +2137,8 @@ const configAbility = {
                   "MDF_PropertyValue_2",
                   "_Evernight_00_DeathRattle_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_Show"
             },
             {
               "name": "Stack Target Stat Value",

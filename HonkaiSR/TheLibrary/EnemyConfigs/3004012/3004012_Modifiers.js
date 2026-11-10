@@ -133,8 +133,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag1",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag1"
                     }
                   ]
                 },
@@ -151,8 +151,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag2",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag2"
                     }
                   ]
                 },
@@ -169,8 +169,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag3",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_FigureBoss_00_BattleScore1_Flag3"
                     }
                   ]
                 },
@@ -476,9 +476,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 }
               ],
               "failed": [
@@ -488,9 +488,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 5,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 }
               ]
             }

@@ -121,8 +121,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Weather",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Weather"
                 }
               ]
             }
@@ -144,8 +144,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Weather",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Weather"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -153,8 +153,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Trigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Trigger"
                 }
               ]
             }
@@ -239,8 +239,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Trigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Trigger"
                     }
                   ]
                 }
@@ -356,8 +356,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "Trigger",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Trigger"
                         }
                       ]
                     }
@@ -547,8 +547,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Weather",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Weather"
                     },
                     {
                       "name": "Adjust Team Punchline Value",
@@ -666,8 +666,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
-          "value": 1
+          "value": 1,
+          "variableName": "Deathrattle"
         },
         "Deleted bullshit",
         {
@@ -767,8 +767,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
-          "value": 1
+          "value": 1,
+          "variableName": "Deathrattle"
         },
         "Deleted bullshit",
         {

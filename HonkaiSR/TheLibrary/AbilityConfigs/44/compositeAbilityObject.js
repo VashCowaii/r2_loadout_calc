@@ -293,7 +293,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill_PercentageMuti_620301",
                       "value": {
                         "operator": "Variables[0] (ADF_7) || RETURN",
                         "displayLines": "ADF_7",
@@ -301,7 +300,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "ADF_7"
                         ]
-                      }
+                      },
+                      "variableName": "Skill_PercentageMuti_620301"
                     }
                   ]
                 },
@@ -316,7 +316,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "IceResistanceAdd_620301",
                       "value": {
                         "operator": "Variables[0] (ADF_8) || RETURN",
                         "displayLines": "ADF_8",
@@ -324,7 +323,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "ADF_8"
                         ]
-                      }
+                      },
+                      "variableName": "IceResistanceAdd_620301"
                     }
                   ]
                 }

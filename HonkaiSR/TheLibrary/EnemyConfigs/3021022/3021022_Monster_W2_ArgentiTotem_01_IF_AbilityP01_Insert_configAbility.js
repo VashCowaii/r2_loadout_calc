@@ -76,9 +76,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Monster_IF_InsertCameraFlag02",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "Monster_IF_InsertCameraFlag02"
         },
         {
           "name": "Define Custom Variable",
@@ -86,9 +86,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Monster_IF_InsertCameraFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "Monster_IF_InsertCameraFlag"
         }
       ]
     }

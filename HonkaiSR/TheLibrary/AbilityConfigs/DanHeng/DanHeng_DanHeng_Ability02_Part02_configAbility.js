@@ -18,7 +18,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_RankSpeedDown",
           "value": {
             "operator": "Variables[0] (0.08) || RETURN",
             "displayLines": "0.08",
@@ -26,14 +25,15 @@ const configAbility = {
             "variables": [
               0.08
             ]
-          }
+          },
+          "variableName": "_RankSpeedDown"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_RankSpeedDown",
-          "value": 0
+          "value": 0,
+          "variableName": "_RankSpeedDown"
         }
       ]
     },

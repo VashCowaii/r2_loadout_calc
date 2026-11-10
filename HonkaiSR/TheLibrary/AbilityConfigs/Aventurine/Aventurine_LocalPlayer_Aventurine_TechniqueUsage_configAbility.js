@@ -25,9 +25,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_random",
+          "scope": "ContextAbility",
           "value": 100,
-          "scope": "ContextAbility"
+          "variableName": "_random"
         }
       ],
       "failed": [
@@ -43,7 +43,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_sum_probability",
       "value": {
         "operator": "Variables[0] (UNKNOWN_ODDS_1) || Variables[1] (UNKNOWN_ODDS_2) || ADD || Variables[2] (UNKNOWN_ODDS_3) || ADD || RETURN",
         "displayLines": "((UNKNOWN_ODDS_1 + UNKNOWN_ODDS_2) + UNKNOWN_ODDS_3)",
@@ -53,7 +52,8 @@ const configAbility = {
           "UNKNOWN_ODDS_2",
           "UNKNOWN_ODDS_3"
         ]
-      }
+      },
+      "variableName": "_sum_probability"
     },
     {
       "name": "IF",
@@ -77,8 +77,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_result",
-          "value": 0
+          "value": 0,
+          "variableName": "_result"
         }
       ],
       "failed": [
@@ -104,15 +104,15 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_result",
-              "value": 2
+              "value": 2,
+              "variableName": "_result"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_result",
-              "value": 1
+              "value": 1,
+              "variableName": "_result"
             },
             {
               "name": "Define Variable with Random Value",
@@ -159,15 +159,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_no_ssr_times",
+          "scope": "ContextCaster",
           "value": 0,
-          "scope": "ContextCaster"
+          "variableName": "_no_ssr_times"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_no_ssr_times",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_no_ssr_times + 1)",
@@ -178,7 +178,7 @@ const configAbility = {
               "_no_ssr_times"
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "_no_ssr_times"
         }
       ]
     },
@@ -345,9 +345,9 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_no_ssr_times",
+      "scope": "ContextCaster",
       "value": 0,
-      "scope": "ContextCaster"
+      "variableName": "_no_ssr_times"
     }
   ],
   "onAbortReg": [],

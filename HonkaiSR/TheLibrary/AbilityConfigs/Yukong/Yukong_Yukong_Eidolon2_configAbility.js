@@ -155,7 +155,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank02Amount",
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -163,7 +162,8 @@ const configAbility = {
                 "variables": [
                   5
                 ]
-              }
+              },
+              "variableName": "MDF_Rank02Amount"
             },
             {
               "name": "Add Events/Bonuses",

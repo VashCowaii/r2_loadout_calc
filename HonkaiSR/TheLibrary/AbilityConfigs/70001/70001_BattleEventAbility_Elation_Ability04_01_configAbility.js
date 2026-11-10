@@ -52,7 +52,7 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_OverrideElationPointForEcho",
+      "scope": "ContextCaster",
       "value": {
         "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
         "displayLines": "ElationTime_OverrideElationPoint",
@@ -61,13 +61,13 @@ const configAbility = {
           "ElationTime_OverrideElationPoint"
         ]
       },
-      "scope": "ContextCaster"
+      "variableName": "ElationTime_OverrideElationPointForEcho"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_OverrideElationPoint",
+      "scope": "ContextAbility",
       "value": -1,
-      "scope": "ContextAbility"
+      "variableName": "ElationTime_OverrideElationPoint"
     },
     {
       "name": "Define Custom String with Value",
@@ -77,7 +77,7 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_IsNoConsume",
+      "scope": "ContextCaster",
       "value": {
         "operator": "Variables[0] (ElationTime_IsNoConsume) || RETURN",
         "displayLines": "ElationTime_IsNoConsume",
@@ -86,13 +86,13 @@ const configAbility = {
           "ElationTime_IsNoConsume"
         ]
       },
-      "scope": "ContextCaster"
+      "variableName": "ElationTime_IsNoConsume"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ElationTime_IsNoConsumeTemp2",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "ElationTime_IsNoConsumeTemp2"
     },
     {
       "name": "Lock Battle Actions"

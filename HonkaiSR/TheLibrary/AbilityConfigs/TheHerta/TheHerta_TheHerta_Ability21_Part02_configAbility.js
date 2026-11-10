@@ -38,8 +38,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S03_Mark_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "S03_Mark_Count"
     },
     {
       "name": "IF",
@@ -125,7 +125,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "S03_Mark_Count",
                   "value": {
                     "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (_ADJ_TMP_COUNT) || Variables[2] (0.5) || MUL || ADD || RETURN",
                     "displayLines": "(S03_Mark_Count + (_ADJ_TMP_COUNT * 0.5))",
@@ -135,7 +134,8 @@ const configAbility = {
                       "_ADJ_TMP_COUNT",
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "S03_Mark_Count"
                 }
               ]
             }
@@ -192,7 +192,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "S03_Mark_Count",
               "value": {
                 "operator": "Variables[0] (S03_Mark_Count) || Constants[0] (2) || MUL || RETURN",
                 "displayLines": "(S03_Mark_Count * 2)",
@@ -202,7 +201,8 @@ const configAbility = {
                 "variables": [
                   "S03_Mark_Count"
                 ]
-              }
+              },
+              "variableName": "S03_Mark_Count"
             }
           ]
         },
@@ -395,7 +395,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "S03_Mark_Damage",
               "value": {
                 "operator": "Variables[0] (S03_Mark_Count) || Variables[1] (0.08) || MUL || RETURN",
                 "displayLines": "(S03_Mark_Count * 0.08)",
@@ -404,7 +403,8 @@ const configAbility = {
                   "S03_Mark_Count",
                   0.08
                 ]
-              }
+              },
+              "variableName": "S03_Mark_Damage"
             },
             {
               "name": "IF",

@@ -92,7 +92,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountDark",
           "value": {
             "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill04P2[0]]}) || ADD || RETURN",
             "displayLines": "(Thunder_CountDark + {[Skill04P2[0]]})",
@@ -101,11 +100,11 @@ const configAbility = {
               "Thunder_CountDark",
               "{[Skill04P2[0]]}"
             ]
-          }
+          },
+          "variableName": "Thunder_CountDark"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountTotal",
           "value": {
             "operator": "Variables[0] (Thunder_CountDark) || RETURN",
             "displayLines": "Thunder_CountDark",
@@ -113,12 +112,13 @@ const configAbility = {
             "variables": [
               "Thunder_CountDark"
             ]
-          }
+          },
+          "variableName": "Thunder_CountTotal"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountLight",
-          "value": 0
+          "value": 0,
+          "variableName": "Thunder_CountLight"
         },
         {
           "name": "Add Events/Bonuses",
@@ -324,8 +324,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherPhase02Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherPhase02Flag"
                 }
               ]
             }

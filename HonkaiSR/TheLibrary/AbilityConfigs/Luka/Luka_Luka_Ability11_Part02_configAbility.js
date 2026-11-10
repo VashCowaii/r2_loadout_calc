@@ -72,8 +72,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "PunchCount",
-      "value": 3
+      "value": 3,
+      "variableName": "PunchCount"
     },
     {
       "name": "IF",
@@ -109,14 +109,13 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_PointB3_FirstPunch",
-              "value": 1
+              "value": 1,
+              "variableName": "_PointB3_FirstPunch"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "PunchCount",
               "value": {
                 "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(PunchCount - 1)",
@@ -126,7 +125,8 @@ const configAbility = {
                 "variables": [
                   "PunchCount"
                 ]
-              }
+              },
+              "variableName": "PunchCount"
             }
           ]
         }
@@ -134,7 +134,6 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "PunchCount",
           "value": {
             "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(PunchCount - 1)",
@@ -144,7 +143,8 @@ const configAbility = {
             "variables": [
               "PunchCount"
             ]
-          }
+          },
+          "variableName": "PunchCount"
         }
       ]
     },
@@ -203,8 +203,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "HitCount",
-      "value": 1
+      "value": 1,
+      "variableName": "HitCount"
     },
     {
       "name": "Looped Event",
@@ -260,14 +260,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PointB3_Trigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_PointB3_Trigger"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "PunchCount",
                   "value": {
                     "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(PunchCount - 1)",
@@ -277,12 +276,13 @@ const configAbility = {
                     "variables": [
                       "PunchCount"
                     ]
-                  }
+                  },
+                  "variableName": "PunchCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PointB3_Trigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_PointB3_Trigger"
                 }
               ]
             }
@@ -290,7 +290,6 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "PunchCount",
               "value": {
                 "operator": "Variables[0] (PunchCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(PunchCount - 1)",
@@ -300,7 +299,8 @@ const configAbility = {
                 "variables": [
                   "PunchCount"
                 ]
-              }
+              },
+              "variableName": "PunchCount"
             }
           ]
         },
@@ -371,8 +371,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PointB3_FirstPunch",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_PointB3_FirstPunch"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -432,7 +432,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "HitCount",
           "value": {
             "operator": "Variables[0] (HitCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(HitCount + 1)",
@@ -442,7 +441,8 @@ const configAbility = {
             "variables": [
               "HitCount"
             ]
-          }
+          },
+          "variableName": "HitCount"
         }
       ]
     },

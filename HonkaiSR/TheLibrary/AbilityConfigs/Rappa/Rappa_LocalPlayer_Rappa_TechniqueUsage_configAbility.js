@@ -23,7 +23,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SprintModifiedSteerSpeed",
       "value": {
         "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
         "displayLines": "SprintModifiedSteerSpeed",
@@ -31,11 +30,11 @@ const configAbility = {
         "variables": [
           "SprintModifiedSteerSpeed"
         ]
-      }
+      },
+      "variableName": "SprintModifiedSteerSpeed"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SprintModifiedSpeed",
       "value": {
         "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
         "displayLines": "SprintModifiedSpeed",
@@ -43,7 +42,8 @@ const configAbility = {
         "variables": [
           "SprintModifiedSpeed"
         ]
-      }
+      },
+      "variableName": "SprintModifiedSpeed"
     },
     {
       "name": "IF",
@@ -158,8 +158,8 @@ const configAbility = {
   "onAbortReg": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_AbilityEnd",
-      "value": 1
+      "value": 1,
+      "variableName": "DV_AbilityEnd"
     }
   ],
   "functions": [
@@ -187,8 +187,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rappa_00_Achievenment",
-          "value": 0
+          "value": 0,
+          "variableName": "Rappa_00_Achievenment"
         }
       ]
     }

@@ -70,8 +70,8 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",
@@ -81,8 +81,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 0
+                        "value": 0,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",
@@ -164,8 +164,8 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",
@@ -175,8 +175,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 0
+                        "value": 0,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",
@@ -281,8 +281,8 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",
@@ -292,8 +292,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillStep",
-                        "value": 0
+                        "value": 0,
+                        "variableName": "SkillStep"
                       },
                       {
                         "name": "Use Ability Option",

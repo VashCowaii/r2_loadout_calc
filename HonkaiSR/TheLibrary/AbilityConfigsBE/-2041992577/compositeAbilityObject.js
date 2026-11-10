@@ -170,8 +170,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 4.8
+                      "value": 4.8,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -186,8 +186,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 8.67
+                      "value": 8.67,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -202,8 +202,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 19.62
+                      "value": 19.62,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -218,8 +218,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 46.61
+                      "value": 46.61,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -234,8 +234,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 86.53
+                      "value": 86.53,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -250,8 +250,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 137.41
+                      "value": 137.41,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 },
@@ -266,8 +266,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DamageRatioByWorldLevel",
-                      "value": 188.26
+                      "value": 188.26,
+                      "variableName": "_DamageRatioByWorldLevel"
                     }
                   ]
                 }

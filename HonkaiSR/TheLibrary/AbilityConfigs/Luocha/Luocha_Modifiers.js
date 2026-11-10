@@ -97,8 +97,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_insertCheck_",
-              "value": 1
+              "value": 1,
+              "variableName": "_insertCheck_"
             },
             {
               "name": "Inject Ability Use",

@@ -112,9 +112,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W3_Sunday_00_BattleScore2_Flag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "W3_Sunday_00_BattleScore2_Flag"
                     }
                   ]
                 }
@@ -398,7 +398,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddShield",
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                     "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
@@ -407,11 +406,11 @@ const compositeAbilityObject = {
                       "MDF_ShieldPercentage_Add",
                       "CasterBaseAttack"
                     ]
-                  }
+                  },
+                  "variableName": "AddShield"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxShield",
                   "value": {
                     "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
                     "displayLines": "(CurShield + AddShield)",
@@ -420,7 +419,8 @@ const compositeAbilityObject = {
                       "CurShield",
                       "AddShield"
                     ]
-                  }
+                  },
+                  "variableName": "MaxShield"
                 },
                 {
                   "name": "Adjust Shield",
@@ -501,7 +501,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddShield",
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldPercentage) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                     "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)",
@@ -510,7 +509,8 @@ const compositeAbilityObject = {
                       "MDF_ShieldPercentage",
                       "CasterBaseAttack"
                     ]
-                  }
+                  },
+                  "variableName": "AddShield"
                 },
                 {
                   "name": "Create Shield",
@@ -584,8 +584,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TutorialFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TutorialFlag"
                 }
               ]
             },
@@ -625,8 +625,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TutorialFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TutorialFlag"
                     },
                     {
                       "name": "IF",
@@ -686,8 +686,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TutorialFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TutorialFlag"
                 }
               ]
             },
@@ -727,8 +727,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TutorialFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TutorialFlag"
                     },
                     {
                       "name": "IF",
@@ -2444,7 +2444,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (ENEMIES_OBJECT_UNUSED__130) || MUL || RETURN",
                     "displayLines": "(MDF_Layer * ENEMIES_OBJECT_UNUSED__130)",
@@ -2453,7 +2452,8 @@ const compositeAbilityObject = {
                       "MDF_Layer",
                       "ENEMIES_OBJECT_UNUSED__130"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 }
               ]
             }
@@ -2809,7 +2809,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Skill10_TurnCount",
                   "value": {
                     "operator": "Variables[0] (MDF_Skill10_TurnCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Skill10_TurnCount + 1)",
@@ -2819,7 +2818,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_Skill10_TurnCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Skill10_TurnCount"
                 }
               ]
             },
@@ -3757,8 +3757,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W3_Sunday_00_StanceCountDown_Counter",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W3_Sunday_00_StanceCountDown_Counter"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3766,8 +3766,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W3_Sunday_00_StanceCountDown_Flag"
                 }
               ]
             },
@@ -3803,8 +3803,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_Sunday_00_StanceCountDown_Flag"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -4574,8 +4574,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "W3_Sunday_00_StanceCountDown_Counter",
-          "value": 0
+          "value": 0,
+          "variableName": "W3_Sunday_00_StanceCountDown_Counter"
         },
         {
           "name": "Define Custom Variable",
@@ -4583,8 +4583,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "W3_Sunday_00_StanceCountDown_Flag"
         }
       ],
       "targetObjectData": {
@@ -4799,8 +4799,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_103294716",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_103294716"
                     }
                   ]
                 }
@@ -4833,8 +4833,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_103294713",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_103294713"
                     }
                   ]
                 },
@@ -4862,8 +4862,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_103294715",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_103294715"
                     }
                   ]
                 }
@@ -5536,7 +5536,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill05ErrorNumber",
           "value": {
             "operator": "Constants[0] (4) || Variables[0] (Skill05AssistNumber) || SUB || RETURN",
             "displayLines": "(4 - Skill05AssistNumber)",
@@ -5546,7 +5545,8 @@ const compositeAbilityObject = {
             "variables": [
               "Skill05AssistNumber"
             ]
-          }
+          },
+          "variableName": "Skill05ErrorNumber"
         },
         {
           "name": "IF",

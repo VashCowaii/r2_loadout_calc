@@ -407,7 +407,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
@@ -418,7 +417,8 @@ const compositeAbilityObject = {
                               "WHOLE",
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -502,7 +502,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
                             "displayLines": "(MDF_DiceResult_RL % 10)",
@@ -512,7 +511,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -1082,7 +1082,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
@@ -1093,7 +1092,8 @@ const compositeAbilityObject = {
                               "WHOLE",
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -1177,7 +1177,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
                             "displayLines": "(MDF_DiceResult_RL % 10)",
@@ -1187,7 +1186,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -1527,7 +1527,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_DiceResult_RL) || Constants[0] (10) || DIV || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_DiceResult_RL / 10))",
@@ -1538,7 +1537,8 @@ const compositeAbilityObject = {
                               "WHOLE",
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -1622,7 +1622,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult_RL",
                           "value": {
                             "operator": "Variables[0] (MDF_DiceResult_RL) || Constants[0] (10) || MOD || RETURN",
                             "displayLines": "(MDF_DiceResult_RL % 10)",
@@ -1632,7 +1631,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DiceResult_RL"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DiceResult_RL"
                         },
                         {
                           "name": "IF",
@@ -1792,7 +1792,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DiceResult",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (MDF_DiceResult) || RETURN",
                         "displayLines": "MDF_DiceResult",
@@ -1801,7 +1801,7 @@ const compositeAbilityObject = {
                           "MDF_DiceResult"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "DiceResult"
                     }
                   ]
                 },
@@ -2003,8 +2003,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_DiceResult",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_DiceResult"
                             },
                             {
                               "name": "IF",
@@ -2040,8 +2040,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_DiceResult",
-                                  "value": 2
+                                  "value": 2,
+                                  "variableName": "MDF_DiceResult"
                                 },
                                 {
                                   "name": "IF",
@@ -2077,8 +2077,8 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "MDF_DiceResult",
-                                      "value": 3
+                                      "value": 3,
+                                      "variableName": "MDF_DiceResult"
                                     },
                                     {
                                       "name": "IF",
@@ -2114,8 +2114,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "MDF_DiceResult",
-                                          "value": 4
+                                          "value": 4,
+                                          "variableName": "MDF_DiceResult"
                                         },
                                         {
                                           "name": "IF",
@@ -2140,8 +2140,8 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 5
+                                              "value": 5,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2159,8 +2159,8 @@ const compositeAbilityObject = {
                                           "failed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 6
+                                              "value": 6,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2204,8 +2204,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_DiceResult",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "MDF_DiceResult"
                                 },
                                 {
                                   "name": "IF",
@@ -2230,8 +2230,8 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "MDF_DiceResult",
-                                      "value": 2
+                                      "value": 2,
+                                      "variableName": "MDF_DiceResult"
                                     },
                                     {
                                       "name": "IF",
@@ -2267,8 +2267,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "MDF_DiceResult",
-                                          "value": 3
+                                          "value": 3,
+                                          "variableName": "MDF_DiceResult"
                                         },
                                         {
                                           "name": "IF",
@@ -2304,8 +2304,8 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 4
+                                              "value": 4,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2341,8 +2341,8 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "MDF_DiceResult",
-                                                  "value": 5
+                                                  "value": 5,
+                                                  "variableName": "MDF_DiceResult"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2360,8 +2360,8 @@ const compositeAbilityObject = {
                                               "failed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "MDF_DiceResult",
-                                                  "value": 6
+                                                  "value": 6,
+                                                  "variableName": "MDF_DiceResult"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2396,8 +2396,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_DiceResult",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "MDF_DiceResult"
                                 },
                                 {
                                   "name": "IF",
@@ -2425,7 +2425,6 @@ const compositeAbilityObject = {
                                       "execute": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "MDF_DiceResult",
                                           "value": {
                                             "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (1) || ADD || RETURN",
                                             "displayLines": "(MDF_DiceResult + 1)",
@@ -2435,7 +2434,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "MDF_DiceResult"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "MDF_DiceResult"
                                         }
                                       ]
                                     }
@@ -2452,8 +2452,8 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "MDF_DiceResult",
-                                      "value": 2
+                                      "value": 2,
+                                      "variableName": "MDF_DiceResult"
                                     },
                                     {
                                       "name": "IF",
@@ -2481,7 +2481,6 @@ const compositeAbilityObject = {
                                           "execute": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
                                               "value": {
                                                 "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (2) || ADD || RETURN",
                                                 "displayLines": "(MDF_DiceResult + 2)",
@@ -2491,7 +2490,8 @@ const compositeAbilityObject = {
                                                 "variables": [
                                                   "MDF_DiceResult"
                                                 ]
-                                              }
+                                              },
+                                              "variableName": "MDF_DiceResult"
                                             }
                                           ]
                                         }
@@ -2513,8 +2513,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "MDF_DiceResult",
-                                          "value": 3
+                                          "value": 3,
+                                          "variableName": "MDF_DiceResult"
                                         },
                                         {
                                           "name": "IF",
@@ -2542,7 +2542,6 @@ const compositeAbilityObject = {
                                               "execute": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "MDF_DiceResult",
                                                   "value": {
                                                     "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (3) || ADD || RETURN",
                                                     "displayLines": "(MDF_DiceResult + 3)",
@@ -2552,7 +2551,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "MDF_DiceResult"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "MDF_DiceResult"
                                                 }
                                               ]
                                             }
@@ -2574,8 +2574,8 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 4
+                                              "value": 4,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2603,7 +2603,6 @@ const compositeAbilityObject = {
                                                   "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "MDF_DiceResult",
                                                       "value": {
                                                         "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (4) || ADD || RETURN",
                                                         "displayLines": "(MDF_DiceResult + 4)",
@@ -2613,7 +2612,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "MDF_DiceResult"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "MDF_DiceResult"
                                                     }
                                                   ]
                                                 }
@@ -2635,8 +2635,8 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "MDF_DiceResult",
-                                                  "value": 5
+                                                  "value": 5,
+                                                  "variableName": "MDF_DiceResult"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2664,7 +2664,6 @@ const compositeAbilityObject = {
                                                       "execute": [
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "MDF_DiceResult",
                                                           "value": {
                                                             "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (5) || ADD || RETURN",
                                                             "displayLines": "(MDF_DiceResult + 5)",
@@ -2674,7 +2673,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "MDF_DiceResult"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "MDF_DiceResult"
                                                         }
                                                       ]
                                                     }
@@ -2684,8 +2684,8 @@ const compositeAbilityObject = {
                                               "failed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "MDF_DiceResult",
-                                                  "value": 6
+                                                  "value": 6,
+                                                  "variableName": "MDF_DiceResult"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2713,7 +2713,6 @@ const compositeAbilityObject = {
                                                       "execute": [
                                                         {
                                                           "name": "Define Custom Variable",
-                                                          "variableName": "MDF_DiceResult",
                                                           "value": {
                                                             "operator": "Variables[0] (MDF_DiceResult) || Constants[0] (6) || ADD || RETURN",
                                                             "displayLines": "(MDF_DiceResult + 6)",
@@ -2723,7 +2722,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "MDF_DiceResult"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "MDF_DiceResult"
                                                         }
                                                       ]
                                                     }
@@ -2765,9 +2765,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_DiceResult",
+                          "scope": "ContextModifier",
                           "value": 6,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_DiceResult"
                         }
                       ],
                       "failed": [
@@ -2780,8 +2780,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_DiceResult",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_DiceResult"
                             },
                             {
                               "name": "IF",
@@ -2806,8 +2806,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_DiceResult",
-                                  "value": 2
+                                  "value": 2,
+                                  "variableName": "MDF_DiceResult"
                                 },
                                 {
                                   "name": "IF",
@@ -2832,8 +2832,8 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "MDF_DiceResult",
-                                      "value": 3
+                                      "value": 3,
+                                      "variableName": "MDF_DiceResult"
                                     },
                                     {
                                       "name": "IF",
@@ -2858,8 +2858,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "MDF_DiceResult",
-                                          "value": 4
+                                          "value": 4,
+                                          "variableName": "MDF_DiceResult"
                                         },
                                         {
                                           "name": "IF",
@@ -2884,8 +2884,8 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 5
+                                              "value": 5,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2903,8 +2903,8 @@ const compositeAbilityObject = {
                                           "failed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "MDF_DiceResult",
-                                              "value": 6
+                                              "value": 6,
+                                              "variableName": "MDF_DiceResult"
                                             },
                                             {
                                               "name": "IF",
@@ -2969,7 +2969,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "DiceResult",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (DiceResult) || Variables[1] (MDF_DiceResult) || ADD || RETURN",
                         "displayLines": "(DiceResult + MDF_DiceResult)",
@@ -2979,7 +2979,7 @@ const compositeAbilityObject = {
                           "MDF_DiceResult"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "DiceResult"
                     }
                   ]
                 }
@@ -3000,7 +3000,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DiceResult",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_DiceResult) || RETURN",
                     "displayLines": "MDF_DiceResult",
@@ -3009,7 +3009,7 @@ const compositeAbilityObject = {
                       "MDF_DiceResult"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "DiceResult"
                 }
               ]
             },
@@ -3018,8 +3018,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DiceResult",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "MDF_DiceResult"
                 }
               ]
             }
@@ -3144,9 +3144,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DiceGamblingInsertCheck",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "DiceGamblingInsertCheck"
                     },
                     {
                       "name": "IF",
@@ -3215,9 +3215,9 @@ const compositeAbilityObject = {
                             "name": "Add Target by Unique Identifier",
                             "identifier": "W3_Aventurine_00"
                           },
-                          "variableName": "DiceGamblingInsertCheck",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "DiceGamblingInsertCheck"
                         }
                       ]
                     }
@@ -3648,8 +3648,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AvatarDiceResult",
-          "value": 0
+          "value": 0,
+          "variableName": "AvatarDiceResult"
         },
         {
           "name": "Find New Target",
@@ -3725,8 +3725,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SpecialDie",
-              "value": 0
+              "value": 0,
+              "variableName": "SpecialDie"
             },
             {
               "name": "Find New Target",
@@ -3750,9 +3750,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "WaitInsert",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "WaitInsert"
                 },
                 {
                   "name": "IF",
@@ -3831,8 +3831,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "DiceResult",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DiceResult"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4321,9 +4321,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "DiceGamblingInsertCheck",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "DiceGamblingInsertCheck"
             }
           ]
         },

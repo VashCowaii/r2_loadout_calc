@@ -172,8 +172,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TeammateCount1",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_TeammateCount1"
                     }
                   ],
                   "failed": [
@@ -187,18 +187,18 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TeammateCount1",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "MDF_TeammateCount1"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TeammateCount1",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "MDF_TeammateCount1"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TeammateCount1",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "MDF_TeammateCount1"
                         }
                       ]
                     }

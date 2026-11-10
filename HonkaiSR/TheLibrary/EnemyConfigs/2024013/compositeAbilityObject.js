@@ -63,7 +63,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_4_Alive",
                   "value": {
                     "operator": "Variables[0] (Minion_4_Alive) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Minion_4_Alive - 1)",
@@ -73,7 +72,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Minion_4_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "Minion_4_Alive"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -101,7 +101,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_3_Alive",
                   "value": {
                     "operator": "Variables[0] (Minion_3_Alive) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Minion_3_Alive - 1)",
@@ -111,7 +110,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Minion_3_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "Minion_3_Alive"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -139,7 +139,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_2_Alive",
                   "value": {
                     "operator": "Variables[0] (Minion_2_Alive) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Minion_2_Alive - 1)",
@@ -149,7 +148,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Minion_2_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "Minion_2_Alive"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -177,7 +177,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Minion_1_Alive",
                   "value": {
                     "operator": "Variables[0] (Minion_1_Alive) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Minion_1_Alive - 1)",
@@ -187,7 +186,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Minion_1_Alive"
                     ]
-                  }
+                  },
+                  "variableName": "Minion_1_Alive"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -300,8 +300,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Minion02Only",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Minion02Only"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -337,9 +337,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -355,13 +355,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Minion_3_Num",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Minion_3_Num"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Minion_4_Num",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Minion_4_Num"
                     },
                     {
                       "name": "IF",
@@ -911,9 +911,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2027,8 +2027,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
+          "value": 4,
+          "variableName": "MaxMinionCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2115,8 +2115,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
+          "value": 4,
+          "variableName": "MaxMinionCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2128,9 +2128,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "InsertCheck"
         }
       ],
       "targetObjectData": {
@@ -2231,8 +2231,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SummonMinion04Only",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SummonMinion04Only"
                 },
                 {
                   "name": "Force Entity Death",
@@ -2299,9 +2299,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "#Skill01_P1_AttackAddedRatio",
+                      "scope": "TargetEntity",
                       "value": 0.15,
-                      "scope": "TargetEntity"
+                      "variableName": "#Skill01_P1_AttackAddedRatio"
                     }
                   ]
                 }
@@ -3430,8 +3430,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_1_Alive",
-              "value": 1
+              "value": 1,
+              "variableName": "Minion_1_Alive"
             }
           ]
         },
@@ -3486,8 +3486,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_3_Alive",
-              "value": 1
+              "value": 1,
+              "variableName": "Minion_3_Alive"
             }
           ]
         },
@@ -3543,8 +3543,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_4_Alive",
-              "value": 1
+              "value": 1,
+              "variableName": "Minion_4_Alive"
             }
           ]
         },
@@ -3670,8 +3670,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Minion_2_Alive",
-              "value": 2
+              "value": 2,
+              "variableName": "Minion_2_Alive"
             }
           ]
         },
@@ -3746,8 +3746,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_ShowFlag"
             }
           ]
         },
@@ -3897,7 +3897,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08_BonusCount",
           "value": {
             "operator": "Variables[0] (MinionCount) || RETURN",
             "displayLines": "MinionCount",
@@ -3905,7 +3904,8 @@ const compositeAbilityObject = {
             "variables": [
               "MinionCount"
             ]
-          }
+          },
+          "variableName": "Skill08_BonusCount"
         },
         {
           "name": "ATK Scaling DMG",
@@ -5485,8 +5485,8 @@ const compositeAbilityObject = {
                     "execute": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SummonMinion04Only",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SummonMinion04Only"
                       },
                       {
                         "name": "Declare Custom Variable",

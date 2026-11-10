@@ -117,8 +117,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Weakness_CountDown",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Weakness_CountDown"
                 }
               ]
             }

@@ -13,7 +13,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank04_AddLifeTime",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -21,14 +20,15 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Rank04_AddLifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank04_AddLifeTime",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank04_AddLifeTime"
         }
       ]
     },

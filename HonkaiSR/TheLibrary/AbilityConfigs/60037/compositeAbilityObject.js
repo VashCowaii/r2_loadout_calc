@@ -121,8 +121,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherBEFlag"
                     }
                   ]
                 }
@@ -166,8 +166,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherBEFlag"
                     }
                   ]
                 }
@@ -283,7 +283,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPDelta",
                   "value": {
                     "operator": "Variables[0] (MDF_HPDeltaPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)",
@@ -292,7 +291,8 @@ const compositeAbilityObject = {
                       "MDF_HPDeltaPerLayer",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPDelta"
                 },
                 {
                   "name": "IF",

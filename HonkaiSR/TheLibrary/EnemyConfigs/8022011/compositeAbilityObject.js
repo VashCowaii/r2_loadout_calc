@@ -155,8 +155,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentSummonCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentSummonCount"
                         }
                       ],
                       "failed": [
@@ -1011,9 +1011,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SW_Minion01_EnhancementLevel",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "SW_Minion01_EnhancementLevel"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1120,7 +1120,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SW_Minion01_EnhancementLevel",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
                     "displayLines": "MDF_EnhancementLevel",
@@ -1129,7 +1129,7 @@ const compositeAbilityObject = {
                       "MDF_EnhancementLevel"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "SW_Minion01_EnhancementLevel"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1596,9 +1596,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1650,9 +1650,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -1677,9 +1677,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1731,9 +1731,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -1758,9 +1758,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1812,9 +1812,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -2040,7 +2040,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_TurnCount",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Modifier_TurnCount - 1)",
@@ -2051,7 +2051,7 @@ const compositeAbilityObject = {
                           "Modifier_TurnCount"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "Modifier_TurnCount"
                     }
                   ]
                 },
@@ -2096,9 +2096,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_TurnCount",
+                          "scope": "ContextModifier",
                           "value": 2,
-                          "scope": "ContextModifier"
+                          "variableName": "Modifier_TurnCount"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -2120,9 +2120,9 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Modifier_TurnCount",
+                          "scope": "ContextModifier",
                           "value": 1,
-                          "scope": "ContextModifier"
+                          "variableName": "Modifier_TurnCount"
                         }
                       ]
                     }
@@ -2149,8 +2149,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BreakRecover",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "BreakRecover"
                     }
                   ]
                 },
@@ -2181,8 +2181,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakRecover",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "BreakRecover"
                 }
               ]
             },
@@ -2328,9 +2328,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -2755,9 +2755,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BossCount",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "BossCount"
         },
         {
           "name": "Find New Target",
@@ -2794,7 +2794,7 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BossCount",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(BossCount + 1)",
@@ -2805,7 +2805,7 @@ const compositeAbilityObject = {
                   "BossCount"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "BossCount"
             }
           ]
         },
@@ -2853,7 +2853,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
           },
-          "variableName": "DamageUpRatio",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (DamageUpRatio) || RETURN",
             "displayLines": "DamageUpRatio",
@@ -2862,7 +2862,7 @@ const compositeAbilityObject = {
               "DamageUpRatio"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "DamageUpRatio"
         }
       ],
       "targetObjectData": {

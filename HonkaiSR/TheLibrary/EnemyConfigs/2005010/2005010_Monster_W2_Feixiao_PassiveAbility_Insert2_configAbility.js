@@ -209,8 +209,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialTalkFinish",
-          "value": 1
+          "value": 1,
+          "variableName": "SpecialTalkFinish"
         },
         {
           "name": "Add Events/Bonuses",

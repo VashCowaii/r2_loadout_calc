@@ -93,8 +93,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetNumber",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TargetNumber"
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
@@ -352,7 +352,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CritChance",
               "value": {
                 "operator": "Variables[0] (MDF_CritChanceBase) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_CritChanceBase * MDF_Layer)",
@@ -361,7 +360,8 @@ const configAbility = {
                   "MDF_CritChanceBase",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_CritChance"
             },
             {
               "name": "Stack Target Stat Value",
@@ -392,7 +392,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CritDamage",
                   "value": {
                     "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(0.04 * MDF_Layer)",
@@ -401,7 +400,8 @@ const configAbility = {
                       0.04,
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CritDamage"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -488,8 +488,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhancedUltra",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "EnhancedUltra"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -505,8 +505,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhancedUltra",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhancedUltra"
                 },
                 {
                   "name": "Update Ability Binding",

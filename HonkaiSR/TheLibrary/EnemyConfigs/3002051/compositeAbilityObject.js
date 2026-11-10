@@ -518,8 +518,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackAddRatioCurrent",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AttackAddRatioCurrent"
                 },
                 {
                   "name": "IF",
@@ -543,7 +543,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AttackAddRatioCurrent",
                           "value": {
                             "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || Constants[0] (2) || MUL || RETURN",
                             "displayLines": "(MDF_AttackAddRatioCurrent * 2)",
@@ -553,7 +552,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_AttackAddRatioCurrent"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AttackAddRatioCurrent"
                         }
                       ]
                     }
@@ -571,7 +571,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackAddRatioCurrent",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_AttackAddRatioCurrent) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)",
@@ -580,7 +579,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_AttackAddRatioCurrent"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AttackAddRatioCurrent"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -614,8 +614,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "WeaknessCount",
-          "value": 3
+          "value": 3,
+          "variableName": "WeaknessCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -874,8 +874,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Unlock_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Unlock_Flag"
                     },
                     {
                       "name": "IF",
@@ -1229,8 +1229,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Unlock_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Unlock_Flag"
                 }
               ]
             },

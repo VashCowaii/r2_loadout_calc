@@ -94,7 +94,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentRatio",
               "value": {
                 "operator": "Variables[0] (0.5) || Variables[1] (_CurrentLayer) || MUL || RETURN",
                 "displayLines": "(0.5 * _CurrentLayer)",
@@ -103,11 +102,11 @@ const configAbility = {
                   0.5,
                   "_CurrentLayer"
                 ]
-              }
+              },
+              "variableName": "_CurrentRatio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentValue",
               "value": {
                 "operator": "Variables[0] (1) || Variables[1] (_CurrentLayer) || MUL || RETURN",
                 "displayLines": "(1 * _CurrentLayer)",
@@ -116,7 +115,8 @@ const configAbility = {
                   1,
                   "_CurrentLayer"
                 ]
-              }
+              },
+              "variableName": "_CurrentValue"
             }
           ]
         }
@@ -415,7 +415,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_TotalRatio",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (0.02) || ADD || RETURN",
                 "displayLines": "(MDF_PropertyValue2 + 0.02)",
@@ -424,7 +423,8 @@ const configAbility = {
                   "MDF_PropertyValue2",
                   0.02
                 ]
-              }
+              },
+              "variableName": "DV_TotalRatio"
             },
             {
               "name": "Add Events/Bonuses",
@@ -466,7 +466,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Multipler",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || Constants[0] (0.01) || MUL || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_PropertyValue * 0.01))",
@@ -477,11 +476,11 @@ const configAbility = {
                   "FLOOR",
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "MDF_Multipler"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (MDF_Multipler) || Variables[1] (0.01) || MUL || RETURN",
                 "displayLines": "(MDF_Multipler * 0.01)",
@@ -490,7 +489,8 @@ const configAbility = {
                   "MDF_Multipler",
                   0.01
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue2"
             },
             {
               "name": "IF",
@@ -510,7 +510,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (0.08) || RETURN",
                     "displayLines": "0.08",
@@ -518,7 +517,8 @@ const configAbility = {
                     "variables": [
                       0.08
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             }
@@ -641,8 +641,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             }
@@ -687,8 +687,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalStanceDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalStanceDamage"
                 }
               ]
             }
@@ -797,7 +797,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalStanceDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
                     "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
@@ -806,7 +805,8 @@ const configAbility = {
                       "MDF_TotalStanceDamage",
                       "MDF_HitStanceDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalStanceDamage"
                 }
               ]
             }
@@ -1082,7 +1082,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "StanceBreakAddedRatioForShow",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                 "displayLines": "MDF_PropertyValue",
@@ -1090,7 +1089,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "StanceBreakAddedRatioForShow"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1187,8 +1187,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AMMO_RELOADED",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_AMMO_RELOADED"
                 },
                 {
                   "name": "Add Events/Bonuses",

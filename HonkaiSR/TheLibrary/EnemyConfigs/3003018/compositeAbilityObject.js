@@ -2433,7 +2433,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] ({[PassiveSkillInitiate[0]]}) || RETURN",
                     "displayLines": "{[PassiveSkillInitiate[0]]}",
@@ -2441,7 +2440,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[PassiveSkillInitiate[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             }
@@ -2530,9 +2530,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FlopSide",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "FlopSide"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3025,9 +3025,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FlopSide",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "FlopSide"
                     },
                     {
                       "name": "IF",
@@ -3061,9 +3061,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "AI_HeiShengBei_SpecialAI",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "AI_HeiShengBei_SpecialAI"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -3071,9 +3071,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "AI_HeiShengBei_Need",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "AI_HeiShengBei_Need"
                         }
                       ]
                     }
@@ -3093,9 +3093,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "FlopSide",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "FlopSide"
                         },
                         {
                           "name": "IF",
@@ -3129,9 +3129,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "AI_HeiShengBei_SpecialAI",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "AI_HeiShengBei_SpecialAI"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -3139,9 +3139,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "AI_HeiShengBei_Need",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "AI_HeiShengBei_Need"
                             }
                           ]
                         }
@@ -3151,8 +3151,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "FaceChangeFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3193,8 +3193,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FaceChangeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "FaceChangeFlag"
                 }
               ]
             },
@@ -3282,9 +3282,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FlopSide",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "FlopSide"
                     },
                     {
                       "name": "IF",
@@ -3318,9 +3318,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "AI_HeiShengBei_SpecialAI",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "AI_HeiShengBei_SpecialAI"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -3328,9 +3328,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "AI_HeiShengBei_Need",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "AI_HeiShengBei_Need"
                         }
                       ]
                     },
@@ -3856,14 +3856,14 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentLockCount",
-          "value": 0
+          "value": 0,
+          "variableName": "CurrentLockCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "FlopSide",
+          "scope": "TargetEntity",
           "value": -1,
-          "scope": "TargetEntity"
+          "variableName": "FlopSide"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4007,9 +4007,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -4028,9 +4028,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "FlopSide",
+                      "scope": "TargetEntity",
                       "value": -1,
-                      "scope": "TargetEntity"
+                      "variableName": "FlopSide"
                     },
                     {
                       "name": "IF",
@@ -4928,15 +4928,15 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AI_HeiShengBei_SpecialAI",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AI_HeiShengBei_SpecialAI"
                   },
                   {
                     "name": "Use Ability Option",
@@ -4983,9 +4983,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 1,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -4995,9 +4995,9 @@ const compositeAbilityObject = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5053,9 +5053,9 @@ const compositeAbilityObject = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 1,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5065,9 +5065,9 @@ const compositeAbilityObject = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "AIFlag",
+                        "scope": "TargetEntity",
                         "value": 0,
-                        "scope": "TargetEntity"
+                        "variableName": "AIFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -5112,9 +5112,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 1,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -5157,9 +5157,9 @@ const compositeAbilityObject = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 0,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Use Ability Option",

@@ -30,7 +30,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Rank01_P1_Chance",
           "value": {
             "operator": "Variables[0] (0.35) || RETURN",
             "displayLines": "0.35",
@@ -38,7 +37,8 @@ const configAbility = {
             "variables": [
               0.35
             ]
-          }
+          },
+          "variableName": "MDF_Rank01_P1_Chance"
         }
       ]
     },
@@ -100,7 +100,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Modifier_Gepard_00_Ratio",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
                 "displayLines": "0.5",
@@ -108,7 +107,8 @@ const configAbility = {
                 "variables": [
                   0.5
                 ]
-              }
+              },
+              "variableName": "Modifier_Gepard_00_Ratio"
             }
           ]
         },

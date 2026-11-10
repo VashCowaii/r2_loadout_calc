@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_enhance_before_attack",
       "value": {
         "operator": "Variables[0] (CurEnhance) || RETURN",
         "displayLines": "CurEnhance",
@@ -14,12 +13,13 @@ const configAbility = {
         "variables": [
           "CurEnhance"
         ]
-      }
+      },
+      "variableName": "_enhance_before_attack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_Bonus_Check",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill11_Bonus_Check"
     },
     {
       "name": "Use Custom Character Function",
@@ -69,8 +69,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Bonus_Check",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill11_Bonus_Check"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -84,7 +84,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_maxStance",
           "value": {
             "operator": "Variables[0] (MIN) || Variables[1] (_maxStance) || Constants[0] (30) || Variables[2] (16) || MUL || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(_maxStance, (30 * 16))",
@@ -96,7 +95,8 @@ const configAbility = {
               "_maxStance",
               16
             ]
-          }
+          },
+          "variableName": "_maxStance"
         },
         {
           "name": "IF",
@@ -109,7 +109,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill11_BreakDamagePercentage",
               "value": {
                 "operator": "Variables[0] (1.7) || RETURN",
                 "displayLines": "1.7",
@@ -117,7 +116,8 @@ const configAbility = {
                 "variables": [
                   1.7
                 ]
-              }
+              },
+              "variableName": "Skill11_BreakDamagePercentage"
             }
           ],
           "failed": [
@@ -132,7 +132,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill11_BreakDamagePercentage",
                   "value": {
                     "operator": "Variables[0] (1.2) || RETURN",
                     "displayLines": "1.2",
@@ -140,13 +139,13 @@ const configAbility = {
                     "variables": [
                       1.2
                     ]
-                  }
+                  },
+                  "variableName": "Skill11_BreakDamagePercentage"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill11_BreakDamagePercentage",
                   "value": {
                     "operator": "Variables[0] (0.7) || RETURN",
                     "displayLines": "0.7",
@@ -154,7 +153,8 @@ const configAbility = {
                     "variables": [
                       0.7
                     ]
-                  }
+                  },
+                  "variableName": "Skill11_BreakDamagePercentage"
                 }
               ]
             }
@@ -469,8 +469,8 @@ const configAbility = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Bonus_Check",
-          "value": -1
+          "value": -1,
+          "variableName": "Skill11_Bonus_Check"
         }
       ]
     },

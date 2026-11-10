@@ -75,7 +75,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageUpRatio",
               "value": {
                 "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
                 "displayLines": "{[Skill03[0]]}",
@@ -83,7 +82,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill03[0]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageUpRatio"
             },
             {
               "name": "Stack Target Stat Value",

@@ -23,8 +23,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_FirstUltraSkill",
-          "value": 2
+          "value": 2,
+          "variableName": "MDF_FirstUltraSkill"
         },
         {
           "name": "Remove Events/Bonuses",

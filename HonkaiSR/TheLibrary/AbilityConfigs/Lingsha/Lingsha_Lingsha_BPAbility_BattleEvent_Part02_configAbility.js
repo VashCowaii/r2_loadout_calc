@@ -23,8 +23,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Fuyuan}}"
           },
-          "variableName": "BattleEvent_Lingsha_00_PointB3",
-          "value": 0
+          "value": 0,
+          "variableName": "BattleEvent_Lingsha_00_PointB3"
         },
         {
           "name": "Add Events/Bonuses",

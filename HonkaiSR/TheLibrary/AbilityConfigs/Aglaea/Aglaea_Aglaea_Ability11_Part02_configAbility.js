@@ -24,8 +24,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Rank06Ratio",
-      "value": 0
+      "value": 0,
+      "variableName": "_Rank06Ratio"
     },
     {
       "name": "Define Custom Variable",
@@ -33,7 +33,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "variableName": "_PairStanceDMG1",
       "value": {
         "operator": "Variables[0] (ST Toughness Value) || RETURN",
         "displayLines": "ST Toughness Value",
@@ -41,7 +40,8 @@ const configAbility = {
         "variables": [
           "ST Toughness Value"
         ]
-      }
+      },
+      "variableName": "_PairStanceDMG1"
     },
     {
       "name": "Define Custom Variable",
@@ -49,7 +49,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "variableName": "_PairStanceDMG2",
       "value": {
         "operator": "Variables[0] (Blast Toughness Value) || RETURN",
         "displayLines": "Blast Toughness Value",
@@ -57,11 +56,11 @@ const configAbility = {
         "variables": [
           "Blast Toughness Value"
         ]
-      }
+      },
+      "variableName": "_PairStanceDMG2"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Energy",
       "value": {
         "operator": "Variables[0] (_Energy) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(_Energy - 1)",
@@ -71,11 +70,11 @@ const configAbility = {
         "variables": [
           "_Energy"
         ]
-      }
+      },
+      "variableName": "_Energy"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11Count",
       "value": {
         "operator": "Variables[0] (Skill11Count) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(Skill11Count + 1)",
@@ -85,7 +84,8 @@ const configAbility = {
         "variables": [
           "Skill11Count"
         ]
-      }
+      },
+      "variableName": "Skill11Count"
     },
     {
       "name": "IF",

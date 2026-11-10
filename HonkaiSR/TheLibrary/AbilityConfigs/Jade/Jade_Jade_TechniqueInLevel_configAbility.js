@@ -91,7 +91,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_RateLayer",
                       "value": {
                         "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_RateLayer + 1)",
@@ -101,7 +100,8 @@ const configAbility = {
                         "variables": [
                           "_RateLayer"
                         ]
-                      }
+                      },
+                      "variableName": "_RateLayer"
                     }
                   ]
                 },

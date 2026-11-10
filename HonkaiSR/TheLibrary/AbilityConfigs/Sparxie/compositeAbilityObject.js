@@ -541,8 +541,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Layer"
                 }
               ]
             }
@@ -810,7 +810,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                           "value": {
                             "operator": "Variables[0] (8) || RETURN",
                             "displayLines": "8",
@@ -818,11 +817,11 @@ const compositeAbilityObject = {
                             "variables": [
                               8
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                           "value": {
                             "operator": "Variables[0] (4) || RETURN",
                             "displayLines": "4",
@@ -830,7 +829,8 @@ const compositeAbilityObject = {
                             "variables": [
                               4
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
                       ]
                     },
@@ -840,7 +840,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                           "value": {
                             "operator": "Variables[0] (4) || RETURN",
                             "displayLines": "4",
@@ -848,11 +847,11 @@ const compositeAbilityObject = {
                             "variables": [
                               4
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -860,7 +859,8 @@ const compositeAbilityObject = {
                             "variables": [
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
                       ]
                     },
@@ -870,7 +870,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -878,11 +877,11 @@ const compositeAbilityObject = {
                             "variables": [
                               2
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -890,7 +889,8 @@ const compositeAbilityObject = {
                             "variables": [
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                         }
                       ]
                     }
@@ -898,13 +898,13 @@ const compositeAbilityObject = {
                   "defaultEvents": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
                   ]
                 }
@@ -984,7 +984,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (2000) || SUB || Variables[4] (100) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.05) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)",
@@ -997,7 +996,8 @@ const compositeAbilityObject = {
                       100,
                       0.05
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                 },
                 {
                   "name": "IF",
@@ -1011,8 +1011,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1043,7 +1043,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
                           "value": {
                             "operator": "Variables[0] (0.8) || RETURN",
                             "displayLines": "0.8",
@@ -1051,7 +1050,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.8
                             ]
-                          }
+                          },
+                          "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                         }
                       ]
                     },
@@ -1549,7 +1549,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_GrandPrizeChance",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1557,11 +1556,11 @@ const compositeAbilityObject = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_MinorPrizeChance",
                   "value": {
                     "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
                     "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -1570,7 +1569,8 @@ const compositeAbilityObject = {
                       28,
                       "Sparxie_Skill02_GrandPrizeChance"
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 }
               ]
             },
@@ -1592,13 +1592,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_GrandPrizeChance",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "Sparxie_Skill02_GrandPrizeChance"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_MinorPrizeChance",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Sparxie_Skill02_MinorPrizeChance"
                     }
                   ],
                   "failed": [
@@ -1952,13 +1952,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PKLineProgress",
-          "value": 0
+          "value": 0,
+          "variableName": "_PKLineProgress"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PKLineProgress",
-          "value": 0.3
+          "value": 0.3,
+          "variableName": "_PKLineProgress"
         },
         {
           "name": "IF",
@@ -2140,7 +2140,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Sparxie_Skill02_GrandPrizeChance",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -2148,11 +2147,11 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "Sparxie_Skill02_GrandPrizeChance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Sparxie_Skill02_MinorPrizeChance",
           "value": {
             "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
             "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -2161,7 +2160,8 @@ const compositeAbilityObject = {
               28,
               "Sparxie_Skill02_GrandPrizeChance"
             ]
-          }
+          },
+          "variableName": "Sparxie_Skill02_MinorPrizeChance"
         },
         {
           "name": "Read Variable Value",
@@ -2351,7 +2351,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_ExtraDamage",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (_CurrentEP) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_CurrentEP / 1))",
@@ -2361,7 +2360,8 @@ const compositeAbilityObject = {
                   "_CurrentEP",
                   1
                 ]
-              }
+              },
+              "variableName": "_Rank06_ExtraDamage"
             },
             {
               "name": "IF",
@@ -2382,7 +2382,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank06_ExtraDamage",
                   "value": {
                     "operator": "Variables[0] (40) || Variables[1] (20) || SUB || RETURN",
                     "displayLines": "(40 - 20)",
@@ -2391,7 +2390,8 @@ const compositeAbilityObject = {
                       40,
                       20
                     ]
-                  }
+                  },
+                  "variableName": "_Rank06_ExtraDamage"
                 }
               ]
             }
@@ -2773,7 +2773,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SkillUseCount",
           "value": {
             "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_SkillUseCount + 1)",
@@ -2783,7 +2782,8 @@ const compositeAbilityObject = {
             "variables": [
               "_SkillUseCount"
             ]
-          }
+          },
+          "variableName": "_SkillUseCount"
         },
         {
           "name": "Sparxie Test Data",
@@ -2802,7 +2802,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PKLineProgress",
           "value": {
             "operator": "Variables[0] (_PKLineProgress) || Constants[0] (0.8) || Variables[0] (_PKLineProgress) || SUB || Constants[1] (4) || DIV || ADD || RETURN",
             "displayLines": "(_PKLineProgress + ((0.8 - _PKLineProgress) / 4))",
@@ -2813,7 +2812,8 @@ const compositeAbilityObject = {
             "variables": [
               "_PKLineProgress"
             ]
-          }
+          },
+          "variableName": "_PKLineProgress"
         },
         {
           "name": "Update Energy",
@@ -3049,7 +3049,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SkillUseCount",
           "value": {
             "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_SkillUseCount + 1)",
@@ -3059,7 +3058,8 @@ const compositeAbilityObject = {
             "variables": [
               "_SkillUseCount"
             ]
-          }
+          },
+          "variableName": "_SkillUseCount"
         },
         {
           "name": "Sparxie Test Data",
@@ -3185,13 +3185,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PKLineProgress",
-          "value": 0
+          "value": 0,
+          "variableName": "_PKLineProgress"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PKLineProgress",
-          "value": 0.3
+          "value": 0.3,
+          "variableName": "_PKLineProgress"
         },
         {
           "name": "IF",
@@ -3507,12 +3507,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SkillUseCount",
-          "value": 0
+          "value": 0,
+          "variableName": "_SkillUseCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Sparxie_Skill02_GrandPrizeChance",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -3520,11 +3519,11 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "Sparxie_Skill02_GrandPrizeChance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Sparxie_Skill02_MinorPrizeChance",
           "value": {
             "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
             "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -3533,7 +3532,8 @@ const compositeAbilityObject = {
               28,
               "Sparxie_Skill02_GrandPrizeChance"
             ]
-          }
+          },
+          "variableName": "Sparxie_Skill02_MinorPrizeChance"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"
@@ -3810,7 +3810,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_MinorPrizeChance",
                   "value": {
                     "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeChance) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Sparxie_Skill02_MinorPrizeChance - 1)",
@@ -3820,11 +3819,11 @@ const compositeAbilityObject = {
                     "variables": [
                       "Sparxie_Skill02_MinorPrizeChance"
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_MinorPrizeGetNum",
                   "value": {
                     "operator": "Variables[0] (Sparxie_Skill02_MinorPrizeGetNum) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Sparxie_Skill02_MinorPrizeGetNum + 1)",
@@ -3834,7 +3833,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Sparxie_Skill02_MinorPrizeGetNum"
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_Skill02_MinorPrizeGetNum"
                 },
                 {
                   "name": "IF",
@@ -3858,7 +3858,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_GrandPrizeChance",
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -3866,11 +3865,11 @@ const compositeAbilityObject = {
                         "variables": [
                           3
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_Skill02_GrandPrizeChance"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_MinorPrizeChance",
                       "value": {
                         "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
                         "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -3879,7 +3878,8 @@ const compositeAbilityObject = {
                           28,
                           "Sparxie_Skill02_GrandPrizeChance"
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_Skill02_MinorPrizeChance"
                     }
                   ]
                 }
@@ -3934,7 +3934,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_GrandPrizeChance",
                   "value": {
                     "operator": "Variables[0] (Sparxie_Skill02_GrandPrizeChance) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Sparxie_Skill02_GrandPrizeChance - 1)",
@@ -3944,12 +3943,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "Sparxie_Skill02_GrandPrizeChance"
                     ]
-                  }
+                  },
+                  "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_MinorPrizeGetNum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Sparxie_Skill02_MinorPrizeGetNum"
                 },
                 {
                   "name": "IF",
@@ -3973,7 +3973,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_GrandPrizeChance",
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -3981,11 +3980,11 @@ const compositeAbilityObject = {
                         "variables": [
                           3
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_Skill02_GrandPrizeChance"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_Skill02_MinorPrizeChance",
                       "value": {
                         "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
                         "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -3994,7 +3993,8 @@ const compositeAbilityObject = {
                           28,
                           "Sparxie_Skill02_GrandPrizeChance"
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_Skill02_MinorPrizeChance"
                     }
                   ]
                 }

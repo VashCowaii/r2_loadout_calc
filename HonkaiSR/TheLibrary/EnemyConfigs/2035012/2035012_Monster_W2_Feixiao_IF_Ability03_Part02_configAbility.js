@@ -35,7 +35,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "HeadDelay",
           "value": {
             "operator": "Variables[0] (HeadDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
             "displayLines": "(HeadDelay - 9.313226e-10)",
@@ -45,7 +44,8 @@ const configAbility = {
             "variables": [
               "HeadDelay"
             ]
-          }
+          },
+          "variableName": "HeadDelay"
         }
       ]
     },
@@ -79,7 +79,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "LimbDelay",
           "value": {
             "operator": "Variables[0] (LimbDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
             "displayLines": "(LimbDelay - 9.313226e-10)",
@@ -89,7 +88,8 @@ const configAbility = {
             "variables": [
               "LimbDelay"
             ]
-          }
+          },
+          "variableName": "LimbDelay"
         }
       ]
     },
@@ -123,7 +123,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TailDelay",
           "value": {
             "operator": "Variables[0] (TailDelay) || Constants[0] (9.313226e-10) || SUB || RETURN",
             "displayLines": "(TailDelay - 9.313226e-10)",
@@ -133,7 +132,8 @@ const configAbility = {
             "variables": [
               "TailDelay"
             ]
-          }
+          },
+          "variableName": "TailDelay"
         }
       ]
     },
@@ -180,8 +180,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "EnhanceFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "EnhanceFlag"
             },
             {
               "name": "Find New Target",
@@ -243,8 +243,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "IF",
@@ -295,8 +295,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -329,8 +329,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -423,8 +423,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "IF",
@@ -475,8 +475,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -509,8 +509,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -563,8 +563,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -626,8 +626,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -678,8 +678,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -712,13 +712,13 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -811,8 +811,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -863,8 +863,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -897,8 +897,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -935,8 +935,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -998,8 +998,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -1050,8 +1050,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1084,8 +1084,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1178,8 +1178,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -1230,8 +1230,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1264,8 +1264,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1322,8 +1322,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "EnhanceFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "EnhanceFlag"
             },
             {
               "name": "Find New Target",
@@ -1385,8 +1385,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "IF",
@@ -1437,8 +1437,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -1471,8 +1471,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -1565,8 +1565,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhanceFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnhanceFlag"
                     },
                     {
                       "name": "IF",
@@ -1617,8 +1617,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -1651,8 +1651,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventPartFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "BattleEventPartFlag"
                     },
                     {
                       "name": "Add Battle Event",
@@ -1705,8 +1705,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -1768,8 +1768,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -1820,8 +1820,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1854,8 +1854,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -1948,8 +1948,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -2000,8 +2000,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -2034,8 +2034,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -2072,8 +2072,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnhanceFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnhanceFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -2135,8 +2135,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -2187,8 +2187,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -2221,8 +2221,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 3
+                          "value": 3,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -2315,8 +2315,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhanceFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EnhanceFlag"
                         },
                         {
                           "name": "IF",
@@ -2367,8 +2367,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",
@@ -2401,8 +2401,8 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "BattleEventPartFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "BattleEventPartFlag"
                         },
                         {
                           "name": "Add Battle Event",

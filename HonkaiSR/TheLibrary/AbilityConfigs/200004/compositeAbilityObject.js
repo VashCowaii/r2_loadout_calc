@@ -293,8 +293,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurOverflowSpecialSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CurOverflowSpecialSP"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -496,8 +496,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionOrderIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_ActionOrderIndex"
                 },
                 {
                   "name": "Find New Target",
@@ -525,7 +525,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ActionOrderIndex",
                       "value": {
                         "operator": "Variables[0] (MDF_ActionOrderIndex) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_ActionOrderIndex + 1)",
@@ -535,7 +534,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ActionOrderIndex"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ActionOrderIndex"
                     }
                   ]
                 },

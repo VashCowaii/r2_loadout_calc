@@ -57,7 +57,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CasterMaxSP",
                       "value": {
                         "operator": "Variables[0] (160) || RETURN",
                         "displayLines": "160",
@@ -65,7 +64,8 @@ const compositeAbilityObject = {
                         "variables": [
                           160
                         ]
-                      }
+                      },
+                      "variableName": "CasterMaxSP"
                     }
                   ]
                 },

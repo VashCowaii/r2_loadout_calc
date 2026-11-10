@@ -1406,8 +1406,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TingYun_EnergyBarLayer",
-              "value": 0
+              "value": 0,
+              "variableName": "TingYun_EnergyBarLayer"
             },
             {
               "name": "Update Displayed Energy Bar",

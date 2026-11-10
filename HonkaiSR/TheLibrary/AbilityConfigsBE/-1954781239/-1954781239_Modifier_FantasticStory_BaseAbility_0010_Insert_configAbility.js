@@ -33,7 +33,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Plus5_Bomb_Damage",
           "value": {
             "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
             "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
@@ -45,7 +44,8 @@ const configAbility = {
               "Plus5_Layer",
               "DV_plus5_ADF_1_get"
             ]
-          }
+          },
+          "variableName": "Plus5_Bomb_Damage"
         },
         {
           "name": "ATK Scaling DMG",
@@ -105,14 +105,13 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Plus5_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Plus5_Layer"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Plus5_Bomb_Damage",
               "value": {
                 "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_plus5_ADF_1_get) || MUL || ADD || MUL || RETURN",
                 "displayLines": "(Bomb_Damage_get * (1 + (Plus5_Layer * DV_plus5_ADF_1_get)))",
@@ -124,7 +123,8 @@ const configAbility = {
                   "Plus5_Layer",
                   "DV_plus5_ADF_1_get"
                 ]
-              }
+              },
+              "variableName": "Plus5_Bomb_Damage"
             },
             {
               "name": "ATK Scaling DMG",

@@ -12,7 +12,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Feixiao: Self}}"
       },
-      "variableName": "Skill05DamagePercentage",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
         "displayLines": "{[Skill02[0]]}",
@@ -21,7 +21,7 @@ const configAbility = {
           "{[Skill02[0]]}"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "Skill05DamagePercentage"
     },
     {
       "name": "Define Custom Variable",
@@ -29,7 +29,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Nebula Devourer: Self Initial}}"
       },
-      "variableName": "Skill05DamagePercentage",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
         "displayLines": "{[Skill01[0]]}",
@@ -38,7 +38,7 @@ const configAbility = {
           "{[Skill01[0]]}"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "Skill05DamagePercentage"
     },
     {
       "name": "Add Events/Bonuses",

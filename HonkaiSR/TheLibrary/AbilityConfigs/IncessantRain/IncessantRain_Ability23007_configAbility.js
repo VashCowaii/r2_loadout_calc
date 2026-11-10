@@ -125,8 +125,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Flag_23007_1",
-              "value": 1
+              "value": 1,
+              "variableName": "Flag_23007_1"
             }
           ]
         },
@@ -187,8 +187,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Flag_23007_1",
-              "value": 0
+              "value": 0,
+              "variableName": "Flag_23007_1"
             },
             {
               "name": "Remove Events/Bonuses",

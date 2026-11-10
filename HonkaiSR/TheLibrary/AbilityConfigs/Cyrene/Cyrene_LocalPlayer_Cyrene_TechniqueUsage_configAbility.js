@@ -19,8 +19,8 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_SkipNextMazeBuffRefreshState",
-      "value": 1
+      "value": 1,
+      "variableName": "#CL_SkipNextMazeBuffRefreshState"
     },
     {
       "name": "Add Events/Bonuses",

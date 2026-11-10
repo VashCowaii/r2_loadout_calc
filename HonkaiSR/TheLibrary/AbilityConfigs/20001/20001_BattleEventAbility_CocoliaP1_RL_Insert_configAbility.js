@@ -254,8 +254,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CocoliaP1_00_RL_BattleEvent_Count",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_CocoliaP1_00_RL_BattleEvent_Count"
         },
         {
           "name": "Find New Target",

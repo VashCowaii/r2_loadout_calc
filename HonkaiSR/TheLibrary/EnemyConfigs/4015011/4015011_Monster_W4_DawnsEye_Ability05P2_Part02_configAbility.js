@@ -121,7 +121,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountTotal",
           "value": {
             "operator": "Variables[0] ({[Skill05P2[1]]}) || RETURN",
             "displayLines": "{[Skill05P2[1]]}",
@@ -129,13 +128,13 @@ const configAbility = {
             "variables": [
               "{[Skill05P2[1]]}"
             ]
-          }
+          },
+          "variableName": "Thunder_CountTotal"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountTotal",
           "value": {
             "operator": "Variables[0] (Thunder_CountDark) || RETURN",
             "displayLines": "Thunder_CountDark",
@@ -143,7 +142,8 @@ const configAbility = {
             "variables": [
               "Thunder_CountDark"
             ]
-          }
+          },
+          "variableName": "Thunder_CountTotal"
         }
       ]
     },

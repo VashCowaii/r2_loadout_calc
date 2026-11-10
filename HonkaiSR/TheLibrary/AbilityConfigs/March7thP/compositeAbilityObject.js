@@ -299,7 +299,7 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FrozenCount",
+                          "scope": "ContextCaster",
                           "value": {
                             "operator": "Variables[0] (MDF_FrozenCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_FrozenCount + 1)",
@@ -310,7 +310,7 @@ const compositeAbilityObject = {
                               "MDF_FrozenCount"
                             ]
                           },
-                          "scope": "ContextCaster"
+                          "variableName": "MDF_FrozenCount"
                         },
                         "Modifier Deletes Itself"
                       ]
@@ -991,7 +991,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank01_DefenceRatio",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
                     "displayLines": "0.3",
@@ -999,14 +998,15 @@ const compositeAbilityObject = {
                     "variables": [
                       0.3
                     ]
-                  }
+                  },
+                  "variableName": "_Rank01_DefenceRatio"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank01_DefenceRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Rank01_DefenceRatio"
                 }
               ]
             },
@@ -1085,9 +1085,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Mar7th_00_Passive_CounterView",
+              "scope": "ContextCaster",
               "value": 0,
-              "scope": "ContextCaster"
+              "variableName": "Mar7th_00_Passive_CounterView"
             }
           ]
         },
@@ -1233,7 +1233,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Mar7th_00_Passive_CounterView",
+              "scope": "ContextCaster",
               "value": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1244,7 +1244,7 @@ const compositeAbilityObject = {
                   2
                 ]
               },
-              "scope": "ContextCaster"
+              "variableName": "Mar7th_00_Passive_CounterView"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1289,7 +1289,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Mar7th_00_Passive_CounterView",
+              "scope": "ContextCaster",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1298,7 +1298,7 @@ const compositeAbilityObject = {
                   2
                 ]
               },
-              "scope": "ContextCaster"
+              "variableName": "Mar7th_00_Passive_CounterView"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1505,7 +1505,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Mar7th_00_Passive_CounterView",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(2 + 1)",
@@ -1516,7 +1516,7 @@ const compositeAbilityObject = {
                           2
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "Mar7th_00_Passive_CounterView"
                     },
                     {
                       "name": "Find New Target",
@@ -1609,7 +1609,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Mar7th_00_Passive_CounterView",
+                      "scope": "ContextCaster",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1618,7 +1618,7 @@ const compositeAbilityObject = {
                           2
                         ]
                       },
-                      "scope": "ContextCaster"
+                      "variableName": "Mar7th_00_Passive_CounterView"
                     },
                     {
                       "name": "Find New Target",
@@ -1752,8 +1752,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Mar7th_00_Passive_CounterView",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Mar7th_00_Passive_CounterView"
                 },
                 {
                   "name": "IF",
@@ -2198,7 +2198,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Tree03_ChanceAdd",
               "value": {
                 "operator": "Variables[0] (0.15) || RETURN",
                 "displayLines": "0.15",
@@ -2206,14 +2205,15 @@ const compositeAbilityObject = {
                 "variables": [
                   0.15
                 ]
-              }
+              },
+              "variableName": "_Tree03_ChanceAdd"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Tree03_ChanceAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "_Tree03_ChanceAdd"
             }
           ]
         },
@@ -2226,7 +2226,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_SPAdd",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -2234,14 +2233,15 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "_Rank01_SPAdd"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank01_SPAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "_Rank01_SPAdd"
             }
           ]
         },
@@ -2282,7 +2282,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Fix_Rank01_SPAdd",
           "value": {
             "operator": "Variables[0] (_Rank01_SPAdd) || Variables[1] (MDF_FrozenCount) || MUL || RETURN",
             "displayLines": "(_Rank01_SPAdd * MDF_FrozenCount)",
@@ -2291,7 +2290,8 @@ const compositeAbilityObject = {
               "_Rank01_SPAdd",
               "MDF_FrozenCount"
             ]
-          }
+          },
+          "variableName": "Fix_Rank01_SPAdd"
         },
         {
           "name": "IF",
@@ -2304,8 +2304,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Fix_Rank01_SPAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "Fix_Rank01_SPAdd"
             }
           ]
         },
@@ -2344,8 +2344,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_FrozenCount",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_FrozenCount"
         },
         "Trigger: Ability End"
       ],
@@ -2419,7 +2419,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Tree02_LifeTimeAdd",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -2427,14 +2426,15 @@ const compositeAbilityObject = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "_Tree02_LifeTimeAdd"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Tree02_LifeTimeAdd",
-              "value": 0
+              "value": 0,
+              "variableName": "_Tree02_LifeTimeAdd"
             }
           ]
         },
@@ -2447,7 +2447,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_HealPercentage",
               "value": {
                 "operator": "Variables[0] (0.04) || RETURN",
                 "displayLines": "0.04",
@@ -2455,11 +2454,11 @@ const compositeAbilityObject = {
                 "variables": [
                   0.04
                 ]
-              }
+              },
+              "variableName": "_Rank06_HealPercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_HealValue",
               "value": {
                 "operator": "Variables[0] (106) || RETURN",
                 "displayLines": "106",
@@ -2467,19 +2466,20 @@ const compositeAbilityObject = {
                 "variables": [
                   106
                 ]
-              }
+              },
+              "variableName": "_Rank06_HealValue"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_HealPercentage",
-              "value": 0
+              "value": 0,
+              "variableName": "_Rank06_HealPercentage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_HealValue",
-              "value": 0
+              "value": 0,
+              "variableName": "_Rank06_HealValue"
             }
           ]
         },

@@ -70,9 +70,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Flag_RevengeTrigger",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "Flag_RevengeTrigger"
                 }
               ],
               "failed": [
@@ -82,9 +82,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Flag_RevengeTrigger",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Flag_RevengeTrigger"
                 }
               ]
             }
@@ -124,9 +124,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 3,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Find New Target",
@@ -165,9 +165,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         }
                       ]
                     }
@@ -315,9 +315,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -325,9 +325,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -377,9 +377,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     }
                   ]
                 }
@@ -468,9 +468,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -478,9 +478,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 }

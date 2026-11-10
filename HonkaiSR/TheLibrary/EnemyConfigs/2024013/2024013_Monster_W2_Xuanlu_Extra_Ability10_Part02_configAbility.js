@@ -57,8 +57,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Minion_1_Alive",
-          "value": 1
+          "value": 1,
+          "variableName": "Minion_1_Alive"
         }
       ]
     },
@@ -113,8 +113,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Minion_3_Alive",
-          "value": 1
+          "value": 1,
+          "variableName": "Minion_3_Alive"
         }
       ]
     },
@@ -170,8 +170,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Minion_4_Alive",
-          "value": 1
+          "value": 1,
+          "variableName": "Minion_4_Alive"
         }
       ]
     },
@@ -297,8 +297,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Minion_2_Alive",
-          "value": 2
+          "value": 2,
+          "variableName": "Minion_2_Alive"
         }
       ]
     },
@@ -373,8 +373,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_ShowFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_ShowFlag"
         }
       ]
     },

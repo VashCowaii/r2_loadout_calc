@@ -89,7 +89,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PersistLoseHP",
                       "value": {
                         "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_LoseHPRatio) || MUL || ADD || RETURN",
                         "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))",
@@ -99,7 +98,8 @@ const compositeAbilityObject = {
                           "MDF_MaxHP",
                           "MDF_LoseHPRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PersistLoseHP"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
@@ -200,9 +200,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Deathrattle",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Deathrattle"
                 },
                 {
                   "name": "IF",
@@ -260,9 +260,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "variableName": "Deathrattle",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Deathrattle"
                     }
                   ]
                 },

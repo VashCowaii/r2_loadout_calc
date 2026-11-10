@@ -269,8 +269,8 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "_MissionTalkType",
-          "value": 0
+          "value": 0,
+          "variableName": "_MissionTalkType"
         },
         {
           "name": "Add Events/Bonuses",
@@ -620,7 +620,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CommonTalkType",
                   "value": {
                     "operator": "Variables[0] (_CommonTalkType) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_CommonTalkType + 1)",
@@ -630,7 +629,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_CommonTalkType"
                     ]
-                  }
+                  },
+                  "variableName": "_CommonTalkType"
                 }
               ]
             }

@@ -227,8 +227,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "HPBack",
-          "value": 0
+          "value": 0,
+          "variableName": "HPBack"
         },
         {
           "name": "IF",
@@ -460,8 +460,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "HPBack",
-      "value": 0
+      "value": 0,
+      "variableName": "HPBack"
     },
     {
       "name": "Declare Custom Variable",

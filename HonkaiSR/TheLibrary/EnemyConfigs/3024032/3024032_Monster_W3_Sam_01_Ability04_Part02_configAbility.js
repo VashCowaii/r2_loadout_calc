@@ -42,7 +42,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MinionDelay",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill03[2]]}) || RETURN",
         "displayLines": "{[PassiveSkill03[2]]}",
@@ -50,7 +49,8 @@ const configAbility = {
         "variables": [
           "{[PassiveSkill03[2]]}"
         ]
-      }
+      },
+      "variableName": "MinionDelay"
     },
     {
       "name": "Create Enemies",
@@ -79,7 +79,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MinionDelay",
       "value": {
         "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
         "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
@@ -88,7 +87,8 @@ const configAbility = {
           "MinionDelay",
           "{[PassiveSkill03[3]]}"
         ]
-      }
+      },
+      "variableName": "MinionDelay"
     },
     {
       "name": "Create Enemies",
@@ -117,7 +117,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MinionDelay",
       "value": {
         "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
         "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
@@ -126,7 +125,8 @@ const configAbility = {
           "MinionDelay",
           "{[PassiveSkill03[3]]}"
         ]
-      }
+      },
+      "variableName": "MinionDelay"
     },
     {
       "name": "IF",
@@ -202,7 +202,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MinionDelay",
           "value": {
             "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
             "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
@@ -211,7 +210,8 @@ const configAbility = {
               "MinionDelay",
               "{[PassiveSkill03[3]]}"
             ]
-          }
+          },
+          "variableName": "MinionDelay"
         },
         {
           "name": "Create Enemies",
@@ -240,7 +240,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MinionDelay",
           "value": {
             "operator": "Variables[0] (MinionDelay) || Variables[1] ({[PassiveSkill03[3]]}) || ADD || RETURN",
             "displayLines": "(MinionDelay + {[PassiveSkill03[3]]})",
@@ -249,7 +248,8 @@ const configAbility = {
               "MinionDelay",
               "{[PassiveSkill03[3]]}"
             ]
-          }
+          },
+          "variableName": "MinionDelay"
         }
       ]
     },

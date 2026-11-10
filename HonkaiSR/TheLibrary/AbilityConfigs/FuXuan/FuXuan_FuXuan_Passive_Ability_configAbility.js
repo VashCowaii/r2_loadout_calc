@@ -19,7 +19,6 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "GDF_ExChangeHPCount",
           "value": {
             "operator": "Variables[0] (GDF_ExChangeHPCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(GDF_ExChangeHPCount - 1)",
@@ -29,12 +28,13 @@ const configAbility = {
             "variables": [
               "GDF_ExChangeHPCount"
             ]
-          }
+          },
+          "variableName": "GDF_ExChangeHPCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "GDF_LimboHPChangeFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "GDF_LimboHPChangeFlag"
         },
         {
           "name": "IF",

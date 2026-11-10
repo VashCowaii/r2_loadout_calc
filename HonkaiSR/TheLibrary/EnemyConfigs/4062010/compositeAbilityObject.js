@@ -568,8 +568,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill01_AssistCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill01_AssistCount"
         },
         "Deleted bullshit",
         {

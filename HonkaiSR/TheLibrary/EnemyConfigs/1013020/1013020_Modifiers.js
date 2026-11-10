@@ -66,7 +66,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (ModifierDamageUpValue) || Variables[1] (Buff_ModifierLayers) || MUL || RETURN",
                 "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)",
@@ -75,7 +74,8 @@ const configAbility = {
                   "ModifierDamageUpValue",
                   "Buff_ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",

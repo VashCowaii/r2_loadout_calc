@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Xueyi_Attack",
-      "value": 0
+      "value": 0,
+      "variableName": "_Xueyi_Attack"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -50,15 +50,15 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Xueyi_Attack",
-      "value": 1
+      "value": 1,
+      "variableName": "_Xueyi_Attack"
     }
   ],
   "onAbort": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Xueyi_Attack",
-      "value": 1
+      "value": 1,
+      "variableName": "_Xueyi_Attack"
     }
   ],
   "references": [],

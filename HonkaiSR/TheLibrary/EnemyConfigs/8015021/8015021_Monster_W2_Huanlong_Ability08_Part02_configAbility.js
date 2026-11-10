@@ -123,8 +123,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ActivityCount",
-      "value": 0
+      "value": 0,
+      "variableName": "ActivityCount"
     },
     {
       "name": "Remove Events/Bonuses",

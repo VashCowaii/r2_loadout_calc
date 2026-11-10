@@ -31,7 +31,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainStoryDamage",
               "value": {
                 "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
                 "displayLines": "{[Skill04[0]]}",
@@ -39,7 +38,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill04[0]]}"
                 ]
-              }
+              },
+              "variableName": "MainStoryDamage"
             }
           ]
         }
@@ -72,7 +72,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainStoryDamage",
               "value": {
                 "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
                 "displayLines": "{[Skill04[1]]}",
@@ -80,7 +79,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill04[1]]}"
                 ]
-              }
+              },
+              "variableName": "MainStoryDamage"
             }
           ]
         }
@@ -113,7 +113,6 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MainStoryDamage",
               "value": {
                 "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
                 "displayLines": "{[Skill04[2]]}",
@@ -121,7 +120,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill04[2]]}"
                 ]
-              }
+              },
+              "variableName": "MainStoryDamage"
             }
           ]
         }
@@ -289,9 +289,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "AIFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "AIFlag"
         },
         {
           "name": "Define Custom Variable",
@@ -299,9 +299,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "FlopSide",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "FlopSide"
         },
         {
           "name": "Remove Events/Bonuses",

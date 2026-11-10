@@ -11,9 +11,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "variableName": "isMainAttack",
+      "scope": "TargetEntity",
       "value": -1,
-      "scope": "TargetEntity"
+      "variableName": "isMainAttack"
     },
     {
       "name": "Find New Target",
@@ -88,8 +88,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
-              "value": -1
+              "value": -1,
+              "variableName": "AIFlag"
             }
           ],
           "failed": [
@@ -99,8 +99,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "AIFlag"
             }
           ]
         }
@@ -246,8 +246,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
-      "value": 2
+      "value": 2,
+      "variableName": "AIFlag"
     },
     {
       "name": "Remove Events/Bonuses",

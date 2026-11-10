@@ -74,8 +74,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -120,7 +120,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_TargetCount) || Variables[2] (DV_FantasticStory_PlusAbility_2018_ADF_3) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_TargetCount * DV_FantasticStory_PlusAbility_2018_ADF_3))",
@@ -130,7 +129,8 @@ const configAbility = {
                       "DV_TargetCount",
                       "DV_FantasticStory_PlusAbility_2018_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -199,8 +199,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -241,7 +241,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
                   "value": {
                     "operator": "Variables[0] (DV_TargetCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DV_TargetCount + 1)",
@@ -251,7 +250,8 @@ const configAbility = {
                     "variables": [
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -262,8 +262,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_TargetCount",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_TargetCount"
             }
           ]
         }
@@ -338,7 +338,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2016_ADF_3) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2016_ADF_3)",
@@ -347,7 +346,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_PlusAbility_2016_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -451,7 +451,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2015_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2015_ADF_3 * DV_TargetCount))",
@@ -461,7 +460,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2015_ADF_3",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -594,7 +594,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2014_ADF_3) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2014_ADF_3)",
@@ -603,7 +602,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_PlusAbility_2014_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -689,7 +689,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2014_ADF_3) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2014_ADF_3)",
@@ -698,7 +697,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_PlusAbility_2014_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -828,8 +828,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -874,7 +874,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_TargetCount) || Variables[2] (DV_FantasticStory_PlusAbility_2013_ADF_3) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_TargetCount * DV_FantasticStory_PlusAbility_2013_ADF_3))",
@@ -884,7 +883,8 @@ const configAbility = {
                       "DV_TargetCount",
                       "DV_FantasticStory_PlusAbility_2013_ADF_3"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -953,8 +953,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -995,7 +995,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
                   "value": {
                     "operator": "Variables[0] (DV_TargetCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DV_TargetCount + 1)",
@@ -1005,7 +1004,8 @@ const configAbility = {
                     "variables": [
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -1016,8 +1016,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_TargetCount",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_TargetCount"
             }
           ]
         }
@@ -1081,8 +1081,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             }
@@ -1093,8 +1093,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_InsertFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_InsertFlag"
             }
           ]
         },
@@ -1145,7 +1145,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2012_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2012_ADF_3 * DV_TargetCount))",
@@ -1155,7 +1154,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2012_ADF_3",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -1224,8 +1224,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -1302,7 +1302,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2011_ADF_4) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2011_ADF_4 * DV_TargetCount))",
@@ -1312,7 +1311,8 @@ const configAbility = {
                       "DV_FantasticStory_PlusAbility_2011_ADF_4",
                       "DV_TargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",
@@ -1381,8 +1381,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_TargetCount"
                 }
               ]
             }
@@ -1609,8 +1609,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Skill_Flag"
                 }
               ]
             }
@@ -1621,8 +1621,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Skill_Flag"
             }
           ]
         },
@@ -1964,8 +1964,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_InsertAttack_Count",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_InsertAttack_Count"
                 }
               ]
             }
@@ -1980,8 +1980,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_InsertAttack_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "_InsertAttack_Count"
             }
           ]
         },
@@ -2035,8 +2035,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.35
+                              "value": 0.35,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -2046,8 +2046,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.25
+                              "value": 0.25,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ]
                         }
@@ -2066,8 +2066,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.55
+                              "value": 0.55,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ],
                           "failed": [
@@ -2077,8 +2077,8 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "DV_PerformanceDelay",
-                              "value": 0.35
+                              "value": 0.35,
+                              "variableName": "DV_PerformanceDelay"
                             }
                           ]
                         }
@@ -2153,8 +2153,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_InsertAttack_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "_InsertAttack_Count"
             }
           ]
         }
@@ -2179,7 +2179,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BP_Dmgup_Ratio",
               "value": {
                 "operator": "Variables[0] (_Current_Layer) || Variables[1] (DV_FantasticStory_PlusAbility_2011_ADF_1) || MUL || RETURN",
                 "displayLines": "(_Current_Layer * DV_FantasticStory_PlusAbility_2011_ADF_1)",
@@ -2188,11 +2187,11 @@ const configAbility = {
                   "_Current_Layer",
                   "DV_FantasticStory_PlusAbility_2011_ADF_1"
                 ]
-              }
+              },
+              "variableName": "_BP_Dmgup_Ratio"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Speedup_Ratio",
               "value": {
                 "operator": "Variables[0] (_Current_Layer) || Variables[1] (DV_FantasticStory_PlusAbility_2011_ADF_2) || MUL || RETURN",
                 "displayLines": "(_Current_Layer * DV_FantasticStory_PlusAbility_2011_ADF_2)",
@@ -2201,7 +2200,8 @@ const configAbility = {
                   "_Current_Layer",
                   "DV_FantasticStory_PlusAbility_2011_ADF_2"
                 ]
-              }
+              },
+              "variableName": "_Speedup_Ratio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -2560,7 +2560,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
               "value": {
                 "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
                 "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
@@ -2568,7 +2567,8 @@ const configAbility = {
                 "variables": [
                   "DV_FantasticStory_BaseAbility_CountSumTemp"
                 ]
-              }
+              },
+              "variableName": "DV_FantasticStory_BaseAbility_CountSum"
             },
             {
               "name": "Update Surging Grit[PF]",
@@ -2600,8 +2600,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
             }
           ]
         },

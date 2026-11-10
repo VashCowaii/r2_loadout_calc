@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "EXSkill01",
       "value": {
         "operator": "Variables[0] (EXSkill01) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(EXSkill01 + 1)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           "EXSkill01"
         ]
-      }
+      },
+      "variableName": "EXSkill01"
     },
     {
       "name": "IF",
@@ -89,7 +89,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BPNeed",
       "value": {
         "operator": "Variables[0] (EXSkill01) || RETURN",
         "displayLines": "EXSkill01",
@@ -97,7 +96,8 @@ const configAbility = {
         "variables": [
           "EXSkill01"
         ]
-      }
+      },
+      "variableName": "BPNeed"
     },
     {
       "name": "IF",

@@ -23,8 +23,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Charged",
-              "value": 0
+              "value": 0,
+              "variableName": "_Charged"
             }
           ]
         },
@@ -65,8 +65,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Charged",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Charged"
                     }
                   ]
                 }

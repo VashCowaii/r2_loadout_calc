@@ -46,7 +46,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "UseTimes",
       "value": {
         "operator": "Variables[0] (UseTimes) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(UseTimes + 1)",
@@ -56,7 +55,8 @@ const configAbility = {
         "variables": [
           "UseTimes"
         ]
-      }
+      },
+      "variableName": "UseTimes"
     },
     {
       "name": "IF",
@@ -122,8 +122,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BGMChangeFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "BGMChangeFlag"
         }
       ]
     },

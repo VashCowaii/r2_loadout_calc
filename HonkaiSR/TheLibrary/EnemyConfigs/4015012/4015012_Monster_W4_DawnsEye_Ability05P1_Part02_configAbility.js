@@ -44,7 +44,7 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill05P1TotalDamage",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] ({[Skill05P1[0]]}) || Variables[1] (Skill04P1SunnyHeat) || MUL || RETURN",
         "displayLines": "({[Skill05P1[0]]} * Skill04P1SunnyHeat)",
@@ -54,7 +54,7 @@ const configAbility = {
           "Skill04P1SunnyHeat"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "Skill05P1TotalDamage"
     },
     {
       "name": "Define Custom Variable with Team Count",
@@ -277,8 +277,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04P1SunnyHeat",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill04P1SunnyHeat"
     },
     {
       "name": "Find New Target",

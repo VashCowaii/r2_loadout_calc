@@ -13,23 +13,23 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill10TargetNumber",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill10TargetNumber"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill10Damage",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill10Damage"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill10LightTeamShield",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill10LightTeamShield"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill10ShieldBreakFlag",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill10ShieldBreakFlag"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -51,7 +51,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill10Damage",
       "value": {
         "operator": "Variables[0] ({[Skill10[0]]}) || Variables[1] (Skill10Attack) || MUL || Variables[2] (Skill10TargetNumber) || MUL || RETURN",
         "displayLines": "(({[Skill10[0]]} * Skill10Attack) * Skill10TargetNumber)",
@@ -61,7 +60,8 @@ const configAbility = {
           "Skill10Attack",
           "Skill10TargetNumber"
         ]
-      }
+      },
+      "variableName": "Skill10Damage"
     },
     {
       "name": "Define Custom Variable with Modifier Values",
@@ -92,15 +92,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill10ShieldBreakFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "Skill10ShieldBreakFlag"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill10ShieldBreakFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill10ShieldBreakFlag"
         }
       ]
     },

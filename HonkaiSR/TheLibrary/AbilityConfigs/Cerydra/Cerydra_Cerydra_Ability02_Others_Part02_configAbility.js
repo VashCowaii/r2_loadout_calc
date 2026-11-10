@@ -154,8 +154,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_DelayReachPromotionRank01_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "DV_DelayReachPromotionRank01_Flag"
             },
             {
               "name": "Use Custom Character Function",
@@ -228,8 +228,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_DelayReachPromotionRank01_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "DV_DelayReachPromotionRank01_Flag"
     },
     "Trigger: Ability End"
   ],

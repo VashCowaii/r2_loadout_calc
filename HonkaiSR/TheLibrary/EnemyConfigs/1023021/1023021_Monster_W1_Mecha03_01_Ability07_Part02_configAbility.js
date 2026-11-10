@@ -18,8 +18,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonMonsterEatCount",
-          "value": 0
+          "value": 0,
+          "variableName": "SummonMonsterEatCount"
         },
         {
           "name": "Find New Target",
@@ -46,7 +46,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonMonsterEatCount",
               "value": {
                 "operator": "Variables[0] (SummonMonsterEatCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(SummonMonsterEatCount + 1)",
@@ -56,7 +55,8 @@ const configAbility = {
                 "variables": [
                   "SummonMonsterEatCount"
                 ]
-              }
+              },
+              "variableName": "SummonMonsterEatCount"
             }
           ]
         },

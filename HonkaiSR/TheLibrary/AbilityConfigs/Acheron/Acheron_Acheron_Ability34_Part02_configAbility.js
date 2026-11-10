@@ -256,13 +256,13 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "UltraFlagCount",
-      "value": 0
+      "value": 0,
+      "variableName": "UltraFlagCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TargetEntity_CurrentFlagCount",
-      "value": 0
+      "value": 0,
+      "variableName": "TargetEntity_CurrentFlagCount"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -274,18 +274,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TargetEntity_UltraFlagCount",
-      "value": 0
+      "value": 0,
+      "variableName": "TargetEntity_UltraFlagCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TargetEntity_LoopFlagCount",
-      "value": 0
+      "value": 0,
+      "variableName": "TargetEntity_LoopFlagCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Limbo_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Limbo_Count"
     },
     {
       "name": "Remove Events/Bonuses",

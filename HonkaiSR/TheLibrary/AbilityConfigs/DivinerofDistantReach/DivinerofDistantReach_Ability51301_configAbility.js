@@ -121,7 +121,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (0.18) || RETURN",
                     "displayLines": "0.18",
@@ -129,7 +128,8 @@ const configAbility = {
                     "variables": [
                       0.18
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -173,7 +173,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (0.1) || RETURN",
                         "displayLines": "0.1",
@@ -181,7 +180,8 @@ const configAbility = {
                         "variables": [
                           0.1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -238,8 +238,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTime",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "SkillTime"
                 }
               ]
             }

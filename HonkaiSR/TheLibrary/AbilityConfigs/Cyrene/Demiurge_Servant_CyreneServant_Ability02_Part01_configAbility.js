@@ -30,8 +30,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_HasBeenInVeiwMode",
-      "value": 0
+      "value": 0,
+      "variableName": "#CL_HasBeenInVeiwMode"
     },
     {
       "name": "Trigger Ability",

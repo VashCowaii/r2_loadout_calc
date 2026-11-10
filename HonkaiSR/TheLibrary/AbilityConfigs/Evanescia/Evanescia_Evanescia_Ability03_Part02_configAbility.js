@@ -41,7 +41,7 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "LoopCount",
+              "scope": "ContextAbility",
               "value": {
                 "operator": "Constants[0] (5) || Variables[0] (1) || ADD || RETURN",
                 "displayLines": "(5 + 1)",
@@ -52,7 +52,7 @@ const configAbility = {
                   1
                 ]
               },
-              "scope": "ContextAbility"
+              "variableName": "LoopCount"
             }
           ],
           "failed": [
@@ -67,7 +67,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "LoopCount",
+                  "scope": "ContextAbility",
                   "value": {
                     "operator": "Constants[0] (5) || Variables[0] (2) || ADD || RETURN",
                     "displayLines": "(5 + 2)",
@@ -78,13 +78,13 @@ const configAbility = {
                       2
                     ]
                   },
-                  "scope": "ContextAbility"
+                  "variableName": "LoopCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "LoopCount",
+                  "scope": "ContextAbility",
                   "value": {
                     "operator": "Constants[0] (5) || Variables[0] (4) || ADD || RETURN",
                     "displayLines": "(5 + 4)",
@@ -95,7 +95,7 @@ const configAbility = {
                       4
                     ]
                   },
-                  "scope": "ContextAbility"
+                  "variableName": "LoopCount"
                 }
               ]
             }
@@ -105,9 +105,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "LoopCount",
+          "scope": "ContextAbility",
           "value": 5,
-          "scope": "ContextAbility"
+          "variableName": "LoopCount"
         }
       ]
     },

@@ -54,8 +54,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TalkTriggerFlag_07",
-              "value": -1
+              "value": -1,
+              "variableName": "TalkTriggerFlag_07"
             }
           ]
         },
@@ -98,8 +98,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_04",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "TalkTriggerFlag_04"
                 }
               ]
             }
@@ -123,8 +123,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_03",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_03"
                 }
               ]
             },
@@ -143,8 +143,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_07",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_07"
                 }
               ]
             }
@@ -177,8 +177,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_04",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_04"
                 }
               ]
             }
@@ -213,13 +213,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_06",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_06"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_07",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TalkTriggerFlag_07"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -227,9 +227,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "TutorialFlag",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "TutorialFlag"
                     }
                   ]
                 }
@@ -1604,7 +1604,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_SuccessChance",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (Inferno_Skill02_SuccessChance) || RETURN",
                 "displayLines": "Inferno_Skill02_SuccessChance",
@@ -1613,7 +1613,7 @@ const configAbility = {
                   "Inferno_Skill02_SuccessChance"
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_SuccessChance"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1630,7 +1630,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_LoseHPPreshow",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (Inferno_Skill02_DamagePercentage) || MUL || RETURN",
                 "displayLines": "(MDF_MaxHP * Inferno_Skill02_DamagePercentage)",
@@ -1640,7 +1640,7 @@ const configAbility = {
                   "Inferno_Skill02_DamagePercentage"
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_LoseHPPreshow"
             }
           ]
         },
@@ -1744,9 +1744,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Painter: Self}}"
                   },
-                  "variableName": "TutorialFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "TutorialFlag"
                 }
               ]
             }

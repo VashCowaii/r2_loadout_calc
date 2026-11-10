@@ -796,7 +796,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Limbo_Count",
                       "value": {
                         "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Limbo_Count + 1)",
@@ -806,7 +805,8 @@ const configAbility = {
                         "variables": [
                           "Limbo_Count"
                         ]
-                      }
+                      },
+                      "variableName": "Limbo_Count"
                     }
                   ]
                 }
@@ -893,7 +893,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Limbo_Count",
                           "value": {
                             "operator": "Variables[0] (Limbo_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Limbo_Count + 1)",
@@ -903,7 +902,8 @@ const configAbility = {
                             "variables": [
                               "Limbo_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Limbo_Count"
                         }
                       ]
                     }
@@ -1191,8 +1191,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Passive_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Passive_Count"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1335,8 +1335,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SkillUseDubuff",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_SkillUseDubuff"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1463,15 +1463,15 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnterBattleFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "EnterBattleFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnterBattleFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "EnterBattleFlag"
                 }
               ]
             }

@@ -543,8 +543,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Monster_W3_Figure_02_AimTargetCount",
-      "value": 1
+      "value": 1,
+      "variableName": "Monster_W3_Figure_02_AimTargetCount"
     },
     "Trigger: Ability End"
   ],

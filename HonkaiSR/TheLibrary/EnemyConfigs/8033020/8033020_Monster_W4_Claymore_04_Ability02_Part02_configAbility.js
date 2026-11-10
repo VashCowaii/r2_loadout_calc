@@ -1085,8 +1085,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AppearMark",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AppearMark"
                 }
               ]
             }
@@ -1127,8 +1127,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AppearMark",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AppearMark"
                 }
               ]
             }

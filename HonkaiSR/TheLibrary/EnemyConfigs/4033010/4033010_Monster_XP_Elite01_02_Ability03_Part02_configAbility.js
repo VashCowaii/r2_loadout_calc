@@ -21,7 +21,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(RallyCount + 1)",
@@ -31,7 +30,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -57,7 +57,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(RallyCount - 1)",
@@ -67,7 +66,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -88,7 +88,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(RallyCount + 1)",
@@ -98,7 +97,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -116,7 +116,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(RallyCount - 1)",
@@ -126,7 +125,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -147,7 +147,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(RallyCount + 1)",
@@ -157,7 +156,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -175,7 +175,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(RallyCount - 1)",
@@ -185,7 +184,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -206,7 +206,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(RallyCount + 1)",
@@ -216,7 +215,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -278,7 +278,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "RallyCount",
           "value": {
             "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(RallyCount - 1)",
@@ -288,7 +287,8 @@ const configAbility = {
             "variables": [
               "RallyCount"
             ]
-          }
+          },
+          "variableName": "RallyCount"
         }
       ]
     },
@@ -307,7 +307,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "RallyCount",
       "value": {
         "operator": "Variables[0] (RallyCount) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(RallyCount - 1)",
@@ -317,7 +316,8 @@ const configAbility = {
         "variables": [
           "RallyCount"
         ]
-      }
+      },
+      "variableName": "RallyCount"
     },
     "Trigger: Ability End"
   ],

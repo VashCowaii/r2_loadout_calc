@@ -340,15 +340,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "AIFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -375,8 +375,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Trigger",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Trigger"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -565,8 +565,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Trigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Trigger"
                 },
                 {
                   "name": "IF",

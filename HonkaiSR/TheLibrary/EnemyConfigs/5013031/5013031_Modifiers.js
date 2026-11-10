@@ -801,7 +801,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -810,7 +809,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -867,7 +867,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -876,7 +875,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -933,7 +933,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -942,7 +941,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -999,7 +999,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1008,7 +1007,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1065,7 +1065,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1074,7 +1073,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1131,7 +1131,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1140,7 +1139,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1197,7 +1197,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ResistanceDown",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1206,7 +1205,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_ResistanceDown"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1485,9 +1485,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurrentMaxColorType",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "CurrentMaxColorType"
             },
             {
               "name": "Define Custom Variable",
@@ -1495,7 +1495,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurrentMaxColorScore",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (CurrentMaxColorType) || RETURN",
                 "displayLines": "CurrentMaxColorType",
@@ -1504,7 +1504,7 @@ const configAbility = {
                   "CurrentMaxColorType"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "CurrentMaxColorScore"
             },
             {
               "name": "IF",
@@ -1532,9 +1532,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1542,7 +1542,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (IceScore) || RETURN",
                     "displayLines": "IceScore",
@@ -1551,7 +1551,7 @@ const configAbility = {
                       "IceScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1581,9 +1581,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 3,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1591,7 +1591,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (ImaginaryScore) || RETURN",
                     "displayLines": "ImaginaryScore",
@@ -1600,7 +1600,7 @@ const configAbility = {
                       "ImaginaryScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1630,9 +1630,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 4,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1640,7 +1640,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (PhysicalScore) || RETURN",
                     "displayLines": "PhysicalScore",
@@ -1649,7 +1649,7 @@ const configAbility = {
                       "PhysicalScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1679,9 +1679,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 5,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1689,7 +1689,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (QuantumScore) || RETURN",
                     "displayLines": "QuantumScore",
@@ -1698,7 +1698,7 @@ const configAbility = {
                       "QuantumScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1728,9 +1728,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 6,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1738,7 +1738,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (ThunderScore) || RETURN",
                     "displayLines": "ThunderScore",
@@ -1747,7 +1747,7 @@ const configAbility = {
                       "ThunderScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1777,9 +1777,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 7,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1787,7 +1787,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (WindScore) || RETURN",
                     "displayLines": "WindScore",
@@ -1796,7 +1796,7 @@ const configAbility = {
                       "WindScore"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 }
               ]
             },
@@ -1816,8 +1816,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentColorSlotIndex",
-              "value": 6
+              "value": 6,
+              "variableName": "CurrentColorSlotIndex"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2506,9 +2506,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurrentColorSlotIndex",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "CurrentColorSlotIndex"
             },
             {
               "name": "Define Custom Variable",
@@ -2516,9 +2516,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "FireScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "FireScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2526,9 +2526,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "IceScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "IceScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2536,9 +2536,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ImaginaryScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "ImaginaryScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2546,9 +2546,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "PhysicalScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "PhysicalScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2556,9 +2556,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "QuantumScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "QuantumScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2566,9 +2566,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ThunderScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "ThunderScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2576,9 +2576,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "WindScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "WindScore"
             },
             {
               "name": "Define Custom Variable",
@@ -2586,9 +2586,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurrentMaxColorType",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "CurrentMaxColorType"
             },
             {
               "name": "Define Custom Variable",
@@ -2596,9 +2596,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurrentMaxColorScore",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "CurrentMaxColorScore"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2640,9 +2640,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ElationDamageFlag",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "_ElationDamageFlag"
                 }
               ]
             }
@@ -2770,9 +2770,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "_ElationDamageFlag",
+              "scope": "ContextModifier",
               "value": 0,
-              "scope": "ContextModifier"
+              "variableName": "_ElationDamageFlag"
             }
           ]
         },
@@ -2864,9 +2864,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ElationDamageFlag",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "_ElationDamageFlag"
                     }
                   ]
                 }
@@ -3969,9 +3969,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentColorSlotIndex",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentColorSlotIndex"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3979,9 +3979,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "FireScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "FireScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3989,9 +3989,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "IceScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "IceScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3999,9 +3999,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ImaginaryScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ImaginaryScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4009,9 +4009,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "PhysicalScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "PhysicalScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4019,9 +4019,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "QuantumScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "QuantumScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4029,9 +4029,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ThunderScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ThunderScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4039,9 +4039,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "WindScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "WindScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4049,9 +4049,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4059,9 +4059,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

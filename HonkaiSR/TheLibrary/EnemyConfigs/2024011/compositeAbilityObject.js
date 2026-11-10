@@ -204,9 +204,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertCheck",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1320,8 +1320,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
+          "value": 4,
+          "variableName": "MaxMinionCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1408,8 +1408,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxMinionCount",
-          "value": 4
+          "value": 4,
+          "variableName": "MaxMinionCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1421,9 +1421,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "InsertCheck",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "InsertCheck"
         }
       ],
       "targetObjectData": {
@@ -3488,7 +3488,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill08_BonusCount",
           "value": {
             "operator": "Variables[0] (MinionCount) || RETURN",
             "displayLines": "MinionCount",
@@ -3496,7 +3495,8 @@ const compositeAbilityObject = {
             "variables": [
               "MinionCount"
             ]
-          }
+          },
+          "variableName": "Skill08_BonusCount"
         },
         {
           "name": "ATK Scaling DMG",

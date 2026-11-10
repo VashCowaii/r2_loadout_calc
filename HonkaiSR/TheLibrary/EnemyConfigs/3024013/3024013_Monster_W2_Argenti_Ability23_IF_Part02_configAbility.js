@@ -223,8 +223,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "FlowerPower",
-      "value": 0
+      "value": 0,
+      "variableName": "FlowerPower"
     },
     {
       "name": "Remove Events/Bonuses",

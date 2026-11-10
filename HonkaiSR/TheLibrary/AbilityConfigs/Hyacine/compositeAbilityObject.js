@@ -61,14 +61,13 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ExtraMaxHPRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_ExtraMaxHPRatio"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
                     "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
@@ -77,7 +76,8 @@ const compositeAbilityObject = {
                       "MDF_MaxHPRatio",
                       "MDF_ExtraMaxHPRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -247,8 +247,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Energy",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Energy"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -318,14 +318,13 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ExtraMaxHPRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_ExtraMaxHPRatio"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
                     "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
@@ -334,7 +333,8 @@ const compositeAbilityObject = {
                       "MDF_HaloMaxHPRatio",
                       "MDF_ExtraMaxHPRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -535,7 +535,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddRatioTotal",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
@@ -544,7 +543,8 @@ const compositeAbilityObject = {
                       "MDF_DamageAddRatio",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddRatioTotal"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -895,7 +895,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentSpeed",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -904,11 +903,11 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           "_CurrentSpeedConvert"
                         ]
-                      }
+                      },
+                      "variableName": "_CurrentSpeed"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
                         "displayLines": "(_CurrentSpeed - 200)",
@@ -917,7 +916,8 @@ const compositeAbilityObject = {
                           "_CurrentSpeed",
                           200
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     },
                     {
                       "name": "IF",
@@ -937,7 +937,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_OverCountSpeedValue",
                           "value": {
                             "operator": "Variables[0] (200) || RETURN",
                             "displayLines": "200",
@@ -945,7 +944,8 @@ const compositeAbilityObject = {
                             "variables": [
                               200
                             ]
-                          }
+                          },
+                          "variableName": "_OverCountSpeedValue"
                         }
                       ]
                     },
@@ -967,7 +967,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HealHPRatioAdd",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                             "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -978,7 +977,8 @@ const compositeAbilityObject = {
                               1,
                               0.01
                             ]
-                          }
+                          },
+                          "variableName": "_HealHPRatioAdd"
                         },
                         {
                           "name": "IF",
@@ -989,7 +989,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_MaxCritDmgAdd",
                               "value": {
                                 "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
                                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
@@ -1000,7 +999,8 @@ const compositeAbilityObject = {
                                   1,
                                   0.02
                                 ]
-                              }
+                              },
+                              "variableName": "_MaxCritDmgAdd"
                             }
                           ]
                         }
@@ -1008,13 +1008,13 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HealHPRatioAdd",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_HealHPRatioAdd"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_MaxCritDmgAdd",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_MaxCritDmgAdd"
                         }
                       ]
                     },
@@ -1624,7 +1624,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HealCount",
                       "value": {
                         "operator": "Variables[0] (_HealCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_HealCount + 1)",
@@ -1634,7 +1633,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_HealCount"
                         ]
-                      }
+                      },
+                      "variableName": "_HealCount"
                     }
                   ]
                 },
@@ -1649,7 +1649,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HealValue",
                   "value": {
                     "operator": "Variables[0] (_HealValue) || Constants[0] (1) || Variables[1] (ExtraHealRatio) || ADD || MUL || RETURN",
                     "displayLines": "(_HealValue * (1 + ExtraHealRatio))",
@@ -1660,11 +1659,11 @@ const compositeAbilityObject = {
                       "_HealValue",
                       "ExtraHealRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_HealValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_HealValueTotal",
                   "value": {
                     "operator": "Variables[0] (_HealValueTotal) || Variables[1] (_HealValue) || ADD || RETURN",
                     "displayLines": "(_HealValueTotal + _HealValue)",
@@ -1673,7 +1672,8 @@ const compositeAbilityObject = {
                       "_HealValueTotal",
                       "_HealValue"
                     ]
-                  }
+                  },
+                  "variableName": "_HealValueTotal"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1681,7 +1681,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "variableName": "_SummonerHealValueTotal",
                   "value": {
                     "operator": "Variables[0] (_HealValueTotal) || RETURN",
                     "displayLines": "_HealValueTotal",
@@ -1689,7 +1688,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_HealValueTotal"
                     ]
-                  }
+                  },
+                  "variableName": "_SummonerHealValueTotal"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1797,7 +1797,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Memosprite}}"
                       },
-                      "variableName": "_SummonerHealCount",
                       "value": {
                         "operator": "Variables[0] (_HealCount) || RETURN",
                         "displayLines": "_HealCount",
@@ -1805,7 +1804,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_HealCount"
                         ]
-                      }
+                      },
+                      "variableName": "_SummonerHealCount"
                     }
                   ]
                 }
@@ -2087,7 +2087,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_CurrenMaxtHP",
           "value": {
             "operator": "Variables[0] (_CurrenMaxtHP) || Variables[1] (_CurrentHPConvert) || SUB || RETURN",
             "displayLines": "(_CurrenMaxtHP - _CurrentHPConvert)",
@@ -2096,7 +2095,8 @@ const compositeAbilityObject = {
               "_CurrenMaxtHP",
               "_CurrentHPConvert"
             ]
-          }
+          },
+          "variableName": "_CurrenMaxtHP"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2313,15 +2313,15 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsSummon",
-              "value": 1
+              "value": 1,
+              "variableName": "_IsSummon"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_IsSummon",
-              "value": 0
+              "value": 0,
+              "variableName": "_IsSummon"
             }
           ]
         },
@@ -2737,7 +2737,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_HealValueTotal",
                   "value": {
                     "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
                     "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
@@ -2746,7 +2745,8 @@ const compositeAbilityObject = {
                       "_ServantHealValueTotal",
                       "_SummonerHealValueTotal"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HealValueTotal"
                 }
               ]
             }
@@ -2819,7 +2819,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ServantLoseHPValue",
                       "value": {
                         "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
                         "displayLines": "(_RealRatio * _ServantMaxHP)",
@@ -2828,7 +2827,8 @@ const compositeAbilityObject = {
                           "_RealRatio",
                           "_ServantMaxHP"
                         ]
-                      }
+                      },
+                      "variableName": "_ServantLoseHPValue"
                     },
                     {
                       "name": "Define Custom Variable with Copy",
@@ -3069,7 +3069,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ServantHealValueTotal",
                   "value": {
                     "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_ServantHealValue) || ADD || RETURN",
                     "displayLines": "(_ServantHealValueTotal + _ServantHealValue)",
@@ -3078,7 +3077,8 @@ const compositeAbilityObject = {
                       "_ServantHealValueTotal",
                       "_ServantHealValue"
                     ]
-                  }
+                  },
+                  "variableName": "_ServantHealValueTotal"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3168,7 +3168,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "_TempServantHealValueTotal",
                   "value": {
                     "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
                     "displayLines": "_ServantHealValueTotal",
@@ -3176,7 +3175,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_ServantHealValueTotal"
                     ]
-                  }
+                  },
+                  "variableName": "_TempServantHealValueTotal"
                 }
               ]
             },
@@ -3337,7 +3337,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_ServantLoseHPValue",
                           "value": {
                             "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
                             "displayLines": "(_RealRatio * _ServantMaxHP)",
@@ -3346,7 +3345,8 @@ const compositeAbilityObject = {
                               "_RealRatio",
                               "_ServantMaxHP"
                             ]
-                          }
+                          },
+                          "variableName": "_ServantLoseHPValue"
                         },
                         {
                           "name": "Define Custom Variable with Copy",
@@ -3656,8 +3656,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "_FirstTimeSummon",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_FirstTimeSummon"
                     }
                   ],
                   "failed": [
@@ -3797,13 +3797,12 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_HealCount",
+          "scope": "SummonerEntity",
           "value": 0,
-          "scope": "SummonerEntity"
+          "variableName": "_HealCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotal",
           "value": {
             "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
             "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
@@ -3812,11 +3811,11 @@ const compositeAbilityObject = {
               "_ServantHealValueTotal",
               "_SummonerHealValueTotal"
             ]
-          }
+          },
+          "variableName": "_ServantHealValueTotal"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ServantHealValueTotalNew",
           "value": {
             "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
             "displayLines": "_ServantHealValueTotal",
@@ -3824,7 +3823,8 @@ const compositeAbilityObject = {
             "variables": [
               "_ServantHealValueTotal"
             ]
-          }
+          },
+          "variableName": "_ServantHealValueTotalNew"
         },
         {
           "name": "IF",
@@ -3840,7 +3840,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_ServantHealValueTotal",
               "value": {
                 "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.5) || MUL || SUB || RETURN",
                 "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.5))",
@@ -3849,13 +3848,13 @@ const compositeAbilityObject = {
                   "_ServantHealValueTotal",
                   0.5
                 ]
-              }
+              },
+              "variableName": "_ServantHealValueTotal"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_ServantHealValueTotal",
               "value": {
                 "operator": "Variables[0] (_ServantHealValueTotal) || Variables[0] (_ServantHealValueTotal) || Variables[1] (0.12) || MUL || SUB || RETURN",
                 "displayLines": "(_ServantHealValueTotal - (_ServantHealValueTotal * 0.12))",
@@ -3864,7 +3863,8 @@ const compositeAbilityObject = {
                   "_ServantHealValueTotal",
                   0.12
                 ]
-              }
+              },
+              "variableName": "_ServantHealValueTotal"
             }
           ]
         },
@@ -3879,8 +3879,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SummonerHealValueTotal",
-          "value": 0
+          "value": 0,
+          "variableName": "_SummonerHealValueTotal"
         },
         {
           "name": "Define Custom Variable",
@@ -3888,8 +3888,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Summoner}}"
           },
-          "variableName": "_HealValueTotal",
-          "value": 0
+          "value": 0,
+          "variableName": "_HealValueTotal"
         },
         {
           "name": "Add Events/Bonuses",

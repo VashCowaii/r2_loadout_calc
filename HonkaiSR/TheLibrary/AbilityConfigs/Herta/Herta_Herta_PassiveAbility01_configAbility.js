@@ -24,28 +24,28 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Scoring_Herta_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Scoring_Herta_Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Skill01_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Skill01_Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Count_ATK",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Count_ATK"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Herta_Count_Insert",
-      "value": 0
+      "value": 0,
+      "variableName": "Herta_Count_Insert"
     }
   ],
   "references": [
@@ -76,13 +76,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Herta_Count_ATK",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Herta_Count_ATK"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Herta_Count_Insert",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Herta_Count_Insert"
                 }
               ]
             },
@@ -192,7 +192,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Herta_Count",
                           "value": {
                             "operator": "Variables[0] (Herta_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Herta_Count + 1)",
@@ -202,19 +201,20 @@ const configAbility = {
                             "variables": [
                               "Herta_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Herta_Count"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Herta_Count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Herta_Count"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Scoring_Herta_Count",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Scoring_Herta_Count"
                         }
                       ]
                     }
@@ -278,18 +278,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Herta_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Herta_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Scoring_Herta_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "Scoring_Herta_Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Herta_Count_ATK",
-              "value": 0
+              "value": 0,
+              "variableName": "Herta_Count_ATK"
             },
             {
               "name": "Remove Events/Bonuses",

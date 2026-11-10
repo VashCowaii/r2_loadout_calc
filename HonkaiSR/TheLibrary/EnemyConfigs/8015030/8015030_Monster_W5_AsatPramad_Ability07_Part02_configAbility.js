@@ -291,8 +291,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentFace",
-          "value": 0
+          "value": 0,
+          "variableName": "CurrentFace"
         }
       ],
       "failed": [
@@ -306,8 +306,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentFace",
-          "value": 1
+          "value": 1,
+          "variableName": "CurrentFace"
         }
       ]
     }

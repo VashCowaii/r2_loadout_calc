@@ -218,17 +218,17 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AI_HeiShengBei_SpecialAI",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "AI_HeiShengBei_SpecialAI"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AI_HeiShengBei_Need",
+          "scope": "TargetEntity",
           "value": 1,
-          "scope": "TargetEntity"
+          "variableName": "AI_HeiShengBei_Need"
         }
       ]
     }

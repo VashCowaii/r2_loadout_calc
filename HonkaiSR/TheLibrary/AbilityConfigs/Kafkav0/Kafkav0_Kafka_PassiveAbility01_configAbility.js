@@ -16,8 +16,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Kafka_Listen_Rank1",
-      "value": 0
+      "value": 0,
+      "variableName": "Kafka_Listen_Rank1"
     },
     {
       "name": "Add Events/Bonuses",
@@ -45,13 +45,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Kafka_Listen_Rank2",
-      "value": 0
+      "value": 0,
+      "variableName": "Kafka_Listen_Rank2"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Kafka_Listen_Rank6",
-      "value": 0
+      "value": 0,
+      "variableName": "Kafka_Listen_Rank6"
     },
     {
       "name": "Add Events/Bonuses",
@@ -127,8 +127,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Kafka_Listen_Rank6",
-              "value": 0
+              "value": 0,
+              "variableName": "Kafka_Listen_Rank6"
             },
             {
               "name": "Remove Events/Bonuses",

@@ -52,7 +52,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ZhanYinCount",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -60,12 +59,13 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "ZhanYinCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ZhanYinCount_01",
-          "value": 0
+          "value": 0,
+          "variableName": "ZhanYinCount_01"
         },
         {
           "name": "Update Displayed Energy Bar",

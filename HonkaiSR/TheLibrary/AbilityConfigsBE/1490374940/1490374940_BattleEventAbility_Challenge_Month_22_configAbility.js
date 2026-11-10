@@ -183,7 +183,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg",
               "value": {
                 "operator": "Variables[0] (DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg) || Constants[0] (0.1) || MUL || RETURN",
                 "displayLines": "(DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg * 0.1)",
@@ -193,7 +192,8 @@ const configAbility = {
                 "variables": [
                   "DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg"
                 ]
-              }
+              },
+              "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus3_layerDmg"
             }
           ]
         }
@@ -294,7 +294,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Bomb_Damage",
               "value": {
                 "operator": "Variables[0] (Bomb_Damage) || Variables[1] (Bomb_Layer) || MUL || RETURN",
                 "displayLines": "(Bomb_Damage * Bomb_Layer)",
@@ -303,7 +302,8 @@ const configAbility = {
                   "Bomb_Damage",
                   "Bomb_Layer"
                 ]
-              }
+              },
+              "variableName": "Bomb_Damage"
             },
             {
               "name": "Add Ability",
@@ -341,7 +341,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Bomb_Damage",
                   "value": {
                     "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1.5) || MUL || RETURN",
                     "displayLines": "(Bomb_Damage * 1.5)",
@@ -351,7 +350,8 @@ const configAbility = {
                     "variables": [
                       "Bomb_Damage"
                     ]
-                  }
+                  },
+                  "variableName": "Bomb_Damage"
                 },
                 {
                   "name": "Add Events/Bonuses",

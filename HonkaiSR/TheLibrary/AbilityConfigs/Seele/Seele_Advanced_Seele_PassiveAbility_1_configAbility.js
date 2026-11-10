@@ -250,8 +250,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertAction",
-              "value": 0
+              "value": 0,
+              "variableName": "InsertAction"
             }
           ]
         },
@@ -315,8 +315,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -373,7 +373,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertActionCount",
                   "value": {
                     "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Seele_BonusInsertActionCount + 1)",
@@ -383,7 +382,8 @@ const configAbility = {
                     "variables": [
                       "Seele_BonusInsertActionCount"
                     ]
-                  }
+                  },
+                  "variableName": "Seele_BonusInsertActionCount"
                 },
                 {
                   "name": "Inject Extra-Turn",
@@ -394,12 +394,11 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertActionCount",
                       "value": {
                         "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -409,7 +408,8 @@ const configAbility = {
                         "variables": [
                           "Seele_BonusInsertActionCount"
                         ]
-                      }
+                      },
+                      "variableName": "Seele_BonusInsertActionCount"
                     },
                     {
                       "name": "IF",
@@ -513,8 +513,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -559,8 +559,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Seele_BonusInsertAction",
-              "value": 0
+              "value": 0,
+              "variableName": "Seele_BonusInsertAction"
             },
             {
               "name": "IF",
@@ -573,8 +573,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "IF",
@@ -609,7 +609,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertActionCount",
                   "value": {
                     "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(Seele_BonusInsertActionCount + 1)",
@@ -619,7 +618,8 @@ const configAbility = {
                     "variables": [
                       "Seele_BonusInsertActionCount"
                     ]
-                  }
+                  },
+                  "variableName": "Seele_BonusInsertActionCount"
                 },
                 {
                   "name": "Inject Extra-Turn",
@@ -630,12 +630,11 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertActionCount",
                       "value": {
                         "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -645,7 +644,8 @@ const configAbility = {
                         "variables": [
                           "Seele_BonusInsertActionCount"
                         ]
-                      }
+                      },
+                      "variableName": "Seele_BonusInsertActionCount"
                     },
                     {
                       "name": "IF",
@@ -702,12 +702,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Seele_BonusInsertAction"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertActionCount",
                   "value": {
                     "operator": "Variables[0] (Seele_BonusInsertActionCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Seele_BonusInsertActionCount - 1)",
@@ -717,14 +716,15 @@ const configAbility = {
                     "variables": [
                       "Seele_BonusInsertActionCount"
                     ]
-                  }
+                  },
+                  "variableName": "Seele_BonusInsertActionCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Seele_BonusInsertAction"
                 }
               ]
             }
@@ -742,8 +742,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Seele_BonusInsertAction"
                 },
                 {
                   "name": "Remove Events/Bonuses",

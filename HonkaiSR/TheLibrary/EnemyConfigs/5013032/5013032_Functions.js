@@ -30,7 +30,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot1",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -38,7 +37,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot1"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -57,8 +57,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "CurrentColorSlotIndex"
                 }
               ]
             },
@@ -68,7 +68,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot2",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -76,7 +75,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot2"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -95,8 +95,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "CurrentColorSlotIndex"
                 }
               ]
             },
@@ -106,7 +106,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot3",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -114,7 +113,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot3"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -133,8 +133,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "CurrentColorSlotIndex"
                 }
               ]
             },
@@ -144,7 +144,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot4",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -152,7 +151,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot4"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -171,8 +171,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "CurrentColorSlotIndex"
                 }
               ]
             },
@@ -182,7 +182,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot5",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -190,7 +189,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot5"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -209,8 +209,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "CurrentColorSlotIndex"
                 }
               ]
             },
@@ -220,7 +220,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot6",
                   "value": {
                     "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                     "displayLines": "TaskListDF_ColorValue",
@@ -228,7 +227,8 @@ const configAbility = {
                     "variables": [
                       "TaskListDF_ColorValue"
                     ]
-                  }
+                  },
+                  "variableName": "ColorSlot6"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -247,8 +247,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 7
+                  "value": 7,
+                  "variableName": "CurrentColorSlotIndex"
                 },
                 {
                   "name": "IF",
@@ -753,8 +753,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot1"
                 }
               ]
             },
@@ -974,8 +974,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot2"
                 }
               ]
             },
@@ -1195,8 +1195,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot3",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot3"
                 }
               ]
             },
@@ -1416,8 +1416,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot4",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot4"
                 }
               ]
             },
@@ -1637,8 +1637,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot5",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot5"
                 }
               ]
             },
@@ -1858,8 +1858,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot6",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot6"
                 }
               ]
             }
@@ -2109,8 +2109,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot1"
                 }
               ]
             },
@@ -2330,8 +2330,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot2"
                 }
               ]
             },
@@ -2551,8 +2551,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot3",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot3"
                 }
               ]
             },
@@ -2772,8 +2772,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot4",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot4"
                 }
               ]
             },
@@ -2993,8 +2993,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot5",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot5"
                 }
               ]
             },
@@ -3214,8 +3214,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ColorSlot6",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ColorSlot6"
                 }
               ]
             }

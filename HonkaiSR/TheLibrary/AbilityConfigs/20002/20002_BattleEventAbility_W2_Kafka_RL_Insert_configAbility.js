@@ -107,9 +107,9 @@ const configAbility = {
           "success": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MindControlSuccess",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "MindControlSuccess"
             }
           ]
         },
@@ -136,9 +136,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MindControlSuccess",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "MindControlSuccess"
         }
       ]
     },
@@ -152,9 +152,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEventFlag",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "BattleEventFlag"
     }
   ],
   "references": [],

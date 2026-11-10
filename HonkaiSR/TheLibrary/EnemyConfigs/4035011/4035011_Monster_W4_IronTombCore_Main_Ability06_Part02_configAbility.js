@@ -206,8 +206,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_MissionTalkEnd",
-      "value": 1
+      "value": 1,
+      "variableName": "_MissionTalkEnd"
     },
     "Trigger: Ability End"
   ],

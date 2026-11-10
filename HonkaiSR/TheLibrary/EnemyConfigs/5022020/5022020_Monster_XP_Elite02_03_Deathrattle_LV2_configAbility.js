@@ -39,9 +39,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonMonsterNum",
+          "scope": "TargetEntity",
           "value": 2,
-          "scope": "TargetEntity"
+          "variableName": "SummonMonsterNum"
         }
       ],
       "failed": [
@@ -60,17 +60,17 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonMonsterNum",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "SummonMonsterNum"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonMonsterNum",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "SummonMonsterNum"
             }
           ]
         }

@@ -75,8 +75,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "Bronya_LimboFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Bronya_LimboFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -294,8 +294,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Bronya_LimboFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Bronya_LimboFlag"
                 },
                 {
                   "name": "Find New Target",

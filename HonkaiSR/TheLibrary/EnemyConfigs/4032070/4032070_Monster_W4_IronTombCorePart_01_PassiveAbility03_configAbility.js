@@ -50,7 +50,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AIFlag",
           "value": {
             "operator": "Variables[0] (_TempAIFlag) || RETURN",
             "displayLines": "_TempAIFlag",
@@ -58,7 +57,8 @@ const configAbility = {
             "variables": [
               "_TempAIFlag"
             ]
-          }
+          },
+          "variableName": "AIFlag"
         },
         {
           "name": "Use Custom Character Function",

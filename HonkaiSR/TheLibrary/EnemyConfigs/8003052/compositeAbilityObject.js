@@ -54,7 +54,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ModifierAttackAddedRatio",
                   "value": {
                     "operator": "Variables[0] (PassiveSkillInitiate_P1_AttackAddedRatio) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(PassiveSkillInitiate_P1_AttackAddedRatio * ModifierLayers)",
@@ -63,7 +62,8 @@ const compositeAbilityObject = {
                       "PassiveSkillInitiate_P1_AttackAddedRatio",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "ModifierAttackAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -83,7 +83,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ModifierMaxLayer",
                   "value": {
                     "operator": "Variables[0] ({[PassiveSkillInitiate[2]]}) || RETURN",
                     "displayLines": "{[PassiveSkillInitiate[2]]}",
@@ -91,7 +90,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[PassiveSkillInitiate[2]]}"
                     ]
-                  }
+                  },
+                  "variableName": "ModifierMaxLayer"
                 }
               ]
             },

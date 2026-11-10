@@ -305,18 +305,18 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceHead_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "EnhanceHead_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceLimb_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "EnhanceLimb_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhanceTail_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "EnhanceTail_Flag"
     },
     {
       "name": "Add Events/Bonuses",

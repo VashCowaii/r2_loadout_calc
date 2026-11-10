@@ -17,8 +17,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CDF_IsEnterBattle",
-          "value": 0
+          "value": 0,
+          "variableName": "CDF_IsEnterBattle"
         },
         {
           "name": "Add Events/Bonuses",
@@ -85,8 +85,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CDF_IsEnterBattle",
-              "value": 1
+              "value": 1,
+              "variableName": "CDF_IsEnterBattle"
             }
           ],
           "entryTargetType": "AllHitTarget"

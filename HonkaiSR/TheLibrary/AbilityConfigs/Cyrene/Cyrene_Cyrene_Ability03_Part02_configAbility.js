@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "SpecialSPNeed",
-      "value": 12
+      "value": 12,
+      "variableName": "SpecialSPNeed"
     },
     {
       "name": "Use Custom Character Function",
@@ -58,7 +58,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "variableName": "CurSpecialSP",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (CurSpecialSP) || RETURN",
         "displayLines": "CurSpecialSP",
@@ -67,7 +67,7 @@ const configAbility = {
           "CurSpecialSP"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "CurSpecialSP"
     },
     {
       "name": "IF",

@@ -260,8 +260,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_LockHp03",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_LockHp03"
                 }
               ]
             }
@@ -315,8 +315,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_LockHp02",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_LockHp02"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -389,8 +389,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_LockHp01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_LockHp01"
                     },
                     {
                       "name": "Inject Ability Use",

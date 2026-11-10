@@ -560,8 +560,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill07_Added_AttackRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Skill07_Added_AttackRatio"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -871,7 +871,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AvatarBurningCount",
               "value": {
                 "operator": "Variables[0] (AvatarBurningCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(AvatarBurningCount + 1)",
@@ -881,7 +880,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "AvatarBurningCount"
                 ]
-              }
+              },
+              "variableName": "AvatarBurningCount"
             }
           ]
         },
@@ -1495,8 +1495,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BurningCount",
-          "value": 0
+          "value": 0,
+          "variableName": "BurningCount"
         },
         {
           "name": "Find New Target",
@@ -1527,7 +1527,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BurningCount",
               "value": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
                 "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
@@ -1536,7 +1535,8 @@ const compositeAbilityObject = {
                   "ENEMIES_OBJECT_UNUSED__253",
                   "BurningLayer"
                 ]
-              }
+              },
+              "variableName": "BurningCount"
             }
           ]
         },
@@ -1550,8 +1550,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AvatarBurningCount",
-          "value": 0
+          "value": 0,
+          "variableName": "AvatarBurningCount"
         },
         "Trigger: Ability End"
       ],

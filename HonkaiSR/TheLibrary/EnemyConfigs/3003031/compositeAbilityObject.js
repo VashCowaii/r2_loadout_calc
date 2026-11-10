@@ -123,13 +123,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_Figure_02_BattleScore1_Flag1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "W3_Figure_02_BattleScore1_Flag1"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_Figure_02_BattleScore1_Flag2",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W3_Figure_02_BattleScore1_Flag2"
                     }
                   ]
                 }
@@ -165,8 +165,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "W3_Figure_02_BattleScore1_Flag2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W3_Figure_02_BattleScore1_Flag2"
                 }
               ]
             },
@@ -187,8 +187,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W3_Figure_02_BattleScore1_Flag2",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "W3_Figure_02_BattleScore1_Flag2"
                     }
                   ]
                 }
@@ -268,7 +268,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DangerLevel",
                   "value": {
                     "operator": "Constants[0] (5) || Variables[0] (Monster_W3_Figure_02_AimTargetCount) || SUB || RETURN",
                     "displayLines": "(5 - Monster_W3_Figure_02_AimTargetCount)",
@@ -278,7 +277,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Monster_W3_Figure_02_AimTargetCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DangerLevel"
                 }
               ]
             },
@@ -394,8 +394,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 7
+                  "value": 7,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Action Advance/Delay",
@@ -638,8 +638,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 7
+                      "value": 7,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -1769,8 +1769,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Monster_W3_Figure_02_AimTargetCount",
-          "value": 1
+          "value": 1,
+          "variableName": "Monster_W3_Figure_02_AimTargetCount"
         },
         "Trigger: Ability End"
       ],
@@ -1928,8 +1928,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "W3_Figure_02_BattleScore1_Flag1",
-          "value": 1
+          "value": 1,
+          "variableName": "W3_Figure_02_BattleScore1_Flag1"
         },
         "Trigger: Ability End"
       ],

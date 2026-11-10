@@ -64,13 +64,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_PhaseFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_PhaseFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPCount_Sum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BPCount_Sum"
                 }
               ]
             },
@@ -114,7 +114,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BPCount_Sum",
                       "value": {
                         "operator": "Variables[0] (_BPCount_Sum) || Variables[1] (ABS) || Variables[2] (_BPCount) || PARAM_1 || FUNCTION || ADD || RETURN",
                         "displayLines": "(_BPCount_Sum + &nbsp;<span class=\"descriptionFunctionColor\">ABS</span>(_BPCount))",
@@ -124,7 +123,8 @@ const compositeAbilityObject = {
                           "ABS",
                           "_BPCount"
                         ]
-                      }
+                      },
+                      "variableName": "_BPCount_Sum"
                     },
                     {
                       "name": "IF",
@@ -160,8 +160,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_PhaseFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_PhaseFlag"
                         }
                       ]
                     }

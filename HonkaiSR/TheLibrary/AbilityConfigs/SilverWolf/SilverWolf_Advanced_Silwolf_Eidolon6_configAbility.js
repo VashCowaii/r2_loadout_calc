@@ -31,7 +31,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageAddedRatio",
               "value": {
                 "operator": "Variables[0] (_DebuffCount) || Variables[1] (0.2) || MUL || RETURN",
                 "displayLines": "(_DebuffCount * 0.2)",
@@ -40,7 +39,8 @@ const configAbility = {
                   "_DebuffCount",
                   0.2
                 ]
-              }
+              },
+              "variableName": "MDF_DamageAddedRatio"
             },
             {
               "name": "IF",
@@ -60,7 +60,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddedRatio",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -68,7 +67,8 @@ const configAbility = {
                     "variables": [
                       1
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddedRatio"
                 }
               ]
             },

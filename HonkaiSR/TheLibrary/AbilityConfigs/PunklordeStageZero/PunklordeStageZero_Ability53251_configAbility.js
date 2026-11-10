@@ -36,8 +36,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Flag_1",
-              "value": 0
+              "value": 0,
+              "variableName": "_Flag_1"
             },
             {
               "name": "Stack Target Stat Value",
@@ -71,8 +71,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Flag_1",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "_Flag_1"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -141,8 +141,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Flag_1",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Flag_1"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -229,8 +229,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Flag_1",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Flag_1"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -301,8 +301,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Flag_1",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "_Flag_1"
                     },
                     {
                       "name": "Add Events/Bonuses",

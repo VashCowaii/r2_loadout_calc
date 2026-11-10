@@ -27,12 +27,11 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_First_Sprint",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_First_Sprint"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SprintModifiedSteerSpeed",
           "value": {
             "operator": "Variables[0] (SprintModifiedSteerSpeed) || RETURN",
             "displayLines": "SprintModifiedSteerSpeed",
@@ -40,11 +39,11 @@ const configAbility = {
             "variables": [
               "SprintModifiedSteerSpeed"
             ]
-          }
+          },
+          "variableName": "SprintModifiedSteerSpeed"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SprintModifiedSpeed",
           "value": {
             "operator": "Variables[0] (SprintModifiedSpeed) || RETURN",
             "displayLines": "SprintModifiedSpeed",
@@ -52,7 +51,8 @@ const configAbility = {
             "variables": [
               "SprintModifiedSpeed"
             ]
-          }
+          },
+          "variableName": "SprintModifiedSpeed"
         },
         {
           "name": "IF",
@@ -129,8 +129,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SprintModifiedSteerSpeed",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "SprintModifiedSteerSpeed"
                 },
                 {
                   "name": "IF",
@@ -151,15 +151,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SprintModifiedSpeed",
-                      "value": 14
+                      "value": 14,
+                      "variableName": "SprintModifiedSpeed"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SprintModifiedSpeed",
-                      "value": 20
+                      "value": 20,
+                      "variableName": "SprintModifiedSpeed"
                     }
                   ]
                 }

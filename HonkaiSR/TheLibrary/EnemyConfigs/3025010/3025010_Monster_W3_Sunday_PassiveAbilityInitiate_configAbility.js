@@ -290,8 +290,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103329912",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103329912"
                 }
               ]
             },
@@ -319,8 +319,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103329913",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103329913"
                 }
               ]
             },
@@ -348,8 +348,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103329915",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103329915"
                 }
               ]
             },
@@ -377,8 +377,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103329916",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103329916"
                 }
               ]
             },
@@ -406,8 +406,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103329934",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103329934"
                 }
               ]
             }
@@ -447,8 +447,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BattleEventTalkTriggerFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "BattleEventTalkTriggerFlag"
                     }
                   ],
                   "failed": [
@@ -502,8 +502,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TalkTriggerFlag_103329922",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TalkTriggerFlag_103329922"
                     }
                   ]
                 }

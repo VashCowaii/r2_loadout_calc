@@ -61,9 +61,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEventFlag",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "BattleEventFlag"
     },
     {
       "name": "Find New Target",

@@ -107,8 +107,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "InsertCheck",
-              "value": 1
+              "value": 1,
+              "variableName": "InsertCheck"
             },
             {
               "name": "IF",

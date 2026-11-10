@@ -154,7 +154,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AggroAddedRatio",
               "value": {
                 "operator": "Variables[0] (MDF_AggroAddedRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(MDF_AggroAddedRatio_PerLayer * ModifierLayers)",
@@ -163,7 +162,8 @@ const configAbility = {
                   "MDF_AggroAddedRatio_PerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_AggroAddedRatio"
             },
             {
               "name": "Stack Target Stat Value",

@@ -14,8 +14,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Ultra",
-      "value": 1
+      "value": 1,
+      "variableName": "Is_Ultra"
     },
     {
       "name": "IF",
@@ -151,13 +151,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_StanceAddAttackRatio",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_StanceAddAttackRatio"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Ultra",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_Ultra"
     },
     {
       "name": "Remove Events/Bonuses",

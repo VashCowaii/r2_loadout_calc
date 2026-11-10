@@ -116,8 +116,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_FirstTalk",
-          "value": 1
+          "value": 1,
+          "variableName": "_FirstTalk"
         },
         {
           "name": "Find New Target",

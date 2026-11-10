@@ -40,7 +40,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HealRatio",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
                     "displayLines": "0.15",
@@ -48,7 +47,8 @@ const configAbility = {
                     "variables": [
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HealRatio"
                 }
               ]
             },

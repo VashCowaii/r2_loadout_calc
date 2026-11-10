@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "AddUltraDamage",
-      "value": 0
+      "value": 0,
+      "variableName": "AddUltraDamage"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "FinalUltraDamage",
-      "value": 0
+      "value": 0,
+      "variableName": "FinalUltraDamage"
     },
     {
       "name": "Add Events/Bonuses",

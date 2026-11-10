@@ -137,7 +137,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TriggerItemChance",
       "value": {
         "operator": "Variables[0] (TriggerItemBaseChance) || RETURN",
         "displayLines": "TriggerItemBaseChance",
@@ -145,7 +144,8 @@ const configAbility = {
         "variables": [
           "TriggerItemBaseChance"
         ]
-      }
+      },
+      "variableName": "TriggerItemChance"
     },
     "Trigger: Ability End"
   ],

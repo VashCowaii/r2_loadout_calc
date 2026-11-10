@@ -23,8 +23,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_isSkill",
-              "value": 1
+              "value": 1,
+              "variableName": "_isSkill"
             }
           ]
         },
@@ -94,8 +94,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isSkill",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_isSkill"
                     },
                     {
                       "name": "Use Custom Character Function",

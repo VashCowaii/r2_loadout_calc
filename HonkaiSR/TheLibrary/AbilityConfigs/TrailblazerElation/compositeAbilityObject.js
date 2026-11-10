@@ -709,9 +709,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_random",
+              "scope": "ContextAbility",
               "value": 100,
-              "scope": "ContextAbility"
+              "variableName": "_random"
             }
           ],
           "failed": [
@@ -727,8 +727,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_sum_probability",
-          "value": 1
+          "value": 1,
+          "variableName": "_sum_probability"
         },
         {
           "name": "IF",
@@ -753,16 +753,16 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Define Custom Variable",
-              "variableName": "_result",
-              "value": 1
+              "value": 1,
+              "variableName": "_result"
             }
           ],
           "failed": [
             "Deleted bullshit",
             {
               "name": "Define Custom Variable",
-              "variableName": "_result",
-              "value": 0
+              "value": 0,
+              "variableName": "_result"
             }
           ]
         },
@@ -777,15 +777,15 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_no_ssr_times",
+              "scope": "ContextCaster",
               "value": 0,
-              "scope": "ContextCaster"
+              "variableName": "_no_ssr_times"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_no_ssr_times",
+              "scope": "ContextCaster",
               "value": {
                 "operator": "Variables[0] (_no_ssr_times) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_no_ssr_times + 1)",
@@ -796,7 +796,7 @@ const compositeAbilityObject = {
                   "_no_ssr_times"
                 ]
               },
-              "scope": "ContextCaster"
+              "variableName": "_no_ssr_times"
             }
           ]
         },
@@ -847,9 +847,9 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_no_ssr_times",
+          "scope": "ContextCaster",
           "value": 0,
-          "scope": "ContextCaster"
+          "variableName": "_no_ssr_times"
         }
       ],
       "onAbortReg": [],
@@ -1514,8 +1514,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "player_SkillTree_PointB1_AddedValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "player_SkillTree_PointB1_AddedValue"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1546,7 +1546,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "player_SkillTree_PointB1_AddedValue",
                           "value": {
                             "operator": "Variables[0] (0.6) || RETURN",
                             "displayLines": "0.6",
@@ -1554,7 +1553,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.6
                             ]
-                          }
+                          },
+                          "variableName": "player_SkillTree_PointB1_AddedValue"
                         }
                       ]
                     },

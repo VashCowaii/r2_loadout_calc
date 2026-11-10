@@ -34,8 +34,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Charge",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_Charge"
     }
   ],
   "targetObjectData": {
@@ -134,13 +134,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Charge",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Charge"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_BeingAttacked",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_BeingAttacked"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -148,8 +148,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Is_Traitor",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Traitor"
                 },
                 {
                   "name": "Change Entity Turn-State",
@@ -161,8 +161,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -234,18 +234,18 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Is_Traitor",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Is_Traitor"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_BeingAttacked",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Is_BeingAttacked"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_Charge",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Is_Charge"
                     },
                     {
                       "name": "Change Entity Turn-State",
@@ -302,13 +302,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_BeingAttacked",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Is_BeingAttacked"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_Charge",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Charge"
                 },
                 {
                   "name": "Change Entity Turn-State",
@@ -343,8 +343,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Is_Traitor",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Is_Traitor"
                     }
                   ]
                 }

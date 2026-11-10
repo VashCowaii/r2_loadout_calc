@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Rank06_StanceBreakAddedRatio",
       "value": {
         "operator": "Variables[0] (0.5) || RETURN",
         "displayLines": "0.5",
@@ -14,7 +13,8 @@ const configAbility = {
         "variables": [
           0.5
         ]
-      }
+      },
+      "variableName": "Rank06_StanceBreakAddedRatio"
     }
   ],
   "references": [],

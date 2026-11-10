@@ -248,8 +248,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 7
+              "value": 7,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -259,8 +259,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 6
+              "value": 6,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -270,8 +270,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 5
+              "value": 5,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -281,8 +281,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 4
+              "value": 4,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -292,8 +292,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 3
+              "value": 3,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -303,8 +303,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 2
+              "value": 2,
+              "variableName": "Weakness_CountDown"
             }
           ]
         },
@@ -314,8 +314,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weakness_CountDown",
-              "value": 1
+              "value": 1,
+              "variableName": "Weakness_CountDown"
             }
           ]
         }

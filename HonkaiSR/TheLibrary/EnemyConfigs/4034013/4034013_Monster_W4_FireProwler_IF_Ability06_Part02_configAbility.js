@@ -6,23 +6,23 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill01_AssistCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill01_AssistCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill02_AssistCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill02_AssistCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill01_CurCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill01_CurCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill02_CurCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill02_CurCount"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -707,8 +707,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Assist_Flag",
-          "value": 2
+          "value": 2,
+          "variableName": "Assist_Flag"
         }
       ],
       "failed": [
@@ -1159,8 +1159,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Assist_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Assist_Flag"
         }
       ]
     },

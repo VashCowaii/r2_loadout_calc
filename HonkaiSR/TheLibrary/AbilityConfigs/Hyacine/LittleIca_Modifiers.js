@@ -185,7 +185,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_HealValueTotal",
               "value": {
                 "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_SummonerHealValueTotal) || ADD || RETURN",
                 "displayLines": "(_ServantHealValueTotal + _SummonerHealValueTotal)",
@@ -194,7 +193,8 @@ const configAbility = {
                   "_ServantHealValueTotal",
                   "_SummonerHealValueTotal"
                 ]
-              }
+              },
+              "variableName": "MDF_HealValueTotal"
             }
           ]
         }
@@ -267,7 +267,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ServantLoseHPValue",
                   "value": {
                     "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
                     "displayLines": "(_RealRatio * _ServantMaxHP)",
@@ -276,7 +275,8 @@ const configAbility = {
                       "_RealRatio",
                       "_ServantMaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "_ServantLoseHPValue"
                 },
                 {
                   "name": "Define Custom Variable with Copy",
@@ -517,7 +517,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_ServantHealValueTotal",
               "value": {
                 "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_ServantHealValue) || ADD || RETURN",
                 "displayLines": "(_ServantHealValueTotal + _ServantHealValue)",
@@ -526,7 +525,8 @@ const configAbility = {
                   "_ServantHealValueTotal",
                   "_ServantHealValue"
                 ]
-              }
+              },
+              "variableName": "_ServantHealValueTotal"
             },
             {
               "name": "Add Events/Bonuses",
@@ -616,7 +616,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_TempServantHealValueTotal",
               "value": {
                 "operator": "Variables[0] (_ServantHealValueTotal) || RETURN",
                 "displayLines": "_ServantHealValueTotal",
@@ -624,7 +623,8 @@ const configAbility = {
                 "variables": [
                   "_ServantHealValueTotal"
                 ]
-              }
+              },
+              "variableName": "_TempServantHealValueTotal"
             }
           ]
         },
@@ -785,7 +785,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ServantLoseHPValue",
                       "value": {
                         "operator": "Variables[0] (_RealRatio) || Variables[1] (_ServantMaxHP) || MUL || RETURN",
                         "displayLines": "(_RealRatio * _ServantMaxHP)",
@@ -794,7 +793,8 @@ const configAbility = {
                           "_RealRatio",
                           "_ServantMaxHP"
                         ]
-                      }
+                      },
+                      "variableName": "_ServantLoseHPValue"
                     },
                     {
                       "name": "Define Custom Variable with Copy",

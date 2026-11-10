@@ -53,7 +53,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue5",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
                 "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
@@ -63,7 +62,8 @@ const configAbility = {
                   "MDF_PropertyValue2",
                   "MDF_PropertyValue4"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue5"
             }
           ]
         },
@@ -106,7 +106,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue5",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || Variables[2] (MDF_PropertyValue4) || MUL || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue2 * MDF_PropertyValue4))",
@@ -116,7 +115,8 @@ const configAbility = {
                       "MDF_PropertyValue2",
                       "MDF_PropertyValue4"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue5"
                 }
               ]
             }

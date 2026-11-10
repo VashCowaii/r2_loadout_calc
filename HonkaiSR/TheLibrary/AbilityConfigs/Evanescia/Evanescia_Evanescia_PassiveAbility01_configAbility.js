@@ -360,8 +360,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HitCaster",
-              "value": 0
+              "value": 0,
+              "variableName": "HitCaster"
             },
             {
               "name": "Find New Target",
@@ -392,8 +392,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HitCaster",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "HitCaster"
                     }
                   ],
                   "failed": [
@@ -644,8 +644,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_MergeElationEchoPointMDF",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_MergeElationEchoPointMDF"
                         }
                       ]
                     },
@@ -826,7 +826,6 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "old_EvanesciaSP",
                   "value": {
                     "operator": "Variables[0] (EvanesciaSP) || RETURN",
                     "displayLines": "EvanesciaSP",
@@ -834,7 +833,8 @@ const configAbility = {
                     "variables": [
                       "EvanesciaSP"
                     ]
-                  }
+                  },
+                  "variableName": "old_EvanesciaSP"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -860,8 +860,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SPChangeFromSync",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SPChangeFromSync"
                     }
                   ],
                   "failed": [
@@ -883,8 +883,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EchoChangeFromSync",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "EchoChangeFromSync"
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -955,7 +955,6 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "old_EvanesciaEnergy",
                   "value": {
                     "operator": "Variables[0] (EvanesciaEnergy) || RETURN",
                     "displayLines": "EvanesciaEnergy",
@@ -963,7 +962,8 @@ const configAbility = {
                     "variables": [
                       "EvanesciaEnergy"
                     ]
-                  }
+                  },
+                  "variableName": "old_EvanesciaEnergy"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -989,8 +989,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EchoChangeFromSync",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EchoChangeFromSync"
                     }
                   ],
                   "failed": [
@@ -1012,8 +1012,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SPChangeFromSync",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "SPChangeFromSync"
                         },
                         {
                           "name": "Update Energy",

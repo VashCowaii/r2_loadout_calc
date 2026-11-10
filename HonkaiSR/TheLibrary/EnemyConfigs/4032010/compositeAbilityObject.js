@@ -294,8 +294,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TriggerFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TriggerFlag"
                     }
                   ]
                 }
@@ -379,7 +379,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "HealCount",
                       "value": {
                         "operator": "Variables[0] (HealCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(HealCount + 1)",
@@ -389,7 +388,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "HealCount"
                         ]
-                      }
+                      },
+                      "variableName": "HealCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -510,8 +510,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HealCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HealCount"
                 }
               ]
             },
@@ -566,8 +566,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HealCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HealCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -823,7 +823,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "HealCount",
                       "value": {
                         "operator": "Variables[0] (HealCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(HealCount + 1)",
@@ -833,7 +832,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "HealCount"
                         ]
-                      }
+                      },
+                      "variableName": "HealCount"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -951,8 +951,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HealCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HealCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1208,7 +1208,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_MaxHP_Dirty_Ratio",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (MDF_DirtyRatio) || SUB || Variables[1] (MDF_DirtyValue) || Variables[2] (MDF_CurrentHP_DownScale) || DIV || Constants[0] (1) || DIV || SUB || RETURN",
                     "displayLines": "((1 - MDF_DirtyRatio) - ((MDF_DirtyValue / MDF_CurrentHP_DownScale) / 1))",
@@ -1220,7 +1219,8 @@ const compositeAbilityObject = {
                       "MDF_DirtyValue",
                       "MDF_CurrentHP_DownScale"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_MaxHP_Dirty_Ratio"
                 },
                 {
                   "name": "IF",

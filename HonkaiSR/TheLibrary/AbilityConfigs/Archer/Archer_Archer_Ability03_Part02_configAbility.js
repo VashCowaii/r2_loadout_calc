@@ -492,7 +492,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_RestEnergy",
       "value": {
         "operator": "Variables[0] (MDF_RestEnergy) || Variables[1] (2) || ADD || RETURN",
         "displayLines": "(MDF_RestEnergy + 2)",
@@ -501,7 +500,8 @@ const configAbility = {
           "MDF_RestEnergy",
           2
         ]
-      }
+      },
+      "variableName": "MDF_RestEnergy"
     },
     {
       "name": "Update Displayed Energy Bar",

@@ -352,8 +352,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "BattleEvent_Lingsha_00_PointB3",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "BattleEvent_Lingsha_00_PointB3"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -610,9 +610,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "variableName": "Lingsha_AttackTime",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "Lingsha_AttackTime"
             }
           ]
         },
@@ -626,7 +626,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_AttackTime",
               "value": {
                 "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_AttackTime - 1)",
@@ -636,7 +635,8 @@ const configAbility = {
                 "variables": [
                   "_AttackTime"
                 ]
-              }
+              },
+              "variableName": "_AttackTime"
             },
             {
               "name": "Show Attack Count",
@@ -660,7 +660,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "variableName": "Lingsha_AttackTime",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (_AttackTime) || RETURN",
                 "displayLines": "_AttackTime",
@@ -669,7 +669,7 @@ const configAbility = {
                   "_AttackTime"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "Lingsha_AttackTime"
             },
             {
               "name": "Update Displayed Energy Bar",

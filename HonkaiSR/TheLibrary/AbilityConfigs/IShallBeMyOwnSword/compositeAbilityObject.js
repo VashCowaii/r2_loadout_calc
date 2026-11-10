@@ -117,8 +117,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Flag"
                 }
               ]
             },

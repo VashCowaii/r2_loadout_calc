@@ -53,7 +53,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DmgAddValue",
                   "value": {
                     "operator": "Variables[0] (MDF_DmgAddNum) || Variables[1] (0.04) || MUL || RETURN",
                     "displayLines": "(MDF_DmgAddNum * 0.04)",
@@ -62,7 +61,8 @@ const compositeAbilityObject = {
                       "MDF_DmgAddNum",
                       0.04
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DmgAddValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -117,7 +117,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PreDmgAddNum",
                       "value": {
                         "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
                         "displayLines": "MDF_DmgAddNum",
@@ -125,11 +124,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DmgAddNum"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PreDmgAddNum"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgAddNum",
                       "value": {
                         "operator": "Constants[0] (0) || RETURN",
                         "displayLines": "0",
@@ -137,7 +136,8 @@ const compositeAbilityObject = {
                           0
                         ],
                         "variables": []
-                      }
+                      },
+                      "variableName": "MDF_DmgAddNum"
                     },
                     {
                       "name": "Find New Target",
@@ -156,7 +156,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DmgAddNum",
                           "value": {
                             "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_DmgAddNum + 1)",
@@ -166,7 +165,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DmgAddNum"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DmgAddNum"
                         }
                       ]
                     },
@@ -268,7 +268,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PreDmgAddNum",
                       "value": {
                         "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
                         "displayLines": "MDF_DmgAddNum",
@@ -276,11 +275,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DmgAddNum"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PreDmgAddNum"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgAddNum",
                       "value": {
                         "operator": "Constants[0] (0) || RETURN",
                         "displayLines": "0",
@@ -288,7 +287,8 @@ const compositeAbilityObject = {
                           0
                         ],
                         "variables": []
-                      }
+                      },
+                      "variableName": "MDF_DmgAddNum"
                     },
                     {
                       "name": "Find New Target",
@@ -307,7 +307,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DmgAddNum",
                           "value": {
                             "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_DmgAddNum + 1)",
@@ -317,7 +316,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DmgAddNum"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DmgAddNum"
                         }
                       ]
                     },

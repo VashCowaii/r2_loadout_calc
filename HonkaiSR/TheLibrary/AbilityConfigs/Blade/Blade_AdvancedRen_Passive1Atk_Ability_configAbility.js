@@ -22,8 +22,8 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "MwRen_isAttack",
-          "value": 1
+          "value": 1,
+          "variableName": "MwRen_isAttack"
         },
         {
           "name": "Trigger Ability",

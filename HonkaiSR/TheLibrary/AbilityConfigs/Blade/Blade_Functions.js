@@ -24,7 +24,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterLostHPPercentage",
               "value": {
                 "operator": "Variables[0] (CasterLostHP) || Variables[1] (CasterMaxHP) || DIV || RETURN",
                 "displayLines": "(CasterLostHP / CasterMaxHP)",
@@ -33,7 +32,8 @@ const configAbility = {
                   "CasterLostHP",
                   "CasterMaxHP"
                 ]
-              }
+              },
+              "variableName": "CasterLostHPPercentage"
             }
           ]
         },
@@ -56,7 +56,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterMaxHP) || Variables[1] (0.9) || MUL || RETURN",
                 "displayLines": "(CasterMaxHP * 0.9)",
@@ -65,13 +64,13 @@ const configAbility = {
                   "CasterMaxHP",
                   0.9
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CasterFinalLostHP",
               "value": {
                 "operator": "Variables[0] (CasterLostHP) || RETURN",
                 "displayLines": "CasterLostHP",
@@ -79,7 +78,8 @@ const configAbility = {
                 "variables": [
                   "CasterLostHP"
                 ]
-              }
+              },
+              "variableName": "CasterFinalLostHP"
             }
           ]
         },

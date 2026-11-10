@@ -1599,7 +1599,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyRatio",
                       "value": {
                         "operator": "Variables[0] (0.72) || RETURN",
                         "displayLines": "0.72",
@@ -1607,7 +1606,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.72
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyRatio"
                     }
                   ]
                 },
@@ -1760,8 +1760,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
+                  "value": 999,
+                  "variableName": "_count"
                 }
               ]
             },
@@ -1831,8 +1831,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_count"
                     }
                   ]
                 }
@@ -1843,8 +1843,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
+                  "value": 999,
+                  "variableName": "_count"
                 }
               ]
             },
@@ -1883,8 +1883,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_count"
                     }
                   ]
                 }
@@ -1895,8 +1895,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
+                  "value": 999,
+                  "variableName": "_count"
                 }
               ]
             },
@@ -1905,8 +1905,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 999
+                  "value": 999,
+                  "variableName": "_count"
                 }
               ]
             }
@@ -1946,7 +1946,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                             "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -1956,13 +1955,13 @@ const compositeAbilityObject = {
                             "variables": [
                               "Rank06_Extra_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || RETURN",
                             "displayLines": "1",
@@ -1970,7 +1969,8 @@ const compositeAbilityObject = {
                               1
                             ],
                             "variables": []
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ]
                     },
@@ -2141,7 +2141,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Rank06_Weighted_Stack_Layer",
                               "value": {
                                 "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                                 "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -2151,13 +2150,13 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Rank06_Extra_Layer"
                                 ]
-                              }
+                              },
+                              "variableName": "Rank06_Weighted_Stack_Layer"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Rank06_Weighted_Stack_Layer",
                               "value": {
                                 "operator": "Constants[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -2165,7 +2164,8 @@ const compositeAbilityObject = {
                                   1
                                 ],
                                 "variables": []
-                              }
+                              },
+                              "variableName": "Rank06_Weighted_Stack_Layer"
                             }
                           ]
                         },
@@ -2292,7 +2292,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                             "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -2302,13 +2301,13 @@ const compositeAbilityObject = {
                             "variables": [
                               "Rank06_Extra_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || RETURN",
                             "displayLines": "1",
@@ -2316,7 +2315,8 @@ const compositeAbilityObject = {
                               1
                             ],
                             "variables": []
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ]
                     },
@@ -2463,8 +2463,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_count"
                 }
               ]
             },
@@ -2499,8 +2499,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_count",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_count"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2520,8 +2520,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_count"
                 }
               ]
             }
@@ -2576,7 +2576,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                             "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -2586,13 +2585,13 @@ const compositeAbilityObject = {
                             "variables": [
                               "Rank06_Extra_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || RETURN",
                             "displayLines": "1",
@@ -2600,7 +2599,8 @@ const compositeAbilityObject = {
                               1
                             ],
                             "variables": []
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ]
                     },
@@ -2815,7 +2815,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "Rank06_Weighted_Stack_Layer",
                                   "value": {
                                     "operator": "Variables[0] (6) || Variables[1] (Rank06_Extra_Layer) || ADD || RETURN",
                                     "displayLines": "(6 + Rank06_Extra_Layer)",
@@ -2824,13 +2823,13 @@ const compositeAbilityObject = {
                                       6,
                                       "Rank06_Extra_Layer"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "Rank06_Weighted_Stack_Layer"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "Rank06_Weighted_Stack_Layer",
                                   "value": {
                                     "operator": "Variables[0] (6) || RETURN",
                                     "displayLines": "6",
@@ -2838,7 +2837,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       6
                                     ]
-                                  }
+                                  },
+                                  "variableName": "Rank06_Weighted_Stack_Layer"
                                 }
                               ]
                             },
@@ -4387,13 +4387,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MazeSkill_Triggered",
+          "scope": "ContextCaster",
           "value": 1,
-          "scope": "ContextCaster"
+          "variableName": "MazeSkill_Triggered"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_can_continue",
           "value": {
             "operator": "Constants[0] (1) || RETURN",
             "displayLines": "1",
@@ -4401,16 +4400,16 @@ const compositeAbilityObject = {
               1
             ],
             "variables": []
-          }
+          },
+          "variableName": "_can_continue"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_loop_count",
-          "value": 0
+          "value": 0,
+          "variableName": "_loop_count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_current_chance",
           "value": {
             "operator": "Variables[0] (1.5) || RETURN",
             "displayLines": "1.5",
@@ -4418,7 +4417,8 @@ const compositeAbilityObject = {
             "variables": [
               1.5
             ]
-          }
+          },
+          "variableName": "_current_chance"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4452,7 +4452,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_loop_count",
               "value": {
                 "operator": "Variables[0] (_loop_count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_loop_count + 1)",
@@ -4462,11 +4461,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "_loop_count"
                 ]
-              }
+              },
+              "variableName": "_loop_count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_can_continue",
               "value": {
                 "operator": "Constants[0] (0) || RETURN",
                 "displayLines": "0",
@@ -4474,7 +4473,8 @@ const compositeAbilityObject = {
                   0
                 ],
                 "variables": []
-              }
+              },
+              "variableName": "_can_continue"
             },
             {
               "name": "Find New Target",
@@ -4508,7 +4508,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank06_Weighted_Stack_Layer",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                         "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -4518,13 +4517,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "Rank06_Extra_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "Rank06_Weighted_Stack_Layer"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Rank06_Weighted_Stack_Layer",
                       "value": {
                         "operator": "Constants[0] (1) || RETURN",
                         "displayLines": "1",
@@ -4532,7 +4531,8 @@ const compositeAbilityObject = {
                           1
                         ],
                         "variables": []
-                      }
+                      },
+                      "variableName": "Rank06_Weighted_Stack_Layer"
                     }
                   ]
                 },
@@ -4621,7 +4621,7 @@ const compositeAbilityObject = {
                   "success": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_can_continue",
+                      "scope": "ContextAbility",
                       "value": {
                         "operator": "Constants[0] (1) || RETURN",
                         "displayLines": "1",
@@ -4630,7 +4630,7 @@ const compositeAbilityObject = {
                         ],
                         "variables": []
                       },
-                      "scope": "ContextAbility"
+                      "variableName": "_can_continue"
                     }
                   ],
                   "failed": [
@@ -4648,7 +4648,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_current_chance",
               "value": {
                 "operator": "Variables[0] (_current_chance) || Variables[1] (0.5) || MUL || RETURN",
                 "displayLines": "(_current_chance * 0.5)",
@@ -4657,7 +4656,8 @@ const compositeAbilityObject = {
                   "_current_chance",
                   0.5
                 ]
-              }
+              },
+              "variableName": "_current_chance"
             },
             {
               "name": "IF",
@@ -4821,7 +4821,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Max_DOT_Layer",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (50) || RETURN",
             "displayLines": "50",
@@ -4830,7 +4830,7 @@ const compositeAbilityObject = {
               50
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "Max_DOT_Layer"
         },
         {
           "name": "IF",
@@ -4858,7 +4858,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_Chance",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
                 "displayLines": "0.5",
@@ -4866,11 +4865,11 @@ const compositeAbilityObject = {
                 "variables": [
                   0.5
                 ]
-              }
+              },
+              "variableName": "Rank06_Chance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_Extra_Layer",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -4878,19 +4877,20 @@ const compositeAbilityObject = {
                 "variables": [
                   1
                 ]
-              }
+              },
+              "variableName": "Rank06_Extra_Layer"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_Chance",
-              "value": 0
+              "value": 0,
+              "variableName": "Rank06_Chance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Rank06_Extra_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "Rank06_Extra_Layer"
             }
           ]
         }
@@ -5163,7 +5163,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                             "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -5173,13 +5172,13 @@ const compositeAbilityObject = {
                             "variables": [
                               "Rank06_Extra_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Rank06_Weighted_Stack_Layer",
                           "value": {
                             "operator": "Constants[0] (1) || RETURN",
                             "displayLines": "1",
@@ -5187,7 +5186,8 @@ const compositeAbilityObject = {
                               1
                             ],
                             "variables": []
-                          }
+                          },
+                          "variableName": "Rank06_Weighted_Stack_Layer"
                         }
                       ]
                     },
@@ -5768,7 +5768,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                     "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -5778,13 +5777,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "Rank06_Extra_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -5792,7 +5791,8 @@ const compositeAbilityObject = {
                       1
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ]
             },
@@ -5983,7 +5983,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                     "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -5993,13 +5992,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "Rank06_Extra_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -6007,7 +6006,8 @@ const compositeAbilityObject = {
                       1
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ]
             },
@@ -6376,7 +6376,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
                     "displayLines": "(1 + Rank06_Extra_Layer)",
@@ -6386,13 +6385,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "Rank06_Extra_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Rank06_Weighted_Stack_Layer",
                   "value": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -6400,7 +6399,8 @@ const compositeAbilityObject = {
                       1
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "Rank06_Weighted_Stack_Layer"
                 }
               ]
             },

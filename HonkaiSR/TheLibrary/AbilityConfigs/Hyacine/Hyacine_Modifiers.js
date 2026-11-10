@@ -33,14 +33,13 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ExtraMaxHPRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ExtraMaxHPRatio"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_MaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
                 "displayLines": "(MDF_MaxHPRatio + MDF_ExtraMaxHPRatio)",
@@ -49,7 +48,8 @@ const configAbility = {
                   "MDF_MaxHPRatio",
                   "MDF_ExtraMaxHPRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -219,8 +219,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Energy",
-              "value": 0
+              "value": 0,
+              "variableName": "_Energy"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -290,14 +290,13 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ExtraMaxHPRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ExtraMaxHPRatio"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_HaloMaxHPRatio) || Variables[1] (MDF_ExtraMaxHPRatio) || ADD || RETURN",
                 "displayLines": "(MDF_HaloMaxHPRatio + MDF_ExtraMaxHPRatio)",
@@ -306,7 +305,8 @@ const configAbility = {
                   "MDF_HaloMaxHPRatio",
                   "MDF_ExtraMaxHPRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -507,7 +507,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageAddRatioTotal",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_DamageAddRatio * MDF_Layer)",
@@ -516,7 +515,8 @@ const configAbility = {
                   "MDF_DamageAddRatio",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageAddRatioTotal"
             },
             {
               "name": "Stack Target Stat Value",
@@ -867,7 +867,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentSpeed",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -876,11 +875,11 @@ const configAbility = {
                       "_CurrentSpeed",
                       "_CurrentSpeedConvert"
                     ]
-                  }
+                  },
+                  "variableName": "_CurrentSpeed"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_OverCountSpeedValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (200) || SUB || RETURN",
                     "displayLines": "(_CurrentSpeed - 200)",
@@ -889,7 +888,8 @@ const configAbility = {
                       "_CurrentSpeed",
                       200
                     ]
-                  }
+                  },
+                  "variableName": "_OverCountSpeedValue"
                 },
                 {
                   "name": "IF",
@@ -909,7 +909,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_OverCountSpeedValue",
                       "value": {
                         "operator": "Variables[0] (200) || RETURN",
                         "displayLines": "200",
@@ -917,7 +916,8 @@ const configAbility = {
                         "variables": [
                           200
                         ]
-                      }
+                      },
+                      "variableName": "_OverCountSpeedValue"
                     }
                   ]
                 },
@@ -939,7 +939,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HealHPRatioAdd",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.01) || MUL || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.01)",
@@ -950,7 +949,8 @@ const configAbility = {
                           1,
                           0.01
                         ]
-                      }
+                      },
+                      "variableName": "_HealHPRatioAdd"
                     },
                     {
                       "name": "IF",
@@ -961,7 +961,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_MaxCritDmgAdd",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (_OverCountSpeedValue) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.02) || MUL || RETURN",
                             "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_OverCountSpeedValue / 1)) * 0.02)",
@@ -972,7 +971,8 @@ const configAbility = {
                               1,
                               0.02
                             ]
-                          }
+                          },
+                          "variableName": "_MaxCritDmgAdd"
                         }
                       ]
                     }
@@ -980,13 +980,13 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HealHPRatioAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_HealHPRatioAdd"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_MaxCritDmgAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_MaxCritDmgAdd"
                     }
                   ]
                 },

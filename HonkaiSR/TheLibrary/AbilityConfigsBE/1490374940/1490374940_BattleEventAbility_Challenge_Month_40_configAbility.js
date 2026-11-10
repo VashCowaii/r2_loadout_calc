@@ -106,8 +106,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_SummonCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_SummonCount"
             },
             "Deleted bullshit",
             {
@@ -143,7 +143,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonCount",
                       "value": {
                         "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_SummonCount + 1)",
@@ -153,7 +152,8 @@ const configAbility = {
                         "variables": [
                           "MDF_SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SummonCount"
                     }
                   ]
                 }
@@ -161,7 +161,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_SummonCount",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (MDF_SummonCount) || Variables[2] (BattleEvent_P5_ADF) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(MDF_SummonCount, BattleEvent_P5_ADF)",
@@ -171,7 +170,8 @@ const configAbility = {
                   "MDF_SummonCount",
                   "BattleEvent_P5_ADF"
                 ]
-              }
+              },
+              "variableName": "MDF_SummonCount"
             },
             {
               "name": "Find New Target",

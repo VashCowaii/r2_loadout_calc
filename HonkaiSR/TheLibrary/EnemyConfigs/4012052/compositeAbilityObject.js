@@ -329,8 +329,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ListenCorrectInteract",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_ListenCorrectInteract"
                     },
                     {
                       "name": "IF",
@@ -397,9 +397,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "InsertFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "InsertFlag"
                         },
                         {
                           "name": "IF",
@@ -586,9 +586,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ForwardReverseFlag",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "ForwardReverseFlag"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -596,9 +596,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ForwardReverseFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "ForwardReverseFlag"
                         }
                       ]
                     },
@@ -1012,9 +1012,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "InsertFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "InsertFlag"
                         },
                         {
                           "name": "ATK Scaling DMG",
@@ -1980,8 +1980,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DieWithBonus",
-          "value": 1
+          "value": 1,
+          "variableName": "DieWithBonus"
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -2094,8 +2094,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AISequence",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "AISequence"
                     }
                   ]
                 },
@@ -2110,8 +2110,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AISequence",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "AISequence"
                     }
                   ]
                 }
@@ -2127,8 +2127,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AISequence",
-              "value": 2
+              "value": 2,
+              "variableName": "AISequence"
             }
           ]
         }
@@ -2429,9 +2429,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "InsertFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "InsertFlag"
         }
       ],
       "targetObjectData": {
@@ -2601,9 +2601,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "InsertFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "InsertFlag"
         }
       ],
       "targetObjectData": {

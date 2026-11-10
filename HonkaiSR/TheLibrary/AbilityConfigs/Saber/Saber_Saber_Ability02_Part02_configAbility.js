@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "S02_Point",
       "value": {
         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
         "displayLines": "DV_SurgePoint",
@@ -14,7 +13,8 @@ const configAbility = {
         "variables": [
           "DV_SurgePoint"
         ]
-      }
+      },
+      "variableName": "S02_Point"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -226,19 +226,18 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_SurgePointUse",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_SurgePointUse"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_ExtraDmgRatio",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_ExtraDmgRatio"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_SurgePointUse",
           "value": {
             "operator": "Variables[0] (DV_SurgePoint) || RETURN",
             "displayLines": "DV_SurgePoint",
@@ -246,7 +245,8 @@ const configAbility = {
             "variables": [
               "DV_SurgePoint"
             ]
-          }
+          },
+          "variableName": "DV_SurgePointUse"
         },
         {
           "name": "IF",
@@ -257,7 +257,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_ExtraDmgRatio",
               "value": {
                 "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.07) || Variables[2] (0.14) || ADD || MUL || RETURN",
                 "displayLines": "(DV_SurgePointUse * (0.07 + 0.14))",
@@ -267,13 +266,13 @@ const configAbility = {
                   0.07,
                   0.14
                 ]
-              }
+              },
+              "variableName": "DV_ExtraDmgRatio"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_ExtraDmgRatio",
               "value": {
                 "operator": "Variables[0] (DV_SurgePointUse) || Variables[1] (0.14) || MUL || RETURN",
                 "displayLines": "(DV_SurgePointUse * 0.14)",
@@ -282,7 +281,8 @@ const configAbility = {
                   "DV_SurgePointUse",
                   0.14
                 ]
-              }
+              },
+              "variableName": "DV_ExtraDmgRatio"
             }
           ]
         }
@@ -575,7 +575,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Check_Surge_Use_Before",
       "value": {
         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
         "displayLines": "DV_SurgePoint",
@@ -583,7 +582,8 @@ const configAbility = {
         "variables": [
           "DV_SurgePoint"
         ]
-      }
+      },
+      "variableName": "Check_Surge_Use_Before"
     },
     {
       "name": "Adjust Variable Value",

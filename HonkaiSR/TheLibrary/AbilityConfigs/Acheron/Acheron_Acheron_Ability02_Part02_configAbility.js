@@ -94,8 +94,8 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentCountFlag01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentCountFlag01"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -109,7 +109,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill02_FlowerTotalCount",
                       "value": {
                         "operator": "Variables[0] (Skill02_FlowerTotalCount) || Variables[1] (MDF_CurrentCountFlag01) || ADD || RETURN",
                         "displayLines": "(Skill02_FlowerTotalCount + MDF_CurrentCountFlag01)",
@@ -118,7 +117,8 @@ const configAbility = {
                           "Skill02_FlowerTotalCount",
                           "MDF_CurrentCountFlag01"
                         ]
-                      }
+                      },
+                      "variableName": "Skill02_FlowerTotalCount"
                     }
                   ]
                 },
@@ -146,13 +146,13 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill02_FlowerTotalCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill02_FlowerTotalCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountFlag01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CurrentCountFlag01"
                 }
               ]
             }

@@ -46,7 +46,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BonusCheck",
                   "value": {
                     "operator": "Variables[0] (_SummonCheck) || Variables[1] (_Bonus2Init) || SUB || Variables[2] (_Bonus2Sums) || DIV || RETURN",
                     "displayLines": "((_SummonCheck - _Bonus2Init) / _Bonus2Sums)",
@@ -56,7 +55,8 @@ const configAbility = {
                       "_Bonus2Init",
                       "_Bonus2Sums"
                     ]
-                  }
+                  },
+                  "variableName": "_BonusCheck"
                 }
               ]
             }
@@ -73,7 +73,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_BonusCheck",
               "value": {
                 "operator": "Variables[0] (_SummonCheck) || Variables[1] (_BonusInit) || SUB || Variables[2] (_BonusSums) || DIV || RETURN",
                 "displayLines": "((_SummonCheck - _BonusInit) / _BonusSums)",
@@ -83,7 +82,8 @@ const configAbility = {
                   "_BonusInit",
                   "_BonusSums"
                 ]
-              }
+              },
+              "variableName": "_BonusCheck"
             }
           ]
         },
@@ -253,7 +253,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] ({[Skill02[1]]}) || RETURN",
                         "displayLines": "{[Skill02[1]]}",
@@ -261,7 +260,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill02[1]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     }
                   ]
                 },
@@ -271,7 +271,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] ({[Skill02[2]]}) || RETURN",
                         "displayLines": "{[Skill02[2]]}",
@@ -279,7 +278,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill02[2]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     }
                   ]
                 },
@@ -289,7 +289,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
                         "displayLines": "{[Skill02[3]]}",
@@ -297,7 +296,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill02[3]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     }
                   ]
                 },
@@ -307,7 +307,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DelayRatio",
                       "value": {
                         "operator": "Variables[0] ({[Skill02[4]]}) || RETURN",
                         "displayLines": "{[Skill02[4]]}",
@@ -315,7 +314,8 @@ const configAbility = {
                         "variables": [
                           "{[Skill02[4]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_DelayRatio"
                     }
                   ]
                 }
@@ -333,8 +333,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DelayCase",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DelayCase"
                 }
               ],
               "failed": [

@@ -248,7 +248,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.44) || MUL || RETURN",
                     "displayLines": "(MDF_Layer * 0.44)",
@@ -257,7 +256,8 @@ const compositeAbilityObject = {
                       "MDF_Layer",
                       0.44
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "IF",
@@ -268,7 +268,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || Variables[2] (0.2) || MUL || ADD || RETURN",
                         "displayLines": "(MDF_PropertyValue + (MDF_Layer * 0.2))",
@@ -278,7 +277,8 @@ const compositeAbilityObject = {
                           "MDF_Layer",
                           0.2
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     }
                   ]
                 },
@@ -568,8 +568,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Switch",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Switch"
                 }
               ]
             },
@@ -1597,7 +1597,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Jingliu_LoseHPCount",
                           "value": {
                             "operator": "Variables[0] (Jingliu_LoseHPCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_LoseHPCount + 1)",
@@ -1607,7 +1606,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Jingliu_LoseHPCount"
                             ]
-                          }
+                          },
+                          "variableName": "Jingliu_LoseHPCount"
                         },
                         {
                           "name": "IF",
@@ -1628,8 +1628,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "LoseHPTrigger",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "LoseHPTrigger"
                             }
                           ]
                         },
@@ -1651,7 +1651,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Jingliu_LoseHPCount",
                               "value": {
                                 "operator": "Variables[0] (Jingliu_LoseHPCount) || Variables[1] (20) || SUB || RETURN",
                                 "displayLines": "(Jingliu_LoseHPCount - 20)",
@@ -1660,7 +1659,8 @@ const compositeAbilityObject = {
                                   "Jingliu_LoseHPCount",
                                   20
                                 ]
-                              }
+                              },
+                              "variableName": "Jingliu_LoseHPCount"
                             },
                             {
                               "name": "IF",
@@ -3455,7 +3455,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Jingliu_FullMoonFlagMax",
               "value": {
                 "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Jingliu_FullMoonFlagMax + 1)",
@@ -3465,13 +3464,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "Jingliu_FullMoonFlagMax"
                 ]
-              }
+              },
+              "variableName": "Jingliu_FullMoonFlagMax"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Jingliu_FullMoonFlagMax",
               "value": {
                 "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
                 "displayLines": "Jingliu_FullMoonFlagMax",
@@ -3479,7 +3478,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Jingliu_FullMoonFlagMax"
                 ]
-              }
+              },
+              "variableName": "Jingliu_FullMoonFlagMax"
             }
           ]
         },
@@ -3495,7 +3495,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Jingliu_MoonFlagMax",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -3503,7 +3502,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Jingliu_MoonFlagMax"
         },
         {
           "name": "Update Displayed Energy Bar",

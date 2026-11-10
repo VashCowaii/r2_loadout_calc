@@ -45,8 +45,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "PointB3_Active",
-          "value": 1
+          "value": 1,
+          "variableName": "PointB3_Active"
         },
         {
           "name": "Add Events/Bonuses",
@@ -60,8 +60,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "PointB3_Active",
-          "value": 0
+          "value": 0,
+          "variableName": "PointB3_Active"
         }
       ]
     },

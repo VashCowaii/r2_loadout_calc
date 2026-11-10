@@ -6,33 +6,33 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Round",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Round"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Gem_Cost",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Gem_Cost"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Shadow_Gem_Cost",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Shadow_Gem_Cost"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Gem_Num",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Gem_Num"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Shadow_Gem_Num",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Shadow_Gem_Num"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "TMP_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "TMP_Flag"
     },
     {
       "name": "IF",
@@ -45,7 +45,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "TMP_Shadow_Gem_Num",
           "value": {
             "operator": "Variables[0] (EnergyBar_GemNum_Shadow) || RETURN",
             "displayLines": "EnergyBar_GemNum_Shadow",
@@ -53,12 +52,13 @@ const configAbility = {
             "variables": [
               "EnergyBar_GemNum_Shadow"
             ]
-          }
+          },
+          "variableName": "TMP_Shadow_Gem_Num"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TMP_Interval",
-          "value": 0.1
+          "value": 0.1,
+          "variableName": "TMP_Interval"
         },
         {
           "name": "Looped Event",
@@ -169,7 +169,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Flag",
                   "value": {
                     "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(TMP_Flag + 1)",
@@ -179,14 +178,15 @@ const configAbility = {
                     "variables": [
                       "TMP_Flag"
                     ]
-                  }
+                  },
+                  "variableName": "TMP_Flag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TMP_Flag"
                 }
               ]
             },
@@ -208,7 +208,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Interval",
                   "value": {
                     "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
                     "displayLines": "(TMP_Interval - 0.011)",
@@ -218,13 +217,13 @@ const configAbility = {
                     "variables": [
                       "TMP_Interval"
                     ]
-                  }
+                  },
+                  "variableName": "TMP_Interval"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Round",
               "value": {
                 "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(TMP_Round + 1)",
@@ -234,11 +233,11 @@ const configAbility = {
                 "variables": [
                   "TMP_Round"
                 ]
-              }
+              },
+              "variableName": "TMP_Round"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Shadow_Gem_Num",
               "value": {
                 "operator": "Variables[0] (TMP_Shadow_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
                 "displayLines": "(TMP_Shadow_Gem_Num - EnergyBar_CostGemNum)",
@@ -247,11 +246,11 @@ const configAbility = {
                   "TMP_Shadow_Gem_Num",
                   "EnergyBar_CostGemNum"
                 ]
-              }
+              },
+              "variableName": "TMP_Shadow_Gem_Num"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Shadow_Gem_Cost",
               "value": {
                 "operator": "Variables[0] (TMP_Shadow_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
                 "displayLines": "(TMP_Shadow_Gem_Cost + EnergyBar_CostGemNum)",
@@ -260,7 +259,8 @@ const configAbility = {
                   "TMP_Shadow_Gem_Cost",
                   "EnergyBar_CostGemNum"
                 ]
-              }
+              },
+              "variableName": "TMP_Shadow_Gem_Cost"
             },
             {
               "name": "IF",
@@ -437,7 +437,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TMP_Gem_Num",
           "value": {
             "operator": "Variables[0] (EnergyBar_GemNum) || RETURN",
             "displayLines": "EnergyBar_GemNum",
@@ -445,12 +444,13 @@ const configAbility = {
             "variables": [
               "EnergyBar_GemNum"
             ]
-          }
+          },
+          "variableName": "TMP_Gem_Num"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "TMP_Interval",
-          "value": 0.1
+          "value": 0.1,
+          "variableName": "TMP_Interval"
         },
         {
           "name": "Looped Event",
@@ -578,7 +578,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Flag",
                   "value": {
                     "operator": "Variables[0] (TMP_Flag) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(TMP_Flag + 1)",
@@ -588,14 +587,15 @@ const configAbility = {
                     "variables": [
                       "TMP_Flag"
                     ]
-                  }
+                  },
+                  "variableName": "TMP_Flag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TMP_Flag"
                 }
               ]
             },
@@ -617,7 +617,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TMP_Interval",
                   "value": {
                     "operator": "Variables[0] (TMP_Interval) || Constants[0] (0.011) || SUB || RETURN",
                     "displayLines": "(TMP_Interval - 0.011)",
@@ -627,13 +626,13 @@ const configAbility = {
                     "variables": [
                       "TMP_Interval"
                     ]
-                  }
+                  },
+                  "variableName": "TMP_Interval"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Round",
               "value": {
                 "operator": "Variables[0] (TMP_Round) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(TMP_Round + 1)",
@@ -643,11 +642,11 @@ const configAbility = {
                 "variables": [
                   "TMP_Round"
                 ]
-              }
+              },
+              "variableName": "TMP_Round"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Gem_Num",
               "value": {
                 "operator": "Variables[0] (TMP_Gem_Num) || Variables[1] (EnergyBar_CostGemNum) || SUB || RETURN",
                 "displayLines": "(TMP_Gem_Num - EnergyBar_CostGemNum)",
@@ -656,11 +655,11 @@ const configAbility = {
                   "TMP_Gem_Num",
                   "EnergyBar_CostGemNum"
                 ]
-              }
+              },
+              "variableName": "TMP_Gem_Num"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TMP_Gem_Cost",
               "value": {
                 "operator": "Variables[0] (TMP_Gem_Cost) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
                 "displayLines": "(TMP_Gem_Cost + EnergyBar_CostGemNum)",
@@ -669,7 +668,8 @@ const configAbility = {
                   "TMP_Gem_Cost",
                   "EnergyBar_CostGemNum"
                 ]
-              }
+              },
+              "variableName": "TMP_Gem_Cost"
             },
             {
               "name": "IF",
@@ -684,7 +684,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TohsakaRin_00_Achievement_Gemstone",
                   "value": {
                     "operator": "Variables[0] (TohsakaRin_00_Achievement_Gemstone) || Variables[1] (EnergyBar_CostGemNum) || ADD || RETURN",
                     "displayLines": "(TohsakaRin_00_Achievement_Gemstone + EnergyBar_CostGemNum)",
@@ -693,7 +692,8 @@ const configAbility = {
                       "TohsakaRin_00_Achievement_Gemstone",
                       "EnergyBar_CostGemNum"
                     ]
-                  }
+                  },
+                  "variableName": "TohsakaRin_00_Achievement_Gemstone"
                 },
                 {
                   "name": "Update Displayed Energy Bar",

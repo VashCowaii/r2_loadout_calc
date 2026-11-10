@@ -65,8 +65,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "_FirstTimeSummon",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_FirstTimeSummon"
                 }
               ],
               "failed": [

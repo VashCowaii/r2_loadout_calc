@@ -270,7 +270,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_LoseHP",
                       "value": {
                         "operator": "Variables[0] (_MaxHP) || Variables[1] (_RealRatio) || MUL || RETURN",
                         "displayLines": "(_MaxHP * _RealRatio)",
@@ -279,11 +278,11 @@ const configAbility = {
                           "_MaxHP",
                           "_RealRatio"
                         ]
-                      }
+                      },
+                      "variableName": "_LoseHP"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_LoseHPTotal",
                       "value": {
                         "operator": "Variables[0] (_LoseHP) || Variables[1] (_LoseHPTotal) || ADD || RETURN",
                         "displayLines": "(_LoseHP + _LoseHPTotal)",
@@ -292,7 +291,8 @@ const configAbility = {
                           "_LoseHP",
                           "_LoseHPTotal"
                         ]
-                      }
+                      },
+                      "variableName": "_LoseHPTotal"
                     }
                   ]
                 }

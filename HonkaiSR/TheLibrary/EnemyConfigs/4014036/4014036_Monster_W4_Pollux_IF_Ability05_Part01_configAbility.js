@@ -12,8 +12,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_ReadyToCharge",
-      "value": 0
+      "value": 0,
+      "variableName": "_ReadyToCharge"
     },
     {
       "name": "Trigger Ability",
@@ -33,8 +33,8 @@ const configAbility = {
   "onAbort": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_ReadyToCharge",
-      "value": 0
+      "value": 0,
+      "variableName": "_ReadyToCharge"
     }
   ],
   "targetObjectData": {

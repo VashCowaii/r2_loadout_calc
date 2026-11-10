@@ -205,8 +205,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103294716",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103294716"
                 }
               ]
             }
@@ -239,8 +239,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103294713",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103294713"
                 }
               ]
             },
@@ -268,8 +268,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_103294715",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_103294715"
                 }
               ]
             }

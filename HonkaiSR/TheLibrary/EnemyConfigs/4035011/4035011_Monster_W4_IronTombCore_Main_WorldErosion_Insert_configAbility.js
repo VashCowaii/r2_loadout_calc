@@ -93,8 +93,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_WorldErosionIndex",
-      "value": 1
+      "value": 1,
+      "variableName": "_WorldErosionIndex"
     },
     {
       "name": "Add Battle Event",
@@ -129,8 +129,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_StoryMode",
-          "value": 1
+          "value": 1,
+          "variableName": "_StoryMode"
         },
         {
           "name": "Define Custom Variable",
@@ -138,8 +138,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "#CL_First",
-          "value": 1
+          "value": 1,
+          "variableName": "#CL_First"
         },
         {
           "name": "Define Custom Variable",
@@ -147,8 +147,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "_FirstBE",
-          "value": 1
+          "value": 1,
+          "variableName": "_FirstBE"
         },
         "Show BattleEvent Button"
       ]

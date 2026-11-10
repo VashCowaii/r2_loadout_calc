@@ -1574,8 +1574,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BonusAttackCounter",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BonusAttackCounter"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1941,8 +1941,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
-          "value": 0
+          "value": 0,
+          "variableName": "BonusAttackCounter"
         }
       ],
       "targetObjectData": {
@@ -2552,7 +2552,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "variableName": "Owner_MaxHPCount",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
                         "displayLines": "DeathPartMaxHPCount",
@@ -2561,7 +2561,7 @@ const compositeAbilityObject = {
                           "DeathPartMaxHPCount"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Owner_MaxHPCount"
                     }
                   ]
                 }
@@ -2911,7 +2911,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
           "value": {
             "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(BonusAttackCounter + 1)",
@@ -2921,7 +2920,8 @@ const compositeAbilityObject = {
             "variables": [
               "BonusAttackCounter"
             ]
-          }
+          },
+          "variableName": "BonusAttackCounter"
         },
         {
           "name": "IF",
@@ -3166,7 +3166,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Minions}}"
                       },
-                      "variableName": "Owner_MaxHPCount",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
                         "displayLines": "DeathPartMaxHPCount",
@@ -3175,7 +3175,7 @@ const compositeAbilityObject = {
                           "DeathPartMaxHPCount"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Owner_MaxHPCount"
                     }
                   ]
                 }
@@ -3942,7 +3942,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BonusAttackCounter",
           "value": {
             "operator": "Variables[0] (BonusAttackCounter) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(BonusAttackCounter + 1)",
@@ -3952,7 +3951,8 @@ const compositeAbilityObject = {
             "variables": [
               "BonusAttackCounter"
             ]
-          }
+          },
+          "variableName": "BonusAttackCounter"
         },
         {
           "name": "Add Events/Bonuses",

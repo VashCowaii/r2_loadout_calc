@@ -441,7 +441,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                   "value": {
                     "operator": "Variables[0] (0.65) || RETURN",
                     "displayLines": "0.65",
@@ -449,7 +448,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.65
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
                 {
                   "name": "Trigger Ability",
@@ -505,7 +505,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddedRatio",
                   "value": {
                     "operator": "Variables[0] (_DebuffCount) || Variables[1] (0.2) || MUL || RETURN",
                     "displayLines": "(_DebuffCount * 0.2)",
@@ -514,7 +513,8 @@ const compositeAbilityObject = {
                       "_DebuffCount",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddedRatio"
                 },
                 {
                   "name": "IF",
@@ -534,7 +534,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageAddedRatio",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -542,7 +541,8 @@ const compositeAbilityObject = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageAddedRatio"
                     }
                   ]
                 },
@@ -1158,7 +1158,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
               "value": {
                 "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(3 + 1)",
@@ -1167,13 +1166,13 @@ const compositeAbilityObject = {
                   3,
                   1
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -1181,7 +1180,8 @@ const compositeAbilityObject = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "variableName": "MDF_Silwolf_00_AddModifier_LifeTime"
             }
           ]
         },
@@ -1289,7 +1289,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Silwolf_00_AddModifier_Chance",
                   "value": {
                     "operator": "Variables[0] (0.72) || RETURN",
                     "displayLines": "0.72",
@@ -1297,7 +1296,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.72
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Silwolf_00_AddModifier_Chance"
                 },
                 {
                   "name": "Find New Target",
@@ -1437,7 +1437,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCountForRank04",
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1445,7 +1444,8 @@ const compositeAbilityObject = {
                     "variables": [
                       5
                     ]
-                  }
+                  },
+                  "variableName": "_DebuffCountForRank04"
                 }
               ]
             },
@@ -1522,7 +1522,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCountForRank01",
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1530,7 +1529,8 @@ const compositeAbilityObject = {
                     "variables": [
                       5
                     ]
-                  }
+                  },
+                  "variableName": "_DebuffCountForRank01"
                 }
               ]
             },
@@ -1764,15 +1764,15 @@ const compositeAbilityObject = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BPFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_BPFlag"
                 }
               ]
             }
@@ -1814,15 +1814,15 @@ const compositeAbilityObject = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BPFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_BPFlag"
                 }
               ]
             }

@@ -39,8 +39,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChargeUse",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "ChargeUse"
                 }
               ]
             }
@@ -426,9 +426,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DormancyFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "DormancyFlag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -473,9 +473,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DormancyFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "DormancyFlag"
             },
             {
               "name": "Declare Custom Variable",
@@ -775,7 +775,6 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "Mecha03_00_DamageUpPercentage",
                                   "value": {
                                     "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                     "displayLines": "{[Skill02[0]]}",
@@ -783,7 +782,8 @@ const configAbility = {
                                     "variables": [
                                       "{[Skill02[0]]}"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "Mecha03_00_DamageUpPercentage"
                                 },
                                 {
                                   "name": "IF",
@@ -817,7 +817,6 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
                                         "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                         "displayLines": "UnusedUnderThisBase_8637",
@@ -825,7 +824,8 @@ const configAbility = {
                                         "variables": [
                                           "UnusedUnderThisBase_8637"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha03_00_DamageUpBasePercentage"
                                     }
                                   ]
                                 }
@@ -1006,7 +1006,6 @@ const configAbility = {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
                                   },
-                                  "variableName": "Mecha03_00_DamageUpPercentage",
                                   "value": {
                                     "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                     "displayLines": "{[Skill02[0]]}",
@@ -1014,7 +1013,8 @@ const configAbility = {
                                     "variables": [
                                       "{[Skill02[0]]}"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "Mecha03_00_DamageUpPercentage"
                                 },
                                 {
                                   "name": "IF",
@@ -1048,7 +1048,6 @@ const configAbility = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha03_00_DamageUpBasePercentage",
                                       "value": {
                                         "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                         "displayLines": "UnusedUnderThisBase_8637",
@@ -1056,7 +1055,8 @@ const configAbility = {
                                         "variables": [
                                           "UnusedUnderThisBase_8637"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha03_00_DamageUpBasePercentage"
                                     }
                                   ]
                                 },
@@ -1441,7 +1441,6 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "variableName": "Mecha03_00_DamageUpPercentage",
                                                   "value": {
                                                     "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                                     "displayLines": "{[Skill02[0]]}",
@@ -1449,7 +1448,8 @@ const configAbility = {
                                                     "variables": [
                                                       "{[Skill02[0]]}"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "Mecha03_00_DamageUpPercentage"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1483,7 +1483,6 @@ const configAbility = {
                                                         "name": "Target Name",
                                                         "target": "{{Parameter Target}}"
                                                       },
-                                                      "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
                                                         "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                                         "displayLines": "UnusedUnderThisBase_8637",
@@ -1491,7 +1490,8 @@ const configAbility = {
                                                         "variables": [
                                                           "UnusedUnderThisBase_8637"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                     }
                                                   ]
                                                 }
@@ -1690,7 +1690,6 @@ const configAbility = {
                                                 "name": "Target Name",
                                                 "target": "{{Parameter Target}}"
                                               },
-                                              "variableName": "Mecha03_00_DamageUpPercentage",
                                               "value": {
                                                 "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                                 "displayLines": "{[Skill02[0]]}",
@@ -1698,7 +1697,8 @@ const configAbility = {
                                                 "variables": [
                                                   "{[Skill02[0]]}"
                                                 ]
-                                              }
+                                              },
+                                              "variableName": "Mecha03_00_DamageUpPercentage"
                                             },
                                             {
                                               "name": "IF",
@@ -1732,7 +1732,6 @@ const configAbility = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                   "value": {
                                                     "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                                     "displayLines": "UnusedUnderThisBase_8637",
@@ -1740,7 +1739,8 @@ const configAbility = {
                                                     "variables": [
                                                       "UnusedUnderThisBase_8637"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                 }
                                               ]
                                             },

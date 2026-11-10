@@ -110,8 +110,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DOT_Layer",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "DOT_Layer"
                     }
                   ]
                 },
@@ -141,8 +141,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Modifier_Layer"
                     }
                   ]
                 },
@@ -202,8 +202,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DOT_Layer",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "DOT_Layer"
                     }
                   ]
                 },
@@ -233,8 +233,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Modifier_Layer"
                     }
                   ]
                 },

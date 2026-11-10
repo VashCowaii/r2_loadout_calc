@@ -134,7 +134,6 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ReviveCount",
                   "value": {
                     "operator": "Variables[0] (Huohuo_Rank02_ReviveCount) || RETURN",
                     "displayLines": "Huohuo_Rank02_ReviveCount",
@@ -142,7 +141,8 @@ const configAbility = {
                     "variables": [
                       "Huohuo_Rank02_ReviveCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ReviveCount"
                 },
                 {
                   "name": "IF",
@@ -438,7 +438,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Huohuo_Passive_DispelCount",
                   "value": {
                     "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                     "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -447,7 +446,8 @@ const configAbility = {
                       "Huohuo_Passive_DispelCount",
                       "_DispelNumSuccess"
                     ]
-                  }
+                  },
+                  "variableName": "Huohuo_Passive_DispelCount"
                 }
               ]
             },
@@ -568,7 +568,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Huohuo_Passive_DispelCount",
                       "value": {
                         "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                         "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -577,7 +576,8 @@ const configAbility = {
                           "Huohuo_Passive_DispelCount",
                           "_DispelNumSuccess"
                         ]
-                      }
+                      },
+                      "variableName": "Huohuo_Passive_DispelCount"
                     }
                   ]
                 },
@@ -688,7 +688,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Huohuo_Passive_DispelCount",
                       "value": {
                         "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                         "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -697,7 +696,8 @@ const configAbility = {
                           "Huohuo_Passive_DispelCount",
                           "_DispelNumSuccess"
                         ]
-                      }
+                      },
+                      "variableName": "Huohuo_Passive_DispelCount"
                     }
                   ]
                 },
@@ -818,7 +818,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Huohuo_Passive_DispelCount",
                           "value": {
                             "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
                             "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
@@ -827,7 +826,8 @@ const configAbility = {
                               "Huohuo_Passive_DispelCount",
                               "_DispelNumSuccess"
                             ]
-                          }
+                          },
+                          "variableName": "Huohuo_Passive_DispelCount"
                         }
                       ]
                     },
@@ -954,8 +954,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Huohuo_Passive_HotCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Huohuo_Passive_HotCount"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1016,7 +1016,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Huohuo_Passive_DispelCount",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -1024,11 +1023,11 @@ const configAbility = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "Huohuo_Passive_DispelCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DispelCount",
               "value": {
                 "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
                 "displayLines": "Huohuo_Passive_DispelCount",
@@ -1036,7 +1035,8 @@ const configAbility = {
                 "variables": [
                   "Huohuo_Passive_DispelCount"
                 ]
-              }
+              },
+              "variableName": "MDF_DispelCount"
             },
             {
               "name": "IF",
@@ -1091,7 +1091,6 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DispelCount",
                   "value": {
                     "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
                     "displayLines": "Huohuo_Passive_DispelCount",
@@ -1099,7 +1098,8 @@ const configAbility = {
                     "variables": [
                       "Huohuo_Passive_DispelCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DispelCount"
                 }
               ]
             }

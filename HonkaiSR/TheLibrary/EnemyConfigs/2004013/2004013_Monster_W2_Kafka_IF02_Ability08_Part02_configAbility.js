@@ -30,7 +30,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_StackCount",
           "value": {
             "operator": "Variables[0] (MDF_StackCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(MDF_StackCount + 1)",
@@ -40,7 +39,8 @@ const configAbility = {
             "variables": [
               "MDF_StackCount"
             ]
-          }
+          },
+          "variableName": "MDF_StackCount"
         }
       ]
     },
@@ -253,8 +253,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_StackCount",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_StackCount"
     }
   ],
   "targetObjectData": {

@@ -26,7 +26,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "count",
                   "value": {
                     "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(count + 1)",
@@ -36,7 +35,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "count"
                     ]
-                  }
+                  },
+                  "variableName": "count"
                 },
                 {
                   "name": "IF",
@@ -332,7 +332,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Layer",
                           "value": {
                             "operator": "Variables[0] (Temp_MDF_Layer) || RETURN",
                             "displayLines": "Temp_MDF_Layer",
@@ -340,7 +339,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Temp_MDF_Layer"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Layer"
                         }
                       ]
                     }
@@ -405,13 +405,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Layer"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Temp_MDF_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Temp_MDF_Layer"
                 }
               ]
             },

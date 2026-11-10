@@ -40,7 +40,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Wolf_MaxAttackCount",
       "value": {
         "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
         "displayLines": "{[SkillP01[2]]}",
@@ -48,11 +47,11 @@ const configAbility = {
         "variables": [
           "{[SkillP01[2]]}"
         ]
-      }
+      },
+      "variableName": "Wolf_MaxAttackCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "WolfBoss_BloodRageMaxCount",
       "value": {
         "operator": "Variables[0] (UnusedUnderThisBase_9698) || RETURN",
         "displayLines": "UnusedUnderThisBase_9698",
@@ -60,7 +59,8 @@ const configAbility = {
         "variables": [
           "UnusedUnderThisBase_9698"
         ]
-      }
+      },
+      "variableName": "WolfBoss_BloodRageMaxCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -519,7 +519,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "WolfBoss_BloodRageCount",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_9699) || RETURN",
                 "displayLines": "UnusedUnderThisBase_9699",
@@ -527,7 +526,8 @@ const configAbility = {
                 "variables": [
                   "UnusedUnderThisBase_9699"
                 ]
-              }
+              },
+              "variableName": "WolfBoss_BloodRageCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -697,7 +697,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BloodRageCountRemain",
                       "value": {
                         "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
                         "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
@@ -706,7 +705,8 @@ const configAbility = {
                           "WolfBoss_BloodRageMaxCount",
                           "WolfBoss_BloodRageCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BloodRageCountRemain"
                     },
                     {
                       "name": "IF",
@@ -874,7 +874,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BloodRageCountRemain",
                       "value": {
                         "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
                         "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
@@ -883,7 +882,8 @@ const configAbility = {
                           "WolfBoss_BloodRageMaxCount",
                           "WolfBoss_BloodRageCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BloodRageCountRemain"
                     },
                     {
                       "name": "IF",
@@ -948,7 +948,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BloodRageCountBefore",
                           "value": {
                             "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
                             "displayLines": "WolfBoss_BloodRageCount",
@@ -956,7 +955,8 @@ const configAbility = {
                             "variables": [
                               "WolfBoss_BloodRageCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BloodRageCountBefore"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -1063,8 +1063,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_BloodRageCountBefore",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_BloodRageCountBefore"
                             }
                           ],
                           "failed": [
@@ -1089,8 +1089,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BloodRageCountBefore",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_BloodRageCountBefore"
                         }
                       ]
                     }
@@ -1169,8 +1169,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -1195,8 +1195,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 5
+              "value": 5,
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -1315,8 +1315,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         },
@@ -1365,15 +1365,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "AIFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -1675,8 +1675,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             }
           ]
         },

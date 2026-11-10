@@ -443,7 +443,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyRatio",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
                 "displayLines": "(MDF_PropertyRatio * (MDF_Layer - 1))",
@@ -454,7 +453,8 @@ const configAbility = {
                   "MDF_PropertyRatio",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -486,8 +486,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyRatio",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_PropertyRatio"
                 },
                 {
                   "name": "IF",

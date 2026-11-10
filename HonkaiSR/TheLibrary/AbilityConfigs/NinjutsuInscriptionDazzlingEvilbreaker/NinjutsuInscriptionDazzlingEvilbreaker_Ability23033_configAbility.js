@@ -90,13 +90,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CastSkill01Count",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_CastSkill01Count"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_CastSkill01CountLeft",
-              "value": 2
+              "value": 2,
+              "variableName": "DV_CastSkill01CountLeft"
             }
           ]
         },
@@ -112,7 +112,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CastSkill01Count",
                   "value": {
                     "operator": "Variables[0] (DV_CastSkill01Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(DV_CastSkill01Count + 1)",
@@ -122,11 +121,11 @@ const configAbility = {
                     "variables": [
                       "DV_CastSkill01Count"
                     ]
-                  }
+                  },
+                  "variableName": "DV_CastSkill01Count"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CastSkill01CountLeft",
                   "value": {
                     "operator": "Variables[0] (DV_CastSkill01CountLeft) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(DV_CastSkill01CountLeft - 1)",
@@ -136,7 +135,8 @@ const configAbility = {
                     "variables": [
                       "DV_CastSkill01CountLeft"
                     ]
-                  }
+                  },
+                  "variableName": "DV_CastSkill01CountLeft"
                 },
                 {
                   "name": "IF",

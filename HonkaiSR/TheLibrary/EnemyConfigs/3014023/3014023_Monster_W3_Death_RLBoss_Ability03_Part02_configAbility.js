@@ -42,7 +42,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DeathPartMaxHPCount",
           "value": {
             "operator": "Variables[0] (DeathPartMaxHPCount) || Variables[1] ({[Skill03[4]]}) || ADD || RETURN",
             "displayLines": "(DeathPartMaxHPCount + {[Skill03[4]]})",
@@ -51,7 +50,8 @@ const configAbility = {
               "DeathPartMaxHPCount",
               "{[Skill03[4]]}"
             ]
-          }
+          },
+          "variableName": "DeathPartMaxHPCount"
         }
       ]
     },

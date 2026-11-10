@@ -57,15 +57,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_Activated",
-          "value": 1
+          "value": 1,
+          "variableName": "Rank01_Activated"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank01_Activated",
-          "value": 0
+          "value": 0,
+          "variableName": "Rank01_Activated"
         }
       ]
     }
@@ -217,7 +217,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_StanceValue",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceRatio)",
@@ -227,7 +227,7 @@ const configAbility = {
                       "MDF_StanceRatio"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_StanceValue"
                 },
                 {
                   "name": "Deal Toughness DMG",
@@ -1347,7 +1347,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_PropertyValue",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValueCaster) || Variables[1] (0.24) || MUL || Variables[2] (0.5) || ADD || RETURN",
                 "displayLines": "((MDF_PropertyValueCaster * 0.24) + 0.5)",
@@ -1358,7 +1358,7 @@ const configAbility = {
                   0.5
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",

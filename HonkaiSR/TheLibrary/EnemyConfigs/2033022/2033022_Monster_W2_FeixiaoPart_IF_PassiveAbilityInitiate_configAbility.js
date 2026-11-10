@@ -311,8 +311,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_FirstAlert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_FirstAlert"
                 }
               ]
             }

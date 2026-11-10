@@ -130,7 +130,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Minions}}"
                   },
-                  "variableName": "Owner_MaxHPCount",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (DeathPartMaxHPCount) || RETURN",
                     "displayLines": "DeathPartMaxHPCount",
@@ -139,7 +139,7 @@ const configAbility = {
                       "DeathPartMaxHPCount"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Owner_MaxHPCount"
                 }
               ]
             }

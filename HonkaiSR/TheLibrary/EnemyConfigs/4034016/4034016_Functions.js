@@ -15,13 +15,13 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentSummonIndex",
-          "value": 1
+          "value": 1,
+          "variableName": "CurrentSummonIndex"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentBounsIndex",
-          "value": 2
+          "value": 2,
+          "variableName": "CurrentBounsIndex"
         }
       ]
     },
@@ -46,8 +46,8 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentSummonIndex",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "CurrentSummonIndex"
                 }
               ]
             },
@@ -57,8 +57,8 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentSummonIndex",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "CurrentSummonIndex"
                 }
               ]
             },
@@ -68,8 +68,8 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentSummonIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CurrentSummonIndex"
                 }
               ]
             }
@@ -77,8 +77,8 @@ const configAbility = {
           "defaultEvents": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentSummonIndex",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentSummonIndex"
             }
           ]
         }
@@ -127,8 +127,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBounsIndex",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentBounsIndex"
             }
           ]
         }

@@ -197,8 +197,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_LoseHPTriggerLimit",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_LoseHPTriggerLimit"
                 },
                 {
                   "name": "Heal",
@@ -218,7 +218,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (DV_Count) || ADD || RETURN",
                     "displayLines": "(MDF_Count + DV_Count)",
@@ -227,7 +226,8 @@ const configAbility = {
                       "MDF_Count",
                       "DV_Count"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -281,7 +281,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (DV_CountMax) || RETURN",
                         "displayLines": "DV_CountMax",
@@ -289,7 +288,8 @@ const configAbility = {
                         "variables": [
                           "DV_CountMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }
@@ -344,7 +344,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (DV_Count2) || ADD || RETURN",
                     "displayLines": "(MDF_Count + DV_Count2)",
@@ -353,7 +352,8 @@ const configAbility = {
                       "MDF_Count",
                       "DV_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -407,7 +407,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (DV_CountMax) || RETURN",
                         "displayLines": "DV_CountMax",
@@ -415,7 +414,8 @@ const configAbility = {
                         "variables": [
                           "DV_CountMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }
@@ -428,8 +428,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_LoseHPTriggerLimit",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_LoseHPTriggerLimit"
             }
           ]
         },
@@ -438,8 +438,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_LoseHPTriggerLimit",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_LoseHPTriggerLimit"
             }
           ]
         }
@@ -649,8 +649,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",

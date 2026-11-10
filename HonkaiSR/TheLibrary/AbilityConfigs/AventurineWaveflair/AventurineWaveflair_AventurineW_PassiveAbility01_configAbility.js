@@ -14,7 +14,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_MaxEnergyPoint",
       "value": {
         "operator": "Variables[0] (30) || RETURN",
         "displayLines": "30",
@@ -22,7 +21,8 @@ const configAbility = {
         "variables": [
           30
         ]
-      }
+      },
+      "variableName": "_MaxEnergyPoint"
     },
     {
       "name": "Add Events/Bonuses",
@@ -118,7 +118,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_MaxEnergyPoint",
           "value": {
             "operator": "Variables[0] (50) || RETURN",
             "displayLines": "50",
@@ -126,7 +125,8 @@ const configAbility = {
             "variables": [
               50
             ]
-          }
+          },
+          "variableName": "_MaxEnergyPoint"
         },
         {
           "name": "Add Events/Bonuses",

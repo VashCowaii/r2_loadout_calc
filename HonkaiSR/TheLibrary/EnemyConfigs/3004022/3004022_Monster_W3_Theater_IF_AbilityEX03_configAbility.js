@@ -44,28 +44,28 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonID01",
-          "value": 300202200
+          "value": 300202200,
+          "variableName": "SummonID01"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonID02",
-          "value": 300201200
+          "value": 300201200,
+          "variableName": "SummonID02"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonID03",
-          "value": 300301500
+          "value": 300301500,
+          "variableName": "SummonID03"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonID04",
-          "value": 300201200
+          "value": 300201200,
+          "variableName": "SummonID04"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonID05",
-          "value": 300204200
+          "value": 300204200,
+          "variableName": "SummonID05"
         }
       ]
     }

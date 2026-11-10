@@ -156,8 +156,8 @@ const configAbility = {
                 "execute": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SummonMinion04Only",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "SummonMinion04Only"
                   },
                   {
                     "name": "Declare Custom Variable",

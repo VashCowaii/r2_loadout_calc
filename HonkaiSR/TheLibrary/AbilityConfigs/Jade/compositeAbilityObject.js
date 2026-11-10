@@ -279,12 +279,11 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HitFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_HitFlag"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (Jade_Passive_BPBuffAddLayer) || ADD || RETURN",
                             "displayLines": "(_RateLayer + Jade_Passive_BPBuffAddLayer)",
@@ -293,7 +292,8 @@ const compositeAbilityObject = {
                               "_RateLayer",
                               "Jade_Passive_BPBuffAddLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ]
                     }
@@ -306,8 +306,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_AttackFlag"
                 }
               ]
             },
@@ -340,13 +340,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_AttackFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_AttackFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HitFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_HitFlag"
                     }
                   ]
                 }
@@ -929,7 +929,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_RateLayer + 1)",
@@ -939,7 +938,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "_RateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ]
                     },
@@ -1035,7 +1035,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_RateLayer",
           "value": {
             "operator": "Variables[0] (_RateLayer) || Variables[1] (_InsertTriggerCount) || SUB || RETURN",
             "displayLines": "(_RateLayer - _InsertTriggerCount)",
@@ -1044,7 +1043,8 @@ const compositeAbilityObject = {
               "_RateLayer",
               "_InsertTriggerCount"
             ]
-          }
+          },
+          "variableName": "_RateLayer"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1318,7 +1318,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_RateLayer",
           "value": {
             "operator": "Variables[0] (_RateLayer) || Variables[1] (_InsertTriggerCount) || SUB || RETURN",
             "displayLines": "(_RateLayer - _InsertTriggerCount)",
@@ -1327,7 +1326,8 @@ const compositeAbilityObject = {
               "_RateLayer",
               "_InsertTriggerCount"
             ]
-          }
+          },
+          "variableName": "_RateLayer"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1724,7 +1724,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Pursued_DamagePercentage",
           "value": {
             "operator": "Variables[0] (0.25) || RETURN",
             "displayLines": "0.25",
@@ -1732,11 +1731,11 @@ const compositeAbilityObject = {
             "variables": [
               0.25
             ]
-          }
+          },
+          "variableName": "_Pursued_DamagePercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_InsertTriggerCount",
           "value": {
             "operator": "Variables[0] (8) || RETURN",
             "displayLines": "8",
@@ -1744,7 +1743,8 @@ const compositeAbilityObject = {
             "variables": [
               8
             ]
-          }
+          },
+          "variableName": "_InsertTriggerCount"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1770,8 +1770,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Jade_Passive_BPBuffAddLayer",
-          "value": 1
+          "value": 1,
+          "variableName": "Jade_Passive_BPBuffAddLayer"
         },
         {
           "name": "IF",
@@ -2138,7 +2138,6 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || Variables[1] (Jade_Passive_BPBuffAddLayer) || ADD || RETURN",
                                 "displayLines": "((_RateLayer + 1) + Jade_Passive_BPBuffAddLayer)",
@@ -2149,11 +2148,11 @@ const compositeAbilityObject = {
                                   "_RateLayer",
                                   "Jade_Passive_BPBuffAddLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_HitNumb_Self",
                               "value": {
                                 "operator": "Variables[0] (MDF_HitNumb_Self) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_HitNumb_Self + 1)",
@@ -2163,7 +2162,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_HitNumb_Self"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_HitNumb_Self"
                             }
                           ]
                         }
@@ -2179,7 +2179,6 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(_RateLayer + 1)",
@@ -2189,7 +2188,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "_RateLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             }
                           ]
                         }
@@ -2213,7 +2213,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Variables[1] (1) || ADD || RETURN",
                                 "displayLines": "(_RateLayer + 1)",
@@ -2222,7 +2221,8 @@ const compositeAbilityObject = {
                                   "_RateLayer",
                                   1
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             }
                           ],
                           "failed": [
@@ -2237,7 +2237,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "_RateLayer",
                                   "value": {
                                     "operator": "Variables[0] (_RateLayer) || Variables[1] (2) || ADD || RETURN",
                                     "displayLines": "(_RateLayer + 2)",
@@ -2246,7 +2245,8 @@ const compositeAbilityObject = {
                                       "_RateLayer",
                                       2
                                     ]
-                                  }
+                                  },
+                                  "variableName": "_RateLayer"
                                 }
                               ]
                             }
@@ -2256,8 +2256,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HitNumb_Self",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_HitNumb_Self"
                     }
                   ]
                 }
@@ -3511,7 +3511,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
                             "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
@@ -3520,7 +3519,8 @@ const compositeAbilityObject = {
                               "_RateLayer",
                               "MDF_Eidolon1_AddRateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ],
                       "failed": [
@@ -3535,7 +3535,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
                                 "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
@@ -3544,7 +3543,8 @@ const compositeAbilityObject = {
                                   "_RateLayer",
                                   "MDF_Eidolon1_AddRateLayer02"
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             }
                           ]
                         }
@@ -3554,8 +3554,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_HitNumb",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Rank01_HitNumb"
                 }
               ]
             }
@@ -3801,7 +3801,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer) || ADD || RETURN",
                             "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer)",
@@ -3810,7 +3809,8 @@ const compositeAbilityObject = {
                               "_RateLayer",
                               "MDF_Eidolon1_AddRateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ],
                       "failed": [
@@ -3825,7 +3825,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Variables[1] (MDF_Eidolon1_AddRateLayer02) || ADD || RETURN",
                                 "displayLines": "(_RateLayer + MDF_Eidolon1_AddRateLayer02)",
@@ -3834,7 +3833,8 @@ const compositeAbilityObject = {
                                   "_RateLayer",
                                   "MDF_Eidolon1_AddRateLayer02"
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             }
                           ]
                         }
@@ -3844,8 +3844,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank01_HitNumb",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Rank01_HitNumb"
                 }
               ]
             }

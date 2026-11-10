@@ -25,9 +25,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DamageCarry",
+      "scope": "AITag",
       "value": 100,
-      "scope": "AITag"
+      "variableName": "DamageCarry"
     },
     {
       "name": "IF",
@@ -127,9 +127,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "BattleEventCount",
+              "scope": "SummonerEntity",
               "value": 0,
-              "scope": "SummonerEntity"
+              "variableName": "BattleEventCount"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -199,8 +199,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Switch",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Switch"
                 }
               ]
             }
@@ -222,7 +222,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (6) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(6 + 1)",
@@ -231,13 +230,13 @@ const configAbility = {
                       6,
                       1
                     ]
-                  }
+                  },
+                  "variableName": "_MaxLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (6) || RETURN",
                     "displayLines": "6",
@@ -245,7 +244,8 @@ const configAbility = {
                     "variables": [
                       6
                     ]
-                  }
+                  },
+                  "variableName": "_MaxLayer"
                 }
               ]
             },
@@ -511,8 +511,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Switch",
-              "value": 0
+              "value": 0,
+              "variableName": "Switch"
             }
           ]
         },

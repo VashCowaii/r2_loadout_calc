@@ -265,8 +265,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "_KillerSkill",
-              "value": 0
+              "value": 0,
+              "variableName": "_KillerSkill"
             },
             {
               "name": "Define Custom Variable",
@@ -274,8 +274,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "_SpecialPhoto",
-              "value": 0
+              "value": 0,
+              "variableName": "_SpecialPhoto"
             },
             {
               "name": "Define Custom Variable",
@@ -283,8 +283,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "_SpecialPhoto_BeingLimbo",
-              "value": 0
+              "value": 0,
+              "variableName": "_SpecialPhoto_BeingLimbo"
             }
           ]
         }

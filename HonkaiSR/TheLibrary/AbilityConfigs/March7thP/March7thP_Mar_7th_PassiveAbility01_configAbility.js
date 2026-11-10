@@ -61,7 +61,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Mar7th_00_Passive_CounterView",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -72,7 +72,7 @@ const configAbility = {
               2
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "Mar7th_00_Passive_CounterView"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -117,7 +117,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Mar7th_00_Passive_CounterView",
+          "scope": "ContextCaster",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -126,7 +126,7 @@ const configAbility = {
               2
             ]
           },
-          "scope": "ContextCaster"
+          "variableName": "Mar7th_00_Passive_CounterView"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -333,7 +333,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Mar7th_00_Passive_CounterView",
+                  "scope": "ContextCaster",
                   "value": {
                     "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -344,7 +344,7 @@ const configAbility = {
                       2
                     ]
                   },
-                  "scope": "ContextCaster"
+                  "variableName": "Mar7th_00_Passive_CounterView"
                 },
                 {
                   "name": "Find New Target",
@@ -437,7 +437,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Mar7th_00_Passive_CounterView",
+                  "scope": "ContextCaster",
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -446,7 +446,7 @@ const configAbility = {
                       2
                     ]
                   },
-                  "scope": "ContextCaster"
+                  "variableName": "Mar7th_00_Passive_CounterView"
                 },
                 {
                   "name": "Find New Target",
@@ -580,8 +580,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Mar7th_00_Passive_CounterView",
-              "value": 0
+              "value": 0,
+              "variableName": "Mar7th_00_Passive_CounterView"
             },
             {
               "name": "IF",

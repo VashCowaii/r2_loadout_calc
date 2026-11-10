@@ -285,13 +285,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertSpecial",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertSpecial"
     },
     {
       "name": "Declare Custom Variable",

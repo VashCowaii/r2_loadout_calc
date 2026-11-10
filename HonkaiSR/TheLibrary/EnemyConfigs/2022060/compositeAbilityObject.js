@@ -132,7 +132,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RevertFlag",
                   "value": {
                     "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                     "displayLines": "-RevertFlag",
@@ -140,7 +139,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "RevertFlag"
                     ]
-                  }
+                  },
+                  "variableName": "RevertFlag"
                 },
                 {
                   "name": "IF",
@@ -235,7 +235,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RevertFlag",
                   "value": {
                     "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                     "displayLines": "-RevertFlag",
@@ -243,7 +242,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "RevertFlag"
                     ]
-                  }
+                  },
+                  "variableName": "RevertFlag"
                 },
                 {
                   "name": "IF",
@@ -338,7 +338,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RevertFlag",
                   "value": {
                     "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                     "displayLines": "-RevertFlag",
@@ -346,7 +345,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "RevertFlag"
                     ]
-                  }
+                  },
+                  "variableName": "RevertFlag"
                 },
                 {
                   "name": "IF",
@@ -441,7 +441,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RevertFlag",
                   "value": {
                     "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                     "displayLines": "-RevertFlag",
@@ -449,7 +448,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "RevertFlag"
                     ]
-                  }
+                  },
+                  "variableName": "RevertFlag"
                 },
                 {
                   "name": "IF",
@@ -544,7 +544,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RevertFlag",
                   "value": {
                     "operator": "Variables[0] (RevertFlag) || INVERT || RETURN",
                     "displayLines": "-RevertFlag",
@@ -552,7 +551,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "RevertFlag"
                     ]
-                  }
+                  },
+                  "variableName": "RevertFlag"
                 },
                 {
                   "name": "IF",

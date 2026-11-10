@@ -45,7 +45,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Pursued_DamagePercentage",
       "value": {
         "operator": "Variables[0] (0.25) || RETURN",
         "displayLines": "0.25",
@@ -53,11 +52,11 @@ const configAbility = {
         "variables": [
           0.25
         ]
-      }
+      },
+      "variableName": "_Pursued_DamagePercentage"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_InsertTriggerCount",
       "value": {
         "operator": "Variables[0] (8) || RETURN",
         "displayLines": "8",
@@ -65,7 +64,8 @@ const configAbility = {
         "variables": [
           8
         ]
-      }
+      },
+      "variableName": "_InsertTriggerCount"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -91,8 +91,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Jade_Passive_BPBuffAddLayer",
-      "value": 1
+      "value": 1,
+      "variableName": "Jade_Passive_BPBuffAddLayer"
     },
     {
       "name": "IF",
@@ -459,7 +459,6 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || Variables[1] (Jade_Passive_BPBuffAddLayer) || ADD || RETURN",
                             "displayLines": "((_RateLayer + 1) + Jade_Passive_BPBuffAddLayer)",
@@ -470,11 +469,11 @@ const configAbility = {
                               "_RateLayer",
                               "Jade_Passive_BPBuffAddLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_HitNumb_Self",
                           "value": {
                             "operator": "Variables[0] (MDF_HitNumb_Self) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_HitNumb_Self + 1)",
@@ -484,7 +483,8 @@ const configAbility = {
                             "variables": [
                               "MDF_HitNumb_Self"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_HitNumb_Self"
                         }
                       ]
                     }
@@ -500,7 +500,6 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(_RateLayer + 1)",
@@ -510,7 +509,8 @@ const configAbility = {
                             "variables": [
                               "_RateLayer"
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ]
                     }
@@ -534,7 +534,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_RateLayer",
                           "value": {
                             "operator": "Variables[0] (_RateLayer) || Variables[1] (1) || ADD || RETURN",
                             "displayLines": "(_RateLayer + 1)",
@@ -543,7 +542,8 @@ const configAbility = {
                               "_RateLayer",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "_RateLayer"
                         }
                       ],
                       "failed": [
@@ -558,7 +558,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_RateLayer",
                               "value": {
                                 "operator": "Variables[0] (_RateLayer) || Variables[1] (2) || ADD || RETURN",
                                 "displayLines": "(_RateLayer + 2)",
@@ -567,7 +566,8 @@ const configAbility = {
                                   "_RateLayer",
                                   2
                                 ]
-                              }
+                              },
+                              "variableName": "_RateLayer"
                             }
                           ]
                         }
@@ -577,8 +577,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HitNumb_Self",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_HitNumb_Self"
                 }
               ]
             }

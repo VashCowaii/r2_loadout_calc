@@ -178,8 +178,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxLayerSwitch",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_MaxLayerSwitch"
                 }
               ]
             },
@@ -237,7 +237,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CritDamageRatioTotal",
                   "value": {
                     "operator": "Variables[0] (_CritDamageRatio) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(_CritDamageRatio * _Layer)",
@@ -246,7 +245,8 @@ const compositeAbilityObject = {
                       "_CritDamageRatio",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "_CritDamageRatioTotal"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -288,12 +288,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_MaxLayerSwitch",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_MaxLayerSwitch"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_NormalDamageRatioTotal",
                       "value": {
                         "operator": "Variables[0] (__NormalDamageRatio) || Variables[1] (_Layer) || MUL || RETURN",
                         "displayLines": "(__NormalDamageRatio * _Layer)",
@@ -302,7 +301,8 @@ const compositeAbilityObject = {
                           "__NormalDamageRatio",
                           "_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "_NormalDamageRatioTotal"
                     },
                     {
                       "name": "Update Modifier Description",

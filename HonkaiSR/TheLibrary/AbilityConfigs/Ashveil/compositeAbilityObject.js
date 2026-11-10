@@ -89,7 +89,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalRatio",
                   "value": {
                     "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(0.04 * MDF_Layer)",
@@ -98,7 +97,8 @@ const compositeAbilityObject = {
                       0.04,
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -249,7 +249,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageTakenForShow",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
                         "displayLines": "MDF_DamageTakenAdd2",
@@ -257,7 +256,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageTakenAdd2"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageTakenForShow"
                     }
                   ],
                   "failed": [
@@ -280,7 +280,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageTakenForShow",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
                         "displayLines": "MDF_DamageTakenAdd1",
@@ -288,7 +287,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageTakenAdd1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageTakenForShow"
                     }
                   ]
                 }
@@ -340,7 +340,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageTakenForShow",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageTakenAdd2) || RETURN",
                         "displayLines": "MDF_DamageTakenAdd2",
@@ -348,7 +347,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageTakenAdd2"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageTakenForShow"
                     }
                   ],
                   "failed": [
@@ -371,7 +371,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageTakenForShow",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageTakenAdd1) || RETURN",
                         "displayLines": "MDF_DamageTakenAdd1",
@@ -379,7 +378,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageTakenAdd1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageTakenForShow"
                     }
                   ]
                 }
@@ -550,7 +550,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Cal1",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (SkillP01_EnhanceInsertBuffStack) || Variables[2] (1) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillP01_EnhanceInsertBuffStack / 1))",
@@ -560,11 +559,11 @@ const compositeAbilityObject = {
                           "SkillP01_EnhanceInsertBuffStack",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Cal1"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Cal2",
                       "value": {
                         "operator": "Variables[0] (0.8) || Variables[1] (0.1) || Variables[2] (MDF_Cal1) || MUL || ADD || RETURN",
                         "displayLines": "(0.8 + (0.1 * MDF_Cal1))",
@@ -574,7 +573,8 @@ const compositeAbilityObject = {
                           0.1,
                           "MDF_Cal1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Cal2"
                     },
                     {
                       "name": "Adjust Target Stats",
@@ -604,8 +604,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EnemyCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_EnemyCount"
                 }
               ]
             },
@@ -666,7 +666,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_EnemyCount",
                           "value": {
                             "operator": "Variables[0] (MDF_EnemyCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_EnemyCount + 1)",
@@ -676,7 +675,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_EnemyCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_EnemyCount"
                         }
                       ]
                     },
@@ -698,7 +698,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_EnhanceInsertBuffStack",
                           "value": {
                             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
                             "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
@@ -707,7 +706,8 @@ const compositeAbilityObject = {
                               "SkillP01_EnhanceInsertBuffStack",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_EnhanceInsertBuffStack"
                         },
                         {
                           "name": "IF",
@@ -744,7 +744,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_EnemyCount",
                           "value": {
                             "operator": "Variables[0] (MDF_EnemyCount) || Variables[1] (1) || SUB || RETURN",
                             "displayLines": "(MDF_EnemyCount - 1)",
@@ -753,7 +752,8 @@ const compositeAbilityObject = {
                               "MDF_EnemyCount",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "MDF_EnemyCount"
                         }
                       ]
                     }
@@ -779,7 +779,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ExtraInsertCountForShow",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_ExtraInsertCountForShow) || Variables[2] (4) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_ExtraInsertCountForShow / 4))",
@@ -789,7 +788,8 @@ const compositeAbilityObject = {
                       "MDF_ExtraInsertCountForShow",
                       4
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ExtraInsertCountForShow"
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -842,7 +842,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_EnhanceInsertBuffStack",
                           "value": {
                             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStackLimit) || RETURN",
                             "displayLines": "SkillP01_EnhanceInsertBuffStackLimit",
@@ -850,7 +849,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "SkillP01_EnhanceInsertBuffStackLimit"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_EnhanceInsertBuffStack"
                         }
                       ]
                     },
@@ -935,7 +935,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_CurrentEnergy",
                           "value": {
                             "operator": "Variables[0] (SkillP01_MaxEnergy) || RETURN",
                             "displayLines": "SkillP01_MaxEnergy",
@@ -943,7 +942,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "SkillP01_MaxEnergy"
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_CurrentEnergy"
                         }
                       ]
                     },
@@ -2610,7 +2610,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillP01_CurrentEnergy",
                       "value": {
                         "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(SkillP01_CurrentEnergy + 1)",
@@ -2619,7 +2618,8 @@ const compositeAbilityObject = {
                           "SkillP01_CurrentEnergy",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "SkillP01_CurrentEnergy"
                     },
                     "Trigger: Attack End"
                   ]
@@ -2656,8 +2656,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Ashveil_NeedContinueInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "Ashveil_NeedContinueInsert"
             },
             {
               "name": "Find New Target",
@@ -2727,8 +2727,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ashveil_NeedContinueInsert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Ashveil_NeedContinueInsert"
                     }
                   ]
                 }
@@ -2768,13 +2768,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Ashveil_NeedContinueInsert",
-          "value": 1
+          "value": 1,
+          "variableName": "Ashveil_NeedContinueInsert"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Ability_CountForSound",
-          "value": 1
+          "value": 1,
+          "variableName": "Ability_CountForSound"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -2815,18 +2815,18 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "Ashveil_IsFirstTimeInsert",
-          "value": 1
+          "value": 1,
+          "variableName": "Ashveil_IsFirstTimeInsert"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Ashveil_ContinueInsertSameTarget",
-          "value": 0
+          "value": 0,
+          "variableName": "Ashveil_ContinueInsertSameTarget"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Ability_SPAddAlready",
-          "value": 0
+          "value": 0,
+          "variableName": "Ability_SPAddAlready"
         },
         {
           "name": "Looped Event",
@@ -2839,8 +2839,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Ashveil_NeedContinueInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "Ashveil_NeedContinueInsert"
             },
             {
               "name": "IF",
@@ -2930,8 +2930,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Ability_SPAddAlready",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Ability_SPAddAlready"
                         }
                       ]
                     },
@@ -2964,30 +2964,30 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ability_EndWaitTime",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ability_EndWaitTime"
                             }
                           ]
                         }
@@ -3023,25 +3023,25 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ability_EndWaitTime",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ability_EndWaitTime"
                             }
                           ]
                         }
@@ -3049,8 +3049,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ashveil_IsFirstTimeInsert",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Ashveil_IsFirstTimeInsert"
                     }
                   ]
                 }
@@ -3094,7 +3094,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Ability_CountForSound",
                       "value": {
                         "operator": "Variables[0] (Ability_CountForSound) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Ability_CountForSound + 1)",
@@ -3104,7 +3103,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Ability_CountForSound"
                         ]
-                      }
+                      },
+                      "variableName": "Ability_CountForSound"
                     }
                   ]
                 },
@@ -3175,7 +3175,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillP01_EnhanceInsertBuffStack",
                           "value": {
                             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (4) || SUB || RETURN",
                             "displayLines": "(SkillP01_EnhanceInsertBuffStack - 4)",
@@ -3184,11 +3183,11 @@ const compositeAbilityObject = {
                               "SkillP01_EnhanceInsertBuffStack",
                               4
                             ]
-                          }
+                          },
+                          "variableName": "SkillP01_EnhanceInsertBuffStack"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
                           "value": {
                             "operator": "Variables[0] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[1] (4) || ADD || RETURN",
                             "displayLines": "(SkillRank_Rank02_EnhanceInsertBuffStackReturn + 4)",
@@ -3197,7 +3196,8 @@ const compositeAbilityObject = {
                               "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
                               4
                             ]
-                          }
+                          },
+                          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
                         },
                         {
                           "name": "Looped Event",
@@ -3258,30 +3258,30 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ability_EndWaitTime",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "Ability_EndWaitTime"
                             }
                           ]
                         }
@@ -3317,25 +3317,25 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_ContinueInsertSameTarget",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_ContinueInsertSameTarget"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ashveil_NeedContinueInsert",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "Ashveil_NeedContinueInsert"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Ability_EndWaitTime",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "Ability_EndWaitTime"
                             }
                           ]
                         }
@@ -3350,7 +3350,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
           "value": {
             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -3359,7 +3358,8 @@ const compositeAbilityObject = {
               "SkillP01_EnhanceInsertBuffStack",
               2
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",
@@ -3370,7 +3370,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_EnhanceInsertBuffStack",
               "value": {
                 "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (FLOOR) || Variables[2] (SkillRank_Rank02_EnhanceInsertBuffStackReturn) || Variables[3] (0.35) || MUL || PARAM_1 || FUNCTION || ADD || RETURN",
                 "displayLines": "(SkillP01_EnhanceInsertBuffStack + &nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((SkillRank_Rank02_EnhanceInsertBuffStackReturn * 0.35)))",
@@ -3381,7 +3380,8 @@ const compositeAbilityObject = {
                   "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
                   0.35
                 ]
-              }
+              },
+              "variableName": "SkillP01_EnhanceInsertBuffStack"
             },
             {
               "name": "IF",
@@ -3446,8 +3446,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
         },
         {
           "name": "IF",
@@ -3531,7 +3531,6 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_CurrentEnergy",
           "value": {
             "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || SUB || RETURN",
             "displayLines": "(SkillP01_CurrentEnergy - 1)",
@@ -3540,7 +3539,8 @@ const compositeAbilityObject = {
               "SkillP01_CurrentEnergy",
               1
             ]
-          }
+          },
+          "variableName": "SkillP01_CurrentEnergy"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3589,8 +3589,8 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "Ability_SPAddAlready",
-          "value": 0
+          "value": 0,
+          "variableName": "Ability_SPAddAlready"
         },
         {
           "name": "Find New Target",
@@ -3671,8 +3671,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Ability_SPAddAlready",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Ability_SPAddAlready"
                 }
               ]
             }
@@ -3681,7 +3681,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
           "value": {
             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -3690,7 +3689,8 @@ const compositeAbilityObject = {
               "SkillP01_EnhanceInsertBuffStack",
               2
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",
@@ -3940,7 +3940,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_CurrentEnergy",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -3948,11 +3947,11 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "SkillP01_CurrentEnergy"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_MaxEnergy",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -3960,7 +3959,8 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "SkillP01_MaxEnergy"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -4002,8 +4002,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",
@@ -4014,7 +4014,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_EnhanceInsertBuffStackLimit",
               "value": {
                 "operator": "Variables[0] (18) || RETURN",
                 "displayLines": "18",
@@ -4022,13 +4021,13 @@ const compositeAbilityObject = {
                 "variables": [
                   18
                 ]
-              }
+              },
+              "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_EnhanceInsertBuffStackLimit",
               "value": {
                 "operator": "Variables[0] (12) || RETURN",
                 "displayLines": "12",
@@ -4036,14 +4035,15 @@ const compositeAbilityObject = {
                 "variables": [
                   12
                 ]
-              }
+              },
+              "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-          "value": 0
+          "value": 0,
+          "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
         },
         {
           "name": "Add Events/Bonuses",
@@ -4285,7 +4285,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_EnhanceInsertBuffStack",
               "value": {
                 "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (2) || ADD || RETURN",
                 "displayLines": "(SkillP01_EnhanceInsertBuffStack + 2)",
@@ -4294,7 +4293,8 @@ const compositeAbilityObject = {
                   "SkillP01_EnhanceInsertBuffStack",
                   2
                 ]
-              }
+              },
+              "variableName": "SkillP01_EnhanceInsertBuffStack"
             },
             {
               "name": "IF",
@@ -4458,7 +4458,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_CurrentEnergy",
           "value": {
             "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (3) || ADD || RETURN",
             "displayLines": "(SkillP01_CurrentEnergy + 3)",
@@ -4467,7 +4466,8 @@ const compositeAbilityObject = {
               "SkillP01_CurrentEnergy",
               3
             ]
-          }
+          },
+          "variableName": "SkillP01_CurrentEnergy"
         },
         "Trigger: Attack End",
         {
@@ -4580,8 +4580,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Ability_IsParasitee",
-          "value": 0
+          "value": 0,
+          "variableName": "Ability_IsParasitee"
         },
         {
           "name": "IF",
@@ -4596,8 +4596,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Ability_IsParasitee",
-              "value": 1
+              "value": 1,
+              "variableName": "Ability_IsParasitee"
             }
           ]
         },
@@ -4614,7 +4614,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_EnhanceInsertBuffStack",
               "value": {
                 "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
@@ -4623,7 +4622,8 @@ const compositeAbilityObject = {
                   "SkillP01_EnhanceInsertBuffStack",
                   1
                 ]
-              }
+              },
+              "variableName": "SkillP01_EnhanceInsertBuffStack"
             },
             {
               "name": "IF",

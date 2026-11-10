@@ -29,7 +29,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_AttackCount",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -37,7 +36,8 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "MDF_AttackCount"
         }
       ]
     },

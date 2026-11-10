@@ -263,8 +263,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnhancedUltra",
-      "value": 0
+      "value": 0,
+      "variableName": "EnhancedUltra"
     },
     {
       "name": "IF",

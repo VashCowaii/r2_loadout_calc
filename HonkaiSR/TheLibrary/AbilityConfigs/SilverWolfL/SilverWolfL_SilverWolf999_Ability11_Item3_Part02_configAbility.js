@@ -84,8 +84,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay1"
             }
           ]
         },
@@ -95,13 +95,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay2",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay2"
             }
           ]
         },
@@ -111,18 +111,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay2",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay2"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay3",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay3"
             }
           ]
         },
@@ -132,23 +132,23 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay2",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay2"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay3",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay3"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay4",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay4"
             }
           ]
         },
@@ -158,28 +158,28 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay1",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay2",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay2"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay3",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay3"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay4",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay4"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay5",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "#CL_ADF_Delay5"
             }
           ]
         }
@@ -187,35 +187,35 @@ const configAbility = {
       "defaultEvents": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Delay1",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ADF_Delay1"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Delay2",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ADF_Delay2"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Delay3",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ADF_Delay3"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Delay4",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ADF_Delay4"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Delay5",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ADF_Delay5"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_ADF_Index",
-      "value": 0
+      "value": 0,
+      "variableName": "#CL_ADF_Index"
     },
     {
       "name": "Find New Target",
@@ -227,7 +227,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Index",
           "value": {
             "operator": "Variables[0] (#CL_ADF_Index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(#CL_ADF_Index + 1)",
@@ -237,7 +236,8 @@ const configAbility = {
             "variables": [
               "#CL_ADF_Index"
             ]
-          }
+          },
+          "variableName": "#CL_ADF_Index"
         },
         {
           "name": "SWITCH",
@@ -257,7 +257,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_ADF_Delay",
                   "value": {
                     "operator": "Variables[0] (#CL_ADF_Delay1) || RETURN",
                     "displayLines": "#CL_ADF_Delay1",
@@ -265,7 +264,8 @@ const configAbility = {
                     "variables": [
                       "#CL_ADF_Delay1"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_ADF_Delay"
                 }
               ]
             },
@@ -275,7 +275,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_ADF_Delay",
                   "value": {
                     "operator": "Variables[0] (#CL_ADF_Delay2) || RETURN",
                     "displayLines": "#CL_ADF_Delay2",
@@ -283,7 +282,8 @@ const configAbility = {
                     "variables": [
                       "#CL_ADF_Delay2"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_ADF_Delay"
                 }
               ]
             },
@@ -293,7 +293,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_ADF_Delay",
                   "value": {
                     "operator": "Variables[0] (#CL_ADF_Delay3) || RETURN",
                     "displayLines": "#CL_ADF_Delay3",
@@ -301,7 +300,8 @@ const configAbility = {
                     "variables": [
                       "#CL_ADF_Delay3"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_ADF_Delay"
                 }
               ]
             },
@@ -311,7 +311,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_ADF_Delay",
                   "value": {
                     "operator": "Variables[0] (#CL_ADF_Delay4) || RETURN",
                     "displayLines": "#CL_ADF_Delay4",
@@ -319,7 +318,8 @@ const configAbility = {
                     "variables": [
                       "#CL_ADF_Delay4"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_ADF_Delay"
                 }
               ]
             },
@@ -329,7 +329,6 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_ADF_Delay",
                   "value": {
                     "operator": "Variables[0] (#CL_ADF_Delay5) || RETURN",
                     "displayLines": "#CL_ADF_Delay5",
@@ -337,7 +336,8 @@ const configAbility = {
                     "variables": [
                       "#CL_ADF_Delay5"
                     ]
-                  }
+                  },
+                  "variableName": "#CL_ADF_Delay"
                 }
               ]
             }
@@ -345,8 +345,8 @@ const configAbility = {
           "defaultEvents": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_ADF_Delay",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_ADF_Delay"
             }
           ]
         },

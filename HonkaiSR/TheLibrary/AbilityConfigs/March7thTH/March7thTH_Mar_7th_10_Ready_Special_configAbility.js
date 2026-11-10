@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_has_enhanced_this_turn",
-      "value": 1
+      "value": 1,
+      "variableName": "_has_enhanced_this_turn"
     },
     {
       "name": "UI Display Event",

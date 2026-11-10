@@ -813,8 +813,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingAttacked",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isBeingAttacked"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -842,7 +842,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCharge",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCharge) || RETURN",
                     "displayLines": "MDF_CurrentCharge",
@@ -850,7 +849,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentCharge"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCharge"
                 },
                 {
                   "name": "SWITCH",
@@ -1012,8 +1012,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "IF",
@@ -1260,8 +1260,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isBeingAttackedSpecial",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isBeingAttackedSpecial"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1345,8 +1345,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 6
+                      "value": 6,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "IF",
@@ -1409,8 +1409,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentChargeValue",
-              "value": 0
+              "value": 0,
+              "variableName": "CurrentChargeValue"
             },
             {
               "name": "Modify Weaknesses",
@@ -1604,13 +1604,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isBeingAttacked",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isBeingAttacked"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isBeingAttackedSpecial",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isBeingAttackedSpecial"
             }
           ]
         },

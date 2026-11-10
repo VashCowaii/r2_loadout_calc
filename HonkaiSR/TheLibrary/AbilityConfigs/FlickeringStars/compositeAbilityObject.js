@@ -176,18 +176,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPSpendDelta",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPSpendDelta"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPSpendCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPSpendCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPTriggered",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPTriggered"
                 }
               ]
             },
@@ -243,7 +243,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPSpendDelta",
                       "value": {
                         "operator": "Variables[0] (MDF_BPSpendDelta) || INVERT || RETURN",
                         "displayLines": "-MDF_BPSpendDelta",
@@ -251,11 +250,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_BPSpendDelta"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BPSpendDelta"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPSpendCount",
                       "value": {
                         "operator": "Variables[0] (MDF_BPSpendCount) || Variables[1] (MDF_BPSpendDelta) || ADD || RETURN",
                         "displayLines": "(MDF_BPSpendCount + MDF_BPSpendDelta)",
@@ -264,7 +263,8 @@ const compositeAbilityObject = {
                           "MDF_BPSpendCount",
                           "MDF_BPSpendDelta"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BPSpendCount"
                     },
                     {
                       "name": "IF",
@@ -337,8 +337,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BPTriggered",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_BPTriggered"
                         }
                       ]
                     }

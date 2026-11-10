@@ -21,8 +21,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "FirstTime",
-          "value": 0
+          "value": 0,
+          "variableName": "FirstTime"
         }
       ]
     },

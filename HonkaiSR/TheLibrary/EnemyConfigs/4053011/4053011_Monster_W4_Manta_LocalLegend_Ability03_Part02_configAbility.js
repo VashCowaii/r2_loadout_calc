@@ -61,13 +61,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_Count",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_Count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck02",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertCheck02"
     },
     {
       "name": "Update Displayed Energy Bar",

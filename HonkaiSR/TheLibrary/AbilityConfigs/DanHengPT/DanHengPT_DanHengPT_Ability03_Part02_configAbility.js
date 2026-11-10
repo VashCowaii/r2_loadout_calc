@@ -102,7 +102,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Passive_Count",
           "value": {
             "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || Variables[2] (2) || ADD || RETURN",
             "displayLines": "((DanHengPT_Passive_Count + 2) + 2)",
@@ -112,13 +111,13 @@ const configAbility = {
               2,
               2
             ]
-          }
+          },
+          "variableName": "DanHengPT_Passive_Count"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DanHengPT_Passive_Count",
           "value": {
             "operator": "Variables[0] (DanHengPT_Passive_Count) || Variables[1] (2) || ADD || RETURN",
             "displayLines": "(DanHengPT_Passive_Count + 2)",
@@ -127,7 +126,8 @@ const configAbility = {
               "DanHengPT_Passive_Count",
               2
             ]
-          }
+          },
+          "variableName": "DanHengPT_Passive_Count"
         }
       ]
     },

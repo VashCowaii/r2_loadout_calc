@@ -29,7 +29,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CDF_SpeedConvertRatio",
           "value": {
             "operator": "Variables[0] (0.66) || RETURN",
             "displayLines": "0.66",
@@ -37,13 +36,13 @@ const configAbility = {
             "variables": [
               0.66
             ]
-          }
+          },
+          "variableName": "CDF_SpeedConvertRatio"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CDF_SpeedConvertRatio",
           "value": {
             "operator": "Variables[0] (0.6) || RETURN",
             "displayLines": "0.6",
@@ -51,13 +50,13 @@ const configAbility = {
             "variables": [
               0.6
             ]
-          }
+          },
+          "variableName": "CDF_SpeedConvertRatio"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_EnergyAdd",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -65,17 +64,18 @@ const configAbility = {
         "variables": [
           2
         ]
-      }
+      },
+      "variableName": "Skill11_EnergyAdd"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill21_ExtraEnergyAdd",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill21_ExtraEnergyAdd"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill22_Energy_Max",
-      "value": 7
+      "value": 7,
+      "variableName": "Skill22_Energy_Max"
     },
     {
       "name": "IF",
@@ -86,8 +86,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Have_Rank06",
-          "value": 1
+          "value": 1,
+          "variableName": "Have_Rank06"
         }
       ]
     }

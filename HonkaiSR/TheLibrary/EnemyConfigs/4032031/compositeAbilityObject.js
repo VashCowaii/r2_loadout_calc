@@ -47,7 +47,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NegativeBlood",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -56,7 +55,8 @@ const compositeAbilityObject = {
                       "CEIL",
                       "MDF_NegativeBlood_Temp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NegativeBlood"
                 },
                 {
                   "name": "Modify Weaknesses",
@@ -91,7 +91,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NegativeBlood",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -100,7 +99,8 @@ const compositeAbilityObject = {
                       "CEIL",
                       "MDF_NegativeBlood_Temp"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NegativeBlood"
                 }
               ]
             }
@@ -168,9 +168,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     }
                   ],
                   "failed": [
@@ -180,9 +180,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     }
                   ]
                 }
@@ -222,9 +222,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 3,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         },
                         {
                           "name": "Find New Target",
@@ -263,9 +263,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "Flag_RevengeTrigger",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "Flag_RevengeTrigger"
                             }
                           ]
                         }
@@ -413,9 +413,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -423,9 +423,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "AIFlag",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "AIFlag"
                         },
                         {
                           "name": "Action Advance/Delay",
@@ -475,9 +475,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         }
                       ]
                     }
@@ -566,9 +566,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -576,9 +576,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "AIFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "AIFlag"
                         }
                       ]
                     }
@@ -784,15 +784,15 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsNegative"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsNegative",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsNegative"
                     },
                     {
                       "name": "Add Events/Bonuses",

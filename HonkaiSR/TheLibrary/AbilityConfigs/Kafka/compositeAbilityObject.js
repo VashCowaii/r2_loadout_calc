@@ -1084,7 +1084,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_P3_LifeTime",
                           "value": {
                             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                             "displayLines": "(2 + 1)",
@@ -1093,11 +1092,11 @@ const compositeAbilityObject = {
                               2,
                               1
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_P3_LifeTime"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_P4_DOTPercentage",
                           "value": {
                             "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
                             "displayLines": "(2.9 + 1.56)",
@@ -1106,13 +1105,13 @@ const compositeAbilityObject = {
                               2.9,
                               1.56
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_P4_DOTPercentage"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_P3_LifeTime",
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1120,11 +1119,11 @@ const compositeAbilityObject = {
                             "variables": [
                               2
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_P3_LifeTime"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Skill03_P4_DOTPercentage",
                           "value": {
                             "operator": "Variables[0] (2.9) || RETURN",
                             "displayLines": "2.9",
@@ -1132,13 +1131,13 @@ const compositeAbilityObject = {
                             "variables": [
                               2.9
                             ]
-                          }
+                          },
+                          "variableName": "Skill03_P4_DOTPercentage"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillMaze_P1_Chance",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1146,7 +1145,8 @@ const compositeAbilityObject = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "SkillMaze_P1_Chance"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1293,7 +1293,6 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_P2_BaseChance",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -1301,7 +1300,8 @@ const compositeAbilityObject = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "SkillP01_P2_BaseChance"
         },
         {
           "name": "IF",
@@ -1312,7 +1312,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P3_LifeTime",
               "value": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1321,11 +1320,11 @@ const compositeAbilityObject = {
                   2,
                   1
                 ]
-              }
+              },
+              "variableName": "Skill03_P3_LifeTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P4_DOTPercentage",
               "value": {
                 "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
                 "displayLines": "(2.9 + 1.56)",
@@ -1334,13 +1333,13 @@ const compositeAbilityObject = {
                   2.9,
                   1.56
                 ]
-              }
+              },
+              "variableName": "Skill03_P4_DOTPercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P3_LifeTime",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1348,11 +1347,11 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "Skill03_P3_LifeTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P4_DOTPercentage",
               "value": {
                 "operator": "Variables[0] (2.9) || RETURN",
                 "displayLines": "2.9",
@@ -1360,7 +1359,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2.9
                 ]
-              }
+              },
+              "variableName": "Skill03_P4_DOTPercentage"
             }
           ]
         },
@@ -1674,8 +1674,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Kafka_Listen_Rank1",
-          "value": 0
+          "value": 0,
+          "variableName": "Kafka_Listen_Rank1"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1687,7 +1687,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_InsertCount",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -1695,7 +1694,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "_InsertCount"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -1721,13 +1721,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Kafka_Listen_Rank2",
-          "value": 0
+          "value": 0,
+          "variableName": "Kafka_Listen_Rank2"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Kafka_Listen_Rank6",
-          "value": 0
+          "value": 0,
+          "variableName": "Kafka_Listen_Rank6"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1807,8 +1807,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Kafka_Listen_Rank6",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Kafka_Listen_Rank6"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2700,7 +2700,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_P2_Chance",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -2708,7 +2707,8 @@ const compositeAbilityObject = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Skill03_P2_Chance"
         },
         {
           "name": "IF",
@@ -2719,7 +2719,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P3_LifeTime",
               "value": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -2728,11 +2727,11 @@ const compositeAbilityObject = {
                   2,
                   1
                 ]
-              }
+              },
+              "variableName": "Skill03_P3_LifeTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P4_DOTPercentage",
               "value": {
                 "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
                 "displayLines": "(2.9 + 1.56)",
@@ -2741,13 +2740,13 @@ const compositeAbilityObject = {
                   2.9,
                   1.56
                 ]
-              }
+              },
+              "variableName": "Skill03_P4_DOTPercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P3_LifeTime",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2755,11 +2754,11 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "Skill03_P3_LifeTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_P4_DOTPercentage",
               "value": {
                 "operator": "Variables[0] (2.9) || RETURN",
                 "displayLines": "2.9",
@@ -2767,7 +2766,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2.9
                 ]
-              }
+              },
+              "variableName": "Skill03_P4_DOTPercentage"
             }
           ]
         },
@@ -2924,8 +2924,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_HasDot",
-          "value": 0
+          "value": 0,
+          "variableName": "_HasDot"
         },
         {
           "name": "IF",
@@ -3195,8 +3195,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HasDot",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_HasDot"
                     }
                   ]
                 }

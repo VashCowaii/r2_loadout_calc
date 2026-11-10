@@ -78,8 +78,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg2",
-          "value": 0
+          "value": 0,
+          "variableName": "OnInsertAbort_Flg2"
         }
       ]
     }

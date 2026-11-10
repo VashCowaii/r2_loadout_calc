@@ -34,7 +34,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Yanqing_KillCount",
               "value": {
                 "operator": "Variables[0] (MDF_Yanqing_KillCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_Yanqing_KillCount + 1)",
@@ -44,7 +43,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Yanqing_KillCount"
                 ]
-              }
+              },
+              "variableName": "MDF_Yanqing_KillCount"
             }
           ]
         }
@@ -104,8 +104,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_KillCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_KillCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -122,7 +122,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_KillCount",
               "value": {
                 "operator": "Variables[0] (MDF_KillCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_KillCount + 1)",
@@ -132,7 +131,8 @@ const configAbility = {
                 "variables": [
                   "MDF_KillCount"
                 ]
-              }
+              },
+              "variableName": "MDF_KillCount"
             }
           ]
         },
@@ -223,13 +223,13 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_LeadTalkSwitch",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_LeadTalkSwitch"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Yanqing_Behind",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Yanqing_Behind"
                         }
                       ],
                       "failed": [
@@ -255,13 +255,13 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_ReverseTalkSwitch",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_ReverseTalkSwitch"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Yanqing_Behind",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_Yanqing_Behind"
                             }
                           ]
                         }
@@ -308,13 +308,13 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_LeadTalkSwitch",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_LeadTalkSwitch"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Yunli_Behind",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Yunli_Behind"
                         }
                       ],
                       "failed": [
@@ -340,13 +340,13 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_ReverseTalkSwitch",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_ReverseTalkSwitch"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Yunli_Behind",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_Yunli_Behind"
                             }
                           ]
                         }

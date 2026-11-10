@@ -108,8 +108,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IsInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_IsInsert"
             },
             {
               "name": "IF",
@@ -122,8 +122,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsInsert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsInsert"
                 }
               ]
             }

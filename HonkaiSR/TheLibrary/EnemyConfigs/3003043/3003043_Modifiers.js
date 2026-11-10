@@ -101,7 +101,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SleepNum",
                       "value": {
                         "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(SleepNum + 1)",
@@ -111,7 +110,8 @@ const configAbility = {
                         "variables": [
                           "SleepNum"
                         ]
-                      }
+                      },
+                      "variableName": "SleepNum"
                     }
                   ]
                 },
@@ -143,8 +143,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SleepNum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SleepNum"
                 }
               ]
             }
@@ -200,7 +200,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SleepNum",
                       "value": {
                         "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(SleepNum + 1)",
@@ -210,7 +209,8 @@ const configAbility = {
                         "variables": [
                           "SleepNum"
                         ]
-                      }
+                      },
+                      "variableName": "SleepNum"
                     }
                   ]
                 },
@@ -242,8 +242,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SleepNum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SleepNum"
                 }
               ]
             }

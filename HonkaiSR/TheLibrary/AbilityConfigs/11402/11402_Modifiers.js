@@ -195,7 +195,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_IgnoreDefenceRatioTotal",
               "value": {
                 "operator": "Variables[0] (_Layer) || Variables[1] (_IgnoreDefenceRatio) || MUL || RETURN",
                 "displayLines": "(_Layer * _IgnoreDefenceRatio)",
@@ -204,7 +203,8 @@ const configAbility = {
                   "_Layer",
                   "_IgnoreDefenceRatio"
                 ]
-              }
+              },
+              "variableName": "_IgnoreDefenceRatioTotal"
             }
           ]
         }
@@ -358,9 +358,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 0,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         }
@@ -437,8 +437,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_EnergyReduce",
-              "value": 0
+              "value": 0,
+              "variableName": "_EnergyReduce"
             },
             {
               "name": "Update Ability Enhance Button",
@@ -602,9 +602,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 1,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         },
@@ -710,8 +710,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_EnergyReduce",
-              "value": 1
+              "value": 1,
+              "variableName": "_EnergyReduce"
             },
             {
               "name": "IF",
@@ -732,9 +732,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 100,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         },
@@ -777,7 +777,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * MDF_SpeedUp)",
@@ -786,7 +785,8 @@ const configAbility = {
                   "MDF_Layer",
                   "MDF_SpeedUp"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             }
           ]
         }
@@ -811,7 +811,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_SpeedUp) || MUL || RETURN",
                 "displayLines": "(MDF_Layer * MDF_SpeedUp)",
@@ -820,7 +819,8 @@ const configAbility = {
                   "MDF_Layer",
                   "MDF_SpeedUp"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -969,7 +969,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue2",
               "value": {
                 "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
                 "displayLines": "(MDF_AttackUp * MDF_Count2)",
@@ -978,7 +977,8 @@ const configAbility = {
                   "MDF_AttackUp",
                   "MDF_Count2"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue2"
             }
           ]
         },
@@ -1011,7 +1011,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count2",
                   "value": {
                     "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_Count2 - 1)",
@@ -1021,11 +1020,11 @@ const configAbility = {
                     "variables": [
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
                     "displayLines": "(MDF_AttackUp * MDF_Count2)",
@@ -1034,7 +1033,8 @@ const configAbility = {
                       "MDF_AttackUp",
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             }
@@ -1069,7 +1069,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count2",
                   "value": {
                     "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Count2 + 1)",
@@ -1079,11 +1078,11 @@ const configAbility = {
                     "variables": [
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
                     "displayLines": "(MDF_AttackUp * MDF_Count2)",
@@ -1092,7 +1091,8 @@ const configAbility = {
                       "MDF_AttackUp",
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             }
@@ -1127,7 +1127,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count2",
                   "value": {
                     "operator": "Variables[0] (MDF_Count2) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_Count2 - 1)",
@@ -1137,11 +1136,11 @@ const configAbility = {
                     "variables": [
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUp) || Variables[1] (MDF_Count2) || MUL || RETURN",
                     "displayLines": "(MDF_AttackUp * MDF_Count2)",
@@ -1150,7 +1149,8 @@ const configAbility = {
                       "MDF_AttackUp",
                       "MDF_Count2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 }
               ]
             }
@@ -1477,7 +1477,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SpeedAddTotal",
               "value": {
                 "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_13145) || MUL || RETURN",
                 "displayLines": "(_Layer * UnusedUnderThisBase_13145)",
@@ -1486,7 +1485,8 @@ const configAbility = {
                   "_Layer",
                   "UnusedUnderThisBase_13145"
                 ]
-              }
+              },
+              "variableName": "SpeedAddTotal"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1571,7 +1571,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentSpeed",
               "value": {
                 "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (_CurrentSpeedConvert) || SUB || RETURN",
                 "displayLines": "(_CurrentSpeed - _CurrentSpeedConvert)",
@@ -1580,11 +1579,11 @@ const configAbility = {
                   "_CurrentSpeed",
                   "_CurrentSpeedConvert"
                 ]
-              }
+              },
+              "variableName": "_CurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_ServantCurrentSpeed",
               "value": {
                 "operator": "Variables[0] (_ServantCurrentSpeed) || Variables[1] (_ServantCurrentSpeedConvert) || SUB || RETURN",
                 "displayLines": "(_ServantCurrentSpeed - _ServantCurrentSpeedConvert)",
@@ -1593,11 +1592,11 @@ const configAbility = {
                   "_ServantCurrentSpeed",
                   "_ServantCurrentSpeedConvert"
                 ]
-              }
+              },
+              "variableName": "_ServantCurrentSpeed"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_AttackConvert",
               "value": {
                 "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_14185) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_14186) || MUL || ADD || RETURN",
                 "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_14185) + (_ServantCurrentSpeed * UnusedUnderThisBase_14186))",
@@ -1608,7 +1607,8 @@ const configAbility = {
                   "_ServantCurrentSpeed",
                   "UnusedUnderThisBase_14186"
                 ]
-              }
+              },
+              "variableName": "_AttackConvert"
             },
             {
               "name": "Stack Target Stat Value",

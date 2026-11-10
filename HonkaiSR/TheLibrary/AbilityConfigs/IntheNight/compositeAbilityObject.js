@@ -48,8 +48,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Layer",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Layer"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -80,7 +80,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CasterSpeed",
                       "value": {
                         "operator": "Variables[0] (_CasterSpeed) || Constants[0] (100) || SUB || RETURN",
                         "displayLines": "(_CasterSpeed - 100)",
@@ -90,7 +89,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_CasterSpeed"
                         ]
-                      }
+                      },
+                      "variableName": "_CasterSpeed"
                     },
                     {
                       "name": "Looped Event",
@@ -121,7 +121,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_CasterSpeed",
                               "value": {
                                 "operator": "Variables[0] (_CasterSpeed) || Variables[1] (10) || SUB || RETURN",
                                 "displayLines": "(_CasterSpeed - 10)",
@@ -130,11 +129,11 @@ const compositeAbilityObject = {
                                   "_CasterSpeed",
                                   10
                                 ]
-                              }
+                              },
+                              "variableName": "_CasterSpeed"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Layer",
                               "value": {
                                 "operator": "Variables[0] (_Layer) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(_Layer + 1)",
@@ -144,7 +143,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "_Layer"
                                 ]
-                              }
+                              },
+                              "variableName": "_Layer"
                             }
                           ]
                         }

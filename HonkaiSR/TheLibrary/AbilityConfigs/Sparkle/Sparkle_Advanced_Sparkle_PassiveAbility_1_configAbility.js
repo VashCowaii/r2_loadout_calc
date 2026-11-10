@@ -31,7 +31,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_PassiveMaxLayer",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -39,7 +38,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "MDF_PassiveMaxLayer"
     }
   ],
   "references": [
@@ -142,13 +142,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPCountAll",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BPCountAll"
                 }
               ]
             }
@@ -194,13 +194,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPCountAll",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPCountAll"
             }
           ]
         },
@@ -268,7 +268,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPCount",
               "value": {
                 "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
                 "displayLines": "-MDF_BPCount",
@@ -276,7 +275,8 @@ const configAbility = {
                 "variables": [
                   "MDF_BPCount"
                 ]
-              }
+              },
+              "variableName": "MDF_BPCount"
             },
             {
               "name": "IF",
@@ -317,7 +317,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BPCountAll",
                       "value": {
                         "operator": "Variables[0] (MDF_BPCountAll) || Variables[1] (MDF_BPCount) || ADD || RETURN",
                         "displayLines": "(MDF_BPCountAll + MDF_BPCount)",
@@ -326,7 +325,8 @@ const configAbility = {
                           "MDF_BPCountAll",
                           "MDF_BPCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BPCountAll"
                     }
                   ]
                 },

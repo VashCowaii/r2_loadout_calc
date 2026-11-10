@@ -49,8 +49,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Insert_Exec",
-      "value": 1
+      "value": 1,
+      "variableName": "Insert_Exec"
     },
     {
       "name": "ATK Scaling DMG",
@@ -184,8 +184,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Insert_Exec",
-      "value": 0
+      "value": 0,
+      "variableName": "Insert_Exec"
     },
     "Trigger: Skip Death Handling"
   ],

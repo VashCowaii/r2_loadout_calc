@@ -567,8 +567,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Skill07_Added_AttackRatio",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Skill07_Added_AttackRatio"
                     },
                     {
                       "name": "Declare Custom Variable",

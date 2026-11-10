@@ -374,8 +374,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BanUltra",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BanUltra"
                 }
               ]
             }

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag_IF",
-      "value": 2
+      "value": 2,
+      "variableName": "AIFlag_IF"
     },
     {
       "name": "Add Events/Bonuses",

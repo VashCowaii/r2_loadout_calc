@@ -111,7 +111,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value)",
@@ -120,7 +119,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_CountSum",
                       "DV_FantasticStory_BaseAbility_2160_BaseAddOn_P1_Value"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "IF",

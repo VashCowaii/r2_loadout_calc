@@ -6,9 +6,9 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MazeSkill_Triggered",
+      "scope": "ContextCaster",
       "value": 1,
-      "scope": "ContextCaster"
+      "variableName": "MazeSkill_Triggered"
     },
     {
       "name": "Find New Target",

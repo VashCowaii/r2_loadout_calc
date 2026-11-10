@@ -82,8 +82,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_dirty_part_num",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_dirty_part_num"
     },
     {
       "name": "Remove Events/Bonuses",

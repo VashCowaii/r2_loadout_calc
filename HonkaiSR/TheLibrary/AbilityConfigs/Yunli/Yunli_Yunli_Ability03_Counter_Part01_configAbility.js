@@ -147,8 +147,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LoopCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_LoopCount"
             },
             {
               "name": "Trigger Ability",
@@ -316,8 +316,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LoopCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_LoopCount"
                 },
                 {
                   "name": "Trigger Ability",
@@ -399,8 +399,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 0
+          "value": 0,
+          "variableName": "OnInsertAbort_Flg"
         }
       ]
     }

@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Dr_RatioAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "_Dr_RatioAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
     },
     {
       "name": "Remove Events/Bonuses",

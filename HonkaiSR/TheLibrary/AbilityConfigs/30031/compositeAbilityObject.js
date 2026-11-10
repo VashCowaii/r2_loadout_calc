@@ -29,7 +29,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "count",
                   "value": {
                     "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(count + 1)",
@@ -39,7 +38,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "count"
                     ]
-                  }
+                  },
+                  "variableName": "count"
                 },
                 {
                   "name": "IF",

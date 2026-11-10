@@ -469,8 +469,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SkillDamageValue",
-              "value": 0.3
+              "value": 0.3,
+              "variableName": "_SkillDamageValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -610,8 +610,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SkillDamageValue",
-              "value": 0.15
+              "value": 0.15,
+              "variableName": "_SkillDamageValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1709,8 +1709,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "UltraSkillDamageValue",
-              "value": 0.05
+              "value": 0.05,
+              "variableName": "UltraSkillDamageValue"
             },
             {
               "name": "Stack Target Stat Value",

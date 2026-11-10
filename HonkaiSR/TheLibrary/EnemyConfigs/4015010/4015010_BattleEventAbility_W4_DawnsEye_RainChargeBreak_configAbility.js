@@ -28,7 +28,6 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_CountDark",
       "value": {
         "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
         "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -37,11 +36,11 @@ const configAbility = {
           "Thunder_CountLight",
           "Thunder_CountDark"
         ]
-      }
+      },
+      "variableName": "Thunder_CountDark"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_TempCount",
       "value": {
         "operator": "Variables[0] (Thunder_CountDark) || RETURN",
         "displayLines": "Thunder_CountDark",
@@ -49,7 +48,8 @@ const configAbility = {
         "variables": [
           "Thunder_CountDark"
         ]
-      }
+      },
+      "variableName": "Thunder_TempCount"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -134,13 +134,13 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_CountDark",
-      "value": 0
+      "value": 0,
+      "variableName": "Thunder_CountDark"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Thunder_CountLight",
-      "value": 0
+      "value": 0,
+      "variableName": "Thunder_CountLight"
     },
     {
       "name": "Remove Events/Bonuses",

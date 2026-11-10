@@ -111,8 +111,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnemyCount",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "EnemyCount"
                     }
                   ]
                 },
@@ -178,8 +178,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnemyCount",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "EnemyCount"
                     }
                   ]
                 },
@@ -253,8 +253,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnemyCount",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "EnemyCount"
                     }
                   ]
                 },

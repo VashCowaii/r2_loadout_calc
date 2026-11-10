@@ -23,7 +23,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_CountThresHold",
       "value": {
         "operator": "Variables[0] (4) || RETURN",
         "displayLines": "4",
@@ -31,11 +30,11 @@ const configAbility = {
         "variables": [
           4
         ]
-      }
+      },
+      "variableName": "_Partner_CountThresHold"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Count_Max",
       "value": {
         "operator": "Variables[0] (16) || RETURN",
         "displayLines": "16",
@@ -43,7 +42,8 @@ const configAbility = {
         "variables": [
           16
         ]
-      }
+      },
+      "variableName": "_Partner_Count_Max"
     },
     {
       "name": "Use Custom Character Function",
@@ -103,7 +103,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Size",
       "value": {
         "operator": "Variables[0] (Init_Count) || RETURN",
         "displayLines": "Init_Count",
@@ -111,11 +110,11 @@ const configAbility = {
         "variables": [
           "Init_Count"
         ]
-      }
+      },
+      "variableName": "_Partner_Size"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Partner_Count",
       "value": {
         "operator": "Variables[0] (Init_Count) || RETURN",
         "displayLines": "Init_Count",
@@ -123,7 +122,8 @@ const configAbility = {
         "variables": [
           "Init_Count"
         ]
-      }
+      },
+      "variableName": "_Partner_Count"
     },
     {
       "name": "Add Events/Bonuses",
@@ -476,7 +476,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_Partner_Count_Show",
               "value": {
                 "operator": "Variables[0] (Init_Count) || RETURN",
                 "displayLines": "Init_Count",
@@ -484,7 +483,8 @@ const configAbility = {
                 "variables": [
                   "Init_Count"
                 ]
-              }
+              },
+              "variableName": "_Partner_Count_Show"
             }
           ]
         }
@@ -506,7 +506,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "_Partner_Count_Show",
                   "value": {
                     "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                     "displayLines": "_Partner_Count_Show",
@@ -514,7 +513,8 @@ const configAbility = {
                     "variables": [
                       "_Partner_Count_Show"
                     ]
-                  }
+                  },
+                  "variableName": "_Partner_Count_Show"
                 }
               ],
               "onChange": [
@@ -524,7 +524,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "_Partner_Count_Show",
                   "value": {
                     "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                     "displayLines": "_Partner_Count_Show",
@@ -532,7 +531,8 @@ const configAbility = {
                     "variables": [
                       "_Partner_Count_Show"
                     ]
-                  }
+                  },
+                  "variableName": "_Partner_Count_Show"
                 }
               ]
             }
@@ -549,8 +549,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Is_S11_Ready",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_S11_Ready"
             }
           ]
         },
@@ -711,8 +711,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Follow_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Follow_Flag"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -727,8 +727,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Follow_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "_Follow_Flag"
             }
           ]
         },
@@ -746,8 +746,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Follow_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Follow_Flag"
                 },
                 {
                   "name": "Use Custom Character Function",

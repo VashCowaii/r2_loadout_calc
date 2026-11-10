@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_OnInput_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "Castorice_OnInput_Flag"
     },
     {
       "name": "IF",

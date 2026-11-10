@@ -506,8 +506,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
-      "value": 0
+      "value": 0,
+      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
     },
     {
       "name": "IF",

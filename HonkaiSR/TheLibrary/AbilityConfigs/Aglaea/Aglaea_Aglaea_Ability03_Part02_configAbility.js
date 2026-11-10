@@ -126,7 +126,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ServantHealValue",
           "value": {
             "operator": "Variables[0] (ServantMaxHP) || Variables[1] (ServantCurrentHP) || SUB || RETURN",
             "displayLines": "(ServantMaxHP - ServantCurrentHP)",
@@ -135,7 +134,8 @@ const configAbility = {
               "ServantMaxHP",
               "ServantCurrentHP"
             ]
-          }
+          },
+          "variableName": "ServantHealValue"
         },
         {
           "name": "Heal",

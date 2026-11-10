@@ -293,8 +293,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_ChangeCount",
-              "value": 1
+              "value": 1,
+              "variableName": "_ChangeCount"
             }
           ],
           "failed": [
@@ -307,15 +307,15 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ChangeCount",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "_ChangeCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_ChangeCount",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "_ChangeCount"
                 }
               ]
             }
@@ -663,7 +663,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "LifeTimeCheck",
                   "value": {
                     "operator": "Variables[0] (LifeTimeCheck) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(LifeTimeCheck - 1)",
@@ -673,7 +672,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "LifeTimeCheck"
                     ]
-                  }
+                  },
+                  "variableName": "LifeTimeCheck"
                 },
                 {
                   "name": "IF",

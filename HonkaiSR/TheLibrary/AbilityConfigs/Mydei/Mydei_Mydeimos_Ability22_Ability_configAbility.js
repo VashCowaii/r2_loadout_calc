@@ -16,8 +16,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_BPSkill21_Plus",
-      "value": 0
+      "value": 0,
+      "variableName": "_BPSkill21_Plus"
     },
     {
       "name": "Update Ability Binding",

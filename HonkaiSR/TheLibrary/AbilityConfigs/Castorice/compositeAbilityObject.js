@@ -400,7 +400,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxSpecialSP",
                   "value": {
                     "operator": "Variables[0] (Castorice_MaxSpecialSP) || Variables[1] (Castorice_PointB1_HealRatioDown) || MUL || RETURN",
                     "displayLines": "(Castorice_MaxSpecialSP * Castorice_PointB1_HealRatioDown)",
@@ -409,12 +408,12 @@ const compositeAbilityObject = {
                       "Castorice_MaxSpecialSP",
                       "Castorice_PointB1_HealRatioDown"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_MaxSpecialSP"
                 },
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "HealAmount_CasterAdd",
                   "value": {
                     "operator": "Variables[0] (MIN) || Variables[1] (Castorice_BeingHealValue) || Variables[2] (Castorice_PointB1_HPPercent) || MUL || Variables[3] (Castorice_MaxSpecialSP) || Variables[4] (Castorice_SumBeingHealValue) || SUB || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((Castorice_BeingHealValue * Castorice_PointB1_HPPercent), (Castorice_MaxSpecialSP - Castorice_SumBeingHealValue))",
@@ -426,7 +425,8 @@ const compositeAbilityObject = {
                       "Castorice_MaxSpecialSP",
                       "Castorice_SumBeingHealValue"
                     ]
-                  }
+                  },
+                  "variableName": "HealAmount_CasterAdd"
                 },
                 {
                   "name": "IF",
@@ -440,7 +440,6 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "skipWhenMindControlled": false,
-                      "variableName": "Castorice_SumBeingHealValue",
                       "value": {
                         "operator": "Variables[0] (Castorice_SumBeingHealValue) || Variables[1] (HealAmount_CasterAdd) || ADD || RETURN",
                         "displayLines": "(Castorice_SumBeingHealValue + HealAmount_CasterAdd)",
@@ -449,7 +448,8 @@ const compositeAbilityObject = {
                           "Castorice_SumBeingHealValue",
                           "HealAmount_CasterAdd"
                         ]
-                      }
+                      },
+                      "variableName": "Castorice_SumBeingHealValue"
                     },
                     {
                       "name": "IF",
@@ -465,7 +465,6 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "skipWhenMindControlled": false,
-                          "variableName": "HealAmount_ServantAdd",
                           "value": {
                             "operator": "Variables[0] (HealAmount_CasterAdd) || RETURN",
                             "displayLines": "HealAmount_CasterAdd",
@@ -473,7 +472,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HealAmount_CasterAdd"
                             ]
-                          }
+                          },
+                          "variableName": "HealAmount_ServantAdd"
                         },
                         {
                           "name": "Define Custom Variable with Stat",
@@ -554,14 +554,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_SumBeingHealValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_SumBeingHealValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_MaxFlag"
                 }
               ]
             },
@@ -571,14 +571,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_SumBeingHealValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_SumBeingHealValue"
                 },
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_MaxFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_MaxFlag"
                 }
               ]
             }
@@ -907,9 +907,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 100,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -960,9 +960,9 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageCarry",
+                  "scope": "AITag",
                   "value": 10,
-                  "scope": "AITag"
+                  "variableName": "DamageCarry"
                 },
                 {
                   "name": "Disable Abilities",
@@ -1329,8 +1329,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnInput_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "Castorice_OnInput_Flag"
         },
         {
           "name": "IF",
@@ -1373,8 +1373,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnInput_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Castorice_OnInput_Flag"
         },
         "Deleted bullshit",
         {
@@ -1382,8 +1382,8 @@ const compositeAbilityObject = {
           "onBattle": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_OnBattle_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Castorice_OnBattle_Flag"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1408,8 +1408,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_OnBattle_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_OnBattle_Flag"
             }
           ]
         },
@@ -1424,8 +1424,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnInput_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "Castorice_OnInput_Flag"
         },
         {
           "name": "Remove Overworld Entity",
@@ -1474,8 +1474,8 @@ const compositeAbilityObject = {
       "onAbortReg": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_OnBattle_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "Castorice_OnBattle_Flag"
         }
       ],
       "references": [],
@@ -1558,12 +1558,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_SkillMaze_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "Castorice_SkillMaze_Flag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_Passive_Count",
           "value": {
             "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
             "displayLines": "Castorice_Passive_MaxCount",
@@ -1571,7 +1570,8 @@ const compositeAbilityObject = {
             "variables": [
               "Castorice_Passive_MaxCount"
             ]
-          }
+          },
+          "variableName": "Castorice_Passive_Count"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1706,8 +1706,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "EnterBattlePlayTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "EnterBattlePlayTimes"
         },
         {
           "name": "IF",
@@ -1735,7 +1735,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1743,7 +1742,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "Castorice_Rank02_Count"
             },
             {
               "name": "Define Custom Variable",
@@ -1751,7 +1751,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "variableName": "CastoriceServant_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1759,7 +1758,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_Rank02_Count"
             }
           ]
         },
@@ -1862,8 +1862,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "CL_EnterBattlePlayTimes",
-              "value": 1
+              "value": 1,
+              "variableName": "CL_EnterBattlePlayTimes"
             }
           ]
         }
@@ -1978,17 +1978,17 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "OverHeal",
+              "scope": "AITag",
               "value": 1,
-              "scope": "AITag"
+              "variableName": "OverHeal"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "OverHeal",
+              "scope": "AITag",
               "value": 0,
-              "scope": "AITag"
+              "variableName": "OverHeal"
             }
           ]
         },
@@ -2442,8 +2442,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_RefreshMaxSpecialSPFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Castorice_RefreshMaxSpecialSPFlag"
                 }
               ]
             }
@@ -2682,8 +2682,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Current_LostHP",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Current_LostHP"
                         }
                       ]
                     }
@@ -2745,8 +2745,8 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_TeamLevel",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_TeamLevel"
                 },
                 {
                   "name": "Define Custom Variable with WorldLevel",
@@ -2795,7 +2795,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Castorice_Passive_MaxCount",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (Castorice_Level) || Variables[1] (Castorice_Level) || MUL || Constants[0] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))",
@@ -2806,7 +2805,8 @@ const compositeAbilityObject = {
                               "FLOOR",
                               "Castorice_Level"
                             ]
-                          }
+                          },
+                          "variableName": "Castorice_Passive_MaxCount"
                         }
                       ]
                     }
@@ -2814,7 +2814,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_Passive_MaxCount",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Constants[0] (80) || Constants[0] (80) || MUL || Constants[1] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))",
@@ -2825,7 +2824,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "FLOOR"
                         ]
-                      }
+                      },
+                      "variableName": "Castorice_Passive_MaxCount"
                     }
                   ]
                 },
@@ -2840,8 +2840,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_Passive_MaxCount",
-                      "value": 2000
+                      "value": 2000,
+                      "variableName": "Castorice_Passive_MaxCount"
                     }
                   ]
                 },
@@ -2938,7 +2938,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_Passive_Count",
                   "value": {
                     "operator": "Variables[0] (Passive_CastoriceServant_CurrentSpecialSP) || Variables[1] (Passive_CastoriceServant_CurrentExtraSpecialSP) || ADD || RETURN",
                     "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)",
@@ -2947,7 +2946,8 @@ const compositeAbilityObject = {
                       "Passive_CastoriceServant_CurrentSpecialSP",
                       "Passive_CastoriceServant_CurrentExtraSpecialSP"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_Passive_Count"
                 },
                 {
                   "name": "IF",
@@ -2988,7 +2988,6 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_Passive_Count",
                   "value": {
                     "operator": "Variables[0] (Castorice_ChangeValue) || Variables[1] (Castorice_Passive_Count) || ADD || RETURN",
                     "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)",
@@ -2997,13 +2996,14 @@ const compositeAbilityObject = {
                       "Castorice_ChangeValue",
                       "Castorice_Passive_Count"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_Passive_Count"
                 },
                 {
                   "name": "Define Custom Variable",
                   "skipWhenMindControlled": false,
-                  "variableName": "Castorice_ChangeValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_ChangeValue"
                 }
               ]
             }
@@ -3063,8 +3063,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_DeltaAdd",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Castorice_DeltaAdd"
                     }
                   ]
                 }
@@ -3282,7 +3282,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -3290,7 +3289,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "Castorice_Rank02_Count"
             },
             {
               "name": "Define Custom Variable",
@@ -3298,7 +3298,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Memosprite}}"
               },
-              "variableName": "CastoriceServant_Rank02_Count",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -3306,7 +3305,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_Rank02_Count"
             }
           ]
         },
@@ -3655,7 +3655,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "_PairStance",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
             "displayLines": "AOE Toughness Value",
@@ -3663,7 +3662,8 @@ const compositeAbilityObject = {
             "variables": [
               "AOE Toughness Value"
             ]
-          }
+          },
+          "variableName": "_PairStance"
         },
         {
           "name": "Trigger Joint-Attack Ability",
@@ -4002,8 +4002,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Avatar_Castorice_Rank01_DamageRatio",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                 }
               ],
               "failed": [
@@ -4051,7 +4051,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Avatar_Castorice_Rank01_DamageRatio",
                       "value": {
                         "operator": "Variables[0] (1.2) || RETURN",
                         "displayLines": "1.2",
@@ -4059,7 +4058,8 @@ const compositeAbilityObject = {
                         "variables": [
                           1.2
                         ]
-                      }
+                      },
+                      "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                     }
                   ],
                   "failed": [
@@ -4085,7 +4085,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Avatar_Castorice_Rank01_DamageRatio",
                           "value": {
                             "operator": "Variables[0] (1.4) || RETURN",
                             "displayLines": "1.4",
@@ -4093,7 +4092,8 @@ const compositeAbilityObject = {
                             "variables": [
                               1.4
                             ]
-                          }
+                          },
+                          "variableName": "Avatar_Castorice_Rank01_DamageRatio"
                         }
                       ]
                     }
@@ -4127,7 +4127,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_ExtraSpecialSP",
+              "scope": "ContextTaskTemplate",
               "value": {
                 "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (_FixedAddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + _FixedAddValue) - _MaxSpecialSP), 0)",
@@ -4141,7 +4141,7 @@ const compositeAbilityObject = {
                   "_MaxSpecialSP"
                 ]
               },
-              "scope": "ContextTaskTemplate"
+              "variableName": "_ExtraSpecialSP"
             },
             {
               "name": "IF",
@@ -5110,7 +5110,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_LoopCount",
               "value": {
                 "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
                 "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
@@ -5119,13 +5118,13 @@ const compositeAbilityObject = {
                   6,
                   "CastoriceServant_Eidolon6_AddCount"
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_LoopCount"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_LoopCount",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -5133,13 +5132,13 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_LoopCount"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP04_P1_HPPercentage",
           "value": {
             "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
             "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
@@ -5148,7 +5147,8 @@ const compositeAbilityObject = {
               0.4,
               "SkillP04_P1_ExtraAddPercentage"
             ]
-          }
+          },
+          "variableName": "SkillP04_P1_HPPercentage"
         },
         {
           "name": "Looped Event",
@@ -5956,7 +5956,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AttackTime",
                   "value": {
                     "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_AttackTime - 1)",
@@ -5966,7 +5965,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_AttackTime"
                     ]
-                  }
+                  },
+                  "variableName": "_AttackTime"
                 },
                 {
                   "name": "Define Modifier Variable",
@@ -6006,7 +6006,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AttackMaxTime",
                   "value": {
                     "operator": "Variables[0] (_AttackTime) || RETURN",
                     "displayLines": "_AttackTime",
@@ -6014,7 +6013,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_AttackTime"
                     ]
-                  }
+                  },
+                  "variableName": "_AttackMaxTime"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -6228,7 +6228,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CastoriceServant_CurrentCount",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_CurrentCount) || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)",
@@ -6237,7 +6236,8 @@ const compositeAbilityObject = {
                           "FLOOR",
                           "CastoriceServant_CurrentCount"
                         ]
-                      }
+                      },
+                      "variableName": "CastoriceServant_CurrentCount"
                     }
                   ]
                 },
@@ -6256,7 +6256,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP",
                       "value": {
                         "operator": "Variables[0] (CastoriceServant_Skill02_AttackCurrent_LostHP) || INVERT || RETURN",
                         "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP",
@@ -6264,11 +6263,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "CastoriceServant_Skill02_AttackCurrent_LostHP"
                         ]
-                      }
+                      },
+                      "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_Skill02_AttackTotal_LostHP) || Variables[2] (CastoriceServant_Skill02_AttackCurrent_LostHP) || ADD || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))",
@@ -6278,7 +6277,8 @@ const compositeAbilityObject = {
                           "CastoriceServant_Skill02_AttackTotal_LostHP",
                           "CastoriceServant_Skill02_AttackCurrent_LostHP"
                         ]
-                      }
+                      },
+                      "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP"
                     }
                   ]
                 }
@@ -6461,8 +6461,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnterBattlePlayTimes",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnterBattlePlayTimes"
                 }
               ]
             },
@@ -6517,8 +6517,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CL_PlayTimes",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "CL_PlayTimes"
                     }
                   ]
                 }
@@ -6532,13 +6532,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CL_PlayTimes",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CL_PlayTimes"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CL_EnterBattlePlayTimes",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CL_EnterBattlePlayTimes"
                 }
               ]
             },
@@ -6803,7 +6803,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_LoopCount",
               "value": {
                 "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
                 "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
@@ -6812,13 +6811,13 @@ const compositeAbilityObject = {
                   6,
                   "CastoriceServant_Eidolon6_AddCount"
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_LoopCount"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_LoopCount",
               "value": {
                 "operator": "Variables[0] (6) || RETURN",
                 "displayLines": "6",
@@ -6826,13 +6825,13 @@ const compositeAbilityObject = {
                 "variables": [
                   6
                 ]
-              }
+              },
+              "variableName": "CastoriceServant_LoopCount"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP04_P1_HPPercentage",
           "value": {
             "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
             "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
@@ -6841,7 +6840,8 @@ const compositeAbilityObject = {
               0.4,
               "SkillP04_P1_ExtraAddPercentage"
             ]
-          }
+          },
+          "variableName": "SkillP04_P1_HPPercentage"
         },
         {
           "name": "Looped Event",
@@ -7121,18 +7121,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_PlayTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "CL_PlayTimes"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BattleViewModeLevel",
-          "value": 3
+          "value": 3,
+          "variableName": "CastoriceServant_BattleViewModeLevel"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_EnterBattlePlayTimes",
-          "value": 0
+          "value": 0,
+          "variableName": "CL_EnterBattlePlayTimes"
         },
         {
           "name": "IF",
@@ -7225,8 +7225,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "IF",
@@ -7296,7 +7296,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(CastoriceServant_Rank02_Count - 1)",
@@ -7306,7 +7305,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_Rank02_Count"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -7314,7 +7314,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "Castorice_Rank02_Count",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
@@ -7323,7 +7323,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
@@ -7383,8 +7383,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoopMax",
-          "value": 10
+          "value": 10,
+          "variableName": "CastoriceBPLoopMax"
         },
         {
           "name": "Looped Event",
@@ -7399,7 +7399,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceBPLoop",
               "value": {
                 "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(CastoriceBPLoop + 1)",
@@ -7409,7 +7408,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CastoriceBPLoop"
                 ]
-              }
+              },
+              "variableName": "CastoriceBPLoop"
             },
             {
               "name": "IF",
@@ -7523,7 +7523,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoop",
           "value": {
             "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(CastoriceBPLoop + 1)",
@@ -7533,16 +7532,16 @@ const compositeAbilityObject = {
             "variables": [
               "CastoriceBPLoop"
             ]
-          }
+          },
+          "variableName": "CastoriceBPLoop"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level",
-          "value": 3
+          "value": 3,
+          "variableName": "CastoriceServant_BPSkill_Level"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_ReadyFlag",
           "value": {
             "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
             "displayLines": "CastoriceServant_BattleViewModeLevel",
@@ -7550,12 +7549,13 @@ const compositeAbilityObject = {
             "variables": [
               "CastoriceServant_BattleViewModeLevel"
             ]
-          }
+          },
+          "variableName": "CastoriceServant_ReadyFlag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "Use Custom Character Function",
@@ -7668,8 +7668,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-              "value": 1
+              "value": 1,
+              "variableName": "CastoriceServant_BPSkill_Level3_Loop"
             }
           ]
         }
@@ -7708,18 +7708,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_PlayTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "CL_PlayTimes"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BattleViewModeLevel",
-          "value": 2
+          "value": 2,
+          "variableName": "CastoriceServant_BattleViewModeLevel"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_EnterBattlePlayTimes",
-          "value": 0
+          "value": 0,
+          "variableName": "CL_EnterBattlePlayTimes"
         },
         {
           "name": "IF",
@@ -7798,13 +7798,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level",
-          "value": 2
+          "value": 2,
+          "variableName": "CastoriceServant_BPSkill_Level"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "IF",
@@ -7865,7 +7865,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(CastoriceServant_Rank02_Count - 1)",
@@ -7875,7 +7874,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_Rank02_Count"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -7883,7 +7883,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "Castorice_Rank02_Count",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
@@ -7892,7 +7892,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
@@ -7952,8 +7952,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoopMax",
-          "value": 10
+          "value": 10,
+          "variableName": "CastoriceBPLoopMax"
         },
         {
           "name": "Looped Event",
@@ -7968,7 +7968,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceBPLoop",
               "value": {
                 "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(CastoriceBPLoop + 1)",
@@ -7978,7 +7977,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CastoriceBPLoop"
                 ]
-              }
+              },
+              "variableName": "CastoriceBPLoop"
             },
             {
               "name": "IF",
@@ -8092,12 +8092,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoop",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceBPLoop"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_ReadyFlag",
           "value": {
             "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
             "displayLines": "CastoriceServant_BattleViewModeLevel",
@@ -8105,12 +8104,13 @@ const compositeAbilityObject = {
             "variables": [
               "CastoriceServant_BattleViewModeLevel"
             ]
-          }
+          },
+          "variableName": "CastoriceServant_ReadyFlag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "Use Custom Character Function",
@@ -8174,8 +8174,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_ReadyAnimStateFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "CastoriceServant_ReadyAnimStateFlag"
             },
             "Deleted bullshit",
             {
@@ -8244,18 +8244,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_PlayTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "CL_PlayTimes"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BattleViewModeLevel",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_BattleViewModeLevel"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CL_EnterBattlePlayTimes",
-          "value": 0
+          "value": 0,
+          "variableName": "CL_EnterBattlePlayTimes"
         },
         {
           "name": "IF",
@@ -8334,13 +8334,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_BPSkill_Level",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_BPSkill_Level"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "IF",
@@ -8401,7 +8401,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_Rank02_Count",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(CastoriceServant_Rank02_Count - 1)",
@@ -8411,7 +8410,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_Rank02_Count"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_Rank02_Count"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -8419,7 +8419,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "Castorice_Rank02_Count",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
@@ -8428,7 +8428,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Castorice_Rank02_Count"
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
@@ -8488,8 +8488,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoopMax",
-          "value": 10
+          "value": 10,
+          "variableName": "CastoriceBPLoopMax"
         },
         {
           "name": "Looped Event",
@@ -8504,7 +8504,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceBPLoop",
               "value": {
                 "operator": "Variables[0] (CastoriceBPLoop) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(CastoriceBPLoop + 1)",
@@ -8514,7 +8513,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "CastoriceBPLoop"
                 ]
-              }
+              },
+              "variableName": "CastoriceBPLoop"
             },
             {
               "name": "IF",
@@ -8628,12 +8628,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceBPLoop",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceBPLoop"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_ReadyFlag",
           "value": {
             "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || RETURN",
             "displayLines": "CastoriceServant_BattleViewModeLevel",
@@ -8641,12 +8640,13 @@ const compositeAbilityObject = {
             "variables": [
               "CastoriceServant_BattleViewModeLevel"
             ]
-          }
+          },
+          "variableName": "CastoriceServant_ReadyFlag"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_UseSkill02_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "CastoriceServant_UseSkill02_Flag"
         },
         {
           "name": "Use Custom Character Function",
@@ -8846,7 +8846,6 @@ const compositeAbilityObject = {
         "Trigger: Ability End",
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_ReadyFlag",
           "value": {
             "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
@@ -8856,7 +8855,8 @@ const compositeAbilityObject = {
             "variables": [
               "CastoriceServant_BattleViewModeLevel"
             ]
-          }
+          },
+          "variableName": "CastoriceServant_ReadyFlag"
         },
         {
           "name": "WAIT FOR",
@@ -9099,8 +9099,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_Rank01_DamageRatio",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Castorice_Rank01_DamageRatio"
                 }
               ],
               "failed": [
@@ -9148,7 +9148,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_Rank01_DamageRatio",
                       "value": {
                         "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio01) || RETURN",
                         "displayLines": "CastoriceServant_Eidolon1_DamageRatio01",
@@ -9156,7 +9155,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "CastoriceServant_Eidolon1_DamageRatio01"
                         ]
-                      }
+                      },
+                      "variableName": "Castorice_Rank01_DamageRatio"
                     }
                   ],
                   "failed": [
@@ -9182,7 +9182,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Castorice_Rank01_DamageRatio",
                           "value": {
                             "operator": "Variables[0] (CastoriceServant_Eidolon1_DamageRatio02) || RETURN",
                             "displayLines": "CastoriceServant_Eidolon1_DamageRatio02",
@@ -9190,7 +9189,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "CastoriceServant_Eidolon1_DamageRatio02"
                             ]
-                          }
+                          },
+                          "variableName": "Castorice_Rank01_DamageRatio"
                         }
                       ]
                     }
@@ -9239,8 +9239,8 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-              "value": 0
+              "value": 0,
+              "variableName": "CastoriceServant_BPSkill_Level3_Loop"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -9871,8 +9871,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "CastoriceServant_ReadyAnimStateFlag"
                     }
                   ]
                 }
@@ -9918,8 +9918,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "CastoriceServant_ReadyAnimStateFlag"
                         }
                       ]
                     }
@@ -9965,8 +9965,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "CastoriceServant_ReadyAnimStateFlag",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "CastoriceServant_ReadyAnimStateFlag"
                             }
                           ]
                         }
@@ -9987,14 +9987,13 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_BattleViewModeLevel",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CastoriceServant_BattleViewModeLevel"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_BattleViewModeLevel",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_BattleViewModeLevel) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(CastoriceServant_BattleViewModeLevel + 1)",
@@ -10004,14 +10003,15 @@ const compositeAbilityObject = {
                     "variables": [
                       "CastoriceServant_BattleViewModeLevel"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_BattleViewModeLevel"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CastoriceServant_BPSkill_Level3_Loop",
-              "value": 0
+              "value": 0,
+              "variableName": "CastoriceServant_BPSkill_Level3_Loop"
             }
           ]
         },

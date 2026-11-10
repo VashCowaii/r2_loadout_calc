@@ -138,8 +138,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "CurrentSummonCount"
                     }
                   ],
                   "failed": [
@@ -994,9 +994,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SW_Minion01_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "SW_Minion01_EnhancementLevel"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1103,7 +1103,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SW_Minion01_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
                 "displayLines": "MDF_EnhancementLevel",
@@ -1112,7 +1112,7 @@ const configAbility = {
                   "MDF_EnhancementLevel"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SW_Minion01_EnhancementLevel"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1579,9 +1579,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1633,9 +1633,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -1660,9 +1660,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1714,9 +1714,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -1741,9 +1741,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1795,9 +1795,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -2097,8 +2097,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SummonDelayRatioPhase1",
-              "value": 0.5
+              "value": 0.5,
+              "variableName": "SummonDelayRatioPhase1"
             },
             {
               "name": "Define Custom Variable",
@@ -2106,8 +2106,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SummonDelayRatioPhase2",
-              "value": 0
+              "value": 0,
+              "variableName": "SummonDelayRatioPhase2"
             }
           ]
         },
@@ -2456,23 +2456,23 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstTime",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "FirstTime"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstSkillInPhase02",
+                  "scope": "ContextModifier",
                   "value": 1,
-                  "scope": "ContextModifier"
+                  "variableName": "FirstSkillInPhase02"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FirstSkillInPhase02",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "FirstSkillInPhase02"
                 }
               ]
             }
@@ -2631,9 +2631,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SummonFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_SummonFlag"
                 },
                 {
                   "name": "IF",

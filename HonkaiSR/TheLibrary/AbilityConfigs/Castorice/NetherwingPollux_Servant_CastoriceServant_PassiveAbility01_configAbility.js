@@ -273,7 +273,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_AttackTime",
               "value": {
                 "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_AttackTime - 1)",
@@ -283,7 +282,8 @@ const configAbility = {
                 "variables": [
                   "_AttackTime"
                 ]
-              }
+              },
+              "variableName": "_AttackTime"
             },
             {
               "name": "Define Modifier Variable",
@@ -323,7 +323,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_AttackMaxTime",
               "value": {
                 "operator": "Variables[0] (_AttackTime) || RETURN",
                 "displayLines": "_AttackTime",
@@ -331,7 +330,8 @@ const configAbility = {
                 "variables": [
                   "_AttackTime"
                 ]
-              }
+              },
+              "variableName": "_AttackMaxTime"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -545,7 +545,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_CurrentCount) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(CastoriceServant_CurrentCount)",
@@ -554,7 +553,8 @@ const configAbility = {
                       "FLOOR",
                       "CastoriceServant_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_CurrentCount"
                 }
               ]
             },
@@ -573,7 +573,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP",
                   "value": {
                     "operator": "Variables[0] (CastoriceServant_Skill02_AttackCurrent_LostHP) || INVERT || RETURN",
                     "displayLines": "-CastoriceServant_Skill02_AttackCurrent_LostHP",
@@ -581,11 +580,11 @@ const configAbility = {
                     "variables": [
                       "CastoriceServant_Skill02_AttackCurrent_LostHP"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_Skill02_AttackCurrent_LostHP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (CastoriceServant_Skill02_AttackTotal_LostHP) || Variables[2] (CastoriceServant_Skill02_AttackCurrent_LostHP) || ADD || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((CastoriceServant_Skill02_AttackTotal_LostHP + CastoriceServant_Skill02_AttackCurrent_LostHP))",
@@ -595,7 +594,8 @@ const configAbility = {
                       "CastoriceServant_Skill02_AttackTotal_LostHP",
                       "CastoriceServant_Skill02_AttackCurrent_LostHP"
                     ]
-                  }
+                  },
+                  "variableName": "CastoriceServant_Skill02_AttackTotal_LostHP"
                 }
               ]
             }
@@ -778,8 +778,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "EnterBattlePlayTimes",
-              "value": 0
+              "value": 0,
+              "variableName": "EnterBattlePlayTimes"
             }
           ]
         },
@@ -834,8 +834,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CL_PlayTimes",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "CL_PlayTimes"
                 }
               ]
             }
@@ -849,13 +849,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CL_PlayTimes",
-              "value": 0
+              "value": 0,
+              "variableName": "CL_PlayTimes"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CL_EnterBattlePlayTimes",
-              "value": 0
+              "value": 0,
+              "variableName": "CL_EnterBattlePlayTimes"
             }
           ]
         },

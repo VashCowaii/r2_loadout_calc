@@ -7,8 +7,8 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus2",
-      "value": 1
+      "value": 1,
+      "variableName": "DV_BattleEventAbility_Challenge_Month_22_plus2"
     }
   ],
   "references": []

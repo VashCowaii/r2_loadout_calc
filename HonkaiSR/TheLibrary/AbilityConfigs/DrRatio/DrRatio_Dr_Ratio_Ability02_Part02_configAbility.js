@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_Dr_RatioAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "_Dr_RatioAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -49,7 +49,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_InsertChance",
           "value": {
             "operator": "Variables[0] (0.4) || RETURN",
             "displayLines": "0.4",
@@ -57,11 +56,11 @@ const configAbility = {
             "variables": [
               0.4
             ]
-          }
+          },
+          "variableName": "_Dr_Ratio_InsertChance"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_InsertChance",
           "value": {
             "operator": "Variables[0] (_Dr_Ratio_InsertChance) || Variables[1] (_DebuffCount) || Variables[2] (0.2) || MUL || ADD || RETURN",
             "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))",
@@ -71,13 +70,13 @@ const configAbility = {
               "_DebuffCount",
               0.2
             ]
-          }
+          },
+          "variableName": "_Dr_Ratio_InsertChance"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_InsertChance",
           "value": {
             "operator": "Variables[0] (0.4) || RETURN",
             "displayLines": "0.4",
@@ -85,7 +84,8 @@ const configAbility = {
             "variables": [
               0.4
             ]
-          }
+          },
+          "variableName": "_Dr_Ratio_InsertChance"
         }
       ]
     },
@@ -151,14 +151,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EffDebuffCount",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "_EffDebuffCount"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EffDebuffCount",
                   "value": {
                     "operator": "Variables[0] (_DebuffCount) || RETURN",
                     "displayLines": "_DebuffCount",
@@ -166,14 +165,15 @@ const configAbility = {
                     "variables": [
                       "_DebuffCount"
                     ]
-                  }
+                  },
+                  "variableName": "_EffDebuffCount"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_SkillTree_SkillFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "_SkillTree_SkillFlag"
             }
           ]
         }
@@ -197,7 +197,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_DebuffCount",
               "value": {
                 "operator": "Variables[0] (_DebuffCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_DebuffCount - 1)",
@@ -207,7 +206,8 @@ const configAbility = {
                 "variables": [
                   "_DebuffCount"
                 ]
-              }
+              },
+              "variableName": "_DebuffCount"
             },
             {
               "name": "IF",
@@ -220,8 +220,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DebuffCount"
                 }
               ]
             },
@@ -329,7 +329,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_EffDebuffCount",
               "value": {
                 "operator": "Variables[0] (_EffDebuffCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_EffDebuffCount - 1)",
@@ -339,7 +338,8 @@ const configAbility = {
                 "variables": [
                   "_EffDebuffCount"
                 ]
-              }
+              },
+              "variableName": "_EffDebuffCount"
             }
           ]
         }
@@ -448,8 +448,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SkillTree_SkillFlag",
-      "value": 1
+      "value": 1,
+      "variableName": "_SkillTree_SkillFlag"
     },
     "Trigger: Ability End"
   ],

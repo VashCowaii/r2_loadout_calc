@@ -28,8 +28,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "FirstSummon",
-      "value": 0
+      "value": 0,
+      "variableName": "FirstSummon"
     },
     {
       "name": "Force Entity Death",

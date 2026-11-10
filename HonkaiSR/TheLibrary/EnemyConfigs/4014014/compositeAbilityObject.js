@@ -379,9 +379,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ShieldAddMaxLayer",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ShieldAddMaxLayer"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -544,7 +544,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ShieldAddMaxLayer",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
                     "displayLines": "MDF_AddMaxLayer",
@@ -553,7 +553,7 @@ const compositeAbilityObject = {
                       "MDF_AddMaxLayer"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "ShieldAddMaxLayer"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -605,9 +605,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ShieldAddMaxLayer",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ShieldAddMaxLayer"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -770,7 +770,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ShieldAddMaxLayer",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_AddMaxLayer) || RETURN",
                     "displayLines": "MDF_AddMaxLayer",
@@ -779,7 +779,7 @@ const compositeAbilityObject = {
                       "MDF_AddMaxLayer"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "ShieldAddMaxLayer"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1065,8 +1065,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "AIFlag"
                         }
                       ],
                       "failed": [
@@ -1081,8 +1081,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "AIFlag",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "AIFlag"
                             }
                           ],
                           "failed": [
@@ -1097,8 +1097,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "AIFlag",
-                                  "value": 5
+                                  "value": 5,
+                                  "variableName": "AIFlag"
                                 }
                               ]
                             }
@@ -1110,7 +1110,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentTurn",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentTurn + 1)",
@@ -1120,7 +1119,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_CurrentTurn"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentTurn"
                 },
                 {
                   "name": "IF",
@@ -1133,7 +1133,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentTurn",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentTurn) || Constants[0] (3) || SUB || RETURN",
                         "displayLines": "(MDF_CurrentTurn - 3)",
@@ -1143,7 +1142,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_CurrentTurn"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentTurn"
                     }
                   ]
                 }
@@ -1708,8 +1708,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BattleScore",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_BattleScore"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1806,8 +1806,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FirstChange",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "FirstChange"
                     }
                   ]
                 }
@@ -1970,16 +1970,16 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FirstUse",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_FirstUse"
                     },
                     "Modifier Deletes Itself"
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FirstUse",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_FirstUse"
                     }
                   ]
                 }
@@ -2051,8 +2051,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FirstStack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_FirstStack"
                     }
                   ]
                 },
@@ -2463,8 +2463,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_ReduceLayer",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_ReduceLayer"
                         }
                       ]
                     }
@@ -5210,7 +5210,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_12477) || RETURN",
                 "displayLines": "UnusedUnderThisBase_12477",
@@ -5218,13 +5217,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "UnusedUnderThisBase_12477"
                 ]
-              }
+              },
+              "variableName": "Skill04Damage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
               "value": {
                 "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
                 "displayLines": "{[Skill04[0]]}",
@@ -5232,7 +5231,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill04[0]]}"
                 ]
-              }
+              },
+              "variableName": "Skill04Damage"
             }
           ]
         },
@@ -5330,7 +5330,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
           "value": {
             "operator": "Variables[0] ({[Skill04[2]]}) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "({[Skill04[2]]} - 1)",
@@ -5340,7 +5339,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill04[2]]}"
             ]
-          }
+          },
+          "variableName": "Skill04Count"
         },
         {
           "name": "Looped Event",
@@ -7048,8 +7048,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06Count",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill06Count"
         },
         "Ability Start",
         {
@@ -7061,7 +7061,6 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill06Count",
               "value": {
                 "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Skill06Count + 1)",
@@ -7071,7 +7070,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Skill06Count"
                 ]
-              }
+              },
+              "variableName": "Skill06Count"
             }
           ]
         },
@@ -7088,7 +7088,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill06Damage",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_13928) || Variables[1] (Skill06Count) || DIV || RETURN",
                 "displayLines": "(UnusedUnderThisBase_13928 / Skill06Count)",
@@ -7097,13 +7096,13 @@ const compositeAbilityObject = {
                   "UnusedUnderThisBase_13928",
                   "Skill06Count"
                 ]
-              }
+              },
+              "variableName": "Skill06Damage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill06Damage",
               "value": {
                 "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
                 "displayLines": "({[Skill06[0]]} / Skill06Count)",
@@ -7112,7 +7111,8 @@ const compositeAbilityObject = {
                   "{[Skill06[0]]}",
                   "Skill06Count"
                 ]
-              }
+              },
+              "variableName": "Skill06Damage"
             }
           ]
         },
@@ -7859,8 +7859,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Tutorial_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Tutorial_Flag"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -7962,7 +7962,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_12477) || RETURN",
                 "displayLines": "UnusedUnderThisBase_12477",
@@ -7970,13 +7969,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "UnusedUnderThisBase_12477"
                 ]
-              }
+              },
+              "variableName": "Skill04Damage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04Damage",
               "value": {
                 "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
                 "displayLines": "{[Skill04[0]]}",
@@ -7984,7 +7983,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill04[0]]}"
                 ]
-              }
+              },
+              "variableName": "Skill04Damage"
             }
           ]
         },
@@ -8082,7 +8082,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
           "value": {
             "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "({[Skill04[1]]} - 1)",
@@ -8092,7 +8091,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill04[1]]}"
             ]
-          }
+          },
+          "variableName": "Skill04Count"
         },
         {
           "name": "Looped Event",

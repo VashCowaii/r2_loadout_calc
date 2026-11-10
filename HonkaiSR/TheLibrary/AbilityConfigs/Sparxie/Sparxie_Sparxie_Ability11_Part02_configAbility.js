@@ -291,12 +291,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SkillUseCount",
-      "value": 0
+      "value": 0,
+      "variableName": "_SkillUseCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Sparxie_Skill02_GrandPrizeChance",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -304,11 +303,11 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "Sparxie_Skill02_GrandPrizeChance"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Sparxie_Skill02_MinorPrizeChance",
       "value": {
         "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
         "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -317,7 +316,8 @@ const configAbility = {
           28,
           "Sparxie_Skill02_GrandPrizeChance"
         ]
-      }
+      },
+      "variableName": "Sparxie_Skill02_MinorPrizeChance"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

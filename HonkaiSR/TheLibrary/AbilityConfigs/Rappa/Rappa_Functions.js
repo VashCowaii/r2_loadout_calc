@@ -32,7 +32,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_PassiveBreakCount",
               "value": {
                 "operator": "Variables[0] (_PassiveBreakCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_PassiveBreakCount + 1)",
@@ -42,7 +41,8 @@ const configAbility = {
                 "variables": [
                   "_PassiveBreakCount"
                 ]
-              }
+              },
+              "variableName": "_PassiveBreakCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -79,7 +79,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_Rappa_BreakCount",
               "value": {
                 "operator": "Variables[0] (DV_Rappa_BreakCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(DV_Rappa_BreakCount + 1)",
@@ -89,14 +88,15 @@ const configAbility = {
                 "variables": [
                   "DV_Rappa_BreakCount"
                 ]
-              }
+              },
+              "variableName": "DV_Rappa_BreakCount"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_StockTempCount",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_StockTempCount"
         },
         {
           "name": "IF",
@@ -119,7 +119,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_StockTempCount",
                   "value": {
                     "operator": "Variables[0] (_PassiveBreakCount) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(_PassiveBreakCount + 1)",
@@ -128,7 +127,8 @@ const configAbility = {
                       "_PassiveBreakCount",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "DV_StockTempCount"
                 },
                 {
                   "name": "IF",
@@ -175,7 +175,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PassiveBreakCount",
                       "value": {
                         "operator": "Variables[0] (_PassiveBreakCountMax) || Variables[1] (_PassiveBreakCountBase) || SUB || RETURN",
                         "displayLines": "(_PassiveBreakCountMax - _PassiveBreakCountBase)",
@@ -184,7 +183,8 @@ const configAbility = {
                           "_PassiveBreakCountMax",
                           "_PassiveBreakCountBase"
                         ]
-                      }
+                      },
+                      "variableName": "_PassiveBreakCount"
                     }
                   ],
                   "failed": [
@@ -214,7 +214,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_PassiveBreakCount",
                       "value": {
                         "operator": "Variables[0] (_PassiveBreakCount) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(_PassiveBreakCount + 1)",
@@ -223,7 +222,8 @@ const configAbility = {
                           "_PassiveBreakCount",
                           1
                         ]
-                      }
+                      },
+                      "variableName": "_PassiveBreakCount"
                     }
                   ]
                 },

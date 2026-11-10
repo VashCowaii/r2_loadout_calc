@@ -198,7 +198,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageData) || Variables[1] (MDF_MaxHP) || DIV || RETURN",
                     "displayLines": "(MDF_DamageData / MDF_MaxHP)",
@@ -207,7 +206,8 @@ const configAbility = {
                       "MDF_DamageData",
                       "MDF_MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageRatio"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -328,7 +328,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageRatio",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_DamageData) || Variables[1] (MDF_MaxHP) || DIV || SUB || RETURN",
                     "displayLines": "(0 - (MDF_DamageData / MDF_MaxHP))",
@@ -339,7 +338,8 @@ const configAbility = {
                       "MDF_DamageData",
                       "MDF_MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageRatio"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -472,8 +472,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "HintCheck",
-              "value": 0
+              "value": 0,
+              "variableName": "HintCheck"
             },
             {
               "name": "Define Custom Variable with HP%",
@@ -568,13 +568,13 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertSpecial",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertSpecial"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -617,7 +617,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentPoint",
               "value": {
                 "operator": "Variables[0] ({[Skill04[5]]}) || RETURN",
                 "displayLines": "{[Skill04[5]]}",
@@ -625,11 +624,11 @@ const configAbility = {
                 "variables": [
                   "{[Skill04[5]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentPoint"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBP",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentPoint) || RETURN",
                 "displayLines": "MDF_CurrentPoint",
@@ -637,7 +636,8 @@ const configAbility = {
                 "variables": [
                   "MDF_CurrentPoint"
                 ]
-              }
+              },
+              "variableName": "CurrentBP"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -746,7 +746,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPChange",
                   "value": {
                     "operator": "Variables[0] (MDF_BPChange) || Variables[1] (MDF_CurrentBPChange) || ADD || RETURN",
                     "displayLines": "(MDF_BPChange + MDF_CurrentBPChange)",
@@ -755,7 +754,8 @@ const configAbility = {
                       "MDF_BPChange",
                       "MDF_CurrentBPChange"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BPChange"
                 }
               ]
             }
@@ -775,7 +775,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentPoint",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentPoint) || Variables[1] (MDF_BPChange) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentPoint + MDF_BPChange)",
@@ -784,7 +783,8 @@ const configAbility = {
                       "MDF_CurrentPoint",
                       "MDF_BPChange"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentPoint"
                 },
                 {
                   "name": "IF",
@@ -797,14 +797,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentPoint",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentPoint"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentBP",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentPoint) || RETURN",
                     "displayLines": "MDF_CurrentPoint",
@@ -812,7 +811,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentPoint"
                     ]
-                  }
+                  },
+                  "variableName": "CurrentBP"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -842,13 +842,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPChange"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentBPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentBPChange"
             },
             {
               "name": "IF",
@@ -966,13 +966,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPChange"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentBPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentBPChange"
             }
           ]
         },
@@ -1014,8 +1014,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sam_BattleScore1_Flag",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "Sam_BattleScore1_Flag"
                 }
               ]
             }
@@ -1051,8 +1051,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Sam_BattleScore1_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Sam_BattleScore1_Flag"
             }
           ]
         },
@@ -1068,8 +1068,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sam_BattleScore1_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Sam_BattleScore1_Flag"
                 }
               ]
             }
@@ -1306,8 +1306,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DeathCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DeathCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -1450,7 +1450,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue1",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValue1) || Variables[1] (MDF_DamageAddValue1) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValue1 + MDF_DamageAddValue1)",
@@ -1459,7 +1458,8 @@ const configAbility = {
                       "MDF_DamageValue1",
                       "MDF_DamageAddValue1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue1"
                 }
               ]
             },
@@ -1485,7 +1485,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue2",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValue2) || Variables[1] (MDF_DamageAddValue2) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValue2 + MDF_DamageAddValue2)",
@@ -1494,7 +1493,8 @@ const configAbility = {
                       "MDF_DamageValue2",
                       "MDF_DamageAddValue2"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue2"
                 }
               ]
             },
@@ -1520,7 +1520,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue3",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValue3) || Variables[1] (MDF_DamageAddValue3) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValue3 + MDF_DamageAddValue3)",
@@ -1529,7 +1528,8 @@ const configAbility = {
                       "MDF_DamageValue3",
                       "MDF_DamageAddValue3"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue3"
                 }
               ]
             },
@@ -1555,7 +1555,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue4",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValue4) || Variables[1] (MDF_DamageAddValue4) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValue4 + MDF_DamageAddValue4)",
@@ -1564,7 +1563,8 @@ const configAbility = {
                       "MDF_DamageValue4",
                       "MDF_DamageAddValue4"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue4"
                 }
               ]
             },
@@ -1590,7 +1590,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue5",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageValue5) || Variables[1] (MDF_DamageAddValue5) || ADD || RETURN",
                     "displayLines": "(MDF_DamageValue5 + MDF_DamageAddValue5)",
@@ -1599,7 +1598,8 @@ const configAbility = {
                       "MDF_DamageValue5",
                       "MDF_DamageAddValue5"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue5"
                 }
               ]
             }
@@ -1610,7 +1610,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageUpRatio",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (BurningBPDamageUpRatio) || RETURN",
                 "displayLines": "BurningBPDamageUpRatio",
@@ -1619,7 +1619,7 @@ const configAbility = {
                   "BurningBPDamageUpRatio"
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_DamageUpRatio"
             },
             {
               "name": "Find New Target",
@@ -2732,8 +2732,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "HintCheck",
-              "value": 0
+              "value": 0,
+              "variableName": "HintCheck"
             },
             {
               "name": "Define Custom Variable with HP%",
@@ -2814,8 +2814,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "InsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -2883,13 +2883,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "InsertCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertCheck"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "InsertSpecial",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertSpecial"
                     }
                   ]
                 }
@@ -2918,7 +2918,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentPoint",
               "value": {
                 "operator": "Variables[0] ({[Skill04[5]]}) || RETURN",
                 "displayLines": "{[Skill04[5]]}",
@@ -2926,7 +2925,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill04[5]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentPoint"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -3035,7 +3035,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BPChange",
                   "value": {
                     "operator": "Variables[0] (MDF_BPChange) || Variables[1] (MDF_CurrentBPChange) || ADD || RETURN",
                     "displayLines": "(MDF_BPChange + MDF_CurrentBPChange)",
@@ -3044,7 +3043,8 @@ const configAbility = {
                       "MDF_BPChange",
                       "MDF_CurrentBPChange"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BPChange"
                 }
               ]
             }
@@ -3064,7 +3064,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentPoint",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentPoint) || Variables[1] (MDF_BPChange) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentPoint + MDF_BPChange)",
@@ -3073,7 +3072,8 @@ const configAbility = {
                       "MDF_CurrentPoint",
                       "MDF_BPChange"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentPoint"
                 },
                 {
                   "name": "IF",
@@ -3086,8 +3086,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentPoint",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentPoint"
                     }
                   ]
                 },
@@ -3119,13 +3119,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPChange"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentBPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentBPChange"
             },
             {
               "name": "IF",
@@ -3243,13 +3243,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BPChange"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentBPChange",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CurrentBPChange"
             }
           ]
         },

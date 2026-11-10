@@ -307,8 +307,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "StageConst",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "StageConst"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -360,8 +360,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "HPScore",
-                      "value": 8000
+                      "value": 8000,
+                      "variableName": "HPScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -369,7 +369,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "RemainingScore",
                       "value": {
                         "operator": "Variables[0] (HPScore) || RETURN",
                         "displayLines": "HPScore",
@@ -377,7 +376,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "HPScore"
                         ]
-                      }
+                      },
+                      "variableName": "RemainingScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -385,8 +385,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "KillScore",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "KillScore"
                     }
                   ],
                   "failed": [
@@ -408,8 +408,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 16000
+                          "value": 16000,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -417,7 +417,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -425,7 +424,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -433,8 +433,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "KillScore"
                         }
                       ]
                     }
@@ -488,7 +488,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentHPPercentage",
                       "value": {
                         "operator": "Variables[0] (CEIL) || Variables[1] (CurrentHPPercentage) || Constants[0] (400) || MUL || PARAM_1 || FUNCTION || Constants[0] (400) || DIV || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((CurrentHPPercentage * 400)) / 400)",
@@ -499,7 +498,8 @@ const compositeAbilityObject = {
                           "CEIL",
                           "CurrentHPPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "CurrentHPPercentage"
                     },
                     {
                       "name": "IF",
@@ -512,8 +512,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentHPPercentage",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentHPPercentage"
                         }
                       ]
                     },
@@ -565,7 +565,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (CurrentHPPercentage) || Variables[1] (HPScore) || MUL || RETURN",
                             "displayLines": "(CurrentHPPercentage * HPScore)",
@@ -574,7 +573,8 @@ const compositeAbilityObject = {
                               "CurrentHPPercentage",
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         }
                       ]
                     }
@@ -705,8 +705,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "StageConst",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "StageConst"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -781,8 +781,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 1000
+                          "value": 1000,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -790,7 +790,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -798,7 +797,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -806,8 +806,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 1500
+                          "value": 1500,
+                          "variableName": "KillScore"
                         }
                       ]
                     },
@@ -828,8 +828,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -837,7 +837,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -845,7 +844,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -853,8 +853,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 2500
+                          "value": 2500,
+                          "variableName": "KillScore"
                         }
                       ]
                     }
@@ -878,8 +878,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 300
+                          "value": 300,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -887,7 +887,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -895,7 +894,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -903,8 +903,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 200
+                          "value": 200,
+                          "variableName": "KillScore"
                         }
                       ],
                       "failed": [
@@ -937,8 +937,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -946,7 +946,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -954,7 +953,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -962,8 +962,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "KillScore"
                                 }
                               ],
                               "failed": [
@@ -973,8 +973,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 300
+                                  "value": 300,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -982,7 +982,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -990,7 +989,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -998,8 +998,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 200
+                                  "value": 200,
+                                  "variableName": "KillScore"
                                 }
                               ]
                             }
@@ -1023,8 +1023,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 2000
+                                  "value": 2000,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1032,7 +1032,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -1040,7 +1039,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1048,8 +1048,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 1000
+                                  "value": 1000,
+                                  "variableName": "KillScore"
                                 }
                               ],
                               "failed": [
@@ -1071,8 +1071,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "HPScore",
-                                      "value": 3500
+                                      "value": 3500,
+                                      "variableName": "HPScore"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1080,7 +1080,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "RemainingScore",
                                       "value": {
                                         "operator": "Variables[0] (HPScore) || RETURN",
                                         "displayLines": "HPScore",
@@ -1088,7 +1087,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "HPScore"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "RemainingScore"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1096,8 +1096,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "KillScore",
-                                      "value": 1500
+                                      "value": 1500,
+                                      "variableName": "KillScore"
                                     }
                                   ]
                                 }
@@ -1157,7 +1157,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentHPPercentage",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (CurrentHPPercentage) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || Constants[0] (100) || DIV || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((CurrentHPPercentage * 100)) / 100)",
@@ -1168,7 +1167,8 @@ const compositeAbilityObject = {
                           "WHOLE",
                           "CurrentHPPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "CurrentHPPercentage"
                     },
                     {
                       "name": "IF",
@@ -1181,8 +1181,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentHPPercentage",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentHPPercentage"
                         }
                       ]
                     },
@@ -1234,7 +1234,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (CurrentHPPercentage) || Variables[1] (HPScore) || MUL || RETURN",
                             "displayLines": "(CurrentHPPercentage * HPScore)",
@@ -1243,7 +1242,8 @@ const compositeAbilityObject = {
                               "CurrentHPPercentage",
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         }
                       ]
                     }
@@ -1374,8 +1374,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "StageConst",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "StageConst"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -1450,8 +1450,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 500
+                          "value": 500,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1459,7 +1459,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -1467,7 +1466,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1475,8 +1475,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 1500
+                          "value": 1500,
+                          "variableName": "KillScore"
                         }
                       ]
                     },
@@ -1497,8 +1497,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1506,7 +1506,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -1514,7 +1513,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1522,8 +1522,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 2000
+                          "value": 2000,
+                          "variableName": "KillScore"
                         }
                       ]
                     }
@@ -1547,8 +1547,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "HPScore",
-                          "value": 300
+                          "value": 300,
+                          "variableName": "HPScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1556,7 +1556,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (HPScore) || RETURN",
                             "displayLines": "HPScore",
@@ -1564,7 +1563,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1572,8 +1572,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "KillScore",
-                          "value": 200
+                          "value": 200,
+                          "variableName": "KillScore"
                         }
                       ],
                       "failed": [
@@ -1606,8 +1606,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1615,7 +1615,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -1623,7 +1622,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1631,8 +1631,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "KillScore"
                                 }
                               ],
                               "failed": [
@@ -1642,8 +1642,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 300
+                                  "value": 300,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1651,7 +1651,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -1659,7 +1658,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1667,8 +1667,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 200
+                                  "value": 200,
+                                  "variableName": "KillScore"
                                 }
                               ]
                             }
@@ -1692,8 +1692,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HPScore",
-                                  "value": 2500
+                                  "value": 2500,
+                                  "variableName": "HPScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1701,7 +1701,6 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "RemainingScore",
                                   "value": {
                                     "operator": "Variables[0] (HPScore) || RETURN",
                                     "displayLines": "HPScore",
@@ -1709,7 +1708,8 @@ const compositeAbilityObject = {
                                     "variables": [
                                       "HPScore"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "RemainingScore"
                                 },
                                 {
                                   "name": "Define Custom Variable",
@@ -1717,8 +1717,8 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "KillScore",
-                                  "value": 1500
+                                  "value": 1500,
+                                  "variableName": "KillScore"
                                 }
                               ],
                               "failed": [
@@ -1740,8 +1740,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "HPScore",
-                                      "value": 5000
+                                      "value": 5000,
+                                      "variableName": "HPScore"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1749,7 +1749,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "RemainingScore",
                                       "value": {
                                         "operator": "Variables[0] (HPScore) || RETURN",
                                         "displayLines": "HPScore",
@@ -1757,7 +1756,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "HPScore"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "RemainingScore"
                                     },
                                     {
                                       "name": "Define Custom Variable",
@@ -1765,8 +1765,8 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Modifier Holder}}"
                                       },
-                                      "variableName": "KillScore",
-                                      "value": 3000
+                                      "value": 3000,
+                                      "variableName": "KillScore"
                                     }
                                   ]
                                 }
@@ -1826,7 +1826,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentHPPercentage",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (CurrentHPPercentage) || Constants[0] (100) || MUL || PARAM_1 || FUNCTION || Constants[0] (100) || DIV || RETURN",
                         "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((CurrentHPPercentage * 100)) / 100)",
@@ -1837,7 +1836,8 @@ const compositeAbilityObject = {
                           "WHOLE",
                           "CurrentHPPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "CurrentHPPercentage"
                     },
                     {
                       "name": "IF",
@@ -1850,8 +1850,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentHPPercentage",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentHPPercentage"
                         }
                       ]
                     },
@@ -1903,7 +1903,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "RemainingScore",
                           "value": {
                             "operator": "Variables[0] (CurrentHPPercentage) || Variables[1] (HPScore) || MUL || RETURN",
                             "displayLines": "(CurrentHPPercentage * HPScore)",
@@ -1912,7 +1911,8 @@ const compositeAbilityObject = {
                               "CurrentHPPercentage",
                               "HPScore"
                             ]
-                          }
+                          },
+                          "variableName": "RemainingScore"
                         }
                       ]
                     }

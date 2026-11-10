@@ -87,7 +87,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04P1SunnyHeat",
           "value": {
             "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
             "displayLines": "{[Skill04P1[0]]}",
@@ -95,7 +94,8 @@ const configAbility = {
             "variables": [
               "{[Skill04P1[0]]}"
             ]
-          }
+          },
+          "variableName": "Skill04P1SunnyHeat"
         },
         {
           "name": "Add Events/Bonuses",
@@ -317,8 +317,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherPhase01Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherPhase01Flag"
                 }
               ]
             }

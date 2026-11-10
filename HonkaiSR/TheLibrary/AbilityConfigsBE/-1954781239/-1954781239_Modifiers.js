@@ -187,8 +187,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FeverBreakDmgFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_FeverBreakDmgFlag"
                 }
               ]
             }
@@ -227,7 +227,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0050_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0051_ADF_2) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_0050_CountSum + DV_FantasticStory_PlusAbility_0051_ADF_2)",
@@ -236,17 +235,18 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_0050_CountSum",
                       "DV_FantasticStory_PlusAbility_0051_ADF_2"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FeverBreakDmgFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_FeverBreakDmgFlag"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_AttackCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_AttackCount"
                 }
               ]
             }
@@ -257,8 +257,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_AttackCount",
-              "value": 1
+              "value": 1,
+              "variableName": "DV_AttackCount"
             }
           ]
         }
@@ -311,7 +311,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_0040_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_0042_ADF_2) || ADD || RETURN",
                     "displayLines": "(DV_FantasticStory_BaseAbility_0040_CountSum + DV_FantasticStory_PlusAbility_0042_ADF_2)",
@@ -320,7 +319,8 @@ const configAbility = {
                       "DV_FantasticStory_BaseAbility_0040_CountSum",
                       "DV_FantasticStory_PlusAbility_0042_ADF_2"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum"
                 }
               ]
             }
@@ -357,7 +357,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
                   "value": {
                     "operator": "Variables[0] (_DamageSum) || Variables[1] (_DamageSumRatio) || MUL || Variables[2] (DV_FantasticStory_BaseAbility_0030_DamageSum) || ADD || RETURN",
                     "displayLines": "((_DamageSum * _DamageSumRatio) + DV_FantasticStory_BaseAbility_0030_DamageSum)",
@@ -367,7 +366,8 @@ const configAbility = {
                       "_DamageSumRatio",
                       "DV_FantasticStory_BaseAbility_0030_DamageSum"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum"
                 }
               ]
             }
@@ -443,8 +443,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -476,7 +476,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                         "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -486,7 +485,8 @@ const configAbility = {
                           "EntityMaxSP",
                           "_CurrentSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -570,7 +570,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EntityCurrentSP",
                   "value": {
                     "operator": "Variables[0] (EntityCurrentSP) || Variables[1] (_AddSP) || Variables[2] (EntityMaxSP) || MUL || ADD || RETURN",
                     "displayLines": "(EntityCurrentSP + (_AddSP * EntityMaxSP))",
@@ -580,7 +579,8 @@ const configAbility = {
                       "_AddSP",
                       "EntityMaxSP"
                     ]
-                  }
+                  },
+                  "variableName": "EntityCurrentSP"
                 },
                 {
                   "name": "IF",
@@ -636,7 +636,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "EntityStockSP",
                       "value": {
                         "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityCurrentSP) || ADD || Variables[2] (EntityMaxSP) || SUB || RETURN",
                         "displayLines": "((EntityStockSP + EntityCurrentSP) - EntityMaxSP)",
@@ -646,7 +645,8 @@ const configAbility = {
                           "EntityCurrentSP",
                           "EntityMaxSP"
                         ]
-                      }
+                      },
+                      "variableName": "EntityStockSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -670,8 +670,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EntityCurrentSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EntityCurrentSP"
                 }
               ]
             }
@@ -920,7 +920,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "TotalDmgRatio",
               "value": {
                 "operator": "Variables[0] (_Current_Layer) || Variables[1] (ReceiveDmgRatio) || MUL || RETURN",
                 "displayLines": "(_Current_Layer * ReceiveDmgRatio)",
@@ -929,7 +928,8 @@ const configAbility = {
                   "_Current_Layer",
                   "ReceiveDmgRatio"
                 ]
-              }
+              },
+              "variableName": "TotalDmgRatio"
             },
             {
               "name": "Stack Target Stat Value",

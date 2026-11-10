@@ -867,9 +867,9 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SpecialSummon",
+                    "scope": "TargetEntity",
                     "value": 0,
-                    "scope": "TargetEntity"
+                    "variableName": "SpecialSummon"
                   },
                   {
                     "name": "Use Ability Option",

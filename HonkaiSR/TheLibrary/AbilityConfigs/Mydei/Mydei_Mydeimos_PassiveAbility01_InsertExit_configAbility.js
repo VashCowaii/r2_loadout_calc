@@ -24,7 +24,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_Tree01_ReviveCount",
           "value": {
             "operator": "Variables[0] (DV_Tree01_ReviveCount) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(DV_Tree01_ReviveCount - 1)",
@@ -34,7 +33,8 @@ const configAbility = {
             "variables": [
               "DV_Tree01_ReviveCount"
             ]
-          }
+          },
+          "variableName": "DV_Tree01_ReviveCount"
         },
         {
           "name": "Define Modifier Variable",
@@ -77,8 +77,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_ReviveCount",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_ReviveCount"
         },
         {
           "name": "Adjust Variable Value",

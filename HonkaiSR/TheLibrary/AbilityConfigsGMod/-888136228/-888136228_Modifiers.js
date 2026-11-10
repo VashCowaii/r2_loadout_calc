@@ -231,7 +231,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acc_Turn",
               "value": {
                 "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Acc_Turn - 1)",
@@ -241,7 +240,8 @@ const configAbility = {
                 "variables": [
                   "Acc_Turn"
                 ]
-              }
+              },
+              "variableName": "Acc_Turn"
             }
           ]
         },
@@ -305,7 +305,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Acc_Turn",
               "value": {
                 "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Acc_Turn - 1)",
@@ -315,7 +314,8 @@ const configAbility = {
                 "variables": [
                   "Acc_Turn"
                 ]
-              }
+              },
+              "variableName": "Acc_Turn"
             }
           ]
         },
@@ -383,7 +383,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Acc_Turn",
               "value": {
                 "operator": "Variables[0] (Acc_Turn) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(Acc_Turn - 1)",
@@ -393,7 +392,8 @@ const configAbility = {
                 "variables": [
                   "Acc_Turn"
                 ]
-              }
+              },
+              "variableName": "Acc_Turn"
             }
           ]
         },

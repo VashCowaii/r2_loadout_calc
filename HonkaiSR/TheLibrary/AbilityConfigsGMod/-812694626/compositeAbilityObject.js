@@ -359,7 +359,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TurnCount",
                       "value": {
                         "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_TurnCount + 1)",
@@ -369,7 +368,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_TurnCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TurnCount"
                     }
                   ]
                 },
@@ -391,8 +391,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TurnCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TurnCount"
                     },
                     {
                       "name": "Add Events/Bonuses",

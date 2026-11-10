@@ -33,7 +33,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_RateLayer",
       "value": {
         "operator": "Variables[0] (_RateLayer) || Variables[1] (_InsertTriggerCount) || SUB || RETURN",
         "displayLines": "(_RateLayer - _InsertTriggerCount)",
@@ -42,7 +41,8 @@ const configAbility = {
           "_RateLayer",
           "_InsertTriggerCount"
         ]
-      }
+      },
+      "variableName": "_RateLayer"
     },
     {
       "name": "Update Displayed Energy Bar",

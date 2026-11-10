@@ -643,7 +643,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -653,7 +652,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -668,7 +668,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -678,7 +677,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -693,7 +693,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -703,7 +702,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     }
@@ -755,7 +755,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -765,7 +764,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -780,7 +780,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -790,7 +789,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -805,7 +805,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -815,7 +814,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     }
@@ -867,7 +867,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -877,7 +876,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -892,7 +892,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -902,7 +901,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     },
@@ -917,7 +917,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EnhancePartNum",
                           "value": {
                             "operator": "Variables[0] (EnhancePartNum) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(EnhancePartNum - 1)",
@@ -927,7 +926,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "EnhancePartNum"
                             ]
-                          }
+                          },
+                          "variableName": "EnhancePartNum"
                         }
                       ]
                     }
@@ -1015,7 +1015,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Enemy Feixiao: Self}}"
           },
-          "variableName": "Skill04DamagePercentage",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
             "displayLines": "{[Skill02[0]]}",
@@ -1024,7 +1024,7 @@ const compositeAbilityObject = {
               "{[Skill02[0]]}"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "Skill04DamagePercentage"
         },
         {
           "name": "Define Custom Variable",
@@ -1032,7 +1032,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self Initial}}"
           },
-          "variableName": "Skill04DamagePercentage",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
             "displayLines": "{[Skill01[0]]}",
@@ -1041,7 +1041,7 @@ const compositeAbilityObject = {
               "{[Skill01[0]]}"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "Skill04DamagePercentage"
         },
         {
           "name": "Add Events/Bonuses",

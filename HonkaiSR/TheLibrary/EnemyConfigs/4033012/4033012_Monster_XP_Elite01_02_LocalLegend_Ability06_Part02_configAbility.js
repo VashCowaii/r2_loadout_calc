@@ -299,8 +299,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "FirstSummon",
-          "value": 1
+          "value": 1,
+          "variableName": "FirstSummon"
         }
       ],
       "failed": [

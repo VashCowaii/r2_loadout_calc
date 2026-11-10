@@ -126,9 +126,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BossCount",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "BossCount"
     },
     {
       "name": "Find New Target",
@@ -165,7 +165,7 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "BossCount",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (BossCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(BossCount + 1)",
@@ -176,7 +176,7 @@ const configAbility = {
               "BossCount"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "BossCount"
         }
       ]
     },
@@ -224,7 +224,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "variableName": "DamageUpRatio",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (DamageUpRatio) || RETURN",
         "displayLines": "DamageUpRatio",
@@ -233,7 +233,7 @@ const configAbility = {
           "DamageUpRatio"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "DamageUpRatio"
     }
   ],
   "targetObjectData": {

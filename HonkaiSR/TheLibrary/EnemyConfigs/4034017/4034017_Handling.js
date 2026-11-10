@@ -45,8 +45,8 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -56,8 +56,8 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -121,8 +121,8 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -132,8 +132,8 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -226,8 +226,8 @@ const configAbility = {
                     "passed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillFlag",
-                        "value": 2
+                        "value": 2,
+                        "variableName": "SkillFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -237,8 +237,8 @@ const configAbility = {
                     "failed": [
                       {
                         "name": "Define Custom Variable",
-                        "variableName": "SkillFlag",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SkillFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -565,8 +565,8 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -576,8 +576,8 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "SkillFlag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "SkillFlag"
                   },
                   {
                     "name": "Use Ability Option",
@@ -690,15 +690,15 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Assist_Flag",
-                    "value": 2
+                    "value": 2,
+                    "variableName": "Assist_Flag"
                   }
                 ],
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "Assist_Flag",
-                    "value": 1
+                    "value": 1,
+                    "variableName": "Assist_Flag"
                   }
                 ]
               },

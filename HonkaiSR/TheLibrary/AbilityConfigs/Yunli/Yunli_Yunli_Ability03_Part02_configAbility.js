@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 1
+      "value": 1,
+      "variableName": "OnInsertAbort_Flg"
     },
     {
       "name": "Add Events/Bonuses",

@@ -117,8 +117,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BuffClear",
-      "value": 0
+      "value": 0,
+      "variableName": "BuffClear"
     }
   ],
   "references": [],

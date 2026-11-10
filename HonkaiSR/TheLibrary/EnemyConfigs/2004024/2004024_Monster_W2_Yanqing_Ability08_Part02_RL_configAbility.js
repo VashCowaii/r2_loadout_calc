@@ -216,7 +216,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -226,7 +225,8 @@ const configAbility = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -267,7 +267,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -277,7 +276,8 @@ const configAbility = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -314,7 +314,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -324,7 +323,8 @@ const configAbility = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -361,7 +361,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -371,7 +370,8 @@ const configAbility = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",
@@ -408,7 +408,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber",
           "value": {
             "operator": "Variables[0] (W2_Yanqing_00_Skill07_AllTeamMemberNumber) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(W2_Yanqing_00_Skill07_AllTeamMemberNumber - 1)",
@@ -418,7 +417,8 @@ const configAbility = {
             "variables": [
               "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
             ]
-          }
+          },
+          "variableName": "W2_Yanqing_00_Skill07_AllTeamMemberNumber"
         },
         {
           "name": "ATK Scaling DMG",

@@ -63,8 +63,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }
@@ -119,8 +119,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Trigger_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Trigger_Flag"
                 }
               ]
             }

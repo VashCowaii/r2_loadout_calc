@@ -40,7 +40,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_23051_DamageRatio01) || Variables[1] (MDF_23051_DamageRatio02) || ADD || RETURN",
                     "displayLines": "(MDF_23051_DamageRatio01 + MDF_23051_DamageRatio02)",
@@ -49,13 +48,13 @@ const configAbility = {
                       "MDF_23051_DamageRatio01",
                       "MDF_23051_DamageRatio02"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_23051_DamageRatio01) || RETURN",
                     "displayLines": "MDF_23051_DamageRatio01",
@@ -63,7 +62,8 @@ const configAbility = {
                     "variables": [
                       "MDF_23051_DamageRatio01"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             },

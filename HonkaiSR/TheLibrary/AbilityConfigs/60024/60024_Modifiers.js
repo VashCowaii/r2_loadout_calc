@@ -104,8 +104,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherBEFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherBEFlag"
                 }
               ]
             }
@@ -149,8 +149,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherBEFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherBEFlag"
                 }
               ]
             }

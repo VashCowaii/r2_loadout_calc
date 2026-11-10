@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ExtraUltraAttack",
       "value": {
         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (1) || ADD || RETURN",
         "displayLines": "(EnergyBar_ExtraUltraAttack + 1)",
@@ -15,7 +14,8 @@ const configAbility = {
           "EnergyBar_ExtraUltraAttack",
           1
         ]
-      }
+      },
+      "variableName": "EnergyBar_ExtraUltraAttack"
     },
     {
       "name": "ATK Scaling DMG",

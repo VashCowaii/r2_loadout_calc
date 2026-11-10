@@ -72,7 +72,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -81,13 +80,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -96,7 +95,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             }
@@ -143,7 +143,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -152,13 +151,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -167,7 +166,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -235,7 +235,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                     "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -244,13 +243,13 @@ const configAbility = {
                       "MDF_CasterAttack",
                       "Modifier_Tear_MaxPercentage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -259,7 +258,8 @@ const configAbility = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -358,7 +358,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAdded",
               "value": {
                 "operator": "Variables[0] (0.05) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(0.05 * MDF_Layer)",
@@ -367,7 +366,8 @@ const configAbility = {
                   0.05,
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackAdded"
             },
             {
               "name": "Stack Target Stat Value",
@@ -493,7 +493,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AddValue",
                   "value": {
                     "operator": "Constants[0] (4) || Variables[0] (BulletCount) || SUB || RETURN",
                     "displayLines": "(4 - BulletCount)",
@@ -503,7 +502,8 @@ const configAbility = {
                     "variables": [
                       "BulletCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AddValue"
                 }
               ]
             },

@@ -23,8 +23,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_First_Sprint",
-      "value": 1
+      "value": 1,
+      "variableName": "Is_First_Sprint"
     }
   ],
   "references": [],

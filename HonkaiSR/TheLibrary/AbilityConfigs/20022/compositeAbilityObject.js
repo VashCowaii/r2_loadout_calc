@@ -173,8 +173,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isAttack"
                 }
               ]
             },
@@ -183,8 +183,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isAttack"
                 }
               ]
             },
@@ -352,8 +352,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",

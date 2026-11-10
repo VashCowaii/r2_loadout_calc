@@ -344,7 +344,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurEnergy",
                       "value": {
                         "operator": "Variables[0] (MDF_Max) || RETURN",
                         "displayLines": "MDF_Max",
@@ -352,7 +351,8 @@ const configAbility = {
                         "variables": [
                           "MDF_Max"
                         ]
-                      }
+                      },
+                      "variableName": "CurEnergy"
                     }
                   ]
                 },

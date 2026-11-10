@@ -58,7 +58,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04Damage",
           "value": {
             "operator": "Variables[0] (UnusedUnderThisBase_12477) || RETURN",
             "displayLines": "UnusedUnderThisBase_12477",
@@ -66,13 +65,13 @@ const configAbility = {
             "variables": [
               "UnusedUnderThisBase_12477"
             ]
-          }
+          },
+          "variableName": "Skill04Damage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04Damage",
           "value": {
             "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
             "displayLines": "{[Skill04[0]]}",
@@ -80,7 +79,8 @@ const configAbility = {
             "variables": [
               "{[Skill04[0]]}"
             ]
-          }
+          },
+          "variableName": "Skill04Damage"
         }
       ]
     },
@@ -178,7 +178,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04Count",
       "value": {
         "operator": "Variables[0] ({[Skill04[1]]}) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "({[Skill04[1]]} - 1)",
@@ -188,7 +187,8 @@ const configAbility = {
         "variables": [
           "{[Skill04[1]]}"
         ]
-      }
+      },
+      "variableName": "Skill04Count"
     },
     {
       "name": "Looped Event",

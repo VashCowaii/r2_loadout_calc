@@ -35,8 +35,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DV_SurgePointMax",
-      "value": 99
+      "value": 99,
+      "variableName": "DV_SurgePointMax"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -119,7 +119,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Saber_00_EntityMaxStockSP",
               "value": {
                 "operator": "Variables[0] (200) || RETURN",
                 "displayLines": "200",
@@ -127,13 +126,13 @@ const configAbility = {
                 "variables": [
                   200
                 ]
-              }
+              },
+              "variableName": "Saber_00_EntityMaxStockSP"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Saber_00_EntityMaxStockSP",
               "value": {
                 "operator": "Variables[0] (120) || RETURN",
                 "displayLines": "120",
@@ -141,7 +140,8 @@ const configAbility = {
                 "variables": [
                   120
                 ]
-              }
+              },
+              "variableName": "Saber_00_EntityMaxStockSP"
             }
           ]
         },
@@ -924,7 +924,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Saber_00_EntityStockSPForShow_Fake",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
@@ -933,7 +932,8 @@ const configAbility = {
                       "WHOLE",
                       "Saber_00_EntityStockSPForShow"
                     ]
-                  }
+                  },
+                  "variableName": "Saber_00_EntityStockSPForShow_Fake"
                 }
               ],
               "failed": [
@@ -948,8 +948,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Saber_00_EntityStockSPForShow_Fake",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Saber_00_EntityStockSPForShow_Fake"
                 }
               ]
             }
@@ -1014,7 +1014,6 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Saber_00_EntityCurrentSP",
                       "value": {
                         "operator": "Variables[0] (Saber_00_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
                         "displayLines": "((Saber_00_EntityCurrentSP - _SPChangeValue) + _SPChangeValueRaw)",
@@ -1024,7 +1023,8 @@ const configAbility = {
                           "_SPChangeValue",
                           "_SPChangeValueRaw"
                         ]
-                      }
+                      },
+                      "variableName": "Saber_00_EntityCurrentSP"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -1061,7 +1061,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "Saber_00_EntityStockSP",
                           "value": {
                             "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
                             "displayLines": "((Saber_00_EntityStockSP + Saber_00_EntityCurrentSP) - Saber_00_EntityMaxSP)",
@@ -1071,7 +1070,8 @@ const configAbility = {
                               "Saber_00_EntityCurrentSP",
                               "Saber_00_EntityMaxSP"
                             ]
-                          }
+                          },
+                          "variableName": "Saber_00_EntityStockSP"
                         },
                         {
                           "name": "IF",
@@ -1095,7 +1095,6 @@ const configAbility = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "Saber_00_EntityStockSP",
                               "value": {
                                 "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
                                 "displayLines": "Saber_00_EntityMaxStockSP",
@@ -1103,7 +1102,8 @@ const configAbility = {
                                 "variables": [
                                   "Saber_00_EntityMaxStockSP"
                                 ]
-                              }
+                              },
+                              "variableName": "Saber_00_EntityStockSP"
                             }
                           ]
                         },
@@ -1239,7 +1239,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Temp_Return_SP",
                   "value": {
                     "operator": "Variables[0] (Saber_00_EntityStockSP) || RETURN",
                     "displayLines": "Saber_00_EntityStockSP",
@@ -1247,12 +1246,13 @@ const configAbility = {
                     "variables": [
                       "Saber_00_EntityStockSP"
                     ]
-                  }
+                  },
+                  "variableName": "_Temp_Return_SP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Saber_00_EntityStockSP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Saber_00_EntityStockSP"
                 },
                 {
                   "name": "Remove Events/Bonuses",

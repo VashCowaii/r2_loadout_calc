@@ -140,13 +140,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Cur_SP_Used",
-              "value": 0
+              "value": 0,
+              "variableName": "_Cur_SP_Used"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Tot_SP_Used",
-              "value": 0
+              "value": 0,
+              "variableName": "_Tot_SP_Used"
             },
             {
               "name": "Add Events/Bonuses",
@@ -191,7 +191,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Tot_SP_Used",
                   "value": {
                     "operator": "Variables[0] (_Tot_SP_Used) || Variables[1] (_Cur_SP_Used) || SUB || RETURN",
                     "displayLines": "(_Tot_SP_Used - _Cur_SP_Used)",
@@ -200,7 +199,8 @@ const configAbility = {
                       "_Tot_SP_Used",
                       "_Cur_SP_Used"
                     ]
-                  }
+                  },
+                  "variableName": "_Tot_SP_Used"
                 }
               ]
             }

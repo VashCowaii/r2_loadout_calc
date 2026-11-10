@@ -160,7 +160,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCount",
               "value": {
                 "operator": "Variables[0] ({[Skill02[3]]}) || RETURN",
                 "displayLines": "{[Skill02[3]]}",
@@ -168,11 +167,11 @@ const configAbility = {
                 "variables": [
                   "{[Skill02[3]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowCount",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] ({[Skill02[0]]}) || MUL || RETURN",
                 "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})",
@@ -182,7 +181,8 @@ const configAbility = {
                   "{[Skill02[3]]}",
                   "{[Skill02[0]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowCount"
             }
           ]
         },
@@ -191,8 +191,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -388,7 +388,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowCount",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] ({[Skill02[0]]}) || MUL || RETURN",
                     "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * {[Skill02[0]]})",
@@ -398,11 +397,11 @@ const configAbility = {
                       "{[Skill02[3]]}",
                       "{[Skill02[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Attack",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] ({[Skill02[3]]}) || DIV || Variables[2] (MDF_LoseAttack) || MUL || RETURN",
                     "displayLines": "((MDF_CurrentCount / {[Skill02[3]]}) * MDF_LoseAttack)",
@@ -412,7 +411,8 @@ const configAbility = {
                       "{[Skill02[3]]}",
                       "MDF_LoseAttack"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Attack"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -817,7 +817,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LoseAttack",
               "value": {
                 "operator": "Variables[0] (MIN) || Variables[1] (MDF_Attack) || Variables[2] (MDF_AttackRatio) || MUL || Variables[3] (MDF_AttackMax) || PARAM_2 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MIN</span>((MDF_Attack * MDF_AttackRatio), MDF_AttackMax)",
@@ -828,7 +827,8 @@ const configAbility = {
                   "MDF_AttackRatio",
                   "MDF_AttackMax"
                 ]
-              }
+              },
+              "variableName": "MDF_LoseAttack"
             },
             {
               "name": "Add Events/Bonuses",

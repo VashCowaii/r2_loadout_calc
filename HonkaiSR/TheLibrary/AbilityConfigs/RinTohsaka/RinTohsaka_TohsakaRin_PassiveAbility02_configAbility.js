@@ -222,8 +222,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Cur_Action_Triggered",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Cur_Action_Triggered"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -372,8 +372,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Cur_Action_Triggered",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Cur_Action_Triggered"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -410,8 +410,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Cur_Action_Triggered",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Cur_Action_Triggered"
                 }
               ]
             }

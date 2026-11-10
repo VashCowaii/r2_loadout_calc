@@ -826,7 +826,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -835,7 +834,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -892,7 +892,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -901,7 +900,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -958,7 +958,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -967,7 +966,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1024,7 +1024,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1033,7 +1032,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1090,7 +1090,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1099,7 +1098,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1156,7 +1156,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1165,7 +1164,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1222,7 +1222,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ResistanceDown",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_PropertyValue * MDF_Layer)",
@@ -1231,7 +1230,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ResistanceDown"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1510,9 +1510,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1520,7 +1520,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (CurrentMaxColorType) || RETURN",
                     "displayLines": "CurrentMaxColorType",
@@ -1529,7 +1529,7 @@ const compositeAbilityObject = {
                       "CurrentMaxColorType"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 },
                 {
                   "name": "IF",
@@ -1557,9 +1557,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1567,7 +1567,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (IceScore) || RETURN",
                         "displayLines": "IceScore",
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
                           "IceScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1606,9 +1606,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 3,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1616,7 +1616,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (ImaginaryScore) || RETURN",
                         "displayLines": "ImaginaryScore",
@@ -1625,7 +1625,7 @@ const compositeAbilityObject = {
                           "ImaginaryScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1655,9 +1655,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 4,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1665,7 +1665,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (PhysicalScore) || RETURN",
                         "displayLines": "PhysicalScore",
@@ -1674,7 +1674,7 @@ const compositeAbilityObject = {
                           "PhysicalScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1704,9 +1704,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 5,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1714,7 +1714,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (QuantumScore) || RETURN",
                         "displayLines": "QuantumScore",
@@ -1723,7 +1723,7 @@ const compositeAbilityObject = {
                           "QuantumScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1753,9 +1753,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 6,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1763,7 +1763,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (ThunderScore) || RETURN",
                         "displayLines": "ThunderScore",
@@ -1772,7 +1772,7 @@ const compositeAbilityObject = {
                           "ThunderScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1802,9 +1802,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 7,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1812,7 +1812,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (WindScore) || RETURN",
                         "displayLines": "WindScore",
@@ -1821,7 +1821,7 @@ const compositeAbilityObject = {
                           "WindScore"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     }
                   ]
                 },
@@ -1841,8 +1841,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentColorSlotIndex",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "CurrentColorSlotIndex"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2531,9 +2531,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentColorSlotIndex",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentColorSlotIndex"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2541,9 +2541,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "FireScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "FireScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2551,9 +2551,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "IceScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "IceScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2561,9 +2561,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ImaginaryScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ImaginaryScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2571,9 +2571,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "PhysicalScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "PhysicalScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2581,9 +2581,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "QuantumScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "QuantumScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2591,9 +2591,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "ThunderScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "ThunderScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2601,9 +2601,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "WindScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "WindScore"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2611,9 +2611,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorType",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorType"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2621,9 +2621,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentMaxColorScore",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "CurrentMaxColorScore"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2665,9 +2665,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_ElationDamageFlag",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_ElationDamageFlag"
                     }
                   ]
                 }
@@ -2795,9 +2795,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_ElationDamageFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_ElationDamageFlag"
                 }
               ]
             },
@@ -2889,9 +2889,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "_ElationDamageFlag",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "_ElationDamageFlag"
                         }
                       ]
                     }
@@ -3994,9 +3994,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentColorSlotIndex",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentColorSlotIndex"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4004,9 +4004,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "FireScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "FireScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4014,9 +4014,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "IceScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "IceScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4024,9 +4024,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ImaginaryScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ImaginaryScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4034,9 +4034,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "PhysicalScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "PhysicalScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4044,9 +4044,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "QuantumScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "QuantumScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4054,9 +4054,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "ThunderScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ThunderScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4064,9 +4064,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "WindScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "WindScore"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4074,9 +4074,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorType",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorType"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4084,9 +4084,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentMaxColorScore",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "CurrentMaxColorScore"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -4339,8 +4339,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentColorSlotIndex",
-          "value": 0
+          "value": 0,
+          "variableName": "CurrentColorSlotIndex"
         }
       ],
       "targetObjectData": {
@@ -6270,7 +6270,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot1",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6278,7 +6277,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot1"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6297,8 +6297,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "CurrentColorSlotIndex"
                     }
                   ]
                 },
@@ -6308,7 +6308,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot2",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6316,7 +6315,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot2"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6335,8 +6335,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "CurrentColorSlotIndex"
                     }
                   ]
                 },
@@ -6346,7 +6346,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot3",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6354,7 +6353,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot3"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6373,8 +6373,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "CurrentColorSlotIndex"
                     }
                   ]
                 },
@@ -6384,7 +6384,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot4",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6392,7 +6391,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot4"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6411,8 +6411,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "CurrentColorSlotIndex"
                     }
                   ]
                 },
@@ -6422,7 +6422,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot5",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6430,7 +6429,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot5"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6449,8 +6449,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 6
+                      "value": 6,
+                      "variableName": "CurrentColorSlotIndex"
                     }
                   ]
                 },
@@ -6460,7 +6460,6 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot6",
                       "value": {
                         "operator": "Variables[0] (TaskListDF_ColorValue) || RETURN",
                         "displayLines": "TaskListDF_ColorValue",
@@ -6468,7 +6467,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "TaskListDF_ColorValue"
                         ]
-                      }
+                      },
+                      "variableName": "ColorSlot6"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -6487,8 +6487,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentColorSlotIndex",
-                      "value": 7
+                      "value": 7,
+                      "variableName": "CurrentColorSlotIndex"
                     },
                     {
                       "name": "IF",
@@ -6993,8 +6993,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot1"
                     }
                   ]
                 },
@@ -7214,8 +7214,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot2",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot2"
                     }
                   ]
                 },
@@ -7435,8 +7435,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot3",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot3"
                     }
                   ]
                 },
@@ -7656,8 +7656,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot4",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot4"
                     }
                   ]
                 },
@@ -7877,8 +7877,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot5",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot5"
                     }
                   ]
                 },
@@ -8098,8 +8098,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot6",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot6"
                     }
                   ]
                 }
@@ -8349,8 +8349,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot1"
                     }
                   ]
                 },
@@ -8570,8 +8570,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot2",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot2"
                     }
                   ]
                 },
@@ -8791,8 +8791,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot3",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot3"
                     }
                   ]
                 },
@@ -9012,8 +9012,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot4",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot4"
                     }
                   ]
                 },
@@ -9233,8 +9233,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot5",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot5"
                     }
                   ]
                 },
@@ -9454,8 +9454,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ColorSlot6",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "ColorSlot6"
                     }
                   ]
                 }

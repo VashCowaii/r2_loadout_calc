@@ -141,8 +141,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "Gepard_LimboFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Gepard_LimboFlag"
                         },
                         {
                           "name": "IF",
@@ -362,8 +362,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "Gepard_LimboFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Gepard_LimboFlag"
                     },
                     {
                       "name": "Find New Target",

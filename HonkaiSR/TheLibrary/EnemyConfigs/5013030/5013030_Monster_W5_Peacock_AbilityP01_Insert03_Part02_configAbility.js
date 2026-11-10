@@ -166,8 +166,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "CurrentColorSlotIndex",
-      "value": 0
+      "value": 0,
+      "variableName": "CurrentColorSlotIndex"
     }
   ],
   "targetObjectData": {

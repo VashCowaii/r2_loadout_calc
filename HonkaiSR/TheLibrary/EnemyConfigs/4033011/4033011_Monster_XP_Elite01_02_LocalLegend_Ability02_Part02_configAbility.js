@@ -7,9 +7,9 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "FireBallNum",
+      "scope": "ContextAbility",
       "value": 1,
-      "scope": "ContextAbility"
+      "variableName": "FireBallNum"
     },
     {
       "name": "Trigger Multiple Functions",

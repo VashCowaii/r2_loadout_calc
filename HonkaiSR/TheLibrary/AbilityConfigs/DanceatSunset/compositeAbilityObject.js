@@ -85,7 +85,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageAddedRatio",
                   "value": {
                     "operator": "Variables[0] (0.36) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(0.36 * MDF_Layer)",
@@ -94,7 +93,8 @@ const compositeAbilityObject = {
                       0.36,
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageAddedRatio"
                 }
               ]
             }

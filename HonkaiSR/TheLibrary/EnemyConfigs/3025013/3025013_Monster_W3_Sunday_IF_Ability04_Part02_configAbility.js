@@ -445,8 +445,8 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "Weakness_CountDown",
-      "value": 3
+      "value": 3,
+      "variableName": "Weakness_CountDown"
     },
     "Trigger: Ability End"
   ],

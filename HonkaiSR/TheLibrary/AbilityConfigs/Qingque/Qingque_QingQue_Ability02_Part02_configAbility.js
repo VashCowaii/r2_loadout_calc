@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_BPCount",
       "value": {
         "operator": "Variables[0] (QingQue_BPCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(QingQue_BPCount + 1)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           "QingQue_BPCount"
         ]
-      }
+      },
+      "variableName": "QingQue_BPCount"
     },
     {
       "name": "IF",
@@ -43,8 +43,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_BPCoolDown",
-          "value": 1
+          "value": 1,
+          "variableName": "QingQue_BPCoolDown"
         }
       ]
     },
@@ -258,23 +258,23 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tong",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tong"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Tiao",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Tiao"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_Wan",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_Wan"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "QingQue_CardCount",
-          "value": 0
+          "value": 0,
+          "variableName": "QingQue_CardCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -369,23 +369,23 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tong",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tong"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Tiao",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Tiao"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_Wan",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_Wan"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "QingQue_CardCount",
-              "value": 0
+              "value": 0,
+              "variableName": "QingQue_CardCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -480,23 +480,23 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tong",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Tong"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Tiao",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Tiao"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_Wan",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_Wan"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "QingQue_CardCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "QingQue_CardCount"
                 },
                 {
                   "name": "Add Events/Bonuses",

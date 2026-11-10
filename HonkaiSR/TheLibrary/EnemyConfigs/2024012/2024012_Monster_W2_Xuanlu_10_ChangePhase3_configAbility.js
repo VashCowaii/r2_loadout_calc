@@ -85,8 +85,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MaxMinionCount",
-      "value": 4
+      "value": 4,
+      "variableName": "MaxMinionCount"
     },
     {
       "name": "Remove Events/Bonuses",

@@ -388,13 +388,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAimEnemySkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsAimEnemySkill"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsWindfurySkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsWindfurySkill"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -438,13 +438,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAimEnemySkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsAimEnemySkill"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsWindfurySkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsWindfurySkill"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -491,15 +491,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsAimEnemySkill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_IsAimEnemySkill"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsAimEnemySkill",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_IsAimEnemySkill"
                     }
                   ]
                 },
@@ -626,8 +626,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HimekoNova_SkillTag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_HimekoNova_SkillTag"
                         }
                       ],
                       "failed": [
@@ -640,8 +640,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_HimekoNova_SkillTag",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "_HimekoNova_SkillTag"
                             }
                           ],
                           "failed": [
@@ -654,8 +654,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "_HimekoNova_SkillTag",
-                                  "value": 3
+                                  "value": 3,
+                                  "variableName": "_HimekoNova_SkillTag"
                                 }
                               ]
                             }
@@ -733,8 +733,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Windfury_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Windfury_Flag"
                     },
                     {
                       "name": "IF",
@@ -816,7 +816,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_SkillUseCount",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (_1501_SkillUseCount) || RETURN",
                         "displayLines": "_1501_SkillUseCount",
@@ -825,7 +825,7 @@ const compositeAbilityObject = {
                           "_1501_SkillUseCount"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "_SkillUseCount"
                     }
                   ]
                 }
@@ -907,13 +907,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsAimEnemySkill",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_IsAimEnemySkill"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsWindfurySkill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_IsWindfurySkill"
                     },
                     {
                       "name": "IF",
@@ -1017,27 +1017,27 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "_OnWaveMonster_SkillType",
-                                              "value": 1
+                                              "value": 1,
+                                              "variableName": "_OnWaveMonster_SkillType"
                                             }
                                           ],
                                           "failed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "Windfury_Flag",
-                                              "value": 0
+                                              "value": 0,
+                                              "variableName": "Windfury_Flag"
                                             },
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                              "scope": "ContextModifier",
                                               "value": 0,
-                                              "scope": "ContextModifier"
+                                              "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                             },
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                              "scope": "ContextModifier",
                                               "value": 0,
-                                              "scope": "ContextModifier"
+                                              "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                             },
                                             {
                                               "name": "IF",
@@ -1112,27 +1112,27 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_OnWaveMonster_SkillType",
-                                                  "value": 1
+                                                  "value": 1,
+                                                  "variableName": "_OnWaveMonster_SkillType"
                                                 }
                                               ],
                                               "failed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "Windfury_Flag",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "variableName": "Windfury_Flag"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1193,27 +1193,27 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_OnWaveMonster_SkillType",
-                                                  "value": 1
+                                                  "value": 1,
+                                                  "variableName": "_OnWaveMonster_SkillType"
                                                 }
                                               ],
                                               "failed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "Windfury_Flag",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "variableName": "Windfury_Flag"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1280,8 +1280,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_CurrnetSkillIndex",
-                                          "value": 9
+                                          "value": 9,
+                                          "variableName": "_CurrnetSkillIndex"
                                         }
                                       ],
                                       "failed": [
@@ -1315,8 +1315,8 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "_CurrnetSkillIndex",
-                                              "value": 3
+                                              "value": 3,
+                                              "variableName": "_CurrnetSkillIndex"
                                             }
                                           ],
                                           "failed": [
@@ -1444,7 +1444,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
                                           "value": {
                                             "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
                                             "displayLines": "_CurrnetSkillIndex",
@@ -1452,7 +1451,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "_CurrnetSkillIndex"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "_OnWaveMonster_SkillType"
                                         }
                                       ],
                                       "failed": [
@@ -1474,8 +1474,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "Windfury_Flag"
                                         },
                                         {
                                           "name": "IF",
@@ -1560,8 +1560,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": 1
+                                          "value": 1,
+                                          "variableName": "_OnWaveMonster_SkillType"
                                         }
                                       ],
                                       "failed": [
@@ -1575,8 +1575,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "Windfury_Flag"
                                         },
                                         {
                                           "name": "IF",
@@ -1665,8 +1665,8 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": 2
+                                          "value": 2,
+                                          "variableName": "_OnWaveMonster_SkillType"
                                         }
                                       ],
                                       "failed": [
@@ -1680,8 +1680,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "Windfury_Flag"
                                         },
                                         {
                                           "name": "IF",
@@ -1741,9 +1741,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsWindfurySkill",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_IsWindfurySkill"
                     },
                     {
                       "name": "IF",
@@ -1817,9 +1817,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "HimekoNova_PassiveMode_Flag02",
+                              "scope": "ContextOwner",
                               "value": 1,
-                              "scope": "ContextOwner"
+                              "variableName": "HimekoNova_PassiveMode_Flag02"
                             }
                           ],
                           "failed": [
@@ -1839,9 +1839,9 @@ const compositeAbilityObject = {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
                                   },
-                                  "variableName": "HimekoNova_PassiveMode_Flag01",
+                                  "scope": "ContextOwner",
                                   "value": 1,
-                                  "scope": "ContextOwner"
+                                  "variableName": "HimekoNova_PassiveMode_Flag01"
                                 }
                               ]
                             }
@@ -1881,8 +1881,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Windfury_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Windfury_Flag"
                     },
                     {
                       "name": "IF",
@@ -1897,15 +1897,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                         },
                         {
                           "name": "TEST DATA: Assist Skill Energy",
@@ -1932,13 +1932,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_IsAimEnemySkill",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_IsAimEnemySkill"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_IsWindfurySkill",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_IsWindfurySkill"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2068,7 +2068,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
                                       "value": {
                                         "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                                         "displayLines": "_OnWaveMonster_SkillType",
@@ -2076,7 +2075,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "_OnWaveMonster_SkillType"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "_OnWaveMonster_SkillType"
                                     }
                                   ],
                                   "failed": [
@@ -2090,8 +2090,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "Windfury_Flag",
-                                      "value": 0
+                                      "value": 0,
+                                      "variableName": "Windfury_Flag"
                                     },
                                     {
                                       "name": "IF",
@@ -2107,8 +2107,8 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "_OnWaveMonster_SkillType",
-                                      "value": -1
+                                      "value": -1,
+                                      "variableName": "_OnWaveMonster_SkillType"
                                     }
                                   ]
                                 }
@@ -2187,7 +2187,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
                                           "value": {
                                             "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                                             "displayLines": "_OnWaveMonster_SkillType",
@@ -2195,7 +2194,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "_OnWaveMonster_SkillType"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "_OnWaveMonster_SkillType"
                                         }
                                       ],
                                       "failed": [
@@ -2209,8 +2209,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "Windfury_Flag",
-                                          "value": 0
+                                          "value": 0,
+                                          "variableName": "Windfury_Flag"
                                         },
                                         {
                                           "name": "IF",
@@ -2226,8 +2226,8 @@ const compositeAbilityObject = {
                                         },
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_OnWaveMonster_SkillType",
-                                          "value": -1
+                                          "value": -1,
+                                          "variableName": "_OnWaveMonster_SkillType"
                                         }
                                       ]
                                     }
@@ -2300,7 +2300,6 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_OnWaveMonster_SkillType",
                                                   "value": {
                                                     "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                                                     "displayLines": "_OnWaveMonster_SkillType",
@@ -2308,26 +2307,27 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "_OnWaveMonster_SkillType"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "_OnWaveMonster_SkillType"
                                                 }
                                               ],
                                               "failed": [
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "Windfury_Flag",
-                                                  "value": 0
+                                                  "value": 0,
+                                                  "variableName": "Windfury_Flag"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                  "scope": "ContextModifier",
                                                   "value": 0,
-                                                  "scope": "ContextModifier"
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -2343,8 +2343,8 @@ const compositeAbilityObject = {
                                                 },
                                                 {
                                                   "name": "Define Custom Variable",
-                                                  "variableName": "_OnWaveMonster_SkillType",
-                                                  "value": -1
+                                                  "value": -1,
+                                                  "variableName": "_OnWaveMonster_SkillType"
                                                 }
                                               ]
                                             }
@@ -2407,7 +2407,6 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
                                                       "value": {
                                                         "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                                                         "displayLines": "_OnWaveMonster_SkillType",
@@ -2415,26 +2414,27 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "_OnWaveMonster_SkillType"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ],
                                                   "failed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "Windfury_Flag",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "variableName": "Windfury_Flag"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                      "scope": "ContextModifier",
                                                       "value": 0,
-                                                      "scope": "ContextModifier"
+                                                      "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                      "scope": "ContextModifier",
                                                       "value": 0,
-                                                      "scope": "ContextModifier"
+                                                      "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -2450,8 +2450,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": -1
+                                                      "value": -1,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ]
                                                 }
@@ -2500,7 +2500,6 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
                                                       "value": {
                                                         "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                                                         "displayLines": "_OnWaveMonster_SkillType",
@@ -2508,26 +2507,27 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "_OnWaveMonster_SkillType"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ],
                                                   "failed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "Windfury_Flag",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "variableName": "Windfury_Flag"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                      "scope": "ContextModifier",
                                                       "value": 0,
-                                                      "scope": "ContextModifier"
+                                                      "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot"
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                      "scope": "ContextModifier",
                                                       "value": 0,
-                                                      "scope": "ContextModifier"
+                                                      "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -2543,8 +2543,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": -1
+                                                      "value": -1,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ]
                                                 }
@@ -2624,8 +2624,8 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": 1
+                                                      "value": 1,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ],
                                                   "failed": [
@@ -2639,8 +2639,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "Windfury_Flag",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "variableName": "Windfury_Flag"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -2656,8 +2656,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": -1
+                                                      "value": -1,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ]
                                                 }
@@ -2722,8 +2722,8 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": 2
+                                                      "value": 2,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ],
                                                   "failed": [
@@ -2737,8 +2737,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "Windfury_Flag",
-                                                      "value": 0
+                                                      "value": 0,
+                                                      "variableName": "Windfury_Flag"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -2754,8 +2754,8 @@ const compositeAbilityObject = {
                                                     },
                                                     {
                                                       "name": "Define Custom Variable",
-                                                      "variableName": "_OnWaveMonster_SkillType",
-                                                      "value": -1
+                                                      "value": -1,
+                                                      "variableName": "_OnWaveMonster_SkillType"
                                                     }
                                                   ]
                                                 }
@@ -3879,8 +3879,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeHitFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_BeHitFlag"
                 }
               ]
             },
@@ -3920,7 +3920,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_BeingHitDamageValue",
                           "value": {
                             "operator": "Variables[0] (Max_Count) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(Max_Count - 1)",
@@ -3930,7 +3929,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Max_Count"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BeingHitDamageValue"
                         }
                       ],
                       "failed": [
@@ -3959,7 +3959,6 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "MDF_BeingHitDamageValue",
                               "value": {
                                 "operator": "Variables[0] (MDF_BeingHitDamageValue) || Variables[1] (STANDARDSPECIFIC_OBJECT_UNUSED_7) || ADD || RETURN",
                                 "displayLines": "(MDF_BeingHitDamageValue + STANDARDSPECIFIC_OBJECT_UNUSED_7)",
@@ -3968,7 +3967,8 @@ const compositeAbilityObject = {
                                   "MDF_BeingHitDamageValue",
                                   "STANDARDSPECIFIC_OBJECT_UNUSED_7"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_BeingHitDamageValue"
                             },
                             {
                               "name": "Define Modifier Variable",
@@ -3991,7 +3991,6 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "MDF_BeingHitDamageValue",
                               "value": {
                                 "operator": "Variables[0] (Max_Count) || Constants[0] (1) || SUB || RETURN",
                                 "displayLines": "(Max_Count - 1)",
@@ -4001,7 +4000,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "Max_Count"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_BeingHitDamageValue"
                             },
                             {
                               "name": "Define Modifier Variable",
@@ -4594,7 +4594,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_EliteRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_EliteRatio)",
@@ -4603,13 +4602,13 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_EliteRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_CommonRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_CommonRatio)",
@@ -4618,7 +4617,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_CommonRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -4649,7 +4649,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageMax) || RETURN",
                         "displayLines": "MDF_DamageMax",
@@ -4657,7 +4656,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 }
@@ -4689,7 +4689,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_EliteRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_EliteRatio)",
@@ -4698,13 +4697,13 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_EliteRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_CommonRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_CommonRatio)",
@@ -4713,7 +4712,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_CommonRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -4744,7 +4744,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageMax) || RETURN",
                         "displayLines": "MDF_DamageMax",
@@ -4752,7 +4751,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -4825,7 +4825,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_EliteRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_EliteRatio)",
@@ -4834,13 +4833,13 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_EliteRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (MDF_CommonRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * MDF_CommonRatio)",
@@ -4849,7 +4848,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "MDF_CommonRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -4880,7 +4880,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_DamageMax) || RETURN",
                         "displayLines": "MDF_DamageMax",
@@ -4888,7 +4887,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DamageMax"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -5437,13 +5437,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ATK_AvatarSum",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ATK_AvatarSum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AvatarCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_AvatarCount"
                 },
                 {
                   "name": "Find New Target",
@@ -5465,7 +5465,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ATK_AvatarSum",
                       "value": {
                         "operator": "Variables[0] (ATK_AvatarSum) || Variables[1] (ATK_Avatar) || ADD || RETURN",
                         "displayLines": "(ATK_AvatarSum + ATK_Avatar)",
@@ -5474,11 +5473,11 @@ const compositeAbilityObject = {
                           "ATK_AvatarSum",
                           "ATK_Avatar"
                         ]
-                      }
+                      },
+                      "variableName": "ATK_AvatarSum"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AvatarCount",
                       "value": {
                         "operator": "Variables[0] (MDF_AvatarCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_AvatarCount + 1)",
@@ -5488,7 +5487,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_AvatarCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AvatarCount"
                     }
                   ]
                 },
@@ -5503,7 +5503,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDamageRatio",
                   "value": {
                     "operator": "Variables[0] (ATK_Avatar) || Variables[1] (MDF_AvatarCount) || MUL || Variables[2] (ATK_AvatarSum) || DIV || RETURN",
                     "displayLines": "((ATK_Avatar * MDF_AvatarCount) / ATK_AvatarSum)",
@@ -5513,7 +5512,8 @@ const compositeAbilityObject = {
                       "MDF_AvatarCount",
                       "ATK_AvatarSum"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_FinalDamageRatio"
                 },
                 {
                   "name": "IF",
@@ -5533,7 +5533,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamageRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_MaxDamageRatio) || RETURN",
                         "displayLines": "MDF_MaxDamageRatio",
@@ -5541,7 +5540,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_MaxDamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamageRatio"
                     }
                   ]
                 },
@@ -5563,7 +5563,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamageRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_MinDamageRatio) || RETURN",
                         "displayLines": "MDF_MinDamageRatio",
@@ -5571,7 +5570,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_MinDamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamageRatio"
                     }
                   ]
                 },
@@ -6101,8 +6101,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeHitFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_BeHitFlag"
                 }
               ]
             },
@@ -6133,8 +6133,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_BeingHitDamageValue",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "MDF_BeingHitDamageValue"
                         }
                       ],
                       "failed": [
@@ -6144,7 +6144,6 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_BeingHitDamageValue",
                           "value": {
                             "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -6154,7 +6153,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_BeingHitDamageValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BeingHitDamageValue"
                         },
                         {
                           "name": "Define Modifier Variable",
@@ -6223,8 +6223,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "MDF_BeingHitDamageValue"
                     }
                   ],
                   "failed": [
@@ -6234,7 +6234,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_BeingHitDamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_BeingHitDamageValue) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_BeingHitDamageValue + 1)",
@@ -6244,7 +6243,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_BeingHitDamageValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BeingHitDamageValue"
                     },
                     {
                       "name": "Define Modifier Variable",
@@ -6820,7 +6820,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -6829,13 +6828,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -6844,7 +6843,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 }
@@ -6891,7 +6891,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -6900,13 +6899,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -6915,7 +6914,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -6999,7 +6999,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -7008,13 +7007,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -7023,7 +7022,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -7542,7 +7542,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7550,7 +7549,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7559,8 +7559,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7583,7 +7583,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMoreCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(OneMoreCount - 1)",
@@ -7593,7 +7592,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMoreCount"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7602,7 +7602,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7610,7 +7609,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             }
@@ -7629,7 +7629,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7637,7 +7636,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7646,8 +7646,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7670,7 +7670,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMoreCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(OneMoreCount - 1)",
@@ -7680,7 +7679,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMoreCount"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7689,7 +7689,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7697,7 +7696,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             }
@@ -7716,7 +7716,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7724,7 +7723,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7733,8 +7733,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7757,7 +7757,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMoreCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(OneMoreCount - 1)",
@@ -7767,7 +7766,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMoreCount"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7776,7 +7776,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7784,7 +7783,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             }
@@ -7803,7 +7803,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7811,7 +7810,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7820,8 +7820,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7843,7 +7843,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMoreCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(OneMoreCount - 1)",
@@ -7853,7 +7852,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMoreCount"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             },
@@ -7862,7 +7862,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OneMoreCount",
                   "value": {
                     "operator": "Variables[0] (OneMore[?]) || RETURN",
                     "displayLines": "OneMore[?]",
@@ -7870,7 +7869,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "OneMore[?]"
                     ]
-                  }
+                  },
+                  "variableName": "OneMoreCount"
                 }
               ]
             }

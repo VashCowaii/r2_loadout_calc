@@ -120,8 +120,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Flag"
                 }
               ]
             }
@@ -143,8 +143,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Flag"
                 }
               ]
             }
@@ -198,7 +198,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgCount",
                       "value": {
                         "operator": "Variables[0] (MDF_WeakCount) || Constants[0] (3) || SUB || RETURN",
                         "displayLines": "(MDF_WeakCount - 3)",
@@ -208,14 +207,15 @@ const configAbility = {
                         "variables": [
                           "MDF_WeakCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DmgCount"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DmgCount"
                     }
                   ]
                 },

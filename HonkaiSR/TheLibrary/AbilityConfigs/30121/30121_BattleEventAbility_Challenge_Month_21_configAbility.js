@@ -237,8 +237,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BattleEventAbility_Challenge_Month_21_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BattleEventAbility_Challenge_Month_21_Count"
                 },
                 {
                   "name": "Show Attack Count",

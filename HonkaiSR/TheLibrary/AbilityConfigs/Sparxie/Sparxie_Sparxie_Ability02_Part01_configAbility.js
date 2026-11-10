@@ -61,13 +61,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_PKLineProgress",
-      "value": 0
+      "value": 0,
+      "variableName": "_PKLineProgress"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_PKLineProgress",
-      "value": 0.3
+      "value": 0.3,
+      "variableName": "_PKLineProgress"
     },
     {
       "name": "IF",

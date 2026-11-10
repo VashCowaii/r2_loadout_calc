@@ -113,8 +113,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Count"
             },
             {
               "name": "Update Displayed Energy Bar",

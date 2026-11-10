@@ -28,7 +28,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "BattleEvent_P1_ADF_ExtraRadio",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (ChallengePeakBattle_Plugins_0004_ADF_2) || RETURN",
                 "displayLines": "ChallengePeakBattle_Plugins_0004_ADF_2",
@@ -37,7 +37,7 @@ const configAbility = {
                   "ChallengePeakBattle_Plugins_0004_ADF_2"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "BattleEvent_P1_ADF_ExtraRadio"
             }
           ]
         }

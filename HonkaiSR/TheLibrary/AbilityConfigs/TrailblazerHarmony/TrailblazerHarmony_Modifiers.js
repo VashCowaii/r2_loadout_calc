@@ -547,7 +547,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PassiveDamageOrigin",
               "value": {
                 "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
                 "displayLines": "MDF_PassiveDamage2",
@@ -555,7 +554,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PassiveDamage2"
                 ]
-              }
+              },
+              "variableName": "MDF_PassiveDamageOrigin"
             }
           ]
         },
@@ -567,7 +567,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PassiveDamage2",
               "value": {
                 "operator": "Variables[0] (MDF_PassiveDamageOrigin) || RETURN",
                 "displayLines": "MDF_PassiveDamageOrigin",
@@ -575,7 +574,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PassiveDamageOrigin"
                 ]
-              }
+              },
+              "variableName": "MDF_PassiveDamage2"
             }
           ]
         },
@@ -605,7 +605,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PassiveDamage2",
                       "value": {
                         "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio1) || ADD || MUL || RETURN",
                         "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio1))",
@@ -616,7 +615,8 @@ const configAbility = {
                           "MDF_PassiveDamage2",
                           "MDF_PointB1_DamageAddedRatio1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PassiveDamage2"
                     }
                   ],
                   "failed": [
@@ -635,7 +635,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PassiveDamage2",
                           "value": {
                             "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio2) || ADD || MUL || RETURN",
                             "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio2))",
@@ -646,7 +645,8 @@ const configAbility = {
                               "MDF_PassiveDamage2",
                               "MDF_PointB1_DamageAddedRatio2"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PassiveDamage2"
                         }
                       ],
                       "failed": [
@@ -665,7 +665,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_PassiveDamage2",
                               "value": {
                                 "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio3) || ADD || MUL || RETURN",
                                 "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio3))",
@@ -676,7 +675,8 @@ const configAbility = {
                                   "MDF_PassiveDamage2",
                                   "MDF_PointB1_DamageAddedRatio3"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_PassiveDamage2"
                             }
                           ],
                           "failed": [
@@ -695,7 +695,6 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_PassiveDamage2",
                                   "value": {
                                     "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio4) || ADD || MUL || RETURN",
                                     "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio4))",
@@ -706,13 +705,13 @@ const configAbility = {
                                       "MDF_PassiveDamage2",
                                       "MDF_PointB1_DamageAddedRatio4"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_PassiveDamage2"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_PassiveDamage2",
                                   "value": {
                                     "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio5) || ADD || MUL || RETURN",
                                     "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio5))",
@@ -723,7 +722,8 @@ const configAbility = {
                                       "MDF_PassiveDamage2",
                                       "MDF_PointB1_DamageAddedRatio5"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_PassiveDamage2"
                                 }
                               ]
                             }
@@ -779,7 +779,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PassiveDamageOrigin",
               "value": {
                 "operator": "Variables[0] (MDF_PassiveDamage2) || RETURN",
                 "displayLines": "MDF_PassiveDamage2",
@@ -787,7 +786,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PassiveDamage2"
                 ]
-              }
+              },
+              "variableName": "MDF_PassiveDamageOrigin"
             },
             {
               "name": "Stack Target Stat Value",
@@ -815,7 +815,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PassiveDamage2",
               "value": {
                 "operator": "Variables[0] (MDF_PassiveDamageOrigin) || RETURN",
                 "displayLines": "MDF_PassiveDamageOrigin",
@@ -823,7 +822,8 @@ const configAbility = {
                 "variables": [
                   "MDF_PassiveDamageOrigin"
                 ]
-              }
+              },
+              "variableName": "MDF_PassiveDamage2"
             }
           ]
         },
@@ -853,7 +853,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PassiveDamage2",
                       "value": {
                         "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio1) || ADD || MUL || RETURN",
                         "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio1))",
@@ -864,7 +863,8 @@ const configAbility = {
                           "MDF_PassiveDamage2",
                           "MDF_PointB1_DamageAddedRatio1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PassiveDamage2"
                     }
                   ],
                   "failed": [
@@ -883,7 +883,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PassiveDamage2",
                           "value": {
                             "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio2) || ADD || MUL || RETURN",
                             "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio2))",
@@ -894,7 +893,8 @@ const configAbility = {
                               "MDF_PassiveDamage2",
                               "MDF_PointB1_DamageAddedRatio2"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PassiveDamage2"
                         }
                       ],
                       "failed": [
@@ -913,7 +913,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_PassiveDamage2",
                               "value": {
                                 "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio3) || ADD || MUL || RETURN",
                                 "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio3))",
@@ -924,7 +923,8 @@ const configAbility = {
                                   "MDF_PassiveDamage2",
                                   "MDF_PointB1_DamageAddedRatio3"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_PassiveDamage2"
                             }
                           ],
                           "failed": [
@@ -943,7 +943,6 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_PassiveDamage2",
                                   "value": {
                                     "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio4) || ADD || MUL || RETURN",
                                     "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio4))",
@@ -954,13 +953,13 @@ const configAbility = {
                                       "MDF_PassiveDamage2",
                                       "MDF_PointB1_DamageAddedRatio4"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_PassiveDamage2"
                                 }
                               ],
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_PassiveDamage2",
                                   "value": {
                                     "operator": "Variables[0] (MDF_PassiveDamage2) || Constants[0] (1) || Variables[1] (MDF_PointB1_DamageAddedRatio5) || ADD || MUL || RETURN",
                                     "displayLines": "(MDF_PassiveDamage2 * (1 + MDF_PointB1_DamageAddedRatio5))",
@@ -971,7 +970,8 @@ const configAbility = {
                                       "MDF_PassiveDamage2",
                                       "MDF_PointB1_DamageAddedRatio5"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "MDF_PassiveDamage2"
                                 }
                               ]
                             }
@@ -1351,7 +1351,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BreakDamageAdd",
               "value": {
                 "operator": "Variables[0] (MDF_BreakDamageBase) || Variables[1] (0.15) || MUL || RETURN",
                 "displayLines": "(MDF_BreakDamageBase * 0.15)",
@@ -1360,7 +1359,8 @@ const configAbility = {
                   "MDF_BreakDamageBase",
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_BreakDamageAdd"
             },
             {
               "name": "Add Events/Bonuses",

@@ -90,8 +90,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isSkill04",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isSkill04"
                     }
                   ]
                 }
@@ -143,13 +143,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isSkill04",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isSkill04"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isTriggerDeath",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isTriggerDeath"
                 }
               ]
             },
@@ -180,8 +180,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isTriggerDeath",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isTriggerDeath"
                     }
                   ]
                 }
@@ -543,7 +543,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SunnyBreakColdFinal",
                           "value": {
                             "operator": "Variables[0] (Sunny_Temperature) || RETURN",
                             "displayLines": "Sunny_Temperature",
@@ -551,11 +550,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "Sunny_Temperature"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SunnyBreakColdFinal"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SunnyBreakColdFinal",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
@@ -565,7 +564,8 @@ const compositeAbilityObject = {
                               "MDF_SunnyBreakColdFinal",
                               "MDF_SunnyBreakColdRatio"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SunnyBreakColdFinal"
                         },
                         {
                           "name": "IF",
@@ -656,7 +656,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_CountTotal",
                               "value": {
                                 "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
                                 "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -665,7 +664,8 @@ const compositeAbilityObject = {
                                   "Thunder_CountLight",
                                   "Thunder_CountDark"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_CountTotal"
                             },
                             {
                               "name": "IF",
@@ -826,7 +826,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "ThunderKillCount",
                                       "value": {
                                         "operator": "Variables[0] (ThunderKillCount) || Constants[0] (1) || ADD || RETURN",
                                         "displayLines": "(ThunderKillCount + 1)",
@@ -836,7 +835,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "ThunderKillCount"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "ThunderKillCount"
                                     },
                                     {
                                       "name": "Inject Ability Use",
@@ -1074,7 +1074,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SunnyBreakColdFinal",
                           "value": {
                             "operator": "Variables[0] (Sunny_Temperature) || RETURN",
                             "displayLines": "Sunny_Temperature",
@@ -1082,11 +1081,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "Sunny_Temperature"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SunnyBreakColdFinal"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SunnyBreakColdFinal",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_SunnyBreakColdFinal) || Variables[2] (MDF_SunnyBreakColdRatio) || MUL || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((MDF_SunnyBreakColdFinal * MDF_SunnyBreakColdRatio))",
@@ -1096,7 +1095,8 @@ const compositeAbilityObject = {
                               "MDF_SunnyBreakColdFinal",
                               "MDF_SunnyBreakColdRatio"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SunnyBreakColdFinal"
                         },
                         {
                           "name": "IF",
@@ -1195,7 +1195,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_CountTotal",
                               "value": {
                                 "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
                                 "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -1204,7 +1203,8 @@ const compositeAbilityObject = {
                                   "Thunder_CountLight",
                                   "Thunder_CountDark"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_CountTotal"
                             },
                             {
                               "name": "Define Custom Variable with Added Value",
@@ -1411,9 +1411,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     },
                     "Modifier Deletes Itself"
                   ],
@@ -1424,9 +1424,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -1677,7 +1677,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CountTotal",
                       "value": {
                         "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
                         "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -1686,7 +1685,8 @@ const compositeAbilityObject = {
                           "Thunder_CountLight",
                           "Thunder_CountDark"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CountTotal"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -2024,8 +2024,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Thunder_CountDark",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Thunder_CountDark"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2202,8 +2202,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Count"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -2244,8 +2244,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Skill04P1SunnyHeat",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill04P1SunnyHeat"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2383,7 +2383,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AllDamageTypeAddedRatioCurrent",
                       "value": {
                         "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || RETURN",
                         "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))",
@@ -2395,13 +2394,13 @@ const compositeAbilityObject = {
                           "Weather_SunnyHeat",
                           "Weather_SunnyHeatInitial"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AllDamageTypeAddedRatioCurrent",
                       "value": {
                         "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Constants[0] (10) || MUL || RETURN",
                         "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)",
@@ -2411,7 +2410,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_AllDamageTypeAddedRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                     }
                   ]
                 },
@@ -2480,7 +2480,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AllDamageTypeAddedRatioCurrent",
                           "value": {
                             "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Variables[1] (Weather_SunnyHeat) || Variables[2] (Weather_SunnyHeatInitial) || SUB || Constants[0] (10) || ADD || MUL || RETURN",
                             "displayLines": "(MDF_AllDamageTypeAddedRatio * ((Weather_SunnyHeat - Weather_SunnyHeatInitial) + 10))",
@@ -2492,13 +2491,13 @@ const compositeAbilityObject = {
                               "Weather_SunnyHeat",
                               "Weather_SunnyHeatInitial"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_AllDamageTypeAddedRatioCurrent",
                           "value": {
                             "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || Constants[0] (10) || MUL || RETURN",
                             "displayLines": "(MDF_AllDamageTypeAddedRatio * 10)",
@@ -2508,7 +2507,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_AllDamageTypeAddedRatio"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_AllDamageTypeAddedRatioCurrent"
                         }
                       ]
                     },
@@ -3008,7 +3008,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Weather_SunnyHeat",
                   "value": {
                     "operator": "Variables[0] (Weather_SunnyHeat) || Variables[1] (Weather_HeatAddPerAction) || ADD || RETURN",
                     "displayLines": "(Weather_SunnyHeat + Weather_HeatAddPerAction)",
@@ -3017,11 +3016,11 @@ const compositeAbilityObject = {
                       "Weather_SunnyHeat",
                       "Weather_HeatAddPerAction"
                     ]
-                  }
+                  },
+                  "variableName": "Weather_SunnyHeat"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sunny_Temperature",
                   "value": {
                     "operator": "Variables[0] (Weather_SunnyHeat) || RETURN",
                     "displayLines": "Weather_SunnyHeat",
@@ -3029,7 +3028,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Weather_SunnyHeat"
                     ]
-                  }
+                  },
+                  "variableName": "Sunny_Temperature"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3210,7 +3210,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sunny_Temperature",
                   "value": {
                     "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
                     "displayLines": "Weather_SunnyHeatInitial",
@@ -3218,7 +3217,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Weather_SunnyHeatInitial"
                     ]
-                  }
+                  },
+                  "variableName": "Sunny_Temperature"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3497,7 +3497,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sunny_Temperature",
                   "value": {
                     "operator": "Variables[0] (Weather_SunnyHeatInitial) || RETURN",
                     "displayLines": "Weather_SunnyHeatInitial",
@@ -3505,7 +3504,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Weather_SunnyHeatInitial"
                     ]
-                  }
+                  },
+                  "variableName": "Sunny_Temperature"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4802,7 +4802,6 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountTotal",
           "value": {
             "operator": "Variables[0] (Thunder_CountLight) || RETURN",
             "displayLines": "Thunder_CountLight",
@@ -4810,7 +4809,8 @@ const compositeAbilityObject = {
             "variables": [
               "Thunder_CountLight"
             ]
-          }
+          },
+          "variableName": "Thunder_CountTotal"
         },
         {
           "name": "Change Entity Turn-State",
@@ -4940,8 +4940,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountLight",
-          "value": 0
+          "value": 0,
+          "variableName": "Thunder_CountLight"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5110,8 +5110,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ThunderKillCount",
-          "value": 0
+          "value": 0,
+          "variableName": "ThunderKillCount"
         }
       ],
       "targetObjectData": {
@@ -5149,7 +5149,6 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountDark",
           "value": {
             "operator": "Variables[0] (Thunder_CountLight) || Variables[1] (Thunder_CountDark) || ADD || RETURN",
             "displayLines": "(Thunder_CountLight + Thunder_CountDark)",
@@ -5158,11 +5157,11 @@ const compositeAbilityObject = {
               "Thunder_CountLight",
               "Thunder_CountDark"
             ]
-          }
+          },
+          "variableName": "Thunder_CountDark"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_TempCount",
           "value": {
             "operator": "Variables[0] (Thunder_CountDark) || RETURN",
             "displayLines": "Thunder_CountDark",
@@ -5170,7 +5169,8 @@ const compositeAbilityObject = {
             "variables": [
               "Thunder_CountDark"
             ]
-          }
+          },
+          "variableName": "Thunder_TempCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5255,13 +5255,13 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountDark",
-          "value": 0
+          "value": 0,
+          "variableName": "Thunder_CountDark"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Thunder_CountLight",
-          "value": 0
+          "value": 0,
+          "variableName": "Thunder_CountLight"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -6643,7 +6643,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PartEntity1_MonsterID",
               "value": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__160) || RETURN",
                 "displayLines": "ENEMIES_OBJECT_UNUSED__160",
@@ -6651,11 +6650,11 @@ const compositeAbilityObject = {
                 "variables": [
                   "ENEMIES_OBJECT_UNUSED__160"
                 ]
-              }
+              },
+              "variableName": "PartEntity1_MonsterID"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "PartEntity3_MonsterID",
               "value": {
                 "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__159) || RETURN",
                 "displayLines": "ENEMIES_OBJECT_UNUSED__159",
@@ -6663,7 +6662,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "ENEMIES_OBJECT_UNUSED__159"
                 ]
-              }
+              },
+              "variableName": "PartEntity3_MonsterID"
             },
             {
               "name": "Add Events/Bonuses",
@@ -7174,9 +7174,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ChangePhase_InsertController",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "ChangePhase_InsertController"
         },
         {
           "name": "IF",
@@ -7363,7 +7363,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountTotal",
               "value": {
                 "operator": "Variables[0] ({[Skill05P2[1]]}) || RETURN",
                 "displayLines": "{[Skill05P2[1]]}",
@@ -7371,13 +7370,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill05P2[1]]}"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountTotal"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountTotal",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || RETURN",
                 "displayLines": "Thunder_CountDark",
@@ -7385,7 +7384,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Thunder_CountDark"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountTotal"
             }
           ]
         },
@@ -7782,7 +7782,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill05P1TotalDamage",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] ({[Skill05P1[0]]}) || Variables[1] (Skill04P1SunnyHeat) || MUL || RETURN",
             "displayLines": "({[Skill05P1[0]]} * Skill04P1SunnyHeat)",
@@ -7792,7 +7792,7 @@ const compositeAbilityObject = {
               "Skill04P1SunnyHeat"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "Skill05P1TotalDamage"
         },
         {
           "name": "Define Custom Variable with Team Count",
@@ -8015,8 +8015,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04P1SunnyHeat",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill04P1SunnyHeat"
         },
         {
           "name": "Find New Target",
@@ -8296,7 +8296,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountDark",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill04P2[0]]}) || ADD || RETURN",
                 "displayLines": "(Thunder_CountDark + {[Skill04P2[0]]})",
@@ -8305,11 +8304,11 @@ const compositeAbilityObject = {
                   "Thunder_CountDark",
                   "{[Skill04P2[0]]}"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountDark"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountTotal",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || RETURN",
                 "displayLines": "Thunder_CountDark",
@@ -8317,12 +8316,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "Thunder_CountDark"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountTotal"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountLight",
-              "value": 0
+              "value": 0,
+              "variableName": "Thunder_CountLight"
             },
             {
               "name": "Add Events/Bonuses",
@@ -8528,8 +8528,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherPhase02Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherPhase02Flag"
                     }
                   ]
                 }
@@ -8689,7 +8689,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04P1SunnyHeat",
               "value": {
                 "operator": "Variables[0] ({[Skill04P1[0]]}) || RETURN",
                 "displayLines": "{[Skill04P1[0]]}",
@@ -8697,7 +8696,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill04P1[0]]}"
                 ]
-              }
+              },
+              "variableName": "Skill04P1SunnyHeat"
             },
             {
               "name": "Add Events/Bonuses",
@@ -8919,8 +8919,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherPhase01Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherPhase01Flag"
                     }
                   ]
                 }
@@ -9044,7 +9044,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountDark",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill03P2[1]]}) || ADD || RETURN",
                 "displayLines": "(Thunder_CountDark + {[Skill03P2[1]]})",
@@ -9053,7 +9052,8 @@ const compositeAbilityObject = {
                   "Thunder_CountDark",
                   "{[Skill03P2[1]]}"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountDark"
             },
             {
               "name": "Add Events/Bonuses",
@@ -9400,7 +9400,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageAddHeat",
               "value": {
                 "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
                 "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
@@ -9411,7 +9410,8 @@ const compositeAbilityObject = {
                   "Sunny_Temperature",
                   "{[SkillP05[1]]}"
                 ]
-              }
+              },
+              "variableName": "DamageAddHeat"
             },
             {
               "name": "IF",
@@ -9424,8 +9424,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageAddHeat",
-                  "value": 10
+                  "value": 10,
+                  "variableName": "DamageAddHeat"
                 }
               ]
             }
@@ -9813,7 +9813,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountDark",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill02P2[1]]}) || ADD || RETURN",
                 "displayLines": "(Thunder_CountDark + {[Skill02P2[1]]})",
@@ -9822,7 +9821,8 @@ const compositeAbilityObject = {
                   "Thunder_CountDark",
                   "{[Skill02P2[1]]}"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountDark"
             },
             {
               "name": "Add Events/Bonuses",
@@ -10078,7 +10078,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageAddHeat",
               "value": {
                 "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
                 "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
@@ -10089,7 +10088,8 @@ const compositeAbilityObject = {
                   "Sunny_Temperature",
                   "{[SkillP05[1]]}"
                 ]
-              }
+              },
+              "variableName": "DamageAddHeat"
             },
             {
               "name": "IF",
@@ -10102,8 +10102,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageAddHeat",
-                  "value": 10
+                  "value": 10,
+                  "variableName": "DamageAddHeat"
                 }
               ]
             }
@@ -10332,7 +10332,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Thunder_CountDark",
               "value": {
                 "operator": "Variables[0] (Thunder_CountDark) || Variables[1] ({[Skill01P2[1]]}) || ADD || RETURN",
                 "displayLines": "(Thunder_CountDark + {[Skill01P2[1]]})",
@@ -10341,7 +10340,8 @@ const compositeAbilityObject = {
                   "Thunder_CountDark",
                   "{[Skill01P2[1]]}"
                 ]
-              }
+              },
+              "variableName": "Thunder_CountDark"
             },
             {
               "name": "Add Events/Bonuses",
@@ -11031,7 +11031,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageAddHeat",
               "value": {
                 "operator": "Variables[0] (Sunny_Temperature) || Variables[1] ({[SkillP05[1]]}) || SUB || Constants[0] (10) || ADD || RETURN",
                 "displayLines": "((Sunny_Temperature - {[SkillP05[1]]}) + 10)",
@@ -11042,7 +11041,8 @@ const compositeAbilityObject = {
                   "Sunny_Temperature",
                   "{[SkillP05[1]]}"
                 ]
-              }
+              },
+              "variableName": "DamageAddHeat"
             },
             {
               "name": "IF",
@@ -11055,8 +11055,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DamageAddHeat",
-                  "value": 10
+                  "value": 10,
+                  "variableName": "DamageAddHeat"
                 }
               ]
             }

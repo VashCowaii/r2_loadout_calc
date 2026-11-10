@@ -135,8 +135,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Aha Instant: Aha Battle Event}}"
           },
-          "variableName": "ElationTime_IsNoConsume",
-          "value": 0
+          "value": 0,
+          "variableName": "ElationTime_IsNoConsume"
         }
       ],
       "failed": [

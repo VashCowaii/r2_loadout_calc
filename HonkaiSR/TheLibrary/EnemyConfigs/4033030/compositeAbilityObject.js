@@ -535,7 +535,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_RallyHP",
                   "value": {
                     "operator": "Variables[0] (_RallyHP) || Variables[1] (_CurrentHPRatio) || SUB || RETURN",
                     "displayLines": "(_RallyHP - _CurrentHPRatio)",
@@ -544,14 +543,15 @@ const compositeAbilityObject = {
                       "_RallyHP",
                       "_CurrentHPRatio"
                     ]
-                  }
+                  },
+                  "variableName": "_RallyHP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_RallyHP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_RallyHP"
                 }
               ]
             },

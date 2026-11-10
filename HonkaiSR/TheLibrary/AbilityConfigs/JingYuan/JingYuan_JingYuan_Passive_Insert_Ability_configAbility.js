@@ -53,7 +53,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ATKCountSum",
           "value": {
             "operator": "Variables[0] (ATKCount) || Variables[1] (UltraATKCount) || ADD || RETURN",
             "displayLines": "(ATKCount + UltraATKCount)",
@@ -62,7 +61,8 @@ const configAbility = {
               "ATKCount",
               "UltraATKCount"
             ]
-          }
+          },
+          "variableName": "ATKCountSum"
         },
         {
           "name": "IF",
@@ -544,17 +544,16 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ATKCount",
-      "value": 0
+      "value": 0,
+      "variableName": "ATKCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "UltraATKCount",
-      "value": 0
+      "value": 0,
+      "variableName": "UltraATKCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ATKCount",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -562,12 +561,13 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "EnergyBar_ATKCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_UltraATKCount",
-      "value": 0
+      "value": 0,
+      "variableName": "EnergyBar_UltraATKCount"
     },
     {
       "name": "Add Events/Bonuses",

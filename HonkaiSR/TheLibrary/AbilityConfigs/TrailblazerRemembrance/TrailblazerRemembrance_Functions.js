@@ -28,8 +28,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TeamAddSP",
-              "value": 0
+              "value": 0,
+              "variableName": "TeamAddSP"
             },
             {
               "name": "Summon Memosprite",

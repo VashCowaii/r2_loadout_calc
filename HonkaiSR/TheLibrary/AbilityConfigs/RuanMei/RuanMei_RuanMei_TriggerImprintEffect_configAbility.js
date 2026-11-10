@@ -32,7 +32,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_FinalBreakDamagePercentage",
       "value": {
         "operator": "Variables[0] (DV_Ultra_Damage_MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || Variables[1] (0.5) || MUL || RETURN",
         "displayLines": "((((DV_Ultra_Damage_MaxStance / 30) + 2) / 4) * 0.5)",
@@ -45,7 +44,8 @@ const configAbility = {
           "DV_Ultra_Damage_MaxStance",
           0.5
         ]
-      }
+      },
+      "variableName": "Skill03_FinalBreakDamagePercentage"
     },
     {
       "name": "ATK Scaling DMG",
@@ -86,9 +86,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "variableName": "DV_NeedDettachEffect",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "DV_NeedDettachEffect"
     },
     {
       "name": "Remove Events/Bonuses",

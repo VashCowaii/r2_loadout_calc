@@ -22,7 +22,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_BasicUltraAttack",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -30,11 +29,11 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "EnergyBar_BasicUltraAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_MaxUltraAttack",
       "value": {
         "operator": "Variables[0] (10) || RETURN",
         "displayLines": "10",
@@ -42,12 +41,13 @@ const configAbility = {
         "variables": [
           10
         ]
-      }
+      },
+      "variableName": "EnergyBar_MaxUltraAttack"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "EnergyBar_ExtraUltraAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "EnergyBar_ExtraUltraAttack"
     },
     {
       "name": "Add Events/Bonuses",
@@ -109,7 +109,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_DamagePercentage",
           "value": {
             "operator": "Variables[0] (0.6) || Variables[1] (0.06) || ADD || RETURN",
             "displayLines": "(0.6 + 0.06)",
@@ -118,13 +117,13 @@ const configAbility = {
               0.6,
               0.06
             ]
-          }
+          },
+          "variableName": "Skill03_DamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_DamagePercentage",
           "value": {
             "operator": "Variables[0] (0.6) || RETURN",
             "displayLines": "0.6",
@@ -132,7 +131,8 @@ const configAbility = {
             "variables": [
               0.6
             ]
-          }
+          },
+          "variableName": "Skill03_DamagePercentage"
         }
       ]
     }
@@ -214,7 +214,7 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPAddValue",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (_BPAddValue) || INVERT || RETURN",
                     "displayLines": "-_BPAddValue",
@@ -223,7 +223,7 @@ const configAbility = {
                       "_BPAddValue"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "_BPAddValue"
                 },
                 {
                   "name": "Looped Event",
@@ -256,7 +256,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyBar_ExtraUltraAttack",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (_BPAddValue) || Variables[2] (1) || MUL || ADD || RETURN",
                     "displayLines": "(EnergyBar_ExtraUltraAttack + (_BPAddValue * 1))",
@@ -266,7 +265,8 @@ const configAbility = {
                       "_BPAddValue",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "EnergyBar_ExtraUltraAttack"
                 }
               ]
             }

@@ -46,7 +46,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_P01_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(3 + 1)",
@@ -55,13 +54,13 @@ const configAbility = {
               3,
               1
             ]
-          }
+          },
+          "variableName": "_P01_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_P01_LifeTime",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -69,7 +68,8 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "_P01_LifeTime"
         }
       ]
     },
@@ -338,7 +338,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SkillP01_StackingLayer",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -346,14 +345,15 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "_SkillP01_StackingLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SkillP01_StackingLayer",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_SkillP01_StackingLayer"
                 }
               ]
             }

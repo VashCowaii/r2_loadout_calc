@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Flag_AttackCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Flag_AttackCount"
     },
     {
       "name": "Shot Fired",
@@ -45,7 +45,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Flag_AttackCount",
       "value": {
         "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(Flag_AttackCount + 1)",
@@ -55,7 +54,8 @@ const configAbility = {
         "variables": [
           "Flag_AttackCount"
         ]
-      }
+      },
+      "variableName": "Flag_AttackCount"
     },
     {
       "name": "ATK Scaling DMG",
@@ -90,7 +90,6 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Flag_AttackCount",
       "value": {
         "operator": "Variables[0] (Flag_AttackCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(Flag_AttackCount + 1)",
@@ -100,7 +99,8 @@ const configAbility = {
         "variables": [
           "Flag_AttackCount"
         ]
-      }
+      },
+      "variableName": "Flag_AttackCount"
     },
     "Trigger: Ability End"
   ],

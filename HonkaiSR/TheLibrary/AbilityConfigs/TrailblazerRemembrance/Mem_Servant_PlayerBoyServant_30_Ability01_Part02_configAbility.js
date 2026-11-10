@@ -33,8 +33,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_index",
-      "value": 0
+      "value": 0,
+      "variableName": "_index"
     },
     {
       "name": "Looped Event",
@@ -42,7 +42,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_index",
           "value": {
             "operator": "Variables[0] (_index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_index + 1)",
@@ -52,7 +51,8 @@ const configAbility = {
             "variables": [
               "_index"
             ]
-          }
+          },
+          "variableName": "_index"
         },
         {
           "name": "Use Custom Character Function",

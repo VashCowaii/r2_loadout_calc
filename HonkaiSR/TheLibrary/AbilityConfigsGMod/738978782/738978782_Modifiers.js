@@ -102,8 +102,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastLockHpRatio",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_LastLockHpRatio"
             },
             {
               "name": "Use Custom Character Function",
@@ -135,7 +135,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NextLockHpRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_HpRatio) || Variables[1] (MDF_LockHpActionDecreaseRatio) || SUB || RETURN",
                     "displayLines": "(MDF_HpRatio - MDF_LockHpActionDecreaseRatio)",
@@ -144,13 +143,13 @@ const configAbility = {
                       "MDF_HpRatio",
                       "MDF_LockHpActionDecreaseRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NextLockHpRatio"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_NextLockHpRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_HpRatio) || RETURN",
                     "displayLines": "MDF_HpRatio",
@@ -158,13 +157,13 @@ const configAbility = {
                     "variables": [
                       "MDF_HpRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_NextLockHpRatio"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastLockHpRatio",
               "value": {
                 "operator": "Variables[0] (MDF_NextLockHpRatio ) || RETURN",
                 "displayLines": "MDF_NextLockHpRatio ",
@@ -172,7 +171,8 @@ const configAbility = {
                 "variables": [
                   "MDF_NextLockHpRatio "
                 ]
-              }
+              },
+              "variableName": "MDF_LastLockHpRatio"
             }
           ]
         },

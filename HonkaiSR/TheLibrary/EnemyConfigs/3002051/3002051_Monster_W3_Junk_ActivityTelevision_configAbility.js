@@ -7,8 +7,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "WeaknessCount",
-      "value": 3
+      "value": 3,
+      "variableName": "WeaknessCount"
     },
     {
       "name": "Add Events/Bonuses",

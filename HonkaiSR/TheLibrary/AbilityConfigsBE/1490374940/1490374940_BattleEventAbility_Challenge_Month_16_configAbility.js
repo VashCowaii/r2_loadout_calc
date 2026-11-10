@@ -291,15 +291,15 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_Use_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Skill_Use_Flag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Skill_Use_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Skill_Use_Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",

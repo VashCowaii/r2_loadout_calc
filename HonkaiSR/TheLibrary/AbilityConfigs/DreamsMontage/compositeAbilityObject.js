@@ -48,8 +48,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Flag_21048_SPAddCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Flag_21048_SPAddCount"
                 }
               ]
             },
@@ -75,8 +75,8 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Flag_21048_AttackBreak",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Flag_21048_AttackBreak"
                     }
                   ]
                 },
@@ -125,12 +125,11 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Flag_21048_AttackBreak",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Flag_21048_AttackBreak"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Flag_21048_SPAddCount",
                       "value": {
                         "operator": "Variables[0] (Flag_21048_SPAddCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Flag_21048_SPAddCount + 1)",
@@ -140,7 +139,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Flag_21048_SPAddCount"
                         ]
-                      }
+                      },
+                      "variableName": "Flag_21048_SPAddCount"
                     }
                   ]
                 }

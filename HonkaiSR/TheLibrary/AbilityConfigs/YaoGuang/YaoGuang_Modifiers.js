@@ -417,9 +417,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BPSkillPriority",
+              "scope": "AITag",
               "value": 1,
-              "scope": "AITag"
+              "variableName": "BPSkillPriority"
             }
           ]
         },
@@ -437,7 +437,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue3",
               "value": {
                 "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
                 "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
@@ -446,7 +445,8 @@ const configAbility = {
                   "_ElationDamageAddedRatioBase",
                   0.2
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue3"
             },
             {
               "name": "Stack Target Stat Value",
@@ -472,7 +472,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "G_EnergyBar",
               "value": {
                 "operator": "Variables[0] (_LifeTime) || RETURN",
                 "displayLines": "_LifeTime",
@@ -480,7 +479,8 @@ const configAbility = {
                 "variables": [
                   "_LifeTime"
                 ]
-              }
+              },
+              "variableName": "G_EnergyBar"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -497,9 +497,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "BPSkillPriority",
+              "scope": "AITag",
               "value": 0,
-              "scope": "AITag"
+              "variableName": "BPSkillPriority"
             }
           ]
         },
@@ -558,7 +558,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue3",
                   "value": {
                     "operator": "Variables[0] (_ElationDamageAddedRatioBase) || Variables[1] (0.2) || MUL || RETURN",
                     "displayLines": "(_ElationDamageAddedRatioBase * 0.2)",
@@ -567,7 +566,8 @@ const configAbility = {
                       "_ElationDamageAddedRatioBase",
                       0.2
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue3"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
@@ -752,8 +752,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BP_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_BP_Flag"
                 }
               ]
             }
@@ -832,7 +832,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "G_HongBao_Times",
                       "value": {
                         "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(G_HongBao_Times + 1)",
@@ -842,7 +841,8 @@ const configAbility = {
                         "variables": [
                           "G_HongBao_Times"
                         ]
-                      }
+                      },
+                      "variableName": "G_HongBao_Times"
                     }
                   ]
                 },
@@ -910,7 +910,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "G_HongBao_Times",
                           "value": {
                             "operator": "Variables[0] (G_HongBao_Times) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(G_HongBao_Times + 1)",
@@ -920,7 +919,8 @@ const configAbility = {
                             "variables": [
                               "G_HongBao_Times"
                             ]
-                          }
+                          },
+                          "variableName": "G_HongBao_Times"
                         }
                       ]
                     }
@@ -932,8 +932,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_BP_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BP_Flag"
                 }
               ]
             }
@@ -944,8 +944,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BP_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BP_Flag"
             }
           ]
         }

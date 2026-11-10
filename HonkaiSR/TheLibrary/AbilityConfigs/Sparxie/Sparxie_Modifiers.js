@@ -513,8 +513,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Layer",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Layer"
             }
           ]
         }
@@ -782,7 +782,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                       "value": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -790,11 +789,11 @@ const configAbility = {
                         "variables": [
                           8
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                       "value": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -802,7 +801,8 @@ const configAbility = {
                         "variables": [
                           4
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
                   ]
                 },
@@ -812,7 +812,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                       "value": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -820,11 +819,11 @@ const configAbility = {
                         "variables": [
                           4
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -832,7 +831,8 @@ const configAbility = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
                   ]
                 },
@@ -842,7 +842,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -850,11 +849,11 @@ const configAbility = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -862,7 +861,8 @@ const configAbility = {
                         "variables": [
                           1
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                     }
                   ]
                 }
@@ -870,13 +870,13 @@ const configAbility = {
               "defaultEvents": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Sparxie_SkillTree_PointB2_UltraEPAddValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Sparxie_SkillTree_PointB2_UltraBPAddValue"
                 }
               ]
             }
@@ -956,7 +956,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
               "value": {
                 "operator": "Variables[0] (WHOLE) || Variables[1] (_CurrentAttack) || Variables[2] (_CurrentAttackConvert) || SUB || Variables[3] (2000) || SUB || Variables[4] (100) || DIV || PARAM_1 || FUNCTION || Variables[5] (0.05) || MUL || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((((_CurrentAttack - _CurrentAttackConvert) - 2000) / 100)) * 0.05)",
@@ -969,7 +968,8 @@ const configAbility = {
                   100,
                   0.05
                 ]
-              }
+              },
+              "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
             },
             {
               "name": "IF",
@@ -983,8 +983,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1015,7 +1015,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Sparxie_SkillTree_PointB1_AddedValue",
                       "value": {
                         "operator": "Variables[0] (0.8) || RETURN",
                         "displayLines": "0.8",
@@ -1023,7 +1022,8 @@ const configAbility = {
                         "variables": [
                           0.8
                         ]
-                      }
+                      },
+                      "variableName": "Sparxie_SkillTree_PointB1_AddedValue"
                     }
                   ]
                 },
@@ -1521,7 +1521,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Sparxie_Skill02_GrandPrizeChance",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -1529,11 +1528,11 @@ const configAbility = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "variableName": "Sparxie_Skill02_GrandPrizeChance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Sparxie_Skill02_MinorPrizeChance",
               "value": {
                 "operator": "Variables[0] (28) || Variables[1] (Sparxie_Skill02_GrandPrizeChance) || SUB || RETURN",
                 "displayLines": "(28 - Sparxie_Skill02_GrandPrizeChance)",
@@ -1542,7 +1541,8 @@ const configAbility = {
                   28,
                   "Sparxie_Skill02_GrandPrizeChance"
                 ]
-              }
+              },
+              "variableName": "Sparxie_Skill02_MinorPrizeChance"
             }
           ]
         },
@@ -1564,13 +1564,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_GrandPrizeChance",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "Sparxie_Skill02_GrandPrizeChance"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Sparxie_Skill02_MinorPrizeChance",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Sparxie_Skill02_MinorPrizeChance"
                 }
               ],
               "failed": [

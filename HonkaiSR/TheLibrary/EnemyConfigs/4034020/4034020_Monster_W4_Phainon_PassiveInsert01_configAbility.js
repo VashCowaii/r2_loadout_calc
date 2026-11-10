@@ -43,8 +43,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Question",
-      "value": 1
+      "value": 1,
+      "variableName": "_Question"
     },
     {
       "name": "Find New Target",

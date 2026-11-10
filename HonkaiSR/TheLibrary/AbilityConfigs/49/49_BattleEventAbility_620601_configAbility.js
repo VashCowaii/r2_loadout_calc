@@ -33,8 +33,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "OverflowHeal_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "OverflowHeal_Flag"
             },
             "Deleted bullshit",
             {
@@ -111,8 +111,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "huahai_count",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "huahai_count"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
@@ -143,7 +143,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "huahai_count",
                           "value": {
                             "operator": "Variables[0] (ADF_7) || RETURN",
                             "displayLines": "ADF_7",
@@ -151,13 +150,13 @@ const configAbility = {
                             "variables": [
                               "ADF_7"
                             ]
-                          }
+                          },
+                          "variableName": "huahai_count"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "huahai_count",
                           "value": {
                             "operator": "Variables[0] (huahai_count) || Variables[1] (ADF_4) || ADD || RETURN",
                             "displayLines": "(huahai_count + ADF_4)",
@@ -166,7 +165,8 @@ const configAbility = {
                               "huahai_count",
                               "ADF_4"
                             ]
-                          }
+                          },
+                          "variableName": "huahai_count"
                         }
                       ]
                     },
@@ -406,8 +406,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "OverflowHeal_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "OverflowHeal_Flag"
                     }
                   ]
                 }

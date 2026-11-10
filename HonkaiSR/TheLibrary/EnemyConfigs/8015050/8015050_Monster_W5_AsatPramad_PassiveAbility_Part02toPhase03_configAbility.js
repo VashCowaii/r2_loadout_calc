@@ -110,7 +110,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "variableName": "DebuffFirstTimeCount",
       "value": {
         "operator": "Variables[0] (DebuffFirstTimeCount) || RETURN",
         "displayLines": "DebuffFirstTimeCount",
@@ -118,7 +117,8 @@ const configAbility = {
         "variables": [
           "DebuffFirstTimeCount"
         ]
-      }
+      },
+      "variableName": "DebuffFirstTimeCount"
     },
     {
       "name": "Define Custom Variable",
@@ -126,8 +126,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "variableName": "AIFlag",
-      "value": 12
+      "value": 12,
+      "variableName": "AIFlag"
     },
     {
       "name": "Add Events/Bonuses",
@@ -162,8 +162,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "variableName": "AIFlag",
-      "value": 1
+      "value": 1,
+      "variableName": "AIFlag"
     },
     {
       "name": "Define Custom Variable",
@@ -171,7 +171,6 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Recently Summoned Enemies}}"
       },
-      "variableName": "DebuffFirstTimeCount",
       "value": {
         "operator": "Variables[0] (DebuffFirstTimeCount) || RETURN",
         "displayLines": "DebuffFirstTimeCount",
@@ -179,7 +178,8 @@ const configAbility = {
         "variables": [
           "DebuffFirstTimeCount"
         ]
-      }
+      },
+      "variableName": "DebuffFirstTimeCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -213,8 +213,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CurrentFace",
-      "value": 0
+      "value": 0,
+      "variableName": "CurrentFace"
     },
     {
       "name": "Use Custom Character Function",

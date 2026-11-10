@@ -115,13 +115,13 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SAIFlag",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "SAIFlag"
                     }
                   ]
                 }

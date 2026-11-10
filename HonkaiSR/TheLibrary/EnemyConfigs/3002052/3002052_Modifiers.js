@@ -501,8 +501,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAddRatioCurrent",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_AttackAddRatioCurrent"
             },
             {
               "name": "IF",
@@ -526,7 +526,6 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackAddRatioCurrent",
                       "value": {
                         "operator": "Variables[0] (MDF_AttackAddRatioCurrent) || Constants[0] (2) || MUL || RETURN",
                         "displayLines": "(MDF_AttackAddRatioCurrent * 2)",
@@ -536,7 +535,8 @@ const configAbility = {
                         "variables": [
                           "MDF_AttackAddRatioCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackAddRatioCurrent"
                     }
                   ]
                 }
@@ -554,7 +554,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AttackAddRatioCurrent",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_AttackAddRatioCurrent) || MUL || RETURN",
                 "displayLines": "(MDF_PropertyValue * MDF_AttackAddRatioCurrent)",
@@ -563,7 +562,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   "MDF_AttackAddRatioCurrent"
                 ]
-              }
+              },
+              "variableName": "MDF_AttackAddRatioCurrent"
             },
             {
               "name": "Stack Target Stat Value",

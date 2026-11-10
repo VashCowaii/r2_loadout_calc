@@ -227,7 +227,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonDelayRatio1",
               "value": {
                 "operator": "Variables[0] (SummonDelayRatio1Random2) || RETURN",
                 "displayLines": "SummonDelayRatio1Random2",
@@ -235,7 +234,8 @@ const configAbility = {
                 "variables": [
                   "SummonDelayRatio1Random2"
                 ]
-              }
+              },
+              "variableName": "SummonDelayRatio1"
             }
           ],
           "failed": [
@@ -248,7 +248,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SummonDelayRatio1",
                   "value": {
                     "operator": "Variables[0] (SummonDelayRatio1Random3) || RETURN",
                     "displayLines": "SummonDelayRatio1Random3",
@@ -256,13 +255,13 @@ const configAbility = {
                     "variables": [
                       "SummonDelayRatio1Random3"
                     ]
-                  }
+                  },
+                  "variableName": "SummonDelayRatio1"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SummonDelayRatio1",
                   "value": {
                     "operator": "Variables[0] (SummonDelayRatio1Random1) || RETURN",
                     "displayLines": "SummonDelayRatio1Random1",
@@ -270,7 +269,8 @@ const configAbility = {
                     "variables": [
                       "SummonDelayRatio1Random1"
                     ]
-                  }
+                  },
+                  "variableName": "SummonDelayRatio1"
                 }
               ]
             }

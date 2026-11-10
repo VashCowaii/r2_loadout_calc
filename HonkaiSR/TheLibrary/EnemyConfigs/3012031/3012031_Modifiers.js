@@ -21,13 +21,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BeingAttackCountDown",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BeingAttackCountDown"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CreatFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CreatFlag"
             }
           ]
         },
@@ -50,8 +50,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BeingAttackCountDown",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_BeingAttackCountDown"
             },
             {
               "name": "IF",
@@ -170,8 +170,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeingAttackCountDown",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BeingAttackCountDown"
                 }
               ],
               "failed": [
@@ -208,8 +208,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InBeingAttackFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_InBeingAttackFlag"
             }
           ]
         },
@@ -218,8 +218,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InBeingAttackFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_InBeingAttackFlag"
             }
           ]
         },
@@ -283,8 +283,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CreatFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CreatFlag"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -297,7 +297,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamagerPerHit",
                   "value": {
                     "operator": "Variables[0] (CEIL) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_ShowValue) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))",
@@ -307,7 +306,8 @@ const configAbility = {
                       "MDF_MaxHP",
                       "MDF_ShowValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamagerPerHit"
                 }
               ]
             }
@@ -324,8 +324,8 @@ const configAbility = {
               "onChange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CreatFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CreatFlag"
                 }
               ]
             }

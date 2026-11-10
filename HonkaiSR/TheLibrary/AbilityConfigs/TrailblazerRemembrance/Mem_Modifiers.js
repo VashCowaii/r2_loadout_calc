@@ -518,7 +518,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyRatio",
               "value": {
                 "operator": "Variables[0] (_propertyBase) || Variables[1] (MDF_PropertyConvert) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
                 "displayLines": "((_propertyBase * MDF_PropertyConvert) + MDF_PropertyBase)",
@@ -528,7 +527,8 @@ const configAbility = {
                   "MDF_PropertyConvert",
                   "MDF_PropertyBase"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyRatio"
             },
             {
               "name": "Stack Target Stat Value",

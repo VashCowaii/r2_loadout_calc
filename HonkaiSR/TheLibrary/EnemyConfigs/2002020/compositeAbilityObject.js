@@ -721,9 +721,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 3,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -803,9 +803,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -892,9 +892,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "EXSkill01",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "EXSkill01"
                 },
                 {
                   "name": "Adjust Variable Value",
@@ -2227,7 +2227,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -2237,7 +2236,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }
@@ -2404,7 +2404,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                           "value": {
                             "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -2414,7 +2413,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "W2_Yanqing_00_Skill02_AccumulateRevealed"
                             ]
-                          }
+                          },
+                          "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         }
                       ]
                     }

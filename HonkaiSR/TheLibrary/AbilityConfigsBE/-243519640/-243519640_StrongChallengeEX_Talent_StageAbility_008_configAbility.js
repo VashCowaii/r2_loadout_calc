@@ -97,12 +97,11 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DMG_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_DMG_Flag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DMG_Num",
                       "value": {
                         "operator": "Variables[0] (_DMG_Num) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(_DMG_Num + 1)",
@@ -112,7 +111,8 @@ const configAbility = {
                         "variables": [
                           "_DMG_Num"
                         ]
-                      }
+                      },
+                      "variableName": "_DMG_Num"
                     }
                   ]
                 }
@@ -154,13 +154,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DMG_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "_DMG_Flag"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DMG_Num",
-              "value": 0
+              "value": 0,
+              "variableName": "_DMG_Num"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -195,8 +195,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DMG_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DMG_Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -227,8 +227,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DMG_Num",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_DMG_Num"
                 }
               ]
             }

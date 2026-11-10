@@ -173,7 +173,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterSummonerNegativeHPRatio",
                   "value": {
                     "operator": "Variables[0] (CasterSummonerNegativeHP) || Variables[1] (CasterSummonerMaxHP) || DIV || RETURN",
                     "displayLines": "(CasterSummonerNegativeHP / CasterSummonerMaxHP)",
@@ -182,11 +181,11 @@ const configAbility = {
                       "CasterSummonerNegativeHP",
                       "CasterSummonerMaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterSummonerNegativeHPRatio"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CasterNegativeHP",
                   "value": {
                     "operator": "Variables[0] (CasterSummonerNegativeHPRatio) || Variables[1] (CasterHP) || MUL || RETURN",
                     "displayLines": "(CasterSummonerNegativeHPRatio * CasterHP)",
@@ -195,7 +194,8 @@ const configAbility = {
                       "CasterSummonerNegativeHPRatio",
                       "CasterHP"
                     ]
-                  }
+                  },
+                  "variableName": "CasterNegativeHP"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -618,9 +618,9 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "LightTeamCount",
+                      "scope": "ContextTaskTemplate",
                       "value": 2,
-                      "scope": "ContextTaskTemplate"
+                      "variableName": "LightTeamCount"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -924,9 +924,9 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_MirrorSetupFlag",
+          "scope": "ContextOwner",
           "value": 1,
-          "scope": "ContextOwner"
+          "variableName": "#CL_MirrorSetupFlag"
         }
       ]
     },
@@ -954,7 +954,7 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_ExtraSpecialSP",
+          "scope": "ContextTaskTemplate",
           "value": {
             "operator": "Variables[0] (MAX) || Variables[1] (_CurSpecialSP) || Variables[2] (parameter[0]_AddValue) || ADD || Variables[3] (_MaxSpecialSP) || SUB || Constants[0] (0) || PARAM_2 || FUNCTION || RETURN",
             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(((_CurSpecialSP + parameter[0]_AddValue) - _MaxSpecialSP), 0)",
@@ -968,7 +968,7 @@ const configAbility = {
               "_MaxSpecialSP"
             ]
           },
-          "scope": "ContextTaskTemplate"
+          "variableName": "_ExtraSpecialSP"
         },
         {
           "name": "IF",

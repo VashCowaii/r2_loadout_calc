@@ -39,18 +39,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Normal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Normal"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Skill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Skill"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Ultra",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Ultra"
                 }
               ]
             },
@@ -104,8 +104,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Normal",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Normal"
                     }
                   ]
                 },
@@ -118,8 +118,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Skill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Skill"
                     }
                   ]
                 },
@@ -132,8 +132,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Ultra",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Ultra"
                     }
                   ]
                 },

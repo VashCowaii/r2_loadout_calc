@@ -362,7 +362,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_RedStance_First",
               "value": {
                 "operator": "Variables[0] (MDF_CurMaxStance2) || Variables[1] (MDF_RedStanceRatio) || MUL || RETURN",
                 "displayLines": "(MDF_CurMaxStance2 * MDF_RedStanceRatio)",
@@ -371,7 +370,8 @@ const configAbility = {
                   "MDF_CurMaxStance2",
                   "MDF_RedStanceRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_RedStance_First"
             },
             {
               "name": "IF",

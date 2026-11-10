@@ -59,9 +59,9 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "InsertFlag",
+      "scope": "TargetEntity",
       "value": 0,
-      "scope": "TargetEntity"
+      "variableName": "InsertFlag"
     }
   ],
   "targetObjectData": {

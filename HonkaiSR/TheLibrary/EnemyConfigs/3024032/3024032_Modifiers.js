@@ -341,8 +341,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TargetAttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_TargetAttackFlag"
                 }
               ],
               "failed": [
@@ -359,15 +359,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TargetAttackFlag",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "MDF_TargetAttackFlag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TargetAttackFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_TargetAttackFlag"
                     }
                   ]
                 }
@@ -380,8 +380,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TargetAttackFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TargetAttackFlag"
             }
           ]
         },
@@ -1024,8 +1024,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "HintCheck",
-              "value": 0
+              "value": 0,
+              "variableName": "HintCheck"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1095,7 +1095,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ChargeCount",
               "value": {
                 "operator": "Variables[0] ({[PassiveSkill03[0]]}) || RETURN",
                 "displayLines": "{[PassiveSkill03[0]]}",
@@ -1103,7 +1102,8 @@ const configAbility = {
                 "variables": [
                   "{[PassiveSkill03[0]]}"
                 ]
-              }
+              },
+              "variableName": "ChargeCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1366,8 +1366,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 7
+                      "value": 7,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1475,7 +1475,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LastHPRatio",
               "value": {
                 "operator": "Variables[0] (MDF_CurrentHPRatio) || RETURN",
                 "displayLines": "MDF_CurrentHPRatio",
@@ -1483,7 +1482,8 @@ const configAbility = {
                 "variables": [
                   "MDF_CurrentHPRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_LastHPRatio"
             },
             {
               "name": "Define Custom Variable with HP%",
@@ -1513,7 +1513,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPChangeRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_LastHPRatio) || Variables[1] (MDF_CurrentHPRatio) || SUB || RETURN",
                     "displayLines": "(MDF_LastHPRatio - MDF_CurrentHPRatio)",
@@ -1522,7 +1521,8 @@ const configAbility = {
                       "MDF_LastHPRatio",
                       "MDF_CurrentHPRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPChangeRatio"
                 },
                 {
                   "name": "IF",
@@ -1632,7 +1632,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_RallyHPRatio",
                           "value": {
                             "operator": "Variables[0] (MDF_CurrentHPRatio) || Variables[1] (MDF_HPChangeRatio) || ADD || RETURN",
                             "displayLines": "(MDF_CurrentHPRatio + MDF_HPChangeRatio)",
@@ -1641,7 +1640,8 @@ const configAbility = {
                               "MDF_CurrentHPRatio",
                               "MDF_HPChangeRatio"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_RallyHPRatio"
                         }
                       ]
                     }
@@ -1649,7 +1649,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_RallyHPRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_RallyHPRatio) || Variables[1] (MDF_ShieldThreshold) || SUB || RETURN",
                         "displayLines": "(MDF_RallyHPRatio - MDF_ShieldThreshold)",
@@ -1658,7 +1657,8 @@ const configAbility = {
                           "MDF_RallyHPRatio",
                           "MDF_ShieldThreshold"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_RallyHPRatio"
                     }
                   ]
                 },
@@ -1698,7 +1698,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_RallyHPRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentHPRatio) || RETURN",
                         "displayLines": "MDF_CurrentHPRatio",
@@ -1706,7 +1705,8 @@ const configAbility = {
                         "variables": [
                           "MDF_CurrentHPRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_RallyHPRatio"
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -1735,13 +1735,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isAttack",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalDamageRatio",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TotalDamageRatio"
             }
           ]
         },
@@ -1750,13 +1750,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_isAttack",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_isAttack"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalDamageRatio",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TotalDamageRatio"
             }
           ]
         },

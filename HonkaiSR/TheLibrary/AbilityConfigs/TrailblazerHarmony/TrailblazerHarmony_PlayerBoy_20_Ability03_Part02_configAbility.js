@@ -32,7 +32,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_HarmonyEnergy",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -40,7 +39,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "MDF_HarmonyEnergy"
     },
     {
       "name": "Update Displayed Energy Bar",

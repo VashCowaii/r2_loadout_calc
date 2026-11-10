@@ -1008,9 +1008,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AML_Boss_00_Part_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "AML_Boss_00_Part_EnhancementLevel"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1109,7 +1109,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "AML_Boss_00_Part_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
                 "displayLines": "MDF_EnhancementLevel",
@@ -1118,7 +1118,7 @@ const configAbility = {
                   "MDF_EnhancementLevel"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "AML_Boss_00_Part_EnhancementLevel"
             }
           ]
         },

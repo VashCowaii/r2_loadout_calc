@@ -53,7 +53,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Damage",
                   "value": {
                     "operator": "Variables[0] (0.007999999) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(0.007999999 * _Layer)",
@@ -62,7 +61,8 @@ const compositeAbilityObject = {
                       0.007999999,
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Damage"
                 },
                 {
                   "name": "IF",
@@ -82,7 +82,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Damage",
                       "value": {
                         "operator": "Variables[0] (0.32) || RETURN",
                         "displayLines": "0.32",
@@ -90,7 +89,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.32
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Damage"
                     }
                   ]
                 },
@@ -132,7 +132,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Layer",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
@@ -142,7 +141,8 @@ const compositeAbilityObject = {
                       "MDF_Target_Defence",
                       100
                     ]
-                  }
+                  },
+                  "variableName": "_Layer"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -184,7 +184,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Layer",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
@@ -194,7 +193,8 @@ const compositeAbilityObject = {
                           "MDF_Target_Defence",
                           100
                         ]
-                      }
+                      },
+                      "variableName": "_Layer"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -236,7 +236,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Layer",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
@@ -246,7 +245,8 @@ const compositeAbilityObject = {
                           "MDF_Target_Defence",
                           100
                         ]
-                      }
+                      },
+                      "variableName": "_Layer"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -288,7 +288,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Layer",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (MDF_Target_Defence) || Variables[2] (100) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((MDF_Target_Defence / 100))",
@@ -298,7 +297,8 @@ const compositeAbilityObject = {
                           "MDF_Target_Defence",
                           100
                         ]
-                      }
+                      },
+                      "variableName": "_Layer"
                     },
                     {
                       "name": "Add Events/Bonuses",

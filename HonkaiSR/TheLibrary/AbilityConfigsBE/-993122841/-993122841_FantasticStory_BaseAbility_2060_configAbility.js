@@ -262,7 +262,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEvent_BaseHP",
       "value": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
         "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -272,7 +271,8 @@ const configAbility = {
         "variables": [
           "BattleEvent_BaseHP"
         ]
-      }
+      },
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Declare Custom Variable",
@@ -695,8 +695,8 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
                 },
                 {
                   "name": "Find New Target",
@@ -868,7 +868,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                               "value": {
                                 "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_BeforeFeverKillChargeRatio) || MUL || ADD || RETURN",
                                 "displayLines": "(DV_FantasticStory_BaseAbility_CountSumTemp + (DV_EnterFeverValue * DV_BeforeFeverKillChargeRatio))",
@@ -878,7 +877,8 @@ const configAbility = {
                                   "DV_EnterFeverValue",
                                   "DV_BeforeFeverKillChargeRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                             },
                             {
                               "name": "IF",
@@ -898,7 +898,6 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                   "value": {
                                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
                                     "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
@@ -906,7 +905,8 @@ const configAbility = {
                                     "variables": [
                                       "DV_FantasticStory_BaseAbility_CountSumTempMax"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                 },
                                 {
                                   "name": "Update Surging Grit[PF]",
@@ -965,7 +965,6 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                               "value": {
                                 "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FeverKillReturnRatio) || MUL || ADD || RETURN",
                                 "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FeverKillReturnRatio))",
@@ -975,7 +974,8 @@ const configAbility = {
                                   "DV_EnterFeverValue",
                                   "DV_FeverKillReturnRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                             },
                             {
                               "name": "IF",

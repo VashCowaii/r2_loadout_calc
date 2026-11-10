@@ -279,7 +279,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UltraAttackCount",
                   "value": {
                     "operator": "Variables[0] (UltraAttackCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(UltraAttackCount + 1)",
@@ -289,7 +288,8 @@ const configAbility = {
                     "variables": [
                       "UltraAttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "UltraAttackCount"
                 }
               ]
             }
@@ -711,7 +711,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Item1ExtraDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_Item1ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
                     "displayLines": "(MDF_Item1ExtraDamage + MDF_TempDamage)",
@@ -720,7 +719,8 @@ const configAbility = {
                       "MDF_Item1ExtraDamage",
                       "MDF_TempDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Item1ExtraDamage"
                 }
               ]
             }
@@ -731,13 +731,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Item1ExtraDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Item1ExtraDamage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TempDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TempDamage"
             }
           ]
         }
@@ -1031,12 +1031,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_UI_Skill11_ItemIndex",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_UI_Skill11_ItemIndex"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_UI_Skill11_ItemCount",
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -1044,7 +1043,8 @@ const configAbility = {
                     "variables": [
                       3
                     ]
-                  }
+                  },
+                  "variableName": "#CL_UI_Skill11_ItemCount"
                 }
               ]
             }
@@ -1889,7 +1889,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TriggerItemChance",
                           "value": {
                             "operator": "Variables[0] (TriggerItemChance) || Variables[1] (0.2) || MUL || RETURN",
                             "displayLines": "(TriggerItemChance * 0.2)",
@@ -1898,7 +1897,8 @@ const configAbility = {
                               "TriggerItemChance",
                               0.2
                             ]
-                          }
+                          },
+                          "variableName": "TriggerItemChance"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -2017,7 +2017,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TriggerItemChance",
               "value": {
                 "operator": "Variables[0] (TriggerItemBaseChance) || RETURN",
                 "displayLines": "TriggerItemBaseChance",
@@ -2025,11 +2024,11 @@ const configAbility = {
                 "variables": [
                   "TriggerItemBaseChance"
                 ]
-              }
+              },
+              "variableName": "TriggerItemChance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "UltraAttackCount",
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -2037,7 +2036,8 @@ const configAbility = {
                 "variables": [
                   3
                 ]
-              }
+              },
+              "variableName": "UltraAttackCount"
             },
             {
               "name": "IF",

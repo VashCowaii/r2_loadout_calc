@@ -130,8 +130,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Level Entity}}"
       },
-      "variableName": "Wolf_AttackCount",
-      "value": 0
+      "value": 0,
+      "variableName": "Wolf_AttackCount"
     },
     {
       "name": "Find New Target",

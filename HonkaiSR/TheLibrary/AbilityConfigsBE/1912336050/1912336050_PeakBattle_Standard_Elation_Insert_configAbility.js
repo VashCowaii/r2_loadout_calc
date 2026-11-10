@@ -30,8 +30,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_FirstHit",
-      "value": 1
+      "value": 1,
+      "variableName": "MDF_FirstHit"
     },
     {
       "name": "Trigger Multiple Functions",
@@ -79,8 +79,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_FirstHit",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_FirstHit"
     },
     {
       "name": "Trigger Multiple Functions",

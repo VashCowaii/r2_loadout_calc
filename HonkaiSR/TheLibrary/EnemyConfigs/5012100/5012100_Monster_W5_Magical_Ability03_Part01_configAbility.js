@@ -15,8 +15,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Deathrattle",
-      "value": 1
+      "value": 1,
+      "variableName": "Deathrattle"
     },
     "Deleted bullshit",
     {

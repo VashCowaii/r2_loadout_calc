@@ -794,7 +794,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -804,7 +803,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }
@@ -897,7 +897,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_IceTakenRatio",
               "value": {
                 "operator": "Variables[0] (IceTakenRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(IceTakenRatioPerLayer * ModifierLayers)",
@@ -906,7 +905,8 @@ const configAbility = {
                   "IceTakenRatioPerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_IceTakenRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -949,7 +949,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_AllDamageTypeAddedRatio",
               "value": {
                 "operator": "Variables[0] (AllDamageTypeAddedRatioPerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                 "displayLines": "(AllDamageTypeAddedRatioPerLayer * ModifierLayers)",
@@ -958,7 +957,8 @@ const configAbility = {
                   "AllDamageTypeAddedRatioPerLayer",
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "MDF_AllDamageTypeAddedRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1204,8 +1204,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 101
+                  "value": 101,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -1360,8 +1360,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "W2_Yanqing_00_SwordStep",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "W2_Yanqing_00_SwordStep"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -1720,7 +1720,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentWeakPoint",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(CurrentWeakPoint + 1)",
@@ -1731,7 +1731,7 @@ const configAbility = {
                       "CurrentWeakPoint"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "CurrentWeakPoint"
                 },
                 {
                   "name": "IF",
@@ -1753,9 +1753,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     }
                   ]
                 },
@@ -1973,7 +1973,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentWeakPoint",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(CurrentWeakPoint + 1)",
@@ -1984,7 +1984,7 @@ const configAbility = {
                       "CurrentWeakPoint"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "CurrentWeakPoint"
                 },
                 {
                   "name": "IF",
@@ -2006,9 +2006,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     }
                   ]
                 },
@@ -2153,7 +2153,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CurrentWeakPoint",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (CurrentWeakPoint) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(CurrentWeakPoint + 1)",
@@ -2164,7 +2164,7 @@ const configAbility = {
                       "CurrentWeakPoint"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "CurrentWeakPoint"
                 },
                 {
                   "name": "IF",
@@ -2186,9 +2186,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "CurrentWeakPoint",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "CurrentWeakPoint"
                     }
                   ]
                 },
@@ -2701,9 +2701,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ChangeWeakPointFlag",
+              "scope": "ContextModifier",
               "value": 1,
-              "scope": "ContextModifier"
+              "variableName": "ChangeWeakPointFlag"
             },
             {
               "name": "IF",
@@ -2725,8 +2725,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "W2_Yanqing_00_SwordStep",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "W2_Yanqing_00_SwordStep"
                 },
                 {
                   "name": "Find New Target",
@@ -2857,9 +2857,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChangeWeakPointFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "ChangeWeakPointFlag"
                 },
                 {
                   "name": "Clear Weaknesses",
@@ -3615,9 +3615,9 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "ChangeWeakPointFlag",
+              "scope": "ContextModifier",
               "value": 1,
-              "scope": "ContextModifier"
+              "variableName": "ChangeWeakPointFlag"
             },
             {
               "name": "IF",
@@ -3639,8 +3639,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "W2_Yanqing_00_SwordStep",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "W2_Yanqing_00_SwordStep"
                 },
                 {
                   "name": "Find New Target",
@@ -3787,9 +3787,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ChangeWeakPointFlag",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "ChangeWeakPointFlag"
                 },
                 {
                   "name": "Clear Weaknesses",
@@ -5026,9 +5026,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 3,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -5108,9 +5108,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -5197,9 +5197,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "EXSkill01",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "EXSkill01"
             },
             {
               "name": "Adjust Variable Value",
@@ -6532,7 +6532,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -6542,7 +6541,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }
@@ -6709,7 +6709,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed",
                       "value": {
                         "operator": "Variables[0] (W2_Yanqing_00_Skill02_AccumulateRevealed) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(W2_Yanqing_00_Skill02_AccumulateRevealed + 1)",
@@ -6719,7 +6718,8 @@ const configAbility = {
                         "variables": [
                           "W2_Yanqing_00_Skill02_AccumulateRevealed"
                         ]
-                      }
+                      },
+                      "variableName": "W2_Yanqing_00_Skill02_AccumulateRevealed"
                     }
                   ]
                 }

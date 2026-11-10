@@ -164,9 +164,9 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertCheck",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "InsertCheck"
                 },
                 {
                   "name": "Remove Events/Bonuses",

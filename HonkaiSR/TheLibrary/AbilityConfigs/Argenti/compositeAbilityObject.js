@@ -117,8 +117,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TargetNumber",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TargetNumber"
                     },
                     {
                       "name": "Define Custom Variable with Team Count",
@@ -376,7 +376,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CritChance",
                   "value": {
                     "operator": "Variables[0] (MDF_CritChanceBase) || Variables[1] (MDF_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_CritChanceBase * MDF_Layer)",
@@ -385,7 +384,8 @@ const compositeAbilityObject = {
                       "MDF_CritChanceBase",
                       "MDF_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CritChance"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -416,7 +416,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CritDamage",
                       "value": {
                         "operator": "Variables[0] (0.04) || Variables[1] (MDF_Layer) || MUL || RETURN",
                         "displayLines": "(0.04 * MDF_Layer)",
@@ -425,7 +424,8 @@ const compositeAbilityObject = {
                           0.04,
                           "MDF_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CritDamage"
                     },
                     {
                       "name": "Stack Target Stat Value",
@@ -512,8 +512,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhancedUltra",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "EnhancedUltra"
                     },
                     {
                       "name": "Update Ability Binding",
@@ -529,8 +529,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "EnhancedUltra",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "EnhancedUltra"
                     },
                     {
                       "name": "Update Ability Binding",
@@ -990,7 +990,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_CritChanceBase",
           "value": {
             "operator": "Variables[0] (0.025) || RETURN",
             "displayLines": "0.025",
@@ -998,7 +997,8 @@ const compositeAbilityObject = {
             "variables": [
               0.025
             ]
-          }
+          },
+          "variableName": "MDF_CritChanceBase"
         },
         {
           "name": "Define Custom Variable with Stat",
@@ -1043,7 +1043,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxCount",
               "value": {
                 "operator": "Variables[0] (10) || Variables[1] (2) || ADD || RETURN",
                 "displayLines": "(10 + 2)",
@@ -1052,7 +1051,8 @@ const compositeAbilityObject = {
                   10,
                   2
                 ]
-              }
+              },
+              "variableName": "MDF_MaxCount"
             },
             {
               "name": "Looped Event",
@@ -1087,7 +1087,6 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxCount",
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -1095,7 +1094,8 @@ const compositeAbilityObject = {
                 "variables": [
                   10
                 ]
-              }
+              },
+              "variableName": "MDF_MaxCount"
             }
           ]
         },
@@ -1424,8 +1424,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhancedUltra",
-          "value": 0
+          "value": 0,
+          "variableName": "EnhancedUltra"
         },
         {
           "name": "IF",
@@ -1621,8 +1621,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "EnhancedUltra",
-          "value": 0
+          "value": 0,
+          "variableName": "EnhancedUltra"
         },
         {
           "name": "IF",

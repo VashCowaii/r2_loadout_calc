@@ -79,13 +79,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Herta_Count_ATK",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Herta_Count_ATK"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Herta_Count_Insert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Herta_Count_Insert"
                     },
                     {
                       "name": "Inject Ability Use",

@@ -488,7 +488,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Damage_Total",
                       "value": {
                         "operator": "Variables[0] (Damage_Total) || Variables[1] (Damage_Hit) || ADD || RETURN",
                         "displayLines": "(Damage_Total + Damage_Hit)",
@@ -497,7 +496,8 @@ const compositeAbilityObject = {
                           "Damage_Total",
                           "Damage_Hit"
                         ]
-                      }
+                      },
+                      "variableName": "Damage_Total"
                     }
                   ]
                 }
@@ -555,8 +555,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Damage_Total",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Damage_Total"
                 }
               ]
             },

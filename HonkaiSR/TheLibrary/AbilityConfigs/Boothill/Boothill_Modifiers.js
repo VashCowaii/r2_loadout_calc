@@ -176,9 +176,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurEnhance",
+              "scope": "ContextOwner",
               "value": 0,
-              "scope": "ContextOwner"
+              "variableName": "CurEnhance"
             }
           ]
         },
@@ -308,7 +308,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "CurEnhance",
+              "scope": "ContextOwner",
               "value": {
                 "operator": "Variables[0] (_layer) || RETURN",
                 "displayLines": "_layer",
@@ -317,7 +317,7 @@ const configAbility = {
                   "_layer"
                 ]
               },
-              "scope": "ContextOwner"
+              "variableName": "CurEnhance"
             },
             {
               "name": "IF",
@@ -647,15 +647,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_is_attacked_by_target",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_is_attacked_by_target"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_is_attacked_by_target",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_is_attacked_by_target"
                 }
               ]
             }
@@ -670,8 +670,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_is_attacked_by_target",
-              "value": 0
+              "value": 0,
+              "variableName": "_is_attacked_by_target"
             }
           ]
         },
@@ -794,8 +794,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_break_count",
-              "value": 0
+              "value": 0,
+              "variableName": "_break_count"
             }
           ]
         }
@@ -1010,15 +1010,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_is_attacked_by_target",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_is_attacked_by_target"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_is_attacked_by_target",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_is_attacked_by_target"
                 }
               ]
             }
@@ -1029,8 +1029,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_is_attacked_by_target",
-              "value": 0
+              "value": 0,
+              "variableName": "_is_attacked_by_target"
             }
           ]
         },

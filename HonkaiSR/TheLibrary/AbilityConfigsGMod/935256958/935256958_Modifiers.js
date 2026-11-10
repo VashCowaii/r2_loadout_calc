@@ -64,8 +64,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "ConcentrateLayer",
-              "value": 0
+              "value": 0,
+              "variableName": "ConcentrateLayer"
             }
           ]
         },
@@ -96,8 +96,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Passive02_PropertyValue",
-              "value": 0
+              "value": 0,
+              "variableName": "Passive02_PropertyValue"
             }
           ]
         },
@@ -110,7 +110,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "Passive02_PropertyValue",
               "value": {
                 "operator": "Variables[0] (Passive02Add) || Variables[1] (Passive02_PropertyValue) || ADD || RETURN",
                 "displayLines": "(Passive02Add + Passive02_PropertyValue)",
@@ -119,7 +118,8 @@ const configAbility = {
                   "Passive02Add",
                   "Passive02_PropertyValue"
                 ]
-              }
+              },
+              "variableName": "Passive02_PropertyValue"
             }
           ]
         }
@@ -162,8 +162,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Hana",
-              "value": 0
+              "value": 0,
+              "variableName": "Hana"
             }
           ]
         },
@@ -188,8 +188,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Hana",
-              "value": 1
+              "value": 1,
+              "variableName": "Hana"
             }
           ]
         }
@@ -204,8 +204,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Tsuki",
-              "value": 0
+              "value": 0,
+              "variableName": "Tsuki"
             }
           ]
         },
@@ -230,8 +230,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Tsuki",
-              "value": 1
+              "value": 1,
+              "variableName": "Tsuki"
             }
           ]
         }
@@ -246,8 +246,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Yuki",
-              "value": 0
+              "value": 0,
+              "variableName": "Yuki"
             }
           ]
         },
@@ -272,8 +272,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Yuki",
-              "value": 1
+              "value": 1,
+              "variableName": "Yuki"
             }
           ]
         }
@@ -297,7 +297,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Zaika_Pass01_DamageUp",
               "value": {
                 "operator": "Variables[0] (_MDF_Layer) || Variables[1] (MDF_DamageUpPerKill) || MUL || RETURN",
                 "displayLines": "(_MDF_Layer * MDF_DamageUpPerKill)",
@@ -306,7 +305,8 @@ const configAbility = {
                   "_MDF_Layer",
                   "MDF_DamageUpPerKill"
                 ]
-              }
+              },
+              "variableName": "MDF_Zaika_Pass01_DamageUp"
             },
             {
               "name": "Stack Target Stat Value",

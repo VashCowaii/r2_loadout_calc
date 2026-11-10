@@ -47,7 +47,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || Variables[1] (3) || ADD || RETURN",
             "displayLines": "(6 + 3)",
@@ -56,13 +55,13 @@ const configAbility = {
               6,
               3
             ]
-          }
+          },
+          "variableName": "MDF_LoopCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -70,7 +69,8 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "MDF_LoopCount"
         }
       ]
     },

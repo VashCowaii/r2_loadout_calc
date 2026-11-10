@@ -161,13 +161,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Phase_Flag",
-      "value": 2
+      "value": 2,
+      "variableName": "Phase_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_TurnCount",
-      "value": 3
+      "value": 3,
+      "variableName": "MDF_TurnCount"
     },
     {
       "name": "Update Displayed Energy Bar",

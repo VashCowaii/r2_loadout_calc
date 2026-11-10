@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Weakness_CountDown",
-      "value": 0
+      "value": 0,
+      "variableName": "Weakness_CountDown"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -298,8 +298,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "W3_Sunday_00_StanceCountDown_Flag",
-      "value": 0
+      "value": 0,
+      "variableName": "W3_Sunday_00_StanceCountDown_Flag"
     },
     {
       "name": "Remove Events/Bonuses",

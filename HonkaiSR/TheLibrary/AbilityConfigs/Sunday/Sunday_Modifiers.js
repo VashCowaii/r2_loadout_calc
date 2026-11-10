@@ -46,7 +46,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CritialDamage_Add",
                   "value": {
                     "operator": "Variables[0] (_CritialChance) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_CritialChance - 1)",
@@ -56,11 +55,11 @@ const configAbility = {
                     "variables": [
                       "_CritialChance"
                     ]
-                  }
+                  },
+                  "variableName": "_CritialDamage_Add"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CritialDamage_Add",
                   "value": {
                     "operator": "Variables[0] (_CritialDamage_Add) || Constants[0] (2) || MUL || RETURN",
                     "displayLines": "(_CritialDamage_Add * 2)",
@@ -70,7 +69,8 @@ const configAbility = {
                     "variables": [
                       "_CritialDamage_Add"
                     ]
-                  }
+                  },
+                  "variableName": "_CritialDamage_Add"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -242,7 +242,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_CritValue) || MUL || RETURN",
                     "displayLines": "(MDF_Layer * MDF_CritValue)",
@@ -251,13 +250,13 @@ const configAbility = {
                       "MDF_Layer",
                       "MDF_CritValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CritValue) || RETURN",
                     "displayLines": "MDF_CritValue",
@@ -265,7 +264,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CritValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             },
@@ -825,8 +825,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_CheckAllLinkerDie",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_CheckAllLinkerDie"
             },
             {
               "name": "Find New Target",
@@ -850,8 +850,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_CheckAllLinkerDie",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CheckAllLinkerDie"
                 }
               ]
             },
@@ -895,8 +895,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_lifeTime",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_lifeTime"
                     }
                   ]
                 }
@@ -918,7 +918,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyFinal",
               "value": {
                 "operator": "Variables[0] (_ownerCritDamage) || Variables[1] (MDF_PropertyRatio) || MUL || Variables[2] (MDF_PropertyBase) || ADD || RETURN",
                 "displayLines": "((_ownerCritDamage * MDF_PropertyRatio) + MDF_PropertyBase)",
@@ -928,7 +927,8 @@ const configAbility = {
                   "MDF_PropertyRatio",
                   "MDF_PropertyBase"
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyFinal"
             },
             {
               "name": "Stack Target Stat Value",

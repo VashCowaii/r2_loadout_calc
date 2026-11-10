@@ -684,8 +684,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TurnCount",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_TurnCount"
                             },
                             {
                               "name": "Set Action-State",
@@ -715,8 +715,8 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TurnCount",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_TurnCount"
                             }
                           ]
                         }
@@ -757,8 +757,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Phase2First",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_Phase2First"
                             }
                           ]
                         }
@@ -831,9 +831,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "ShieldBreakBonusFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "ShieldBreakBonusFlag"
                     },
                     {
                       "name": "Force Entity Death",
@@ -939,9 +939,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -1017,7 +1017,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageReduce",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
@@ -1026,11 +1025,11 @@ const compositeAbilityObject = {
                       "MDF_AllDamageTypeAddedRatio_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageReduce"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageReduce_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)",
@@ -1039,7 +1038,8 @@ const compositeAbilityObject = {
                       "MDF_AllDamageReduce_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -2604,9 +2604,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act4Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Act4Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2627,9 +2627,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act4Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Act4Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2662,9 +2662,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act3Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Act3Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2685,9 +2685,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act3Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Act3Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2720,9 +2720,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act2Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Act2Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2743,9 +2743,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act2Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Act2Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2778,9 +2778,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act1Flag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Act1Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2801,9 +2801,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Act1Flag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Act1Flag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -2947,9 +2947,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "variableName": "ShieldBreakBonusFlag",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "ShieldBreakBonusFlag"
                             }
                           ]
                         },
@@ -3056,7 +3056,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_bpChange",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (_bpChange) || SUB || RETURN",
                         "displayLines": "(0 - _bpChange)",
@@ -3066,7 +3065,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_bpChange"
                         ]
-                      }
+                      },
+                      "variableName": "_bpChange"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4511,9 +4511,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "ShieldBreakBonusFlag",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "ShieldBreakBonusFlag"
                             }
                           ]
                         },
@@ -5044,9 +5044,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "ShieldBreakBonusFlag",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "ShieldBreakBonusFlag"
                             }
                           ]
                         },
@@ -5241,9 +5241,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_OnBeingBreakTriggered",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "_OnBeingBreakTriggered"
                 }
               ]
             },
@@ -5318,9 +5318,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ShieldBreakBonusFlag",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "ShieldBreakBonusFlag"
                         }
                       ]
                     },
@@ -5445,9 +5445,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_OnBeingBreakTriggered",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_OnBeingBreakTriggered"
                     }
                   ]
                 },
@@ -5595,9 +5595,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_OnBeingBreakTriggered",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_OnBeingBreakTriggered"
                     }
                   ]
                 },
@@ -5702,9 +5702,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ShieldBreakBonusFlag",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "ShieldBreakBonusFlag"
                         }
                       ]
                     },
@@ -5829,9 +5829,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "_OnBeingBreakTriggered",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "_OnBeingBreakTriggered"
                     }
                   ]
                 }

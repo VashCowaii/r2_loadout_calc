@@ -6,13 +6,12 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MazeSkill_Triggered",
+      "scope": "ContextCaster",
       "value": 1,
-      "scope": "ContextCaster"
+      "variableName": "MazeSkill_Triggered"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_can_continue",
       "value": {
         "operator": "Constants[0] (1) || RETURN",
         "displayLines": "1",
@@ -20,16 +19,16 @@ const configAbility = {
           1
         ],
         "variables": []
-      }
+      },
+      "variableName": "_can_continue"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_loop_count",
-      "value": 0
+      "value": 0,
+      "variableName": "_loop_count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_current_chance",
       "value": {
         "operator": "Variables[0] (1.5) || RETURN",
         "displayLines": "1.5",
@@ -37,7 +36,8 @@ const configAbility = {
         "variables": [
           1.5
         ]
-      }
+      },
+      "variableName": "_current_chance"
     },
     {
       "name": "Add Events/Bonuses",
@@ -71,7 +71,6 @@ const configAbility = {
       "execute": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_loop_count",
           "value": {
             "operator": "Variables[0] (_loop_count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(_loop_count + 1)",
@@ -81,11 +80,11 @@ const configAbility = {
             "variables": [
               "_loop_count"
             ]
-          }
+          },
+          "variableName": "_loop_count"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_can_continue",
           "value": {
             "operator": "Constants[0] (0) || RETURN",
             "displayLines": "0",
@@ -93,7 +92,8 @@ const configAbility = {
               0
             ],
             "variables": []
-          }
+          },
+          "variableName": "_can_continue"
         },
         {
           "name": "Find New Target",
@@ -140,15 +140,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Result_Stack_Layer",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "Result_Stack_Layer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Result_Stack_Layer",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Result_Stack_Layer"
                 }
               ]
             },
@@ -161,7 +161,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Result_Stack_Layer",
                   "value": {
                     "operator": "Variables[0] (Result_Stack_Layer) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(Result_Stack_Layer + 1)",
@@ -170,7 +169,8 @@ const configAbility = {
                       "Result_Stack_Layer",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "Result_Stack_Layer"
                 }
               ]
             },
@@ -250,7 +250,7 @@ const configAbility = {
               "success": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_can_continue",
+                  "scope": "ContextAbility",
                   "value": {
                     "operator": "Constants[0] (1) || RETURN",
                     "displayLines": "1",
@@ -259,7 +259,7 @@ const configAbility = {
                     ],
                     "variables": []
                   },
-                  "scope": "ContextAbility"
+                  "variableName": "_can_continue"
                 }
               ],
               "failed": [
@@ -277,7 +277,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_current_chance",
           "value": {
             "operator": "Variables[0] (_current_chance) || Variables[1] (0.5) || MUL || RETURN",
             "displayLines": "(_current_chance * 0.5)",
@@ -286,7 +285,8 @@ const configAbility = {
               "_current_chance",
               0.5
             ]
-          }
+          },
+          "variableName": "_current_chance"
         },
         {
           "name": "IF",

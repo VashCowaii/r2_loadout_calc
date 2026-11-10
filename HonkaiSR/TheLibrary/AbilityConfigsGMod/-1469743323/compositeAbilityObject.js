@@ -446,8 +446,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TypeFlag",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "TypeFlag"
                         }
                       ]
                     }
@@ -460,8 +460,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TypeFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TypeFlag"
                 }
               ]
             }
@@ -626,8 +626,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "D_IsSkillAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "D_IsSkillAttack"
                         }
                       ],
                       "failed": [
@@ -669,8 +669,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "D_IsSkillAttack",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "D_IsSkillAttack"
                     }
                   ]
                 }
@@ -799,8 +799,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TypeFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TypeFlag"
                     }
                   ]
                 }
@@ -811,8 +811,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TypeFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TypeFlag"
                 }
               ]
             }

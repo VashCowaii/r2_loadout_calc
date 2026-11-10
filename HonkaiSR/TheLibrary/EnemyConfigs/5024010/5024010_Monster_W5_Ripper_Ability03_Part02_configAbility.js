@@ -50,7 +50,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ParasitismCount",
           "value": {
             "operator": "Variables[0] (ParasitismCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(ParasitismCount + 1)",
@@ -60,7 +59,8 @@ const configAbility = {
             "variables": [
               "ParasitismCount"
             ]
-          }
+          },
+          "variableName": "ParasitismCount"
         }
       ]
     },

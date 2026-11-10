@@ -49,7 +49,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_EffectRandom",
           "value": {
             "operator": "Variables[0] (MDF_EffectRandom) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(MDF_EffectRandom + 1)",
@@ -59,7 +58,8 @@ const configAbility = {
             "variables": [
               "MDF_EffectRandom"
             ]
-          }
+          },
+          "variableName": "MDF_EffectRandom"
         },
         {
           "name": "IF",
@@ -72,7 +72,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EffectRandom",
               "value": {
                 "operator": "Variables[0] (MDF_EffectRandom) || Constants[0] (4) || SUB || RETURN",
                 "displayLines": "(MDF_EffectRandom - 4)",
@@ -82,7 +81,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EffectRandom"
                 ]
-              }
+              },
+              "variableName": "MDF_EffectRandom"
             }
           ]
         }
@@ -116,7 +116,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Energy_Layer",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -124,7 +123,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "Energy_Layer"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -151,8 +151,8 @@ const configAbility = {
     "Trigger: Ability End",
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_EffectRandom",
-      "value": 1
+      "value": 1,
+      "variableName": "MDF_EffectRandom"
     }
   ],
   "references": [],

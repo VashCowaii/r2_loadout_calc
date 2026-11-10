@@ -18,8 +18,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "ZhanYinCount",
-      "value": 0
+      "value": 0,
+      "variableName": "ZhanYinCount"
     },
     {
       "name": "Define Custom Variable",
@@ -27,8 +27,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "variableName": "ZhanYinCount_01",
-      "value": 0
+      "value": 0,
+      "variableName": "ZhanYinCount_01"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -131,7 +131,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Skill03_Speed",
               "value": {
                 "operator": "Variables[0] (MDF_Skill03_Speed) || Variables[1] (MDF_Skill03_Speed_Convert) || SUB || RETURN",
                 "displayLines": "(MDF_Skill03_Speed - MDF_Skill03_Speed_Convert)",
@@ -140,7 +139,8 @@ const configAbility = {
                   "MDF_Skill03_Speed",
                   "MDF_Skill03_Speed_Convert"
                 ]
-              }
+              },
+              "variableName": "MDF_Skill03_Speed"
             }
           ]
         }

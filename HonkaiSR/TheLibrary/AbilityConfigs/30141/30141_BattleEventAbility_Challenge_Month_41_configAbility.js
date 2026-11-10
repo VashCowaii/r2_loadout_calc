@@ -293,8 +293,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Weak_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Weak_Flag"
                 }
               ]
             }
@@ -305,8 +305,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Weak_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Weak_Flag"
             }
           ]
         },
@@ -362,8 +362,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Weak_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Weak_Flag"
             }
           ]
         }
@@ -549,8 +549,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -660,7 +660,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P2_ADF) || ADD || RETURN",
                     "displayLines": "(MDF_Count + BattleEvent_P2_ADF)",
@@ -669,7 +668,8 @@ const configAbility = {
                       "MDF_Count",
                       "BattleEvent_P2_ADF"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -723,7 +723,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
                         "displayLines": "BattleEvent_P3_ADF",
@@ -731,7 +730,8 @@ const configAbility = {
                         "variables": [
                           "BattleEvent_P3_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }
@@ -778,7 +778,6 @@ const configAbility = {
               "leavingRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
                     "displayLines": "BattleEvent_P3_ADF",
@@ -786,7 +785,8 @@ const configAbility = {
                     "variables": [
                       "BattleEvent_P3_ADF"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 }
               ],
               "onChange": [

@@ -206,9 +206,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "variableName": "AIFlag",
+                "scope": "TargetEntity",
                 "value": 1,
-                "scope": "TargetEntity"
+                "variableName": "AIFlag"
               },
               {
                 "name": "IF",
@@ -270,9 +270,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "variableName": "AIFlag",
+                "scope": "TargetEntity",
                 "value": 2,
-                "scope": "TargetEntity"
+                "variableName": "AIFlag"
               },
               {
                 "name": "Remove Events/Bonuses",
@@ -471,15 +471,15 @@ const configAbility = {
                 "passed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 3,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "True_Count",
+                    "scope": "TargetEntity",
                     "value": 0,
-                    "scope": "TargetEntity"
+                    "variableName": "True_Count"
                   },
                   {
                     "name": "Use Ability Option",
@@ -489,9 +489,9 @@ const configAbility = {
                 "failed": [
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "AIFlag",
+                    "scope": "TargetEntity",
                     "value": 2,
-                    "scope": "TargetEntity"
+                    "variableName": "AIFlag"
                   },
                   {
                     "name": "Remove Events/Bonuses",
@@ -503,9 +503,9 @@ const configAbility = {
                   },
                   {
                     "name": "Define Custom Variable",
-                    "variableName": "True_Count",
+                    "scope": "TargetEntity",
                     "value": 0,
-                    "scope": "TargetEntity"
+                    "variableName": "True_Count"
                   },
                   {
                     "name": "Use Ability Option",
@@ -550,9 +550,9 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "variableName": "AIFlag",
+                "scope": "TargetEntity",
                 "value": 1,
-                "scope": "TargetEntity"
+                "variableName": "AIFlag"
               },
               {
                 "name": "Use Ability Option",

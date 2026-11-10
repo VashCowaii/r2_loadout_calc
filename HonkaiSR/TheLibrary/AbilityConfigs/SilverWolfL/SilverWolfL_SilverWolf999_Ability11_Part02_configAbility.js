@@ -17,7 +17,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Item_TotalCount",
           "value": {
             "operator": "Variables[0] (Skill11_Item_LeftCount) || RETURN",
             "displayLines": "Skill11_Item_LeftCount",
@@ -25,11 +24,11 @@ const configAbility = {
             "variables": [
               "Skill11_Item_LeftCount"
             ]
-          }
+          },
+          "variableName": "Skill11_Item_TotalCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Shoot_TotalCount",
           "value": {
             "operator": "Variables[0] (Skill11_Shoot_LeftCount) || RETURN",
             "displayLines": "Skill11_Shoot_LeftCount",
@@ -37,13 +36,13 @@ const configAbility = {
             "variables": [
               "Skill11_Shoot_LeftCount"
             ]
-          }
+          },
+          "variableName": "Skill11_Shoot_TotalCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Shoot_TotalCount",
           "value": {
             "operator": "Variables[0] (100) || RETURN",
             "displayLines": "100",
@@ -51,11 +50,11 @@ const configAbility = {
             "variables": [
               100
             ]
-          }
+          },
+          "variableName": "Skill11_Shoot_TotalCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill11_Item_TotalCount",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -63,13 +62,13 @@ const configAbility = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "Skill11_Item_TotalCount"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_Item_LeftCount",
       "value": {
         "operator": "Variables[0] (Skill11_Item_TotalCount) || RETURN",
         "displayLines": "Skill11_Item_TotalCount",
@@ -77,11 +76,11 @@ const configAbility = {
         "variables": [
           "Skill11_Item_TotalCount"
         ]
-      }
+      },
+      "variableName": "Skill11_Item_LeftCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill11_Shoot_LeftCount",
       "value": {
         "operator": "Variables[0] (Skill11_Shoot_TotalCount) || RETURN",
         "displayLines": "Skill11_Shoot_TotalCount",
@@ -89,7 +88,8 @@ const configAbility = {
         "variables": [
           "Skill11_Shoot_TotalCount"
         ]
-      }
+      },
+      "variableName": "Skill11_Shoot_LeftCount"
     },
     {
       "name": "Use Custom Character Function",

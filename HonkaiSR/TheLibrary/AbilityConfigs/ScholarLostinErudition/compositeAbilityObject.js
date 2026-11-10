@@ -68,8 +68,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SkillFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_SkillFlag"
                     }
                   ]
                 }

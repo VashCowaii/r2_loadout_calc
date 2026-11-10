@@ -159,8 +159,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "InsertFlag_W5_JK_00",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "InsertFlag_W5_JK_00"
                         },
                         {
                           "name": "Inject Ability Use",
@@ -281,8 +281,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "InsertFlag_W5_JK_00",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertFlag_W5_JK_00"
                 },
                 {
                   "name": "Find New Target",
@@ -448,8 +448,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "InsertFlag_W5_JK_00",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertFlag_W5_JK_00"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -524,8 +524,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "InsertFlag_W5_JK_00",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "InsertFlag_W5_JK_00"
                     },
                     {
                       "name": "Use Custom Character Function",

@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertFlag01",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertFlag01"
     },
     {
       "name": "Trigger Ability",
@@ -27,8 +27,8 @@ const configAbility = {
   "onAbort": [
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertFlag01",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertFlag01"
     }
   ],
   "targetObjectData": {

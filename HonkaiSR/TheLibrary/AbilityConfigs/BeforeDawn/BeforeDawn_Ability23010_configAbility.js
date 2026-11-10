@@ -45,8 +45,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_InsertFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_InsertFlag"
                 }
               ]
             }
@@ -66,8 +66,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_InsertFlag"
                 },
                 "Modifier Deletes Itself"
               ]

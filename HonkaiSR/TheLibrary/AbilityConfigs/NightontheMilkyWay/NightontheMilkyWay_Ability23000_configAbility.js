@@ -102,8 +102,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnemyCount",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "EnemyCount"
                 }
               ]
             },
@@ -169,8 +169,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnemyCount",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "EnemyCount"
                 }
               ]
             },
@@ -244,8 +244,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnemyCount",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "EnemyCount"
                 }
               ]
             },

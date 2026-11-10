@@ -94,8 +94,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "W5_Pam_00_BattleScore2_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W5_Pam_00_BattleScore2_Flag"
                 }
               ]
             },
@@ -104,8 +104,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "W5_Pam_00_BattleScore2_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "W5_Pam_00_BattleScore2_Flag"
                 }
               ]
             },
@@ -144,8 +144,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W5_Pam_00_BattleScore2_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "W5_Pam_00_BattleScore2_Flag"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -379,8 +379,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsAngry",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsAngry"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -449,8 +449,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Pam_LockHP_Trigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Pam_LockHP_Trigger"
                     }
                   ]
                 }
@@ -521,9 +521,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Hit_Count",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_Hit_Count"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
@@ -1055,8 +1055,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TriggerMark",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_TriggerMark"
                         }
                       ],
                       "failed": [
@@ -1088,8 +1088,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_TriggerMark",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_TriggerMark"
                             }
                           ]
                         }
@@ -1292,8 +1292,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsAngry",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsAngry"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1381,8 +1381,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsAngry",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsAngry"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1438,9 +1438,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -1453,9 +1453,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -1475,7 +1475,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "CleanNum",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__205) || RETURN",
                     "displayLines": "ENEMIES_OBJECT_UNUSED__205",
@@ -1484,7 +1484,7 @@ const compositeAbilityObject = {
                       "ENEMIES_OBJECT_UNUSED__205"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CleanNum"
                 }
               ]
             }
@@ -2569,9 +2569,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "UltraSkillTimelineStart",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "UltraSkillTimelineStart"
                         }
                       ]
                     }
@@ -2605,9 +2605,9 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "UltraSkillTimelineEnd",
+                          "scope": "ContextModifier",
                           "value": 0,
-                          "scope": "ContextModifier"
+                          "variableName": "UltraSkillTimelineEnd"
                         }
                       ]
                     }
@@ -3021,8 +3021,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BEAlive",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_BEAlive"
             }
           ],
           "failed": [

@@ -213,9 +213,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ForwardReverseFlag",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "ForwardReverseFlag"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -223,9 +223,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "ForwardReverseFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "ForwardReverseFlag"
                         }
                       ]
                     },
@@ -639,9 +639,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "InsertFlag",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "InsertFlag"
                         },
                         {
                           "name": "ATK Scaling DMG",
@@ -1522,9 +1522,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "InsertFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "InsertFlag"
         }
       ],
       "targetObjectData": {
@@ -1694,9 +1694,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "InsertFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "InsertFlag"
         }
       ],
       "targetObjectData": {
@@ -1866,9 +1866,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "InsertFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "InsertFlag"
         }
       ],
       "targetObjectData": {

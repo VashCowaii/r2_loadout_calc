@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "UINotice",
-      "value": 0
+      "value": 0,
+      "variableName": "UINotice"
     },
     {
       "name": "ATK Scaling DMG",
@@ -142,8 +142,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "UINotice",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "UINotice"
                 }
               ]
             }

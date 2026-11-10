@@ -74,7 +74,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageReduce",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_AllDamageTypeAddedRatio_PerLayer * _Layer)",
@@ -83,11 +82,11 @@ const compositeAbilityObject = {
                       "MDF_AllDamageTypeAddedRatio_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageReduce"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AllDamageTypeAddedRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageReduce_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_AllDamageReduce_PerLayer * _Layer)",
@@ -96,7 +95,8 @@ const compositeAbilityObject = {
                       "MDF_AllDamageReduce_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -486,8 +486,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "variableName": "Deathrattle",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Deathrattle"
                         },
                         {
                           "name": "IF",
@@ -730,7 +730,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BonusPoint",
                   "value": {
                     "operator": "Variables[0] ({[SkillP03[5]]}) || RETURN",
                     "displayLines": "{[SkillP03[5]]}",
@@ -738,7 +737,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[SkillP03[5]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_BonusPoint"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -986,7 +986,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Bonus_DefenceDownRatio",
                   "value": {
                     "operator": "Variables[0] (MDF_Bonus_DefenceDownRatio_PerLayer) || Variables[1] (_Layer) || MUL || RETURN",
                     "displayLines": "(MDF_Bonus_DefenceDownRatio_PerLayer * _Layer)",
@@ -995,7 +994,8 @@ const compositeAbilityObject = {
                       "MDF_Bonus_DefenceDownRatio_PerLayer",
                       "_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Bonus_DefenceDownRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -1096,9 +1096,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DebuffBonusTriggeredFlag_Attack",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "DebuffBonusTriggeredFlag_Attack"
                     }
                   ]
                 }
@@ -1197,9 +1197,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffBonusTriggeredFlag_Attack",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "DebuffBonusTriggeredFlag_Attack"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1207,9 +1207,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffBonusTriggeredFlag_Debuff",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "DebuffBonusTriggeredFlag_Debuff"
                 }
               ]
             },
@@ -1236,9 +1236,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DebuffBonusTriggeredFlag_Pre",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "DebuffBonusTriggeredFlag_Pre"
                     }
                   ]
                 }
@@ -1253,9 +1253,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffBonusTriggeredFlag_Pre",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "DebuffBonusTriggeredFlag_Pre"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1263,9 +1263,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffBonusTriggeredFlag_Attack",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "DebuffBonusTriggeredFlag_Attack"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1273,9 +1273,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DebuffBonusTriggeredFlag_Debuff",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "DebuffBonusTriggeredFlag_Debuff"
                 }
               ]
             },
@@ -1322,9 +1322,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DebuffBonusTriggeredFlag_Debuff",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "DebuffBonusTriggeredFlag_Debuff"
                     }
                   ]
                 }
@@ -2161,8 +2161,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -2295,8 +2295,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AttackFlag"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -2329,8 +2329,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AttackFlag"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -2375,15 +2375,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AttackFlag",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "AttackFlag"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AttackFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "AttackFlag"
                         }
                       ]
                     }
@@ -2771,8 +2771,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "variableName": "Deathrattle",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Deathrattle"
                         },
                         {
                           "name": "IF",
@@ -3511,9 +3511,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Deathrattle",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "Deathrattle"
         },
         {
           "name": "Remove Events/Bonuses",

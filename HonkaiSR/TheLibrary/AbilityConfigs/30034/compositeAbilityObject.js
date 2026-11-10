@@ -26,7 +26,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "count",
                   "value": {
                     "operator": "Variables[0] (count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(count + 1)",
@@ -36,7 +35,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "count"
                     ]
-                  }
+                  },
+                  "variableName": "count"
                 },
                 {
                   "name": "IF",
@@ -151,8 +151,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Insert_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Insert_Flag"
                     }
                   ]
                 }
@@ -163,8 +163,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Insert_Flag"
                 }
               ]
             },

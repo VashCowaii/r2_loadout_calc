@@ -91,7 +91,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PersistLoseHP",
                       "value": {
                         "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_LoseHPRatio) || MUL || ADD || RETURN",
                         "displayLines": "(MDF_PersistLoseHP + (MDF_MaxHP * MDF_LoseHPRatio))",
@@ -101,7 +100,8 @@ const compositeAbilityObject = {
                           "MDF_MaxHP",
                           "MDF_LoseHPRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PersistLoseHP"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
@@ -202,9 +202,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Deathrattle",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "Deathrattle"
                 },
                 {
                   "name": "IF",
@@ -262,9 +262,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "variableName": "Deathrattle",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Deathrattle"
                     }
                   ]
                 },
@@ -1393,7 +1393,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonCount",
                       "value": {
                         "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_SummonCount + 1)",
@@ -1403,7 +1402,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SummonCount"
                     },
                     {
                       "name": "IF",
@@ -1420,8 +1420,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SummonCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SummonCount"
                         }
                       ]
                     }
@@ -2477,9 +2477,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HPBack",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "HPBack"
                 },
                 {
                   "name": "IF",
@@ -2559,8 +2559,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "variableName": "HPBack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "HPBack"
                         }
                       ]
                     },
@@ -2802,7 +2802,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMMaxValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -2814,7 +2813,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMMaxValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2822,7 +2822,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCurrentValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -2834,7 +2833,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMCurrentValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2842,9 +2842,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMRatio",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "LMRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3119,7 +3119,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCurrentValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -3131,7 +3130,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMCurrentValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -3139,7 +3139,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMRatio",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (LMCurrentValue) || Variables[1] (LMMaxValue) || DIV || RETURN",
                     "displayLines": "(LMCurrentValue / LMMaxValue)",
@@ -3149,7 +3149,7 @@ const compositeAbilityObject = {
                       "LMMaxValue"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "LMRatio"
                 }
               ]
             }
@@ -3319,9 +3319,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCountDown",
+                  "scope": "TargetEntity",
                   "value": 8,
-                  "scope": "TargetEntity"
+                  "variableName": "LMCountDown"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3508,9 +3508,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCountDown",
+                  "scope": "TargetEntity",
                   "value": 8,
-                  "scope": "TargetEntity"
+                  "variableName": "LMCountDown"
                 }
               ]
             },
@@ -4179,13 +4179,13 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentSummonIndex",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentSummonIndex"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBounsIndex",
-              "value": 2
+              "value": 2,
+              "variableName": "CurrentBounsIndex"
             }
           ]
         },
@@ -4210,8 +4210,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 },
@@ -4221,8 +4221,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 },
@@ -4232,8 +4232,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 }
@@ -4241,8 +4241,8 @@ const compositeAbilityObject = {
               "defaultEvents": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentSummonIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CurrentSummonIndex"
                 }
               ]
             }
@@ -4291,8 +4291,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentBounsIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CurrentBounsIndex"
                 }
               ]
             }

@@ -692,7 +692,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Max_Layer",
                       "value": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                         "displayLines": "(2 + MDF_Max_Layer)",
@@ -701,7 +700,8 @@ const compositeAbilityObject = {
                           2,
                           "MDF_Max_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Max_Layer"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -775,7 +775,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Max_Layer",
                   "value": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
                     "displayLines": "(2 + MDF_Max_Layer)",
@@ -784,7 +783,8 @@ const compositeAbilityObject = {
                       2,
                       "MDF_Max_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Max_Layer"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -918,8 +918,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HitPhy",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "HitPhy"
                     }
                   ]
                 }
@@ -930,13 +930,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HitPhy",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HitPhy"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IsAttack"
                 }
               ]
             },
@@ -971,13 +971,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HitPhy",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HitPhy"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "IsAttack"
                 }
               ]
             }

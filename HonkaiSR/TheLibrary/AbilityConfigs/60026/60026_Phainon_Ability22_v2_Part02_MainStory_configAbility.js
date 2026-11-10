@@ -13,13 +13,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_count",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "_count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_delta_frame",
+      "scope": "ContextAbility",
       "value": {
         "operator": "Variables[0] (PHAINON_OBJECT_UNUSED_1) || Variables[1] (PHAINON_OBJECT_UNUSED_2) || SUB || Variables[2] (Count) || Constants[0] (1) || SUB || DIV || RETURN",
         "displayLines": "((PHAINON_OBJECT_UNUSED_1 - PHAINON_OBJECT_UNUSED_2) / (Count - 1))",
@@ -32,7 +32,7 @@ const configAbility = {
           "Count"
         ]
       },
-      "scope": "ContextAbility"
+      "variableName": "_delta_frame"
     },
     {
       "name": "Looped Event",
@@ -55,7 +55,7 @@ const configAbility = {
           "paramSequence": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_count",
+              "scope": "ContextAbility",
               "value": {
                 "operator": "Variables[0] (_count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(_count + 1)",
@@ -66,7 +66,7 @@ const configAbility = {
                   "_count"
                 ]
               },
-              "scope": "ContextAbility"
+              "variableName": "_count"
             },
             {
               "name": "ATK Scaling DMG",

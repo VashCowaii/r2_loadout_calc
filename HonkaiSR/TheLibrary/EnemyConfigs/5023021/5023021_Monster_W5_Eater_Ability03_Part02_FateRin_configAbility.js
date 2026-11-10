@@ -17,7 +17,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_Attack",
       "value": {
         "operator": "Variables[0] (Skill03_Attack) || Variables[1] ({[Skill03[0]]}) || MUL || RETURN",
         "displayLines": "(Skill03_Attack * {[Skill03[0]]})",
@@ -26,7 +25,8 @@ const configAbility = {
           "Skill03_Attack",
           "{[Skill03[0]]}"
         ]
-      }
+      },
+      "variableName": "Skill03_Attack"
     },
     {
       "name": "Remove Events/Bonuses",

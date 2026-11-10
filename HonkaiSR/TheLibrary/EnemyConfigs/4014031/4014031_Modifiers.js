@@ -242,8 +242,8 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CheckAvatarHpRatio2",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_CheckAvatarHpRatio2"
                 }
               ]
             },
@@ -360,8 +360,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_StorySkill05",
-              "value": 1
+              "value": 1,
+              "variableName": "_StorySkill05"
             }
           ]
         },
@@ -560,8 +560,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "StunCheck02",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "StunCheck02"
                     }
                   ]
                 },
@@ -767,7 +767,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (_TargetCurrentHp) || Variables[1] (_TargetMaxHP) || DIV || Variables[2] (_HpLimitRatio) || DIV || SUB || Variables[3] (_FatigueRatio) || MUL || RETURN",
                 "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)",
@@ -780,11 +779,11 @@ const configAbility = {
                   "_HpLimitRatio",
                   "_FatigueRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue2",
               "value": {
                 "operator": "Variables[0] (_TargetMaxHP) || Variables[1] (_HpLimitRatio) || MUL || RETURN",
                 "displayLines": "(_TargetMaxHP * _HpLimitRatio)",
@@ -793,7 +792,8 @@ const configAbility = {
                   "_TargetMaxHP",
                   "_HpLimitRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue2"
             },
             {
               "name": "Add Events/Bonuses",
@@ -815,7 +815,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] (MDF_ShowValue1) || Constants[0] (0.01) || ADD || RETURN",
                 "displayLines": "(MDF_ShowValue1 + 0.01)",
@@ -825,7 +824,8 @@ const configAbility = {
                 "variables": [
                   "MDF_ShowValue1"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "IF",
@@ -898,7 +898,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue1",
                   "value": {
                     "operator": "Constants[0] (1) || Variables[0] (_TargetCurrentHp) || Variables[1] (_TargetMaxHP) || DIV || Variables[2] (_HpLimitRatio) || DIV || SUB || Variables[3] (_FatigueRatio) || MUL || RETURN",
                     "displayLines": "((1 - ((_TargetCurrentHp / _TargetMaxHP) / _HpLimitRatio)) * _FatigueRatio)",
@@ -911,11 +910,11 @@ const configAbility = {
                       "_HpLimitRatio",
                       "_FatigueRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue2",
                   "value": {
                     "operator": "Variables[0] (_TargetMaxHP) || Variables[1] (_HpLimitRatio) || MUL || RETURN",
                     "displayLines": "(_TargetMaxHP * _HpLimitRatio)",
@@ -924,7 +923,8 @@ const configAbility = {
                       "_TargetMaxHP",
                       "_HpLimitRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue2"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -946,7 +946,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ShowValue1",
                   "value": {
                     "operator": "Variables[0] (MDF_ShowValue1) || Constants[0] (0.01) || ADD || RETURN",
                     "displayLines": "(MDF_ShowValue1 + 0.01)",
@@ -956,7 +955,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ShowValue1"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ShowValue1"
                 }
               ]
             }
@@ -1163,8 +1163,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "StunCheck",
-              "value": 0
+              "value": 0,
+              "variableName": "StunCheck"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1256,8 +1256,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "StunCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "StunCheck"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1354,7 +1354,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentShieldValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || Variables[2] (MDF_SummonerMaxHP_DownScale) || DIV || Variables[3] (MDF_AttackDamageDataMulRatio) || MUL || SUB || RETURN",
                     "displayLines": "(MDF_CurrentShieldValue - ((MDF_AttackDamageData / MDF_SummonerMaxHP_DownScale) * MDF_AttackDamageDataMulRatio))",
@@ -1365,11 +1364,11 @@ const configAbility = {
                       "MDF_SummonerMaxHP_DownScale",
                       "MDF_AttackDamageDataMulRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentShieldValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEnergyBarValue",
                   "value": {
                     "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
                     "displayLines": "MDF_EnergyBarValue",
@@ -1377,7 +1376,8 @@ const configAbility = {
                     "variables": [
                       "MDF_EnergyBarValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LastEnergyBarValue"
                 },
                 {
                   "name": "IF",
@@ -1409,7 +1409,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RL",
                       "value": {
                         "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
                         "displayLines": "MDF_EnergyBarValue",
@@ -1417,12 +1416,13 @@ const configAbility = {
                         "variables": [
                           "MDF_EnergyBarValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_LastEnergyBarValue_RL"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck"
                     }
                   ]
                 },
@@ -1455,8 +1455,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnergyBarValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_EnergyBarValue"
                     },
                     {
                       "name": "Heal",
@@ -1481,7 +1481,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnergyBarValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_MaxShieldValue) || DIV || RETURN",
                         "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)",
@@ -1490,7 +1489,8 @@ const configAbility = {
                           "MDF_CurrentShieldValue",
                           "MDF_MaxShieldValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_EnergyBarValue"
                     },
                     {
                       "name": "IF",
@@ -1571,7 +1571,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxShieldValue",
               "value": {
                 "operator": "Variables[0] (MDF_ShieldPercentage) || RETURN",
                 "displayLines": "MDF_ShieldPercentage",
@@ -1579,11 +1578,11 @@ const configAbility = {
                 "variables": [
                   "MDF_ShieldPercentage"
                 ]
-              }
+              },
+              "variableName": "MDF_MaxShieldValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentShieldValue",
               "value": {
                 "operator": "Variables[0] (MDF_MaxShieldValue) || RETURN",
                 "displayLines": "MDF_MaxShieldValue",
@@ -1591,12 +1590,13 @@ const configAbility = {
                 "variables": [
                   "MDF_MaxShieldValue"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentShieldValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EnergyBarValue",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_EnergyBarValue"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1643,8 +1643,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_IsAttack"
                 }
               ]
             }
@@ -1666,8 +1666,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsAttack"
                 },
                 {
                   "name": "IF",
@@ -1724,8 +1724,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck"
                     }
                   ]
                 }
@@ -1766,8 +1766,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "StunCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "StunCheck"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1854,7 +1854,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentShieldValue",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_AttackDamageData) || SUB || RETURN",
                     "displayLines": "(MDF_CurrentShieldValue - MDF_AttackDamageData)",
@@ -1863,11 +1862,11 @@ const configAbility = {
                       "MDF_CurrentShieldValue",
                       "MDF_AttackDamageData"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentShieldValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LastEnergyBarValue",
                   "value": {
                     "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
                     "displayLines": "MDF_EnergyBarValue",
@@ -1875,7 +1874,8 @@ const configAbility = {
                     "variables": [
                       "MDF_EnergyBarValue"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_LastEnergyBarValue"
                 },
                 {
                   "name": "IF",
@@ -1907,7 +1907,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RL",
                       "value": {
                         "operator": "Variables[0] (MDF_EnergyBarValue) || RETURN",
                         "displayLines": "MDF_EnergyBarValue",
@@ -1915,12 +1914,13 @@ const configAbility = {
                         "variables": [
                           "MDF_EnergyBarValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_LastEnergyBarValue_RL"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck"
                     }
                   ]
                 },
@@ -1953,8 +1953,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnergyBarValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_EnergyBarValue"
                     },
                     {
                       "name": "Heal",
@@ -1979,7 +1979,6 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_EnergyBarValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CurrentShieldValue) || Variables[1] (MDF_MaxShieldValue) || DIV || RETURN",
                         "displayLines": "(MDF_CurrentShieldValue / MDF_MaxShieldValue)",
@@ -1988,7 +1987,8 @@ const configAbility = {
                           "MDF_CurrentShieldValue",
                           "MDF_MaxShieldValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_EnergyBarValue"
                     },
                     {
                       "name": "IF",
@@ -2070,7 +2070,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxShieldValue",
               "value": {
                 "operator": "Variables[0] (MDF_SummonerMaxHP) || Variables[1] (MDF_ShieldPercentage) || MUL || RETURN",
                 "displayLines": "(MDF_SummonerMaxHP * MDF_ShieldPercentage)",
@@ -2079,11 +2078,11 @@ const configAbility = {
                   "MDF_SummonerMaxHP",
                   "MDF_ShieldPercentage"
                 ]
-              }
+              },
+              "variableName": "MDF_MaxShieldValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentShieldValue",
               "value": {
                 "operator": "Variables[0] (MDF_MaxShieldValue) || RETURN",
                 "displayLines": "MDF_MaxShieldValue",
@@ -2091,12 +2090,13 @@ const configAbility = {
                 "variables": [
                   "MDF_MaxShieldValue"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentShieldValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EnergyBarValue",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_EnergyBarValue"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2143,8 +2143,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_IsAttack"
                 }
               ]
             }
@@ -2166,8 +2166,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsAttack"
                 },
                 {
                   "name": "IF",
@@ -2224,8 +2224,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LastEnergyBarValue_RLCheck",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LastEnergyBarValue_RLCheck"
                     }
                   ]
                 }
@@ -2577,8 +2577,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -2632,8 +2632,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_EnergyValue",
-              "value": 0
+              "value": 0,
+              "variableName": "_EnergyValue"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2671,7 +2671,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_SpeedUpRatio) || ADD || RETURN",
                 "displayLines": "(MDF_ShowValue1 + MDF_SpeedUpRatio)",
@@ -2680,7 +2679,8 @@ const configAbility = {
                   "MDF_ShowValue1",
                   "MDF_SpeedUpRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2702,7 +2702,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_DamageUpTemp",
               "value": {
                 "operator": "Variables[0] (_DamageUpTemp) || Variables[1] (MDF_DamageUpRatio) || ADD || RETURN",
                 "displayLines": "(_DamageUpTemp + MDF_DamageUpRatio)",
@@ -2711,7 +2710,8 @@ const configAbility = {
                   "_DamageUpTemp",
                   "MDF_DamageUpRatio"
                 ]
-              }
+              },
+              "variableName": "_DamageUpTemp"
             },
             {
               "name": "IF",

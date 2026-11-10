@@ -138,9 +138,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "AIFlag",
+              "scope": "TargetEntity",
               "value": 1,
-              "scope": "TargetEntity"
+              "variableName": "AIFlag"
             },
             {
               "name": "IF",
@@ -159,9 +159,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "FlopSide",
+              "scope": "TargetEntity",
               "value": -1,
-              "scope": "TargetEntity"
+              "variableName": "FlopSide"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -237,8 +237,8 @@ const configAbility = {
             "name": "Add Target by Unique Identifier",
             "identifier": "TheaterCore"
           },
-          "variableName": "W3_Theater_00_BattleScore1_Flag",
-          "value": 1
+          "value": 1,
+          "variableName": "W3_Theater_00_BattleScore1_Flag"
         },
         "Wait for Pending Ability Completions",
         {

@@ -104,8 +104,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherBEFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherBEFlag"
                 }
               ]
             }
@@ -149,8 +149,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "WeatherBEFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WeatherBEFlag"
                 }
               ]
             }
@@ -266,7 +266,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HPDelta",
               "value": {
                 "operator": "Variables[0] (MDF_HPDeltaPerLayer) || Variables[1] (MDF_Layer) || MUL || RETURN",
                 "displayLines": "(MDF_HPDeltaPerLayer * MDF_Layer)",
@@ -275,7 +274,8 @@ const configAbility = {
                   "MDF_HPDeltaPerLayer",
                   "MDF_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_HPDelta"
             },
             {
               "name": "IF",

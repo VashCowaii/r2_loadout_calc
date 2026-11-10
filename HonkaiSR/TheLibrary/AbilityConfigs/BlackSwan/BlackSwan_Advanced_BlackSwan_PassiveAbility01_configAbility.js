@@ -22,9 +22,9 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Max_DOT_Layer",
+      "scope": "ContextCaster",
       "value": 999,
-      "scope": "ContextCaster"
+      "variableName": "Max_DOT_Layer"
     },
     {
       "name": "IF",
@@ -35,8 +35,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Have_Rank04",
-          "value": 1
+          "value": 1,
+          "variableName": "Have_Rank04"
         },
         {
           "name": "Add Events/Bonuses",
@@ -50,14 +50,13 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Have_Rank04",
-          "value": 0
+          "value": 0,
+          "variableName": "Have_Rank04"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "DOT_Layer_Threshold",
       "value": {
         "operator": "Variables[0] (50) || RETURN",
         "displayLines": "50",
@@ -65,7 +64,8 @@ const configAbility = {
         "variables": [
           50
         ]
-      }
+      },
+      "variableName": "DOT_Layer_Threshold"
     },
     {
       "name": "IF",
@@ -76,7 +76,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DOT_Layer_Threshold",
           "value": {
             "operator": "Variables[0] (DOT_Layer_Threshold) || Variables[1] (30) || ADD || RETURN",
             "displayLines": "(DOT_Layer_Threshold + 30)",
@@ -85,7 +84,8 @@ const configAbility = {
               "DOT_Layer_Threshold",
               30
             ]
-          }
+          },
+          "variableName": "DOT_Layer_Threshold"
         }
       ]
     }

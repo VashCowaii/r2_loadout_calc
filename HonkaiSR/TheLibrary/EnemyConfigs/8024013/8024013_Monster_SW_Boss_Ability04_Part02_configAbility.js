@@ -19,9 +19,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MonsterNumDamageUpLayer",
+          "scope": "TargetEntity",
           "value": 3,
-          "scope": "TargetEntity"
+          "variableName": "MonsterNumDamageUpLayer"
         }
       ],
       "failed": [
@@ -40,9 +40,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MonsterNumDamageUpLayer",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "MonsterNumDamageUpLayer"
             }
           ],
           "failed": [
@@ -61,17 +61,17 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterNumDamageUpLayer",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "MonsterNumDamageUpLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MonsterNumDamageUpLayer",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "MonsterNumDamageUpLayer"
                 }
               ]
             }
@@ -100,9 +100,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Phase2FirstSummon",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "Phase2FirstSummon"
             },
             {
               "name": "IF",
@@ -517,7 +517,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
       },
-      "variableName": "DamageUpRatio",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
         "displayLines": "{[PassiveSkill01[0]]}",
@@ -526,7 +526,7 @@ const configAbility = {
           "{[PassiveSkill01[0]]}"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "DamageUpRatio"
     },
     {
       "name": "IF",
@@ -658,9 +658,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MonsterNumDamageUpLayer",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "MonsterNumDamageUpLayer"
             }
           ]
         },

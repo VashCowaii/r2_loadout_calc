@@ -10,8 +10,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AsatPramad_Skill3_isInsert",
-      "value": 1
+      "value": 1,
+      "variableName": "AsatPramad_Skill3_isInsert"
     },
     {
       "name": "Find New Target",
@@ -157,8 +157,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AsatPramad_Skill3_isInsert",
-          "value": 0
+          "value": 0,
+          "variableName": "AsatPramad_Skill3_isInsert"
         }
       ]
     },

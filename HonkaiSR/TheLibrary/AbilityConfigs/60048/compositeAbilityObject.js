@@ -162,8 +162,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ViewMode",
-          "value": 0
+          "value": 0,
+          "variableName": "#CL_ViewMode"
         },
         {
           "name": "IF",
@@ -286,8 +286,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_FirstBE",
-              "value": 0
+              "value": 0,
+              "variableName": "_FirstBE"
             }
           ]
         },
@@ -534,8 +534,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ViewMode",
-          "value": 1
+          "value": 1,
+          "variableName": "#CL_ViewMode"
         },
         {
           "name": "IF",
@@ -564,8 +564,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_First",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_First"
             }
           ]
         },

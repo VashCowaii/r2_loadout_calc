@@ -14,8 +14,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Energy_Layer",
-      "value": 0
+      "value": 0,
+      "variableName": "Energy_Layer"
     },
     {
       "name": "Read Variable Value",
@@ -38,7 +38,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "S03_Mark_Max",
       "value": {
         "operator": "Variables[0] (42) || RETURN",
         "displayLines": "42",
@@ -46,16 +45,16 @@ const configAbility = {
         "variables": [
           42
         ]
-      }
+      },
+      "variableName": "S03_Mark_Max"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill21_Layer_Add",
-      "value": 1
+      "value": 1,
+      "variableName": "Skill21_Layer_Add"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill21_Layer_Max",
       "value": {
         "operator": "Variables[0] (4) || RETURN",
         "displayLines": "4",
@@ -63,7 +62,8 @@ const configAbility = {
         "variables": [
           4
         ]
-      }
+      },
+      "variableName": "Skill21_Layer_Max"
     },
     {
       "name": "IF",
@@ -204,8 +204,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_PointB3_Ratio",
-      "value": 0
+      "value": 0,
+      "variableName": "_PointB3_Ratio"
     },
     {
       "name": "IF",
@@ -216,7 +216,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_SkillTree03_MaxCount",
           "value": {
             "operator": "Variables[0] (99) || RETURN",
             "displayLines": "99",
@@ -224,11 +223,11 @@ const configAbility = {
             "variables": [
               99
             ]
-          }
+          },
+          "variableName": "_SkillTree03_MaxCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_PointB3_Ratio",
           "value": {
             "operator": "Variables[0] (0.01) || RETURN",
             "displayLines": "0.01",
@@ -236,7 +235,8 @@ const configAbility = {
             "variables": [
               0.01
             ]
-          }
+          },
+          "variableName": "_PointB3_Ratio"
         }
       ]
     },
@@ -554,8 +554,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Mage_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "_Mage_Count"
             },
             {
               "name": "Find New Target",
@@ -576,7 +576,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Mage_Count",
                   "value": {
                     "operator": "Variables[0] (_Mage_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_Mage_Count + 1)",
@@ -586,7 +585,8 @@ const configAbility = {
                     "variables": [
                       "_Mage_Count"
                     ]
-                  }
+                  },
+                  "variableName": "_Mage_Count"
                 }
               ]
             },
@@ -1148,7 +1148,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Hit_Count",
                   "value": {
                     "operator": "Variables[0] (_Hit_Count) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_Hit_Count + 1)",
@@ -1158,7 +1157,8 @@ const configAbility = {
                     "variables": [
                       "_Hit_Count"
                     ]
-                  }
+                  },
+                  "variableName": "_Hit_Count"
                 }
               ]
             }
@@ -1169,8 +1169,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Hit_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "_Hit_Count"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1203,7 +1203,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Hit_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                     "displayLines": "MDF_MaxCount",
@@ -1211,7 +1210,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxCount"
                     ]
-                  }
+                  },
+                  "variableName": "_Hit_Count"
                 }
               ]
             },
@@ -1246,7 +1246,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Hit_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_MinCount) || RETURN",
                     "displayLines": "MDF_MinCount",
@@ -1254,7 +1253,8 @@ const configAbility = {
                     "variables": [
                       "MDF_MinCount"
                     ]
-                  }
+                  },
+                  "variableName": "_Hit_Count"
                 }
               ]
             },
@@ -1277,8 +1277,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Hit_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "_Hit_Count"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1901,8 +1901,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_MCount",
-              "value": 0
+              "value": 0,
+              "variableName": "_MCount"
             },
             {
               "name": "Find New Target",
@@ -1923,7 +1923,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MCount",
                   "value": {
                     "operator": "Variables[0] (_MCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_MCount + 1)",
@@ -1933,7 +1932,8 @@ const configAbility = {
                     "variables": [
                       "_MCount"
                     ]
-                  }
+                  },
+                  "variableName": "_MCount"
                 }
               ]
             },
@@ -2313,7 +2313,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Exec_Layer",
                   "value": {
                     "operator": "Variables[0] (MDF_BounceLayer) || Variables[1] (MDF_MageLayer) || ADD || RETURN",
                     "displayLines": "(MDF_BounceLayer + MDF_MageLayer)",
@@ -2322,13 +2321,13 @@ const configAbility = {
                       "MDF_BounceLayer",
                       "MDF_MageLayer"
                     ]
-                  }
+                  },
+                  "variableName": "_Exec_Layer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Exec_Layer",
                   "value": {
                     "operator": "Variables[0] (MDF_BounceLayer) || RETURN",
                     "displayLines": "MDF_BounceLayer",
@@ -2336,7 +2335,8 @@ const configAbility = {
                     "variables": [
                       "MDF_BounceLayer"
                     ]
-                  }
+                  },
+                  "variableName": "_Exec_Layer"
                 }
               ]
             },

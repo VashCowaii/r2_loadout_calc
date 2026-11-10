@@ -346,8 +346,8 @@ const configAbility = {
             "execute": [
               {
                 "name": "Define Custom Variable",
-                "variableName": "W2_Yanqing_00_AICounter",
-                "value": 2
+                "value": 2,
+                "variableName": "W2_Yanqing_00_AICounter"
               },
               {
                 "name": "Use Ability Option",

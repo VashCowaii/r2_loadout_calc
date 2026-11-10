@@ -17,7 +17,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "FieldLifeTime",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -25,7 +24,8 @@ const configAbility = {
         "variables": [
           2
         ]
-      }
+      },
+      "variableName": "FieldLifeTime"
     },
     {
       "name": "Add Events/Bonuses",
@@ -95,9 +95,9 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DamageCarry",
+          "scope": "AITag",
           "value": 10,
-          "scope": "AITag"
+          "variableName": "DamageCarry"
         }
       ]
     }
@@ -217,13 +217,13 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SpecialSPNeed",
-              "value": 24
+              "value": 24,
+              "variableName": "SpecialSPNeed"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_FirstTimeMax",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_FirstTimeMax"
             },
             {
               "name": "Stack Target Stat Value",
@@ -476,7 +476,6 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "ChrysosCount",
                           "value": {
                             "operator": "Variables[0] (ChrysosCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(ChrysosCount + 1)",
@@ -486,7 +485,8 @@ const configAbility = {
                             "variables": [
                               "ChrysosCount"
                             ]
-                          }
+                          },
+                          "variableName": "ChrysosCount"
                         }
                       ]
                     },
@@ -665,7 +665,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster's Memosprite}}"
                   },
-                  "variableName": "CurSpecialSP",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (CurSpecialSP) || RETURN",
                     "displayLines": "CurSpecialSP",
@@ -674,7 +674,7 @@ const configAbility = {
                       "CurSpecialSP"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "CurSpecialSP"
                 }
               ]
             }
@@ -758,8 +758,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FirstTimeMax",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_FirstTimeMax"
                         }
                       ]
                     },
@@ -774,8 +774,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "TutorialSwitch",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "TutorialSwitch"
                         }
                       ]
                     }
@@ -861,8 +861,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FirstTimeMax",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_FirstTimeMax"
                     }
                   ]
                 },
@@ -877,8 +877,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TutorialSwitch",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TutorialSwitch"
                     }
                   ]
                 }

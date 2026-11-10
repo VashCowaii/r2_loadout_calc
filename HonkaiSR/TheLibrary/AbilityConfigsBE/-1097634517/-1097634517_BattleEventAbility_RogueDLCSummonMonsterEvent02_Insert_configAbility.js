@@ -44,7 +44,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Value_SummonCount",
       "value": {
         "operator": "Variables[0] (Value_SummonCount) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(Value_SummonCount - 1)",
@@ -54,7 +53,8 @@ const configAbility = {
         "variables": [
           "Value_SummonCount"
         ]
-      }
+      },
+      "variableName": "Value_SummonCount"
     },
     {
       "name": "Looped Event",

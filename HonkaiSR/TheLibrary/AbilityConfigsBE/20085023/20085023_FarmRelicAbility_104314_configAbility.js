@@ -180,8 +180,8 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_SummonCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_SummonCount"
             },
             {
               "name": "Find New Target",
@@ -216,7 +216,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonCount",
                       "value": {
                         "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_SummonCount + 1)",
@@ -226,7 +225,8 @@ const configAbility = {
                         "variables": [
                           "MDF_SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SummonCount"
                     }
                   ]
                 }

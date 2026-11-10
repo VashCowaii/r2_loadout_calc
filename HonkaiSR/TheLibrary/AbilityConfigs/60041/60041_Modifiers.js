@@ -507,8 +507,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Main2Check",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Main2Check"
                     }
                   ]
                 }
@@ -615,8 +615,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Main2EndCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Main2EndCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -726,8 +726,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TalkSentence_11_Check",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_TalkSentence_11_Check"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -860,8 +860,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Main2Check",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "Main2Check"
                     }
                   ]
                 }
@@ -934,8 +934,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Main2Check",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "Main2Check"
                 },
                 {
                   "name": "Find New Target",
@@ -998,8 +998,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Main2Check",
-                  "value": 3
+                  "value": 3,
+                  "variableName": "Main2Check"
                 }
               ]
             }
@@ -1706,7 +1706,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "LastModifierLayers",
               "value": {
                 "operator": "Variables[0] (ModifierLayers) || RETURN",
                 "displayLines": "ModifierLayers",
@@ -1714,7 +1713,8 @@ const configAbility = {
                 "variables": [
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "LastModifierLayers"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -1778,7 +1778,6 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_DelayRatio",
                               "value": {
                                 "operator": "Variables[0] (UnusedUnderThisBase_13694) || RETURN",
                                 "displayLines": "UnusedUnderThisBase_13694",
@@ -1786,13 +1785,13 @@ const configAbility = {
                                 "variables": [
                                   "UnusedUnderThisBase_13694"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_DelayRatio"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_DelayRatio",
                               "value": {
                                 "operator": "Variables[0] (UnusedUnderThisBase_13692) || RETURN",
                                 "displayLines": "UnusedUnderThisBase_13692",
@@ -1800,7 +1799,8 @@ const configAbility = {
                                 "variables": [
                                   "UnusedUnderThisBase_13692"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_DelayRatio"
                             }
                           ]
                         },
@@ -1831,8 +1831,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SummonOrder",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "SummonOrder"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1840,7 +1840,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Recently Summoned Enemies}}"
                           },
-                          "variableName": "Buff_DamageUpRatio",
                           "value": {
                             "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
                             "displayLines": "UnusedUnderThisBase_13713",
@@ -1848,7 +1847,8 @@ const configAbility = {
                             "variables": [
                               "UnusedUnderThisBase_13713"
                             ]
-                          }
+                          },
+                          "variableName": "Buff_DamageUpRatio"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1856,7 +1856,6 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Recently Summoned Enemies}}"
                           },
-                          "variableName": "Buff_MaxLayer",
                           "value": {
                             "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
                             "displayLines": "UnusedUnderThisBase_13690",
@@ -1864,7 +1863,8 @@ const configAbility = {
                             "variables": [
                               "UnusedUnderThisBase_13690"
                             ]
-                          }
+                          },
+                          "variableName": "Buff_MaxLayer"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2269,8 +2269,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackFlag"
                     }
                   ],
                   "failed": [
@@ -2312,8 +2312,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DieFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DieFlag"
                     }
                   ]
                 }
@@ -2351,8 +2351,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ConversionFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_ConversionFlag"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2371,7 +2371,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "LastModifierLayers",
               "value": {
                 "operator": "Variables[0] (ModifierLayers) || RETURN",
                 "displayLines": "ModifierLayers",
@@ -2379,7 +2378,8 @@ const configAbility = {
                 "variables": [
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "LastModifierLayers"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -2475,8 +2475,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Init",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Init"
                     }
                   ]
                 }
@@ -2904,8 +2904,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_AttackFlag"
                     }
                   ],
                   "failed": [
@@ -2947,8 +2947,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DieFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DieFlag"
                     }
                   ]
                 }
@@ -2972,8 +2972,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonOrder",
-              "value": 0
+              "value": 0,
+              "variableName": "SummonOrder"
             }
           ]
         },
@@ -3007,8 +3007,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ConversionFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_ConversionFlag"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -3027,7 +3027,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "LastModifierLayers",
               "value": {
                 "operator": "Variables[0] (ModifierLayers) || RETURN",
                 "displayLines": "ModifierLayers",
@@ -3035,7 +3034,8 @@ const configAbility = {
                 "variables": [
                   "ModifierLayers"
                 ]
-              }
+              },
+              "variableName": "LastModifierLayers"
             },
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -3131,8 +3131,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Init",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Init"
                     }
                   ]
                 }
@@ -3758,8 +3758,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackEnemyChance",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AttackEnemyChance"
                 }
               ]
             },
@@ -4152,7 +4152,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentCount + 1)",
@@ -4162,7 +4161,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -4239,8 +4239,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InsertCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -4330,8 +4330,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnceCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_OnceCheck"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -4429,8 +4429,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -4477,7 +4477,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Buff_DamageUpRatio",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13713",
@@ -4485,7 +4484,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_13713"
                     ]
-                  }
+                  },
+                  "variableName": "Buff_DamageUpRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4493,7 +4493,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Buff_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13690",
@@ -4501,7 +4500,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_13690"
                     ]
-                  }
+                  },
+                  "variableName": "Buff_MaxLayer"
                 }
               ]
             }
@@ -4548,7 +4548,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Buff_DamageUpRatio",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13713",
@@ -4556,7 +4555,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_13713"
                     ]
-                  }
+                  },
+                  "variableName": "Buff_DamageUpRatio"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -4564,7 +4564,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "variableName": "Buff_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13690",
@@ -4572,7 +4571,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_13690"
                     ]
-                  }
+                  },
+                  "variableName": "Buff_MaxLayer"
                 }
               ]
             }

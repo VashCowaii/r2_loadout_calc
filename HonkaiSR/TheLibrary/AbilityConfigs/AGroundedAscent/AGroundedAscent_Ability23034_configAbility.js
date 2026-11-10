@@ -55,7 +55,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (_Layer) || Variables[1] (0.15) || MUL || RETURN",
                 "displayLines": "(_Layer * 0.15)",
@@ -64,7 +63,8 @@ const configAbility = {
                   "_Layer",
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -111,8 +111,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_LightTeam",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_LightTeam"
                 },
                 {
                   "name": "Find New Target",
@@ -132,8 +132,8 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_LightTeam",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_LightTeam"
                     }
                   ]
                 },
@@ -265,7 +265,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Times",
                       "value": {
                         "operator": "Variables[0] (MDF_Times) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Times + 1)",
@@ -275,7 +274,8 @@ const configAbility = {
                         "variables": [
                           "MDF_Times"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Times"
                     },
                     {
                       "name": "IF",
@@ -295,8 +295,8 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Times",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Times"
                         },
                         {
                           "name": "Skill Points Modification",

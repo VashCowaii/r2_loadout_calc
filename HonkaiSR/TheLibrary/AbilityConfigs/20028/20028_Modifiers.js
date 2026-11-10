@@ -314,7 +314,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
               "value": {
                 "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_Count + 1)",
@@ -324,7 +323,8 @@ const configAbility = {
                 "variables": [
                   "MDF_Count"
                 ]
-              }
+              },
+              "variableName": "MDF_Count"
             }
           ]
         }
@@ -628,7 +628,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EntityCountRemain",
               "value": {
                 "operator": "Variables[0] (MDF_MaxEntityCount) || Variables[1] (MDF_EntityCount) || SUB || RETURN",
                 "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)",
@@ -637,7 +636,8 @@ const configAbility = {
                   "MDF_MaxEntityCount",
                   "MDF_EntityCount"
                 ]
-              }
+              },
+              "variableName": "MDF_EntityCountRemain"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -688,7 +688,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EntityCount",
               "value": {
                 "operator": "Variables[0] (MDF_EntityCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_EntityCount + 1)",
@@ -698,7 +697,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EntityCount"
                 ]
-              }
+              },
+              "variableName": "MDF_EntityCount"
             },
             {
               "name": "IF",
@@ -718,7 +718,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EntityCount",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxEntityCount) || RETURN",
                     "displayLines": "MDF_MaxEntityCount",
@@ -726,13 +725,13 @@ const configAbility = {
                     "variables": [
                       "MDF_MaxEntityCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_EntityCount"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EntityCountRemain",
               "value": {
                 "operator": "Variables[0] (MDF_MaxEntityCount) || Variables[1] (MDF_EntityCount) || SUB || RETURN",
                 "displayLines": "(MDF_MaxEntityCount - MDF_EntityCount)",
@@ -741,7 +740,8 @@ const configAbility = {
                   "MDF_MaxEntityCount",
                   "MDF_EntityCount"
                 ]
-              }
+              },
+              "variableName": "MDF_EntityCountRemain"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -813,8 +813,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InsertCheck",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InsertCheck"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -828,7 +828,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "EntityCountRemain",
               "value": {
                 "operator": "Variables[0] (MDF_EntityCountRemain) || RETURN",
                 "displayLines": "MDF_EntityCountRemain",
@@ -836,7 +835,8 @@ const configAbility = {
                 "variables": [
                   "MDF_EntityCountRemain"
                 ]
-              }
+              },
+              "variableName": "EntityCountRemain"
             }
           ]
         },
@@ -1181,13 +1181,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_UseUltra",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_UseUltra"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_NeedRemove",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_NeedRemove"
             }
           ]
         },
@@ -1561,7 +1561,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CurrentCountRemain",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_13267) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
                 "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)",
@@ -1570,7 +1569,8 @@ const configAbility = {
                   "UnusedUnderThisBase_13267",
                   "MDF_CurrentCount"
                 ]
-              }
+              },
+              "variableName": "MDF_CurrentCountRemain"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -1728,7 +1728,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_CurrentCount + 1)",
@@ -1738,7 +1737,8 @@ const configAbility = {
                     "variables": [
                       "MDF_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCount"
                 },
                 {
                   "name": "IF",
@@ -1758,7 +1758,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentCount",
                       "value": {
                         "operator": "Variables[0] (UnusedUnderThisBase_13267) || RETURN",
                         "displayLines": "UnusedUnderThisBase_13267",
@@ -1766,13 +1765,13 @@ const configAbility = {
                         "variables": [
                           "UnusedUnderThisBase_13267"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_CurrentCount"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentCountRemain",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13267) || Variables[1] (MDF_CurrentCount) || SUB || RETURN",
                     "displayLines": "(UnusedUnderThisBase_13267 - MDF_CurrentCount)",
@@ -1781,7 +1780,8 @@ const configAbility = {
                       "UnusedUnderThisBase_13267",
                       "MDF_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentCountRemain"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1849,8 +1849,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_InsertCheck",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_InsertCheck"
                     },
                     {
                       "name": "Inject Ability Use",

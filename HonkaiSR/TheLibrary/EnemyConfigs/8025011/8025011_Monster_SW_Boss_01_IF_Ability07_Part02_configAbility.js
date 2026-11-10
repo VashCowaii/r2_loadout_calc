@@ -25,8 +25,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill07ArmorCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill07ArmorCount"
         }
       ]
     },

@@ -75,7 +75,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_StatusProbabilityValue",
               "value": {
                 "operator": "Variables[0] (_StatusProbability) || Variables[1] (_StatusProbabilityConvert) || SUB || RETURN",
                 "displayLines": "(_StatusProbability - _StatusProbabilityConvert)",
@@ -84,11 +83,11 @@ const configAbility = {
                   "_StatusProbability",
                   "_StatusProbabilityConvert"
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB3_StatusProbabilityValue",
               "value": {
                 "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[3] (0.1) || MUL || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>((SkillTree_PointB3_StatusProbabilityValue / 0.1)) * 0.1)",
@@ -99,7 +98,8 @@ const configAbility = {
                   0.1,
                   0.1
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB3_StatusProbabilityValue"
             },
             {
               "name": "IF",
@@ -113,8 +113,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -145,7 +145,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                       "value": {
                         "operator": "Variables[0] (0.5) || RETURN",
                         "displayLines": "0.5",
@@ -153,7 +152,8 @@ const configAbility = {
                         "variables": [
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     }
                   ]
                 },
@@ -639,7 +639,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -647,7 +646,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -684,7 +684,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -692,7 +691,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -729,7 +729,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -737,7 +736,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -774,7 +774,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -782,7 +781,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -819,7 +819,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -827,7 +826,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -864,7 +864,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -872,7 +871,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -909,7 +909,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -917,7 +916,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     }
@@ -970,7 +970,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -978,7 +977,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1015,7 +1015,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1023,7 +1022,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1060,7 +1060,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1068,7 +1067,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1105,7 +1105,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1113,7 +1112,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1150,7 +1150,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1158,7 +1157,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1195,7 +1195,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1203,7 +1202,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     },
@@ -1240,7 +1240,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_WeakType",
                           "value": {
                             "operator": "Variables[0] (Advanced_Silwolf_BPAbility_WeakType_01) || RETURN",
                             "displayLines": "Advanced_Silwolf_BPAbility_WeakType_01",
@@ -1248,7 +1247,8 @@ const configAbility = {
                             "variables": [
                               "Advanced_Silwolf_BPAbility_WeakType_01"
                             ]
-                          }
+                          },
+                          "variableName": "_WeakType"
                         }
                       ]
                     }

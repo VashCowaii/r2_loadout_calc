@@ -135,7 +135,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -144,7 +143,8 @@ const compositeAbilityObject = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 }
               ]
             },
@@ -162,7 +162,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -171,7 +170,8 @@ const compositeAbilityObject = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -226,7 +226,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DamageValue",
                   "value": {
                     "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                     "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -235,7 +234,8 @@ const compositeAbilityObject = {
                       "MDF_TargetMaxHP",
                       "Modifier_Tear_DamageRatio"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_DamageValue"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1788,8 +1788,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isEnterPerformance",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isEnterPerformance"
                     },
                     {
                       "name": "Find New Target",
@@ -2313,8 +2313,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "AsatPramad_Skill3_isInsert",
-          "value": 1
+          "value": 1,
+          "variableName": "AsatPramad_Skill3_isInsert"
         },
         {
           "name": "Find New Target",
@@ -2460,8 +2460,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AsatPramad_Skill3_isInsert",
-              "value": 0
+              "value": 0,
+              "variableName": "AsatPramad_Skill3_isInsert"
             }
           ]
         },
@@ -2780,7 +2780,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "variableName": "DebuffFirstTimeCount",
           "value": {
             "operator": "Variables[0] (DebuffFirstTimeCount) || RETURN",
             "displayLines": "DebuffFirstTimeCount",
@@ -2788,7 +2787,8 @@ const compositeAbilityObject = {
             "variables": [
               "DebuffFirstTimeCount"
             ]
-          }
+          },
+          "variableName": "DebuffFirstTimeCount"
         },
         {
           "name": "Define Custom Variable",
@@ -2796,8 +2796,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "variableName": "AIFlag",
-          "value": 12
+          "value": 12,
+          "variableName": "AIFlag"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2832,8 +2832,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "variableName": "AIFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "AIFlag"
         },
         {
           "name": "Define Custom Variable",
@@ -2841,7 +2841,6 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
           },
-          "variableName": "DebuffFirstTimeCount",
           "value": {
             "operator": "Variables[0] (DebuffFirstTimeCount) || RETURN",
             "displayLines": "DebuffFirstTimeCount",
@@ -2849,7 +2848,8 @@ const compositeAbilityObject = {
             "variables": [
               "DebuffFirstTimeCount"
             ]
-          }
+          },
+          "variableName": "DebuffFirstTimeCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2883,8 +2883,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentFace",
-          "value": 0
+          "value": 0,
+          "variableName": "CurrentFace"
         },
         {
           "name": "Use Custom Character Function",
@@ -3373,8 +3373,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "CurrentFace",
-          "value": 1
+          "value": 1,
+          "variableName": "CurrentFace"
         },
         {
           "name": "Inject Ability Use",
@@ -4049,8 +4049,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 20
+                  "value": 20,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -4110,8 +4110,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Recently Summoned Enemies}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 12
+                      "value": 12,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4146,8 +4146,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Recently Summoned Enemies}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4497,8 +4497,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentFace",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CurrentFace"
                     },
                     {
                       "name": "Change Character Model",
@@ -4511,8 +4511,8 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CurrentFace",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CurrentFace"
                     },
                     {
                       "name": "Change Character Model",
@@ -4545,8 +4545,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -4592,8 +4592,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentFace",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentFace"
                         }
                       ]
                     }
@@ -5159,8 +5159,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentFace",
-              "value": 0
+              "value": 0,
+              "variableName": "CurrentFace"
             },
             {
               "name": "IF",
@@ -5493,8 +5493,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isTrigger",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_isTrigger"
                     }
                   ]
                 }
@@ -7040,8 +7040,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill04TargetCount",
-              "value": 1
+              "value": 1,
+              "variableName": "Skill04TargetCount"
             },
             {
               "name": "Find New Target",
@@ -7501,38 +7501,38 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID01",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID01"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID02",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID02"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID03",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID03"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID04",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID04"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID05",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID05"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DebuffID06",
-              "value": 0
+              "value": 0,
+              "variableName": "DebuffID06"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CardCount",
-              "value": 1
+              "value": 1,
+              "variableName": "CardCount"
             },
             {
               "name": "IF",
@@ -7563,8 +7563,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700001
+                              "value": 700001,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7572,8 +7572,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700005
+                              "value": 700005,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7581,8 +7581,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700017
+                              "value": 700017,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7612,8 +7612,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DebuffID_Result",
-                                  "value": 700001
+                                  "value": 700001,
+                                  "variableName": "DebuffID_Result"
                                 },
                                 {
                                   "name": "Use Custom Character Function",
@@ -7623,8 +7623,8 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DebuffID_Result",
-                                  "value": 700003
+                                  "value": 700003,
+                                  "variableName": "DebuffID_Result"
                                 },
                                 {
                                   "name": "Use Custom Character Function",
@@ -7634,8 +7634,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700007
+                              "value": 700007,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7643,8 +7643,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700015
+                              "value": 700015,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7663,8 +7663,8 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700009
+                              "value": 700009,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7672,8 +7672,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700019
+                              "value": 700019,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7681,8 +7681,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700013
+                              "value": 700013,
+                              "variableName": "DebuffID_Result"
                             },
                             {
                               "name": "Use Custom Character Function",
@@ -7709,13 +7709,13 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffRandomCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DebuffRandomCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffHighRiskyFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DebuffHighRiskyFlag"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -7727,8 +7727,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffRandomCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DebuffRandomCount"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -7740,8 +7740,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffRandomCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DebuffRandomCount"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -7947,8 +7947,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DebuffHighRiskyFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DebuffHighRiskyFlag"
                     }
                   ]
                 }
@@ -7981,8 +7981,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700005
+                          "value": 700005,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -7991,8 +7991,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700007
+                          "value": 700007,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8001,8 +8001,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700009
+                          "value": 700009,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8011,8 +8011,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700015
+                          "value": 700015,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8021,8 +8021,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700017
+                          "value": 700017,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8031,8 +8031,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700019
+                          "value": 700019,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8041,8 +8041,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700021
+                          "value": 700021,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     }
@@ -8072,13 +8072,13 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700001
+                          "value": 700001,
+                          "variableName": "DebuffID_Result"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffHighRiskyFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DebuffHighRiskyFlag"
                         }
                       ]
                     },
@@ -8098,22 +8098,22 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700001
+                              "value": 700001,
+                              "variableName": "DebuffID_Result"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID_Result",
-                              "value": 700003
+                              "value": 700003,
+                              "variableName": "DebuffID_Result"
                             }
                           ]
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffHighRiskyFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DebuffHighRiskyFlag"
                         }
                       ]
                     },
@@ -8122,8 +8122,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700005
+                          "value": 700005,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8132,8 +8132,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700007
+                          "value": 700007,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8142,8 +8142,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700009
+                          "value": 700009,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8152,13 +8152,13 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700011
+                          "value": 700011,
+                          "variableName": "DebuffID_Result"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffHighRiskyFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DebuffHighRiskyFlag"
                         }
                       ]
                     },
@@ -8167,13 +8167,13 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700013
+                          "value": 700013,
+                          "variableName": "DebuffID_Result"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffHighRiskyFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "DebuffHighRiskyFlag"
                         }
                       ]
                     },
@@ -8182,8 +8182,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700015
+                          "value": 700015,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8192,8 +8192,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700017
+                          "value": 700017,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8202,8 +8202,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700019
+                          "value": 700019,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     },
@@ -8212,8 +8212,8 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DebuffID_Result",
-                          "value": 700021
+                          "value": 700021,
+                          "variableName": "DebuffID_Result"
                         }
                       ]
                     }
@@ -8332,13 +8332,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700001
+                              "value": 700001,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700002
+                              "value": 700002,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8358,8 +8358,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 15
+                              "value": 15,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8369,13 +8369,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700001
+                              "value": 700001,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700002
+                              "value": 700002,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8395,8 +8395,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 15
+                              "value": 15,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -8406,13 +8406,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700001
+                              "value": 700001,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700002
+                              "value": 700002,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8432,8 +8432,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 15
+                              "value": 15,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -8463,13 +8463,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700003
+                              "value": 700003,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700004
+                              "value": 700004,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8489,8 +8489,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 10
+                              "value": 10,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8500,13 +8500,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700003
+                              "value": 700003,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700004
+                              "value": 700004,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8526,8 +8526,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 10
+                              "value": 10,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -8537,13 +8537,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700003
+                              "value": 700003,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700004
+                              "value": 700004,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8563,8 +8563,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 10
+                              "value": 10,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -8594,13 +8594,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700005
+                              "value": 700005,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700006
+                              "value": 700006,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8620,8 +8620,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 8
+                              "value": 8,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8631,13 +8631,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700005
+                              "value": 700005,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700006
+                              "value": 700006,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8657,8 +8657,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 8
+                              "value": 8,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -8668,13 +8668,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700005
+                              "value": 700005,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700006
+                              "value": 700006,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8694,8 +8694,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 8
+                              "value": 8,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -8725,13 +8725,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700007
+                              "value": 700007,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700008
+                              "value": 700008,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8751,8 +8751,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 11
+                              "value": 11,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8762,13 +8762,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700007
+                              "value": 700007,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700008
+                              "value": 700008,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8788,8 +8788,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 11
+                              "value": 11,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8799,13 +8799,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700007
+                              "value": 700007,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700008
+                              "value": 700008,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8825,8 +8825,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 11
+                              "value": 11,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         }
@@ -8856,13 +8856,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700009
+                              "value": 700009,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700010
+                              "value": 700010,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8901,8 +8901,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 7
+                              "value": 7,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -8912,13 +8912,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700009
+                              "value": 700009,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700010
+                              "value": 700010,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -8957,8 +8957,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 7
+                              "value": 7,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -8968,13 +8968,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700009
+                              "value": 700009,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700010
+                              "value": 700010,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9013,8 +9013,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 7
+                              "value": 7,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9044,13 +9044,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700011
+                              "value": 700011,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700012
+                              "value": 700012,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9070,8 +9070,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 12
+                              "value": 12,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9081,13 +9081,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700011
+                              "value": 700011,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700012
+                              "value": 700012,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9107,8 +9107,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 12
+                              "value": 12,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9118,13 +9118,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700011
+                              "value": 700011,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700012
+                              "value": 700012,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9144,8 +9144,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 12
+                              "value": 12,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9175,13 +9175,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700013
+                              "value": 700013,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700014
+                              "value": 700014,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9201,8 +9201,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 13
+                              "value": 13,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9212,13 +9212,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700013
+                              "value": 700013,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700014
+                              "value": 700014,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9238,8 +9238,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 13
+                              "value": 13,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9249,13 +9249,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700013
+                              "value": 700013,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700014
+                              "value": 700014,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9275,8 +9275,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 13
+                              "value": 13,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9306,13 +9306,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700015
+                              "value": 700015,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700016
+                              "value": 700016,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Find New Target",
@@ -9361,8 +9361,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9372,13 +9372,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700015
+                              "value": 700015,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700016
+                              "value": 700016,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Find New Target",
@@ -9427,8 +9427,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9438,13 +9438,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700015
+                              "value": 700015,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700016
+                              "value": 700016,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Find New Target",
@@ -9493,8 +9493,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 3
+                              "value": 3,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9524,13 +9524,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700017
+                              "value": 700017,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700018
+                              "value": 700018,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9550,8 +9550,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9561,13 +9561,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700017
+                              "value": 700017,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700018
+                              "value": 700018,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9587,8 +9587,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9598,13 +9598,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700017
+                              "value": 700017,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700018
+                              "value": 700018,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9624,8 +9624,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 2
+                              "value": 2,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9655,13 +9655,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700019
+                              "value": 700019,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700020
+                              "value": 700020,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9681,8 +9681,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 6
+                              "value": 6,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9692,13 +9692,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700019
+                              "value": 700019,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700020
+                              "value": 700020,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9718,8 +9718,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 6
+                              "value": 6,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9729,13 +9729,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700019
+                              "value": 700019,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700020
+                              "value": 700020,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9755,8 +9755,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 6
+                              "value": 6,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -9786,13 +9786,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID01",
-                              "value": 700021
+                              "value": 700021,
+                              "variableName": "DebuffID01"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID02",
-                              "value": 700022
+                              "value": 700022,
+                              "variableName": "DebuffID02"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9812,8 +9812,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight01",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "DebuffWeight01"
                             }
                           ]
                         },
@@ -9823,13 +9823,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID03",
-                              "value": 700021
+                              "value": 700021,
+                              "variableName": "DebuffID03"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID04",
-                              "value": 700022
+                              "value": 700022,
+                              "variableName": "DebuffID04"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9849,8 +9849,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight02",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "DebuffWeight02"
                             }
                           ]
                         },
@@ -9860,13 +9860,13 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID05",
-                              "value": 700021
+                              "value": 700021,
+                              "variableName": "DebuffID05"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffID06",
-                              "value": 700022
+                              "value": 700022,
+                              "variableName": "DebuffID06"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -9886,8 +9886,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DebuffWeight03",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "DebuffWeight03"
                             }
                           ]
                         }
@@ -10160,8 +10160,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentFace",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "CurrentFace"
                     }
                   ],
                   "failed": [
@@ -10175,8 +10175,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentFace",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "CurrentFace"
                     }
                   ]
                 }

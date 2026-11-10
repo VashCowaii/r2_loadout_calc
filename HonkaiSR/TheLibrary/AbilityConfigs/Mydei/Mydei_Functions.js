@@ -56,8 +56,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_BPSkill21_Plus",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_BPSkill21_Plus"
                     },
                     {
                       "name": "Update Ability Binding",
@@ -77,8 +77,8 @@ const configAbility = {
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_BPSkill21_Plus",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_BPSkill21_Plus"
                         },
                         {
                           "name": "IF",
@@ -207,8 +207,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_CanTransfer",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_CanTransfer"
                 },
                 {
                   "name": "Inject Ability Use",

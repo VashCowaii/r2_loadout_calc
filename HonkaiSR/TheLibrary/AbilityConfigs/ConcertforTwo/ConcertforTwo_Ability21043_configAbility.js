@@ -28,7 +28,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DmgAddValue",
               "value": {
                 "operator": "Variables[0] (MDF_DmgAddNum) || Variables[1] (0.04) || MUL || RETURN",
                 "displayLines": "(MDF_DmgAddNum * 0.04)",
@@ -37,7 +36,8 @@ const configAbility = {
                   "MDF_DmgAddNum",
                   0.04
                 ]
-              }
+              },
+              "variableName": "MDF_DmgAddValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -92,7 +92,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PreDmgAddNum",
                   "value": {
                     "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
                     "displayLines": "MDF_DmgAddNum",
@@ -100,11 +99,11 @@ const configAbility = {
                     "variables": [
                       "MDF_DmgAddNum"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PreDmgAddNum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DmgAddNum",
                   "value": {
                     "operator": "Constants[0] (0) || RETURN",
                     "displayLines": "0",
@@ -112,7 +111,8 @@ const configAbility = {
                       0
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "MDF_DmgAddNum"
                 },
                 {
                   "name": "Find New Target",
@@ -131,7 +131,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgAddNum",
                       "value": {
                         "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_DmgAddNum + 1)",
@@ -141,7 +140,8 @@ const configAbility = {
                         "variables": [
                           "MDF_DmgAddNum"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DmgAddNum"
                     }
                   ]
                 },
@@ -243,7 +243,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PreDmgAddNum",
                   "value": {
                     "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
                     "displayLines": "MDF_DmgAddNum",
@@ -251,11 +250,11 @@ const configAbility = {
                     "variables": [
                       "MDF_DmgAddNum"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PreDmgAddNum"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DmgAddNum",
                   "value": {
                     "operator": "Constants[0] (0) || RETURN",
                     "displayLines": "0",
@@ -263,7 +262,8 @@ const configAbility = {
                       0
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "MDF_DmgAddNum"
                 },
                 {
                   "name": "Find New Target",
@@ -282,7 +282,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DmgAddNum",
                       "value": {
                         "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_DmgAddNum + 1)",
@@ -292,7 +291,8 @@ const configAbility = {
                         "variables": [
                           "MDF_DmgAddNum"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DmgAddNum"
                     }
                   ]
                 },

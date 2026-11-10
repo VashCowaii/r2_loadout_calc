@@ -98,7 +98,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_LimboCount",
               "value": {
                 "operator": "Variables[0] (MDF_LimboCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_LimboCount + 1)",
@@ -108,7 +107,8 @@ const configAbility = {
                 "variables": [
                   "MDF_LimboCount"
                 ]
-              }
+              },
+              "variableName": "MDF_LimboCount"
             },
             {
               "name": "IF",

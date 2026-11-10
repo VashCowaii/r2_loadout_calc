@@ -92,8 +92,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Attack_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Attack_Flag"
                 }
               ]
             },
@@ -132,8 +132,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Attack_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Attack_Flag"
                     },
                     {
                       "name": "Add Events/Bonuses",

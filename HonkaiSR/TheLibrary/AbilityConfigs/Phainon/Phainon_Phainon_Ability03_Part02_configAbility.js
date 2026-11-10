@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_Index",
-      "value": 0
+      "value": 0,
+      "variableName": "ADF_Index"
     },
     {
       "name": "Add Events/Bonuses",
@@ -80,7 +80,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_Index",
           "value": {
             "operator": "Variables[0] (ADF_Index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(ADF_Index + 1)",
@@ -90,7 +89,8 @@ const configAbility = {
             "variables": [
               "ADF_Index"
             ]
-          }
+          },
+          "variableName": "ADF_Index"
         }
       ]
     },

@@ -185,7 +185,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03Damage",
           "value": {
             "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || Variables[3] ({[Skill03[4]]}) || ADD || RETURN",
             "displayLines": "(({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count))) + {[Skill03[4]]})",
@@ -198,13 +197,13 @@ const configAbility = {
               "Skill03Count",
               "{[Skill03[4]]}"
             ]
-          }
+          },
+          "variableName": "Skill03Damage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03Damage",
           "value": {
             "operator": "Variables[0] ({[Skill03[0]]}) || Variables[1] ({[Skill03[3]]}) || Constants[0] (4) || Variables[2] (Skill03Count) || SUB || MUL || SUB || RETURN",
             "displayLines": "({[Skill03[0]]} - ({[Skill03[3]]} * (4 - Skill03Count)))",
@@ -216,7 +215,8 @@ const configAbility = {
               "{[Skill03[3]]}",
               "Skill03Count"
             ]
-          }
+          },
+          "variableName": "Skill03Damage"
         }
       ]
     },
@@ -582,7 +582,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBlackBloodValue",
               "value": {
                 "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] ({[Skill01[2]]}) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
                 "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * {[Skill01[2]]}) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
@@ -593,7 +592,8 @@ const configAbility = {
                   "{[Skill01[2]]}",
                   "CurrentEnhanceBlackBloodValue"
                 ]
-              }
+              },
+              "variableName": "CurrentBlackBloodValue"
             },
             {
               "name": "IF",
@@ -613,7 +613,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentBlackBloodValue",
                   "value": {
                     "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
                     "displayLines": "{[Skill01[1]]}",
@@ -621,7 +620,8 @@ const configAbility = {
                     "variables": [
                       "{[Skill01[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "CurrentBlackBloodValue"
                 }
               ]
             },

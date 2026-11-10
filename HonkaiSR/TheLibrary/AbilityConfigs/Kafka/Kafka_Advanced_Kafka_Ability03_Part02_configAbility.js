@@ -78,7 +78,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill03_P2_Chance",
       "value": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -86,7 +85,8 @@ const configAbility = {
         "variables": [
           1
         ]
-      }
+      },
+      "variableName": "Skill03_P2_Chance"
     },
     {
       "name": "IF",
@@ -97,7 +97,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_P3_LifeTime",
           "value": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -106,11 +105,11 @@ const configAbility = {
               2,
               1
             ]
-          }
+          },
+          "variableName": "Skill03_P3_LifeTime"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_P4_DOTPercentage",
           "value": {
             "operator": "Variables[0] (2.9) || Variables[1] (1.56) || ADD || RETURN",
             "displayLines": "(2.9 + 1.56)",
@@ -119,13 +118,13 @@ const configAbility = {
               2.9,
               1.56
             ]
-          }
+          },
+          "variableName": "Skill03_P4_DOTPercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_P3_LifeTime",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -133,11 +132,11 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Skill03_P3_LifeTime"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_P4_DOTPercentage",
           "value": {
             "operator": "Variables[0] (2.9) || RETURN",
             "displayLines": "2.9",
@@ -145,7 +144,8 @@ const configAbility = {
             "variables": [
               2.9
             ]
-          }
+          },
+          "variableName": "Skill03_P4_DOTPercentage"
         }
       ]
     },

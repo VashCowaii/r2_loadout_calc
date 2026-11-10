@@ -166,7 +166,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_CriticalIncrease",
               "value": {
                 "operator": "Variables[0] (0.15) || RETURN",
                 "displayLines": "0.15",
@@ -174,7 +173,8 @@ const configAbility = {
                 "variables": [
                   0.15
                 ]
-              }
+              },
+              "variableName": "MDF_CriticalIncrease"
             },
             {
               "name": "Stack Target Stat Value",
@@ -221,8 +221,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MwRen_isNeedHpAdded",
-              "value": 0
+              "value": 0,
+              "variableName": "MwRen_isNeedHpAdded"
             },
             "Modifier Deletes Itself"
           ]
@@ -255,7 +255,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HPIncrease",
               "value": {
                 "operator": "Variables[0] (0.2) || Variables[1] (MDF_Rank04_Layer) || MUL || RETURN",
                 "displayLines": "(0.2 * MDF_Rank04_Layer)",
@@ -264,7 +263,8 @@ const configAbility = {
                   0.2,
                   "MDF_Rank04_Layer"
                 ]
-              }
+              },
+              "variableName": "MDF_HPIncrease"
             },
             {
               "name": "Stack Target Stat Value",
@@ -340,8 +340,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Breaked",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Breaked"
                 }
               ]
             }

@@ -87,8 +87,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 0
+      "value": 0,
+      "variableName": "OnInsertAbort_Flg"
     },
     {
       "name": "IF",
@@ -262,8 +262,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 0
+          "value": 0,
+          "variableName": "OnInsertAbort_Flg"
         }
       ]
     }

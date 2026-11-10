@@ -87,7 +87,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2313_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2313_ADF_3 * DV_TargetCount))",
@@ -97,7 +96,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_PlusAbility_2313_ADF_3",
                           "DV_TargetCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -285,7 +285,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2312_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2312_ADF_3 * DV_TargetCount))",
@@ -295,7 +294,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_PlusAbility_2312_ADF_3",
                           "DV_TargetCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -530,8 +530,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_InsertFlag"
                     }
                   ]
                 }
@@ -542,8 +542,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             },
@@ -592,7 +592,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_DmgValue",
                       "value": {
                         "operator": "Variables[0] (DV_Atk) || Variables[1] (DV_FantasticStory_PlusAbility_2311_ADF_2) || MUL || Variables[2] (DV_HP) || Variables[3] (DV_FantasticStory_PlusAbility_2311_ADF_3) || MUL || ADD || RETURN",
                         "displayLines": "((DV_Atk * DV_FantasticStory_PlusAbility_2311_ADF_2) + (DV_HP * DV_FantasticStory_PlusAbility_2311_ADF_3))",
@@ -603,7 +602,8 @@ const compositeAbilityObject = {
                           "DV_HP",
                           "DV_FantasticStory_PlusAbility_2311_ADF_3"
                         ]
-                      }
+                      },
+                      "variableName": "DV_DmgValue"
                     },
                     {
                       "name": "Attack-Type Extension",
@@ -798,8 +798,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_InsertFlag"
                     }
                   ]
                 }
@@ -810,8 +810,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             },
@@ -856,7 +856,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_DmgValue",
                       "value": {
                         "operator": "Variables[0] (DV_Atk) || Variables[1] (MDF_AtkRatio) || MUL || Variables[2] (DV_HP) || Variables[3] (MDF_HPRatio) || MUL || ADD || RETURN",
                         "displayLines": "((DV_Atk * MDF_AtkRatio) + (DV_HP * MDF_HPRatio))",
@@ -867,7 +866,8 @@ const compositeAbilityObject = {
                           "DV_HP",
                           "MDF_HPRatio"
                         ]
-                      }
+                      },
+                      "variableName": "DV_DmgValue"
                     },
                     {
                       "name": "IF",
@@ -882,7 +882,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_DmgValue",
                           "value": {
                             "operator": "Variables[0] (DV_DmgValue) || Constants[0] (1) || Variables[1] (MDF_FeverDmgUp) || ADD || MUL || RETURN",
                             "displayLines": "(DV_DmgValue * (1 + MDF_FeverDmgUp))",
@@ -893,7 +892,8 @@ const compositeAbilityObject = {
                               "DV_DmgValue",
                               "MDF_FeverDmgUp"
                             ]
-                          }
+                          },
+                          "variableName": "DV_DmgValue"
                         }
                       ]
                     },
@@ -1017,8 +1017,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_InsertFlag"
                     }
                   ]
                 }
@@ -1029,8 +1029,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             },
@@ -1070,7 +1070,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge * DV_TargetCount))",
@@ -1080,7 +1079,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_BaseAbility_2310_BaseAddOn_P1_Charge",
                           "DV_TargetCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -1198,7 +1198,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
                     "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
@@ -1206,7 +1205,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "DV_FantasticStory_BaseAbility_CountSumTemp"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "Update Surging Grit[PF]",
@@ -1238,8 +1238,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                 }
               ]
             }
@@ -1343,8 +1343,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EntityStockSP",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "EntityStockSP"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -1376,7 +1376,6 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "EntityStockSP",
                           "value": {
                             "operator": "Variables[0] (EntityStockSP) || Variables[1] (EntityMaxSP) || SUB || Variables[2] (_CurrentSP) || ADD || RETURN",
                             "displayLines": "((EntityStockSP - EntityMaxSP) + _CurrentSP)",
@@ -1386,7 +1385,8 @@ const compositeAbilityObject = {
                               "EntityMaxSP",
                               "_CurrentSP"
                             ]
-                          }
+                          },
+                          "variableName": "EntityStockSP"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1529,7 +1529,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2264_ADF_4) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2264_ADF_4 * DV_TargetCount))",
@@ -1539,7 +1538,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_PlusAbility_2264_ADF_4",
                           "DV_TargetCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -1608,8 +1608,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_TargetCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "DV_TargetCount"
                     }
                   ]
                 }
@@ -1788,7 +1788,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2263_ADF_5) || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2263_ADF_5)",
@@ -1797,7 +1796,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_BaseAbility_CountSum",
                           "DV_FantasticStory_PlusAbility_2263_ADF_5"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -1935,7 +1935,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2262_ADF_2) || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + DV_FantasticStory_PlusAbility_2262_ADF_2)",
@@ -1944,7 +1943,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_BaseAbility_CountSum",
                           "DV_FantasticStory_PlusAbility_2262_ADF_2"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -2082,8 +2082,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_InsertFlag"
                     }
                   ]
                 }
@@ -2094,8 +2094,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             },
@@ -2155,7 +2155,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2261_ADF_4) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2261_ADF_4 * DV_TargetCount))",
@@ -2165,7 +2164,8 @@ const compositeAbilityObject = {
                           "DV_FantasticStory_PlusAbility_2261_ADF_4",
                           "DV_TargetCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -2234,15 +2234,15 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_TargetCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "DV_TargetCount"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             }
@@ -2778,7 +2778,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_TriggerCount",
                       "value": {
                         "operator": "Variables[0] (DV_TriggerCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(DV_TriggerCount + 1)",
@@ -2788,11 +2787,11 @@ const compositeAbilityObject = {
                         "variables": [
                           "DV_TriggerCount"
                         ]
-                      }
+                      },
+                      "variableName": "DV_TriggerCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio) || MUL || ADD || RETURN",
                         "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio))",
@@ -2802,7 +2801,8 @@ const compositeAbilityObject = {
                           "DV_EnterFeverValue",
                           "DV_FantasticStory_BaseAbility_2260_BaseAddOn_P1_Ratio"
                         ]
-                      }
+                      },
+                      "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                     },
                     {
                       "name": "IF",
@@ -2958,7 +2958,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                   "value": {
                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || RETURN",
                     "displayLines": "DV_FantasticStory_BaseAbility_CountSumTemp",
@@ -2966,7 +2965,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "DV_FantasticStory_BaseAbility_CountSumTemp"
                     ]
-                  }
+                  },
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                 },
                 {
                   "name": "Update Surging Grit[PF]",
@@ -2998,8 +2998,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                 }
               ]
             }
@@ -3124,8 +3124,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2313",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2313"
         },
         {
           "name": "Declare Custom Variable",
@@ -3190,8 +3190,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2312",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2312"
         },
         {
           "name": "Declare Custom Variable",
@@ -3256,8 +3256,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2311",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2311"
         },
         {
           "name": "Declare Custom Variable",
@@ -3364,8 +3364,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
         },
         "Deleted bullshit",
         {
@@ -3394,7 +3394,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_CountSum",
           "value": {
             "operator": "Constants[0] (0) || RETURN",
             "displayLines": "0",
@@ -3402,7 +3401,8 @@ const compositeAbilityObject = {
               0
             ],
             "variables": []
-          }
+          },
+          "variableName": "DV_FantasticStory_BaseAbility_CountSum"
         }
       ],
       "references": [],
@@ -4025,7 +4025,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEvent_BaseHP",
           "value": {
             "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
             "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -4035,7 +4034,8 @@ const compositeAbilityObject = {
             "variables": [
               "BattleEvent_BaseHP"
             ]
-          }
+          },
+          "variableName": "BattleEvent_BaseHP"
         },
         {
           "name": "Declare Custom Variable",
@@ -4355,8 +4355,8 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -4517,7 +4517,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                   "value": {
                                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_BeforeFeverKillChargeRatio) || MUL || ADD || RETURN",
                                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSumTemp + (DV_EnterFeverValue * DV_BeforeFeverKillChargeRatio))",
@@ -4527,7 +4526,8 @@ const compositeAbilityObject = {
                                       "DV_EnterFeverValue",
                                       "DV_BeforeFeverKillChargeRatio"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                 },
                                 {
                                   "name": "IF",
@@ -4547,7 +4547,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                       "value": {
                                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
                                         "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
@@ -4555,7 +4554,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "DV_FantasticStory_BaseAbility_CountSumTempMax"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                     },
                                     {
                                       "name": "Update Surging Grit[PF]",
@@ -4614,7 +4614,6 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                                   "value": {
                                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FeverKillReturnRatio) || MUL || ADD || RETURN",
                                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FeverKillReturnRatio))",
@@ -4624,7 +4623,8 @@ const compositeAbilityObject = {
                                       "DV_EnterFeverValue",
                                       "DV_FeverKillReturnRatio"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                                 },
                                 {
                                   "name": "IF",
@@ -5211,8 +5211,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2264",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2264"
         },
         {
           "name": "Declare Custom Variable",
@@ -5294,8 +5294,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2263",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2263"
         },
         {
           "name": "Declare Custom Variable",
@@ -5394,8 +5394,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2262",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2262"
         },
         {
           "name": "Declare Custom Variable",
@@ -5443,8 +5443,8 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_PlusAbility_2261",
-          "value": 1
+          "value": 1,
+          "variableName": "DV_FantasticStory_PlusAbility_2261"
         },
         {
           "name": "Declare Custom Variable",
@@ -5525,8 +5525,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_TargetDebuffCountMax",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_TargetDebuffCountMax"
         },
         {
           "name": "Find New Target",
@@ -5620,7 +5620,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_TargetDebuffCountMax",
                   "value": {
                     "operator": "Variables[0] (DV_TargetDebuffCount) || RETURN",
                     "displayLines": "DV_TargetDebuffCount",
@@ -5628,7 +5627,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "DV_TargetDebuffCount"
                     ]
-                  }
+                  },
+                  "variableName": "DV_TargetDebuffCountMax"
                 }
               ]
             }
@@ -5636,8 +5636,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
         },
         "Deleted bullshit",
         {
@@ -5740,7 +5740,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_FantasticStory_BaseAbility_CountSum",
           "value": {
             "operator": "Constants[0] (0) || RETURN",
             "displayLines": "0",
@@ -5748,7 +5747,8 @@ const compositeAbilityObject = {
               0
             ],
             "variables": []
-          }
+          },
+          "variableName": "DV_FantasticStory_BaseAbility_CountSum"
         }
       ],
       "references": [],
@@ -6375,7 +6375,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BattleEvent_BaseHP",
           "value": {
             "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
             "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -6385,7 +6384,8 @@ const compositeAbilityObject = {
             "variables": [
               "BattleEvent_BaseHP"
             ]
-          }
+          },
+          "variableName": "BattleEvent_BaseHP"
         },
         {
           "name": "Declare Custom Variable",
@@ -6724,8 +6724,8 @@ const compositeAbilityObject = {
                   "enteringRange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag"
                     },
                     {
                       "name": "Find New Target",
@@ -6887,7 +6887,6 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                   "value": {
                                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTemp) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_BeforeFeverKillChargeRatio) || MUL || ADD || RETURN",
                                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSumTemp + (DV_EnterFeverValue * DV_BeforeFeverKillChargeRatio))",
@@ -6897,7 +6896,8 @@ const compositeAbilityObject = {
                                       "DV_EnterFeverValue",
                                       "DV_BeforeFeverKillChargeRatio"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                 },
                                 {
                                   "name": "IF",
@@ -6917,7 +6917,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp",
                                       "value": {
                                         "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSumTempMax) || RETURN",
                                         "displayLines": "DV_FantasticStory_BaseAbility_CountSumTempMax",
@@ -6925,7 +6924,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "DV_FantasticStory_BaseAbility_CountSumTempMax"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "DV_FantasticStory_BaseAbility_CountSumTemp"
                                     },
                                     {
                                       "name": "Update Surging Grit[PF]",
@@ -6984,7 +6984,6 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                                   "value": {
                                     "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_EnterFeverValue) || Variables[2] (DV_FeverKillReturnRatio) || MUL || ADD || RETURN",
                                     "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_EnterFeverValue * DV_FeverKillReturnRatio))",
@@ -6994,7 +6993,8 @@ const compositeAbilityObject = {
                                       "DV_EnterFeverValue",
                                       "DV_FeverKillReturnRatio"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "DV_FantasticStory_BaseAbility_CountSum"
                                 },
                                 {
                                   "name": "IF",

@@ -671,8 +671,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Fugue_Skill11_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Fugue_Skill11_Flag"
             },
             {
               "name": "Update Ability Binding",
@@ -745,8 +745,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Fugue_Skill11_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Fugue_Skill11_Flag"
             }
           ]
         }

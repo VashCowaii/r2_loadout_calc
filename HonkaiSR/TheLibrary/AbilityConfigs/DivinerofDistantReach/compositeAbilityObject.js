@@ -129,7 +129,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (0.18) || RETURN",
                         "displayLines": "0.18",
@@ -137,7 +136,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.18
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -181,7 +181,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_PropertyValue",
                           "value": {
                             "operator": "Variables[0] (0.1) || RETURN",
                             "displayLines": "0.1",
@@ -189,7 +188,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.1
                             ]
-                          }
+                          },
+                          "variableName": "MDF_PropertyValue"
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -246,8 +246,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTime",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "SkillTime"
                     }
                   ]
                 }

@@ -43,8 +43,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionTime",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_ActionTime"
                 }
               ],
               "failed": [

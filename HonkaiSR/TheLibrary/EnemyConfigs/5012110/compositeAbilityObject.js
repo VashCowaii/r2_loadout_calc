@@ -280,8 +280,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_KillerSkill",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_KillerSkill"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -289,8 +289,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SpecialPhoto"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -298,8 +298,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto_BeingLimbo",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SpecialPhoto_BeingLimbo"
                 }
               ]
             }
@@ -337,7 +337,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_RankRatio",
           "value": {
             "operator": "Variables[0] (_FinalDamage) || Variables[1] (_MaxHp) || DIV || RETURN",
             "displayLines": "(_FinalDamage / _MaxHp)",
@@ -346,7 +345,8 @@ const compositeAbilityObject = {
               "_FinalDamage",
               "_MaxHp"
             ]
-          }
+          },
+          "variableName": "_RankRatio"
         },
         {
           "name": "IF",
@@ -671,9 +671,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Level Entity}}"
               },
-              "variableName": "#CL_PhotoCheck",
+              "scope": "TargetEntity",
               "value": 2,
-              "scope": "TargetEntity"
+              "variableName": "#CL_PhotoCheck"
             }
           ]
         }
@@ -795,9 +795,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_SpecialPhoto",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_SpecialPhoto"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -805,9 +805,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_SpecialPhoto_BeingLimbo",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_SpecialPhoto_BeingLimbo"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -815,9 +815,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_KillerSkill",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_KillerSkill"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -825,9 +825,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "#CL_PhotoCheck",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "#CL_PhotoCheck"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -835,8 +835,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Seconds"
                     },
                     {
                       "name": "Trigger Ability",
@@ -872,9 +872,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_SpecialPhoto",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_SpecialPhoto"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -882,9 +882,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_SpecialPhoto_BeingLimbo",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_SpecialPhoto_BeingLimbo"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -892,9 +892,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_KillerSkill",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "_KillerSkill"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -902,9 +902,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "#CL_PhotoCheck",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "#CL_PhotoCheck"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -912,8 +912,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0.3
+                      "value": 0.3,
+                      "variableName": "_Seconds"
                     },
                     {
                       "name": "Trigger Ability",
@@ -1070,13 +1070,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TotalDamage"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsPhase1",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_IsPhase1"
                     }
                   ]
                 }
@@ -1101,8 +1101,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_IsPhase1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_IsPhase1"
                     },
                     {
                       "name": "IF",
@@ -1136,15 +1136,14 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "#CL_PhotoCheck",
+                              "scope": "TargetEntity",
                               "value": 0,
-                              "scope": "TargetEntity"
+                              "variableName": "#CL_PhotoCheck"
                             }
                           ]
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
                             "displayLines": "MDF_TotalDamage",
@@ -1152,7 +1151,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_TotalDamage"
                             ]
-                          }
+                          },
+                          "variableName": "_FinalDamage"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1160,16 +1160,16 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "#CL_PhotoCheck",
+                          "scope": "TargetEntity",
                           "value": 2,
-                          "scope": "TargetEntity"
+                          "variableName": "#CL_PhotoCheck"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TotalDamage"
                     }
                   ]
                 }
@@ -1206,13 +1206,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsTogetherAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsTogetherAttack"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsTogetherAttackLock",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsTogetherAttackLock"
                     }
                   ]
                 }
@@ -1231,7 +1231,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalDamage) || Variables[1] (MDF_HitDamage) || ADD || RETURN",
                     "displayLines": "(MDF_TotalDamage + MDF_HitDamage)",
@@ -1240,7 +1239,8 @@ const compositeAbilityObject = {
                       "MDF_TotalDamage",
                       "MDF_HitDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalDamage"
                 },
                 {
                   "name": "IF",
@@ -1455,8 +1455,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_IsDying",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_IsDying"
                         }
                       ]
                     }
@@ -1489,8 +1489,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TotalDamage"
                     }
                   ]
                 }
@@ -1557,9 +1557,9 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "#CL_PhotoCheck",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "#CL_PhotoCheck"
                         }
                       ]
                     },
@@ -1583,13 +1583,12 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "Self_KillerSkill",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "Self_KillerSkill"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
                             "displayLines": "MDF_TotalDamage",
@@ -1597,7 +1596,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_TotalDamage"
                             ]
-                          }
+                          },
+                          "variableName": "_FinalDamage"
                         },
                         {
                           "name": "IF",
@@ -1629,9 +1629,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_KillerSkill",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "_KillerSkill"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1639,9 +1639,9 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "#CL_PhotoCheck",
+                              "scope": "TargetEntity",
                               "value": 1,
-                              "scope": "TargetEntity"
+                              "variableName": "#CL_PhotoCheck"
                             },
                             {
                               "name": "Trigger Ability",
@@ -1668,20 +1668,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TotalDamage"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsTogetherAttackLock",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsTogetherAttackLock"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsTogetherAttack",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_IsTogetherAttack"
                     }
                   ]
                 }
@@ -1730,8 +1730,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         }
                       ]
                     },
@@ -1748,8 +1748,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.3
+                          "value": 0.3,
+                          "variableName": "_Seconds"
                         }
                       ]
                     },
@@ -1766,8 +1766,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.3
+                          "value": 0.3,
+                          "variableName": "_Seconds"
                         }
                       ]
                     },
@@ -1784,8 +1784,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "IF",
@@ -1809,8 +1809,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1818,8 +1818,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -1845,8 +1845,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.1
+                              "value": 0.1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1854,8 +1854,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -1881,8 +1881,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1890,8 +1890,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -1917,8 +1917,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.1
+                              "value": 0.1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1926,8 +1926,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -1953,8 +1953,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.1
+                              "value": 0.1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1962,8 +1962,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -1989,8 +1989,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.1
+                              "value": 0.1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -1998,8 +1998,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -2025,8 +2025,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -2034,8 +2034,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -2061,8 +2061,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -2070,8 +2070,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -2105,8 +2105,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.1
+                              "value": 0.1,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -2114,8 +2114,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         },
@@ -2141,8 +2141,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_Seconds",
-                              "value": 0.3
+                              "value": 0.3,
+                              "variableName": "_Seconds"
                             },
                             {
                               "name": "Define Custom Variable",
@@ -2150,8 +2150,8 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Level Entity}}"
                               },
-                              "variableName": "_SpecialPhoto",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_SpecialPhoto"
                             }
                           ]
                         }
@@ -2179,8 +2179,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Self_Killer_AfterSkill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Self_Killer_AfterSkill"
                     }
                   ]
                 }
@@ -2204,8 +2204,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Self_Killer_AfterSkill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Self_Killer_AfterSkill"
                     }
                   ]
                 }
@@ -2300,8 +2300,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0.1
+                      "value": 0.1,
+                      "variableName": "_Seconds"
                     }
                   ]
                 }
@@ -2325,8 +2325,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Self_Killer_AfterSkill",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Self_Killer_AfterSkill"
                     }
                   ]
                 }

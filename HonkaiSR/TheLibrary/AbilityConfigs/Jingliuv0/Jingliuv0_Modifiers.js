@@ -556,8 +556,8 @@ const configAbility = {
             "Modifier Deletes Itself",
             {
               "name": "Define Custom Variable",
-              "variableName": "HpConsumption",
-              "value": 0
+              "value": 0,
+              "variableName": "HpConsumption"
             }
           ]
         }
@@ -949,7 +949,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
                       "value": {
                         "operator": "Variables[0] (HpConsumption) || Variables[1] (TargetMaxHp) || Variables[2] (SkillP01_P2_HpConsumption) || MUL || ADD || RETURN",
                         "displayLines": "(HpConsumption + (TargetMaxHp * SkillP01_P2_HpConsumption))",
@@ -959,7 +958,8 @@ const configAbility = {
                           "TargetMaxHp",
                           "SkillP01_P2_HpConsumption"
                         ]
-                      }
+                      },
+                      "variableName": "HpConsumption"
                     }
                   ],
                   "failed": [
@@ -982,7 +982,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "HpConsumption",
                       "value": {
                         "operator": "Variables[0] (HpConsumption) || Variables[1] (TargetCurrentHp) || ADD || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "((HpConsumption + TargetCurrentHp) - 1)",
@@ -993,7 +992,8 @@ const configAbility = {
                           "HpConsumption",
                           "TargetCurrentHp"
                         ]
-                      }
+                      },
+                      "variableName": "HpConsumption"
                     }
                   ]
                 }
@@ -1017,7 +1017,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackDelta",
                   "value": {
                     "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || Variables[2] ([object Object]) || Variables[1] (HpConsumption) || MUL || ADD || RETURN",
                     "displayLines": "((SkillP01_P3_ATKRatioUp * HpConsumption) + ([object Object] * HpConsumption))",
@@ -1027,7 +1026,8 @@ const configAbility = {
                       "HpConsumption",
                       {}
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AttackDelta"
                 },
                 {
                   "name": "IF",
@@ -1049,7 +1049,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackDelta",
                       "value": {
                         "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || Variables[2] ([object Object]) || Variables[1] (MDF_BaseAttack) || MUL || ADD || RETURN",
                         "displayLines": "((SkillP01_P4_JingliuAttackBase * MDF_BaseAttack) + ([object Object] * MDF_BaseAttack))",
@@ -1059,7 +1058,8 @@ const configAbility = {
                           "MDF_BaseAttack",
                           {}
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackDelta"
                     }
                   ]
                 }
@@ -1067,7 +1067,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AttackDelta",
                   "value": {
                     "operator": "Variables[0] (SkillP01_P3_ATKRatioUp) || Variables[1] (HpConsumption) || MUL || RETURN",
                     "displayLines": "(SkillP01_P3_ATKRatioUp * HpConsumption)",
@@ -1076,7 +1075,8 @@ const configAbility = {
                       "SkillP01_P3_ATKRatioUp",
                       "HpConsumption"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_AttackDelta"
                 },
                 {
                   "name": "IF",
@@ -1097,7 +1097,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_AttackDelta",
                       "value": {
                         "operator": "Variables[0] (SkillP01_P4_JingliuAttackBase) || Variables[1] (MDF_BaseAttack) || MUL || RETURN",
                         "displayLines": "(SkillP01_P4_JingliuAttackBase * MDF_BaseAttack)",
@@ -1106,7 +1105,8 @@ const configAbility = {
                           "SkillP01_P4_JingliuAttackBase",
                           "MDF_BaseAttack"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_AttackDelta"
                     }
                   ]
                 }
@@ -1169,8 +1169,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 }
               ]
             }
@@ -1417,8 +1417,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1491,8 +1491,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1565,8 +1565,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1652,8 +1652,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HpConsumption",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "HpConsumption"
                 },
                 {
                   "name": "Remove Events/Bonuses",

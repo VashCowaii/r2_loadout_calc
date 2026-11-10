@@ -610,7 +610,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "WolfBoss_BloodRageCount",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (ResetBloodRageCount) || RETURN",
                 "displayLines": "ResetBloodRageCount",
@@ -619,7 +619,7 @@ const compositeAbilityObject = {
                   "ResetBloodRageCount"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "WolfBoss_BloodRageCount"
             },
             {
               "name": "Action Advance/Delay",
@@ -1282,8 +1282,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Level Entity}}"
           },
-          "variableName": "Wolf_AttackCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Wolf_AttackCount"
         },
         {
           "name": "Find New Target",
@@ -1425,7 +1425,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Wolf_MaxAttackCount",
           "value": {
             "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
             "displayLines": "{[SkillP01[2]]}",
@@ -1433,11 +1432,11 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[2]]}"
             ]
-          }
+          },
+          "variableName": "Wolf_MaxAttackCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "WolfBoss_BloodRageMaxCount",
           "value": {
             "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
             "displayLines": "{[SkillP02[0]]}",
@@ -1445,7 +1444,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP02[0]]}"
             ]
-          }
+          },
+          "variableName": "WolfBoss_BloodRageMaxCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1907,7 +1907,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "WolfBoss_BloodRageCount",
                   "value": {
                     "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
                     "displayLines": "{[SkillP02[1]]}",
@@ -1915,7 +1914,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[SkillP02[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "WolfBoss_BloodRageCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2085,7 +2085,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BloodRageCountRemain",
                           "value": {
                             "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
                             "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
@@ -2094,7 +2093,8 @@ const compositeAbilityObject = {
                               "WolfBoss_BloodRageMaxCount",
                               "WolfBoss_BloodRageCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BloodRageCountRemain"
                         },
                         {
                           "name": "IF",
@@ -2262,7 +2262,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_BloodRageCountRemain",
                           "value": {
                             "operator": "Variables[0] (WolfBoss_BloodRageMaxCount) || Variables[1] (WolfBoss_BloodRageCount) || SUB || RETURN",
                             "displayLines": "(WolfBoss_BloodRageMaxCount - WolfBoss_BloodRageCount)",
@@ -2271,7 +2270,8 @@ const compositeAbilityObject = {
                               "WolfBoss_BloodRageMaxCount",
                               "WolfBoss_BloodRageCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_BloodRageCountRemain"
                         },
                         {
                           "name": "IF",
@@ -2336,7 +2336,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_BloodRageCountBefore",
                               "value": {
                                 "operator": "Variables[0] (WolfBoss_BloodRageCount) || RETURN",
                                 "displayLines": "WolfBoss_BloodRageCount",
@@ -2344,7 +2343,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "WolfBoss_BloodRageCount"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_BloodRageCountBefore"
                             },
                             {
                               "name": "Define Custom Variable with Added Value",
@@ -2451,8 +2451,8 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "MDF_BloodRageCountBefore",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "MDF_BloodRageCountBefore"
                                 }
                               ],
                               "failed": [
@@ -2477,8 +2477,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_BloodRageCountBefore",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_BloodRageCountBefore"
                             }
                           ]
                         }
@@ -2557,8 +2557,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -2583,8 +2583,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 5
+                  "value": 5,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -2703,8 +2703,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -2753,15 +2753,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "AIFlag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     }
                   ]
                 }
@@ -3063,8 +3063,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -3310,8 +3310,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "WolfBoss_BloodRageCount",
-          "value": 0
+          "value": 0,
+          "variableName": "WolfBoss_BloodRageCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -3524,8 +3524,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "WolfBoss_BloodRageCount",
-              "value": 0
+              "value": 0,
+              "variableName": "WolfBoss_BloodRageCount"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -3620,8 +3620,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Mark",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Mark"
                         }
                       ]
                     }

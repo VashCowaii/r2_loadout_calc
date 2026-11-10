@@ -22,12 +22,11 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_ADF_Index",
-      "value": 0
+      "value": 0,
+      "variableName": "#CL_ADF_Index"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_ADF_DeltaFrame",
       "value": {
         "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__307) || Variables[1] (ENEMIES_OBJECT_UNUSED__308) || SUB || Variables[2] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || DIV || RETURN",
         "displayLines": "((ENEMIES_OBJECT_UNUSED__307 - ENEMIES_OBJECT_UNUSED__308) / (UNKNOWN_SW999_OBJECT[5] - 1))",
@@ -39,7 +38,8 @@ const configAbility = {
           "ENEMIES_OBJECT_UNUSED__308",
           "UNKNOWN_SW999_OBJECT[5]"
         ]
-      }
+      },
+      "variableName": "#CL_ADF_DeltaFrame"
     },
     {
       "name": "Looped Event",
@@ -160,7 +160,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "#CL_ADF_Index",
           "value": {
             "operator": "Variables[0] (#CL_ADF_Index) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(#CL_ADF_Index + 1)",
@@ -170,7 +169,8 @@ const configAbility = {
             "variables": [
               "#CL_ADF_Index"
             ]
-          }
+          },
+          "variableName": "#CL_ADF_Index"
         }
       ]
     },

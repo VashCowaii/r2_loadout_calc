@@ -125,7 +125,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}.[[getMemosprite]]"
       },
-      "variableName": "_Skill03_Stance",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (AOE Toughness Value) || RETURN",
         "displayLines": "AOE Toughness Value",
@@ -134,7 +134,7 @@ const configAbility = {
           "AOE Toughness Value"
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "_Skill03_Stance"
     },
     {
       "name": "Define Custom Variable",
@@ -142,7 +142,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}.[[getMemosprite]]"
       },
-      "variableName": "_Skill03_P1_DamagePercentage",
+      "scope": "TargetEntity",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -151,7 +151,7 @@ const configAbility = {
           2
         ]
       },
-      "scope": "TargetEntity"
+      "variableName": "_Skill03_P1_DamagePercentage"
     },
     {
       "name": "Trigger Ability",

@@ -84,13 +84,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_EnterBattle",
-      "value": 0
+      "value": 0,
+      "variableName": "_EnterBattle"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertCheck04",
-      "value": 1
+      "value": 1,
+      "variableName": "InsertCheck04"
     },
     {
       "name": "Remove from Team Target Grouping",
@@ -182,8 +182,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Dark Praetor: Self}}"
           },
-          "variableName": "_BossUI",
-          "value": 0
+          "value": 0,
+          "variableName": "_BossUI"
         }
       ]
     },

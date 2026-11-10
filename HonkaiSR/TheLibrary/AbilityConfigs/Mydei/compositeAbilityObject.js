@@ -360,7 +360,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SumBeingHealValue",
                       "value": {
                         "operator": "Variables[0] (_SumBeingHealValue) || Variables[1] (_BeingHealValue) || Variables[2] (MDF_PropertyValue2) || MUL || Variables[3] (_MaxHPValue) || DIV || Constants[0] (100) || MUL || ADD || RETURN",
                         "displayLines": "(_SumBeingHealValue + (((_BeingHealValue * MDF_PropertyValue2) / _MaxHPValue) * 100))",
@@ -373,7 +372,8 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue2",
                           "_MaxHPValue"
                         ]
-                      }
+                      },
+                      "variableName": "_SumBeingHealValue"
                     },
                     {
                       "name": "IF",
@@ -427,8 +427,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_MaxFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_MaxFlag"
                         }
                       ],
                       "failed": [
@@ -464,13 +464,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SumBeingHealValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SumBeingHealValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_MaxFlag"
                 }
               ]
             },
@@ -479,13 +479,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SumBeingHealValue",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SumBeingHealValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_MaxFlag"
                 }
               ]
             }
@@ -505,7 +505,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Multipler",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Variables[1] (_MaxHPFixValue) || Variables[2] (MYDEI_OBJECT_UNUSED_6[100]) || DIV || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_MaxHPFixValue / MYDEI_OBJECT_UNUSED_6[100]))",
@@ -515,11 +514,11 @@ const compositeAbilityObject = {
                       "_MaxHPFixValue",
                       "MYDEI_OBJECT_UNUSED_6[100]"
                     ]
-                  }
+                  },
+                  "variableName": "_Multipler"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (_Multipler) || Variables[1] (0.012) || MUL || RETURN",
                     "displayLines": "(_Multipler * 0.012)",
@@ -528,7 +527,8 @@ const compositeAbilityObject = {
                       "_Multipler",
                       0.012
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -548,7 +548,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue2",
                   "value": {
                     "operator": "Variables[0] (_Multipler) || Variables[1] (0.025) || MUL || RETURN",
                     "displayLines": "(_Multipler * 0.025)",
@@ -557,11 +556,11 @@ const compositeAbilityObject = {
                       "_Multipler",
                       0.025
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue2"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Tree03_BeingHitRatio",
                   "value": {
                     "operator": "Variables[0] (_Multipler) || Variables[1] (0.025) || MUL || RETURN",
                     "displayLines": "(_Multipler * 0.025)",
@@ -570,11 +569,11 @@ const compositeAbilityObject = {
                       "_Multipler",
                       0.025
                     ]
-                  }
+                  },
+                  "variableName": "_Tree03_BeingHitRatio"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue3",
                   "value": {
                     "operator": "Variables[0] (_Multipler) || Variables[1] (0.0075) || MUL || RETURN",
                     "displayLines": "(_Multipler * 0.0075)",
@@ -583,7 +582,8 @@ const compositeAbilityObject = {
                       "_Multipler",
                       0.0075
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue3"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -633,7 +633,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CurrentRealHP",
                   "value": {
                     "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_CurrentHPConvert) || SUB || RETURN",
                     "displayLines": "(MDF_CurrentHP - MDF_CurrentHPConvert)",
@@ -642,7 +641,8 @@ const compositeAbilityObject = {
                       "MDF_CurrentHP",
                       "MDF_CurrentHPConvert"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_CurrentRealHP"
                 },
                 {
                   "name": "IF",
@@ -835,8 +835,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_BPSkill21_Plus",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_BPSkill21_Plus"
                 },
                 {
                   "name": "Update Ability Binding",
@@ -908,8 +908,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_ReviveCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_ReviveCount"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -947,7 +947,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_HPAddValue",
                   "value": {
                     "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
                     "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
@@ -957,7 +956,8 @@ const compositeAbilityObject = {
                       "DV_HPConvert",
                       0.5
                     ]
-                  }
+                  },
+                  "variableName": "MDF_HPAddValue"
                 },
                 {
                   "name": "IF",
@@ -1115,7 +1115,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HPAddValue",
                       "value": {
                         "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
                         "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
@@ -1125,7 +1124,8 @@ const compositeAbilityObject = {
                           "DV_HPConvert",
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HPAddValue"
                     }
                   ]
                 }
@@ -1166,7 +1166,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HPAddValue",
                       "value": {
                         "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
                         "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
@@ -1176,7 +1175,8 @@ const compositeAbilityObject = {
                           "DV_HPConvert",
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HPAddValue"
                     }
                   ]
                 }
@@ -1217,7 +1217,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HPAddValue",
                       "value": {
                         "operator": "Variables[0] (DV_MaxHP) || Variables[1] (DV_HPConvert) || SUB || Variables[2] (0.5) || MUL || RETURN",
                         "displayLines": "((DV_MaxHP - DV_HPConvert) * 0.5)",
@@ -1227,7 +1226,8 @@ const compositeAbilityObject = {
                           "DV_HPConvert",
                           0.5
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HPAddValue"
                     }
                   ]
                 }
@@ -1750,8 +1750,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_BPSkill21_Plus",
-          "value": 0
+          "value": 0,
+          "variableName": "_BPSkill21_Plus"
         },
         {
           "name": "Update Ability Binding",
@@ -2168,7 +2168,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_Tree01_ReviveCount",
               "value": {
                 "operator": "Variables[0] (DV_Tree01_ReviveCount) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(DV_Tree01_ReviveCount - 1)",
@@ -2178,7 +2177,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "DV_Tree01_ReviveCount"
                 ]
-              }
+              },
+              "variableName": "DV_Tree01_ReviveCount"
             },
             {
               "name": "Define Modifier Variable",
@@ -2221,8 +2221,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_ReviveCount",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_ReviveCount"
             },
             {
               "name": "Adjust Variable Value",
@@ -2318,8 +2318,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_CanTransfer",
-          "value": 0
+          "value": 0,
+          "variableName": "DV_CanTransfer"
         },
         "Deleted bullshit",
         {
@@ -2475,7 +2475,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "DV_Tree01_ReviveCount",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -2483,7 +2482,8 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "DV_Tree01_ReviveCount"
         },
         {
           "name": "IF",
@@ -2494,7 +2494,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill22_Cost",
               "value": {
                 "operator": "Variables[0] (100) || RETURN",
                 "displayLines": "100",
@@ -2502,13 +2501,13 @@ const compositeAbilityObject = {
                 "variables": [
                   100
                 ]
-              }
+              },
+              "variableName": "Skill22_Cost"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill22_Cost",
               "value": {
                 "operator": "Variables[0] (150) || RETURN",
                 "displayLines": "150",
@@ -2516,7 +2515,8 @@ const compositeAbilityObject = {
                 "variables": [
                   150
                 ]
-              }
+              },
+              "variableName": "Skill22_Cost"
             }
           ]
         }
@@ -2691,7 +2691,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Passive_HPChangeValue",
                               "value": {
                                 "operator": "Variables[0] (_Passive_HPChangeValue) || Constants[0] (1) || Variables[1] (_Tree03_BeingHitRatio) || ADD || MUL || RETURN",
                                 "displayLines": "(_Passive_HPChangeValue * (1 + _Tree03_BeingHitRatio))",
@@ -2702,7 +2701,8 @@ const compositeAbilityObject = {
                                   "_Passive_HPChangeValue",
                                   "_Tree03_BeingHitRatio"
                                 ]
-                              }
+                              },
+                              "variableName": "_Passive_HPChangeValue"
                             }
                           ]
                         },
@@ -2837,8 +2837,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ForceEnergyBarChange",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_ForceEnergyBarChange"
                     }
                   ]
                 }
@@ -2856,8 +2856,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_ForceEnergyBarChange",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_ForceEnergyBarChange"
                     }
                   ]
                 }
@@ -3115,8 +3115,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_CanTransfer",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "DV_CanTransfer"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -3273,8 +3273,8 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_CanTransfer",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "DV_CanTransfer"
                             },
                             {
                               "name": "Inject Ability Use",
@@ -3789,8 +3789,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_BPSkill21_Plus",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_BPSkill21_Plus"
                         },
                         {
                           "name": "Update Ability Binding",
@@ -3810,8 +3810,8 @@ const compositeAbilityObject = {
                           "afterInjection": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_BPSkill21_Plus",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "_BPSkill21_Plus"
                             },
                             {
                               "name": "IF",
@@ -3940,8 +3940,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_CanTransfer",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "DV_CanTransfer"
                     },
                     {
                       "name": "Inject Ability Use",

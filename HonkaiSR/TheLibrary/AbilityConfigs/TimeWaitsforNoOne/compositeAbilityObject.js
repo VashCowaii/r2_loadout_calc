@@ -65,7 +65,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TotalAmount",
                   "value": {
                     "operator": "Variables[0] (_TotalAmount) || Variables[1] (_HealAmount) || ADD || RETURN",
                     "displayLines": "(_TotalAmount + _HealAmount)",
@@ -74,7 +73,8 @@ const compositeAbilityObject = {
                       "_TotalAmount",
                       "_HealAmount"
                     ]
-                  }
+                  },
+                  "variableName": "_TotalAmount"
                 }
               ]
             }
@@ -89,8 +89,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Flag_23013",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Flag_23013"
                 }
               ]
             },
@@ -184,13 +184,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TotalAmount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_TotalAmount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Flag_23013",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Flag_23013"
                     }
                   ]
                 }

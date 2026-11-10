@@ -134,8 +134,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1093,7 +1093,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || Variables[2] (1) || SUB || SUB || RETURN",
                             "displayLines": "(MDF_Count - (MDF_CostLayer - 1))",
@@ -1103,13 +1102,13 @@ const compositeAbilityObject = {
                               "MDF_CostLayer",
                               1
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Count) || Variables[1] (MDF_CostLayer) || SUB || RETURN",
                             "displayLines": "(MDF_Count - MDF_CostLayer)",
@@ -1118,7 +1117,8 @@ const compositeAbilityObject = {
                               "MDF_Count",
                               "MDF_CostLayer"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         }
                       ]
                     },
@@ -1273,7 +1273,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Count) || Constants[0] (2) || ADD || RETURN",
                             "displayLines": "(MDF_Count + 2)",
@@ -1283,7 +1282,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_Count"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         },
                         {
                           "name": "IF",
@@ -1303,7 +1303,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Count",
                               "value": {
                                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                                 "displayLines": "MDF_MaxCount",
@@ -1311,7 +1310,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_MaxCount"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Count"
                             }
                           ]
                         },
@@ -1369,7 +1369,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Count",
                           "value": {
                             "operator": "Variables[0] (MDF_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_Count + 1)",
@@ -1379,7 +1378,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_Count"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_Count"
                         },
                         {
                           "name": "IF",
@@ -1399,7 +1399,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Count",
                               "value": {
                                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
                                 "displayLines": "MDF_MaxCount",
@@ -1407,7 +1406,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_MaxCount"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Count"
                             }
                           ]
                         },

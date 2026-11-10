@@ -91,7 +91,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "All_ChangeValue",
                       "value": {
                         "operator": "Variables[0] (All_ChangeValue) || Variables[1] (Temp_ChangeValue) || ADD || RETURN",
                         "displayLines": "(All_ChangeValue + Temp_ChangeValue)",
@@ -100,11 +99,11 @@ const compositeAbilityObject = {
                           "All_ChangeValue",
                           "Temp_ChangeValue"
                         ]
-                      }
+                      },
+                      "variableName": "All_ChangeValue"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Add_Layer",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (All_ChangeValue) || Variables[2] (5) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))",
@@ -114,7 +113,8 @@ const compositeAbilityObject = {
                           "All_ChangeValue",
                           5
                         ]
-                      }
+                      },
+                      "variableName": "Add_Layer"
                     }
                   ]
                 },
@@ -136,7 +136,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Add_Layer",
                       "value": {
                         "operator": "Variables[0] (10) || RETURN",
                         "displayLines": "10",
@@ -144,18 +143,18 @@ const compositeAbilityObject = {
                         "variables": [
                           10
                         ]
-                      }
+                      },
+                      "variableName": "Add_Layer"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_MaxFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_MaxFlag"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DefenceAddRatio",
                   "value": {
                     "operator": "Variables[0] (0.1) || Variables[1] (0.01) || Variables[2] (Add_Layer) || MUL || ADD || RETURN",
                     "displayLines": "(0.1 + (0.01 * Add_Layer))",
@@ -165,7 +164,8 @@ const compositeAbilityObject = {
                       0.01,
                       "Add_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "_DefenceAddRatio"
                 }
               ]
             }
@@ -198,7 +198,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "All_ChangeValue",
                           "value": {
                             "operator": "Variables[0] (All_ChangeValue) || Variables[1] (Temp_ChangeValue) || ADD || RETURN",
                             "displayLines": "(All_ChangeValue + Temp_ChangeValue)",
@@ -207,11 +206,11 @@ const compositeAbilityObject = {
                               "All_ChangeValue",
                               "Temp_ChangeValue"
                             ]
-                          }
+                          },
+                          "variableName": "All_ChangeValue"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Add_Layer",
                           "value": {
                             "operator": "Variables[0] (FLOOR) || Variables[1] (All_ChangeValue) || Variables[2] (5) || DIV || PARAM_1 || FUNCTION || RETURN",
                             "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((All_ChangeValue / 5))",
@@ -221,7 +220,8 @@ const compositeAbilityObject = {
                               "All_ChangeValue",
                               5
                             ]
-                          }
+                          },
+                          "variableName": "Add_Layer"
                         }
                       ]
                     },
@@ -243,7 +243,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Add_Layer",
                           "value": {
                             "operator": "Variables[0] (10) || RETURN",
                             "displayLines": "10",
@@ -251,18 +250,18 @@ const compositeAbilityObject = {
                             "variables": [
                               10
                             ]
-                          }
+                          },
+                          "variableName": "Add_Layer"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_MaxFlag",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_MaxFlag"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DefenceAddRatio",
                       "value": {
                         "operator": "Variables[0] (0.1) || Variables[1] (0.01) || Variables[2] (Add_Layer) || MUL || ADD || RETURN",
                         "displayLines": "(0.1 + (0.01 * Add_Layer))",
@@ -272,7 +271,8 @@ const compositeAbilityObject = {
                           0.01,
                           "Add_Layer"
                         ]
-                      }
+                      },
+                      "variableName": "_DefenceAddRatio"
                     }
                   ]
                 }

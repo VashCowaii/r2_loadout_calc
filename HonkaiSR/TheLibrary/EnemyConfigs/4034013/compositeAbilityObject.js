@@ -949,7 +949,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonCount",
                       "value": {
                         "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_SummonCount + 1)",
@@ -959,7 +958,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SummonCount"
                     },
                     {
                       "name": "IF",
@@ -976,8 +976,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SummonCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SummonCount"
                         }
                       ]
                     }
@@ -2033,9 +2033,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HPBack",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "HPBack"
                 },
                 {
                   "name": "IF",
@@ -2115,8 +2115,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Summoner of Modifier Holder}}"
                           },
-                          "variableName": "HPBack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "HPBack"
                         }
                       ]
                     },
@@ -2358,7 +2358,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMMaxValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -2370,7 +2369,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMMaxValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2378,7 +2378,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCurrentValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -2390,7 +2389,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMCurrentValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2398,9 +2398,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMRatio",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "LMRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -2675,7 +2675,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCurrentValue",
                   "value": {
                     "operator": "Variables[0] (_CurrentStance) || Variables[1] (_MaxStance) || Variables[2] (_StanceCount) || Constants[0] (1) || SUB || MUL || ADD || RETURN",
                     "displayLines": "(_CurrentStance + (_MaxStance * (_StanceCount - 1)))",
@@ -2687,7 +2686,8 @@ const compositeAbilityObject = {
                       "_MaxStance",
                       "_StanceCount"
                     ]
-                  }
+                  },
+                  "variableName": "LMCurrentValue"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2695,7 +2695,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMRatio",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (LMCurrentValue) || Variables[1] (LMMaxValue) || DIV || RETURN",
                     "displayLines": "(LMCurrentValue / LMMaxValue)",
@@ -2705,7 +2705,7 @@ const compositeAbilityObject = {
                       "LMMaxValue"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "LMRatio"
                 }
               ]
             }
@@ -2875,9 +2875,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCountDown",
+                  "scope": "TargetEntity",
                   "value": 8,
-                  "scope": "TargetEntity"
+                  "variableName": "LMCountDown"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3064,9 +3064,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "LMCountDown",
+                  "scope": "TargetEntity",
                   "value": 8,
-                  "scope": "TargetEntity"
+                  "variableName": "LMCountDown"
                 }
               ]
             },
@@ -3247,7 +3247,6 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "MDF_Skill06",
                               "value": {
                                 "operator": "Variables[0] (MDF_Skill06) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_Skill06 + 1)",
@@ -3257,7 +3256,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_Skill06"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Skill06"
                             }
                           ]
                         }
@@ -3305,7 +3305,6 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
                               },
-                              "variableName": "MDF_Skill06",
                               "value": {
                                 "operator": "Variables[0] (MDF_Skill06) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(MDF_Skill06 + 1)",
@@ -3315,7 +3314,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_Skill06"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_Skill06"
                             }
                           ]
                         }
@@ -3357,8 +3357,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_Skill06",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Skill06"
                     }
                   ]
                 }
@@ -3445,8 +3445,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_TriggerOnce",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_TriggerOnce"
                         }
                       ]
                     },
@@ -3488,7 +3488,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PersistLoseHP",
                       "value": {
                         "operator": "Variables[0] (MDF_PersistLoseHP) || Variables[1] (MDF_HealedHP) || Variables[2] (MDF_CloneMaxHP) || DIV || Variables[3] (MDF_LoseHPRatio) || MUL || Variables[4] (MDF_MaxHP) || MUL || ADD || RETURN",
                         "displayLines": "(MDF_PersistLoseHP + (((MDF_HealedHP / MDF_CloneMaxHP) * MDF_LoseHPRatio) * MDF_MaxHP))",
@@ -3500,7 +3499,8 @@ const compositeAbilityObject = {
                           "MDF_LoseHPRatio",
                           "MDF_MaxHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PersistLoseHP"
                     },
                     {
                       "name": "Update UI Preview",
@@ -3664,9 +3664,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "HPBack",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "HPBack"
                 },
                 {
                   "name": "IF",
@@ -3711,9 +3711,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
                       },
-                      "variableName": "HPBack",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "HPBack"
                     }
                   ]
                 },
@@ -3855,7 +3855,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalRallyHP",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalRallyHP) || Variables[1] (MDF_RallyHP) || ADD || RETURN",
                         "displayLines": "(MDF_TotalRallyHP + MDF_RallyHP)",
@@ -3864,7 +3863,8 @@ const compositeAbilityObject = {
                           "MDF_TotalRallyHP",
                           "MDF_RallyHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalRallyHP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3916,7 +3916,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalRallyHP",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalRallyHP) || Variables[1] (MDF_RallyHP) || SUB || RETURN",
                         "displayLines": "(MDF_TotalRallyHP - MDF_RallyHP)",
@@ -3925,7 +3924,8 @@ const compositeAbilityObject = {
                           "MDF_TotalRallyHP",
                           "MDF_RallyHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalRallyHP"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -4025,7 +4025,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonCount",
                       "value": {
                         "operator": "Variables[0] (MDF_SummonCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_SummonCount + 1)",
@@ -4035,7 +4034,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_SummonCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SummonCount"
                     },
                     {
                       "name": "IF",
@@ -4064,8 +4064,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SummonCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_SummonCount"
                         }
                       ]
                     }
@@ -4486,8 +4486,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "IF",
@@ -5189,8 +5189,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "variableName": "HPBack",
-              "value": 0
+              "value": 0,
+              "variableName": "HPBack"
             },
             {
               "name": "IF",
@@ -5422,8 +5422,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "HPBack",
-          "value": 0
+          "value": 0,
+          "variableName": "HPBack"
         },
         {
           "name": "Declare Custom Variable",
@@ -5589,9 +5589,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "LMCountDown",
+          "scope": "TargetEntity",
           "value": 8,
-          "scope": "TargetEntity"
+          "variableName": "LMCountDown"
         },
         {
           "name": "IF",
@@ -5787,9 +5787,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "LMCountDown",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "LMCountDown"
         },
         {
           "name": "Declare Custom Variable",
@@ -6006,9 +6006,9 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "LMCountDown",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "LMCountDown"
         },
         {
           "name": "Declare Custom Variable",
@@ -6622,23 +6622,23 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill01_AssistCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill01_AssistCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill02_AssistCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill02_AssistCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill01_CurCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill01_CurCount"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill02_CurCount",
-          "value": 0
+          "value": 0,
+          "variableName": "Skill02_CurCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -7323,8 +7323,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Assist_Flag",
-              "value": 2
+              "value": 2,
+              "variableName": "Assist_Flag"
             }
           ],
           "failed": [
@@ -7775,8 +7775,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Assist_Flag",
-              "value": 1
+              "value": 1,
+              "variableName": "Assist_Flag"
             }
           ]
         },
@@ -8595,8 +8595,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AttackCount",
-              "value": 0
+              "value": 0,
+              "variableName": "AttackCount"
             },
             "Deleted bullshit",
             {
@@ -8745,7 +8745,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AttackCount",
               "value": {
                 "operator": "Variables[0] (AttackCount) || Variables[1] ({[Skill05[0]]}) || MUL || RETURN",
                 "displayLines": "(AttackCount * {[Skill05[0]]})",
@@ -8754,7 +8753,8 @@ const compositeAbilityObject = {
                   "AttackCount",
                   "{[Skill05[0]]}"
                 ]
-              }
+              },
+              "variableName": "AttackCount"
             },
             {
               "name": "SWITCH",
@@ -10667,13 +10667,13 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentSummonIndex",
-              "value": 1
+              "value": 1,
+              "variableName": "CurrentSummonIndex"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "CurrentBounsIndex",
-              "value": 2
+              "value": 2,
+              "variableName": "CurrentBounsIndex"
             }
           ]
         },
@@ -10698,8 +10698,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 },
@@ -10709,8 +10709,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 },
@@ -10720,8 +10720,8 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonIndex",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "CurrentSummonIndex"
                     }
                   ]
                 }
@@ -10729,8 +10729,8 @@ const compositeAbilityObject = {
               "defaultEvents": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentSummonIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CurrentSummonIndex"
                 }
               ]
             }
@@ -10779,8 +10779,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CurrentBounsIndex",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "CurrentBounsIndex"
                 }
               ]
             }
@@ -10884,8 +10884,8 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "SkillFlag",
-                            "value": 2
+                            "value": 2,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",
@@ -10895,8 +10895,8 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "SkillFlag",
-                            "value": 1
+                            "value": 1,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",
@@ -11001,8 +11001,8 @@ const compositeAbilityObject = {
                             "passed": [
                               {
                                 "name": "Define Custom Variable",
-                                "variableName": "SkillFlag",
-                                "value": 2
+                                "value": 2,
+                                "variableName": "SkillFlag"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -11012,8 +11012,8 @@ const compositeAbilityObject = {
                             "failed": [
                               {
                                 "name": "Define Custom Variable",
-                                "variableName": "SkillFlag",
-                                "value": 1
+                                "value": 1,
+                                "variableName": "SkillFlag"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -11419,8 +11419,8 @@ const compositeAbilityObject = {
                         "passed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "SkillFlag",
-                            "value": 2
+                            "value": 2,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",
@@ -11430,8 +11430,8 @@ const compositeAbilityObject = {
                         "failed": [
                           {
                             "name": "Define Custom Variable",
-                            "variableName": "SkillFlag",
-                            "value": 1
+                            "value": 1,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",
@@ -11536,8 +11536,8 @@ const compositeAbilityObject = {
                             "passed": [
                               {
                                 "name": "Define Custom Variable",
-                                "variableName": "SkillFlag",
-                                "value": 2
+                                "value": 2,
+                                "variableName": "SkillFlag"
                               },
                               {
                                 "name": "Use Ability Option",
@@ -11547,8 +11547,8 @@ const compositeAbilityObject = {
                             "failed": [
                               {
                                 "name": "Define Custom Variable",
-                                "variableName": "SkillFlag",
-                                "value": 1
+                                "value": 1,
+                                "variableName": "SkillFlag"
                               },
                               {
                                 "name": "Use Ability Option",

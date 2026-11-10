@@ -152,7 +152,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TV_01_EliteChance",
               "value": {
                 "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
                 "displayLines": "{[Skill01[0]]}",
@@ -160,13 +159,13 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[Skill01[0]]}"
                 ]
-              }
+              },
+              "variableName": "TV_01_EliteChance"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TV_01_EliteChance",
               "value": {
                 "operator": "Variables[0] (TV_01_EliteChance) || Constants[0] (100) || DIV || RETURN",
                 "displayLines": "(TV_01_EliteChance / 100)",
@@ -176,7 +175,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "TV_01_EliteChance"
                 ]
-              }
+              },
+              "variableName": "TV_01_EliteChance"
             }
           ]
         },
@@ -913,7 +913,7 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Summon_MonsterIDKey",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (SummonID01) || RETURN",
                         "displayLines": "SummonID01",
@@ -922,11 +922,11 @@ const compositeAbilityObject = {
                           "SummonID01"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Summon_MonsterIDKey"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Summon_MonsterIDKey",
+                      "scope": "TargetEntity",
                       "value": {
                         "operator": "Variables[0] (SummonID02) || RETURN",
                         "displayLines": "SummonID02",
@@ -935,7 +935,7 @@ const compositeAbilityObject = {
                           "SummonID02"
                         ]
                       },
-                      "scope": "TargetEntity"
+                      "variableName": "Summon_MonsterIDKey"
                     }
                   ]
                 }
@@ -967,7 +967,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Summon_MonsterIDKey",
+                          "scope": "TargetEntity",
                           "value": {
                             "operator": "Variables[0] (SummonID01) || RETURN",
                             "displayLines": "SummonID01",
@@ -976,7 +976,7 @@ const compositeAbilityObject = {
                               "SummonID01"
                             ]
                           },
-                          "scope": "TargetEntity"
+                          "variableName": "Summon_MonsterIDKey"
                         }
                       ]
                     }
@@ -990,7 +990,7 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Summon_MonsterIDKey",
+                          "scope": "TargetEntity",
                           "value": {
                             "operator": "Variables[0] (SummonID02) || RETURN",
                             "displayLines": "SummonID02",
@@ -999,7 +999,7 @@ const compositeAbilityObject = {
                               "SummonID02"
                             ]
                           },
-                          "scope": "TargetEntity"
+                          "variableName": "Summon_MonsterIDKey"
                         }
                       ]
                     }

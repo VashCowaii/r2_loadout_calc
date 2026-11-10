@@ -544,7 +544,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                     "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -553,7 +552,8 @@ const compositeAbilityObject = {
                       "MDF_Conv",
                       "MDF_CritBase"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -692,7 +692,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Conv",
                       "value": {
                         "operator": "Variables[0] (0.24) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
                         "displayLines": "(0.24 + S02_ExtraRatio)",
@@ -701,11 +700,11 @@ const compositeAbilityObject = {
                           0.24,
                           "S02_ExtraRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Conv"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_NEW_VAL",
                       "value": {
                         "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                         "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -714,7 +713,8 @@ const compositeAbilityObject = {
                           "MDF_Conv",
                           "MDF_CritBase"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_NEW_VAL"
                     },
                     {
                       "name": "Find New Target",
@@ -799,7 +799,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_NEW_VAL",
                       "value": {
                         "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                         "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -808,7 +807,8 @@ const compositeAbilityObject = {
                           "MDF_Conv",
                           "MDF_CritBase"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_NEW_VAL"
                     },
                     {
                       "name": "Find New Target",
@@ -1033,7 +1033,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue_1) || Variables[1] (MDF_PropertyValue_2) || ADD || RETURN",
                         "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)",
@@ -1042,13 +1041,13 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue_1",
                           "MDF_PropertyValue_2"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue_1) || RETURN",
                         "displayLines": "MDF_PropertyValue_1",
@@ -1056,7 +1055,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_PropertyValue_1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     }
                   ]
                 },
@@ -1126,8 +1126,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -1146,15 +1146,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isCharmAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isCharmAttack"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isAttack"
                     }
                   ]
                 }
@@ -1165,13 +1165,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isCharmAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isCharmAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 }
               ]
             },
@@ -1180,13 +1180,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             },
@@ -1195,8 +1195,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -1224,20 +1224,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Check_isAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Check_isAttack"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_AttackStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_AttackStart"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isAttack"
                     }
                   ],
                   "failed": [
@@ -1266,8 +1266,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Check_isAttack",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_Check_isAttack"
                             }
                           ]
                         }
@@ -1300,8 +1300,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isHeal",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isHeal"
                     }
                   ]
                 }
@@ -1312,8 +1312,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -1349,8 +1349,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Check_AttackStart",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_Check_AttackStart"
                             },
                             {
                               "name": "Define Custom Variable with Added Value",
@@ -1424,8 +1424,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             },
@@ -1434,13 +1434,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             }
@@ -2099,8 +2099,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_S02_Buff_Value",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_S02_Buff_Value"
                     },
                     {
                       "name": "IF",
@@ -2152,7 +2152,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_S02_Buff_Value",
                               "value": {
                                 "operator": "Variables[0] (0.65) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                 "displayLines": "(0.65 + _S02_Buff_Value)",
@@ -2161,7 +2160,8 @@ const compositeAbilityObject = {
                                   0.65,
                                   "_S02_Buff_Value"
                                 ]
-                              }
+                              },
+                              "variableName": "_S02_Buff_Value"
                             }
                           ],
                           "failed": [
@@ -2176,7 +2176,6 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "_S02_Buff_Value",
                                   "value": {
                                     "operator": "Variables[0] (0.5) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                     "displayLines": "(0.5 + _S02_Buff_Value)",
@@ -2185,7 +2184,8 @@ const compositeAbilityObject = {
                                       0.5,
                                       "_S02_Buff_Value"
                                     ]
-                                  }
+                                  },
+                                  "variableName": "_S02_Buff_Value"
                                 }
                               ],
                               "failed": [
@@ -2200,7 +2200,6 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Define Custom Variable",
-                                      "variableName": "_S02_Buff_Value",
                                       "value": {
                                         "operator": "Variables[0] (0.15) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                         "displayLines": "(0.15 + _S02_Buff_Value)",
@@ -2209,7 +2208,8 @@ const compositeAbilityObject = {
                                           0.15,
                                           "_S02_Buff_Value"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "_S02_Buff_Value"
                                     }
                                   ],
                                   "failed": [
@@ -2224,7 +2224,6 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Define Custom Variable",
-                                          "variableName": "_S02_Buff_Value",
                                           "value": {
                                             "operator": "Variables[0] (0.05) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                             "displayLines": "(0.05 + _S02_Buff_Value)",
@@ -2233,7 +2232,8 @@ const compositeAbilityObject = {
                                               0.05,
                                               "_S02_Buff_Value"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "_S02_Buff_Value"
                                         }
                                       ]
                                     }
@@ -2310,7 +2310,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count_Max",
           "value": {
             "operator": "Variables[0] (16) || RETURN",
             "displayLines": "16",
@@ -2318,7 +2317,8 @@ const compositeAbilityObject = {
             "variables": [
               16
             ]
-          }
+          },
+          "variableName": "_Partner_Count_Max"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2470,8 +2470,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Evernight_PL_Layer",
-          "value": 0
+          "value": 0,
+          "variableName": "_Evernight_PL_Layer"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2493,7 +2493,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S03_Duration",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -2501,7 +2500,8 @@ const compositeAbilityObject = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "S03_Duration"
         },
         {
           "name": "IF",
@@ -2512,7 +2512,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "S03_Duration",
               "value": {
                 "operator": "Variables[0] (S03_Duration) || Variables[1] (2) || ADD || RETURN",
                 "displayLines": "(S03_Duration + 2)",
@@ -2521,11 +2520,11 @@ const compositeAbilityObject = {
                   "S03_Duration",
                   2
                 ]
-              }
+              },
+              "variableName": "S03_Duration"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Evernight_00_Extra_Energy",
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2533,7 +2532,8 @@ const compositeAbilityObject = {
                 "variables": [
                   2
                 ]
-              }
+              },
+              "variableName": "_Evernight_00_Extra_Energy"
             }
           ]
         },
@@ -3247,8 +3247,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Rank01_Rat",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Rank01_Rat"
                     },
                     {
                       "name": "Define Custom Variable with Team Count",
@@ -3270,8 +3270,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Alive_Count",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_Alive_Count"
                         }
                       ]
                     },
@@ -3286,8 +3286,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Alive_Count",
-                          "value": 4
+                          "value": 4,
+                          "variableName": "_Alive_Count"
                         }
                       ]
                     },
@@ -3308,7 +3308,6 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank01_Rat",
                               "value": {
                                 "operator": "Variables[0] (1.5) || RETURN",
                                 "displayLines": "1.5",
@@ -3316,7 +3315,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1.5
                                 ]
-                              }
+                              },
+                              "variableName": "_Rank01_Rat"
                             }
                           ]
                         },
@@ -3326,7 +3326,6 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank01_Rat",
                               "value": {
                                 "operator": "Variables[0] (1.3) || RETURN",
                                 "displayLines": "1.3",
@@ -3334,7 +3333,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1.3
                                 ]
-                              }
+                              },
+                              "variableName": "_Rank01_Rat"
                             }
                           ]
                         },
@@ -3344,7 +3344,6 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank01_Rat",
                               "value": {
                                 "operator": "Variables[0] (1.25) || RETURN",
                                 "displayLines": "1.25",
@@ -3352,7 +3351,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1.25
                                 ]
-                              }
+                              },
+                              "variableName": "_Rank01_Rat"
                             }
                           ]
                         },
@@ -3362,7 +3362,6 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Rank01_Rat",
                               "value": {
                                 "operator": "Variables[0] (1.2) || RETURN",
                                 "displayLines": "1.2",
@@ -3370,7 +3369,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   1.2
                                 ]
-                              }
+                              },
+                              "variableName": "_Rank01_Rat"
                             }
                           ]
                         }
@@ -3708,7 +3708,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "variableName": "_Skill03_Stance",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (AOE Toughness Value) || RETURN",
             "displayLines": "AOE Toughness Value",
@@ -3717,7 +3717,7 @@ const compositeAbilityObject = {
               "AOE Toughness Value"
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "_Skill03_Stance"
         },
         {
           "name": "Define Custom Variable",
@@ -3725,7 +3725,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}.[[getMemosprite]]"
           },
-          "variableName": "_Skill03_P1_DamagePercentage",
+          "scope": "TargetEntity",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -3734,7 +3734,7 @@ const compositeAbilityObject = {
               2
             ]
           },
-          "scope": "TargetEntity"
+          "variableName": "_Skill03_P1_DamagePercentage"
         },
         {
           "name": "Trigger Ability",
@@ -3914,8 +3914,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_S02_Buff_Value",
-          "value": 0
+          "value": 0,
+          "variableName": "_S02_Buff_Value"
         },
         {
           "name": "IF",
@@ -3967,7 +3967,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_S02_Buff_Value",
                   "value": {
                     "operator": "Variables[0] (0.65) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                     "displayLines": "(0.65 + _S02_Buff_Value)",
@@ -3976,7 +3975,8 @@ const compositeAbilityObject = {
                       0.65,
                       "_S02_Buff_Value"
                     ]
-                  }
+                  },
+                  "variableName": "_S02_Buff_Value"
                 }
               ],
               "failed": [
@@ -3991,7 +3991,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_S02_Buff_Value",
                       "value": {
                         "operator": "Variables[0] (0.5) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                         "displayLines": "(0.5 + _S02_Buff_Value)",
@@ -4000,7 +3999,8 @@ const compositeAbilityObject = {
                           0.5,
                           "_S02_Buff_Value"
                         ]
-                      }
+                      },
+                      "variableName": "_S02_Buff_Value"
                     }
                   ],
                   "failed": [
@@ -4015,7 +4015,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_S02_Buff_Value",
                           "value": {
                             "operator": "Variables[0] (0.15) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                             "displayLines": "(0.15 + _S02_Buff_Value)",
@@ -4024,7 +4023,8 @@ const compositeAbilityObject = {
                               0.15,
                               "_S02_Buff_Value"
                             ]
-                          }
+                          },
+                          "variableName": "_S02_Buff_Value"
                         }
                       ],
                       "failed": [
@@ -4039,7 +4039,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_S02_Buff_Value",
                               "value": {
                                 "operator": "Variables[0] (0.05) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                 "displayLines": "(0.05 + _S02_Buff_Value)",
@@ -4048,7 +4047,8 @@ const compositeAbilityObject = {
                                   0.05,
                                   "_S02_Buff_Value"
                                 ]
-                              }
+                              },
+                              "variableName": "_S02_Buff_Value"
                             }
                           ]
                         }
@@ -4474,8 +4474,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_S02_Buff_Value",
-          "value": 0
+          "value": 0,
+          "variableName": "_S02_Buff_Value"
         },
         {
           "name": "IF",
@@ -4527,7 +4527,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_S02_Buff_Value",
                   "value": {
                     "operator": "Variables[0] (0.65) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                     "displayLines": "(0.65 + _S02_Buff_Value)",
@@ -4536,7 +4535,8 @@ const compositeAbilityObject = {
                       0.65,
                       "_S02_Buff_Value"
                     ]
-                  }
+                  },
+                  "variableName": "_S02_Buff_Value"
                 }
               ],
               "failed": [
@@ -4551,7 +4551,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_S02_Buff_Value",
                       "value": {
                         "operator": "Variables[0] (0.5) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                         "displayLines": "(0.5 + _S02_Buff_Value)",
@@ -4560,7 +4559,8 @@ const compositeAbilityObject = {
                           0.5,
                           "_S02_Buff_Value"
                         ]
-                      }
+                      },
+                      "variableName": "_S02_Buff_Value"
                     }
                   ],
                   "failed": [
@@ -4575,7 +4575,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_S02_Buff_Value",
                           "value": {
                             "operator": "Variables[0] (0.15) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                             "displayLines": "(0.15 + _S02_Buff_Value)",
@@ -4584,7 +4583,8 @@ const compositeAbilityObject = {
                               0.15,
                               "_S02_Buff_Value"
                             ]
-                          }
+                          },
+                          "variableName": "_S02_Buff_Value"
                         }
                       ],
                       "failed": [
@@ -4599,7 +4599,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_S02_Buff_Value",
                               "value": {
                                 "operator": "Variables[0] (0.05) || Variables[1] (_S02_Buff_Value) || ADD || RETURN",
                                 "displayLines": "(0.05 + _S02_Buff_Value)",
@@ -4608,7 +4607,8 @@ const compositeAbilityObject = {
                                   0.05,
                                   "_S02_Buff_Value"
                                 ]
-                              }
+                              },
+                              "variableName": "_S02_Buff_Value"
                             }
                           ]
                         }
@@ -5123,8 +5123,8 @@ const compositeAbilityObject = {
                   "afterSummoning": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Evernight_00_DeathRattle_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Evernight_00_DeathRattle_Layer"
                     },
                     {
                       "name": "IF",
@@ -5804,7 +5804,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                     "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -5813,7 +5812,8 @@ const compositeAbilityObject = {
                       "MDF_Conv",
                       "MDF_CritBase"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -5952,7 +5952,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Conv",
                       "value": {
                         "operator": "Variables[0] (UnusedUnderThisBase_7830) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
                         "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)",
@@ -5961,11 +5960,11 @@ const compositeAbilityObject = {
                           "UnusedUnderThisBase_7830",
                           "S02_ExtraRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Conv"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_NEW_VAL",
                       "value": {
                         "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                         "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -5974,7 +5973,8 @@ const compositeAbilityObject = {
                           "MDF_Conv",
                           "MDF_CritBase"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_NEW_VAL"
                     },
                     {
                       "name": "Find New Target",
@@ -6059,7 +6059,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TMP_NEW_VAL",
                       "value": {
                         "operator": "Variables[0] (MDF_Conv) || Variables[1] (MDF_CritBase) || MUL || RETURN",
                         "displayLines": "(MDF_Conv * MDF_CritBase)",
@@ -6068,7 +6067,8 @@ const compositeAbilityObject = {
                           "MDF_Conv",
                           "MDF_CritBase"
                         ]
-                      }
+                      },
+                      "variableName": "_TMP_NEW_VAL"
                     },
                     {
                       "name": "Find New Target",
@@ -6293,7 +6293,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue_1) || Variables[1] (MDF_PropertyValue_2) || ADD || RETURN",
                         "displayLines": "(MDF_PropertyValue_1 + MDF_PropertyValue_2)",
@@ -6302,13 +6301,13 @@ const compositeAbilityObject = {
                           "MDF_PropertyValue_1",
                           "MDF_PropertyValue_2"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue_1) || RETURN",
                         "displayLines": "MDF_PropertyValue_1",
@@ -6316,7 +6315,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_PropertyValue_1"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_PropertyValue"
                     }
                   ]
                 },
@@ -6386,8 +6386,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -6406,15 +6406,15 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isCharmAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isCharmAttack"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isAttack"
                     }
                   ]
                 }
@@ -6425,13 +6425,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isCharmAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isCharmAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 }
               ]
             },
@@ -6440,13 +6440,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             },
@@ -6455,8 +6455,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -6484,20 +6484,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Check_isAttack",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Check_isAttack"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_AttackStart",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_AttackStart"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isAttack"
                     }
                   ],
                   "failed": [
@@ -6526,8 +6526,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Check_isAttack",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "MDF_Check_isAttack"
                             }
                           ]
                         }
@@ -6560,8 +6560,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Check_isHeal",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Check_isHeal"
                     }
                   ]
                 }
@@ -6572,8 +6572,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isHeal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isHeal"
                 }
               ]
             },
@@ -6609,8 +6609,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_Check_AttackStart",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_Check_AttackStart"
                             },
                             {
                               "name": "Define Custom Variable with Added Value",
@@ -6684,8 +6684,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             },
@@ -6694,13 +6694,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_isAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Check_AttackStart",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Check_AttackStart"
                 }
               ]
             }
@@ -7436,7 +7436,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Show",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue_2) || Variables[2] (_Evernight_00_DeathRattle_Layer) || MUL || ADD || RETURN",
                     "displayLines": "(MDF_PropertyValue + (MDF_PropertyValue_2 * _Evernight_00_DeathRattle_Layer))",
@@ -7446,7 +7445,8 @@ const compositeAbilityObject = {
                       "MDF_PropertyValue_2",
                       "_Evernight_00_DeathRattle_Layer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Show"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -8040,7 +8040,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_CountThresHold",
           "value": {
             "operator": "Variables[0] (4) || RETURN",
             "displayLines": "4",
@@ -8048,11 +8047,11 @@ const compositeAbilityObject = {
             "variables": [
               4
             ]
-          }
+          },
+          "variableName": "_Partner_CountThresHold"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count_Max",
           "value": {
             "operator": "Variables[0] (16) || RETURN",
             "displayLines": "16",
@@ -8060,7 +8059,8 @@ const compositeAbilityObject = {
             "variables": [
               16
             ]
-          }
+          },
+          "variableName": "_Partner_Count_Max"
         },
         {
           "name": "Use Custom Character Function",
@@ -8120,7 +8120,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Size",
           "value": {
             "operator": "Variables[0] (Init_Count) || RETURN",
             "displayLines": "Init_Count",
@@ -8128,11 +8127,11 @@ const compositeAbilityObject = {
             "variables": [
               "Init_Count"
             ]
-          }
+          },
+          "variableName": "_Partner_Size"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count",
           "value": {
             "operator": "Variables[0] (Init_Count) || RETURN",
             "displayLines": "Init_Count",
@@ -8140,7 +8139,8 @@ const compositeAbilityObject = {
             "variables": [
               "Init_Count"
             ]
-          }
+          },
+          "variableName": "_Partner_Count"
         },
         {
           "name": "Add Events/Bonuses",
@@ -8493,7 +8493,6 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   },
-                  "variableName": "_Partner_Count_Show",
                   "value": {
                     "operator": "Variables[0] (Init_Count) || RETURN",
                     "displayLines": "Init_Count",
@@ -8501,7 +8500,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "Init_Count"
                     ]
-                  }
+                  },
+                  "variableName": "_Partner_Count_Show"
                 }
               ]
             }
@@ -8523,7 +8523,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "_Partner_Count_Show",
                       "value": {
                         "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                         "displayLines": "_Partner_Count_Show",
@@ -8531,7 +8530,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_Partner_Count_Show"
                         ]
-                      }
+                      },
+                      "variableName": "_Partner_Count_Show"
                     }
                   ],
                   "onChange": [
@@ -8541,7 +8541,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster's Summoner}}"
                       },
-                      "variableName": "_Partner_Count_Show",
                       "value": {
                         "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                         "displayLines": "_Partner_Count_Show",
@@ -8549,7 +8548,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_Partner_Count_Show"
                         ]
-                      }
+                      },
+                      "variableName": "_Partner_Count_Show"
                     }
                   ]
                 }
@@ -8566,8 +8566,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Is_S11_Ready",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_S11_Ready"
                 }
               ]
             },
@@ -8728,8 +8728,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Follow_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Follow_Flag"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -8744,8 +8744,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Follow_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Follow_Flag"
                 }
               ]
             },
@@ -8763,8 +8763,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Follow_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Follow_Flag"
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -9091,7 +9091,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_Refund_Count",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (_Partner_Count_Show) || Variables[2] (AbilityRank_Eidolon6_P1_Ratio) || MUL || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_Partner_Count_Show * AbilityRank_Eidolon6_P1_Ratio))",
@@ -9101,14 +9100,15 @@ const compositeAbilityObject = {
                   "_Partner_Count_Show",
                   "AbilityRank_Eidolon6_P1_Ratio"
                 ]
-              }
+              },
+              "variableName": "_Rank06_Refund_Count"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S11_PointB1_Rat",
-          "value": 1
+          "value": 1,
+          "variableName": "S11_PointB1_Rat"
         },
         {
           "name": "ATK Scaling DMG",
@@ -9208,7 +9208,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_Evernight_00_DeathRattle_Layer",
               "value": {
                 "operator": "Variables[0] (40) || RETURN",
                 "displayLines": "40",
@@ -9216,7 +9215,8 @@ const compositeAbilityObject = {
                 "variables": [
                   40
                 ]
-              }
+              },
+              "variableName": "_Evernight_00_DeathRattle_Layer"
             }
           ],
           "failed": [
@@ -9226,7 +9226,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_Evernight_00_DeathRattle_Layer",
               "value": {
                 "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                 "displayLines": "_Partner_Count_Show",
@@ -9234,14 +9233,15 @@ const compositeAbilityObject = {
                 "variables": [
                   "_Partner_Count_Show"
                 ]
-              }
+              },
+              "variableName": "_Evernight_00_DeathRattle_Layer"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "_Partner_Count"
         },
         {
           "name": "IF",
@@ -9425,7 +9425,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Rank06_Refund_Count",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (_Partner_Count_Show) || Variables[2] (AbilityRank_Eidolon6_P1_Ratio) || MUL || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>((_Partner_Count_Show * AbilityRank_Eidolon6_P1_Ratio))",
@@ -9435,14 +9434,15 @@ const compositeAbilityObject = {
                   "_Partner_Count_Show",
                   "AbilityRank_Eidolon6_P1_Ratio"
                 ]
-              }
+              },
+              "variableName": "_Rank06_Refund_Count"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S11_PointB1_Rat",
-          "value": 1
+          "value": 1,
+          "variableName": "S11_PointB1_Rat"
         },
         {
           "name": "ATK Scaling DMG",
@@ -9542,7 +9542,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_Evernight_00_DeathRattle_Layer",
               "value": {
                 "operator": "Variables[0] (40) || RETURN",
                 "displayLines": "40",
@@ -9550,7 +9549,8 @@ const compositeAbilityObject = {
                 "variables": [
                   40
                 ]
-              }
+              },
+              "variableName": "_Evernight_00_DeathRattle_Layer"
             }
           ],
           "failed": [
@@ -9560,7 +9560,6 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "_Evernight_00_DeathRattle_Layer",
               "value": {
                 "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
                 "displayLines": "_Partner_Count_Show",
@@ -9568,14 +9567,15 @@ const compositeAbilityObject = {
                 "variables": [
                   "_Partner_Count_Show"
                 ]
-              }
+              },
+              "variableName": "_Evernight_00_DeathRattle_Layer"
             }
           ]
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count",
-          "value": 0
+          "value": 0,
+          "variableName": "_Partner_Count"
         },
         {
           "name": "IF",
@@ -9973,7 +9973,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S01_T_PTN",
           "value": {
             "operator": "Variables[0] (_Partner_Count_Show) || RETURN",
             "displayLines": "_Partner_Count_Show",
@@ -9981,12 +9980,13 @@ const compositeAbilityObject = {
             "variables": [
               "_Partner_Count_Show"
             ]
-          }
+          },
+          "variableName": "S01_T_PTN"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "S01_HitCount",
-          "value": 0
+          "value": 0,
+          "variableName": "S01_HitCount"
         },
         {
           "name": "Looped Event",
@@ -10006,7 +10006,6 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "S01_T_PTN",
               "value": {
                 "operator": "Variables[0] (S01_T_PTN) || Variables[1] (_Partner_CountThresHold) || SUB || RETURN",
                 "displayLines": "(S01_T_PTN - _Partner_CountThresHold)",
@@ -10015,11 +10014,11 @@ const compositeAbilityObject = {
                   "S01_T_PTN",
                   "_Partner_CountThresHold"
                 ]
-              }
+              },
+              "variableName": "S01_T_PTN"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "S01_HitCount",
               "value": {
                 "operator": "Variables[0] (S01_HitCount) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(S01_HitCount + 1)",
@@ -10029,7 +10028,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "S01_HitCount"
                 ]
-              }
+              },
+              "variableName": "S01_HitCount"
             }
           ]
         },
@@ -10274,7 +10274,6 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "_Partner_Count",
           "value": {
             "operator": "Variables[0] (_Partner_Count_Show) || Variables[1] (1) || ADD || Variables[2] (_Evernight_00_Extra_Energy) || ADD || RETURN",
             "displayLines": "((_Partner_Count_Show + 1) + _Evernight_00_Extra_Energy)",
@@ -10284,7 +10283,8 @@ const compositeAbilityObject = {
               1,
               "_Evernight_00_Extra_Energy"
             ]
-          }
+          },
+          "variableName": "_Partner_Count"
         },
         {
           "name": "IF",
@@ -10709,8 +10709,8 @@ const compositeAbilityObject = {
                   "afterSummoning": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Evernight_00_DeathRattle_Layer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Evernight_00_DeathRattle_Layer"
                     },
                     {
                       "name": "IF",

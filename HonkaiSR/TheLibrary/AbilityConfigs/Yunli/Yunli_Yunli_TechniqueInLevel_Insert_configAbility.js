@@ -19,9 +19,9 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MazeSkill_Triggered",
+          "scope": "ContextCaster",
           "value": 1,
-          "scope": "ContextCaster"
+          "variableName": "MazeSkill_Triggered"
         },
         "Deleted bullshit",
         {

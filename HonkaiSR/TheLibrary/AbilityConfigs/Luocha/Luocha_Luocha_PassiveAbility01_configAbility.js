@@ -444,8 +444,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IsInserAbilityTrigger",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "IsInserAbilityTrigger"
                 },
                 {
                   "name": "IF",

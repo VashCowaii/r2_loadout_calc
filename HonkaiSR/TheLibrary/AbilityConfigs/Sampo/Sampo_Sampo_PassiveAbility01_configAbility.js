@@ -38,7 +38,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Tree01_LifeTimeAdd",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -46,14 +45,15 @@ const configAbility = {
                     "variables": [
                       1
                     ]
-                  }
+                  },
+                  "variableName": "_Tree01_LifeTimeAdd"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Tree01_LifeTimeAdd",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Tree01_LifeTimeAdd"
                 }
               ]
             },
@@ -66,7 +66,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank06_DamagePercentageAdd",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
                     "displayLines": "0.15",
@@ -74,14 +73,15 @@ const configAbility = {
                     "variables": [
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "_Rank06_DamagePercentageAdd"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Rank06_DamagePercentageAdd",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Rank06_DamagePercentageAdd"
                 }
               ]
             },

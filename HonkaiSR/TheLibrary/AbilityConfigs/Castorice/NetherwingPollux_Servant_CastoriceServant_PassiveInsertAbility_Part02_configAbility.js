@@ -66,7 +66,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || Variables[1] (CastoriceServant_Eidolon6_AddCount) || ADD || RETURN",
             "displayLines": "(6 + CastoriceServant_Eidolon6_AddCount)",
@@ -75,13 +74,13 @@ const configAbility = {
               6,
               "CastoriceServant_Eidolon6_AddCount"
             ]
-          }
+          },
+          "variableName": "CastoriceServant_LoopCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CastoriceServant_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -89,13 +88,13 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "CastoriceServant_LoopCount"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP04_P1_HPPercentage",
       "value": {
         "operator": "Variables[0] (0.4) || Variables[1] (SkillP04_P1_ExtraAddPercentage) || ADD || RETURN",
         "displayLines": "(0.4 + SkillP04_P1_ExtraAddPercentage)",
@@ -104,7 +103,8 @@ const configAbility = {
           0.4,
           "SkillP04_P1_ExtraAddPercentage"
         ]
-      }
+      },
+      "variableName": "SkillP04_P1_HPPercentage"
     },
     {
       "name": "Looped Event",

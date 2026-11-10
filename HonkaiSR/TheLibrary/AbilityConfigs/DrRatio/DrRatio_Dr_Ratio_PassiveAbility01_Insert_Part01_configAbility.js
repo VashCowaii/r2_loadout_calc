@@ -127,8 +127,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 0
+          "value": 0,
+          "variableName": "OnInsertAbort_Flg"
         },
         {
           "name": "Use Custom Character Function",

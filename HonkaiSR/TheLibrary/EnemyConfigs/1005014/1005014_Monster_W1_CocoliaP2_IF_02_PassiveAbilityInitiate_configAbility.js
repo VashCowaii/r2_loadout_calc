@@ -18,7 +18,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ice_Lance_ID",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID01) || RETURN",
         "displayLines": "Monster_W1_CocoliaP2_00_SummonMonsterID01",
@@ -26,11 +25,11 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID01"
         ]
-      }
+      },
+      "variableName": "Ice_Lance_ID"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ice_Lance_ID_2",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID02) || RETURN",
         "displayLines": "Monster_W1_CocoliaP2_00_SummonMonsterID02",
@@ -38,11 +37,11 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID02"
         ]
-      }
+      },
+      "variableName": "Ice_Lance_ID_2"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Monster_W1_CocoliaP2_00_SummonMonsterID03",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID01) || Constants[0] (300) || ADD || RETURN",
         "displayLines": "(Monster_W1_CocoliaP2_00_SummonMonsterID01 + 300)",
@@ -52,11 +51,11 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID01"
         ]
-      }
+      },
+      "variableName": "Monster_W1_CocoliaP2_00_SummonMonsterID03"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Monster_W1_CocoliaP2_00_SummonMonsterID04",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID02) || Constants[0] (100) || SUB || RETURN",
         "displayLines": "(Monster_W1_CocoliaP2_00_SummonMonsterID02 - 100)",
@@ -66,11 +65,11 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID02"
         ]
-      }
+      },
+      "variableName": "Monster_W1_CocoliaP2_00_SummonMonsterID04"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ice_Lance_ID_3",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID03) || RETURN",
         "displayLines": "Monster_W1_CocoliaP2_00_SummonMonsterID03",
@@ -78,11 +77,11 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID03"
         ]
-      }
+      },
+      "variableName": "Ice_Lance_ID_3"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Ice_Lance_ID_4",
       "value": {
         "operator": "Variables[0] (Monster_W1_CocoliaP2_00_SummonMonsterID04) || RETURN",
         "displayLines": "Monster_W1_CocoliaP2_00_SummonMonsterID04",
@@ -90,7 +89,8 @@ const configAbility = {
         "variables": [
           "Monster_W1_CocoliaP2_00_SummonMonsterID04"
         ]
-      }
+      },
+      "variableName": "Ice_Lance_ID_4"
     },
     {
       "name": "Add Events/Bonuses",
@@ -358,8 +358,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Monster_W1_CocoliaP2_00_SummonRecord",
-              "value": 0
+              "value": 0,
+              "variableName": "Monster_W1_CocoliaP2_00_SummonRecord"
             }
           ]
         }

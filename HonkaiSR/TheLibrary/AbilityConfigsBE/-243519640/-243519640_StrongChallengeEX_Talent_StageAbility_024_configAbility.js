@@ -34,8 +34,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CheckTimes",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_CheckTimes"
                 }
               ]
             }
@@ -77,8 +77,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Insert_Flag"
                 }
               ]
             }
@@ -89,8 +89,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Insert_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "Insert_Flag"
             }
           ]
         },
@@ -108,8 +108,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Insert_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Insert_Flag"
                 },
                 {
                   "name": "Use Custom Character Function",
@@ -131,7 +131,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CheckTimes",
                   "value": {
                     "operator": "Variables[0] (_CheckTimes) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_CheckTimes + 1)",
@@ -141,7 +140,8 @@ const configAbility = {
                     "variables": [
                       "_CheckTimes"
                     ]
-                  }
+                  },
+                  "variableName": "_CheckTimes"
                 }
               ]
             }

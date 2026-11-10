@@ -24,7 +24,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "HitRatio",
           "value": {
             "operator": "Variables[0] (0.6) || Variables[1] (Skill01Count) || Variables[2] (0.06) || MUL || ADD || RETURN",
             "displayLines": "(0.6 + (Skill01Count * 0.06))",
@@ -34,13 +33,13 @@ const configAbility = {
               "Skill01Count",
               0.06
             ]
-          }
+          },
+          "variableName": "HitRatio"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "HitRatio",
           "value": {
             "operator": "Variables[0] (0.6) || RETURN",
             "displayLines": "0.6",
@@ -48,7 +47,8 @@ const configAbility = {
             "variables": [
               0.6
             ]
-          }
+          },
+          "variableName": "HitRatio"
         }
       ]
     },
@@ -63,8 +63,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "IsInRank01Action",
-          "value": 0
+          "value": 0,
+          "variableName": "IsInRank01Action"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -83,7 +83,6 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HitCount",
               "value": {
                 "operator": "Variables[0] (HitCount) || Variables[1] (12) || ADD || RETURN",
                 "displayLines": "(HitCount + 12)",
@@ -92,7 +91,8 @@ const configAbility = {
                   "HitCount",
                   12
                 ]
-              }
+              },
+              "variableName": "HitCount"
             },
             {
               "name": "Use Custom Character Function",
@@ -157,8 +157,8 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "IsInPlayerAction",
-              "value": 0
+              "value": 0,
+              "variableName": "IsInPlayerAction"
             },
             {
               "name": "IF",

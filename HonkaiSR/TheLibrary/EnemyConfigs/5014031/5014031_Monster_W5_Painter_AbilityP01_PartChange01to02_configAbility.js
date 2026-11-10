@@ -33,8 +33,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "PhaseInsertCheck",
-      "value": 0
+      "value": 0,
+      "variableName": "PhaseInsertCheck"
     },
     {
       "name": "IF",

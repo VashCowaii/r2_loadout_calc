@@ -64,8 +64,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ChargeUse",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "ChargeUse"
                     }
                   ]
                 }
@@ -451,9 +451,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -498,9 +498,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -800,7 +800,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha03_00_DamageUpPercentage",
                                       "value": {
                                         "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                         "displayLines": "{[Skill02[0]]}",
@@ -808,7 +807,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "{[Skill02[0]]}"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha03_00_DamageUpPercentage"
                                     },
                                     {
                                       "name": "IF",
@@ -842,7 +842,6 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
                                             "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                             "displayLines": "UnusedUnderThisBase_8637",
@@ -850,7 +849,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "UnusedUnderThisBase_8637"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "Mecha03_00_DamageUpBasePercentage"
                                         }
                                       ]
                                     }
@@ -1031,7 +1031,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha03_00_DamageUpPercentage",
                                       "value": {
                                         "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                         "displayLines": "{[Skill02[0]]}",
@@ -1039,7 +1038,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "{[Skill02[0]]}"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha03_00_DamageUpPercentage"
                                     },
                                     {
                                       "name": "IF",
@@ -1073,7 +1073,6 @@ const compositeAbilityObject = {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
                                           },
-                                          "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
                                             "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                             "displayLines": "UnusedUnderThisBase_8637",
@@ -1081,7 +1080,8 @@ const compositeAbilityObject = {
                                             "variables": [
                                               "UnusedUnderThisBase_8637"
                                             ]
-                                          }
+                                          },
+                                          "variableName": "Mecha03_00_DamageUpBasePercentage"
                                         }
                                       ]
                                     },
@@ -1466,7 +1466,6 @@ const compositeAbilityObject = {
                                                         "name": "Target Name",
                                                         "target": "{{Parameter Target}}"
                                                       },
-                                                      "variableName": "Mecha03_00_DamageUpPercentage",
                                                       "value": {
                                                         "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                                         "displayLines": "{[Skill02[0]]}",
@@ -1474,7 +1473,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "{[Skill02[0]]}"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "Mecha03_00_DamageUpPercentage"
                                                     },
                                                     {
                                                       "name": "IF",
@@ -1508,7 +1508,6 @@ const compositeAbilityObject = {
                                                             "name": "Target Name",
                                                             "target": "{{Parameter Target}}"
                                                           },
-                                                          "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                           "value": {
                                                             "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                                             "displayLines": "UnusedUnderThisBase_8637",
@@ -1516,7 +1515,8 @@ const compositeAbilityObject = {
                                                             "variables": [
                                                               "UnusedUnderThisBase_8637"
                                                             ]
-                                                          }
+                                                          },
+                                                          "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                         }
                                                       ]
                                                     }
@@ -1715,7 +1715,6 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "variableName": "Mecha03_00_DamageUpPercentage",
                                                   "value": {
                                                     "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
                                                     "displayLines": "{[Skill02[0]]}",
@@ -1723,7 +1722,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "{[Skill02[0]]}"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "Mecha03_00_DamageUpPercentage"
                                                 },
                                                 {
                                                   "name": "IF",
@@ -1757,7 +1757,6 @@ const compositeAbilityObject = {
                                                         "name": "Target Name",
                                                         "target": "{{Parameter Target}}"
                                                       },
-                                                      "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
                                                         "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
                                                         "displayLines": "UnusedUnderThisBase_8637",
@@ -1765,7 +1764,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "UnusedUnderThisBase_8637"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "Mecha03_00_DamageUpBasePercentage"
                                                     }
                                                   ]
                                                 },

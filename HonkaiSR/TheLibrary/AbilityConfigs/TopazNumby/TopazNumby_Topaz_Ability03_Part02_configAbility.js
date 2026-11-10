@@ -90,7 +90,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "CurEnhance",
       "value": {
         "operator": "Variables[0] (MaxEnhance) || RETURN",
         "displayLines": "MaxEnhance",
@@ -98,7 +97,8 @@ const configAbility = {
         "variables": [
           "MaxEnhance"
         ]
-      }
+      },
+      "variableName": "CurEnhance"
     },
     {
       "name": "Show Attack Count",

@@ -22,8 +22,8 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Archer_in_Team",
-          "value": 1
+          "value": 1,
+          "variableName": "Archer_in_Team"
         }
       ]
     },

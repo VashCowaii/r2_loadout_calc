@@ -95,8 +95,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "InsertAction",
-              "value": 0
+              "value": 0,
+              "variableName": "InsertAction"
             }
           ]
         },
@@ -150,8 +150,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -224,8 +224,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -290,8 +290,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "InsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "InsertAction"
                 },
                 {
                   "name": "IF",
@@ -341,8 +341,8 @@ const configAbility = {
                   "afterInjection": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Seele_BonusInsertAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Seele_BonusInsertAction"
                     }
                   ]
                 }
@@ -391,15 +391,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Seele_BonusInsertAction"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Seele_BonusInsertAction",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Seele_BonusInsertAction"
                 }
               ]
             }

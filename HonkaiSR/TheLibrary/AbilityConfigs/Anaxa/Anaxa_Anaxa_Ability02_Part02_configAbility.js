@@ -58,13 +58,12 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_count",
+      "scope": "ContextAbility",
       "value": 0,
-      "scope": "ContextAbility"
+      "variableName": "_count"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_LoopCount",
       "value": {
         "operator": "Variables[0] (4) || Variables[1] (Skill02_ExtraHitCount) || ADD || RETURN",
         "displayLines": "(4 + Skill02_ExtraHitCount)",
@@ -73,7 +72,8 @@ const configAbility = {
           4,
           "Skill02_ExtraHitCount"
         ]
-      }
+      },
+      "variableName": "ADF_LoopCount"
     },
     {
       "name": "ATK Scaling DMG",

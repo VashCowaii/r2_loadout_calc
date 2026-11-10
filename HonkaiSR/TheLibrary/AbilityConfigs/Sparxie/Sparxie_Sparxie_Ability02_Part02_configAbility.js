@@ -139,7 +139,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_SkillUseCount",
       "value": {
         "operator": "Variables[0] (_SkillUseCount) || Constants[0] (1) || ADD || RETURN",
         "displayLines": "(_SkillUseCount + 1)",
@@ -149,7 +148,8 @@ const configAbility = {
         "variables": [
           "_SkillUseCount"
         ]
-      }
+      },
+      "variableName": "_SkillUseCount"
     },
     {
       "name": "Sparxie Test Data",

@@ -181,7 +181,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || Variables[1] (3) || ADD || RETURN",
             "displayLines": "(6 + 3)",
@@ -190,13 +189,13 @@ const configAbility = {
               6,
               3
             ]
-          }
+          },
+          "variableName": "MDF_LoopCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_LoopCount",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -204,13 +203,13 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "MDF_LoopCount"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_LoopDamage",
       "value": {
         "operator": "Variables[0] (0.72) || RETURN",
         "displayLines": "0.72",
@@ -218,7 +217,8 @@ const configAbility = {
         "variables": [
           0.72
         ]
-      }
+      },
+      "variableName": "MDF_LoopDamage"
     },
     {
       "name": "Looped Event",
@@ -333,8 +333,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "OnInsertAbort_Flg",
-      "value": 1
+      "value": 1,
+      "variableName": "OnInsertAbort_Flg"
     },
     {
       "name": "Remove Events/Bonuses",
@@ -367,7 +367,6 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_Energy_Count",
           "value": {
             "operator": "Variables[0] (MDF_Energy_Count) || Constants[0] (1) || SUB || RETURN",
             "displayLines": "(MDF_Energy_Count - 1)",
@@ -377,7 +376,8 @@ const configAbility = {
             "variables": [
               "MDF_Energy_Count"
             ]
-          }
+          },
+          "variableName": "MDF_Energy_Count"
         }
       ]
     },

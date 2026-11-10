@@ -57,7 +57,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SummonCount",
       "value": {
         "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
         "displayLines": "{[Skill03[3]]}",
@@ -65,7 +64,8 @@ const configAbility = {
         "variables": [
           "{[Skill03[3]]}"
         ]
-      }
+      },
+      "variableName": "SummonCount"
     },
     {
       "name": "Add Events/Bonuses",

@@ -22,7 +22,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_ReviveTime",
           "value": {
             "operator": "Variables[0] (1) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(1 + 1)",
@@ -32,20 +31,20 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "MDF_ReviveTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_ReviveTime",
-          "value": 1
+          "value": 1,
+          "variableName": "MDF_ReviveTime"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_ReviveTime2",
       "value": {
         "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
         "displayLines": "MDF_ReviveTime",
@@ -53,7 +52,8 @@ const configAbility = {
         "variables": [
           "MDF_ReviveTime"
         ]
-      }
+      },
+      "variableName": "MDF_ReviveTime2"
     },
     {
       "name": "Add Events/Bonuses",

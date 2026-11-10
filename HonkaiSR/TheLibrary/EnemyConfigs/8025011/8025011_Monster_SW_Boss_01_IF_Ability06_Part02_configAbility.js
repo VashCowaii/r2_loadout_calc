@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill06FinalDamage",
       "value": {
         "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
         "displayLines": "{[Skill06[0]]}",
@@ -14,7 +13,8 @@ const configAbility = {
         "variables": [
           "{[Skill06[0]]}"
         ]
-      }
+      },
+      "variableName": "Skill06FinalDamage"
     },
     {
       "name": "Remove Events/Bonuses",

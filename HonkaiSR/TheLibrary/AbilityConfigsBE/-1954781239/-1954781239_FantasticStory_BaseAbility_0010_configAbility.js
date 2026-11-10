@@ -88,7 +88,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BattleEvent_BaseHP",
       "value": {
         "operator": "Variables[0] (BattleEvent_BaseHP) || Constants[0] (90) || MUL || RETURN",
         "displayLines": "(BattleEvent_BaseHP * 90)",
@@ -98,7 +97,8 @@ const configAbility = {
         "variables": [
           "BattleEvent_BaseHP"
         ]
-      }
+      },
+      "variableName": "BattleEvent_BaseHP"
     },
     {
       "name": "Add Events/Bonuses",
@@ -216,7 +216,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_FantasticStory_PlusAbility_0013_layerDmg",
               "value": {
                 "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0013_layer) || Variables[1] (DmgAddedRatio) || MUL || RETURN",
                 "displayLines": "(DV_FantasticStory_PlusAbility_0013_layer * DmgAddedRatio)",
@@ -225,7 +224,8 @@ const configAbility = {
                   "DV_FantasticStory_PlusAbility_0013_layer",
                   "DmgAddedRatio"
                 ]
-              }
+              },
+              "variableName": "DV_FantasticStory_PlusAbility_0013_layerDmg"
             }
           ]
         }
@@ -277,7 +277,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Plus5_Bomb_Damage",
                   "value": {
                     "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_FantasticStory_PlusAbility_0015_ADF_1) || MUL || ADD || MUL || RETURN",
                     "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))",
@@ -289,7 +288,8 @@ const configAbility = {
                       "Plus5_Layer",
                       "DV_FantasticStory_PlusAbility_0015_ADF_1"
                     ]
-                  }
+                  },
+                  "variableName": "Plus5_Bomb_Damage"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -349,14 +349,13 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Plus5_Layer",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Plus5_Layer"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Plus5_Bomb_Damage",
                       "value": {
                         "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (Plus5_Layer) || Variables[2] (DV_FantasticStory_PlusAbility_0015_ADF_1) || MUL || ADD || MUL || RETURN",
                         "displayLines": "(Bomb_Damage * (1 + (Plus5_Layer * DV_FantasticStory_PlusAbility_0015_ADF_1)))",
@@ -368,7 +367,8 @@ const configAbility = {
                           "Plus5_Layer",
                           "DV_FantasticStory_PlusAbility_0015_ADF_1"
                         ]
-                      }
+                      },
+                      "variableName": "Plus5_Bomb_Damage"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -515,7 +515,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Bomb_Damage_Initial",
               "value": {
                 "operator": "Variables[0] (Bomb_Damage) || RETURN",
                 "displayLines": "Bomb_Damage",
@@ -523,11 +522,11 @@ const configAbility = {
                 "variables": [
                   "Bomb_Damage"
                 ]
-              }
+              },
+              "variableName": "Bomb_Damage_Initial"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Bomb_Damage",
               "value": {
                 "operator": "Variables[0] (Bomb_Damage) || Variables[1] (Bomb_Layer) || MUL || RETURN",
                 "displayLines": "(Bomb_Damage * Bomb_Layer)",
@@ -536,7 +535,8 @@ const configAbility = {
                   "Bomb_Damage",
                   "Bomb_Layer"
                 ]
-              }
+              },
+              "variableName": "Bomb_Damage"
             },
             {
               "name": "Add Ability",
@@ -895,8 +895,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "DV_BeingHitCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "DV_BeingHitCount"
                     }
                   ]
                 }
@@ -984,8 +984,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "DV_BeingHitCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "DV_BeingHitCount"
                         }
                       ]
                     }
@@ -1016,8 +1016,8 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_BeingHitCount",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "DV_BeingHitCount"
                             },
                             {
                               "name": "IF",
@@ -1126,8 +1126,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "DV_BeingHitCount",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "DV_BeingHitCount"
                             }
                           ]
                         }

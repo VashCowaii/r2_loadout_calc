@@ -15,8 +15,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_FirstProgressInfo",
-          "value": 1
+          "value": 1,
+          "variableName": "_FirstProgressInfo"
         },
         {
           "name": "Start Battle Track Progress",
@@ -111,8 +111,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_EnterBattle",
-      "value": 0
+      "value": 0,
+      "variableName": "_EnterBattle"
     },
     {
       "name": "Add Events/Bonuses",

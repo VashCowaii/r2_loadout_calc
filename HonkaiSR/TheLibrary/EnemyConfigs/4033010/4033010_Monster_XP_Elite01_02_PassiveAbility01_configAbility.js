@@ -141,8 +141,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_CurrentCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -185,7 +185,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (_CurrentCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(_CurrentCount + 1)",
@@ -195,7 +194,8 @@ const configAbility = {
                     "variables": [
                       "_CurrentCount"
                     ]
-                  }
+                  },
+                  "variableName": "_CurrentCount"
                 },
                 {
                   "name": "IF",
@@ -215,7 +215,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_CurrentCount",
                       "value": {
                         "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                         "displayLines": "{[SkillP01[0]]}",
@@ -223,7 +222,8 @@ const configAbility = {
                         "variables": [
                           "{[SkillP01[0]]}"
                         ]
-                      }
+                      },
+                      "variableName": "_CurrentCount"
                     },
                     {
                       "name": "Add Events/Bonuses",

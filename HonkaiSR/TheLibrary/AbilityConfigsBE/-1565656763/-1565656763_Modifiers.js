@@ -210,7 +210,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CostHP",
                   "value": {
                     "operator": "Variables[0] (MaxHP) || Constants[0] (0.3) || MUL || RETURN",
                     "displayLines": "(MaxHP * 0.3)",
@@ -220,11 +219,11 @@ const configAbility = {
                     "variables": [
                       "MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "CostHP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "HPFloor",
                   "value": {
                     "operator": "Variables[0] (MaxHP) || Constants[0] (0.5) || MUL || RETURN",
                     "displayLines": "(MaxHP * 0.5)",
@@ -234,11 +233,11 @@ const configAbility = {
                     "variables": [
                       "MaxHP"
                     ]
-                  }
+                  },
+                  "variableName": "HPFloor"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TargetHP",
                   "value": {
                     "operator": "Variables[0] (CurrentHP) || Variables[1] (CostHP) || SUB || RETURN",
                     "displayLines": "(CurrentHP - CostHP)",
@@ -247,7 +246,8 @@ const configAbility = {
                       "CurrentHP",
                       "CostHP"
                     ]
-                  }
+                  },
+                  "variableName": "TargetHP"
                 },
                 {
                   "name": "IF",
@@ -1312,8 +1312,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageTakenUpValue",
-              "value": 0.6
+              "value": 0.6,
+              "variableName": "DamageTakenUpValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1627,8 +1627,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageTakenUpValue",
-              "value": 0.4
+              "value": 0.4,
+              "variableName": "DamageTakenUpValue"
             },
             {
               "name": "Stack Target Stat Value",

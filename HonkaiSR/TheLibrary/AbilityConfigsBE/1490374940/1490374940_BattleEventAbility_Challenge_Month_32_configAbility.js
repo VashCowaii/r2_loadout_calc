@@ -281,7 +281,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
                   "value": {
                     "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P1_ADF) || ADD || RETURN",
                     "displayLines": "(MDF_Count + BattleEvent_P1_ADF)",
@@ -290,7 +289,8 @@ const configAbility = {
                       "MDF_Count",
                       "BattleEvent_P1_ADF"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "IF",
@@ -306,7 +306,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (MDF_Count) || Variables[1] (BattleEvent_P2_ADF) || ADD || RETURN",
                         "displayLines": "(MDF_Count + BattleEvent_P2_ADF)",
@@ -315,7 +314,8 @@ const configAbility = {
                           "MDF_Count",
                           "BattleEvent_P2_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 },
@@ -371,7 +371,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Count",
                       "value": {
                         "operator": "Variables[0] (BattleEvent_P3_ADF) || RETURN",
                         "displayLines": "BattleEvent_P3_ADF",
@@ -379,7 +378,8 @@ const configAbility = {
                         "variables": [
                           "BattleEvent_P3_ADF"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Count"
                     }
                   ]
                 }

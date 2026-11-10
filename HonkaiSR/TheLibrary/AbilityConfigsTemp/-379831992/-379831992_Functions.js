@@ -571,8 +571,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}"
                       },
-                      "variableName": "MDF_PerformanceDelay",
-                      "value": 0.3
+                      "value": 0.3,
+                      "variableName": "MDF_PerformanceDelay"
                     }
                   ],
                   "failed": [
@@ -582,8 +582,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}"
                       },
-                      "variableName": "MDF_PerformanceDelay",
-                      "value": 0.2
+                      "value": 0.2,
+                      "variableName": "MDF_PerformanceDelay"
                     }
                   ]
                 }
@@ -602,8 +602,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}"
                       },
-                      "variableName": "MDF_PerformanceDelay",
-                      "value": 0.5
+                      "value": 0.5,
+                      "variableName": "MDF_PerformanceDelay"
                     }
                   ],
                   "failed": [
@@ -613,8 +613,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}.[[living]] + {{Currency Wars Full OffFieldList}}"
                       },
-                      "variableName": "MDF_PerformanceDelay",
-                      "value": 0.3
+                      "value": 0.3,
+                      "variableName": "MDF_PerformanceDelay"
                     }
                   ]
                 }

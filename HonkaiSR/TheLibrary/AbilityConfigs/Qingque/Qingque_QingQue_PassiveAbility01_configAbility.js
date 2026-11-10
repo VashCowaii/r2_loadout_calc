@@ -19,22 +19,21 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_BPCoolDown",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_BPCoolDown"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_BPCount",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_BPCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_CardCount",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_CardCount"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_PropertyValue01",
       "value": {
         "operator": "Variables[0] (0.72) || RETURN",
         "displayLines": "0.72",
@@ -42,11 +41,11 @@ const configAbility = {
         "variables": [
           0.72
         ]
-      }
+      },
+      "variableName": "MDF_PropertyValue01"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_PropertyValue",
       "value": {
         "operator": "Variables[0] (0.72) || RETURN",
         "displayLines": "0.72",
@@ -54,22 +53,23 @@ const configAbility = {
         "variables": [
           0.72
         ]
-      }
+      },
+      "variableName": "MDF_PropertyValue"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_Wan",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_Wan"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_Tong",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_Tong"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "QingQue_Tiao",
-      "value": 0
+      "value": 0,
+      "variableName": "QingQue_Tiao"
     },
     {
       "name": "Add Events/Bonuses",

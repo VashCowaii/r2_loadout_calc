@@ -218,7 +218,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DeathPartMaxHPCount",
               "value": {
                 "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
                 "displayLines": "{[Skill03[3]]}",
@@ -226,7 +225,8 @@ const configAbility = {
                 "variables": [
                   "{[Skill03[3]]}"
                 ]
-              }
+              },
+              "variableName": "DeathPartMaxHPCount"
             }
           ]
         },
@@ -1866,8 +1866,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BonusAttackCounter",
-              "value": 0
+              "value": 0,
+              "variableName": "BonusAttackCounter"
             },
             {
               "name": "Remove Events/Bonuses",

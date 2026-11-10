@@ -515,7 +515,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
                   "value": {
                     "operator": "Constants[0] (0) || RETURN",
                     "displayLines": "0",
@@ -523,7 +522,8 @@ const compositeAbilityObject = {
                       0
                     ],
                     "variables": []
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -633,8 +633,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_isShowSpecialMark",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_isShowSpecialMark"
                         },
                         {
                           "name": "Toggle Skill Mark",
@@ -681,8 +681,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_isShowSpecialMark"
                     },
                     {
                       "name": "Toggle Skill Mark"
@@ -753,8 +753,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -879,7 +879,6 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
                               "value": {
                                 "operator": "Constants[0] (1) || Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || ADD || RETURN",
                                 "displayLines": "(1 + MDF_PropertyValue4_InsertCriticalDamageAddLayer)",
@@ -889,7 +888,8 @@ const compositeAbilityObject = {
                                 "variables": [
                                   "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
                                 ]
-                              }
+                              },
+                              "variableName": "MDF_PropertyValue4_InsertCriticalDamageAddLayer"
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -944,8 +944,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_isShowSpecialMark"
                     },
                     {
                       "name": "Toggle Skill Mark"
@@ -973,8 +973,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_isShowSpecialMark",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_isShowSpecialMark"
                     },
                     {
                       "name": "Toggle Skill Mark"
@@ -1262,8 +1262,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 1
+              "value": 1,
+              "variableName": "HasHitEffect"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1277,8 +1277,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "HasHitEffect",
-              "value": 0
+              "value": 0,
+              "variableName": "HasHitEffect"
             }
           ]
         },
@@ -1450,9 +1450,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "variableName": "_damageStart",
+              "scope": "ContextCaster",
               "value": 1,
-              "scope": "ContextCaster"
+              "variableName": "_damageStart"
             }
           ],
           "failed": [
@@ -1463,9 +1463,9 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "variableName": "_damageStart",
+              "scope": "ContextCaster",
               "value": 1,
-              "scope": "ContextCaster"
+              "variableName": "_damageStart"
             }
           ]
         }

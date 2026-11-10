@@ -80,8 +80,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -127,7 +127,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackCount",
                   "value": {
                     "operator": "Variables[0] ({[Skill03[0]]}) || RETURN",
                     "displayLines": "{[Skill03[0]]}",
@@ -135,7 +134,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[Skill03[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "AttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -170,7 +170,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AttackCount",
                   "value": {
                     "operator": "Variables[0] (AttackCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(AttackCount - 1)",
@@ -180,7 +179,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "AttackCount"
                     ]
-                  }
+                  },
+                  "variableName": "AttackCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -228,8 +228,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "AIFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -591,8 +591,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -771,8 +771,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Insert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_Insert"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -812,8 +812,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Insert",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Insert"
                     }
                   ]
                 }
@@ -824,13 +824,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Trigger",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Trigger"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Insert",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Insert"
                 },
                 {
                   "name": "Inject Ability Use",
@@ -903,8 +903,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Wig",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Wig"
                 }
               ]
             },

@@ -34,7 +34,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalDmgUp",
               "value": {
                 "operator": "Variables[0] (ChallengePeakBattle_Plugins_0021_ADF_1) || Variables[1] (ChallengePeakBattle_Plugins_0021_ADF_2) || Variables[2] (MDF_KillCount) || MUL || ADD || RETURN",
                 "displayLines": "(ChallengePeakBattle_Plugins_0021_ADF_1 + (ChallengePeakBattle_Plugins_0021_ADF_2 * MDF_KillCount))",
@@ -44,7 +43,8 @@ const configAbility = {
                   "ChallengePeakBattle_Plugins_0021_ADF_2",
                   "MDF_KillCount"
                 ]
-              }
+              },
+              "variableName": "MDF_TotalDmgUp"
             },
             {
               "name": "Stack Target Stat Value",

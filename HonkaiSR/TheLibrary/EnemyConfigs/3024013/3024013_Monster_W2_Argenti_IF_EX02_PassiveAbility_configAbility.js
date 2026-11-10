@@ -83,8 +83,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PowerCount",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_PowerCount"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -124,7 +124,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PowerCount",
                   "value": {
                     "operator": "Variables[0] (MDF_PowerCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_PowerCount + 1)",
@@ -134,7 +133,8 @@ const configAbility = {
                     "variables": [
                       "MDF_PowerCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PowerCount"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -200,7 +200,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TurnCount",
                   "value": {
                     "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_TurnCount - 1)",
@@ -210,7 +209,8 @@ const configAbility = {
                     "variables": [
                       "MDF_TurnCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TurnCount"
                 }
               ]
             },
@@ -240,12 +240,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TurnCount",
-              "value": 3
+              "value": 3,
+              "variableName": "MDF_TurnCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[1]]}) || RETURN",
                 "displayLines": "{[SkillEX02[1]]}",
@@ -253,11 +252,11 @@ const configAbility = {
                 "variables": [
                   "{[SkillEX02[1]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue2",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[0]]}) || RETURN",
                 "displayLines": "{[SkillEX02[0]]}",
@@ -265,7 +264,8 @@ const configAbility = {
                 "variables": [
                   "{[SkillEX02[0]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue2"
             },
             {
               "name": "Stack Target Stat Value",
@@ -364,7 +364,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TurnCount",
                   "value": {
                     "operator": "Variables[0] (MDF_TurnCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_TurnCount - 1)",
@@ -374,7 +373,8 @@ const configAbility = {
                     "variables": [
                       "MDF_TurnCount"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TurnCount"
                 }
               ]
             },
@@ -404,12 +404,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TurnCount",
-              "value": 3
+              "value": 3,
+              "variableName": "MDF_TurnCount"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ShowValue1",
               "value": {
                 "operator": "Variables[0] ({[SkillEX02[2]]}) || RETURN",
                 "displayLines": "{[SkillEX02[2]]}",
@@ -417,7 +416,8 @@ const configAbility = {
                 "variables": [
                   "{[SkillEX02[2]]}"
                 ]
-              }
+              },
+              "variableName": "MDF_ShowValue1"
             },
             {
               "name": "Stack Target Stat Value",

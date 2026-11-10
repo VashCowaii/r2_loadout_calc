@@ -204,7 +204,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_PropertyValueChange",
+                      "scope": "ContextModifier",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
                         "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
@@ -214,7 +214,7 @@ const compositeAbilityObject = {
                           "MDF_DebuffNumber"
                         ]
                       },
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_PropertyValueChange"
                     },
                     {
                       "name": "IF",
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PropertyValueChange",
+                          "scope": "ContextModifier",
                           "value": {
                             "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
                             "displayLines": "MDF_PropertyValueMax",
@@ -247,7 +247,7 @@ const compositeAbilityObject = {
                               "MDF_PropertyValueMax"
                             ]
                           },
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PropertyValueChange"
                         }
                       ],
                       "failed": [
@@ -257,7 +257,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "MDF_PropertyValueChange",
+                          "scope": "ContextModifier",
                           "value": {
                             "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
                             "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
@@ -267,7 +267,7 @@ const compositeAbilityObject = {
                               "MDF_DebuffNumber"
                             ]
                           },
-                          "scope": "ContextModifier"
+                          "variableName": "MDF_PropertyValueChange"
                         }
                       ]
                     }
@@ -279,9 +279,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_PropertyValueChange",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_PropertyValueChange"
                     }
                   ]
                 },
@@ -306,9 +306,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PropertyValueChange",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_PropertyValueChange"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -316,9 +316,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_DebuffNumber",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_DebuffNumber"
                 }
               ]
             },
@@ -331,9 +331,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_PropertyValueChange",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_PropertyValueChange"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -341,9 +341,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_DebuffNumber",
+                  "scope": "ContextModifier",
                   "value": 0,
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_DebuffNumber"
                 }
               ]
             }
@@ -371,8 +371,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_RatioAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Dr_RatioAttack"
                 },
                 {
                   "name": "IF",
@@ -385,8 +385,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
                     }
                   ]
                 },
@@ -401,8 +401,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Skill03_Insert_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Skill03_Insert_Flag"
                     }
                   ]
                 }
@@ -440,8 +440,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Insert_Flag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Insert_Flag"
                     }
                   ],
                   "failed": [
@@ -515,8 +515,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_SkillTree_SkillFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_SkillTree_SkillFlag"
                     },
                     {
                       "name": "UI Display Event (On Entity)",
@@ -632,8 +632,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_Ratio_00_EnergyBar",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Dr_Ratio_00_EnergyBar"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -642,8 +642,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Skill03_InsertMaxCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Skill03_InsertMaxCount"
                 },
                 {
                   "name": "Toggle Skill Mark"
@@ -660,8 +660,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber"
                 },
                 {
                   "name": "IF",
@@ -681,7 +681,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Dr_Ratio_00_EnergyBar",
                       "value": {
                         "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                         "displayLines": "(2 + 1)",
@@ -690,7 +689,8 @@ const compositeAbilityObject = {
                           2,
                           1
                         ]
-                      }
+                      },
+                      "variableName": "_Dr_Ratio_00_EnergyBar"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -719,7 +719,6 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Dr_Ratio_00_EnergyBar",
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -727,7 +726,8 @@ const compositeAbilityObject = {
                         "variables": [
                           2
                         ]
-                      }
+                      },
+                      "variableName": "_Dr_Ratio_00_EnergyBar"
                     },
                     {
                       "name": "Update Displayed Energy Bar",
@@ -950,8 +950,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
-                  "value": 100
+                  "value": 100,
+                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber"
                 }
               ]
             },
@@ -1501,7 +1501,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_00_EnergyBar",
               "value": {
                 "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)",
@@ -1511,7 +1510,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "_Dr_Ratio_00_EnergyBar"
                 ]
-              }
+              },
+              "variableName": "_Dr_Ratio_00_EnergyBar"
             },
             {
               "name": "IF",
@@ -1524,8 +1524,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Dr_Ratio_00_EnergyBar",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_Dr_Ratio_00_EnergyBar"
                 }
               ]
             },
@@ -1576,8 +1576,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-              "value": 0
+              "value": 0,
+              "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
             }
           ]
         },
@@ -1610,8 +1610,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_RatioAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_RatioAttack"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1725,7 +1725,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCount",
                   "value": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -1733,7 +1732,8 @@ const compositeAbilityObject = {
                     "variables": [
                       4
                     ]
-                  }
+                  },
+                  "variableName": "_DebuffCount"
                 }
               ]
             },
@@ -1777,8 +1777,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "_DebuffCount",
-          "value": 0
+          "value": 0,
+          "variableName": "_DebuffCount"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -1798,8 +1798,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 1
+          "value": 1,
+          "variableName": "OnInsertAbort_Flg"
         }
       ],
       "references": [],
@@ -1936,8 +1936,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "OnInsertAbort_Flg",
-              "value": 0
+              "value": 0,
+              "variableName": "OnInsertAbort_Flg"
             },
             {
               "name": "Use Custom Character Function",
@@ -1978,7 +1978,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
               "value": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                 "displayLines": "(2 + 1)",
@@ -1987,7 +1986,8 @@ const compositeAbilityObject = {
                   2,
                   1
                 ]
-              }
+              },
+              "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
             },
             {
               "name": "Update Displayed Energy Bar",
@@ -2195,14 +2195,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
-                      "value": 100
+                      "value": 100,
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SpecialMark_DebuffChance",
                       "value": {
                         "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                         "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -2214,7 +2213,8 @@ const compositeAbilityObject = {
                           "MDF_SpecialMark_DebuffNumber",
                           "MDF_DebuffAddChance"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_SpecialMark_DebuffChance"
                     },
                     {
                       "name": "IF",
@@ -2232,8 +2232,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
-                          "value": 100
+                          "value": 100,
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         }
                       ]
                     }
@@ -2283,14 +2283,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
-                          "value": 100
+                          "value": 100,
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
                           "value": {
                             "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                             "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -2302,7 +2301,8 @@ const compositeAbilityObject = {
                               "MDF_SpecialMark_DebuffNumber",
                               "MDF_DebuffAddChance"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         },
                         {
                           "name": "IF",
@@ -2320,8 +2320,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpecialMark_DebuffChance",
-                              "value": 100
+                              "value": 100,
+                              "variableName": "MDF_SpecialMark_DebuffChance"
                             }
                           ]
                         }
@@ -2365,14 +2365,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
-                          "value": 100
+                          "value": 100,
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SpecialMark_DebuffChance",
                           "value": {
                             "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
                             "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
@@ -2384,7 +2383,8 @@ const compositeAbilityObject = {
                               "MDF_SpecialMark_DebuffNumber",
                               "MDF_DebuffAddChance"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SpecialMark_DebuffChance"
                         },
                         {
                           "name": "IF",
@@ -2402,8 +2402,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SpecialMark_DebuffChance",
-                              "value": 100
+                              "value": 100,
+                              "variableName": "MDF_SpecialMark_DebuffChance"
                             }
                           ]
                         }
@@ -2895,13 +2895,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_RatioAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_RatioAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3069,13 +3069,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_RatioAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_RatioAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3112,7 +3112,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_InsertChance",
               "value": {
                 "operator": "Variables[0] (0.4) || RETURN",
                 "displayLines": "0.4",
@@ -3120,11 +3119,11 @@ const compositeAbilityObject = {
                 "variables": [
                   0.4
                 ]
-              }
+              },
+              "variableName": "_Dr_Ratio_InsertChance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_InsertChance",
               "value": {
                 "operator": "Variables[0] (_Dr_Ratio_InsertChance) || Variables[1] (_DebuffCount) || Variables[2] (0.2) || MUL || ADD || RETURN",
                 "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))",
@@ -3134,13 +3133,13 @@ const compositeAbilityObject = {
                   "_DebuffCount",
                   0.2
                 ]
-              }
+              },
+              "variableName": "_Dr_Ratio_InsertChance"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_Dr_Ratio_InsertChance",
               "value": {
                 "operator": "Variables[0] (0.4) || RETURN",
                 "displayLines": "0.4",
@@ -3148,7 +3147,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.4
                 ]
-              }
+              },
+              "variableName": "_Dr_Ratio_InsertChance"
             }
           ]
         },
@@ -3214,14 +3214,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EffDebuffCount",
-                      "value": 5
+                      "value": 5,
+                      "variableName": "_EffDebuffCount"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_EffDebuffCount",
                       "value": {
                         "operator": "Variables[0] (_DebuffCount) || RETURN",
                         "displayLines": "_DebuffCount",
@@ -3229,14 +3228,15 @@ const compositeAbilityObject = {
                         "variables": [
                           "_DebuffCount"
                         ]
-                      }
+                      },
+                      "variableName": "_EffDebuffCount"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SkillTree_SkillFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_SkillTree_SkillFlag"
                 }
               ]
             }
@@ -3260,7 +3260,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DebuffCount",
                   "value": {
                     "operator": "Variables[0] (_DebuffCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_DebuffCount - 1)",
@@ -3270,7 +3269,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_DebuffCount"
                     ]
-                  }
+                  },
+                  "variableName": "_DebuffCount"
                 },
                 {
                   "name": "IF",
@@ -3283,8 +3283,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_DebuffCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_DebuffCount"
                     }
                   ]
                 },
@@ -3392,7 +3392,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_EffDebuffCount",
                   "value": {
                     "operator": "Variables[0] (_EffDebuffCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_EffDebuffCount - 1)",
@@ -3402,7 +3401,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_EffDebuffCount"
                     ]
-                  }
+                  },
+                  "variableName": "_EffDebuffCount"
                 }
               ]
             }
@@ -3511,8 +3511,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_SkillTree_SkillFlag",
-          "value": 1
+          "value": 1,
+          "variableName": "_SkillTree_SkillFlag"
         },
         "Trigger: Ability End"
       ],
@@ -3607,13 +3607,13 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_RatioAttack",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_RatioAttack"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
-          "value": 0
+          "value": 0,
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag"
         },
         {
           "name": "Remove Events/Bonuses",

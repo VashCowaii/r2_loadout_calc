@@ -129,7 +129,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddShield",
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldPercentage_Add) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                     "displayLines": "(MDF_ShieldPercentage_Add * CasterBaseAttack)",
@@ -138,11 +137,11 @@ const compositeAbilityObject = {
                       "MDF_ShieldPercentage_Add",
                       "CasterBaseAttack"
                     ]
-                  }
+                  },
+                  "variableName": "AddShield"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MaxShield",
                   "value": {
                     "operator": "Variables[0] (CurShield) || Variables[1] (AddShield) || ADD || RETURN",
                     "displayLines": "(CurShield + AddShield)",
@@ -151,7 +150,8 @@ const compositeAbilityObject = {
                       "CurShield",
                       "AddShield"
                     ]
-                  }
+                  },
+                  "variableName": "MaxShield"
                 },
                 {
                   "name": "Adjust Shield",
@@ -233,7 +233,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddShield",
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldPercentage) || Variables[1] (CasterBaseAttack) || MUL || RETURN",
                     "displayLines": "(MDF_ShieldPercentage * CasterBaseAttack)",
@@ -242,7 +241,8 @@ const compositeAbilityObject = {
                       "MDF_ShieldPercentage",
                       "CasterBaseAttack"
                     ]
-                  }
+                  },
+                  "variableName": "AddShield"
                 },
                 {
                   "name": "Create Shield",

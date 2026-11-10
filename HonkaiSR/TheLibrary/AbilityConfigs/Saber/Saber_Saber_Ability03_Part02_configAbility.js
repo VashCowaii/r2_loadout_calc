@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_S03_Stance_Ratio",
       "value": {
         "operator": "Constants[0] (1) || Variables[0] (10) || DIV || RETURN",
         "displayLines": "(1 / 10)",
@@ -16,7 +15,8 @@ const configAbility = {
         "variables": [
           10
         ]
-      }
+      },
+      "variableName": "_S03_Stance_Ratio"
     },
     {
       "name": "ATK Scaling DMG",

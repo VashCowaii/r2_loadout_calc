@@ -121,8 +121,8 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EnergyBarCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EnergyBarCount"
                 }
               ]
             },
@@ -169,7 +169,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillP01_DotRatio",
               "value": {
                 "operator": "Variables[0] (1.8) || RETURN",
                 "displayLines": "1.8",
@@ -177,7 +176,8 @@ const configAbility = {
                 "variables": [
                   1.8
                 ]
-              }
+              },
+              "variableName": "SkillP01_DotRatio"
             },
             {
               "name": "Add Events/Bonuses",
@@ -249,8 +249,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillRank_Rank04_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "SkillRank_Rank04_Flag"
                 }
               ]
             },
@@ -263,7 +263,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (9) || RETURN",
                     "displayLines": "9",
@@ -271,13 +270,13 @@ const configAbility = {
                     "variables": [
                       9
                     ]
-                  }
+                  },
+                  "variableName": "_MaxLayer"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_MaxLayer",
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -285,7 +284,8 @@ const configAbility = {
                     "variables": [
                       5
                     ]
-                  }
+                  },
+                  "variableName": "_MaxLayer"
                 }
               ]
             }

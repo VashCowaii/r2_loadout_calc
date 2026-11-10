@@ -202,8 +202,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Cal",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Cal"
             }
           ]
         },
@@ -221,7 +221,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Cal",
                   "value": {
                     "operator": "Variables[0] (MDF_Cal) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_Cal + 1)",
@@ -231,7 +230,8 @@ const configAbility = {
                     "variables": [
                       "MDF_Cal"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Cal"
                 },
                 {
                   "name": "IF",
@@ -251,8 +251,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Cal",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_Cal"
                     },
                     {
                       "name": "Add Events/Bonuses",

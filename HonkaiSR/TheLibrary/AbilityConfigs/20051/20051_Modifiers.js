@@ -82,7 +82,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageValue",
               "value": {
                 "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -91,7 +90,8 @@ const configAbility = {
                   "MDF_TargetMaxHP",
                   "Modifier_Tear_DamageRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageValue"
             }
           ]
         },
@@ -109,7 +109,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageValue",
               "value": {
                 "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -118,7 +117,8 @@ const configAbility = {
                   "MDF_TargetMaxHP",
                   "Modifier_Tear_DamageRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageValue"
             },
             {
               "name": "ATK Scaling DMG",
@@ -173,7 +173,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_DamageValue",
               "value": {
                 "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                 "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -182,7 +181,8 @@ const configAbility = {
                   "MDF_TargetMaxHP",
                   "Modifier_Tear_DamageRatio"
                 ]
-              }
+              },
+              "variableName": "MDF_DamageValue"
             },
             {
               "name": "ATK Scaling DMG",
@@ -1735,8 +1735,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isEnterPerformance",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isEnterPerformance"
                 },
                 {
                   "name": "Find New Target",

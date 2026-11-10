@@ -69,13 +69,13 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_Charge",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_Charge"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Is_BeingAttacked",
-      "value": 0
+      "value": 0,
+      "variableName": "Is_BeingAttacked"
     },
     {
       "name": "Remove Events/Bonuses",

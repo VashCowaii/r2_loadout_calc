@@ -97,7 +97,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_HPChangeValue",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (_HPChangeValue) || SUB || RETURN",
                         "displayLines": "(0 - _HPChangeValue)",
@@ -107,7 +106,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "_HPChangeValue"
                         ]
-                      }
+                      },
+                      "variableName": "_HPChangeValue"
                     },
                     {
                       "name": "IF",
@@ -131,7 +131,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DmgAddedRatio",
                           "value": {
                             "operator": "Variables[0] (0.3) || Variables[1] (0.3) || ADD || RETURN",
                             "displayLines": "(0.3 + 0.3)",
@@ -140,13 +139,13 @@ const compositeAbilityObject = {
                               0.3,
                               0.3
                             ]
-                          }
+                          },
+                          "variableName": "_DmgAddedRatio"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_DmgAddedRatio",
                           "value": {
                             "operator": "Variables[0] (0.3) || RETURN",
                             "displayLines": "0.3",
@@ -154,7 +153,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.3
                             ]
-                          }
+                          },
+                          "variableName": "_DmgAddedRatio"
                         }
                       ]
                     }
@@ -223,7 +223,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_DmgAddedRatio",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
                     "displayLines": "0.3",
@@ -231,7 +230,8 @@ const compositeAbilityObject = {
                     "variables": [
                       0.3
                     ]
-                  }
+                  },
+                  "variableName": "_DmgAddedRatio"
                 }
               ]
             },

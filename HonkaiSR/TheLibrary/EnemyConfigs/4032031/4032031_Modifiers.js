@@ -32,7 +32,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_NegativeBlood",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -41,7 +40,8 @@ const configAbility = {
                   "CEIL",
                   "MDF_NegativeBlood_Temp"
                 ]
-              }
+              },
+              "variableName": "MDF_NegativeBlood"
             },
             {
               "name": "Modify Weaknesses",
@@ -76,7 +76,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_NegativeBlood",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -85,7 +84,8 @@ const configAbility = {
                   "CEIL",
                   "MDF_NegativeBlood_Temp"
                 ]
-              }
+              },
+              "variableName": "MDF_NegativeBlood"
             }
           ]
         }
@@ -153,9 +153,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Flag_RevengeTrigger",
+                  "scope": "TargetEntity",
                   "value": 2,
-                  "scope": "TargetEntity"
+                  "variableName": "Flag_RevengeTrigger"
                 }
               ],
               "failed": [
@@ -165,9 +165,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Flag_RevengeTrigger",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Flag_RevengeTrigger"
                 }
               ]
             }
@@ -207,9 +207,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 3,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Find New Target",
@@ -248,9 +248,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "variableName": "Flag_RevengeTrigger",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "Flag_RevengeTrigger"
                         }
                       ]
                     }
@@ -398,9 +398,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -408,9 +408,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -460,9 +460,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     }
                   ]
                 }
@@ -551,9 +551,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "Flag_RevengeTrigger",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "Flag_RevengeTrigger"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -561,9 +561,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "AIFlag"
                     }
                   ]
                 }

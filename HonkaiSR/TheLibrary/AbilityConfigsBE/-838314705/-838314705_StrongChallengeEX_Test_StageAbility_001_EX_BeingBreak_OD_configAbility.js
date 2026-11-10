@@ -288,15 +288,15 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AIFlag",
+      "scope": "TargetEntity",
       "value": 1,
-      "scope": "TargetEntity"
+      "variableName": "AIFlag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ODCountDown",
+      "scope": "TargetEntity",
       "value": 8,
-      "scope": "TargetEntity"
+      "variableName": "ODCountDown"
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -381,8 +381,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "InsertFlag_ODout",
-      "value": 0
+      "value": 0,
+      "variableName": "InsertFlag_ODout"
     },
     {
       "name": "IF",

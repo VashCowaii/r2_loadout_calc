@@ -15,8 +15,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Trigger",
-          "value": 1
+          "value": 1,
+          "variableName": "_Trigger"
         }
       ],
       "failed": [
@@ -76,8 +76,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Tutorial",
-          "value": 1
+          "value": 1,
+          "variableName": "Tutorial"
         }
       ]
     },

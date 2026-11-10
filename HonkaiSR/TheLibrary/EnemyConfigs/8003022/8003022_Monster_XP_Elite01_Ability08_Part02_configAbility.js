@@ -30,7 +30,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "AvatarBurningCount",
           "value": {
             "operator": "Variables[0] (AvatarBurningCount) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(AvatarBurningCount + 1)",
@@ -40,7 +39,8 @@ const configAbility = {
             "variables": [
               "AvatarBurningCount"
             ]
-          }
+          },
+          "variableName": "AvatarBurningCount"
         }
       ]
     },
@@ -654,8 +654,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BurningCount",
-      "value": 0
+      "value": 0,
+      "variableName": "BurningCount"
     },
     {
       "name": "Find New Target",
@@ -686,7 +686,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BurningCount",
           "value": {
             "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__253) || Variables[1] (BurningLayer) || ADD || RETURN",
             "displayLines": "(ENEMIES_OBJECT_UNUSED__253 + BurningLayer)",
@@ -695,7 +694,8 @@ const configAbility = {
               "ENEMIES_OBJECT_UNUSED__253",
               "BurningLayer"
             ]
-          }
+          },
+          "variableName": "BurningCount"
         }
       ]
     },
@@ -709,8 +709,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AvatarBurningCount",
-      "value": 0
+      "value": 0,
+      "variableName": "AvatarBurningCount"
     },
     "Trigger: Ability End"
   ],

@@ -234,8 +234,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 "Deleted bullshit",
                 {
@@ -361,8 +361,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TeamSharePoint_Delta",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TeamSharePoint_Delta"
                 },
                 {
                   "name": "Show Attack Count",

@@ -182,7 +182,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "_CurrentSPRatio",
               "value": {
                 "operator": "Variables[0] (AbilityEquip_P1_SPRatio) || Variables[1] (_CurrentLayer) || MUL || RETURN",
                 "displayLines": "(AbilityEquip_P1_SPRatio * _CurrentLayer)",
@@ -191,7 +190,8 @@ const configAbility = {
                   "AbilityEquip_P1_SPRatio",
                   "_CurrentLayer"
                 ]
-              }
+              },
+              "variableName": "_CurrentSPRatio"
             },
             {
               "name": "Stack Target Stat Value",

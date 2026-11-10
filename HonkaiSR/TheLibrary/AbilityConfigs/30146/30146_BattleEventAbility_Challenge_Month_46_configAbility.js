@@ -278,8 +278,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Count",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Count"
                 },
                 {
                   "name": "Show Attack Count",
@@ -325,8 +325,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_InsertFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_InsertFlag"
                 }
               ]
             }
@@ -358,8 +358,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Count",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Count"
             },
             {
               "name": "Add Events/Bonuses",
@@ -422,8 +422,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_InsertFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_InsertFlag"
             }
           ]
         },
@@ -500,15 +500,15 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_ChargeTriggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_ChargeTriggered"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_InsertFlag",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_InsertFlag"
             }
           ]
         },
@@ -517,8 +517,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DV_ChargeTriggered",
-              "value": 0
+              "value": 0,
+              "variableName": "DV_ChargeTriggered"
             }
           ]
         },
@@ -593,8 +593,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DV_ChargeTriggered",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DV_ChargeTriggered"
                 }
               ]
             }

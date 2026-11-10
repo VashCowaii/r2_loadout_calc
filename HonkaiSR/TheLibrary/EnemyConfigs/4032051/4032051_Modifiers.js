@@ -32,7 +32,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_NegativeBlood",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -41,7 +40,8 @@ const configAbility = {
                   "CEIL",
                   "MDF_NegativeBlood_Temp"
                 ]
-              }
+              },
+              "variableName": "MDF_NegativeBlood"
             },
             {
               "name": "Modify Weaknesses",
@@ -76,7 +76,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_NegativeBlood",
               "value": {
                 "operator": "Variables[0] (CEIL) || Variables[1] (MDF_NegativeBlood_Temp) || PARAM_1 || FUNCTION || RETURN",
                 "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(MDF_NegativeBlood_Temp)",
@@ -85,7 +84,8 @@ const configAbility = {
                   "CEIL",
                   "MDF_NegativeBlood_Temp"
                 ]
-              }
+              },
+              "variableName": "MDF_NegativeBlood"
             }
           ]
         }

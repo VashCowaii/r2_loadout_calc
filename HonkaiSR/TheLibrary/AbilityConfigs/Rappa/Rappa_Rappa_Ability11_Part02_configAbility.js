@@ -6,7 +6,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO",
       "value": {
         "operator": "Variables[0] (DV_StockTempCount) || RETURN",
         "displayLines": "DV_StockTempCount",
@@ -14,16 +13,16 @@ const configAbility = {
         "variables": [
           "DV_StockTempCount"
         ]
-      }
+      },
+      "variableName": "_AMMO"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO_RELOADED",
-      "value": 1
+      "value": 1,
+      "variableName": "_AMMO_RELOADED"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_AMMO",
       "value": {
         "operator": "Variables[0] (_AMMO) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "(_AMMO - 1)",
@@ -33,7 +32,8 @@ const configAbility = {
         "variables": [
           "_AMMO"
         ]
-      }
+      },
+      "variableName": "_AMMO"
     },
     {
       "name": "Define Custom Variable with Distance to Team Center",

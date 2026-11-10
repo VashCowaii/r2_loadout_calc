@@ -50,8 +50,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TargetMark",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "TargetMark"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -73,8 +73,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TargetMark",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TargetMark"
                     },
                     {
                       "name": "Add Events/Bonuses",

@@ -182,7 +182,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SkillTree_PointB1_P1_DamageTaken1",
               "value": {
                 "operator": "Variables[0] (AGLAEA_OBJECT_UNUSED_7) || RETURN",
                 "displayLines": "AGLAEA_OBJECT_UNUSED_7",
@@ -190,7 +189,8 @@ const configAbility = {
                 "variables": [
                   "AGLAEA_OBJECT_UNUSED_7"
                 ]
-              }
+              },
+              "variableName": "SkillTree_PointB1_P1_DamageTaken1"
             }
           ]
         },
@@ -413,7 +413,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SpeedAddTotal",
               "value": {
                 "operator": "Variables[0] (_Layer) || Variables[1] (55) || MUL || RETURN",
                 "displayLines": "(_Layer * 55)",
@@ -422,7 +421,8 @@ const configAbility = {
                   "_Layer",
                   55
                 ]
-              }
+              },
+              "variableName": "SpeedAddTotal"
             },
             {
               "name": "Stack Target Stat Value",

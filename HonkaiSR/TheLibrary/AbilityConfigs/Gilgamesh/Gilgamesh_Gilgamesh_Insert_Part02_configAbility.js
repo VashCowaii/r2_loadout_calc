@@ -173,7 +173,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Saber_Chain",
       "value": {
         "operator": "Constants[0] (0) || RETURN",
         "displayLines": "0",
@@ -181,7 +180,8 @@ const configAbility = {
           0
         ],
         "variables": []
-      }
+      },
+      "variableName": "Saber_Chain"
     }
   ],
   "references": [],

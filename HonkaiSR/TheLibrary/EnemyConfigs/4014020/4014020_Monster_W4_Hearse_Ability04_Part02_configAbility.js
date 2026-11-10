@@ -484,7 +484,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill04Count",
           "value": {
             "operator": "Variables[0] (Skill04Count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Skill04Count + 1)",
@@ -494,7 +493,8 @@ const configAbility = {
             "variables": [
               "Skill04Count"
             ]
-          }
+          },
+          "variableName": "Skill04Count"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -661,8 +661,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill04Count"
     },
     "Trigger: Ability End"
   ],

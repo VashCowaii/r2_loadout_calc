@@ -172,8 +172,8 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "CurrentSummonCount",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "CurrentSummonCount"
                         }
                       ],
                       "failed": [
@@ -1028,9 +1028,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SW_Minion01_EnhancementLevel",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "SW_Minion01_EnhancementLevel"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1137,7 +1137,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SW_Minion01_EnhancementLevel",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
                     "displayLines": "MDF_EnhancementLevel",
@@ -1146,7 +1146,7 @@ const compositeAbilityObject = {
                       "MDF_EnhancementLevel"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "SW_Minion01_EnhancementLevel"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1613,9 +1613,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1667,9 +1667,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -1694,9 +1694,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1748,9 +1748,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -1775,9 +1775,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             },
@@ -1829,9 +1829,9 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "performAccFlag",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "performAccFlag"
                     }
                   ]
                 }
@@ -2131,8 +2131,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SummonDelayRatioPhase1",
-                  "value": 0.5
+                  "value": 0.5,
+                  "variableName": "SummonDelayRatioPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2140,8 +2140,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "SummonDelayRatioPhase2",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "SummonDelayRatioPhase2"
                 }
               ]
             },
@@ -2490,23 +2490,23 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FirstTime",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "FirstTime"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FirstSkillInPhase02",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "FirstSkillInPhase02"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FirstSkillInPhase02",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "FirstSkillInPhase02"
                     }
                   ]
                 }
@@ -2665,9 +2665,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_SummonFlag",
+                      "scope": "ContextModifier",
                       "value": 0,
-                      "scope": "ContextModifier"
+                      "variableName": "MDF_SummonFlag"
                     },
                     {
                       "name": "IF",
@@ -3250,7 +3250,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SummonDelayRatio1",
                   "value": {
                     "operator": "Variables[0] (SummonDelayRatio1Random2) || RETURN",
                     "displayLines": "SummonDelayRatio1Random2",
@@ -3258,7 +3257,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "SummonDelayRatio1Random2"
                     ]
-                  }
+                  },
+                  "variableName": "SummonDelayRatio1"
                 }
               ],
               "failed": [
@@ -3271,7 +3271,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonDelayRatio1",
                       "value": {
                         "operator": "Variables[0] (SummonDelayRatio1Random3) || RETURN",
                         "displayLines": "SummonDelayRatio1Random3",
@@ -3279,13 +3278,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonDelayRatio1Random3"
                         ]
-                      }
+                      },
+                      "variableName": "SummonDelayRatio1"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonDelayRatio1",
                       "value": {
                         "operator": "Variables[0] (SummonDelayRatio1Random1) || RETURN",
                         "displayLines": "SummonDelayRatio1Random1",
@@ -3293,7 +3292,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonDelayRatio1Random1"
                         ]
-                      }
+                      },
+                      "variableName": "SummonDelayRatio1"
                     }
                   ]
                 }
@@ -3721,7 +3721,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonDelayRatio1Random1",
           "value": {
             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
             "displayLines": "{[SkillP01[0]]}",
@@ -3729,11 +3728,11 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[0]]}"
             ]
-          }
+          },
+          "variableName": "SummonDelayRatio1Random1"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonDelayRatio1Random2",
           "value": {
             "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
             "displayLines": "{[SkillP01[1]]}",
@@ -3741,11 +3740,11 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[1]]}"
             ]
-          }
+          },
+          "variableName": "SummonDelayRatio1Random2"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonDelayRatio1Random3",
           "value": {
             "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
             "displayLines": "{[SkillP01[2]]}",
@@ -3753,11 +3752,11 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[2]]}"
             ]
-          }
+          },
+          "variableName": "SummonDelayRatio1Random3"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonDelayRatio2",
           "value": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",
@@ -3765,7 +3764,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[SkillP01[3]]}"
             ]
-          }
+          },
+          "variableName": "SummonDelayRatio2"
         },
         {
           "name": "IF",
@@ -3869,7 +3869,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonCount",
               "value": {
                 "operator": "Variables[0] ({[SkillEX03[0]]}) || RETURN",
                 "displayLines": "{[SkillEX03[0]]}",
@@ -3877,7 +3876,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "{[SkillEX03[0]]}"
                 ]
-              }
+              },
+              "variableName": "SummonCount"
             },
             {
               "name": "Add Events/Bonuses",
@@ -3993,8 +3993,8 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill07ArmorCount",
-              "value": 0
+              "value": 0,
+              "variableName": "Skill07ArmorCount"
             }
           ]
         },
@@ -4156,7 +4156,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06FinalDamage",
           "value": {
             "operator": "Variables[0] ({[Skill06[0]]}) || RETURN",
             "displayLines": "{[Skill06[0]]}",
@@ -4164,7 +4163,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill06[0]]}"
             ]
-          }
+          },
+          "variableName": "Skill06FinalDamage"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -4382,8 +4382,8 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Phase2FirstSummon",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Phase2FirstSummon"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -4626,7 +4626,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SummonDelayRatio1",
                   "value": {
                     "operator": "Variables[0] (SummonDelayRatio1Random2) || RETURN",
                     "displayLines": "SummonDelayRatio1Random2",
@@ -4634,7 +4633,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "SummonDelayRatio1Random2"
                     ]
-                  }
+                  },
+                  "variableName": "SummonDelayRatio1"
                 }
               ],
               "failed": [
@@ -4647,7 +4647,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonDelayRatio1",
                       "value": {
                         "operator": "Variables[0] (SummonDelayRatio1Random3) || RETURN",
                         "displayLines": "SummonDelayRatio1Random3",
@@ -4655,13 +4654,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonDelayRatio1Random3"
                         ]
-                      }
+                      },
+                      "variableName": "SummonDelayRatio1"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SummonDelayRatio1",
                       "value": {
                         "operator": "Variables[0] (SummonDelayRatio1Random1) || RETURN",
                         "displayLines": "SummonDelayRatio1Random1",
@@ -4669,7 +4668,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SummonDelayRatio1Random1"
                         ]
-                      }
+                      },
+                      "variableName": "SummonDelayRatio1"
                     }
                   ]
                 }
@@ -5062,9 +5062,9 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "AbilityFlag",
+          "scope": "ContextAbility",
           "value": 0,
-          "scope": "ContextAbility"
+          "variableName": "AbilityFlag"
         },
         {
           "name": "Looped Event",

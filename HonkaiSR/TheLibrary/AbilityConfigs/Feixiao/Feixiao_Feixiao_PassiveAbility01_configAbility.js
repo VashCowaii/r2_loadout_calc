@@ -77,7 +77,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_StanceRatio",
           "value": {
             "operator": "Constants[0] (1) || Variables[0] (1) || ADD || RETURN",
             "displayLines": "(1 + 1)",
@@ -87,25 +86,25 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "Insert_StanceRatio"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_StanceRatio",
-          "value": 1
+          "value": 1,
+          "variableName": "Insert_StanceRatio"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "IsUnCountedInsert",
-      "value": 0
+      "value": 0,
+      "variableName": "IsUnCountedInsert"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Passive_NeedAttackCount",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -113,7 +112,8 @@ const configAbility = {
         "variables": [
           2
         ]
-      }
+      },
+      "variableName": "Passive_NeedAttackCount"
     },
     {
       "name": "IF",
@@ -124,7 +124,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_DamagePercentage",
           "value": {
             "operator": "Variables[0] (1.1) || Variables[1] (1.4) || ADD || RETURN",
             "displayLines": "(1.1 + 1.4)",
@@ -133,13 +132,13 @@ const configAbility = {
               1.1,
               1.4
             ]
-          }
+          },
+          "variableName": "Insert_DamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Insert_DamagePercentage",
           "value": {
             "operator": "Variables[0] (1.1) || RETURN",
             "displayLines": "1.1",
@@ -147,7 +146,8 @@ const configAbility = {
             "variables": [
               1.1
             ]
-          }
+          },
+          "variableName": "Insert_DamagePercentage"
         }
       ]
     },

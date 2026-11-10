@@ -426,7 +426,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_13263) || RETURN",
                     "displayLines": "UnusedUnderThisBase_13263",
@@ -434,7 +433,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_13263"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -453,7 +453,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_9408) || RETURN",
                     "displayLines": "UnusedUnderThisBase_9408",
@@ -461,7 +460,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_9408"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -480,7 +480,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_9386) || RETURN",
                     "displayLines": "UnusedUnderThisBase_9386",
@@ -488,7 +487,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_9386"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },
@@ -507,7 +507,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillUltra_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_9387) || RETURN",
                     "displayLines": "UnusedUnderThisBase_9387",
@@ -515,7 +514,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_9387"
                     ]
-                  }
+                  },
+                  "variableName": "SkillUltra_DamagePercentage"
                 }
               ]
             },

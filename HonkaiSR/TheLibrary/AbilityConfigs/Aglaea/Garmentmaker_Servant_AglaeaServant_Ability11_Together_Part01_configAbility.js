@@ -32,8 +32,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "_Rank06Ratio",
-      "value": 0
+      "value": 0,
+      "variableName": "_Rank06Ratio"
     },
     {
       "name": "Add Events/Bonuses",

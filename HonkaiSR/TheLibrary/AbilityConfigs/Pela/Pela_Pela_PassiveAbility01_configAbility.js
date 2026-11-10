@@ -283,7 +283,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffNumber",
                   "value": {
                     "operator": "Variables[0] (DebuffNumber_SingleTarget) || Variables[1] (DebuffNumber) || ADD || RETURN",
                     "displayLines": "(DebuffNumber_SingleTarget + DebuffNumber)",
@@ -292,7 +291,8 @@ const configAbility = {
                       "DebuffNumber_SingleTarget",
                       "DebuffNumber"
                     ]
-                  }
+                  },
+                  "variableName": "DebuffNumber"
                 }
               ]
             },
@@ -323,8 +323,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DebuffNumber",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DebuffNumber"
                 }
               ]
             }

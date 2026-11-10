@@ -181,8 +181,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BuffNumber",
-      "value": 0
+      "value": 0,
+      "variableName": "BuffNumber"
     },
     "Trigger: Ability End"
   ],

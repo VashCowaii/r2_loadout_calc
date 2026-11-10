@@ -37,7 +37,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_KillTalk",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Constants[0] (1) || RETURN",
                 "displayLines": "1",
@@ -46,7 +46,7 @@ const configAbility = {
                 ],
                 "variables": []
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_KillTalk"
             }
           ]
         },
@@ -89,7 +89,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "MDF_KillTalk",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (MDF_KillTalk) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_KillTalk + 1)",
@@ -100,7 +100,7 @@ const configAbility = {
                       "MDF_KillTalk"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "MDF_KillTalk"
                 }
               ]
             }
@@ -159,7 +159,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "MDF_ActionTime",
+              "scope": "ContextModifier",
               "value": {
                 "operator": "Variables[0] (MDF_ActionTime) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(MDF_ActionTime + 1)",
@@ -170,7 +170,7 @@ const configAbility = {
                   "MDF_ActionTime"
                 ]
               },
-              "scope": "ContextModifier"
+              "variableName": "MDF_ActionTime"
             }
           ]
         }

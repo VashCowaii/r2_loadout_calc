@@ -138,8 +138,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "CurrentSummonCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "CurrentSummonCount"
                     }
                   ],
                   "failed": [
@@ -994,9 +994,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SW_Minion01_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "SW_Minion01_EnhancementLevel"
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1103,7 +1103,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "SW_Minion01_EnhancementLevel",
+              "scope": "TargetEntity",
               "value": {
                 "operator": "Variables[0] (MDF_EnhancementLevel) || RETURN",
                 "displayLines": "MDF_EnhancementLevel",
@@ -1112,7 +1112,7 @@ const configAbility = {
                   "MDF_EnhancementLevel"
                 ]
               },
-              "scope": "TargetEntity"
+              "variableName": "SW_Minion01_EnhancementLevel"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1579,9 +1579,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1633,9 +1633,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -1660,9 +1660,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1714,9 +1714,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -1741,9 +1741,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "performAccFlag",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "performAccFlag"
             }
           ]
         },
@@ -1795,9 +1795,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "performAccFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "performAccFlag"
                 }
               ]
             }
@@ -2023,7 +2023,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Modifier_TurnCount",
+                  "scope": "ContextModifier",
                   "value": {
                     "operator": "Variables[0] (Modifier_TurnCount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(Modifier_TurnCount - 1)",
@@ -2034,7 +2034,7 @@ const configAbility = {
                       "Modifier_TurnCount"
                     ]
                   },
-                  "scope": "ContextModifier"
+                  "variableName": "Modifier_TurnCount"
                 }
               ]
             },
@@ -2079,9 +2079,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_TurnCount",
+                      "scope": "ContextModifier",
                       "value": 2,
-                      "scope": "ContextModifier"
+                      "variableName": "Modifier_TurnCount"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2103,9 +2103,9 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Modifier_TurnCount",
+                      "scope": "ContextModifier",
                       "value": 1,
-                      "scope": "ContextModifier"
+                      "variableName": "Modifier_TurnCount"
                     }
                   ]
                 }
@@ -2132,8 +2132,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakRecover",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "BreakRecover"
                 }
               ]
             },
@@ -2164,8 +2164,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "BreakRecover",
-              "value": 1
+              "value": 1,
+              "variableName": "BreakRecover"
             }
           ]
         },

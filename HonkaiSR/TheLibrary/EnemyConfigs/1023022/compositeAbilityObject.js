@@ -293,7 +293,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IceResistanceRatio",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_IceResistanceRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
                     "displayLines": "(0 - (MDF_IceResistanceRatio_PerLayer * ModifierLayers))",
@@ -304,7 +303,8 @@ const compositeAbilityObject = {
                       "MDF_IceResistanceRatio_PerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_IceResistanceRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -324,7 +324,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SpeedAddedDelta",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_SpeedAddedDelta_PerLayer) || Variables[1] (ModifierLayers) || MUL || SUB || RETURN",
                     "displayLines": "(0 - (MDF_SpeedAddedDelta_PerLayer * ModifierLayers))",
@@ -335,7 +334,8 @@ const compositeAbilityObject = {
                       "MDF_SpeedAddedDelta_PerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SpeedAddedDelta"
                 },
                 {
                   "name": "Stack Target Stat Value",

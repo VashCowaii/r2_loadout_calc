@@ -75,7 +75,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "BreakDamageRatio",
                   "value": {
                     "operator": "Variables[0] (MaxStance) || Constants[0] (30) || DIV || Constants[1] (2) || ADD || Constants[2] (4) || DIV || RETURN",
                     "displayLines": "(((MaxStance / 30) + 2) / 4)",
@@ -87,7 +86,8 @@ const configAbility = {
                     "variables": [
                       "MaxStance"
                     ]
-                  }
+                  },
+                  "variableName": "BreakDamageRatio"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -100,7 +100,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "RuanMei_BreakDamage",
                   "value": {
                     "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
                     "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
@@ -112,7 +111,8 @@ const configAbility = {
                       "BreakDamageRatio",
                       "BreakDamageAddedRatio"
                     ]
-                  }
+                  },
+                  "variableName": "RuanMei_BreakDamage"
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -228,7 +228,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "BuffNumber",
                       "value": {
                         "operator": "Variables[0] (FinishRoomNum) || Constants[0] (2) || MUL || RETURN",
                         "displayLines": "(FinishRoomNum * 2)",
@@ -238,7 +237,8 @@ const configAbility = {
                         "variables": [
                           "FinishRoomNum"
                         ]
-                      }
+                      },
+                      "variableName": "BuffNumber"
                     }
                   ]
                 },

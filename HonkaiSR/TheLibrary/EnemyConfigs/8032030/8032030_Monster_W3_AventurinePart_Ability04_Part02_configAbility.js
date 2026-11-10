@@ -28,8 +28,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "AvatarDiceResult",
-      "value": 0
+      "value": 0,
+      "variableName": "AvatarDiceResult"
     },
     {
       "name": "Find New Target",
@@ -105,8 +105,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SpecialDie",
-          "value": 0
+          "value": 0,
+          "variableName": "SpecialDie"
         },
         {
           "name": "Find New Target",
@@ -130,9 +130,9 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "WaitInsert",
+              "scope": "TargetEntity",
               "value": 0,
-              "scope": "TargetEntity"
+              "variableName": "WaitInsert"
             },
             {
               "name": "IF",
@@ -211,8 +211,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               },
-              "variableName": "DiceResult",
-              "value": 0
+              "value": 0,
+              "variableName": "DiceResult"
             },
             {
               "name": "Add Events/Bonuses",

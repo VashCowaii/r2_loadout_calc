@@ -673,25 +673,25 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "P1_Lycan00Chance",
-              "value": 0.75
+              "value": 0.75,
+              "variableName": "P1_Lycan00Chance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "P2_Lycan01Chance",
-              "value": 0.25
+              "value": 0.25,
+              "variableName": "P2_Lycan01Chance"
             }
           ],
           "noTargetFound": [
             {
               "name": "Define Custom Variable",
-              "variableName": "P1_Lycan00Chance",
-              "value": 0.5
+              "value": 0.5,
+              "variableName": "P1_Lycan00Chance"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "P2_Lycan01Chance",
-              "value": 0.5
+              "value": 0.5,
+              "variableName": "P2_Lycan01Chance"
             }
           ]
         },

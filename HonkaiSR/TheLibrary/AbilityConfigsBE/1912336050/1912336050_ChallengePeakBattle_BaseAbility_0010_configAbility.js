@@ -604,15 +604,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff1_Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Debuff1_Odds"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff1_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff1_Odds"
                 }
               ]
             },
@@ -629,15 +629,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff2_Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Debuff2_Odds"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff2_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff2_Odds"
                 }
               ]
             },
@@ -654,15 +654,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff3_Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Debuff3_Odds"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff3_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff3_Odds"
                 }
               ]
             },
@@ -679,15 +679,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff4_Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Debuff4_Odds"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff4_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff4_Odds"
                 }
               ]
             },
@@ -704,15 +704,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff5_Odds",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Debuff5_Odds"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff5_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff5_Odds"
                 }
               ]
             },
@@ -766,28 +766,28 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff1_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff1_Odds"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff2_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff2_Odds"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff3_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff3_Odds"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff4_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff4_Odds"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Debuff5_Odds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_Debuff5_Odds"
                 }
               ]
             },

@@ -24,7 +24,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04Damage",
       "value": {
         "operator": "Variables[0] ({[Skill14[0]]}) || RETURN",
         "displayLines": "{[Skill14[0]]}",
@@ -32,7 +31,8 @@ const configAbility = {
         "variables": [
           "{[Skill14[0]]}"
         ]
-      }
+      },
+      "variableName": "Skill04Damage"
     },
     {
       "name": "Looped Event",
@@ -109,7 +109,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04Count",
       "value": {
         "operator": "Variables[0] ({[Skill14[1]]}) || Constants[0] (1) || SUB || RETURN",
         "displayLines": "({[Skill14[1]]} - 1)",
@@ -119,7 +118,8 @@ const configAbility = {
         "variables": [
           "{[Skill14[1]]}"
         ]
-      }
+      },
+      "variableName": "Skill04Count"
     },
     {
       "name": "Looped Event",

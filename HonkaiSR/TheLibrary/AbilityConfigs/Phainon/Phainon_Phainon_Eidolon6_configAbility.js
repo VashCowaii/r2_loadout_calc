@@ -57,7 +57,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Rank06ExtraDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (MDF_TempDamage) || ADD || RETURN",
                     "displayLines": "(MDF_Rank06ExtraDamage + MDF_TempDamage)",
@@ -66,7 +65,8 @@ const configAbility = {
                       "MDF_Rank06ExtraDamage",
                       "MDF_TempDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_Rank06ExtraDamage"
                 }
               ]
             }
@@ -77,13 +77,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Rank06ExtraDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_Rank06ExtraDamage"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TempDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_TempDamage"
             }
           ]
         },

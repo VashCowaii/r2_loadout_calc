@@ -246,8 +246,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingHit",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isBeingHit"
                 }
               ]
             }
@@ -540,8 +540,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isBeingHit",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isBeingHit"
                 }
               ]
             }
@@ -592,8 +592,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_AddedFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_AddedFlag"
                 },
                 "Modifier Deletes Itself"
               ]

@@ -227,8 +227,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_Cal",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_Cal"
                 }
               ]
             },
@@ -246,7 +246,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_Cal",
                       "value": {
                         "operator": "Variables[0] (MDF_Cal) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_Cal + 1)",
@@ -256,7 +255,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_Cal"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_Cal"
                     },
                     {
                       "name": "IF",
@@ -276,8 +276,8 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Cal",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_Cal"
                         },
                         {
                           "name": "Add Events/Bonuses",

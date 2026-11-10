@@ -28,7 +28,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "ChargeShieldRatioExtraRatio",
               "value": {
                 "operator": "Variables[0] (ChallengePeakBattle_Plugins_0029_ADF_1) || RETURN",
                 "displayLines": "ChallengePeakBattle_Plugins_0029_ADF_1",
@@ -36,7 +35,8 @@ const configAbility = {
                 "variables": [
                   "ChallengePeakBattle_Plugins_0029_ADF_1"
                 ]
-              }
+              },
+              "variableName": "ChargeShieldRatioExtraRatio"
             }
           ]
         }

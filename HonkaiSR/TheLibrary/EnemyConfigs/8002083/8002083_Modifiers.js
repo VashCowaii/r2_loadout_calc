@@ -73,8 +73,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "WaitUseCount",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "WaitUseCount"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -294,8 +294,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Running",
-              "value": 1
+              "value": 1,
+              "variableName": "Running"
             }
           ]
         }
@@ -495,8 +495,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Huimie_ListenInsertAbility",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Huimie_ListenInsertAbility"
                 }
               ]
             }
@@ -518,8 +518,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Huimie_ListenInsertAbility",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Huimie_ListenInsertAbility"
                 }
               ]
             }
@@ -904,7 +904,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TotalDamage",
                   "value": {
                     "operator": "Variables[0] (_TotalDamage) || Variables[1] (_Damage) || ADD || RETURN",
                     "displayLines": "(_TotalDamage + _Damage)",
@@ -913,7 +912,8 @@ const configAbility = {
                       "_TotalDamage",
                       "_Damage"
                     ]
-                  }
+                  },
+                  "variableName": "_TotalDamage"
                 },
                 {
                   "name": "IF",
@@ -943,8 +943,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_TotalDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "_TotalDamage"
             }
           ]
         },
@@ -953,8 +953,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_TotalDamage",
-              "value": 0
+              "value": 0,
+              "variableName": "_TotalDamage"
             }
           ]
         },
@@ -1077,8 +1077,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_TotalDamage"
                     }
                   ],
                   "failed": [
@@ -1101,8 +1101,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TotalDamage",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_TotalDamage"
                     }
                   ]
                 }

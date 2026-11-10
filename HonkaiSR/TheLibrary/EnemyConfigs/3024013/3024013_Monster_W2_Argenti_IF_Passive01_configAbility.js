@@ -241,13 +241,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SAIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "SAIFlag"
             }
           ]
         },
@@ -287,9 +287,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Monster_IF_InsertCount",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Monster_IF_InsertCount"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -297,9 +297,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Monster_IF_InsertCameraFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Monster_IF_InsertCameraFlag"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -307,9 +307,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Monster_IF_InsertCount02",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Monster_IF_InsertCount02"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -317,9 +317,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "Monster_IF_InsertCameraFlag02",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Monster_IF_InsertCameraFlag02"
                 }
               ]
             }
@@ -338,8 +338,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "AIFlag"
             },
             {
               "name": "IF",
@@ -352,15 +352,15 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SAIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "SAIFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SAIFlag",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "SAIFlag"
                 }
               ]
             }

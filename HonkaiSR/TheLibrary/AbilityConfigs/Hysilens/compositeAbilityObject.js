@@ -559,7 +559,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -568,13 +567,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -583,7 +582,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 }
@@ -630,7 +630,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -639,13 +638,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -654,7 +653,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -722,7 +722,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -731,13 +730,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -746,7 +745,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -1198,7 +1198,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1207,13 +1206,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1222,7 +1221,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 }
@@ -1269,7 +1269,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1278,13 +1277,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1293,7 +1292,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -1377,7 +1377,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_CasterAttack) || Variables[1] (Modifier_Tear_MaxPercentage) || MUL || RETURN",
                         "displayLines": "(MDF_CasterAttack * Modifier_Tear_MaxPercentage)",
@@ -1386,13 +1385,13 @@ const compositeAbilityObject = {
                           "MDF_CasterAttack",
                           "Modifier_Tear_MaxPercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamageValue",
                       "value": {
                         "operator": "Variables[0] (MDF_TargetMaxHP) || Variables[1] (Modifier_Tear_DamageRatio) || MUL || RETURN",
                         "displayLines": "(MDF_TargetMaxHP * Modifier_Tear_DamageRatio)",
@@ -1401,7 +1400,8 @@ const compositeAbilityObject = {
                           "MDF_TargetMaxHP",
                           "Modifier_Tear_DamageRatio"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamageValue"
                     }
                   ]
                 },
@@ -1475,7 +1475,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Scoring_Hars_Count",
                           "value": {
                             "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Scoring_Hars_Count + 1)",
@@ -1485,7 +1484,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Scoring_Hars_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Scoring_Hars_Count"
                         },
                         {
                           "name": "ATK Scaling DMG",
@@ -1555,13 +1555,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TriggerEffectFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_TriggerEffectFlag"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DotHitCount"
                     }
                   ]
                 }
@@ -1608,7 +1608,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
                       "value": {
                         "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_DotHitCount + 1)",
@@ -1618,12 +1617,13 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_DotHitCount"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DotHitCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TriggerEffectFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_TriggerEffectFlag"
                     }
                   ]
                 }
@@ -1652,18 +1652,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             },
@@ -1681,18 +1681,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             },
@@ -1824,7 +1824,6 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DotHitCount",
                           "value": {
                             "operator": "Variables[0] (MDF_DotHitCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_DotHitCount + 1)",
@@ -1834,7 +1833,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_DotHitCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DotHitCount"
                         }
                       ]
                     }
@@ -1887,7 +1887,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DotHitCount",
                           "value": {
                             "operator": "Variables[0] (MDF_MaxLimit) || RETURN",
                             "displayLines": "MDF_MaxLimit",
@@ -1895,7 +1894,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_MaxLimit"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_DotHitCount"
                         }
                       ]
                     },
@@ -1924,7 +1924,6 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Scoring_Hars_Count",
                           "value": {
                             "operator": "Variables[0] (Scoring_Hars_Count) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Scoring_Hars_Count + 1)",
@@ -1934,7 +1933,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "Scoring_Hars_Count"
                             ]
-                          }
+                          },
+                          "variableName": "Scoring_Hars_Count"
                         },
                         {
                           "name": "ATK Scaling DMG",
@@ -1963,8 +1963,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 }
               ]
             },
@@ -1995,13 +1995,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isPhase1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_isPhase1"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTriggerDot",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CanTriggerDot"
                     }
                   ]
                 }
@@ -2050,18 +2050,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isPhase1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_isPhase1"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DotHitCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTriggerDot",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CanTriggerDot"
                     }
                   ]
                 }
@@ -2080,13 +2080,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             },
@@ -2133,18 +2133,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_isPhase1",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_isPhase1"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DotHitCount",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DotHitCount"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CanTriggerDot",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CanTriggerDot"
                     }
                   ]
                 }
@@ -2163,18 +2163,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTriggerDot"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DotHitCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_DotHitCount"
                 }
               ]
             },
@@ -2191,13 +2191,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isPhase1"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CanTriggerDot",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CanTriggerDot"
                 }
               ]
             }
@@ -3073,7 +3073,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill03_HaloLifeTime",
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -3081,7 +3080,8 @@ const compositeAbilityObject = {
             "variables": [
               3
             ]
-          }
+          },
+          "variableName": "Skill03_HaloLifeTime"
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -3108,7 +3108,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_TriggerDotMaxCount",
               "value": {
                 "operator": "Variables[0] (12) || RETURN",
                 "displayLines": "12",
@@ -3116,13 +3115,13 @@ const compositeAbilityObject = {
                 "variables": [
                   12
                 ]
-              }
+              },
+              "variableName": "Skill03_TriggerDotMaxCount"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_TriggerDotMaxCount",
               "value": {
                 "operator": "Variables[0] (8) || RETURN",
                 "displayLines": "8",
@@ -3130,7 +3129,8 @@ const compositeAbilityObject = {
                 "variables": [
                   8
                 ]
-              }
+              },
+              "variableName": "Skill03_TriggerDotMaxCount"
             }
           ]
         },
@@ -3143,7 +3143,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_DOTDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.8) || Variables[1] (0.2) || ADD || RETURN",
                 "displayLines": "(0.8 + 0.2)",
@@ -3152,13 +3151,13 @@ const compositeAbilityObject = {
                   0.8,
                   0.2
                 ]
-              }
+              },
+              "variableName": "Skill03_DOTDamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Skill03_DOTDamagePercentage",
               "value": {
                 "operator": "Variables[0] (0.8) || RETURN",
                 "displayLines": "0.8",
@@ -3166,7 +3165,8 @@ const compositeAbilityObject = {
                 "variables": [
                   0.8
                 ]
-              }
+              },
+              "variableName": "Skill03_DOTDamagePercentage"
             }
           ]
         },
@@ -3282,7 +3282,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": {
                     "operator": "Variables[0] (SkillTree_PointB3_StatusProbabilityPlusConvertValue) || Variables[1] (SkillTree_PointB3_StatusProbabilityConvertValue) || SUB || RETURN",
                     "displayLines": "(SkillTree_PointB3_StatusProbabilityPlusConvertValue - SkillTree_PointB3_StatusProbabilityConvertValue)",
@@ -3291,11 +3290,11 @@ const compositeAbilityObject = {
                       "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
                       "SkillTree_PointB3_StatusProbabilityConvertValue"
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (SkillTree_PointB3_StatusProbabilityValue) || Variables[2] (0.6) || SUB || Variables[3] (0.1) || DIV || PARAM_1 || FUNCTION || Variables[4] (0.15) || MUL || RETURN",
                     "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(((SkillTree_PointB3_StatusProbabilityValue - 0.6) / 0.1)) * 0.15)",
@@ -3307,7 +3306,8 @@ const compositeAbilityObject = {
                       0.1,
                       0.15
                     ]
-                  }
+                  },
+                  "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                 },
                 {
                   "name": "IF",
@@ -3321,8 +3321,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SkillTree_PointB3_StatusProbabilityValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                     }
                   ],
                   "failed": [
@@ -3345,7 +3345,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SkillTree_PointB3_StatusProbabilityValue",
                           "value": {
                             "operator": "Variables[0] (0.9) || RETURN",
                             "displayLines": "0.9",
@@ -3353,7 +3352,8 @@ const compositeAbilityObject = {
                             "variables": [
                               0.9
                             ]
-                          }
+                          },
+                          "variableName": "SkillTree_PointB3_StatusProbabilityValue"
                         }
                       ]
                     }
@@ -4130,28 +4130,28 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Tear_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Tear_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Electric_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Electric_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Burn_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Burn_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Poison_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Poison_Mask"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Mask",
-              "value": 0
+              "value": 0,
+              "variableName": "DOT_Mask"
             },
             {
               "name": "IF",
@@ -4167,15 +4167,15 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Tear_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Tear_Mask"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Tear_Mask",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DOT_Tear_Mask"
                 }
               ]
             },
@@ -4193,15 +4193,15 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Electric_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Electric_Mask"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Electric_Mask",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DOT_Electric_Mask"
                 }
               ]
             },
@@ -4219,15 +4219,15 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Burn_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Burn_Mask"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Burn_Mask",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DOT_Burn_Mask"
                 }
               ]
             },
@@ -4245,21 +4245,20 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Poison_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Poison_Mask"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Poison_Mask",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "DOT_Poison_Mask"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "DOT_Mask",
               "value": {
                 "operator": "Variables[0] (DOT_Tear_Mask) || Variables[1] (DOT_Electric_Mask) || ADD || Variables[2] (DOT_Burn_Mask) || ADD || Variables[3] (DOT_Poison_Mask) || ADD || RETURN",
                 "displayLines": "(((DOT_Tear_Mask + DOT_Electric_Mask) + DOT_Burn_Mask) + DOT_Poison_Mask)",
@@ -4270,7 +4269,8 @@ const compositeAbilityObject = {
                   "DOT_Burn_Mask",
                   "DOT_Poison_Mask"
                 ]
-              }
+              },
+              "variableName": "DOT_Mask"
             },
             {
               "name": "IF",
@@ -4283,23 +4283,23 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Tear_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Tear_Mask"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Electric_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Electric_Mask"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Burn_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Burn_Mask"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "DOT_Poison_Mask",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "DOT_Poison_Mask"
                 }
               ]
             }

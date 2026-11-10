@@ -80,7 +80,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SkillP01_CurrentEnergy",
                   "value": {
                     "operator": "Variables[0] (SkillP01_CurrentEnergy) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(SkillP01_CurrentEnergy + 1)",
@@ -89,7 +88,8 @@ const configAbility = {
                       "SkillP01_CurrentEnergy",
                       1
                     ]
-                  }
+                  },
+                  "variableName": "SkillP01_CurrentEnergy"
                 },
                 "Trigger: Attack End"
               ]

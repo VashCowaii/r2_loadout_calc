@@ -188,8 +188,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_isAttack"
                 }
               ]
             },
@@ -198,8 +198,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_isAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_isAttack"
                 }
               ]
             },
@@ -367,8 +367,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -539,7 +539,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonCountTemp",
               "value": {
                 "operator": "Variables[0] (SummonCount) || RETURN",
                 "displayLines": "SummonCount",
@@ -547,7 +546,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "SummonCount"
                 ]
-              }
+              },
+              "variableName": "SummonCountTemp"
             },
             {
               "name": "Looped Event",
@@ -889,8 +889,8 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -904,8 +904,8 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 }
               ]
             },
@@ -977,8 +977,8 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 6
+                  "value": 6,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -992,8 +992,8 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1209,7 +1209,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonNum",
               "value": {
                 "operator": "Variables[0] (SummonCount) || RETURN",
                 "displayLines": "SummonCount",
@@ -1217,7 +1216,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "SummonCount"
                 ]
-              }
+              },
+              "variableName": "SummonNum"
             },
             {
               "name": "Looped Event",
@@ -1811,7 +1811,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "SummonNum",
               "value": {
                 "operator": "Variables[0] (SummonCount) || RETURN",
                 "displayLines": "SummonCount",
@@ -1819,7 +1818,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "SummonCount"
                 ]
-              }
+              },
+              "variableName": "SummonNum"
             },
             {
               "name": "Looped Event",
@@ -2630,7 +2630,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SummonCount",
           "value": {
             "operator": "Variables[0] ({[Skill03[3]]}) || RETURN",
             "displayLines": "{[Skill03[3]]}",
@@ -2638,7 +2637,8 @@ const compositeAbilityObject = {
             "variables": [
               "{[Skill03[3]]}"
             ]
-          }
+          },
+          "variableName": "SummonCount"
         },
         {
           "name": "Add Events/Bonuses",

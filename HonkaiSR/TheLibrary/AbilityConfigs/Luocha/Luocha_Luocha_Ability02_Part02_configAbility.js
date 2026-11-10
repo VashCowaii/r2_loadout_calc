@@ -195,8 +195,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "IsInserAbilityTrigger",
-          "value": 0
+          "value": 0,
+          "variableName": "IsInserAbilityTrigger"
         }
       ]
     }

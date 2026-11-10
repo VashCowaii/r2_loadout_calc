@@ -102,8 +102,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "BonusAttackCounter",
-      "value": 0
+      "value": 0,
+      "variableName": "BonusAttackCounter"
     }
   ],
   "targetObjectData": {

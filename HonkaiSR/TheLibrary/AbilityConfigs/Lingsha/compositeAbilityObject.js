@@ -375,8 +375,8 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "BattleEvent_Lingsha_00_PointB3",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "BattleEvent_Lingsha_00_PointB3"
                                 },
                                 {
                                   "name": "Inject Ability Use",
@@ -633,9 +633,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
                   },
-                  "variableName": "Lingsha_AttackTime",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "Lingsha_AttackTime"
                 }
               ]
             },
@@ -649,7 +649,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_AttackTime",
                   "value": {
                     "operator": "Variables[0] (_AttackTime) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(_AttackTime - 1)",
@@ -659,7 +658,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "_AttackTime"
                     ]
-                  }
+                  },
+                  "variableName": "_AttackTime"
                 },
                 {
                   "name": "Show Attack Count",
@@ -683,7 +683,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
                   },
-                  "variableName": "Lingsha_AttackTime",
+                  "scope": "TargetEntity",
                   "value": {
                     "operator": "Variables[0] (_AttackTime) || RETURN",
                     "displayLines": "_AttackTime",
@@ -692,7 +692,7 @@ const compositeAbilityObject = {
                       "_AttackTime"
                     ]
                   },
-                  "scope": "TargetEntity"
+                  "variableName": "Lingsha_AttackTime"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -1138,7 +1138,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Lingsha_AttackTime",
                       "value": {
                         "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
                         "displayLines": "(Lingsha_AttackTime + 3)",
@@ -1147,7 +1146,8 @@ const compositeAbilityObject = {
                           "Lingsha_AttackTime",
                           3
                         ]
-                      }
+                      },
+                      "variableName": "Lingsha_AttackTime"
                     },
                     {
                       "name": "Add Battle Event",
@@ -1258,7 +1258,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Lingsha_BENum",
                       "value": {
                         "operator": "Variables[0] (Lingsha_BENum) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Lingsha_BENum + 1)",
@@ -1268,7 +1267,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "Lingsha_BENum"
                         ]
-                      }
+                      },
+                      "variableName": "Lingsha_BENum"
                     }
                   ]
                 }
@@ -1309,8 +1309,8 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Fuyuan}}"
               },
-              "variableName": "BattleEvent_Lingsha_00_PointB3",
-              "value": 0
+              "value": 0,
+              "variableName": "BattleEvent_Lingsha_00_PointB3"
             },
             {
               "name": "Add Events/Bonuses",
@@ -1635,7 +1635,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Lingsha_Rank06_StanceDamage",
               "value": {
                 "operator": "Variables[0] (5) || Constants[0] (3) || MUL || RETURN",
                 "displayLines": "(5 * 3)",
@@ -1645,7 +1644,8 @@ const compositeAbilityObject = {
                 "variables": [
                   5
                 ]
-              }
+              },
+              "variableName": "Lingsha_Rank06_StanceDamage"
             }
           ]
         }
@@ -2308,7 +2308,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Lingsha_AttackTime",
               "value": {
                 "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
                 "displayLines": "(Lingsha_AttackTime + 3)",
@@ -2317,7 +2316,8 @@ const compositeAbilityObject = {
                   "Lingsha_AttackTime",
                   3
                 ]
-              }
+              },
+              "variableName": "Lingsha_AttackTime"
             },
             {
               "name": "Add Events/Bonuses",
@@ -2350,7 +2350,6 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Lingsha_AttackTime",
               "value": {
                 "operator": "Variables[0] (Lingsha_AttackTime) || Variables[1] (3) || ADD || RETURN",
                 "displayLines": "(Lingsha_AttackTime + 3)",
@@ -2359,7 +2358,8 @@ const compositeAbilityObject = {
                   "Lingsha_AttackTime",
                   3
                 ]
-              }
+              },
+              "variableName": "Lingsha_AttackTime"
             },
             {
               "name": "Add Battle Event",
@@ -2470,7 +2470,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Lingsha_BENum",
               "value": {
                 "operator": "Variables[0] (Lingsha_BENum) || Constants[0] (1) || ADD || RETURN",
                 "displayLines": "(Lingsha_BENum + 1)",
@@ -2480,7 +2479,8 @@ const compositeAbilityObject = {
                 "variables": [
                   "Lingsha_BENum"
                 ]
-              }
+              },
+              "variableName": "Lingsha_BENum"
             }
           ]
         },

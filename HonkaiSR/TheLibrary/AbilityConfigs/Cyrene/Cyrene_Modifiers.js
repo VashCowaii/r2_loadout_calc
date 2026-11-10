@@ -94,7 +94,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_TargetState",
                   "value": {
                     "operator": "Variables[0] (_SpecifiedState) || RETURN",
                     "displayLines": "_SpecifiedState",
@@ -102,12 +101,13 @@ const configAbility = {
                     "variables": [
                       "_SpecifiedState"
                     ]
-                  }
+                  },
+                  "variableName": "_TargetState"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_SpecifiedState",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_SpecifiedState"
                 }
               ],
               "failed": [
@@ -124,15 +124,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TargetState",
-                      "value": 2
+                      "value": 2,
+                      "variableName": "_TargetState"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_TargetState",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_TargetState"
                     }
                   ]
                 }
@@ -142,8 +142,8 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_SkipNextMazeBuffRefreshState",
-              "value": 0
+              "value": 0,
+              "variableName": "#CL_SkipNextMazeBuffRefreshState"
             }
           ]
         },
@@ -368,7 +368,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_PropertyValue",
               "value": {
                 "operator": "Variables[0] (MDF_Count) || Variables[1] (0.06) || MUL || RETURN",
                 "displayLines": "(MDF_Count * 0.06)",
@@ -377,7 +376,8 @@ const configAbility = {
                   "MDF_Count",
                   0.06
                 ]
-              }
+              },
+              "variableName": "MDF_PropertyValue"
             },
             {
               "name": "IF",
@@ -397,7 +397,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (0.24) || RETURN",
                     "displayLines": "0.24",
@@ -405,7 +404,8 @@ const configAbility = {
                     "variables": [
                       0.24
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 }
               ]
             },
@@ -478,7 +478,6 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "_AddValue",
               "value": {
                 "operator": "Variables[0] (FLOOR) || Variables[1] (MDF_PropertyValue) || PARAM_1 || FUNCTION || Variables[2] (0.02) || MUL || RETURN",
                 "displayLines": "(&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(MDF_PropertyValue) * 0.02)",
@@ -488,7 +487,8 @@ const configAbility = {
                   "MDF_PropertyValue",
                   0.02
                 ]
-              }
+              },
+              "variableName": "_AddValue"
             },
             {
               "name": "Stack Target Stat Value",
@@ -703,8 +703,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "FieldLifeTime",
-              "value": -1
+              "value": -1,
+              "variableName": "FieldLifeTime"
             },
             {
               "name": "Update Ability Binding",
@@ -852,7 +852,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BasicDamagePercentage",
                       "value": {
                         "operator": "Variables[0] (MDF_OriginDamagePercentage) || Variables[1] (MDF_ExtraDamagePercentage) || ADD || RETURN",
                         "displayLines": "(MDF_OriginDamagePercentage + MDF_ExtraDamagePercentage)",
@@ -861,7 +860,8 @@ const configAbility = {
                           "MDF_OriginDamagePercentage",
                           "MDF_ExtraDamagePercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BasicDamagePercentage"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -928,7 +928,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BasicDamagePercentage",
               "value": {
                 "operator": "Variables[0] (MDF_OriginDamagePercentage) || Variables[1] (MDF_ExtraDamagePercentage) || ADD || RETURN",
                 "displayLines": "(MDF_OriginDamagePercentage + MDF_ExtraDamagePercentage)",
@@ -937,7 +936,8 @@ const configAbility = {
                   "MDF_OriginDamagePercentage",
                   "MDF_ExtraDamagePercentage"
                 ]
-              }
+              },
+              "variableName": "MDF_BasicDamagePercentage"
             }
           ]
         }
@@ -1040,7 +1040,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BasicDamagePercentage",
                       "value": {
                         "operator": "Variables[0] (MDF_OriginDamagePercentage) || Variables[1] (MDF_ExtraDamagePercentage) || ADD || RETURN",
                         "displayLines": "(MDF_OriginDamagePercentage + MDF_ExtraDamagePercentage)",
@@ -1049,7 +1048,8 @@ const configAbility = {
                           "MDF_OriginDamagePercentage",
                           "MDF_ExtraDamagePercentage"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_BasicDamagePercentage"
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -1127,7 +1127,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_BasicDamagePercentage",
               "value": {
                 "operator": "Variables[0] (MDF_OriginDamagePercentage) || Variables[1] (MDF_ExtraDamagePercentage) || ADD || RETURN",
                 "displayLines": "(MDF_OriginDamagePercentage + MDF_ExtraDamagePercentage)",
@@ -1136,7 +1135,8 @@ const configAbility = {
                   "MDF_OriginDamagePercentage",
                   "MDF_ExtraDamagePercentage"
                 ]
-              }
+              },
+              "variableName": "MDF_BasicDamagePercentage"
             }
           ]
         }
@@ -1220,8 +1220,8 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_Switch",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "MDF_Switch"
                         }
                       ]
                     }

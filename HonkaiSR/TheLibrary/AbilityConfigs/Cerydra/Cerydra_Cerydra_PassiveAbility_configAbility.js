@@ -639,32 +639,32 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                          "value": 2
+                          "value": 2,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "#CL_Cerydra_BPReady_Queen",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "#CL_Cerydra_BPReady_Queen"
                     }
                   ],
                   "failed": [
@@ -690,18 +690,18 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "#CL_Cerydra_BPReady_Queen",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "#CL_Cerydra_BPReady_Queen"
                         }
                       ],
                       "failed": [
@@ -727,13 +727,13 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden"
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                             }
                           ],
                           "failed": [
@@ -759,13 +759,13 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
-                                  "value": 1
+                                  "value": 1,
+                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden"
                                 },
                                 {
                                   "name": "Define Custom Variable",
-                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
-                                  "value": 0
+                                  "value": 0,
+                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                                 }
                               ]
                             }
@@ -777,15 +777,15 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_Cerydra_InBP",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "#CL_Cerydra_InBP"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_Cerydra_InBP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_Cerydra_InBP"
                 }
               ]
             },
@@ -808,14 +808,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_Cerydra_BPReady_Queen",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_Cerydra_BPReady_Queen"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop",
               "value": {
                 "operator": "Variables[0] (#CL_Cerydra_Eff_chess_Ready_loop_Isgolden) || Constants[0] (10) || MUL || Variables[1] (#CL_Cerydra_Eff_chess_Ready_loop_needtochange) || ADD || RETURN",
                 "displayLines": "((#CL_Cerydra_Eff_chess_Ready_loop_Isgolden * 10) + #CL_Cerydra_Eff_chess_Ready_loop_needtochange)",
@@ -826,7 +825,8 @@ const configAbility = {
                   "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
                   "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
                 ]
-              }
+              },
+              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop"
             }
           ]
         }
@@ -883,13 +883,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_Cerydra_InBP",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_Cerydra_InBP"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "#CL_Cerydra_BPReady_Queen",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "#CL_Cerydra_BPReady_Queen"
                 }
               ]
             }

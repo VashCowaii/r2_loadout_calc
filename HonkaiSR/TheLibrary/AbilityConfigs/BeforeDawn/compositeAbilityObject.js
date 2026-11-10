@@ -70,8 +70,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_InsertFlag"
                     }
                   ]
                 }
@@ -91,8 +91,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_InsertFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_InsertFlag"
                     },
                     "Modifier Deletes Itself"
                   ]

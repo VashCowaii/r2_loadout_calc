@@ -18,7 +18,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_MaxEnergy",
       "value": {
         "operator": "Variables[0] (9) || RETURN",
         "displayLines": "9",
@@ -26,12 +25,13 @@ const configAbility = {
         "variables": [
           9
         ]
-      }
+      },
+      "variableName": "MDF_MaxEnergy"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_SkillP01_CurrentCount",
-      "value": 0
+      "value": 0,
+      "variableName": "MDF_SkillP01_CurrentCount"
     },
     {
       "name": "Add Events/Bonuses",
@@ -50,7 +50,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_InsertDamagePercentage",
           "value": {
             "operator": "Variables[0] (1.6) || Variables[1] (0.25) || ADD || RETURN",
             "displayLines": "(1.6 + 0.25)",
@@ -59,13 +58,13 @@ const configAbility = {
               1.6,
               0.25
             ]
-          }
+          },
+          "variableName": "MDF_InsertDamagePercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_InsertDamagePercentage",
           "value": {
             "operator": "Variables[0] (1.6) || RETURN",
             "displayLines": "1.6",
@@ -73,7 +72,8 @@ const configAbility = {
             "variables": [
               1.6
             ]
-          }
+          },
+          "variableName": "MDF_InsertDamagePercentage"
         }
       ]
     },
@@ -182,8 +182,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_OnStageMember",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_OnStageMember"
             },
             {
               "name": "Find New Target",
@@ -218,7 +218,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
                   "value": {
                     "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_OnStageMember + 1)",
@@ -228,7 +227,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OnStageMember"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OnStageMember"
                 }
               ]
             },
@@ -282,8 +282,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_OnStageMember",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_OnStageMember"
             },
             {
               "name": "Find New Target",
@@ -318,7 +318,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
                   "value": {
                     "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_OnStageMember + 1)",
@@ -328,7 +327,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OnStageMember"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OnStageMember"
                 }
               ]
             },
@@ -358,8 +358,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_OnStageMember",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_OnStageMember"
             },
             {
               "name": "Find New Target",
@@ -394,7 +394,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
                   "value": {
                     "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_OnStageMember + 1)",
@@ -404,7 +403,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OnStageMember"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OnStageMember"
                 }
               ]
             },
@@ -462,8 +462,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_DisableListener",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_DisableListener"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -489,8 +489,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -525,7 +525,6 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -535,7 +534,8 @@ const configAbility = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -550,8 +550,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DisableListener",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_DisableListener"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -572,8 +572,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_OnStageMember",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_OnStageMember"
             },
             {
               "name": "Find New Target",
@@ -595,7 +595,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
                   "value": {
                     "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_OnStageMember + 1)",
@@ -605,7 +604,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OnStageMember"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OnStageMember"
                 }
               ]
             },
@@ -656,8 +656,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_OnStageMember",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_OnStageMember"
             },
             {
               "name": "Find New Target",
@@ -679,7 +679,6 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
                   "value": {
                     "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(MDF_OnStageMember + 1)",
@@ -689,7 +688,8 @@ const configAbility = {
                     "variables": [
                       "MDF_OnStageMember"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_OnStageMember"
                 }
               ]
             },
@@ -752,8 +752,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ActionEnd",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_ActionEnd"
             }
           ]
         },
@@ -796,8 +796,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_ActionEnd",
-              "value": 1
+              "value": 1,
+              "variableName": "MDF_ActionEnd"
             }
           ]
         },
@@ -867,7 +867,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActivePlayer",
                   "value": {
                     "operator": "Variables[0] (MDF_ActivePlayer) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(MDF_ActivePlayer - 1)",
@@ -877,7 +876,8 @@ const configAbility = {
                     "variables": [
                       "MDF_ActivePlayer"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_ActivePlayer"
                 },
                 {
                   "name": "IF",
@@ -1234,8 +1234,8 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "OnInsertAbort_Flg",
-              "value": 0
+              "value": 0,
+              "variableName": "OnInsertAbort_Flg"
             },
             {
               "name": "Remove Events/Bonuses",

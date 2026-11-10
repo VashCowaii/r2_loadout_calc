@@ -80,15 +80,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillRank_Rank04_LifeTime",
-          "value": 2
+          "value": 2,
+          "variableName": "SkillRank_Rank04_LifeTime"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillRank_Rank04_LifeTime",
-          "value": 1
+          "value": 1,
+          "variableName": "SkillRank_Rank04_LifeTime"
         }
       ]
     },
@@ -178,7 +178,6 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "variableName": "BPNeed",
               "value": {
                 "operator": "Variables[0] (EXSkill01) || RETURN",
                 "displayLines": "EXSkill01",
@@ -186,7 +185,8 @@ const configAbility = {
                 "variables": [
                   "EXSkill01"
                 ]
-              }
+              },
+              "variableName": "BPNeed"
             },
             {
               "name": "IF",
@@ -241,7 +241,6 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddMaxLayer",
                   "value": {
                     "operator": "Variables[0] (4) || RETURN",
                     "displayLines": "4",
@@ -249,12 +248,13 @@ const configAbility = {
                     "variables": [
                       4
                     ]
-                  }
+                  },
+                  "variableName": "AddMaxLayer"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AddLayer",
-                  "value": 2
+                  "value": 2,
+                  "variableName": "AddLayer"
                 }
               ]
             }
@@ -359,8 +359,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "EXSkill01",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "EXSkill01"
                 }
               ]
             }
@@ -443,7 +443,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "BPNeed",
                   "value": {
                     "operator": "Variables[0] (EXSkill01) || RETURN",
                     "displayLines": "EXSkill01",
@@ -451,7 +450,8 @@ const configAbility = {
                     "variables": [
                       "EXSkill01"
                     ]
-                  }
+                  },
+                  "variableName": "BPNeed"
                 },
                 {
                   "name": "IF",

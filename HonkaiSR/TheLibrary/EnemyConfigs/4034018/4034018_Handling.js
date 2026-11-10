@@ -133,8 +133,8 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "variableName": "SkillFlag",
-                        "value": 2
+                        "value": 2,
+                        "variableName": "SkillFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -148,8 +148,8 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "variableName": "SkillFlag",
-                        "value": 1
+                        "value": 1,
+                        "variableName": "SkillFlag"
                       },
                       {
                         "name": "Use Ability Option",
@@ -269,8 +269,8 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "variableName": "SkillFlag",
-                            "value": 2
+                            "value": 2,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",
@@ -284,8 +284,8 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "variableName": "SkillFlag",
-                            "value": 1
+                            "value": 1,
+                            "variableName": "SkillFlag"
                           },
                           {
                             "name": "Use Ability Option",

@@ -15,8 +15,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "#CL_HasBeenInVeiwMode",
-      "value": 1
+      "value": 1,
+      "variableName": "#CL_HasBeenInVeiwMode"
     },
     "Deleted bullshit",
     {

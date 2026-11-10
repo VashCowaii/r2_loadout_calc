@@ -25,8 +25,8 @@ const configAbility = {
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Sword_FirstFlag",
-          "value": 0
+          "value": 0,
+          "variableName": "Sword_FirstFlag"
         }
       ]
     },

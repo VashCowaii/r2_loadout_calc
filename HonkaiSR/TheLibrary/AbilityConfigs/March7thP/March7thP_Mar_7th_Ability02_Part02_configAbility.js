@@ -22,7 +22,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Tree02_LifeTimeAdd",
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -30,14 +29,15 @@ const configAbility = {
             "variables": [
               1
             ]
-          }
+          },
+          "variableName": "_Tree02_LifeTimeAdd"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Tree02_LifeTimeAdd",
-          "value": 0
+          "value": 0,
+          "variableName": "_Tree02_LifeTimeAdd"
         }
       ]
     },
@@ -50,7 +50,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_HealPercentage",
           "value": {
             "operator": "Variables[0] (0.04) || RETURN",
             "displayLines": "0.04",
@@ -58,11 +57,11 @@ const configAbility = {
             "variables": [
               0.04
             ]
-          }
+          },
+          "variableName": "_Rank06_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_HealValue",
           "value": {
             "operator": "Variables[0] (106) || RETURN",
             "displayLines": "106",
@@ -70,19 +69,20 @@ const configAbility = {
             "variables": [
               106
             ]
-          }
+          },
+          "variableName": "_Rank06_HealValue"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_HealPercentage",
-          "value": 0
+          "value": 0,
+          "variableName": "_Rank06_HealPercentage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_Rank06_HealValue",
-          "value": 0
+          "value": 0,
+          "variableName": "_Rank06_HealValue"
         }
       ]
     },

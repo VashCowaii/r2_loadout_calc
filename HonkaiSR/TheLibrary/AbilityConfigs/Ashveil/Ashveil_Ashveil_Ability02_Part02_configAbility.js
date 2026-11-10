@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Ability_IsParasitee",
-      "value": 0
+      "value": 0,
+      "variableName": "Ability_IsParasitee"
     },
     {
       "name": "IF",
@@ -22,8 +22,8 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Ability_IsParasitee",
-          "value": 1
+          "value": 1,
+          "variableName": "Ability_IsParasitee"
         }
       ]
     },
@@ -40,7 +40,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStack",
           "value": {
             "operator": "Variables[0] (SkillP01_EnhanceInsertBuffStack) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(SkillP01_EnhanceInsertBuffStack + 1)",
@@ -49,7 +48,8 @@ const configAbility = {
               "SkillP01_EnhanceInsertBuffStack",
               1
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStack"
         },
         {
           "name": "IF",

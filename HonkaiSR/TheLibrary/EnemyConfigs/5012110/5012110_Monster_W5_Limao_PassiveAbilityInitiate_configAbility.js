@@ -110,9 +110,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_SpecialPhoto"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -120,9 +120,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto_BeingLimbo",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_SpecialPhoto_BeingLimbo"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -130,9 +130,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_KillerSkill",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_KillerSkill"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -140,9 +140,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "#CL_PhotoCheck",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "#CL_PhotoCheck"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -150,8 +150,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_Seconds",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_Seconds"
                 },
                 {
                   "name": "Trigger Ability",
@@ -187,9 +187,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_SpecialPhoto"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -197,9 +197,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_SpecialPhoto_BeingLimbo",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_SpecialPhoto_BeingLimbo"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -207,9 +207,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_KillerSkill",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "_KillerSkill"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -217,9 +217,9 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "#CL_PhotoCheck",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "#CL_PhotoCheck"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -227,8 +227,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_Seconds",
-                  "value": 0.3
+                  "value": 0.3,
+                  "variableName": "_Seconds"
                 },
                 {
                   "name": "Trigger Ability",
@@ -385,13 +385,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalDamage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsPhase1",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "_IsPhase1"
                 }
               ]
             }
@@ -416,8 +416,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_IsPhase1",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "_IsPhase1"
                 },
                 {
                   "name": "IF",
@@ -451,15 +451,14 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "#CL_PhotoCheck",
+                          "scope": "TargetEntity",
                           "value": 0,
-                          "scope": "TargetEntity"
+                          "variableName": "#CL_PhotoCheck"
                         }
                       ]
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_FinalDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
                         "displayLines": "MDF_TotalDamage",
@@ -467,7 +466,8 @@ const configAbility = {
                         "variables": [
                           "MDF_TotalDamage"
                         ]
-                      }
+                      },
+                      "variableName": "_FinalDamage"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -475,16 +475,16 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "#CL_PhotoCheck",
+                      "scope": "TargetEntity",
                       "value": 2,
-                      "scope": "TargetEntity"
+                      "variableName": "#CL_PhotoCheck"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalDamage"
                 }
               ]
             }
@@ -521,13 +521,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsTogetherAttack",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsTogetherAttack"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsTogetherAttackLock",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_IsTogetherAttackLock"
                 }
               ]
             }
@@ -546,7 +546,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_TotalDamage",
               "value": {
                 "operator": "Variables[0] (MDF_TotalDamage) || Variables[1] (MDF_HitDamage) || ADD || RETURN",
                 "displayLines": "(MDF_TotalDamage + MDF_HitDamage)",
@@ -555,7 +554,8 @@ const configAbility = {
                   "MDF_TotalDamage",
                   "MDF_HitDamage"
                 ]
-              }
+              },
+              "variableName": "MDF_TotalDamage"
             },
             {
               "name": "IF",
@@ -770,8 +770,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_IsDying",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsDying"
                     }
                   ]
                 }
@@ -804,8 +804,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalDamage"
                 }
               ]
             }
@@ -872,9 +872,9 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "#CL_PhotoCheck",
+                      "scope": "TargetEntity",
                       "value": 0,
-                      "scope": "TargetEntity"
+                      "variableName": "#CL_PhotoCheck"
                     }
                   ]
                 },
@@ -898,13 +898,12 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Self_KillerSkill",
+                      "scope": "TargetEntity",
                       "value": 1,
-                      "scope": "TargetEntity"
+                      "variableName": "Self_KillerSkill"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_FinalDamage",
                       "value": {
                         "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
                         "displayLines": "MDF_TotalDamage",
@@ -912,7 +911,8 @@ const configAbility = {
                         "variables": [
                           "MDF_TotalDamage"
                         ]
-                      }
+                      },
+                      "variableName": "_FinalDamage"
                     },
                     {
                       "name": "IF",
@@ -944,9 +944,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_KillerSkill",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "_KillerSkill"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -954,9 +954,9 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "#CL_PhotoCheck",
+                          "scope": "TargetEntity",
                           "value": 1,
-                          "scope": "TargetEntity"
+                          "variableName": "#CL_PhotoCheck"
                         },
                         {
                           "name": "Trigger Ability",
@@ -983,20 +983,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_TotalDamage"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsTogetherAttackLock",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsTogetherAttackLock"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_IsTogetherAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_IsTogetherAttack"
                 }
               ]
             }
@@ -1045,8 +1045,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0.1
+                      "value": 0.1,
+                      "variableName": "_Seconds"
                     }
                   ]
                 },
@@ -1063,8 +1063,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0.3
+                      "value": 0.3,
+                      "variableName": "_Seconds"
                     }
                   ]
                 },
@@ -1081,8 +1081,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0.3
+                      "value": 0.3,
+                      "variableName": "_Seconds"
                     }
                   ]
                 },
@@ -1099,8 +1099,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "_Seconds",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Seconds"
                     },
                     {
                       "name": "IF",
@@ -1124,8 +1124,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.3
+                          "value": 0.3,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1133,8 +1133,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1160,8 +1160,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1169,8 +1169,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1196,8 +1196,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1205,8 +1205,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1232,8 +1232,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1241,8 +1241,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1268,8 +1268,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1277,8 +1277,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1304,8 +1304,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1313,8 +1313,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1340,8 +1340,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1349,8 +1349,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1376,8 +1376,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.3
+                          "value": 0.3,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1385,8 +1385,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1420,8 +1420,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.1
+                          "value": 0.1,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1429,8 +1429,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     },
@@ -1456,8 +1456,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_Seconds",
-                          "value": 0.3
+                          "value": 0.3,
+                          "variableName": "_Seconds"
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1465,8 +1465,8 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Level Entity}}"
                           },
-                          "variableName": "_SpecialPhoto",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_SpecialPhoto"
                         }
                       ]
                     }
@@ -1494,8 +1494,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Self_Killer_AfterSkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Self_Killer_AfterSkill"
                 }
               ]
             }
@@ -1519,8 +1519,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Self_Killer_AfterSkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Self_Killer_AfterSkill"
                 }
               ]
             }
@@ -1615,8 +1615,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Level Entity}}"
                   },
-                  "variableName": "_Seconds",
-                  "value": 0.1
+                  "value": 0.1,
+                  "variableName": "_Seconds"
                 }
               ]
             }
@@ -1640,8 +1640,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Self_Killer_AfterSkill",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "Self_Killer_AfterSkill"
                 }
               ]
             }

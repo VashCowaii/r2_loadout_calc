@@ -53,8 +53,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "W3_Figure_02_BattleScore1_Flag1",
-      "value": 1
+      "value": 1,
+      "variableName": "W3_Figure_02_BattleScore1_Flag1"
     },
     "Trigger: Ability End"
   ],

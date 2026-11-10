@@ -106,7 +106,6 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "DeathCount",
                       "value": {
                         "operator": "Variables[0] (DeathCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(DeathCount + 1)",
@@ -116,7 +115,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "DeathCount"
                         ]
-                      }
+                      },
+                      "variableName": "DeathCount"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -129,7 +129,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ADF_HPDamageRatioValue",
                       "value": {
                         "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                         "displayLines": "((1 / MonsterCount) + 0.0009999999)",
@@ -140,7 +139,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MonsterCount"
                         ]
-                      }
+                      },
+                      "variableName": "ADF_HPDamageRatioValue"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -205,8 +205,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AchievementCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "AchievementCount"
                 },
                 {
                   "name": "Find New Target",
@@ -230,7 +230,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "AchievementCount",
                           "value": {
                             "operator": "Variables[0] (AchievementCount) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(AchievementCount + 1)",
@@ -240,7 +239,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "AchievementCount"
                             ]
-                          }
+                          },
+                          "variableName": "AchievementCount"
                         }
                       ]
                     }
@@ -511,7 +511,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_HPDamageRatioValue",
           "value": {
             "operator": "Constants[0] (1) || Variables[0] (MonsterCount) || DIV || Constants[1] (0.000010000076) || ADD || RETURN",
             "displayLines": "((1 / MonsterCount) + 0.000010000076)",
@@ -522,7 +521,8 @@ const compositeAbilityObject = {
             "variables": [
               "MonsterCount"
             ]
-          }
+          },
+          "variableName": "ADF_HPDamageRatioValue"
         },
         {
           "name": "Looped Event",
@@ -633,8 +633,8 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "variableName": "DeathCount",
-          "value": 0
+          "value": 0,
+          "variableName": "DeathCount"
         }
       ],
       "targetObjectData": {

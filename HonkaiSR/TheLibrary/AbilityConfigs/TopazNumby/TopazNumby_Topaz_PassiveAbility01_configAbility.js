@@ -81,7 +81,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxEnhance",
           "value": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -90,13 +89,13 @@ const configAbility = {
               2,
               1
             ]
-          }
+          },
+          "variableName": "MaxEnhance"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MaxEnhance",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -104,7 +103,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "MaxEnhance"
         }
       ]
     },

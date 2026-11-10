@@ -22,7 +22,6 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_CurrentEnergy",
       "value": {
         "operator": "Variables[0] (2) || RETURN",
         "displayLines": "2",
@@ -30,11 +29,11 @@ const configAbility = {
         "variables": [
           2
         ]
-      }
+      },
+      "variableName": "SkillP01_CurrentEnergy"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_MaxEnergy",
       "value": {
         "operator": "Variables[0] (3) || RETURN",
         "displayLines": "3",
@@ -42,7 +41,8 @@ const configAbility = {
         "variables": [
           3
         ]
-      }
+      },
+      "variableName": "SkillP01_MaxEnergy"
     },
     {
       "name": "Update Displayed Energy Bar",
@@ -84,8 +84,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_EnhanceInsertBuffStack",
-      "value": 0
+      "value": 0,
+      "variableName": "SkillP01_EnhanceInsertBuffStack"
     },
     {
       "name": "IF",
@@ -96,7 +96,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStackLimit",
           "value": {
             "operator": "Variables[0] (18) || RETURN",
             "displayLines": "18",
@@ -104,13 +103,13 @@ const configAbility = {
             "variables": [
               18
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_EnhanceInsertBuffStackLimit",
           "value": {
             "operator": "Variables[0] (12) || RETURN",
             "displayLines": "12",
@@ -118,14 +117,15 @@ const configAbility = {
             "variables": [
               12
             ]
-          }
+          },
+          "variableName": "SkillP01_EnhanceInsertBuffStackLimit"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn",
-      "value": 0
+      "value": 0,
+      "variableName": "SkillRank_Rank02_EnhanceInsertBuffStackReturn"
     },
     {
       "name": "Add Events/Bonuses",

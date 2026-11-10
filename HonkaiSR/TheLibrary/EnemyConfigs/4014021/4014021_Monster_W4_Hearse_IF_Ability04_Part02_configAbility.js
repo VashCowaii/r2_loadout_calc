@@ -6,13 +6,13 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "_SuperShieldValue",
-      "value": 0
+      "value": 0,
+      "variableName": "_SuperShieldValue"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04ShieldAddValue",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill04ShieldAddValue"
     },
     {
       "name": "Find New Target",
@@ -529,9 +529,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "ShieldBreakBonusFlag",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "ShieldBreakBonusFlag"
         },
         {
           "name": "Force Entity Death",
@@ -570,8 +570,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill04Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill04Count"
     },
     "Trigger: Ability End"
   ],

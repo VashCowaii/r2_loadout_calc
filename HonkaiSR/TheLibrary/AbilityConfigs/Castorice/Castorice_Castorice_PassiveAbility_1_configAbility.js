@@ -44,17 +44,17 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "OverHeal",
+          "scope": "AITag",
           "value": 1,
-          "scope": "AITag"
+          "variableName": "OverHeal"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "OverHeal",
+          "scope": "AITag",
           "value": 0,
-          "scope": "AITag"
+          "variableName": "OverHeal"
         }
       ]
     },
@@ -508,8 +508,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_RefreshMaxSpecialSPFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "Castorice_RefreshMaxSpecialSPFlag"
             }
           ]
         }
@@ -748,8 +748,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Current_LostHP",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Current_LostHP"
                     }
                   ]
                 }
@@ -811,8 +811,8 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_TeamLevel",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_TeamLevel"
             },
             {
               "name": "Define Custom Variable with WorldLevel",
@@ -861,7 +861,6 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Castorice_Passive_MaxCount",
                       "value": {
                         "operator": "Variables[0] (FLOOR) || Variables[1] (Castorice_Level) || Variables[1] (Castorice_Level) || MUL || Constants[0] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((Castorice_Level * Castorice_Level) * 5.3125))",
@@ -872,7 +871,8 @@ const configAbility = {
                           "FLOOR",
                           "Castorice_Level"
                         ]
-                      }
+                      },
+                      "variableName": "Castorice_Passive_MaxCount"
                     }
                   ]
                 }
@@ -880,7 +880,6 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_Passive_MaxCount",
                   "value": {
                     "operator": "Variables[0] (FLOOR) || Constants[0] (80) || Constants[0] (80) || MUL || Constants[1] (5.3125) || MUL || PARAM_1 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">FLOOR</span>(((80 * 80) * 5.3125))",
@@ -891,7 +890,8 @@ const configAbility = {
                     "variables": [
                       "FLOOR"
                     ]
-                  }
+                  },
+                  "variableName": "Castorice_Passive_MaxCount"
                 }
               ]
             },
@@ -906,8 +906,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_Passive_MaxCount",
-                  "value": 2000
+                  "value": 2000,
+                  "variableName": "Castorice_Passive_MaxCount"
                 }
               ]
             },
@@ -1004,7 +1004,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Castorice_Passive_Count",
               "value": {
                 "operator": "Variables[0] (Passive_CastoriceServant_CurrentSpecialSP) || Variables[1] (Passive_CastoriceServant_CurrentExtraSpecialSP) || ADD || RETURN",
                 "displayLines": "(Passive_CastoriceServant_CurrentSpecialSP + Passive_CastoriceServant_CurrentExtraSpecialSP)",
@@ -1013,7 +1012,8 @@ const configAbility = {
                   "Passive_CastoriceServant_CurrentSpecialSP",
                   "Passive_CastoriceServant_CurrentExtraSpecialSP"
                 ]
-              }
+              },
+              "variableName": "Castorice_Passive_Count"
             },
             {
               "name": "IF",
@@ -1054,7 +1054,6 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_Passive_Count",
               "value": {
                 "operator": "Variables[0] (Castorice_ChangeValue) || Variables[1] (Castorice_Passive_Count) || ADD || RETURN",
                 "displayLines": "(Castorice_ChangeValue + Castorice_Passive_Count)",
@@ -1063,13 +1062,14 @@ const configAbility = {
                   "Castorice_ChangeValue",
                   "Castorice_Passive_Count"
                 ]
-              }
+              },
+              "variableName": "Castorice_Passive_Count"
             },
             {
               "name": "Define Custom Variable",
               "skipWhenMindControlled": false,
-              "variableName": "Castorice_ChangeValue",
-              "value": 0
+              "value": 0,
+              "variableName": "Castorice_ChangeValue"
             }
           ]
         }
@@ -1129,8 +1129,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Castorice_DeltaAdd",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Castorice_DeltaAdd"
                 }
               ]
             }

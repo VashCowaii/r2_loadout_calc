@@ -301,9 +301,9 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "DiceGamblingInsertCheck_RL",
+          "scope": "TargetEntity",
           "value": 0,
-          "scope": "TargetEntity"
+          "variableName": "DiceGamblingInsertCheck_RL"
         }
       ]
     },

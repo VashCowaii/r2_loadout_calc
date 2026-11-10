@@ -104,7 +104,6 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Effect_Random_Key",
                           "value": {
                             "operator": "Variables[0] (Effect_Random_Key) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Effect_Random_Key + 1)",
@@ -114,7 +113,8 @@ const configAbility = {
                             "variables": [
                               "Effect_Random_Key"
                             ]
-                          }
+                          },
+                          "variableName": "Effect_Random_Key"
                         }
                       ],
                       "failed": [
@@ -152,7 +152,6 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Effect_Random_Key",
                               "value": {
                                 "operator": "Variables[0] (Effect_Random_Key) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(Effect_Random_Key + 1)",
@@ -162,7 +161,8 @@ const configAbility = {
                                 "variables": [
                                   "Effect_Random_Key"
                                 ]
-                              }
+                              },
+                              "variableName": "Effect_Random_Key"
                             }
                           ],
                           "failed": [
@@ -191,8 +191,8 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "Effect_Random_Key",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "Effect_Random_Key"
                             }
                           ]
                         }

@@ -438,8 +438,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "TypeFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "TypeFlag"
                     }
                   ]
                 }
@@ -452,8 +452,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TypeFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "TypeFlag"
             }
           ]
         }
@@ -618,8 +618,8 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "D_IsSkillAttack",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "D_IsSkillAttack"
                     }
                   ],
                   "failed": [
@@ -661,8 +661,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "D_IsSkillAttack",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "D_IsSkillAttack"
                 }
               ]
             }
@@ -791,8 +791,8 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TypeFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "TypeFlag"
                 }
               ]
             }
@@ -803,8 +803,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TypeFlag",
-              "value": 1
+              "value": 1,
+              "variableName": "TypeFlag"
             }
           ]
         }

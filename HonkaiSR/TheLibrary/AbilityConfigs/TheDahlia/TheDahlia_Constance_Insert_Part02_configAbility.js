@@ -114,7 +114,7 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_AttackGap",
+      "scope": "ContextAbility",
       "value": {
         "operator": "Constants[0] (0.1) || Variables[0] (5) || DIV || RETURN",
         "displayLines": "(0.1 / 5)",
@@ -125,12 +125,12 @@ const configAbility = {
           5
         ]
       },
-      "scope": "ContextAbility"
+      "variableName": "ADF_AttackGap"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "ADF_FirstHit",
-      "value": 1
+      "value": 1,
+      "variableName": "ADF_FirstHit"
     },
     {
       "name": "IF",
@@ -141,7 +141,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_BounceCount",
           "value": {
             "operator": "Variables[0] (5) || Variables[1] (5) || ADD || RETURN",
             "displayLines": "(5 + 5)",
@@ -150,13 +149,13 @@ const configAbility = {
               5,
               5
             ]
-          }
+          },
+          "variableName": "ADF_BounceCount"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "ADF_BounceCount",
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -164,7 +163,8 @@ const configAbility = {
             "variables": [
               5
             ]
-          }
+          },
+          "variableName": "ADF_BounceCount"
         }
       ]
     },
@@ -225,8 +225,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ADF_FirstHit",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "ADF_FirstHit"
                 }
               ]
             },
@@ -392,7 +392,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_TotalStanceDamage",
                   "value": {
                     "operator": "Variables[0] (MDF_TotalStanceDamage) || Variables[1] (MDF_HitStanceDamage) || ADD || RETURN",
                     "displayLines": "(MDF_TotalStanceDamage + MDF_HitStanceDamage)",
@@ -401,7 +400,8 @@ const configAbility = {
                       "MDF_TotalStanceDamage",
                       "MDF_HitStanceDamage"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_TotalStanceDamage"
                 }
               ]
             }

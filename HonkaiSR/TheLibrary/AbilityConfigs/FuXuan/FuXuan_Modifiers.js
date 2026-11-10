@@ -446,7 +446,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "GDF_AllTeamMemberLoseHPValue",
                       "value": {
                         "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || Variables[1] (HPChangeValue) || SUB || RETURN",
                         "displayLines": "(GDF_AllTeamMemberLoseHPValue - HPChangeValue)",
@@ -455,7 +454,8 @@ const configAbility = {
                           "GDF_AllTeamMemberLoseHPValue",
                           "HPChangeValue"
                         ]
-                      }
+                      },
+                      "variableName": "GDF_AllTeamMemberLoseHPValue"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -485,7 +485,6 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || RETURN",
                             "displayLines": "GDF_AllTeamMemberLoseHPValue",
@@ -493,13 +492,13 @@ const configAbility = {
                             "variables": [
                               "GDF_AllTeamMemberLoseHPValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_FinalDamage"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_FinalDamage",
                           "value": {
                             "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                             "displayLines": "(CasterMaxHP * 1.2)",
@@ -508,7 +507,8 @@ const configAbility = {
                               "CasterMaxHP",
                               1.2
                             ]
-                          }
+                          },
+                          "variableName": "MDF_FinalDamage"
                         }
                       ]
                     }
@@ -530,8 +530,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_FinalDamage",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_FinalDamage"
                 }
               ]
             }
@@ -576,7 +576,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamage",
                       "value": {
                         "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || RETURN",
                         "displayLines": "GDF_AllTeamMemberLoseHPValue",
@@ -584,13 +583,13 @@ const configAbility = {
                         "variables": [
                           "GDF_AllTeamMemberLoseHPValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamage"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_FinalDamage",
                       "value": {
                         "operator": "Variables[0] (CasterMaxHP) || Variables[1] (1.2) || MUL || RETURN",
                         "displayLines": "(CasterMaxHP * 1.2)",
@@ -599,7 +598,8 @@ const configAbility = {
                           "CasterMaxHP",
                           1.2
                         ]
-                      }
+                      },
+                      "variableName": "MDF_FinalDamage"
                     }
                   ]
                 }
@@ -725,14 +725,14 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "GDF_BPSkill_LifeTime",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "GDF_BPSkill_LifeTime"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AlwaysNeedBP",
+                  "scope": "AITag",
                   "value": 1,
-                  "scope": "AITag"
+                  "variableName": "AlwaysNeedBP"
                 }
               ]
             }
@@ -743,14 +743,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "GDF_BPSkill_LifeTime",
-              "value": 0
+              "value": 0,
+              "variableName": "GDF_BPSkill_LifeTime"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "AlwaysNeedBP",
+              "scope": "AITag",
               "value": 0,
-              "scope": "AITag"
+              "variableName": "AlwaysNeedBP"
             },
             {
               "name": "IF",
@@ -823,8 +823,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AliveNum",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "AliveNum"
                 }
               ]
             },
@@ -1313,8 +1313,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "FLAG_BanAction",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "FLAG_BanAction"
                 }
               ]
             }
@@ -1358,8 +1358,8 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "FLAG_BanAction",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "FLAG_BanAction"
                     },
                     {
                       "name": "IF",
@@ -1488,7 +1488,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxHPUpRatio",
               "value": {
                 "operator": "Variables[0] (0.06) || Variables[1] (_MaxHP) || Variables[2] (_HPConvert) || SUB || MUL || RETURN",
                 "displayLines": "(0.06 * (_MaxHP - _HPConvert))",
@@ -1498,7 +1497,8 @@ const configAbility = {
                   "_MaxHP",
                   "_HPConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_MaxHPUpRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1591,7 +1591,6 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_MaxHPUpRatio",
               "value": {
                 "operator": "Variables[0] (0.06) || Variables[1] (_MaxHP) || Variables[2] (_HPConvert) || SUB || MUL || RETURN",
                 "displayLines": "(0.06 * (_MaxHP - _HPConvert))",
@@ -1601,7 +1600,8 @@ const configAbility = {
                   "_MaxHP",
                   "_HPConvert"
                 ]
-              }
+              },
+              "variableName": "MDF_MaxHPUpRatio"
             },
             {
               "name": "Stack Target Stat Value",
@@ -1771,8 +1771,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AliveNum",
-                  "value": 4
+                  "value": 4,
+                  "variableName": "AliveNum"
                 }
               ]
             }

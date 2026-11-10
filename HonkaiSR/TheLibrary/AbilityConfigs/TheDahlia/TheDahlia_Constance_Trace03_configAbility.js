@@ -420,7 +420,6 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "_maxAddSP",
                   "value": {
                     "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (_maxSP) || Variables[2] (0.5) || MUL || Variables[3] (_curSP) || SUB || PARAM_2 || FUNCTION || RETURN",
                     "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(0, ((_maxSP * 0.5) - _curSP))",
@@ -433,7 +432,8 @@ const configAbility = {
                       0.5,
                       "_curSP"
                     ]
-                  }
+                  },
+                  "variableName": "_maxAddSP"
                 },
                 {
                   "name": "IF",

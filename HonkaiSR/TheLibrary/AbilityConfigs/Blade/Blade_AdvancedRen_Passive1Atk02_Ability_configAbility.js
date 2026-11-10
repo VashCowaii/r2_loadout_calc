@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "MwRen_isAttack",
-      "value": 0
+      "value": 0,
+      "variableName": "MwRen_isAttack"
     },
     {
       "name": "IF",
@@ -35,7 +35,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CasterHPPercentage",
           "value": {
             "operator": "Variables[0] (1.3) || Variables[1] (0.5) || ADD || RETURN",
             "displayLines": "(1.3 + 0.5)",
@@ -44,13 +43,13 @@ const configAbility = {
               1.3,
               0.5
             ]
-          }
+          },
+          "variableName": "CasterHPPercentage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "CasterHPPercentage",
           "value": {
             "operator": "Variables[0] (1.3) || RETURN",
             "displayLines": "1.3",
@@ -58,7 +57,8 @@ const configAbility = {
             "variables": [
               1.3
             ]
-          }
+          },
+          "variableName": "CasterHPPercentage"
         }
       ]
     },

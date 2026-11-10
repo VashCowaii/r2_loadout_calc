@@ -26,8 +26,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsCorePartCharge",
-          "value": 1
+          "value": 1,
+          "variableName": "_IsCorePartCharge"
         }
       ]
     },
@@ -109,8 +109,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "_IsCorePartCharge",
-          "value": 0
+          "value": 0,
+          "variableName": "_IsCorePartCharge"
         }
       ]
     },

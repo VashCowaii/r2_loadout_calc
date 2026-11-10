@@ -54,8 +54,8 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Gilgamesh_00_Rank06_GoldenRule",
-          "value": 0
+          "value": 0,
+          "variableName": "Gilgamesh_00_Rank06_GoldenRule"
         },
         {
           "name": "Remove Events/Bonuses",

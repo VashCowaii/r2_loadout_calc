@@ -32,13 +32,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeingAttackCountDown",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BeingAttackCountDown"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_CreatFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_CreatFlag"
                 }
               ]
             },
@@ -61,8 +61,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_BeingAttackCountDown",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_BeingAttackCountDown"
                 },
                 {
                   "name": "IF",
@@ -181,8 +181,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_BeingAttackCountDown",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_BeingAttackCountDown"
                     }
                   ],
                   "failed": [
@@ -219,8 +219,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InBeingAttackFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_InBeingAttackFlag"
                 }
               ]
             },
@@ -229,8 +229,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_InBeingAttackFlag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_InBeingAttackFlag"
                 }
               ]
             },
@@ -294,8 +294,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CreatFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_CreatFlag"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -308,7 +308,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DamagerPerHit",
                       "value": {
                         "operator": "Variables[0] (CEIL) || Variables[1] (MDF_MaxHP) || Variables[2] (MDF_ShowValue) || DIV || PARAM_1 || FUNCTION || RETURN",
                         "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>((MDF_MaxHP / MDF_ShowValue))",
@@ -318,7 +317,8 @@ const compositeAbilityObject = {
                           "MDF_MaxHP",
                           "MDF_ShowValue"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_DamagerPerHit"
                     }
                   ]
                 }
@@ -335,8 +335,8 @@ const compositeAbilityObject = {
                   "onChange": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_CreatFlag",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_CreatFlag"
                     }
                   ]
                 }

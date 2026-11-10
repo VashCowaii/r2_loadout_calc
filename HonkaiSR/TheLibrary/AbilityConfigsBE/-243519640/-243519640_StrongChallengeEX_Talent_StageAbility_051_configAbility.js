@@ -24,8 +24,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_HealedHP",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_HealedHP"
             }
           ]
         },
@@ -62,7 +62,6 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ChangeValue",
                       "value": {
                         "operator": "Variables[0] (#ADF_1) || Variables[1] (MDF_HealedHP) || MUL || Constants[0] (1) || INVERT || MUL || RETURN",
                         "displayLines": "((#ADF_1 * MDF_HealedHP) * -1)",
@@ -73,7 +72,8 @@ const configAbility = {
                           "#ADF_1",
                           "MDF_HealedHP"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ChangeValue"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -108,7 +108,6 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_ChangeValue",
                           "value": {
                             "operator": "Variables[0] (#ADF_2) || Variables[1] (MDF_MaxHP) || MUL || Variables[2] (MDF_ChangeValue) || SUB || RETURN",
                             "displayLines": "((#ADF_2 * MDF_MaxHP) - MDF_ChangeValue)",
@@ -118,7 +117,8 @@ const configAbility = {
                               "MDF_MaxHP",
                               "MDF_ChangeValue"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_ChangeValue"
                         }
                       ]
                     },

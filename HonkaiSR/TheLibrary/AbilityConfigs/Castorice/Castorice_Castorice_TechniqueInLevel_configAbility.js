@@ -14,12 +14,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_SkillMaze_Flag",
-      "value": 1
+      "value": 1,
+      "variableName": "Castorice_SkillMaze_Flag"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Castorice_Passive_Count",
       "value": {
         "operator": "Variables[0] (Castorice_Passive_MaxCount) || RETURN",
         "displayLines": "Castorice_Passive_MaxCount",
@@ -27,7 +26,8 @@ const configAbility = {
         "variables": [
           "Castorice_Passive_MaxCount"
         ]
-      }
+      },
+      "variableName": "Castorice_Passive_Count"
     },
     {
       "name": "Add Events/Bonuses",
@@ -162,8 +162,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster's Memosprite}}"
       },
-      "variableName": "EnterBattlePlayTimes",
-      "value": 1
+      "value": 1,
+      "variableName": "EnterBattlePlayTimes"
     },
     {
       "name": "IF",
@@ -191,7 +191,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Castorice_Rank02_Count",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -199,7 +198,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "Castorice_Rank02_Count"
         },
         {
           "name": "Define Custom Variable",
@@ -207,7 +207,6 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster's Memosprite}}"
           },
-          "variableName": "CastoriceServant_Rank02_Count",
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -215,7 +214,8 @@ const configAbility = {
             "variables": [
               2
             ]
-          }
+          },
+          "variableName": "CastoriceServant_Rank02_Count"
         }
       ]
     },
@@ -318,8 +318,8 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "variableName": "CL_EnterBattlePlayTimes",
-          "value": 1
+          "value": 1,
+          "variableName": "CL_EnterBattlePlayTimes"
         }
       ]
     }

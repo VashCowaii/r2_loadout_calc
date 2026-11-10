@@ -129,7 +129,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SleepNum",
                           "value": {
                             "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(SleepNum + 1)",
@@ -139,7 +138,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "SleepNum"
                             ]
-                          }
+                          },
+                          "variableName": "SleepNum"
                         }
                       ]
                     },
@@ -171,8 +171,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SleepNum",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SleepNum"
                     }
                   ]
                 }
@@ -228,7 +228,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "SleepNum",
                           "value": {
                             "operator": "Variables[0] (SleepNum) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(SleepNum + 1)",
@@ -238,7 +237,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "SleepNum"
                             ]
-                          }
+                          },
+                          "variableName": "SleepNum"
                         }
                       ]
                     },
@@ -270,8 +270,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SleepNum",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "SleepNum"
                     }
                   ]
                 }
@@ -431,8 +431,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "AIFlag",
-                  "value": 7
+                  "value": 7,
+                  "variableName": "AIFlag"
                 }
               ]
             }
@@ -562,7 +562,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SleepCount",
                   "value": {
                     "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(SleepCount + 1)",
@@ -572,7 +571,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "SleepCount"
                     ]
-                  }
+                  },
+                  "variableName": "SleepCount"
                 }
               ]
             }
@@ -580,8 +580,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SleepCount",
-          "value": 0
+          "value": 0,
+          "variableName": "SleepCount"
         }
       ],
       "targetObjectData": {
@@ -676,7 +676,6 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "SleepCount",
                   "value": {
                     "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
                     "displayLines": "(SleepCount + 1)",
@@ -686,7 +685,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "SleepCount"
                     ]
-                  }
+                  },
+                  "variableName": "SleepCount"
                 }
               ]
             }
@@ -822,7 +822,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "SleepCount",
                       "value": {
                         "operator": "Variables[0] (SleepCount) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(SleepCount + 1)",
@@ -832,7 +831,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "SleepCount"
                         ]
-                      }
+                      },
+                      "variableName": "SleepCount"
                     }
                   ]
                 }
@@ -842,8 +842,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SleepCount",
-          "value": 0
+          "value": 0,
+          "variableName": "SleepCount"
         },
         "Trigger: Ability End"
       ],

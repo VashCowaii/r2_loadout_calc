@@ -107,8 +107,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Charge",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_Charge"
         }
       ],
       "targetObjectData": {
@@ -207,13 +207,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_Charge",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Is_Charge"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_BeingAttacked",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Is_BeingAttacked"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -221,8 +221,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "Is_Traitor",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Is_Traitor"
                     },
                     {
                       "name": "Change Entity Turn-State",
@@ -234,8 +234,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "AIFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "AIFlag"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -307,18 +307,18 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "Is_Traitor",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_Traitor"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_BeingAttacked",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_BeingAttacked"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "Is_Charge",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "Is_Charge"
                         },
                         {
                           "name": "Change Entity Turn-State",
@@ -375,13 +375,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_BeingAttacked",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Is_BeingAttacked"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Is_Charge",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Is_Charge"
                     },
                     {
                       "name": "Change Entity Turn-State",
@@ -416,8 +416,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "variableName": "Is_Traitor",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "Is_Traitor"
                         }
                       ]
                     }
@@ -475,8 +475,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Charge",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_Charge"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -488,8 +488,8 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_BeingAttacked",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_BeingAttacked"
         },
         {
           "name": "Change Entity Turn-State",
@@ -577,13 +577,13 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Charge",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_Charge"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_BeingAttacked",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_BeingAttacked"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -634,25 +634,25 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TraitorChace",
-              "value": 1
+              "value": 1,
+              "variableName": "TraitorChace"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Is_Traitor",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_Traitor"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "TraitorChace",
-              "value": 0
+              "value": 0,
+              "variableName": "TraitorChace"
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "Is_Traitor",
-              "value": 0
+              "value": 0,
+              "variableName": "Is_Traitor"
             }
           ]
         },
@@ -763,18 +763,18 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_Charge",
-          "value": 1
+          "value": 1,
+          "variableName": "Is_Charge"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Is_BeingAttacked",
-          "value": 0
+          "value": 0,
+          "variableName": "Is_BeingAttacked"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Passive_AttackTime",
-          "value": 0
+          "value": 0,
+          "variableName": "Passive_AttackTime"
         },
         {
           "name": "Add Events/Bonuses",
@@ -828,8 +828,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Is_Charge",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Charge"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -837,8 +837,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Is_BeingAttacked",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_BeingAttacked"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -846,8 +846,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "Is_Traitor",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Is_Traitor"
                 },
                 {
                   "name": "Define Custom Variable",
@@ -855,8 +855,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "AIFlag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "AIFlag"
                 },
                 {
                   "name": "Remove Events/Bonuses",

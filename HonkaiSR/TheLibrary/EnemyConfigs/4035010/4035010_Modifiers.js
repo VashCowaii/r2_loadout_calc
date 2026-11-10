@@ -109,8 +109,8 @@ const configAbility = {
               "enteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "IronTombCore_BattleScore2_Flag",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "IronTombCore_BattleScore2_Flag"
                 }
               ]
             }
@@ -142,8 +142,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CharacterID_30231_Flag04",
-                  "value": 8001
+                  "value": 8001,
+                  "variableName": "CharacterID_30231_Flag04"
                 }
               ],
               "failed": [
@@ -190,8 +190,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CharacterID_30231_Flag03",
-                  "value": 8001
+                  "value": 8001,
+                  "variableName": "CharacterID_30231_Flag03"
                 }
               ],
               "failed": [
@@ -238,8 +238,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CharacterID_30231_Flag02",
-                  "value": 8001
+                  "value": 8001,
+                  "variableName": "CharacterID_30231_Flag02"
                 }
               ],
               "failed": [
@@ -286,8 +286,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "CharacterID_30231_Flag01",
-                  "value": 8001
+                  "value": 8001,
+                  "variableName": "CharacterID_30231_Flag01"
                 }
               ],
               "failed": [
@@ -1181,8 +1181,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_Layers",
-              "value": 100
+              "value": 100,
+              "variableName": "MDF_Layers"
             },
             {
               "name": "Define Custom Variable with Stat",
@@ -1332,8 +1332,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_IsInsert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsInsert"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -1470,8 +1470,8 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "variableName": "MDF_IsInsert",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_IsInsert"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2151,8 +2151,8 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_InsertFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_InsertFlag"
                     },
                     {
                       "name": "Inject Ability Use",
@@ -2488,15 +2488,15 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Trigger3",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "_Trigger3"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "_Trigger3",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "_Trigger3"
                     },
                     {
                       "name": "IF",
@@ -2585,15 +2585,15 @@ const configAbility = {
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Trigger2",
-                          "value": 1
+                          "value": 1,
+                          "variableName": "_Trigger2"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "_Trigger2",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "_Trigger2"
                         },
                         {
                           "name": "IF",
@@ -2714,15 +2714,15 @@ const configAbility = {
                             },
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Trigger1",
-                              "value": 1
+                              "value": 1,
+                              "variableName": "_Trigger1"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "_Trigger1",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "_Trigger1"
                             },
                             {
                               "name": "Remove Events/Bonuses",
@@ -2963,7 +2963,6 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Skill08_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] ({[Skill08[0]]}) || RETURN",
                     "displayLines": "{[Skill08[0]]}",
@@ -2971,13 +2970,13 @@ const configAbility = {
                     "variables": [
                       "{[Skill08[0]]}"
                     ]
-                  }
+                  },
+                  "variableName": "_Skill08_DamagePercentage"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "_Skill08_DamagePercentage",
                   "value": {
                     "operator": "Variables[0] (UnusedUnderThisBase_12299) || RETURN",
                     "displayLines": "UnusedUnderThisBase_12299",
@@ -2985,7 +2984,8 @@ const configAbility = {
                     "variables": [
                       "UnusedUnderThisBase_12299"
                     ]
-                  }
+                  },
+                  "variableName": "_Skill08_DamagePercentage"
                 }
               ]
             }

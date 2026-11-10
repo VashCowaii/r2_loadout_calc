@@ -15,9 +15,9 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Define Custom Variable",
-      "variableName": "FlopSide",
+      "scope": "TargetEntity",
       "value": -1,
-      "scope": "TargetEntity"
+      "variableName": "FlopSide"
     },
     {
       "name": "Remove Events/Bonuses",

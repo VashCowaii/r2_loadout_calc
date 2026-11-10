@@ -139,7 +139,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "ModifierCriticalChanceRatio",
                   "value": {
                     "operator": "Variables[0] (ModifierCriticalChanceRatio_PerLayer) || Variables[1] (ModifierLayers) || MUL || RETURN",
                     "displayLines": "(ModifierCriticalChanceRatio_PerLayer * ModifierLayers)",
@@ -148,7 +147,8 @@ const compositeAbilityObject = {
                       "ModifierCriticalChanceRatio_PerLayer",
                       "ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "ModifierCriticalChanceRatio"
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -270,8 +270,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01"
                     }
                   ]
                 }
@@ -317,8 +317,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "Monster_W1_Mecha_Fire_PassiveCounter_01"
                     }
                   ]
                 }

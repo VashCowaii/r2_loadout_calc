@@ -18,7 +18,6 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "MDF_BPGap",
       "value": {
         "operator": "Variables[0] (TeamBpMax) || Variables[1] (MDF_PassiveLayer01) || SUB || Variables[2] (MDF_PassiveLayerDirty) || SUB || RETURN",
         "displayLines": "((TeamBpMax - MDF_PassiveLayer01) - MDF_PassiveLayerDirty)",
@@ -28,7 +27,8 @@ const configAbility = {
           "MDF_PassiveLayer01",
           "MDF_PassiveLayerDirty"
         ]
-      }
+      },
+      "variableName": "MDF_BPGap"
     },
     {
       "name": "IF",
@@ -58,7 +58,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BPAdd",
           "value": {
             "operator": "Variables[0] (6) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(6 + 1)",
@@ -68,7 +67,8 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "BPAdd"
         },
         {
           "name": "Define Custom Variable with Skill Points",
@@ -90,7 +90,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "BPAdd",
           "value": {
             "operator": "Variables[0] (6) || RETURN",
             "displayLines": "6",
@@ -98,7 +97,8 @@ const configAbility = {
             "variables": [
               6
             ]
-          }
+          },
+          "variableName": "BPAdd"
         },
         {
           "name": "Define Custom Variable with Skill Points",
@@ -201,7 +201,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "NDF_Sparkle_Rank06_CritDmg",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
             "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -210,7 +209,8 @@ const configAbility = {
               "MDF_Sparkle_CritDmgValue",
               0.3
             ]
-          }
+          },
+          "variableName": "NDF_Sparkle_Rank06_CritDmg"
         },
         {
           "name": "Find New Target",

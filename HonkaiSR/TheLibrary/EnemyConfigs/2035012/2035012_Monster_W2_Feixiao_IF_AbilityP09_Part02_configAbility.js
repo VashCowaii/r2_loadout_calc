@@ -59,8 +59,8 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Nebula Devourer: Self}}"
       },
-      "variableName": "_TurnCount",
-      "value": 4
+      "value": 4,
+      "variableName": "_TurnCount"
     },
     {
       "name": "Add Events/Bonuses",

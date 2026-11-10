@@ -317,8 +317,8 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Define Custom Variable",
-      "variableName": "Insert_Count",
-      "value": 1
+      "value": 1,
+      "variableName": "Insert_Count"
     },
     {
       "name": "IF",
@@ -329,7 +329,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank06_RecordedTotal",
           "value": {
             "operator": "Variables[0] (SkillP01_TotalDamage) || RETURN",
             "displayLines": "SkillP01_TotalDamage",
@@ -337,11 +336,11 @@ const configAbility = {
             "variables": [
               "SkillP01_TotalDamage"
             ]
-          }
+          },
+          "variableName": "Rank06_RecordedTotal"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "Rank06_RecordedFinal",
           "value": {
             "operator": "Variables[0] (SkillP01_FinalDamage) || RETURN",
             "displayLines": "SkillP01_FinalDamage",
@@ -349,19 +348,20 @@ const configAbility = {
             "variables": [
               "SkillP01_FinalDamage"
             ]
-          }
+          },
+          "variableName": "Rank06_RecordedFinal"
         }
       ]
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_TotalDamage",
-      "value": 0
+      "value": 0,
+      "variableName": "SkillP01_TotalDamage"
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "SkillP01_FinalDamage",
-      "value": 0
+      "value": 0,
+      "variableName": "SkillP01_FinalDamage"
     },
     {
       "name": "IF",
@@ -372,7 +372,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_TotalDamage",
           "value": {
             "operator": "Variables[0] (Rank06_RecordedTotal) || Variables[1] (0.2) || MUL || RETURN",
             "displayLines": "(Rank06_RecordedTotal * 0.2)",
@@ -381,11 +380,11 @@ const configAbility = {
               "Rank06_RecordedTotal",
               0.2
             ]
-          }
+          },
+          "variableName": "SkillP01_TotalDamage"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "SkillP01_FinalDamage",
           "value": {
             "operator": "Variables[0] (Rank06_RecordedFinal) || Variables[1] (0.2) || MUL || RETURN",
             "displayLines": "(Rank06_RecordedFinal * 0.2)",
@@ -394,7 +393,8 @@ const configAbility = {
               "Rank06_RecordedFinal",
               0.2
             ]
-          }
+          },
+          "variableName": "SkillP01_FinalDamage"
         }
       ]
     },

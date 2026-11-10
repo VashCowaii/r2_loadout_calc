@@ -121,8 +121,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherBEFlag"
                     }
                   ]
                 }
@@ -166,8 +166,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Level Entity}}"
                       },
-                      "variableName": "WeatherBEFlag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "WeatherBEFlag"
                     }
                   ]
                 }
@@ -417,7 +417,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_HPChangeRatioDelta",
                       "value": {
                         "operator": "Variables[0] (W4_DawnsEye_01_HPRatio) || Variables[1] (MDF_HPRatioCurrent) || SUB || RETURN",
                         "displayLines": "(W4_DawnsEye_01_HPRatio - MDF_HPRatioCurrent)",
@@ -426,11 +425,11 @@ const compositeAbilityObject = {
                           "W4_DawnsEye_01_HPRatio",
                           "MDF_HPRatioCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_HPChangeRatioDelta"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "W4_DawnsEye_01_HPRatio",
                       "value": {
                         "operator": "Variables[0] (MDF_HPRatioCurrent) || RETURN",
                         "displayLines": "MDF_HPRatioCurrent",
@@ -438,7 +437,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_HPRatioCurrent"
                         ]
-                      }
+                      },
+                      "variableName": "W4_DawnsEye_01_HPRatio"
                     },
                     {
                       "name": "Update Energy",

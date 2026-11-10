@@ -29,8 +29,8 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "variableName": "Skill06Count",
-      "value": 0
+      "value": 0,
+      "variableName": "Skill06Count"
     },
     "Ability Start",
     {
@@ -42,7 +42,6 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06Count",
           "value": {
             "operator": "Variables[0] (Skill06Count) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(Skill06Count + 1)",
@@ -52,7 +51,8 @@ const configAbility = {
             "variables": [
               "Skill06Count"
             ]
-          }
+          },
+          "variableName": "Skill06Count"
         }
       ]
     },
@@ -69,7 +69,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06Damage",
           "value": {
             "operator": "Variables[0] ({[Skill06[1]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
             "displayLines": "({[Skill06[1]]} / Skill06Count)",
@@ -78,13 +77,13 @@ const configAbility = {
               "{[Skill06[1]]}",
               "Skill06Count"
             ]
-          }
+          },
+          "variableName": "Skill06Damage"
         }
       ],
       "failed": [
         {
           "name": "Define Custom Variable",
-          "variableName": "Skill06Damage",
           "value": {
             "operator": "Variables[0] ({[Skill06[0]]}) || Variables[1] (Skill06Count) || DIV || RETURN",
             "displayLines": "({[Skill06[0]]} / Skill06Count)",
@@ -93,7 +92,8 @@ const configAbility = {
               "{[Skill06[0]]}",
               "Skill06Count"
             ]
-          }
+          },
+          "variableName": "Skill06Damage"
         }
       ]
     },

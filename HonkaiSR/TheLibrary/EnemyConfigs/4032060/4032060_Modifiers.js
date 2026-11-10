@@ -122,8 +122,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
               },
-              "variableName": "_Break05Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break05Odds"
             },
             {
               "name": "Define Custom Variable",
@@ -131,8 +131,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"
               },
-              "variableName": "_Break05Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break05Odds"
             },
             "Modifier Deletes Itself"
           ]
@@ -152,8 +152,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
               },
-              "variableName": "_Break04Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break04Odds"
             },
             {
               "name": "Define Custom Variable",
@@ -161,8 +161,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"
               },
-              "variableName": "_Break04Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break04Odds"
             },
             "Modifier Deletes Itself"
           ]
@@ -182,8 +182,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
               },
-              "variableName": "_Break03Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break03Odds"
             },
             {
               "name": "Define Custom Variable",
@@ -191,8 +191,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"
               },
-              "variableName": "_Break03Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break03Odds"
             },
             "Modifier Deletes Itself"
           ]
@@ -212,8 +212,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
               },
-              "variableName": "_Break02Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break02Odds"
             },
             {
               "name": "Define Custom Variable",
@@ -221,8 +221,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"
               },
-              "variableName": "_Break02Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break02Odds"
             },
             "Modifier Deletes Itself"
           ]
@@ -242,8 +242,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
               },
-              "variableName": "_Break01Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break01Odds"
             },
             {
               "name": "Define Custom Variable",
@@ -251,8 +251,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"
               },
-              "variableName": "_Break01Odds",
-              "value": 0
+              "value": 0,
+              "variableName": "_Break01Odds"
             },
             "Modifier Deletes Itself"
           ]

@@ -94,8 +94,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "AIFlag",
-              "value": 7
+              "value": 7,
+              "variableName": "AIFlag"
             }
           ]
         }

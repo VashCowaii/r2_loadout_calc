@@ -66,8 +66,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "ChargeUse",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "ChargeUse"
                     }
                   ]
                 }
@@ -240,8 +240,8 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_ResetValue"
                     }
                   ]
                 }
@@ -259,8 +259,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 4
+                      "value": 4,
+                      "variableName": "MDF_ResetValue"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -283,8 +283,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ResetValue",
-                      "value": 3
+                      "value": 3,
+                      "variableName": "MDF_ResetValue"
                     },
                     {
                       "name": "Declare Custom Variable",
@@ -334,7 +334,6 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SpeedAddedRatio_PerLayer",
                   "value": {
                     "operator": "Variables[0] ({[PassiveSkill01[1]]}) || RETURN",
                     "displayLines": "{[PassiveSkill01[1]]}",
@@ -342,7 +341,8 @@ const compositeAbilityObject = {
                     "variables": [
                       "{[PassiveSkill01[1]]}"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SpeedAddedRatio_PerLayer"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -553,9 +553,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 1,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -627,9 +627,9 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "variableName": "DormancyFlag",
+                  "scope": "TargetEntity",
                   "value": 0,
-                  "scope": "TargetEntity"
+                  "variableName": "DormancyFlag"
                 },
                 {
                   "name": "Declare Custom Variable",
@@ -929,7 +929,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio",
                                       "value": {
                                         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
                                         "displayLines": "{[PassiveSkill01[0]]}",
@@ -937,7 +936,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "{[PassiveSkill01[0]]}"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                     }
                                   ]
                                 }
@@ -1151,7 +1151,6 @@ const compositeAbilityObject = {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
                                       },
-                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio",
                                       "value": {
                                         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
                                         "displayLines": "{[PassiveSkill01[0]]}",
@@ -1159,7 +1158,8 @@ const compositeAbilityObject = {
                                         "variables": [
                                           "{[PassiveSkill01[0]]}"
                                         ]
-                                      }
+                                      },
+                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                     },
                                     {
                                       "name": "Declare Custom Variable",
@@ -1473,7 +1473,6 @@ const compositeAbilityObject = {
                                                         "name": "Target Name",
                                                         "target": "{{Parameter Target}}"
                                                       },
-                                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio",
                                                       "value": {
                                                         "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
                                                         "displayLines": "{[PassiveSkill01[0]]}",
@@ -1481,7 +1480,8 @@ const compositeAbilityObject = {
                                                         "variables": [
                                                           "{[PassiveSkill01[0]]}"
                                                         ]
-                                                      }
+                                                      },
+                                                      "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                                     }
                                                   ]
                                                 }
@@ -1713,7 +1713,6 @@ const compositeAbilityObject = {
                                                     "name": "Target Name",
                                                     "target": "{{Parameter Target}}"
                                                   },
-                                                  "variableName": "Mecha04_00_SpeedAddedBaseRatio",
                                                   "value": {
                                                     "operator": "Variables[0] ({[PassiveSkill01[0]]}) || RETURN",
                                                     "displayLines": "{[PassiveSkill01[0]]}",
@@ -1721,7 +1720,8 @@ const compositeAbilityObject = {
                                                     "variables": [
                                                       "{[PassiveSkill01[0]]}"
                                                     ]
-                                                  }
+                                                  },
+                                                  "variableName": "Mecha04_00_SpeedAddedBaseRatio"
                                                 },
                                                 {
                                                   "name": "Declare Custom Variable",
@@ -1841,7 +1841,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_PropertyValue",
                   "value": {
                     "operator": "Variables[0] (ModifierDamageUpValue) || Variables[1] (Buff_ModifierLayers) || MUL || RETURN",
                     "displayLines": "(ModifierDamageUpValue * Buff_ModifierLayers)",
@@ -1850,7 +1849,8 @@ const compositeAbilityObject = {
                       "ModifierDamageUpValue",
                       "Buff_ModifierLayers"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_PropertyValue"
                 },
                 {
                   "name": "Stack Target Stat Value",

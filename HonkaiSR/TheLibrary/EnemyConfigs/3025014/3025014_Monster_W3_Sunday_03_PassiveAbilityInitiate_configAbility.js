@@ -204,8 +204,8 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "TalkTriggerFlag_136105992",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "TalkTriggerFlag_136105992"
                 }
               ]
             }

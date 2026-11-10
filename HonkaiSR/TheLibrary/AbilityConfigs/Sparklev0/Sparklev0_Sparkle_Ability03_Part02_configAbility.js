@@ -110,7 +110,6 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "NDF_Sparkle_Rank06_CritDmg",
           "value": {
             "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || Variables[1] (0.3) || MUL || RETURN",
             "displayLines": "(MDF_Sparkle_CritDmgValue * 0.3)",
@@ -119,7 +118,8 @@ const configAbility = {
               "MDF_Sparkle_CritDmgValue",
               0.3
             ]
-          }
+          },
+          "variableName": "NDF_Sparkle_Rank06_CritDmg"
         },
         {
           "name": "Find New Target",

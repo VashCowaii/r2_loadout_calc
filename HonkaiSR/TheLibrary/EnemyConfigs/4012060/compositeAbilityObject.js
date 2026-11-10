@@ -446,8 +446,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "Unlock_Flag",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "Unlock_Flag"
                     },
                     {
                       "name": "IF",
@@ -801,8 +801,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "Unlock_Flag",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "Unlock_Flag"
                 }
               ]
             }
@@ -1013,8 +1013,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_KillByHearse",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_KillByHearse"
                     },
                     {
                       "name": "Remove Events/Bonuses",

@@ -23,9 +23,9 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "variableName": "DamageCarry",
+              "scope": "AITag",
               "value": 0.0009999999,
-              "scope": "AITag"
+              "variableName": "DamageCarry"
             }
           ]
         }

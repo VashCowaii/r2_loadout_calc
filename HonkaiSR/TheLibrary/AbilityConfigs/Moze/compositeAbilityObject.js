@@ -93,13 +93,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillP01_CurrentCount",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_SkillP01_CurrentCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EnergyCost",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_EnergyCost"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -142,7 +142,6 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_SkillP01_CurrentCount",
                   "value": {
                     "operator": "Variables[0] (MDF_MaxEnergy) || RETURN",
                     "displayLines": "MDF_MaxEnergy",
@@ -150,12 +149,13 @@ const compositeAbilityObject = {
                     "variables": [
                       "MDF_MaxEnergy"
                     ]
-                  }
+                  },
+                  "variableName": "MDF_SkillP01_CurrentCount"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_EnergyCost",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_EnergyCost"
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -368,7 +368,6 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_TotalDamage",
                       "value": {
                         "operator": "Variables[0] (0.4) || RETURN",
                         "displayLines": "0.4",
@@ -376,7 +375,8 @@ const compositeAbilityObject = {
                         "variables": [
                           0.4
                         ]
-                      }
+                      },
+                      "variableName": "MDF_TotalDamage"
                     }
                   ]
                 },
@@ -492,7 +492,6 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_SkillP01_CurrentCount",
                           "value": {
                             "operator": "Variables[0] (MDF_SkillP01_CurrentCount) || Constants[0] (1) || SUB || RETURN",
                             "displayLines": "(MDF_SkillP01_CurrentCount - 1)",
@@ -502,11 +501,11 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_SkillP01_CurrentCount"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_SkillP01_CurrentCount"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_EnergyCost",
                           "value": {
                             "operator": "Variables[0] (MDF_EnergyCost) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_EnergyCost + 1)",
@@ -516,7 +515,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_EnergyCost"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_EnergyCost"
                         },
                         {
                           "name": "IF",
@@ -529,8 +529,8 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "variableName": "MDF_SkillP01_CurrentCount",
-                              "value": 0
+                              "value": 0,
+                              "variableName": "MDF_SkillP01_CurrentCount"
                             }
                           ]
                         },
@@ -1538,8 +1538,8 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 0
+          "value": 0,
+          "variableName": "OnInsertAbort_Flg"
         },
         {
           "name": "IF",
@@ -1713,8 +1713,8 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable",
-              "variableName": "OnInsertAbort_Flg",
-              "value": 0
+              "value": 0,
+              "variableName": "OnInsertAbort_Flg"
             }
           ]
         }
@@ -1855,7 +1855,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_EnergyCost",
           "value": {
             "operator": "Variables[0] (MDF_EnergyCost) || Variables[1] (3) || SUB || RETURN",
             "displayLines": "(MDF_EnergyCost - 3)",
@@ -1864,7 +1863,8 @@ const compositeAbilityObject = {
               "MDF_EnergyCost",
               3
             ]
-          }
+          },
+          "variableName": "MDF_EnergyCost"
         },
         {
           "name": "IF",
@@ -2176,7 +2176,6 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_MaxEnergy",
           "value": {
             "operator": "Variables[0] (9) || RETURN",
             "displayLines": "9",
@@ -2184,12 +2183,13 @@ const compositeAbilityObject = {
             "variables": [
               9
             ]
-          }
+          },
+          "variableName": "MDF_MaxEnergy"
         },
         {
           "name": "Define Custom Variable",
-          "variableName": "MDF_SkillP01_CurrentCount",
-          "value": 0
+          "value": 0,
+          "variableName": "MDF_SkillP01_CurrentCount"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2208,7 +2208,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InsertDamagePercentage",
               "value": {
                 "operator": "Variables[0] (1.6) || Variables[1] (0.25) || ADD || RETURN",
                 "displayLines": "(1.6 + 0.25)",
@@ -2217,13 +2216,13 @@ const compositeAbilityObject = {
                   1.6,
                   0.25
                 ]
-              }
+              },
+              "variableName": "MDF_InsertDamagePercentage"
             }
           ],
           "failed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_InsertDamagePercentage",
               "value": {
                 "operator": "Variables[0] (1.6) || RETURN",
                 "displayLines": "1.6",
@@ -2231,7 +2230,8 @@ const compositeAbilityObject = {
                 "variables": [
                   1.6
                 ]
-              }
+              },
+              "variableName": "MDF_InsertDamagePercentage"
             }
           ]
         },
@@ -2340,8 +2340,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -2376,7 +2376,6 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -2386,7 +2385,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -2440,8 +2440,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -2476,7 +2476,6 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -2486,7 +2485,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -2516,8 +2516,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -2552,7 +2552,6 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -2562,7 +2561,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -2620,8 +2620,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_DisableListener",
-                      "value": 1
+                      "value": 1,
+                      "variableName": "MDF_DisableListener"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -2647,8 +2647,8 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
-                      "value": 0
+                      "value": 0,
+                      "variableName": "MDF_OnStageMember"
                     },
                     {
                       "name": "Find New Target",
@@ -2683,7 +2683,6 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_OnStageMember",
                           "value": {
                             "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(MDF_OnStageMember + 1)",
@@ -2693,7 +2692,8 @@ const compositeAbilityObject = {
                             "variables": [
                               "MDF_OnStageMember"
                             ]
-                          }
+                          },
+                          "variableName": "MDF_OnStageMember"
                         }
                       ]
                     },
@@ -2708,8 +2708,8 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "variableName": "MDF_DisableListener",
-                          "value": 0
+                          "value": 0,
+                          "variableName": "MDF_DisableListener"
                         },
                         {
                           "name": "Remove Events/Bonuses",
@@ -2730,8 +2730,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -2753,7 +2753,6 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -2763,7 +2762,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -2814,8 +2814,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_OnStageMember",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_OnStageMember"
                 },
                 {
                   "name": "Find New Target",
@@ -2837,7 +2837,6 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_OnStageMember",
                       "value": {
                         "operator": "Variables[0] (MDF_OnStageMember) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(MDF_OnStageMember + 1)",
@@ -2847,7 +2846,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_OnStageMember"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_OnStageMember"
                     }
                   ]
                 },
@@ -2910,8 +2910,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionEnd",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "MDF_ActionEnd"
                 }
               ]
             },
@@ -2954,8 +2954,8 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "MDF_ActionEnd",
-                  "value": 1
+                  "value": 1,
+                  "variableName": "MDF_ActionEnd"
                 }
               ]
             },
@@ -3025,7 +3025,6 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "variableName": "MDF_ActivePlayer",
                       "value": {
                         "operator": "Variables[0] (MDF_ActivePlayer) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(MDF_ActivePlayer - 1)",
@@ -3035,7 +3034,8 @@ const compositeAbilityObject = {
                         "variables": [
                           "MDF_ActivePlayer"
                         ]
-                      }
+                      },
+                      "variableName": "MDF_ActivePlayer"
                     },
                     {
                       "name": "IF",
@@ -3392,8 +3392,8 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "variableName": "OnInsertAbort_Flg",
-                  "value": 0
+                  "value": 0,
+                  "variableName": "OnInsertAbort_Flg"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -3917,8 +3917,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "variableName": "OnInsertAbort_Flg",
-          "value": 1
+          "value": 1,
+          "variableName": "OnInsertAbort_Flg"
         },
         "Deleted bullshit",
         {
@@ -4112,8 +4112,8 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable",
-              "variableName": "MDF_EnergyCost",
-              "value": 0
+              "value": 0,
+              "variableName": "MDF_EnergyCost"
             }
           ]
         },
