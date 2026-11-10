@@ -545,6 +545,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
+                  "warningType": "MaxToughness",
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
                   "statValue": 30
                 },

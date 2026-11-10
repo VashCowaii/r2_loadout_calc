@@ -2138,6 +2138,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
+                  "warningType": "MaxToughness",
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
                   "statValue": {
                     "displayLines": "(_MaxStance * MDF_ExtraStanceRatio)"

@@ -1180,7 +1180,8 @@ const compositeAbilityObject = {
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "statValue": {
                     "displayLines": "(0 - UnusedUnderThisBase_12037)"
-                  }
+                  },
+                  "silent": true
                 },
                 {
                   "name": "Action Advance/Delay",
