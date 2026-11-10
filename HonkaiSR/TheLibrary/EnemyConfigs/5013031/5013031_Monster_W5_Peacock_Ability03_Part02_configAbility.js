@@ -18,7 +18,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentColorSlotIndex"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -97,8 +97,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -133,7 +132,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentColorSlotIndex"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -236,8 +235,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },

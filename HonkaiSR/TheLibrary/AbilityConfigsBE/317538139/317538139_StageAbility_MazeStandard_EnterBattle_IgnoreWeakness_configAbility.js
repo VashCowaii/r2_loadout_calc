@@ -29,7 +29,7 @@ const configAbility = {
           "execute": [
             {
               "name": "SWITCH",
-              "source": {
+              "damageType": {
                 "name": "Damage Type Source",
                 "sourceType": "ReadTargetType",
                 "readTarget": {
@@ -37,7 +37,7 @@ const configAbility = {
                   "target": "{{Modifier Holder}}"
                 }
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": "Physical",
@@ -171,8 +171,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }

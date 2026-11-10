@@ -586,7 +586,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "MDF_InsertTrigger"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0
@@ -609,8 +609,7 @@ const compositeAbilityObject = {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 2
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },

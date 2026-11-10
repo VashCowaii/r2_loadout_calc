@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "Skill04TargetCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1
@@ -2567,8 +2567,7 @@ const compositeAbilityObject = {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 2
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ],
                   "failed": [
@@ -2577,7 +2576,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "Skill04TargetCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1
@@ -2594,8 +2593,7 @@ const compositeAbilityObject = {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 4
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -2973,7 +2971,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "DebuffFirstTimeCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -3112,8 +3110,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -3665,7 +3662,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DebuffID_Result"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 700001,
@@ -3675,7 +3672,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3787,8 +3784,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -3801,7 +3797,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3913,8 +3909,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -3927,7 +3922,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4039,8 +4034,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4053,7 +4047,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4165,8 +4159,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4179,7 +4172,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4348,8 +4341,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4362,7 +4354,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4474,8 +4466,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4488,7 +4479,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4600,8 +4591,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4614,7 +4604,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4813,8 +4803,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4827,7 +4816,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4939,8 +4928,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -4953,7 +4941,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -5065,8 +5053,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -5079,7 +5066,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CardCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -5191,13 +5178,11 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",

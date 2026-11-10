@@ -500,7 +500,7 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "SWITCH",
-                  "source": {
+                  "damageType": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
                     "readTarget": {
@@ -508,7 +508,7 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     }
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": "Physical",
@@ -614,8 +614,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

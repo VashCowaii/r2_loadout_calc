@@ -56,7 +56,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "SummonCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 4,
@@ -145,8 +145,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -215,7 +214,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "SummonCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -256,8 +255,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -313,7 +311,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "SummonNum"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3,
@@ -354,8 +352,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }
@@ -398,7 +395,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "SummonCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -439,8 +436,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

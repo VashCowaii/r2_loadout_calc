@@ -85,7 +85,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "TEMP_OBJECT_UNUSED_5"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -155,8 +155,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ],
           "failed": [
@@ -165,7 +164,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "TEMP_OBJECT_UNUSED_5"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -259,8 +258,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }

@@ -653,7 +653,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "Skill04TargetCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1
@@ -662,8 +662,7 @@ const configAbility = {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 2
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ],
               "failed": [
@@ -672,7 +671,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "Skill04TargetCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1
@@ -689,8 +688,7 @@ const configAbility = {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 4
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -1068,7 +1066,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "DebuffFirstTimeCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3,
@@ -1207,8 +1205,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -1760,7 +1757,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DebuffID_Result"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 700001,
@@ -1770,7 +1767,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1882,8 +1879,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -1896,7 +1892,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2008,8 +2004,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2022,7 +2017,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2134,8 +2129,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2148,7 +2142,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2260,8 +2254,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2274,7 +2267,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2443,8 +2436,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2457,7 +2449,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2569,8 +2561,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2583,7 +2574,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2695,8 +2686,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2709,7 +2699,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2908,8 +2898,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -2922,7 +2911,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3034,8 +3023,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -3048,7 +3036,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3160,8 +3148,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -3174,7 +3161,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CardCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3286,13 +3273,11 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Define Custom Variable with Added Value",

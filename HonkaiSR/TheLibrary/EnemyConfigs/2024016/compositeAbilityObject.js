@@ -4479,7 +4479,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentXuanluPartSummonIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4561,8 +4561,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -4577,7 +4576,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentLV2MonsterSummonIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -4659,8 +4658,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -4682,7 +4680,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "CurrentXuanluPartSummonIndex"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -4791,8 +4789,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

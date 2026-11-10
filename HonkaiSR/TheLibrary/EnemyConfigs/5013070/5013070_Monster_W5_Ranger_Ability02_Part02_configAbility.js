@@ -26,7 +26,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "CurrentRanger"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 0,
@@ -195,8 +195,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     "Trigger: Attack End",
     "Trigger: Ability End"
@@ -211,7 +210,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -380,8 +379,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     }

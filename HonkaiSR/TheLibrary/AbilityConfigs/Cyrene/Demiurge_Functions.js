@@ -544,7 +544,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "Index"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -618,7 +618,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "LightTeamCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -675,8 +675,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -710,7 +709,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "LightTeamCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -798,15 +797,13 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Find New Target",

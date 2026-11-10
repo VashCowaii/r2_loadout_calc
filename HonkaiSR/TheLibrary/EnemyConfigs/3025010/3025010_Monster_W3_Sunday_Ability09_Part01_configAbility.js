@@ -45,7 +45,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "MDF_Skill10_TurnCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 7,
@@ -95,8 +95,7 @@ const configAbility = {
                 "Deleted bullshit"
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },

@@ -3177,7 +3177,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "MDF_DeathCountDown"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 2,
@@ -3210,15 +3210,14 @@ const configAbility = {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "SWITCH",
               "switchValue": {
                 "displayLines": "MDF_DeathCountDown"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -3267,8 +3266,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable",

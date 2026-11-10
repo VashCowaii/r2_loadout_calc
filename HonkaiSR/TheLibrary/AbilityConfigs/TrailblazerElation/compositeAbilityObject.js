@@ -1759,7 +1759,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "_SelectCharacterID"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1310
@@ -2011,13 +2011,12 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "_SelectCharacterID"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1507
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Trigger: Ability End"
       ],

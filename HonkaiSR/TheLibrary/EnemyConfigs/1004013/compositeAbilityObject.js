@@ -5218,7 +5218,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "SummonCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -5338,8 +5338,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Find New Target",

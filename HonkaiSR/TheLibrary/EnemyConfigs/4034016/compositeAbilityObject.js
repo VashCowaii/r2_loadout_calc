@@ -979,7 +979,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "MDF_Count"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0,
@@ -1096,7 +1096,7 @@ const compositeAbilityObject = {
                               ]
                             }
                           ],
-                          "defaultEvents": [
+                          "defaultTasks": [
                             {
                               "name": "Update Displayed Energy Bar",
                               "value": {
@@ -1345,7 +1345,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SummonIndex"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3813,7 +3813,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "MDF_Count"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3906,8 +3906,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ],
                       "failed": [
@@ -8126,7 +8125,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "AttackCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 2
@@ -8143,8 +8142,7 @@ const compositeAbilityObject = {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 8
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ],
           "failed": [
@@ -9036,7 +9034,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentSummonIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -9071,7 +9069,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "Define Custom Variable",
                   "value": 1,

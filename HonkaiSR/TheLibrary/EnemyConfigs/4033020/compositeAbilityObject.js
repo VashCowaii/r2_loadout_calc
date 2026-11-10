@@ -1865,7 +1865,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "_ReadyToCharge"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 4

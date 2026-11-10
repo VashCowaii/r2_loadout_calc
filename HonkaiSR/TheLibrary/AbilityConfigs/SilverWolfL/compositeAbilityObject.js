@@ -1173,7 +1173,7 @@ const compositeAbilityObject = {
                     "displayLines": "CurScore"
                   },
                   "compareType": "<",
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": {
@@ -1211,7 +1211,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "defaultEvents": [
+                  "defaultTasks": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "SSS",
@@ -4437,7 +4437,7 @@ const compositeAbilityObject = {
             "displayLines": "TDF_EnemyCountForPerformance"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -4544,7 +4544,7 @@ const compositeAbilityObject = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "Define Custom Variable",
               "value": 0,
@@ -4598,7 +4598,7 @@ const compositeAbilityObject = {
                 "displayLines": "#CL_ADF_Index"
               },
               "hasBreak": false,
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -4665,7 +4665,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "Define Custom Variable",
                   "value": 0,
@@ -5771,7 +5771,7 @@ const compositeAbilityObject = {
             "displayLines": "CurrentItem"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -5817,8 +5817,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ],
       "onAbort": [
@@ -6804,7 +6803,7 @@ const compositeAbilityObject = {
                 "displayLines": "TDF_EnemyCountForPerformance"
               },
               "hasBreak": false,
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -6911,7 +6910,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "Define Custom Variable",
                   "value": 0,
@@ -6965,7 +6964,7 @@ const compositeAbilityObject = {
                     "displayLines": "#CL_TDF_Index"
                   },
                   "hasBreak": false,
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -7032,7 +7031,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "defaultEvents": [
+                  "defaultTasks": [
                     {
                       "name": "Define Custom Variable",
                       "value": 0,
@@ -7167,7 +7166,7 @@ const compositeAbilityObject = {
                 "displayLines": "TDF_CurBP"
               },
               "compareType": "<=",
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -7182,7 +7181,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -7233,7 +7232,7 @@ const compositeAbilityObject = {
                 "displayLines": "CurScore"
               },
               "compareType": "<",
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": {
@@ -7250,7 +7249,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -7823,7 +7822,7 @@ const compositeAbilityObject = {
                 "displayLines": "#CL_UI_Skill11_ItemIndex"
               },
               "hasBreak": false,
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1
@@ -7865,7 +7864,7 @@ const compositeAbilityObject = {
                 "displayLines": "CurrentItem"
               },
               "hasBreak": false,
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,

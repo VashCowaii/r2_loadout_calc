@@ -1826,7 +1826,7 @@ const configAbility = {
                 {
                   "name": "SWITCH",
                   "hasBreak": false,
-                  "caseEvents": [
+                  "execute": [
                     {
                       "name": "SWITCH CONDITON",
                       "conditions": {
@@ -2697,7 +2697,7 @@ const configAbility = {
           "parse": [
             {
               "name": "SWITCH",
-              "source": {
+              "damageType": {
                 "name": "Custom Damage Type",
                 "initialTypePreRead": "AllType",
                 "sourceType": "ReadTargetType",
@@ -2706,7 +2706,7 @@ const configAbility = {
                   "target": "{{Parameter Target}}"
                 }
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": "Fire",
@@ -2716,7 +2716,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -2807,8 +2807,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -2839,7 +2838,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -2930,8 +2929,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -2962,7 +2960,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3053,8 +3051,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3085,7 +3082,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3176,8 +3173,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3208,7 +3204,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3299,8 +3295,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3331,7 +3326,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3422,8 +3417,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3454,7 +3448,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "CurrentColorSlotIndex"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3545,8 +3539,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -3568,8 +3561,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }

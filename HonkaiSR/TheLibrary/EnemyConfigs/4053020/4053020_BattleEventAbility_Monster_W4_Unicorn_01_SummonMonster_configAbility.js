@@ -54,7 +54,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "SummonCountTemp"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 4,
@@ -127,8 +127,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -187,7 +186,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "SummonCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3,
@@ -228,8 +227,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -253,7 +251,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "SummonCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 4,
@@ -318,8 +316,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Find New Target",
@@ -460,7 +457,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "SummonCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 4,
@@ -525,8 +522,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },

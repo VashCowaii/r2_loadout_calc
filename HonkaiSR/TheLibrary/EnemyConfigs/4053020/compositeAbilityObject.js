@@ -541,7 +541,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SummonCountTemp"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 4,
@@ -614,8 +614,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -674,7 +673,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SummonCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -715,8 +714,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -740,7 +738,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "SummonCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 4,
@@ -805,8 +803,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Find New Target",
@@ -947,7 +944,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "SummonCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 4,
@@ -1012,8 +1009,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -1166,7 +1162,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "SummonCount"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 4,
@@ -1255,8 +1251,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1325,7 +1320,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "SummonCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 3,
@@ -1366,8 +1361,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1423,7 +1417,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SummonNum"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -1464,8 +1458,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -1508,7 +1501,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "SummonCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 3,
@@ -1549,8 +1542,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1680,7 +1672,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "SummonCount"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 4,
@@ -1769,8 +1761,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1839,7 +1830,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "SummonCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 3,
@@ -1880,8 +1871,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1937,7 +1927,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SummonNum"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3,
@@ -1978,8 +1968,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -2022,7 +2011,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "SummonCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 3,
@@ -2063,8 +2052,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }

@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "_TheFirstAvatarWeakType"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -771,8 +771,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ],
                   "failed": [
@@ -781,7 +780,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "_WeakType"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -1013,8 +1012,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -2217,7 +2215,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "SWITCH",
-                      "source": {
+                      "damageType": {
                         "name": "Damage Type Source",
                         "sourceType": "ReadTargetType",
                         "readTarget": {
@@ -2225,7 +2223,7 @@ const compositeAbilityObject = {
                           "target": "{{Far Left Player Entity(no Memosprite)}}"
                         }
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": "Physical",
@@ -2303,8 +2301,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -3560,7 +3557,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DF_WeakType"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -3666,8 +3663,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },

@@ -2445,7 +2445,7 @@ const compositeAbilityObject = {
                                   "switchValue": {
                                     "displayLines": "_OnWaveMonster_SkillType"
                                   },
-                                  "caseEvents": [
+                                  "caseTasks": [
                                     {
                                       "name": "SWITCH CONDITON",
                                       "caseValueIs": 1,
@@ -2631,8 +2631,7 @@ const compositeAbilityObject = {
                                         }
                                       ]
                                     }
-                                  ],
-                                  "defaultEvents": []
+                                  ]
                                 }
                               ]
                             }
@@ -7091,7 +7090,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "SWITCH",
-                      "source": {
+                      "damageType": {
                         "name": "Damage Type Source",
                         "sourceType": "ReadTargetType",
                         "readTarget": {
@@ -7099,7 +7098,7 @@ const compositeAbilityObject = {
                           "target": "{{Ability Target DEALING DMG}}"
                         }
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": "Physical"
@@ -7264,8 +7263,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }

@@ -884,7 +884,7 @@ const compositeAbilityObject = {
                             "displayLines": "MDF_SpeedRank"
                           },
                           "compareType": ">=",
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 5,
@@ -950,8 +950,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Define Custom Variable",
@@ -1144,7 +1143,7 @@ const compositeAbilityObject = {
                             "displayLines": "MDF_CalCount"
                           },
                           "compareType": ">=",
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 5,
@@ -1210,8 +1209,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Define Custom Variable",

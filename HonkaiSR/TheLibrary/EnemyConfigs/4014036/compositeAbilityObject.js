@@ -5579,7 +5579,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "MDF_DeathCountDown"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 2,
@@ -5612,15 +5612,14 @@ const compositeAbilityObject = {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "SWITCH",
                   "switchValue": {
                     "displayLines": "MDF_DeathCountDown"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -5669,8 +5668,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",

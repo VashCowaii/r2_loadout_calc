@@ -9,7 +9,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "CurrentRanger"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 0
@@ -26,8 +26,7 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 3
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     "Ability Start",
     {
@@ -47,7 +46,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "CurrentRanger"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 0
@@ -64,8 +63,7 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 3
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     {
       "name": "Use Custom Character Function",
@@ -96,7 +94,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "CurrentRanger"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 0,
@@ -193,8 +191,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     "Trigger: Attack End",
     "Trigger: Ability End"
@@ -209,7 +206,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -306,8 +303,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     }

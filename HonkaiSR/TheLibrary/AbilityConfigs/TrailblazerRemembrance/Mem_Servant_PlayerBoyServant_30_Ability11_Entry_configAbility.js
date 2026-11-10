@@ -6,8 +6,8 @@ const configAbility = {
   "parse": [
     {
       "name": "SWITCH",
-      "teamCountFrom": "Player Team",
-      "caseEvents": [
+      "team": "Player Team",
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 2
@@ -36,7 +36,8 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 8
         }
-      ]
+      ],
+      "teamCountType": 137
     },
     "Deleted bullshit"
   ],

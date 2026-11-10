@@ -3577,8 +3577,8 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "SWITCH",
-          "teamCountFrom": "Player Team",
-          "caseEvents": [
+          "team": "Player Team",
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 2
@@ -3607,7 +3607,8 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 8
             }
-          ]
+          ],
+          "teamCountType": 137
         },
         "Deleted bullshit"
       ],

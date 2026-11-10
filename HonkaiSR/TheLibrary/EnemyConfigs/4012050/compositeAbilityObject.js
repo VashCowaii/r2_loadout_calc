@@ -396,7 +396,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "InsertFlag"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0,
@@ -2384,7 +2384,7 @@ const compositeAbilityObject = {
                         "switchValue": {
                           "displayLines": "Sequence_i"
                         },
-                        "caseEvents": [
+                        "caseTasks": [
                           {
                             "name": "SWITCH CONDITON",
                             "caseValueIs": 1,
@@ -2454,7 +2454,7 @@ const compositeAbilityObject = {
                                 "switchValue": {
                                   "displayLines": "ForwardReverseFlag"
                                 },
-                                "caseEvents": [
+                                "caseTasks": [
                                   {
                                     "name": "SWITCH CONDITON",
                                     "caseValueIs": 1,
@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
                         "switchValue": {
                           "displayLines": "AIFlag"
                         },
-                        "caseEvents": [
+                        "caseTasks": [
                           {
                             "name": "SWITCH CONDITON",
                             "caseValueIs": 1,
@@ -2628,7 +2628,7 @@ const compositeAbilityObject = {
                                 "switchValue": {
                                   "displayLines": "ForwardReverseFlag"
                                 },
-                                "caseEvents": [
+                                "caseTasks": [
                                   {
                                     "name": "SWITCH CONDITON",
                                     "caseValueIs": 1,
@@ -2732,7 +2732,7 @@ const compositeAbilityObject = {
                         "switchValue": {
                           "displayLines": "ForwardReverseFlag"
                         },
-                        "caseEvents": [
+                        "caseTasks": [
                           {
                             "name": "SWITCH CONDITON",
                             "caseValueIs": 1,

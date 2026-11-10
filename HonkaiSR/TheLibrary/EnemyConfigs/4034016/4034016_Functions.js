@@ -34,7 +34,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentSummonIndex"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -69,7 +69,7 @@ const configAbility = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "Define Custom Variable",
               "value": 1,

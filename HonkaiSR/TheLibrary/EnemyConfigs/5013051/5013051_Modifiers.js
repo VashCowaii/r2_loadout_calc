@@ -563,7 +563,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "CurrentRanger"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -668,8 +668,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }
@@ -784,7 +783,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentRanger"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -869,8 +868,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "IF",
@@ -1300,7 +1298,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "CurrentRanger"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -1421,8 +1419,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -1578,7 +1575,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentRanger"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -1639,8 +1636,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

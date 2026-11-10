@@ -725,7 +725,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "PowerOutTargetNumber"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
@@ -746,8 +746,7 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 5
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Define Custom Variable",

@@ -750,7 +750,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "InsertFlag"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0,

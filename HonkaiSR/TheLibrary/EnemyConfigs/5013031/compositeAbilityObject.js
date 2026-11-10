@@ -1851,7 +1851,7 @@ const compositeAbilityObject = {
                     {
                       "name": "SWITCH",
                       "hasBreak": false,
-                      "caseEvents": [
+                      "execute": [
                         {
                           "name": "SWITCH CONDITON",
                           "conditions": {
@@ -2722,7 +2722,7 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "SWITCH",
-                  "source": {
+                  "damageType": {
                     "name": "Custom Damage Type",
                     "initialTypePreRead": "AllType",
                     "sourceType": "ReadTargetType",
@@ -2731,7 +2731,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     }
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": "Fire",
@@ -2741,7 +2741,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -2832,8 +2832,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -2864,7 +2863,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -2955,8 +2954,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -2987,7 +2985,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3078,8 +3076,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3110,7 +3107,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3201,8 +3198,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3233,7 +3229,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3324,8 +3320,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3356,7 +3351,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3447,8 +3442,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3479,7 +3473,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "CurrentColorSlotIndex"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -3570,8 +3564,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3593,8 +3586,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -4523,7 +4515,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -4626,8 +4618,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -4645,7 +4636,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -4748,8 +4739,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -4767,7 +4757,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -4870,8 +4860,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -4889,7 +4878,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -4992,8 +4981,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5011,7 +4999,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5114,8 +5102,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5133,7 +5120,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5236,8 +5223,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5300,7 +5286,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5379,8 +5365,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5417,7 +5402,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5520,8 +5505,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5584,7 +5568,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5663,8 +5647,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5699,7 +5682,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -5802,8 +5785,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -5931,7 +5913,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentColorSlotIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -6191,7 +6173,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "TaskListDF_ColorValue"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -6325,8 +6307,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -6339,7 +6320,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DynamicString_ColorSlotX"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -6349,7 +6330,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot1"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -6511,8 +6492,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -6530,7 +6510,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot2"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -6692,8 +6672,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -6711,7 +6690,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot3"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -6873,8 +6852,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -6892,7 +6870,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot4"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7054,8 +7032,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -7073,7 +7050,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot5"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7235,8 +7212,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -7254,7 +7230,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot6"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7416,8 +7392,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -7426,8 +7401,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -7450,7 +7424,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DynamicString_ColorSlotX"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -7460,7 +7434,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot1"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7622,8 +7596,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -7641,7 +7614,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot2"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7803,8 +7776,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -7822,7 +7794,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot3"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -7984,8 +7956,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8003,7 +7974,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot4"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -8165,8 +8136,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8184,7 +8154,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot5"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -8346,8 +8316,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8365,7 +8334,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot6"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -8527,8 +8496,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -8537,8 +8505,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",
@@ -8561,7 +8528,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DynamicString_ColorSlotX"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -8646,8 +8613,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -8660,7 +8626,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DynamicString_ColorSlotX"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -8670,7 +8636,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot1"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -9021,8 +8987,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -9035,7 +9000,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot2"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -9386,8 +9351,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -9400,7 +9364,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot3"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -9751,8 +9715,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -9765,7 +9728,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot4"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -10116,8 +10079,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -10130,7 +10092,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot5"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -10481,8 +10443,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -10495,7 +10456,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot6"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -10846,13 +10807,11 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -10865,7 +10824,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "ColorInInsertFlag"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -11216,8 +11175,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -11230,7 +11188,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "DynamicString_ColorSlotX"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -11240,7 +11198,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot1"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -11413,8 +11371,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -11427,7 +11384,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot2"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -11600,8 +11557,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -11614,7 +11570,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot3"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -11787,8 +11743,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -11801,7 +11756,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot4"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -11974,8 +11929,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -11988,7 +11942,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot5"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -12161,8 +12115,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },
@@ -12175,7 +12128,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "ColorSlot6"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0
@@ -12348,13 +12301,11 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }

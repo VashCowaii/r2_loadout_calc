@@ -971,7 +971,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "MDF_Count"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -1088,7 +1088,7 @@ const configAbility = {
                           ]
                         }
                       ],
-                      "defaultEvents": [
+                      "defaultTasks": [
                         {
                           "name": "Update Displayed Energy Bar",
                           "value": {
@@ -1336,7 +1336,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "SummonIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -3743,7 +3743,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "MDF_Count"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -3836,8 +3836,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ],
                   "failed": [

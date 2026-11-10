@@ -297,7 +297,7 @@ const configAbility = {
                 "displayLines": "Ability_CountForSound"
               },
               "compareType": ">=",
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3
@@ -310,8 +310,7 @@ const configAbility = {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "IF",

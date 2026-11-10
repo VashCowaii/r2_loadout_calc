@@ -646,7 +646,7 @@ const configAbility = {
                 "displayLines": "_Elation_Count"
               },
               "compareType": ">=",
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3,
@@ -708,7 +708,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "Define Custom Variable",
                   "value": 0,

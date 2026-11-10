@@ -28,7 +28,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "TargetCharacterID"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1402

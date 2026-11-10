@@ -221,7 +221,7 @@ const configAbility = {
             "displayLines": "TDF_EnemyCountForPerformance"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -328,7 +328,7 @@ const configAbility = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "Define Custom Variable",
               "value": 0,
@@ -382,7 +382,7 @@ const configAbility = {
                 "displayLines": "#CL_TDF_Index"
               },
               "hasBreak": false,
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -449,7 +449,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "Define Custom Variable",
                   "value": 0,
@@ -584,7 +584,7 @@ const configAbility = {
             "displayLines": "TDF_CurBP"
           },
           "compareType": "<=",
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -599,7 +599,7 @@ const configAbility = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "IF",
               "conditions": {
@@ -650,7 +650,7 @@ const configAbility = {
             "displayLines": "CurScore"
           },
           "compareType": "<",
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": {
@@ -667,7 +667,7 @@ const configAbility = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "IF",
               "conditions": {
@@ -1240,7 +1240,7 @@ const configAbility = {
             "displayLines": "#CL_UI_Skill11_ItemIndex"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
@@ -1282,7 +1282,7 @@ const configAbility = {
             "displayLines": "CurrentItem"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,

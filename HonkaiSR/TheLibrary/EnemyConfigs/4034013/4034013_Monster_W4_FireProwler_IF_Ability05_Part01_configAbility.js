@@ -86,7 +86,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "AttackCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 2

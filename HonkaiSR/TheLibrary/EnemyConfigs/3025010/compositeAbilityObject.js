@@ -965,7 +965,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "_ReadyToCharge"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -1180,7 +1180,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "_ReadyToCharge"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 8,
@@ -5898,7 +5898,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "MDF_Skill10_TurnCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 7
@@ -5937,8 +5937,7 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "IF",
@@ -6026,7 +6025,7 @@ const compositeAbilityObject = {
             {
               "name": "SWITCH",
               "hasBreak": false,
-              "caseEvents": [
+              "execute": [
                 {
                   "name": "SWITCH CONDITON",
                   "conditions": {
@@ -6134,7 +6133,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "MDF_Skill10_TurnCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 7
@@ -6250,8 +6249,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },
@@ -6260,7 +6258,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "MDF_Skill10_TurnCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 7
@@ -6289,15 +6287,14 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "SWITCH",
           "switchValue": {
             "displayLines": "MDF_Skill10_TurnCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 7,
@@ -6336,8 +6333,7 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -6438,7 +6434,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "MDF_Skill10_TurnCount"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 4,
@@ -6611,8 +6607,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ],
               "failed": [
@@ -6700,7 +6695,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "MDF_Skill10_TurnCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 7,
@@ -6750,8 +6745,7 @@ const compositeAbilityObject = {
                     "Deleted bullshit"
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         },

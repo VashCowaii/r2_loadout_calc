@@ -162,7 +162,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentXuanluPartSummonIndex"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -244,8 +244,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -260,7 +259,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentLV2MonsterSummonIndex"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -342,8 +341,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
@@ -365,7 +363,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "CurrentXuanluPartSummonIndex"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -474,8 +472,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }

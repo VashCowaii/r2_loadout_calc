@@ -234,7 +234,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "SwordNumber"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -291,8 +291,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Define Custom Variable with Added Value",

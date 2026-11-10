@@ -2765,7 +2765,7 @@ const compositeAbilityObject = {
                     "displayLines": "Ability_CountForSound"
                   },
                   "compareType": ">=",
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 3
@@ -2778,8 +2778,7 @@ const compositeAbilityObject = {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "IF",

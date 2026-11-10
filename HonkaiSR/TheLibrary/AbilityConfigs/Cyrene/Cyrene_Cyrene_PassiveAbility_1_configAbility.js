@@ -455,7 +455,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "ChrysosCount"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -501,8 +501,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 },

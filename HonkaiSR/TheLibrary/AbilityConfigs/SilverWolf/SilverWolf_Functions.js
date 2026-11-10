@@ -18,7 +18,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DF_WeakType"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -124,8 +124,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },

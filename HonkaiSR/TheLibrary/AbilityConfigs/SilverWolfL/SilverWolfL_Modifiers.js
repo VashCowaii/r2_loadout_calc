@@ -1115,7 +1115,7 @@ const configAbility = {
                 "displayLines": "CurScore"
               },
               "compareType": "<",
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": {
@@ -1153,7 +1153,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "defaultEvents": [
+              "defaultTasks": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SSS",

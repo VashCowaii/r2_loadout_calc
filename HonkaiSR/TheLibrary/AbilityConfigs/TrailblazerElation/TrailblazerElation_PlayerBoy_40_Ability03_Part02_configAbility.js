@@ -53,7 +53,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "_SelectCharacterID"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1310
@@ -305,13 +305,12 @@ const configAbility = {
       "switchValue": {
         "displayLines": "_SelectCharacterID"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1507
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     "Trigger: Ability End"
   ],

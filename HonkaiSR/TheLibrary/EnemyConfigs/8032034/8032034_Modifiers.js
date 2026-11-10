@@ -409,7 +409,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
@@ -446,8 +446,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     },
@@ -507,7 +506,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0
@@ -548,8 +547,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     }
@@ -1049,7 +1047,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
@@ -1086,8 +1084,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     },
@@ -1147,7 +1144,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0
@@ -1188,8 +1185,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     }
@@ -1464,7 +1460,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
@@ -1501,8 +1497,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     },
@@ -1562,7 +1557,7 @@ const configAbility = {
                           "switchValue": {
                             "displayLines": "MDF_DiceResult_RL"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 0
@@ -1603,8 +1598,7 @@ const configAbility = {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 9
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     }

@@ -1739,7 +1739,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentWeakPoint"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -1796,8 +1796,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1825,7 +1824,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentWeakPoint"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -1894,8 +1893,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1961,7 +1959,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentWeakPoint"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -2062,8 +2060,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -2129,7 +2126,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentWeakPoint"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -2186,8 +2183,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -9417,7 +9413,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "SwordNumber"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -9474,8 +9470,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable with Added Value",

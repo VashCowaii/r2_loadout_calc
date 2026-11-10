@@ -206,7 +206,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "_TargetState"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -239,8 +239,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             "Modifier Deletes Itself"
           ]
@@ -2221,7 +2220,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "ChrysosCount"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -2267,8 +2266,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     },
@@ -9078,7 +9076,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "TargetCharacterID"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1402
@@ -10988,7 +10986,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "Index"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1,
@@ -11062,7 +11060,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "LightTeamCount"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -11119,8 +11117,7 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     }
@@ -11154,7 +11151,7 @@ const compositeAbilityObject = {
                           "switchValue": {
                             "displayLines": "LightTeamCount"
                           },
-                          "caseEvents": [
+                          "caseTasks": [
                             {
                               "name": "SWITCH CONDITON",
                               "caseValueIs": 1,
@@ -11242,15 +11239,13 @@ const compositeAbilityObject = {
                                 }
                               ]
                             }
-                          ],
-                          "defaultEvents": []
+                          ]
                         }
                       ]
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Find New Target",

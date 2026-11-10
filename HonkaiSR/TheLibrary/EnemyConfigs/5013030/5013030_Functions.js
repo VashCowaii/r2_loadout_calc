@@ -18,7 +18,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "CurrentColorSlotIndex"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -278,7 +278,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "TaskListDF_ColorValue"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -412,8 +412,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -426,7 +425,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DynamicString_ColorSlotX"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -436,7 +435,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot1"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -598,8 +597,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -617,7 +615,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot2"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -779,8 +777,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -798,7 +795,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot3"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -960,8 +957,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -979,7 +975,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot4"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1141,8 +1137,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1160,7 +1155,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot5"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1322,8 +1317,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1341,7 +1335,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot6"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1503,8 +1497,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1513,8 +1506,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -1537,7 +1529,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DynamicString_ColorSlotX"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -1547,7 +1539,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot1"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1709,8 +1701,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1728,7 +1719,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot2"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1890,8 +1881,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -1909,7 +1899,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot3"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2071,8 +2061,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2090,7 +2079,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot4"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2252,8 +2241,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2271,7 +2259,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot5"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2433,8 +2421,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2452,7 +2439,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot6"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -2614,8 +2601,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Define Custom Variable",
@@ -2624,8 +2610,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Define Custom Variable with Added Value",
@@ -2648,7 +2633,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DynamicString_ColorSlotX"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -2733,8 +2718,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -2747,7 +2731,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DynamicString_ColorSlotX"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -2757,7 +2741,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot1"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3108,8 +3092,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -3122,7 +3105,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot2"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3473,8 +3456,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -3487,7 +3469,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot3"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -3838,8 +3820,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -3852,7 +3833,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot4"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -4203,8 +4184,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -4217,7 +4197,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot5"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -4568,8 +4548,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -4582,7 +4561,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot6"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -4933,13 +4912,11 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -4952,7 +4929,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "ColorInInsertFlag"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -5303,8 +5280,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -5317,7 +5293,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "DynamicString_ColorSlotX"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -5327,7 +5303,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot1"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -5500,8 +5476,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -5514,7 +5489,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot2"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -5687,8 +5662,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -5701,7 +5675,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot3"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -5874,8 +5848,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -5888,7 +5861,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot4"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -6061,8 +6034,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -6075,7 +6047,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot5"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -6248,8 +6220,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -6262,7 +6233,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "ColorSlot6"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0
@@ -6435,13 +6406,11 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     }

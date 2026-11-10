@@ -2437,7 +2437,7 @@ const configAbility = {
                               "switchValue": {
                                 "displayLines": "_OnWaveMonster_SkillType"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 1,
@@ -2623,8 +2623,7 @@ const configAbility = {
                                     }
                                   ]
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         }
@@ -7083,7 +7082,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "SWITCH",
-                  "source": {
+                  "damageType": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
                     "readTarget": {
@@ -7091,7 +7090,7 @@ const configAbility = {
                       "target": "{{Ability Target DEALING DMG}}"
                     }
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": "Physical"
@@ -7256,8 +7255,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

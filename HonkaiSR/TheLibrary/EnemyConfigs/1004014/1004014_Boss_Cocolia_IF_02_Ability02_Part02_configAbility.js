@@ -42,7 +42,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "SummonCount"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 0,
@@ -203,8 +203,7 @@ const configAbility = {
             }
           ]
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     {
       "name": "Find New Target",

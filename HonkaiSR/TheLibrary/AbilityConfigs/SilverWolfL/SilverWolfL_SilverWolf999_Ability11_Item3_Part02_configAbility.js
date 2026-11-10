@@ -67,7 +67,7 @@ const configAbility = {
         "displayLines": "TDF_EnemyCountForPerformance"
       },
       "hasBreak": false,
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1,
@@ -174,7 +174,7 @@ const configAbility = {
           ]
         }
       ],
-      "defaultEvents": [
+      "defaultTasks": [
         {
           "name": "Define Custom Variable",
           "value": 0,
@@ -228,7 +228,7 @@ const configAbility = {
             "displayLines": "#CL_ADF_Index"
           },
           "hasBreak": false,
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -295,7 +295,7 @@ const configAbility = {
               ]
             }
           ],
-          "defaultEvents": [
+          "defaultTasks": [
             {
               "name": "Define Custom Variable",
               "value": 0,

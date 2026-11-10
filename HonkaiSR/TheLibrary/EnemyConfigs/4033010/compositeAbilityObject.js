@@ -1068,7 +1068,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "SummonType"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 1
@@ -1089,8 +1089,7 @@ const compositeAbilityObject = {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 5
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "Shot Fired"

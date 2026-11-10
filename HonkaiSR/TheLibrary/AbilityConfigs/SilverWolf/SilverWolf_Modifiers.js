@@ -514,7 +514,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "_TheFirstAvatarWeakType"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -746,8 +746,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ],
               "failed": [
@@ -756,7 +755,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "_WeakType"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -988,8 +987,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },

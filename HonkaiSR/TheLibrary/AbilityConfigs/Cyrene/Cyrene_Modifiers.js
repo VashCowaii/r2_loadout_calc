@@ -147,7 +147,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "_TargetState"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1,
@@ -180,8 +180,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Modifier Deletes Itself"
       ]

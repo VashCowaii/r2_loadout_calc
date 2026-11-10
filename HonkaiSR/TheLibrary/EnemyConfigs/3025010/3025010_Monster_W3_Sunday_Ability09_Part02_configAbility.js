@@ -59,7 +59,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "MDF_Skill10_TurnCount"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 7
@@ -98,8 +98,7 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     {
       "name": "IF",
@@ -187,7 +186,7 @@ const configAbility = {
         {
           "name": "SWITCH",
           "hasBreak": false,
-          "caseEvents": [
+          "execute": [
             {
               "name": "SWITCH CONDITON",
               "conditions": {
@@ -295,7 +294,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "MDF_Skill10_TurnCount"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 7
@@ -411,8 +410,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ]
     },
@@ -421,7 +419,7 @@ const configAbility = {
       "switchValue": {
         "displayLines": "MDF_Skill10_TurnCount"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 7
@@ -450,15 +448,14 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     {
       "name": "SWITCH",
       "switchValue": {
         "displayLines": "MDF_Skill10_TurnCount"
       },
-      "caseEvents": [
+      "caseTasks": [
         {
           "name": "SWITCH CONDITON",
           "caseValueIs": 7,
@@ -497,8 +494,7 @@ const configAbility = {
           "name": "SWITCH CONDITON",
           "caseValueIs": 1
         }
-      ],
-      "defaultEvents": []
+      ]
     },
     {
       "name": "Define Custom Variable with Added Value",
@@ -599,7 +595,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "MDF_Skill10_TurnCount"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 4,
@@ -772,8 +768,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ],
           "failed": [

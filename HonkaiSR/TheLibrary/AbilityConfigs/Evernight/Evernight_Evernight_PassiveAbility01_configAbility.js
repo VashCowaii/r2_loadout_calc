@@ -880,7 +880,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "_Alive_Count"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -933,8 +933,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 },
                 {
                   "name": "Adjust Target Stats",

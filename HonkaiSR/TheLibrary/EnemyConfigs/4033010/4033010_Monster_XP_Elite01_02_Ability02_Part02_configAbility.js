@@ -149,7 +149,7 @@ const configAbility = {
           "switchValue": {
             "displayLines": "SummonType"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 1
@@ -170,8 +170,7 @@ const configAbility = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 5
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Shot Fired"

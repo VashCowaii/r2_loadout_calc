@@ -399,7 +399,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "SWITCH",
-                  "source": {
+                  "damageType": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
                     "readTarget": {
@@ -407,7 +407,7 @@ const configAbility = {
                       "target": "{{Far Left Player Entity(no Memosprite)}}"
                     }
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": "Physical",
@@ -485,8 +485,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

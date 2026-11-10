@@ -240,7 +240,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "TP_Temp"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,

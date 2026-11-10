@@ -951,7 +951,7 @@ const configAbility = {
                       "switchValue": {
                         "displayLines": "MDF_Count"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 1,
@@ -1044,8 +1044,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ],
                   "failed": [

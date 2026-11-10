@@ -866,7 +866,7 @@ const configAbility = {
                         "displayLines": "MDF_SpeedRank"
                       },
                       "compareType": ">=",
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 5,
@@ -932,8 +932,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -1126,7 +1125,7 @@ const configAbility = {
                         "displayLines": "MDF_CalCount"
                       },
                       "compareType": ">=",
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 5,
@@ -1192,8 +1191,7 @@ const configAbility = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",

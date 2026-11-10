@@ -434,7 +434,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "SWITCH",
-                  "source": {
+                  "damageType": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
                     "readTarget": {
@@ -442,7 +442,7 @@ const compositeAbilityObject = {
                       "target": "{{Modifier Holder}}"
                     }
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": "Physical",
@@ -576,8 +576,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

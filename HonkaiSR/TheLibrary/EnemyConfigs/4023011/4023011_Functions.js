@@ -205,7 +205,7 @@ const configAbility = {
               "switchValue": {
                 "displayLines": "_DelayCase"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 3,
@@ -258,8 +258,7 @@ const configAbility = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             },
             {
               "name": "IF",

@@ -267,7 +267,7 @@ const configAbility = {
                     "switchValue": {
                       "displayLines": "Sequence_i"
                     },
-                    "caseEvents": [
+                    "caseTasks": [
                       {
                         "name": "SWITCH CONDITON",
                         "caseValueIs": 1,
@@ -337,7 +337,7 @@ const configAbility = {
                             "switchValue": {
                               "displayLines": "ForwardReverseFlag"
                             },
-                            "caseEvents": [
+                            "caseTasks": [
                               {
                                 "name": "SWITCH CONDITON",
                                 "caseValueIs": 1,
@@ -441,7 +441,7 @@ const configAbility = {
                     "switchValue": {
                       "displayLines": "AIFlag"
                     },
-                    "caseEvents": [
+                    "caseTasks": [
                       {
                         "name": "SWITCH CONDITON",
                         "caseValueIs": 1,
@@ -511,7 +511,7 @@ const configAbility = {
                             "switchValue": {
                               "displayLines": "ForwardReverseFlag"
                             },
-                            "caseEvents": [
+                            "caseTasks": [
                               {
                                 "name": "SWITCH CONDITON",
                                 "caseValueIs": 1,
@@ -615,7 +615,7 @@ const configAbility = {
                     "switchValue": {
                       "displayLines": "ForwardReverseFlag"
                     },
-                    "caseEvents": [
+                    "caseTasks": [
                       {
                         "name": "SWITCH CONDITON",
                         "caseValueIs": 1,

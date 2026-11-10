@@ -937,7 +937,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "_ReadyToCharge"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 1,
@@ -1152,7 +1152,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "_ReadyToCharge"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 8,

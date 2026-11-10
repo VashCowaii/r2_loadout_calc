@@ -165,7 +165,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "MDF_WorldLevel"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -263,7 +263,7 @@ const configAbility = {
                       ]
                     }
                   ],
-                  "defaultEvents": [
+                  "defaultTasks": [
                     {
                       "name": "Adjust Target Stats",
                       "modifiedValuesArray": [

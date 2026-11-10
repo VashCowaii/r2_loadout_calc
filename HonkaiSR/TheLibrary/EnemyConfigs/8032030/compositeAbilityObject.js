@@ -255,7 +255,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
@@ -292,8 +292,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 1
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         },
@@ -353,7 +352,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 0
@@ -394,8 +393,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         }
@@ -895,7 +893,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
@@ -932,8 +930,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 1
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         },
@@ -993,7 +990,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 0
@@ -1034,8 +1031,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         }
@@ -1310,7 +1306,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
@@ -1347,8 +1343,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 1
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         },
@@ -1408,7 +1403,7 @@ const compositeAbilityObject = {
                               "switchValue": {
                                 "displayLines": "MDF_DiceResult_RL"
                               },
-                              "caseEvents": [
+                              "caseTasks": [
                                 {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 0
@@ -1449,8 +1444,7 @@ const compositeAbilityObject = {
                                   "name": "SWITCH CONDITON",
                                   "caseValueIs": 9
                                 }
-                              ],
-                              "defaultEvents": []
+                              ]
                             }
                           ]
                         }

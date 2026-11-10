@@ -1701,7 +1701,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentWeakPoint"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -1758,8 +1758,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -1787,7 +1786,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentWeakPoint"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -1856,8 +1855,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -1923,7 +1921,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentWeakPoint"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -2024,8 +2022,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -2091,7 +2088,7 @@ const configAbility = {
                   "switchValue": {
                     "displayLines": "CurrentWeakPoint"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -2148,8 +2145,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }

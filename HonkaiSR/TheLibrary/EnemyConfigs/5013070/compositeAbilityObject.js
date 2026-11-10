@@ -106,7 +106,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "CurrentRanger"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -211,8 +211,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             }
@@ -327,7 +326,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentRanger"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -412,8 +411,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     },
                     {
                       "name": "IF",
@@ -843,7 +841,7 @@ const compositeAbilityObject = {
                   "switchValue": {
                     "displayLines": "CurrentRanger"
                   },
-                  "caseEvents": [
+                  "caseTasks": [
                     {
                       "name": "SWITCH CONDITON",
                       "caseValueIs": 0,
@@ -964,8 +962,7 @@ const compositeAbilityObject = {
                         }
                       ]
                     }
-                  ],
-                  "defaultEvents": []
+                  ]
                 }
               ]
             },
@@ -1121,7 +1118,7 @@ const compositeAbilityObject = {
                       "switchValue": {
                         "displayLines": "CurrentRanger"
                       },
-                      "caseEvents": [
+                      "caseTasks": [
                         {
                           "name": "SWITCH CONDITON",
                           "caseValueIs": 0,
@@ -1182,8 +1179,7 @@ const compositeAbilityObject = {
                             }
                           ]
                         }
-                      ],
-                      "defaultEvents": []
+                      ]
                     }
                   ]
                 }
@@ -1237,7 +1233,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -1294,8 +1290,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         }
       ],
       "targetObjectData": {
@@ -1824,7 +1819,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0
@@ -1841,8 +1836,7 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 3
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Ability Start",
         {
@@ -1862,7 +1856,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0
@@ -1879,8 +1873,7 @@ const compositeAbilityObject = {
               "name": "SWITCH CONDITON",
               "caseValueIs": 3
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         {
           "name": "Use Custom Character Function",
@@ -1911,7 +1904,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -2008,8 +2001,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -2024,7 +2016,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentRanger"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -2121,8 +2113,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }
@@ -2268,7 +2259,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -2437,8 +2428,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
@@ -2453,7 +2443,7 @@ const compositeAbilityObject = {
               "switchValue": {
                 "displayLines": "CurrentRanger"
               },
-              "caseEvents": [
+              "caseTasks": [
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 0,
@@ -2622,8 +2612,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "defaultEvents": []
+              ]
             }
           ]
         }
@@ -2677,7 +2666,7 @@ const compositeAbilityObject = {
           "switchValue": {
             "displayLines": "CurrentRanger"
           },
-          "caseEvents": [
+          "caseTasks": [
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 0,
@@ -2770,8 +2759,7 @@ const compositeAbilityObject = {
                 }
               ]
             }
-          ],
-          "defaultEvents": []
+          ]
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
