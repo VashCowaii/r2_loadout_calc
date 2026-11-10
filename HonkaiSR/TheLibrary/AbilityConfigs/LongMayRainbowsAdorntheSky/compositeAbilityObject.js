@@ -262,7 +262,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "displayLines": "(_LoseHP + _LoseHPTotal)"
+                            "displayLines": "(_LoseHPTotal + _LoseHP)"
                           },
                           "variableName": "_LoseHPTotal"
                         }
@@ -326,9 +326,6 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "stackData": [
             "MDF_PropertyValue"
-          ],
-          "latentQueue": [
-            "_LoseHPTotal"
           ],
           "description": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
