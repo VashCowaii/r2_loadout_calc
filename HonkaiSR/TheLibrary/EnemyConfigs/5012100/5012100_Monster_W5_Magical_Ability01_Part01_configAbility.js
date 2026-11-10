@@ -28,9 +28,7 @@ const configAbility = {
       },
       "state": "Skill01",
       "passed": [
-        {
-          "name": "Animation Task"
-        }
+        "Deleted bullshit"
       ]
     }
   ],

@@ -12,12 +12,10 @@ const configAbility = {
       },
       "state": "Skill12",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Create Enemies",
               "delayPercent": 0.5,
@@ -51,7 +49,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "UI Display Event",
               "popUpText": "Support"

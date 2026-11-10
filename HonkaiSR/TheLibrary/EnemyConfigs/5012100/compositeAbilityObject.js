@@ -935,9 +935,7 @@ const compositeAbilityObject = {
           },
           "state": "Skill01",
           "passed": [
-            {
-              "name": "Animation Task"
-            }
+            "Deleted bullshit"
           ]
         }
       ],

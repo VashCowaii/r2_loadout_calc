@@ -1276,7 +1276,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -1303,12 +1303,10 @@ const compositeAbilityObject = {
                     }
                   ]
                 },
-                {
-                  "name": "Animation Task"
-                },
+                "Deleted bullshit",
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

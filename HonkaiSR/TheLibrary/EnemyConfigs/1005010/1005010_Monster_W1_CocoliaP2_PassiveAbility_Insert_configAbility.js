@@ -12,12 +12,10 @@ const configAbility = {
       },
       "state": "SkillPerform02",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Remove Events/Bonuses",
               "to": {
@@ -128,7 +126,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -146,7 +144,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

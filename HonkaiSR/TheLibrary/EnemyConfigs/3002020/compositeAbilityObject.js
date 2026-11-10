@@ -554,12 +554,10 @@ const compositeAbilityObject = {
           },
           "state": "Skill02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -570,12 +568,10 @@ const compositeAbilityObject = {
                 }
               ]
             },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {
@@ -623,18 +619,12 @@ const compositeAbilityObject = {
           },
           "state": "Skill02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Update Energy",
                   "on": {
@@ -675,18 +665,12 @@ const compositeAbilityObject = {
           },
           "state": "Skill02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": {

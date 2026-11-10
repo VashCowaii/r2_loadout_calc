@@ -14,18 +14,12 @@ const configAbility = {
       },
       "state": "Skill02",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
+        "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Update Energy",
               "on": {

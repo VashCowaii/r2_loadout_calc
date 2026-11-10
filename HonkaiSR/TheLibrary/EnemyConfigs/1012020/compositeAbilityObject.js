@@ -96,18 +96,12 @@ const compositeAbilityObject = {
           },
           "state": "Skill04",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

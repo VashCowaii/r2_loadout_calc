@@ -875,12 +875,10 @@ const compositeAbilityObject = {
           },
           "state": "SkillPerform02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -991,7 +989,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1009,7 +1007,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

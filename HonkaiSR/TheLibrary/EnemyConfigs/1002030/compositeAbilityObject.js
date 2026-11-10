@@ -196,12 +196,10 @@ const compositeAbilityObject = {
           },
           "state": "Skill02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -285,7 +283,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -309,7 +307,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

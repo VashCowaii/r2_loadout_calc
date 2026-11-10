@@ -26,7 +26,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

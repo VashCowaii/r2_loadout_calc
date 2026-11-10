@@ -1496,12 +1496,10 @@ const compositeAbilityObject = {
           },
           "state": "Skill12",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Create Enemies",
                   "delayPercent": 0.5,
@@ -1535,7 +1533,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1622,12 +1620,10 @@ const compositeAbilityObject = {
           },
           "state": "Skill12",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Create Enemies",
                   "delayPercent": 0.5,
@@ -1661,7 +1657,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -1694,12 +1690,10 @@ const compositeAbilityObject = {
           },
           "state": "Skill12",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Create Enemies",
                   "delayPercent": 0.5,
@@ -1733,7 +1727,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Support"
@@ -2166,9 +2160,7 @@ const compositeAbilityObject = {
           },
           "state": "Skill12",
           "passed": [
-            {
-              "name": "Animation Task"
-            }
+            "Deleted bullshit"
           ]
         }
       ],

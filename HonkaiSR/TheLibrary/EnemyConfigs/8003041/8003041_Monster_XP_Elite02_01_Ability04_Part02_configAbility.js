@@ -130,7 +130,7 @@ const configAbility = {
       "sequenceList": [
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -355,7 +355,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -580,7 +580,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -805,7 +805,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -1030,7 +1030,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -1255,7 +1255,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -1480,7 +1480,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -1705,7 +1705,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -1930,7 +1930,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

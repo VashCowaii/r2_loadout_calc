@@ -31,7 +31,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

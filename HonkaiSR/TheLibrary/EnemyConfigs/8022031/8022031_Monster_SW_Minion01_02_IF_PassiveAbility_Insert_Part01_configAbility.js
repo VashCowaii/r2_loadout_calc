@@ -37,7 +37,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Remove Events/Bonuses",
               "to": {

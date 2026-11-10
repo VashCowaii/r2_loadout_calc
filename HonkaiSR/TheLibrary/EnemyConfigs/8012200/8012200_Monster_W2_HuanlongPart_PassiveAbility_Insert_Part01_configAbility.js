@@ -19,12 +19,10 @@ const configAbility = {
       },
       "state": "PassiveSkill01",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {

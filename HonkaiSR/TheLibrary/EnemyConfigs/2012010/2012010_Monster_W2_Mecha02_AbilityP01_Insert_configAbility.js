@@ -34,15 +34,11 @@ const configAbility = {
       },
       "state": "Die",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -86,12 +82,8 @@ const configAbility = {
             }
           ]
         },
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        }
+        "Deleted bullshit",
+        "Deleted bullshit"
       ]
     },
     "Trigger: Attack End"

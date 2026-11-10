@@ -180,15 +180,11 @@ const compositeAbilityObject = {
           },
           "state": "Die",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -254,9 +250,7 @@ const compositeAbilityObject = {
                 "Trigger: Attack End"
               ]
             },
-            {
-              "name": "Animation Task"
-            }
+            "Deleted bullshit"
           ]
         }
       ],

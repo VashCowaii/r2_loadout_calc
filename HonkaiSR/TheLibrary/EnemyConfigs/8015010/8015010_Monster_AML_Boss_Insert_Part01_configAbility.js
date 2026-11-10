@@ -25,15 +25,11 @@ const configAbility = {
       },
       "state": "Skill_Insert",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Remove Events/Bonuses",
               "to": {
@@ -44,15 +40,11 @@ const configAbility = {
             }
           ]
         },
-        {
-          "name": "Animation Task"
-        },
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Create Enemy as Body Part",
               "partName": "R_Hand",
@@ -134,9 +126,7 @@ const configAbility = {
             }
           ]
         },
-        {
-          "name": "Animation Task"
-        }
+        "Deleted bullshit"
       ]
     },
     {

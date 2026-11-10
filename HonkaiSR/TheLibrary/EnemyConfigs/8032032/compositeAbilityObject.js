@@ -3632,7 +3632,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3647,12 +3647,8 @@ const compositeAbilityObject = {
                     }
                   ]
                 },
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task"
-                }
+                "Deleted bullshit",
+                "Deleted bullshit"
               ]
             },
             {

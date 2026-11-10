@@ -2050,7 +2050,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

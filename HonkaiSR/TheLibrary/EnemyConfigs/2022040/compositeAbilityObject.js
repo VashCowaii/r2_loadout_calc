@@ -77,7 +77,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Action Advance/Delay",
                   "advanceType": "Set",

@@ -27,7 +27,7 @@ const configAbility = {
       "sequenceList": [
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Shot Fired",
               "execute": [
@@ -87,7 +87,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Shot Fired",
               "execute": [
@@ -147,7 +147,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Shot Fired",
               "execute": [
@@ -207,7 +207,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Shot Fired",
               "execute": [
@@ -267,7 +267,7 @@ const configAbility = {
         },
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Shot Fired",
               "execute": [

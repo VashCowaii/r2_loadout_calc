@@ -78,15 +78,11 @@ const configAbility = {
                   },
                   "state": "Die",
                   "passed": [
-                    {
-                      "name": "Animation Task"
-                    },
-                    {
-                      "name": "Animation Task"
-                    },
+                    "Deleted bullshit",
+                    "Deleted bullshit",
                     {
                       "name": "Animation Task",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -183,7 +179,7 @@ const configAbility = {
                     },
                     {
                       "name": "Animation Task",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -356,9 +352,7 @@ const configAbility = {
                         }
                       ]
                     },
-                    {
-                      "name": "Animation Task"
-                    }
+                    "Deleted bullshit"
                   ]
                 }
               ],
@@ -371,15 +365,11 @@ const configAbility = {
                   },
                   "state": "Die",
                   "passed": [
-                    {
-                      "name": "Animation Task"
-                    },
-                    {
-                      "name": "Animation Task"
-                    },
+                    "Deleted bullshit",
+                    "Deleted bullshit",
                     {
                       "name": "Animation Task",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -476,7 +466,7 @@ const configAbility = {
                     },
                     {
                       "name": "Animation Task",
-                      "passed": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -649,9 +639,7 @@ const configAbility = {
                         }
                       ]
                     },
-                    {
-                      "name": "Animation Task"
-                    }
+                    "Deleted bullshit"
                   ]
                 }
               ]

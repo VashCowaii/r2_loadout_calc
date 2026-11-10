@@ -1355,15 +1355,11 @@ const compositeAbilityObject = {
           },
           "state": "Skill06_3",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

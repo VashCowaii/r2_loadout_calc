@@ -346,15 +346,11 @@ const compositeAbilityObject = {
               },
               "state": "SkillP01",
               "passed": [
-                {
-                  "name": "Animation Task"
-                },
-                {
-                  "name": "Animation Task"
-                },
+                "Deleted bullshit",
+                "Deleted bullshit",
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -383,12 +379,10 @@ const compositeAbilityObject = {
                     }
                   ]
                 },
-                {
-                  "name": "Animation Task"
-                },
+                "Deleted bullshit",
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -523,12 +517,10 @@ const compositeAbilityObject = {
               },
               "state": "SkillP04",
               "passed": [
-                {
-                  "name": "Animation Task"
-                },
+                "Deleted bullshit",
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -557,12 +549,10 @@ const compositeAbilityObject = {
                     }
                   ]
                 },
-                {
-                  "name": "Animation Task"
-                },
+                "Deleted bullshit",
                 {
                   "name": "Animation Task",
-                  "passed": [
+                  "execute": [
                     {
                       "name": "Exit Broken-State",
                       "target": {

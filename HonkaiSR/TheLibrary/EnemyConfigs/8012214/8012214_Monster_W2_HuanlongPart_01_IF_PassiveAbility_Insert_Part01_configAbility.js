@@ -45,12 +45,10 @@ const configAbility = {
           },
           "state": "PassiveSkill01",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Dispel Debuffs",
                   "target": {

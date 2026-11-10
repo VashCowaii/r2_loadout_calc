@@ -14,12 +14,10 @@ const configAbility = {
       },
       "state": "Skill02",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -30,12 +28,10 @@ const configAbility = {
             }
           ]
         },
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Skill Points Modification",
               "adjustmentValue": {

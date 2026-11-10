@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
           "sequenceList": [
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Shot Fired",
                   "execute": [
@@ -1679,7 +1679,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Shot Fired",
                   "execute": [
@@ -1739,7 +1739,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Shot Fired",
                   "execute": [
@@ -1799,7 +1799,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Shot Fired",
                   "execute": [
@@ -1859,7 +1859,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Shot Fired",
                   "execute": [

@@ -4010,15 +4010,11 @@ const compositeAbilityObject = {
           },
           "state": "Skill_Insert_02",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -4029,15 +4025,11 @@ const compositeAbilityObject = {
                 }
               ]
             },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Create Enemy as Body Part",
                   "partName": "R_Hand",
@@ -4547,9 +4539,7 @@ const compositeAbilityObject = {
                 }
               ]
             },
-            {
-              "name": "Animation Task"
-            }
+            "Deleted bullshit"
           ]
         },
         {
@@ -4636,15 +4626,11 @@ const compositeAbilityObject = {
           },
           "state": "Skill_Insert",
           "passed": [
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -4655,15 +4641,11 @@ const compositeAbilityObject = {
                 }
               ]
             },
-            {
-              "name": "Animation Task"
-            },
-            {
-              "name": "Animation Task"
-            },
+            "Deleted bullshit",
+            "Deleted bullshit",
             {
               "name": "Animation Task",
-              "passed": [
+              "execute": [
                 {
                   "name": "Create Enemy as Body Part",
                   "partName": "R_Hand",
@@ -5180,9 +5162,7 @@ const compositeAbilityObject = {
                 }
               ]
             },
-            {
-              "name": "Animation Task"
-            }
+            "Deleted bullshit"
           ]
         },
         {

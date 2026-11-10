@@ -12,12 +12,10 @@ const configAbility = {
       },
       "state": "Skill03",
       "passed": [
-        {
-          "name": "Animation Task"
-        },
+        "Deleted bullshit",
         {
           "name": "Animation Task",
-          "passed": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
