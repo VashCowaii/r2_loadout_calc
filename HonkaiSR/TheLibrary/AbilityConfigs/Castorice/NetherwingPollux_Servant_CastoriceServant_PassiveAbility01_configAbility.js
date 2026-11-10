@@ -407,8 +407,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "startValue": {
                 "displayLines": "CastoriceServant_MaxHP"
               }
             },
@@ -418,10 +418,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
-              "value": 0,
-              "floor": 0,
-              "ceiling": 0
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+              "startValue": 0,
+              "minValue": 0,
+              "maxValue": 0
             },
             {
               "name": "Reinstance Stat Value/Bounds",
@@ -429,10 +429,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
-              "value": 0,
-              "floor": 0,
-              "ceiling": 0
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+              "startValue": 0,
+              "minValue": 0,
+              "maxValue": 0
             },
             {
               "name": "Reinstance Stat Value/Bounds",
@@ -440,10 +440,10 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
-              "value": 0,
-              "floor": 0,
-              "ceiling": 0
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
+              "startValue": 0,
+              "minValue": 0,
+              "maxValue": 0
             },
             {
               "name": "Set HP Value",
