@@ -4502,7 +4502,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "enable": true
+                          "isAuto": true
                         }
                       ]
                     },
@@ -6089,7 +6089,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "enable": true
+                  "isAuto": true
                 },
                 {
                   "name": "Update Ability Enhance Button",
@@ -6178,7 +6178,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "enable": true
+                      "isAuto": true
                     },
                     {
                       "name": "Update Ability Enhance Button",
@@ -6328,7 +6328,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "enable": true
+                      "isAuto": true
                     },
                     {
                       "name": "Update Ability Enhance Button",
@@ -9425,7 +9425,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "enable": true
+                          "isAuto": true
                         }
                       ]
                     },

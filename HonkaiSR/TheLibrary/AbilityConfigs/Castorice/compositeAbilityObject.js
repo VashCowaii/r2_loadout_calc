@@ -6198,7 +6198,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -6250,7 +6250,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             }
           ]
         },
@@ -6687,7 +6687,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -6725,7 +6725,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             }
           ]
         },
@@ -7132,7 +7132,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -7170,7 +7170,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "enable": true
+              "isAuto": true
             }
           ]
         },

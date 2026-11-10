@@ -1507,7 +1507,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "enable": true
+              "isAuto": true
             },
             {
               "name": "Update Ability Enhance Button",
@@ -1596,7 +1596,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "enable": true
+                  "isAuto": true
                 },
                 {
                   "name": "Update Ability Enhance Button",
@@ -1746,7 +1746,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "enable": true
+                  "isAuto": true
                 },
                 {
                   "name": "Update Ability Enhance Button",

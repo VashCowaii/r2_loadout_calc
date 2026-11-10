@@ -513,7 +513,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "enable": true
+              "isAuto": true
             },
             {
               "name": "Force Target-Lock on Target",

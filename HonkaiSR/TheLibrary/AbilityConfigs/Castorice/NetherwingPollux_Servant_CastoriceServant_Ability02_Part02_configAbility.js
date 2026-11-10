@@ -69,7 +69,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "enable": true
+          "isAuto": true
         },
         {
           "name": "Add Events/Bonuses",
@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "enable": true
+          "isAuto": true
         }
       ]
     },
