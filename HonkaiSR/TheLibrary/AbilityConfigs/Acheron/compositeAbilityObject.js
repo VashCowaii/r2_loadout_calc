@@ -4341,8 +4341,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members with Unselectables}}"
-          },
-          "showOrLoad": false
+          }
         },
         "Deleted bullshit"
       ],

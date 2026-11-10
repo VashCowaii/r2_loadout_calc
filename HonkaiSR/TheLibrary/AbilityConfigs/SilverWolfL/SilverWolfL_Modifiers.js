@@ -1010,8 +1010,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{All Team Members with Unselectables}} - {{Caster}}"
-              },
-              "showOrLoad": false
+              }
             },
             "Deleted bullshit",
             {

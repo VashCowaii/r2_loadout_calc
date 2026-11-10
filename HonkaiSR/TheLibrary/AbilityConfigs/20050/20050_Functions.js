@@ -1267,7 +1267,7 @@ const configAbility = {
         },
         {
           "name": "Combat Buff Selection",
-          "passed": [
+          "buffGroupList": [
             {
               "name": "BUFF CHOICE",
               "lightTarget": {
