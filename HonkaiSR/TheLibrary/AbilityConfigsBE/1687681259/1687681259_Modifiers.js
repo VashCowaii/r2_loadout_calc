@@ -487,14 +487,14 @@ const configAbility = {
                   "variableName": "DV_DmgValue"
                 },
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
+                  "identifier": "FantasticStory_PlusAbility_2311_AdjoinPursued",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
                   "typeToExtend": "Additional DMG",
-                  "extendTypeTo": "Follow-up",
-                  "instanceIdentifier": "FantasticStory_PlusAbility_2311_AdjoinPursued"
+                  "extendTypeTo": "Follow-up"
                 },
                 {
                   "name": "Find New Target",
@@ -534,14 +534,13 @@ const configAbility = {
                   ]
                 },
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Remove Attack-Type Extension",
+                  "identifier": "FantasticStory_PlusAbility_2311_AdjoinPursued",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "typeToExtend": "Additional DMG",
-                  "isRemove": true,
-                  "instanceIdentifier": "FantasticStory_PlusAbility_2311_AdjoinPursued"
+                  "typeToExtend": "Additional DMG"
                 }
               ]
             }
@@ -764,14 +763,14 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Attack-Type Extension",
+                      "name": "Add Attack-Type Extension",
+                      "identifier": "FantasticStory_BaseAbility_2310_FeverPursued",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
                       "typeToExtend": "Additional DMG",
-                      "extendTypeTo": "Follow-up",
-                      "instanceIdentifier": "FantasticStory_BaseAbility_2310_FeverPursued"
+                      "extendTypeTo": "Follow-up"
                     }
                   ]
                 },
@@ -823,14 +822,13 @@ const configAbility = {
                   },
                   "passed": [
                     {
-                      "name": "Attack-Type Extension",
+                      "name": "Remove Attack-Type Extension",
+                      "identifier": "FantasticStory_BaseAbility_2310_FeverPursued",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "typeToExtend": "Additional DMG",
-                      "isRemove": true,
-                      "instanceIdentifier": "FantasticStory_BaseAbility_2310_FeverPursued"
+                      "typeToExtend": "Additional DMG"
                     }
                   ]
                 }

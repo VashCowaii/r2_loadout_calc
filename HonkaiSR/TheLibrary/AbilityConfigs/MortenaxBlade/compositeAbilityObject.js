@@ -530,13 +530,12 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Remove Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "typeToExtend": "Ultimate",
-                  "isRemove": true
+                  "typeToExtend": "Ultimate"
                 }
               ]
             },
@@ -544,7 +543,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -917,13 +916,12 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Remove Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "typeToExtend": "Skill",
-                  "isRemove": true
+                  "typeToExtend": "Skill"
                 }
               ]
             },
@@ -931,7 +929,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

@@ -1278,13 +1278,12 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Remove Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "typeToExtend": "Follow-up",
-                  "isRemove": true
+                  "typeToExtend": "Follow-up"
                 }
               ]
             },
@@ -1292,7 +1291,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

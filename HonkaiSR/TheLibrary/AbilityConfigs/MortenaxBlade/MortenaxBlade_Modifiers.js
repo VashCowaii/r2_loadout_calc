@@ -498,13 +498,12 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Attack-Type Extension",
+              "name": "Remove Attack-Type Extension",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "typeToExtend": "Ultimate",
-              "isRemove": true
+              "typeToExtend": "Ultimate"
             }
           ]
         },
@@ -512,7 +511,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
-              "name": "Attack-Type Extension",
+              "name": "Add Attack-Type Extension",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -885,13 +884,12 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Attack-Type Extension",
+              "name": "Remove Attack-Type Extension",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "typeToExtend": "Skill",
-              "isRemove": true
+              "typeToExtend": "Skill"
             }
           ]
         },
@@ -899,7 +897,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
-              "name": "Attack-Type Extension",
+              "name": "Add Attack-Type Extension",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

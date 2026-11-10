@@ -403,7 +403,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -412,7 +412,7 @@ const compositeAbilityObject = {
                   "extendTypeTo": "Ultimate"
                 },
                 {
-                  "name": "Attack-Type Extension",
+                  "name": "Add Attack-Type Extension",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

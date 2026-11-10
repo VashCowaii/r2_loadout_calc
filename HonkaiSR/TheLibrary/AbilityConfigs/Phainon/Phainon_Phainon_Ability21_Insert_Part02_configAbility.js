@@ -45,14 +45,14 @@ const configAbility = {
       "multiplier": 1
     },
     {
-      "name": "Attack-Type Extension",
+      "name": "Add Attack-Type Extension",
+      "identifier": "Phainon_Skill21",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
       "typeToExtend": "Follow-up",
-      "extendTypeTo": "Skill",
-      "instanceIdentifier": "Phainon_Skill21"
+      "extendTypeTo": "Skill"
     },
     {
       "name": "Add Events/Bonuses",
@@ -130,14 +130,13 @@ const configAbility = {
       ]
     },
     {
-      "name": "Attack-Type Extension",
+      "name": "Remove Attack-Type Extension",
+      "identifier": "Phainon_Skill21",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "typeToExtend": "Follow-up",
-      "isRemove": true,
-      "instanceIdentifier": "Phainon_Skill21"
+      "typeToExtend": "Follow-up"
     },
     "Trigger: Attack End",
     {

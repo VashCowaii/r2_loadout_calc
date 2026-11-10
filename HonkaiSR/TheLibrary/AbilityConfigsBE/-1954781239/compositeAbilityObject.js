@@ -3767,7 +3767,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Attack-Type Extension",
+                      "name": "Add Attack-Type Extension",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"

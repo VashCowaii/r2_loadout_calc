@@ -103,14 +103,14 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Attack-Type Extension",
+          "name": "Add Attack-Type Extension",
+          "identifier": "Feixiao_00_Rank06",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
           "typeToExtend": "Follow-up",
-          "extendTypeTo": "Ultimate",
-          "instanceIdentifier": "Feixiao_00_Rank06"
+          "extendTypeTo": "Ultimate"
         }
       ]
     },
@@ -142,14 +142,13 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Attack-Type Extension",
+          "name": "Remove Attack-Type Extension",
+          "identifier": "Feixiao_00_Rank06",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "typeToExtend": "Follow-up",
-          "isRemove": true,
-          "instanceIdentifier": "Feixiao_00_Rank06"
+          "typeToExtend": "Follow-up"
         }
       ]
     },
