@@ -117,8 +117,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "(MDF_PropertyValue * SpeedUp_Count)"
                   }
                 }
@@ -147,8 +147,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "MDF_PropertyValue"
                   }
                 }
@@ -178,8 +178,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "seele_dmg_percent"
                   }
                 },
@@ -200,8 +200,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
-                      "value": {
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
+                      "statValue": {
                         "displayLines": "MDF_Penetrate"
                       }
                     }
@@ -303,8 +303,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "(0 - MDF_PropertyValue)"
                   }
                 }

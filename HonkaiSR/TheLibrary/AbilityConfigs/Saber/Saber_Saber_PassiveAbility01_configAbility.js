@@ -719,8 +719,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_PropertyValue"
               }
             }
@@ -1204,8 +1204,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(MDF_Layer * MDF_PropertyValue)"
               }
             }
@@ -1229,8 +1229,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+              "statValue": {
                 "displayLines": "0.08"
               }
             }

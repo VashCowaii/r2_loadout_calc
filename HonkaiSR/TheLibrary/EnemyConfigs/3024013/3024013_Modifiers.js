@@ -259,8 +259,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(MDF_DamageAddRatio * Layer)"
               }
             },
@@ -270,8 +270,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(MDF_TokenDMGRduceRatio * Layer)"
               }
             }
@@ -747,8 +747,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(MDF_LightPowerUp * Layer)"
               }
             },
@@ -794,8 +794,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "statValue": {
                 "displayLines": "({[Skill16[0]]} * Layer)"
               }
             },
@@ -926,8 +926,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_DamageAddedRatio"
               }
             },
@@ -1222,8 +1222,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_DefenceAddedRatio"
               }
             }
@@ -1872,8 +1872,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "statValue": {
                 "displayLines": "({[Skill16[0]]} * Layer)"
               }
             }
@@ -2281,8 +2281,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_PropertyValue"
               }
             }

@@ -70,8 +70,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "MDF_AllDamageReduce"
                   }
                 }
@@ -96,8 +96,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "MDF_AllDamageReduce"
                   }
                 },
@@ -188,8 +188,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-                  "value": 0.4
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "statValue": 0.4
                 }
               ]
             }
@@ -288,8 +288,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ElationDMGAll</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "MDF_PropertyValue"
                   }
                 }
@@ -622,8 +622,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "(MDF_DamageAddedRatio * MDF_SummonCount)"
                   }
                 }
@@ -874,8 +874,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "(ModifierLayers * DamageAddedRatio)"
                   }
                 }
@@ -913,8 +913,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
-                  "value": 0.3
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
+                  "statValue": 0.3
                 }
               ]
             }
@@ -1317,8 +1317,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "(MDF_1 * _Layer)"
                   }
                 },
@@ -1769,8 +1769,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "((TempAttack * 93) - Hardlevel_HP)"
                   }
                 }
@@ -1920,8 +1920,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
-                  "value": 0.75
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
+                  "statValue": 0.75
                 }
               ]
             }
@@ -2017,8 +2017,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-                  "value": 0.75
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+                  "statValue": 0.75
                 },
                 {
                   "name": "Stack Target Stat Value",
@@ -2026,8 +2026,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
-                  "value": 0.75
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
+                  "statValue": 0.75
                 }
               ]
             }
@@ -2125,8 +2125,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
-                  "value": 0.3
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
+                  "statValue": 0.3
                 }
               ]
             }
@@ -2196,8 +2196,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
-                  "value": 0.75
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
+                  "statValue": 0.75
                 }
               ]
             }
@@ -2267,8 +2267,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
-                  "value": 0.75
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
+                  "statValue": 0.75
                 }
               ]
             }

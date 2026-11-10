@@ -96,8 +96,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "statValue": {
                 "displayLines": "((TempAttack * 93) - Hardlevel_HP)"
               }
             }

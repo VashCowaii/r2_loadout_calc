@@ -267,8 +267,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_DamageTakenUpRatio_PerLayer"
               }
             }
@@ -1293,8 +1293,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(STANDARDSPECIFIC_OBJECT_UNUSED_15 * ModifierLayers)"
               }
             }
@@ -1767,8 +1767,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_SpeedUpRatio"
               }
             },

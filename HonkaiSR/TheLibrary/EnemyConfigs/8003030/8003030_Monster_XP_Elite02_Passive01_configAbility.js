@@ -92,8 +92,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(0 - (MDF_DefenceAddedRatio_PerLayer * ModifierLayers))"
               }
             }

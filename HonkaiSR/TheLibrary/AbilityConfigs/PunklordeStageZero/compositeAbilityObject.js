@@ -53,8 +53,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                  "value": 0,
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "statValue": 0,
                   "isRefresh": true
                 },
                 {
@@ -96,8 +96,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                      "value": {
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                      "statValue": {
                         "displayLines": "0.32"
                       },
                       "isRefresh": true
@@ -151,8 +151,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                          "value": {
+                          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "statValue": {
                             "displayLines": "0.2"
                           },
                           "isRefresh": true
@@ -219,8 +219,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                          "value": {
+                          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "statValue": {
                             "displayLines": "0.2"
                           },
                           "isRefresh": true
@@ -276,8 +276,8 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
                           },
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
-                          "value": {
+                          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                          "statValue": {
                             "displayLines": "0.32"
                           },
                           "isRefresh": true

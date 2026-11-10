@@ -211,8 +211,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_PropertyRatio"
               }
             }
@@ -243,8 +243,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(MDF_PropertyRatio * Lingsha_BaseAttack)"
               }
             }

@@ -39,8 +39,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(ChallengePeakBattle_0021_ADF_2 * MDF_Layer)"
               }
             },

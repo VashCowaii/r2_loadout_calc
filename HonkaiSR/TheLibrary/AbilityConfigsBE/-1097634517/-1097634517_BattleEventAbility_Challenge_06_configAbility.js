@@ -33,8 +33,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">IceVulnerability</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">IceVulnerability</span>&nbsp;",
+              "statValue": {
                 "displayLines": "#BattleEvent_P2_ADF"
               }
             }

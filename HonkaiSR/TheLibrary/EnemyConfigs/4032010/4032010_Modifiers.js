@@ -95,8 +95,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "PassiveSkillInitiate_P1_AttackAddedRatio"
               }
             },
@@ -106,8 +106,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(0 - PassiveSkillInitiate_P2_DefenceAddedRatio)"
               }
             },
@@ -172,8 +172,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_AttackAddedRatio"
               }
             }
@@ -369,8 +369,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_RallyHP"
               }
             }
@@ -747,8 +747,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPDebt%</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_RallyHP"
               }
             }

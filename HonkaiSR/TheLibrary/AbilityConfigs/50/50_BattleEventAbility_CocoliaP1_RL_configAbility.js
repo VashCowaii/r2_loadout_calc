@@ -45,8 +45,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_CocoliaP1_00_RL_BattleEvent_BaseSpeed"
               }
             }

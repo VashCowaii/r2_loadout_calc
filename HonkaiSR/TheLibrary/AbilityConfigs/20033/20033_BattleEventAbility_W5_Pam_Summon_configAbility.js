@@ -109,8 +109,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedOverride</span>&nbsp;",
+              "statValue": {
                 "displayLines": "(CurrentSpeed * PassiveSkill01_P6_SpeedRatio)"
               }
             }

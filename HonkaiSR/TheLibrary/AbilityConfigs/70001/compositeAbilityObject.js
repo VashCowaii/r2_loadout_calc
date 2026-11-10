@@ -319,8 +319,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "ElationEchoPoint"
                   }
                 }
@@ -348,8 +348,8 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
-                  "value": {
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                  "statValue": {
                     "displayLines": "ElationEchoPoint"
                   }
                 }
@@ -370,8 +370,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
-                      "value": {
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                      "statValue": {
                         "displayLines": "ElationEchoPoint"
                       },
                       "isRefresh": true
@@ -967,8 +967,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Aha Instant: Aha Battle Event}}"
                       },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                      "value": {
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                      "statValue": {
                         "displayLines": "BattleEvent_Elation_00_BaseSpeed"
                       },
                       "isRefresh": true
@@ -1234,8 +1234,8 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Aha Instant: Aha Battle Event}}"
                       },
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
-                      "value": {
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+                      "statValue": {
                         "displayLines": "BattleEvent_Elation_00_BaseSpeed"
                       },
                       "isRefresh": true

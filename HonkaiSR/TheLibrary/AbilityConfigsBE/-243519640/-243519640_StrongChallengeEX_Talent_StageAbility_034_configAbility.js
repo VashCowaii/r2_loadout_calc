@@ -46,8 +46,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
-              "value": {
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
+              "statValue": {
                 "displayLines": "MDF_QuantumDamageAddedRatio"
               }
             }

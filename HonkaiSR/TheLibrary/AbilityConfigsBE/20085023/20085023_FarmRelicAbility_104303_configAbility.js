@@ -56,8 +56,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
-              "value": 0.3
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
+              "statValue": 0.3
             }
           ]
         }

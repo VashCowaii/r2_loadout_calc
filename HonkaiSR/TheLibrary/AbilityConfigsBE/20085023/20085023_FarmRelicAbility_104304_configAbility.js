@@ -54,8 +54,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
-              "value": 0.75
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+              "statValue": 0.75
             },
             {
               "name": "Stack Target Stat Value",
@@ -63,8 +63,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
-              "value": 0.75
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
+              "statValue": 0.75
             }
           ]
         }
