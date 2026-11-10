@@ -3071,12 +3071,12 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "_ServantHealValueTotal",
                   "value": {
-                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (FREEVAR) || ADD || RETURN",
-                    "displayLines": "(_ServantHealValueTotal + FREEVAR)",
+                    "operator": "Variables[0] (_ServantHealValueTotal) || Variables[1] (_ServantHealValue) || ADD || RETURN",
+                    "displayLines": "(_ServantHealValueTotal + _ServantHealValue)",
                     "constants": [],
                     "variables": [
                       "_ServantHealValueTotal",
-                      "FREEVAR"
+                      "_ServantHealValue"
                     ]
                   }
                 },

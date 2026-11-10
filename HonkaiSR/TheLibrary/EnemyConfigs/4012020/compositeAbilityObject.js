@@ -316,6 +316,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+          "latentQueue": [
+            "MModifier_Monster_W4_Scholar_00_BookController_DynamicTarget"
+          ],
           "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
           "type": "Other",
           "effectName": "Proselytize",

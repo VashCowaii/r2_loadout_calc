@@ -4067,7 +4067,8 @@ const compositeAbilityObject = {
             "_PhaseCheck",
             "_Trigger1",
             "_Trigger2",
-            "AIFlag"
+            "AIFlag",
+            "_WorldLevel"
           ],
           "execute": [
             {

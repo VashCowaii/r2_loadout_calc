@@ -2020,11 +2020,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": {
+                  "variableName": "MDF_MaxHP_DownScale",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_MaxHP_DownScale"
+                  }
                 },
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2757,12 +2757,12 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": {
+                      "variableName": "MDF_HPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "variableName": "MDF_HPRatio"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
@@ -2908,12 +2908,12 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": {
+                      "variableName": "MDF_HPRatio",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "statValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "variableName": "MDF_HPRatio"
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",

@@ -1396,11 +1396,11 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": {
+              "variableName": "MDF_SummonerMaxHP_DownScale",
+              "readTarget": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_SummonerMaxHP_DownScale"
+              }
             },
             {
               "name": "Define Custom Variable",

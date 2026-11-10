@@ -109,6 +109,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1087631853\">MModifier_Monster_W4_Scholar_LocalLegend_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+      "latentQueue": [
+        "MModifier_Monster_W4_Scholar_00_LocalLegend_BookController_DynamicTarget"
+      ],
       "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state.",
       "type": "Other",
       "effectName": "Proselytize",
@@ -646,6 +649,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1513370696\">MModifier_Monster_W4_Scholar_BookController</a>[<span class=\"descriptionNumberColor\">Proselytize</span>]",
+      "latentQueue": [
+        "MModifier_Monster_W4_Scholar_00_BookController_DynamicTarget"
+      ],
       "description": "Causes %DynamicTargetName to enter the \"Gleaned Instruction\" state. Dispelled when this unit's \"War Armor\" is destroyed.",
       "type": "Other",
       "effectName": "Proselytize",

@@ -2132,6 +2132,7 @@ const compositeAbilityObject = {
           ],
           "latentQueue": [
             "HintCheck",
+            "MDF_InitHPRatio",
             "InsertCheck",
             "InsertSpecial",
             "CurrentBP"
@@ -2645,6 +2646,7 @@ const compositeAbilityObject = {
           ],
           "latentQueue": [
             "HintCheck",
+            "MDF_InitHPRatio",
             "InsertCheck",
             "InsertSpecial",
             "CurrentBP"
@@ -2735,7 +2737,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-642289168\">Monster_W3_Sam_EnhanceEffectPart</a>",
           "latentQueue": [
-            "HintCheck"
+            "HintCheck",
+            "MDF_InitHPRatio"
           ],
           "execute": [
             {

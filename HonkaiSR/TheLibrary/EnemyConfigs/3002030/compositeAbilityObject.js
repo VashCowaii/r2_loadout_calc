@@ -106,12 +106,12 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDamage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
-                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
+                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
+                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
                       "constants": [],
                       "variables": [
                         "Modifier_Bleed_MaxDamagePercentage",
-                        "MDF_CurrentDamage"
+                        "MDF_CasterMaxHP"
                       ]
                     }
                   },
@@ -120,12 +120,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageValue",
                       "value": {
-                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
-                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
+                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
+                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
                         "constants": [],
                         "variables": [
                           "Modifier_Bleed_MaxDamagePercentage",
-                          "MDF_CurrentDamage"
+                          "MDF_CasterMaxHP"
                         ]
                       }
                     }
@@ -225,12 +225,12 @@ const compositeAbilityObject = {
                     "value1": "MDF_CurrentDamage",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
-                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
+                      "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
+                      "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
                       "constants": [],
                       "variables": [
                         "Modifier_Bleed_MaxDamagePercentage",
-                        "MDF_CurrentDamage"
+                        "MDF_CasterMaxHP"
                       ]
                     }
                   },
@@ -239,12 +239,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DamageValue",
                       "value": {
-                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CurrentDamage) || MUL || RETURN",
-                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CurrentDamage)",
+                        "operator": "Variables[0] (Modifier_Bleed_MaxDamagePercentage) || Variables[1] (MDF_CasterMaxHP) || MUL || RETURN",
+                        "displayLines": "(Modifier_Bleed_MaxDamagePercentage * MDF_CasterMaxHP)",
                         "constants": [],
                         "variables": [
                           "Modifier_Bleed_MaxDamagePercentage",
-                          "MDF_CurrentDamage"
+                          "MDF_CasterMaxHP"
                         ]
                       }
                     }

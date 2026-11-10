@@ -113,6 +113,9 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1857978623\">M_Mar_7th_10_Ability01_Preshow</a>",
+      "latentQueue": [
+        "_target_stance_before_attack"
+      ],
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",

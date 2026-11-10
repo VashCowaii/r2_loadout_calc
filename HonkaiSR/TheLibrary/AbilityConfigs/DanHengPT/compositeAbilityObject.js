@@ -1633,12 +1633,12 @@ const compositeAbilityObject = {
                   }
                 },
                 "DamageFlat": {
-                  "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_LongLing_Flag) || MUL || RETURN",
-                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_LongLing_Flag)",
+                  "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
+                  "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
                   "constants": [],
                   "variables": [
                     "DanHengPT_ExtraDamageRatio",
-                    "DanHengPT_LongLing_Flag"
+                    "DanHengPT_ExtraDamageShield"
                   ]
                 },
                 "Toughness": null,

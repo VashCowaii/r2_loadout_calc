@@ -176,6 +176,10 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-2053212342\">Acheron_Eidolon4_Listen</a>",
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
+      ],
       "execute": [
         {
           "eventTrigger": "Enter Battle",
@@ -216,6 +220,10 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1580542257\">Acheron_Eidolon1_Listen</a>",
       "modifierFlags": [
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
       ],
       "execute": [
         {
@@ -260,6 +268,10 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill",
         "RemoveWhenCasterDead"
+      ],
+      "latentQueue": [
+        "CurrentSP",
+        "MaxSP"
       ],
       "execute": [
         {

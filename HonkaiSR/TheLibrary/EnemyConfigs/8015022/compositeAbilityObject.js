@@ -6074,7 +6074,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1034588590\">Monster_W2_Huanlong_IF_Ability14_SetDamage</a>",
           "latentQueue": [
-            "BreakFlag"
+            "BreakFlag",
+            "_AliveFlower_Count"
           ],
           "execute": [
             {
